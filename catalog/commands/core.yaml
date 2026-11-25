@@ -1,0 +1,294 @@
+# Seed catalog: the commands the Phase 2 shell needs, plus a few legacy
+# records that exercise the emulate and stub paths.
+#
+# Lineage here is provisional. The Phase 1 census replaces it with sourced
+# entries; do not cite these years or menu paths until then.
+
+# ---- app ----
+- id: app.new-window
+  label: New Window
+  category: app
+  description: Open a new browser window.
+  status: implement
+  phase: 2
+  platforms: [desktop]
+  lineage:
+    - { browser: Netscape Navigator, versions: "1.0", menu: "File > New Window", year: 1994 }
+- id: app.command-palette
+  label: Command Palette
+  aliases: [Quick Commands, Run Command, Find Command]
+  category: app
+  description: Search every command by name, alias or the browser it came from.
+  status: implement
+  phase: 2
+  platforms: [desktop, android]
+  lineage:
+    - { browser: Vivaldi, versions: "1.0", menu: "Tools > Quick Commands", year: 2016 }
+- id: app.quit
+  label: Quit
+  aliases: [Exit]
+  category: app
+  description: Close all windows and quit.
+  status: implement
+  phase: 2
+  platforms: [desktop]
+
+# ---- file ----
+- id: file.open-location
+  label: Open Location
+  aliases: [Open URL, Go to Address, Open Page]
+  category: file
+  description: Move to the address bar to type an address or a search.
+  status: implement
+  phase: 2
+  platforms: [desktop, android]
+  lineage:
+    - { browser: Netscape Navigator, versions: "1.0", menu: "File > Open Location", year: 1994 }
+- id: file.open-file
+  label: Open File
+  category: file
+  description: Open a file from this computer.
+  status: implement
+  phase: 2
+  platforms: [desktop]
+  requires: [filesystem]
+- id: file.save-page-as
+  label: Save Page As
+  category: file
+  description: Save the current page to a file.
+  status: implement
+  phase: 3
+  platforms: [desktop]
+  requires: [filesystem]
+- id: file.print
+  label: Print
+  category: file
+  description: Print the current page.
+  status: implement
+  phase: 2
+  platforms: [desktop]
+
+# ---- edit ----
+- { id: edit.undo, label: Undo, category: edit, description: Undo the last edit in the focused field., status: implement, phase: 2, platforms: [desktop] }
+- { id: edit.redo, label: Redo, category: edit, description: Redo the last undone edit., status: implement, phase: 2, platforms: [desktop] }
+- { id: edit.cut, label: Cut, category: edit, description: Cut the selection to the clipboard., status: implement, phase: 2, platforms: [desktop], requires: [clipboard] }
+- { id: edit.copy, label: Copy, category: edit, description: Copy the selection to the clipboard., status: implement, phase: 2, platforms: [desktop], requires: [clipboard] }
+- { id: edit.paste, label: Paste, category: edit, description: Paste from the clipboard., status: implement, phase: 2, platforms: [desktop], requires: [clipboard] }
+- { id: edit.select-all, label: Select All, category: edit, description: Select everything in the page or field., status: implement, phase: 2, platforms: [desktop] }
+- id: edit.find
+  label: Find in Page
+  aliases: [Find, Search Page]
+  category: edit
+  description: Search for text in the current page.
+  status: implement
+  phase: 3
+  platforms: [desktop, android]
+
+# ---- view ----
+- { id: view.zoom-in, label: Zoom In, category: view, description: Make the page larger., status: implement, phase: 2, platforms: [desktop, android], when: "page.zoom < 5" }
+- { id: view.zoom-out, label: Zoom Out, category: view, description: Make the page smaller., status: implement, phase: 2, platforms: [desktop, android], when: "page.zoom > 0.25" }
+- { id: view.zoom-reset, label: Actual Size, aliases: [Reset Zoom], category: view, description: Return the page to normal size., status: implement, phase: 2, platforms: [desktop, android] }
+- id: view.full-screen
+  label: Full Screen
+  category: view
+  description: Show the page using the whole screen.
+  status: implement
+  phase: 2
+  platforms: [desktop]
+  checked: window.isFullScreen
+  lineage:
+    - { browser: Internet Explorer, versions: "4.0", menu: "View > Full Screen", year: 1997 }
+- id: view.page-source
+  label: Page Source
+  aliases: [View Source, Document Source]
+  category: view
+  description: Show the HTML source of the current page.
+  status: implement
+  phase: 2
+  platforms: [desktop]
+  when: "page.scheme == 'http' || page.scheme == 'https' || page.scheme == 'file' || page.scheme == 'gopher'"
+  lineage:
+    - { browser: Netscape Communicator, versions: "4.0", menu: "View > Page Source", year: 1997 }
+    - { browser: Internet Explorer, versions: "3.0", menu: "View > Source", year: 1996 }
+- id: view.menu-layout
+  label: Menu Layout
+  aliases: [Era Layout, Switch Menus]
+  category: view
+  description: Switch the menu bar to another era's arrangement.
+  status: implement
+  phase: 2
+  platforms: [desktop]
+  args: [{ name: layout, type: string, description: Layout id }]
+- id: view.keymap
+  label: Keyboard Profile
+  category: view
+  description: Switch keyboard shortcuts to another profile.
+  status: implement
+  phase: 2
+  platforms: [desktop]
+  args: [{ name: keymap, type: string, description: Keymap id }]
+
+# ---- nav ----
+- id: nav.back
+  label: Back
+  category: nav
+  description: Go to the previous page in this tab.
+  status: implement
+  phase: 2
+  platforms: [desktop, android]
+  when: tab.canGoBack
+  lineage:
+    - { browser: NCSA Mosaic, versions: "1.0", menu: "Navigate > Back", year: 1993 }
+- { id: nav.forward, label: Forward, category: nav, description: Go to the next page in this tab., status: implement, phase: 2, platforms: [desktop, android], when: tab.canGoForward }
+- { id: nav.reload, label: Reload, aliases: [Refresh], category: nav, description: Load the current page again., status: implement, phase: 2, platforms: [desktop, android], requires: [network] }
+- { id: nav.reload-hard, label: Reload Without Cache, aliases: [Hard Refresh, Super Reload], category: nav, description: "Load the current page again, ignoring cached copies.", status: implement, phase: 2, platforms: [desktop], requires: [network] }
+- { id: nav.stop, label: Stop, category: nav, description: Stop loading the current page., status: implement, phase: 2, platforms: [desktop, android], when: tab.isLoading }
+- { id: nav.home, label: Home, category: nav, description: Go to the home page., status: implement, phase: 2, platforms: [desktop, android] }
+- id: nav.go
+  label: Go to Address
+  category: nav
+  description: Load an address, or search for the text if it is not an address.
+  status: implement
+  phase: 2
+  platforms: [desktop, android]
+  requires: [network]
+  args: [{ name: text, type: string, description: Address or search text }]
+
+# ---- tab ----
+- id: tab.new
+  label: New Tab
+  category: tab
+  description: Open a new tab.
+  status: implement
+  phase: 2
+  platforms: [desktop, android]
+  lineage:
+    - { browser: Mozilla, versions: "1.0", menu: "File > New > Navigator Tab", year: 2002 }
+    - { browser: Firefox, versions: "1.0", menu: "File > New Tab", year: 2004 }
+- id: tab.close
+  label: Close Tab
+  category: tab
+  description: Close the current tab, or the tab at a given position.
+  status: implement
+  phase: 2
+  platforms: [desktop, android]
+  args: [{ name: index, type: number, optional: true, description: "Position from the left, starting at 1" }]
+- { id: tab.next, label: Next Tab, category: tab, description: Switch to the tab on the right., status: implement, phase: 2, platforms: [desktop], when: "tab.count > 1" }
+- { id: tab.previous, label: Previous Tab, category: tab, description: Switch to the tab on the left., status: implement, phase: 2, platforms: [desktop], when: "tab.count > 1" }
+- { id: tab.duplicate, label: Duplicate Tab, category: tab, description: Open the current page in a new tab., status: implement, phase: 2, platforms: [desktop, android] }
+- id: tab.reopen-closed
+  label: Reopen Closed Tab
+  aliases: [Undo Close Tab, Recently Closed]
+  category: tab
+  description: Bring back the tab closed most recently.
+  status: implement
+  phase: 2
+  platforms: [desktop, android]
+  when: tab.hasClosed
+  lineage:
+    - { browser: Firefox, versions: "2.0", menu: "History > Recently Closed Tabs", year: 2006 }
+- id: tab.select
+  label: Switch to Tab
+  category: tab
+  description: Switch to a tab by its position.
+  status: implement
+  phase: 2
+  platforms: [desktop]
+  args: [{ name: index, type: number, description: "Position from the left, starting at 1" }]
+
+# ---- tools ----
+- { id: tools.dev-tools, label: Developer Tools, aliases: [Inspect, Web Inspector, DevTools], category: tools, description: Open developer tools for the current page., status: implement, phase: 2, platforms: [desktop] }
+
+# ---- input ----
+- id: input.modal-mode
+  label: Modal Keyboard Mode
+  aliases: [Vi Mode, Normal Mode]
+  category: input
+  description: Use single keys as commands. While on, typing does not reach the page.
+  status: implement
+  phase: 2
+  platforms: [desktop]
+  checked: input.modal
+  lineage:
+    - { browser: qutebrowser, menu: "normal mode", year: 2014 }
+
+# ---- help ----
+- id: help.menu-archaeology
+  label: Menu Archaeology
+  aliases: [Command History, Lineage]
+  category: help
+  description: List every command with the browsers that carried it.
+  status: implement
+  phase: 2
+  platforms: [desktop, android]
+- { id: help.about, label: About Anne's Browser, category: help, description: Version and license information., status: implement, phase: 2, platforms: [desktop, android] }
+
+# ---- legacy ----
+- id: legacy.gopher-open
+  label: Open Gopher Server
+  aliases: [Gopher]
+  category: legacy
+  description: Browse a Gopher server using the built-in client.
+  status: emulate
+  status_reason: Browser engines removed Gopher; a built-in client renders it as pages.
+  phase: 6
+  platforms: [desktop]
+  requires: [network]
+  args: [{ name: url, type: url, optional: true, description: gopher URL }]
+  lineage:
+    - { browser: NCSA Mosaic, versions: "1.0", year: 1993 }
+    - { browser: Firefox, versions: "1.0-3.6", year: 2004 }
+- id: legacy.ftp-open
+  label: Open FTP Site
+  aliases: [FTP]
+  category: legacy
+  description: List and download files from an FTP server.
+  status: emulate
+  status_reason: Browser engines removed FTP; a read-only built-in client is planned.
+  phase: 6
+  platforms: [desktop]
+  requires: [network]
+  args: [{ name: url, type: url, optional: true, description: ftp URL }]
+- id: legacy.flash
+  label: Run Flash Content
+  aliases: [Shockwave Flash, Enable Plugins]
+  category: legacy
+  description: Play Flash content on this page using the Ruffle emulator.
+  status: emulate
+  status_reason: Flash Player was retired in 2020; Ruffle emulates it without the plugin.
+  phase: 6
+  platforms: [desktop]
+  requires: [page-script]
+- id: legacy.java-applets
+  label: Enable Java
+  aliases: [Java Applets]
+  category: legacy
+  description: Run Java applets embedded in pages.
+  status: stub
+  status_reason: Java applets needed a browser plugin with full access to the computer. No current engine can load one, and no safe emulation exists.
+  phase: 6
+  platforms: [desktop]
+  lineage:
+    - { browser: Netscape Navigator, versions: "2.0", year: 1995 }
+- id: legacy.activex
+  label: Enable ActiveX Controls
+  aliases: [ActiveX]
+  category: legacy
+  description: Run ActiveX controls embedded in pages.
+  status: stub
+  status_reason: ActiveX controls were native Windows programs run by the page with the user's full privileges. They cannot be run safely.
+  phase: 6
+  platforms: [desktop]
+  lineage:
+    - { browser: Internet Explorer, versions: "3.0-11", year: 1996 }
+- id: page.edit-in-composer
+  label: Edit Page
+  aliases: [Composer, Edit with FrontPage]
+  category: page
+  description: Open the current page in the built-in HTML editor.
+  status: emulate
+  status_reason: Composer was retired with the Netscape suite; a built-in editor replaces it.
+  phase: 6
+  platforms: [desktop]
+  lineage:
+    - { browser: Netscape Communicator, versions: "4.0-4.8", menu: "File > Edit Page", year: 1997 }

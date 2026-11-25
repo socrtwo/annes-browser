@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Anne's Browser</title>
+<link rel="stylesheet" href="chrome.css">
+</head>
+<body>
+<div id="tabs" role="tablist" aria-label="Tabs"></div>
+<div id="bar">
+  <button id="back" title="Back" aria-label="Back">&#8592;</button>
+  <button id="forward" title="Forward" aria-label="Forward">&#8594;</button>
+  <button id="reload" title="Reload" aria-label="Reload">&#8635;</button>
+  <input id="address" type="text" spellcheck="false" autocomplete="off" aria-label="Address or search" placeholder="Type an address or search">
+  <span id="mode" hidden>MODAL</span>
+  <button id="commands" title="Command palette (F2)" aria-label="Command palette">&#8984;</button>
+</div>
+<div id="notice" role="status" hidden></div>
+<div id="palette" hidden>
+  <div id="palette-box" role="dialog" aria-label="Command palette">
+    <input id="palette-input" type="text" spellcheck="false" autocomplete="off" aria-label="Search commands" placeholder="Search commands, e.g. &quot;reopen&quot; or &quot;netscape edit&quot;">
+    <ul id="palette-list" role="listbox"></ul>
+  </div>
+</div>
+<script src="chrome.js"></script>
+</body>
+</html>

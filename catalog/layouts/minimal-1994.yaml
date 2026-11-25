@@ -1,0 +1,18 @@
+id: minimal-1994
+label: 1994 Minimal
+description: The File / Edit / View / Go / Options / Help arrangement of the first graphical browsers.
+menus:
+  - label: File
+    items: [app.new-window, file.open-location, file.open-file, file.save-page-as, { separator: true }, view.page-source, { separator: true }, file.print, { separator: true }, tab.close, app.quit]
+  - label: Edit
+    items: [edit.undo, { separator: true }, edit.cut, edit.copy, edit.paste, { separator: true }, edit.find]
+  - label: View
+    items: [nav.reload, view.page-source]
+  - label: Go
+    items: [nav.back, nav.forward, nav.home, nav.stop]
+  - label: Options
+    items: [legacy.java-applets, input.modal-mode]
+  - label: Directory
+    items: [legacy.gopher-open, legacy.ftp-open]
+  - label: Help
+    items: [help.about, help.menu-archaeology]

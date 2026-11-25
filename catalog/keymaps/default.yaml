@@ -1,0 +1,44 @@
+id: default
+label: Modern
+bindings:
+  - { keys: Mod+T, command: tab.new }
+  - { keys: Mod+N, command: app.new-window }
+  - { keys: Mod+W, command: tab.close }
+  - { keys: Mod+Shift+T, command: tab.reopen-closed }
+  - { keys: Ctrl+Tab, command: tab.next }
+  - { keys: Ctrl+Shift+Tab, command: tab.previous }
+  - { keys: Ctrl+PageDown, command: tab.next }
+  - { keys: Ctrl+PageUp, command: tab.previous }
+  - { keys: Mod+1, command: tab.select, args: { index: 1 } }
+  - { keys: Mod+2, command: tab.select, args: { index: 2 } }
+  - { keys: Mod+3, command: tab.select, args: { index: 3 } }
+  - { keys: Mod+4, command: tab.select, args: { index: 4 } }
+  - { keys: Mod+5, command: tab.select, args: { index: 5 } }
+  - { keys: Mod+6, command: tab.select, args: { index: 6 } }
+  - { keys: Mod+7, command: tab.select, args: { index: 7 } }
+  - { keys: Mod+8, command: tab.select, args: { index: 8 } }
+  - { keys: Mod+L, command: file.open-location }
+  - { keys: Alt+D, command: file.open-location }
+  - { keys: F6, command: file.open-location }
+  - { keys: Mod+O, command: file.open-file }
+  - { keys: Mod+S, command: file.save-page-as }
+  - { keys: Mod+P, command: file.print }
+  - { keys: Mod+Q, command: app.quit }
+  - { keys: Mod+F, command: edit.find }
+  - { keys: Mod+R, command: nav.reload }
+  - { keys: F5, command: nav.reload }
+  - { keys: Mod+Shift+R, command: nav.reload-hard }
+  - { keys: Ctrl+F5, command: nav.reload-hard }
+  - { keys: Alt+ArrowLeft, command: nav.back }
+  - { keys: Alt+ArrowRight, command: nav.forward }
+  - { keys: Alt+Home, command: nav.home }
+  - { keys: Mod+Plus, command: view.zoom-in }
+  - { keys: Mod+=, command: view.zoom-in }
+  - { keys: Mod+-, command: view.zoom-out }
+  - { keys: Mod+0, command: view.zoom-reset }
+  - { keys: F11, command: view.full-screen }
+  - { keys: Mod+U, command: view.page-source }
+  - { keys: F12, command: tools.dev-tools }
+  - { keys: Mod+Shift+I, command: tools.dev-tools }
+  - { keys: Mod+Shift+P, command: app.command-palette }
+  - { keys: F2, command: app.command-palette }

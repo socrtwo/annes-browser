@@ -1,0 +1,74 @@
+import type { CommandRecord } from './catalog/types.ts';
+import { escapeHtml } from './gopher/render.ts';
+
+/**
+ * Internal pages served at anne://pages/. They are static HTML with no
+ * script, shown in ordinary tabs under a policy that forbids everything
+ * except their own inline style.
+ */
+
+export const INTERNAL_PAGE_CSP = "default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; sandbox";
+
+const STYLE = `
+body{font:15px/1.5 system-ui,sans-serif;max-width:46rem;margin:3rem auto;padding:0 1.25rem;color:#1c1b18;background:#fbfaf6}
+h1{font-size:1.5rem;margin:0 0 .25rem}h2{font-size:1.05rem;margin:2rem 0 .5rem}p{margin:.6rem 0}
+a{color:#0b4f9c}small,.m{color:#6d675a}code{font:13px ui-monospace,Menlo,Consolas,monospace}
+table{border-collapse:collapse;width:100%;font-size:.9rem}td,th{text-align:left;padding:.35rem .6rem .35rem 0;border-bottom:1px solid #dedacd;vertical-align:top}
+.tag{display:inline-block;font-size:.72rem;padding:.05rem .4rem;border:1px solid #b9b4a4;border-radius:3px;color:#6d675a}
+@media (prefers-color-scheme:dark){body{color:#e8e5dc;background:#1b1a17}a{color:#8fc1ff}small,.m,.tag{color:#a39d8c}td,th{border-color:#3a382f}.tag{border-color:#57534a}}
+`.trim();
+
+function page(title: string, body: string): string {
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeHtml(title)}</title><style>${STYLE}</style></head><body>${body}</body></html>`;
+}
+
+function lineageRows(c: CommandRecord): string {
+  return (c.lineage ?? [])
+    .map((l) => `<tr><td>${escapeHtml(l.browser)}${l.versions ? ` ${escapeHtml(l.versions)}` : ''}</td><td>${escapeHtml(l.menu ?? '')}</td><td>${l.year ?? ''}</td></tr>`)
+    .join('');
+}
+
+export function homePage(): string {
+  return page("Anne's Browser", `<h1>Anne's Browser</h1><p class="m">Every menu command from 35 years of web browsers.</p>
+<p>Type an address or a search above. Press <code>F2</code> to search all commands.</p>
+<h2>Places to start</h2>
+<p><a href="anne://pages/archaeology">Menu archaeology</a>: every command and where it came from.<br>
+<a href="gopher://gopher.floodgap.com/">Gopher</a>: the pre-web internet, through the built-in client.<br>
+<a href="anne://pages/about">About</a></p>`);
+}
+
+export function aboutPage(version: string, engine: string): string {
+  return page("About Anne's Browser", `<h1>Anne's Browser</h1><p class="m">Version ${escapeHtml(version)}</p>
+<p>Engine: ${escapeHtml(engine)}</p><p>MIT License. No telemetry.</p><p><a href="anne://pages/home">Home</a></p>`);
+}
+
+export function stubPage(c: CommandRecord | undefined): string {
+  if (!c) return page('Unknown command', '<h1>Unknown command</h1><p><a href="anne://pages/home">Home</a></p>');
+  const lineage = lineageRows(c);
+  return page(c.label, `<h1>${escapeHtml(c.label)}</h1><p class="m">${escapeHtml(c.description)}</p>
+<h2>Why this is not available</h2><p>${escapeHtml(c.status_reason ?? 'This feature has been retired.')}</p>
+${lineage ? `<h2>Where it came from</h2><table><tr><th>Browser</th><th>Menu</th><th>Year</th></tr>${lineage}</table>` : ''}
+<p><a href="anne://pages/archaeology">All commands</a></p>`);
+}
+
+export function archaeologyPage(commands: readonly CommandRecord[]): string {
+  const rows = [...commands]
+    .sort((a, b) => a.category.localeCompare(b.category) || a.label.localeCompare(b.label))
+    .map((c) => {
+      const origins = (c.lineage ?? []).map((l) => `${escapeHtml(l.browser)}${l.year ? ` (${l.year})` : ''}`).join('<br>');
+      const tag = c.status === 'implement' ? '' : ` <span class="tag">${c.status}</span>`;
+      const label = c.status === 'stub' ? `<a href="anne://pages/stub?id=${encodeURIComponent(c.id)}">${escapeHtml(c.label)}</a>` : escapeHtml(c.label);
+      return `<tr><td>${label}${tag}<br><small><code>${escapeHtml(c.id)}</code></small></td><td>${escapeHtml(c.description)}</td><td>${origins}</td></tr>`;
+    })
+    .join('');
+  return page('Menu archaeology', `<h1>Menu archaeology</h1><p class="m">${commands.length} commands. Origins are provisional until the command census is complete.</p>
+<table><tr><th>Command</th><th>What it does</th><th>Seen in</th></tr>${rows}</table>`);
+}
+
+export function blockedPage(url: string, reason: string): string {
+  return page('Page not opened', `<h1>Page not opened</h1><p>${escapeHtml(reason)}</p><p><code>${escapeHtml(url.slice(0, 500))}</code></p>`);
+}
+
+export function notFoundPage(): string {
+  return page('Not found', '<h1>Not found</h1><p><a href="anne://pages/home">Home</a></p>');
+}

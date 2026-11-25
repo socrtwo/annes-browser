@@ -1,0 +1,22 @@
+id: vi
+label: Vi (modal)
+extends: default
+bindings:
+  # Escape enters modal mode; I leaves it. Single keys act only in modal mode.
+  - { keys: Escape, command: input.modal-mode, when: "!input.modal && !ui.paletteOpen" }
+  - { keys: I, command: input.modal-mode, when: input.modal }
+  - { keys: Shift+H, command: nav.back, when: input.modal }
+  - { keys: Shift+L, command: nav.forward, when: input.modal }
+  - { keys: R, command: nav.reload, when: input.modal }
+  - { keys: Shift+R, command: nav.reload-hard, when: input.modal }
+  - { keys: O, command: file.open-location, when: input.modal }
+  - { keys: T, command: tab.new, when: input.modal }
+  - { keys: D, command: tab.close, when: input.modal }
+  - { keys: U, command: tab.reopen-closed, when: input.modal }
+  - { keys: G T, command: tab.next, when: input.modal }
+  - { keys: G Shift+T, command: tab.previous, when: input.modal }
+  - { keys: G S, command: view.page-source, when: input.modal }
+  - { keys: ":", command: app.command-palette, when: input.modal }
+  - { keys: Z I, command: view.zoom-in, when: input.modal }
+  - { keys: Z O, command: view.zoom-out, when: input.modal }
+  - { keys: Z Z, command: view.zoom-reset, when: input.modal }

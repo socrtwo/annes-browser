@@ -1,0 +1,28 @@
+id: suite-1999
+label: 1999 Suite
+description: The communicator-suite arrangement, with editing and component menus.
+menus:
+  - label: File
+    items:
+      - label: New
+        items: [app.new-window, tab.new]
+      - file.open-location
+      - file.open-file
+      - file.save-page-as
+      - { separator: true }
+      - page.edit-in-composer
+      - { separator: true }
+      - file.print
+      - { separator: true }
+      - tab.close
+      - app.quit
+  - label: Edit
+    items: [edit.undo, edit.redo, { separator: true }, edit.cut, edit.copy, edit.paste, edit.select-all, { separator: true }, edit.find]
+  - label: View
+    items: [view.zoom-in, view.zoom-out, { separator: true }, nav.reload, nav.stop, { separator: true }, view.page-source, view.full-screen]
+  - label: Go
+    items: [nav.back, nav.forward, nav.home]
+  - label: Communicator
+    items: [legacy.gopher-open, legacy.ftp-open, { separator: true }, legacy.java-applets, legacy.flash]
+  - label: Help
+    items: [help.about, help.menu-archaeology]
