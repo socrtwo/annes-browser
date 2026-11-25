@@ -1,0 +1,33 @@
+name: Command request
+description: Propose a historic, current or new browser command for the catalog
+labels: ["catalog"]
+body:
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and version (or "new")
+      placeholder: "Opera 9.6 (Presto), Windows"
+    validations:
+      required: true
+  - type: input
+    id: menu_path
+    attributes:
+      label: Menu path / shortcut
+      placeholder: "View > Fit to Width (Ctrl+F11)"
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: What it does
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source (manual, archived screenshot, source code link)
+  - type: dropdown
+    id: status
+    attributes:
+      label: Suggested treatment
+      options: [implement, emulate, stub, omit, unsure]
