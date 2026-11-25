@@ -253,8 +253,9 @@
   label: Run Flash Content
   aliases: [Shockwave Flash, Enable Plugins]
   category: legacy
-  description: Play Flash content on this page using the Ruffle emulator.
+  description: Play Flash content in this tab using the Ruffle emulator.
   status: emulate
+  when: "page.scheme == 'http' || page.scheme == 'https'"
   status_reason: Flash Player was retired in 2020; Ruffle emulates it without the plugin.
   phase: 6
   platforms: [desktop]

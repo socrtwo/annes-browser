@@ -8,7 +8,8 @@ import {
   PAGES_ORIGIN, searchUrl,
 } from '../core/security/url-policy.ts';
 import type { Context } from '../core/when/when.ts';
-import { adopt, uiPreferences, WEB_PREFERENCES } from './security.ts';
+import { adopt, flashTabs, uiPreferences, WEB_PREFERENCES } from './security.ts';
+import { RUFFLE_BASE } from '../core/security/url-policy.ts';
 
 const TOOLBAR_HEIGHT = 76;
 const NOTICE_HEIGHT = 28;
@@ -261,6 +262,43 @@ export class BrowserWindow {
     const url = this.closed.pop();
     // The address was reached by the user earlier; it still passes through the policy.
     if (url) this.newTab(url, 'user-command');
+  }
+
+  // ---- Flash emulation ----
+
+  /**
+   * Turn the Ruffle emulator on for the active tab. It stays on for that tab
+   * until the tab closes. The emulator runs inside the page, with the page's
+   * own privileges and nothing more: it gets no bridge to the browser.
+   */
+  enableFlash(): void {
+    const wc = this.activeContents;
+    if (!wc) return;
+    if (!/^https?:/.test(wc.getURL())) return this.showNotice('Flash emulation works on web pages only.');
+    if (!flashTabs.has(wc.id)) {
+      const id = wc.id;
+      flashTabs.add(id);
+      wc.once('destroyed', () => flashTabs.delete(id));
+      wc.on('dom-ready', () => this.injectRuffle(wc));
+    }
+    this.injectRuffle(wc);
+    this.showNotice('Flash emulation (Ruffle) is on for this tab.');
+  }
+
+  private injectRuffle(wc: WebContents): void {
+    if (wc.isDestroyed() || !flashTabs.has(wc.id) || !/^https?:/.test(wc.getURL())) return;
+    // A constant script: nothing from the page or the user is interpolated into it.
+    const script = `(() => {
+      if (window.__anneRuffle) return 'present';
+      window.__anneRuffle = true;
+      window.RufflePlayer = window.RufflePlayer || {};
+      window.RufflePlayer.config = Object.assign({ publicPath: ${JSON.stringify(RUFFLE_BASE)}, polyfills: true, autoplay: 'auto', openUrlMode: 'confirm', allowNetworking: 'all' }, window.RufflePlayer.config || {});
+      const s = document.createElement('script');
+      s.src = ${JSON.stringify(`${RUFFLE_BASE}ruffle.js`)};
+      (document.head || document.documentElement).append(s);
+      return 'injected';
+    })()`;
+    wc.executeJavaScript(script).catch(() => this.showNotice('This page does not allow the Flash emulator to load.'));
   }
 
   // ---- navigation ----

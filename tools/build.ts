@@ -1,5 +1,5 @@
 /** Bundle the main process, the preload script and the UI into dist/. */
-import { cpSync, mkdirSync } from 'node:fs';
+import { cpSync, mkdirSync, readdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { build } from 'esbuild';
@@ -13,4 +13,10 @@ await build({ ...common, entryPoints: [join(root, 'app/preload/chrome.ts')], out
 await build({ ...common, entryPoints: [join(root, 'app/ui/chrome.ts')], outfile: join(root, 'dist/ui/chrome.js'), platform: 'browser', format: 'iife', sourcemap: false });
 mkdirSync(join(root, 'dist/ui'), { recursive: true });
 for (const f of ['index.html', 'chrome.css']) cpSync(join(root, 'app/ui', f), join(root, 'dist/ui', f));
-console.log('build: dist/main, dist/preload, dist/ui');
+// The Flash emulator (Ruffle) is shipped as-is and served to pages on request.
+const ruffle = join(root, 'node_modules/@ruffle-rs/ruffle');
+mkdirSync(join(root, 'dist/ruffle'), { recursive: true });
+for (const f of readdirSync(ruffle).filter((n) => n === 'ruffle.js' || n.endsWith('.wasm') || n.startsWith('LICENSE'))) {
+  cpSync(join(ruffle, f), join(root, 'dist/ruffle', f));
+}
+console.log('build: dist/main, dist/preload, dist/ui, dist/ruffle');

@@ -2,6 +2,7 @@ import { describe, expect, it, vi } from 'vitest';
 import { isDangerousFile, sanitizeFilename } from '../app/core/security/downloads.ts';
 import { isPublicAddress, isRestrictedPort } from '../app/core/security/net-policy.ts';
 import { PermissionPolicy, permissionRule } from '../app/core/security/permissions.ts';
+import { hasUnsafeSwitches } from '../app/core/security/startup.ts';
 import {
   decideFrameNavigation, decideNavigation, displayUrl, interpretAddressInput, searchUrl,
 } from '../app/core/security/url-policy.ts';
@@ -178,5 +179,14 @@ describe('permission policy', () => {
     expect(prompt).toHaveBeenCalledTimes(2);
     policy.forget('https://good.example');
     expect(policy.check('https://good.example', 'media')).toBe(false);
+  });
+});
+
+describe('startup switches', () => {
+  it('flags switches that weaken a release build', () => {
+    for (const flag of ['--remote-debugging-port=9222', '--inspect', '--inspect-brk=0', '--no-sandbox', '--disable-web-security', '--ignore-certificate-errors', '--proxy-server=evil:8080', '--host-rules=MAP * evil', '--load-extension=/tmp/x', '--js-flags=--expose-gc']) {
+      expect(hasUnsafeSwitches(['app', flag]), flag).toBe(flag);
+    }
+    expect(hasUnsafeSwitches(['app', 'https://example.com/?--no-sandbox', '--lang=en', '--inspector-thing'])).toBeUndefined();
   });
 });

@@ -30,6 +30,14 @@ export const INTERNAL_SCHEME = 'anne';
 export const CHROME_ORIGIN = `${INTERNAL_SCHEME}://chrome`;
 export const PAGES_ORIGIN = `${INTERNAL_SCHEME}://pages`;
 
+/**
+ * Scheme that serves the bundled Flash emulator's own files to pages. It is
+ * the only browser-provided scheme a page may load as a subresource, and only
+ * in a tab where the user has turned Flash emulation on.
+ */
+export const RUFFLE_SCHEME = 'anne-ruffle';
+export const RUFFLE_BASE = `${RUFFLE_SCHEME}://app/`;
+
 /** Schemes passed to other applications. Each use is confirmed by the user. */
 export const EXTERNAL_SCHEMES: ReadonlySet<string> = new Set([
   'mailto', 'tel', 'sms', 'magnet', 'irc', 'ircs', 'news', 'nntp', 'geo', 'xmpp', 'webcal',

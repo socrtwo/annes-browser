@@ -76,7 +76,7 @@ The same mid token profile (6.5M output / 20M uncached / 325M cached input) is a
    - Fable 5.2 or Opus 5.5 for Phase 2 architecture, security review and hard integrations (~25% of output).
    - Sonnet 5.5, GPT-6.1 Sol or DeepSeek V4 Pro for bulk command handlers, tests and catalog work (~75%).
    - Estimated blended mid cost: **~$140–190**, compared with ~$295 for all-Opus or ~$446 for all-Fable.
-4. **The biggest saving is architectural, not vendor choice.** Driving menus, palette, shortcuts and docs from one `commands.yaml` collapses ~800 commands into ~350 handlers. That is already assumed above. Without it, expect 2–3× the tokens.
+4. **The biggest saving is architectural, not vendor choice.** Driving menus, palette, shortcuts and docs from one command catalog collapses ~800 commands into ~350 handlers. That is already assumed above. Without it, expect 2–3× the tokens.
 5. **Jurisdiction and data handling:** DeepSeek, Kimi, GLM and Qwen first-party APIs are operated from China. For an open-source project that is usually acceptable, but if any private material goes into prompts, use their open-weight models through a host in your own jurisdiction instead. Hosted prices for those differ.
 
 ## 4. Caveats

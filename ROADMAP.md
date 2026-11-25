@@ -1,6 +1,17 @@
 # Anne's Browser: Roadmap
 
-Last updated: 2026-11-24. Status: Phase 0.
+Last updated: 2026-11-25. Status: Phase 2 foundation built; Phases 1 and 3 next.
+
+| Phase | State |
+|---|---|
+| 0 Decisions | D1, D2, D4 adopted; D5, D6 wait on the owner. See [docs/DECISIONS.md](docs/DECISIONS.md) |
+| 1 Census | Not started. 45 seed commands with provisional lineage |
+| 2 Skeleton | **Built**, except the settings store and import pipeline |
+| 3 Baseline | Not started |
+| 6 Legacy | Gopher and Flash (Ruffle) built early; the rest not started |
+| others | Not started |
+
+What to do next, and with which model: [docs/HANDOFF.md](docs/HANDOFF.md).
 
 Token figures per phase are output-token budgets for AI-assisted development at the mid estimate (see [COST-ESTIMATE.md](COST-ESTIMATE.md)). Input and cache tokens scale with them at about 50:1.
 
@@ -23,7 +34,7 @@ Token figures per phase are output-token budgets for AI-assisted development at 
 | D7 | Distribution | GitHub Releases / F-Droid / Play Store / winget / Homebrew / Flathub | GitHub Releases first, then F-Droid and Flathub. |
 | D8 | Extensions | Chrome Web Store (MV3) / Firefox AMO / none | MV3 on desktop and AMO on Android, following the engines. |
 
-**Exit criteria:** D1–D8 recorded in `docs/DECISIONS.md`.
+**Exit criteria:** D1–D8 recorded in `docs/DECISIONS.md`. *(Recorded. D5 and D6 remain with the owner.)*
 
 ---
 
@@ -33,7 +44,7 @@ Build the master catalog that the whole product is generated from.
 
 1. For each surveyed browser and major version, list every menu, context-menu, toolbar, keyboard-only and settings-exposed command. Sources: manuals, help files, archived screenshots (Internet Archive, Toastytech GUI gallery), menu dumps of installable versions in VMs, and source code where it is available (Mozilla, Chromium, WebKit, Konqueror, Lynx, Dillo).
 2. Record each one in `catalog/sources/<browser>-<version>.yaml`.
-3. De-duplicate into `catalog/commands.yaml`, one canonical record per behavior, with aliases and lineage (schema in [docs/COMMAND-CATALOG.md](docs/COMMAND-CATALOG.md)).
+3. De-duplicate into `catalog/commands/<category>.yaml`, one canonical record per behavior, with aliases and lineage (schema in [docs/COMMAND-CATALOG.md](docs/COMMAND-CATALOG.md)).
 4. Classify each one: `implement` / `emulate` / `stub` / `omit`, with a reason for each.
 
 **Expected size:** about 2,000–3,000 raw entries, reducing to about 700–1,000 canonical commands.
@@ -45,7 +56,7 @@ Build the master catalog that the whole product is generated from.
 ## Phase 2: Architecture skeleton *(~0.6M)*
 
 - App shell: windows, tab strip, address bar, status bar, sidebar host.
-- **Command registry runtime:** loads `commands.yaml` and exposes `execute(id, args)`, `isEnabled(id, ctx)` and `isChecked(id, ctx)`.
+- **Command registry runtime:** loads the compiled catalog and exposes `execute(id, args)`, `isEnabled(id, ctx)` and `isChecked(id, ctx)`.
 - **Menu generator:** builds native menu bars and context menus from the registry, with era-layout definitions as data.
 - **Command palette:** fuzzy search across labels, aliases and lineage ("Netscape 4: Edit Page").
 - **Keybinding engine:** profiles (Modern, Classic IE, Classic Netscape, Opera, Emacs, vi), conflict detection and a chord editor.
@@ -160,7 +171,7 @@ Accessibility (screen readers, full keyboard operation, high contrast), i18n of 
 
 ## Phase 9: Android *(~0.8M)*
 
-GeckoView shell. The same `commands.yaml`, filtered by `platforms`, drives a bottom-sheet command menu, palette and gestures. Termux-friendly build scripts.
+GeckoView shell. The same compiled catalog, filtered by `platforms`, drives a bottom-sheet command menu, palette and gestures. Termux-friendly build scripts.
 
 ---
 

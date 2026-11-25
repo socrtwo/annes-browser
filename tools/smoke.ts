@@ -33,6 +33,16 @@ async function until<T>(fn: () => Promise<T | undefined | false> | T | undefined
   return undefined;
 }
 
+/** The smallest valid Flash movie: a 100x100 stage, one frame, a background colour. */
+function minimalSwf(): Buffer {
+  const bits = '01100' + [0, 2000, 0, 2000].map((v) => v.toString(2).padStart(12, '0')).join('');
+  const rect = Buffer.from((bits.padEnd(56, '0').match(/.{8}/g) ?? []).map((b) => parseInt(b, 2)));
+  const body = Buffer.concat([rect, Buffer.from([0x00, 0x0c, 0x01, 0x00]), Buffer.from([0x43, 0x02, 0x10, 0x80, 0xc0]), Buffer.from([0x40, 0x00, 0x00, 0x00])]);
+  const header = Buffer.from([0x46, 0x57, 0x53, 0x06, 0, 0, 0, 0]);
+  header.writeUInt32LE(8 + body.length, 4);
+  return Buffer.concat([header, body]);
+}
+
 // ---- local servers ----
 const httpHits: string[] = [];
 const http = createHttp((req, res) => {
@@ -40,6 +50,8 @@ const http = createHttp((req, res) => {
   res.setHeader('Content-Type', 'text/html');
   if (req.url === '/redirect-file') { res.statusCode = 302; res.setHeader('Location', 'file:///etc/passwd'); return res.end(); }
   if (req.url === '/redirect-internal') { res.statusCode = 302; res.setHeader('Location', 'anne://pages/about'); return res.end(); }
+  if (req.url === '/test.swf') { res.setHeader('Content-Type', 'application/x-shockwave-flash'); return res.end(minimalSwf()); }
+  if (req.url === '/flash') return res.end('<title>flash page</title><embed id="movie" src="/test.swf" type="application/x-shockwave-flash" width="100" height="100">');
   res.end(`<title>page ${req.url}</title><body>hello <a id="l" href="/b">b</a></body>`);
 });
 await new Promise<void>((r) => http.listen(0, '127.0.0.1', r));
@@ -207,7 +219,7 @@ check('palette closes after running', !(await uiState()).palette);
 await ui.evaluate(() => window.anne.execute({ id: 'legacy.activex', source: 'palette' }));
 const stub = await tabWith('anne://pages/stub');
 check('a retired command opens its explanation page', !!stub && (await stub.textContent('body'))!.includes('cannot be run safely'));
-await ui.evaluate(() => window.anne.execute({ id: 'legacy.flash', source: 'palette' }));
+await ui.evaluate(() => window.anne.execute({ id: 'legacy.ftp-open', source: 'palette' }));
 check('an unbuilt command says so', !!(await until(async () => (await uiState()).notice?.includes('not built yet'))), (await uiState()).notice ?? '');
 
 await go('javascript:alert(1)');
@@ -232,6 +244,27 @@ await until(async () => !!gsearch && !!(await gsearch.$('input[name=q]')));
 await gsearch?.fill('input[name=q]', 'big cats');
 await gsearch?.press('input[name=q]', 'Enter');
 check('gopher search form submits the query', !!(await until(() => gopherHits.includes('/find\tbig cats'))), gopherHits.join('|'));
+
+// ---- Flash emulation ----
+await go(`${base}/flash`);
+const flash = await tabWith('/flash');
+await until(async () => !!flash && !!(await flash.$('#movie')));
+const probeRuffle = () => flash!.evaluate(() => fetch('anne-ruffle://app/ruffle.js').then((r) => (r.ok ? 'loaded' : 'blocked'), () => 'blocked'));
+check('emulator files are not reachable before the user turns Flash on', (await probeRuffle()) === 'blocked');
+await ui.evaluate(() => window.anne.execute({ id: 'tab.select', source: 'toolbar', args: { index: 1 } }));
+await sleep(300);
+const other = tabs().find((p) => p.url() === `${base}/a`);
+const flashIndex = await ui.evaluate(() => [...document.querySelectorAll('.tab')].findIndex((t) => t.textContent!.includes('flash page')) + 1);
+await ui.evaluate((i) => window.anne.execute({ id: 'tab.select', source: 'toolbar', args: { index: i } }), flashIndex);
+await sleep(300);
+await ui.evaluate(() => window.anne.execute({ id: 'legacy.flash', source: 'palette' }));
+const movie = await until(() => flash!.evaluate(() => {
+  const player = document.querySelector('ruffle-embed, ruffle-object, ruffle-player') as (HTMLElement & { metadata?: { width: number; height: number; swfVersion: number } | null }) | null;
+  return player?.metadata ? `${player.metadata.width}x${player.metadata.height} v${player.metadata.swfVersion}` : undefined;
+}), 20000);
+check('Run Flash Content plays a movie through Ruffle', movie === '100x100 v6', String(movie));
+check('emulator files stay unreachable from other tabs', !!other && (await other.evaluate(() => fetch('anne-ruffle://app/ruffle.js').then((r) => (r.ok ? 'loaded' : 'blocked'), () => 'blocked'))) === 'blocked');
+check('the emulator gives the page no route to the browser', (await flash!.evaluate(() => typeof (window as unknown as Record<string, unknown>)['anne'] + typeof (window as unknown as Record<string, unknown>)['require'])) === 'undefinedundefined');
 
 // ---- modal keyboard mode ----
 await go(`${base}/typing`);

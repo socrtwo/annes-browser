@@ -6,7 +6,7 @@ import { handleGopherUrl } from '../core/gopher/client.ts';
 import {
   aboutPage, archaeologyPage, blockedPage, homePage, INTERNAL_PAGE_CSP, notFoundPage, stubPage,
 } from '../core/pages.ts';
-import { INTERNAL_SCHEME } from '../core/security/url-policy.ts';
+import { INTERNAL_SCHEME, RUFFLE_SCHEME } from '../core/security/url-policy.ts';
 
 /**
  * Development builds can be told to reach a Gopher server on this machine, so
@@ -18,6 +18,10 @@ const DEV_ALLOW_PRIVATE_GOPHER = !app.isPackaged && process.env['ANNE_DEV_GOPHER
 export function registerSchemes(): void {
   protocol.registerSchemesAsPrivileged([
     { scheme: INTERNAL_SCHEME, privileges: { standard: true, secure: true } },
+    // The emulator's script and WebAssembly are fetched by the page it runs in, so this
+    // scheme must be fetchable cross-origin and exempt from that page's content policy.
+    // Nothing else is served from it, and security.ts limits which tabs may request it.
+    { scheme: RUFFLE_SCHEME, privileges: { standard: true, secure: true, supportFetchAPI: true, corsEnabled: true, bypassCSP: true } },
   ]);
   // Gopher is deliberately NOT registered as a standard scheme: Chromium gives
   // custom standard schemes no port, and would silently rewrite
@@ -49,6 +53,31 @@ export function serveUi(ses: Session, uiDir: string): void {
     }
     try {
       return new Response(await readFile(file), { headers: { ...COMMON, 'Content-Type': type, 'Content-Security-Policy': UI_CSP } });
+    } catch {
+      return new Response('Not found', { status: 404, headers: COMMON });
+    }
+  });
+}
+
+const RUFFLE_FILE = /^\/(ruffle\.js|[A-Za-z0-9_.-]+\.wasm)$/;
+
+/** Serve the bundled Flash emulator's files in the web session. */
+export function serveRuffle(ses: Session, ruffleDir: string): void {
+  ses.protocol.handle(RUFFLE_SCHEME, async (request) => {
+    const url = new URL(request.url);
+    // A fixed pattern, not a path join: only the emulator's own top-level files exist here.
+    if (url.host !== 'app' || request.method !== 'GET' || !RUFFLE_FILE.test(url.pathname)) {
+      return new Response('Not found', { status: 404, headers: COMMON });
+    }
+    try {
+      return new Response(await readFile(join(ruffleDir, url.pathname.slice(1))), {
+        headers: {
+          'X-Content-Type-Options': 'nosniff',
+          'Cache-Control': 'max-age=86400',
+          'Access-Control-Allow-Origin': '*',
+          'Content-Type': url.pathname.endsWith('.wasm') ? 'application/wasm' : 'text/javascript; charset=utf-8',
+        },
+      });
     } catch {
       return new Response('Not found', { status: 404, headers: COMMON });
     }

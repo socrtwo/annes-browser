@@ -19,6 +19,7 @@
     "check": "npm run typecheck && npm run catalog && npm test"
   },
   "devDependencies": {
+    "@ruffle-rs/ruffle": "0.8.0",
     "@types/node": "22.20.7",
     "ajv": "8.20.0",
     "electron": "45.5.0",

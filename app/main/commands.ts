@@ -90,6 +90,8 @@ export function registerHandlers(registry: CommandRegistry<BrowserWindow>, actio
   on('help.menu-archaeology', (w) => w.newTab(`${PAGES_ORIGIN}/archaeology`, 'internal'));
   on('help.about', (w) => w.newTab(`${PAGES_ORIGIN}/about`, 'internal'));
 
+  on('legacy.flash', (w) => w.enableFlash());
+
   on('legacy.gopher-open', (w, { url }) => {
     if (typeof url === 'string') {
       if (!/^gopher:\/\//i.test(url)) throw new Error('not a gopher URL');

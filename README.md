@@ -2,7 +2,20 @@
 
 **Every menu command from 35 years of web browsers, plus new ones, in one searchable, customizable browser.**
 
-> Status: **Pre-development / planning.** This repository holds only metadata, the roadmap and the cost estimate. No application code exists yet.
+> Status: **Phase 2 foundation.** A working, hardened browser shell exists: tabs, generated menus in four layouts, command palette, remappable keys with a modal profile, a built-in Gopher client and Flash emulation. 45 of an expected 700–1,000 commands are catalogued. Linux-tested only; not ready for daily use.
+
+## Run it
+
+Requires Node 22 or later.
+
+```bash
+npm install
+npm start            # build and launch
+npm run check        # typecheck, catalog validation, unit tests
+npm run smoke        # end-to-end security checks in a real window (Linux headless: xvfb-run -a npm run smoke)
+```
+
+Press `F2` for the command palette. The **Layout** menu switches era layouts and keyboard profiles.
 
 ## Concept
 
@@ -38,25 +51,29 @@ On top of the historic set, it adds new commands aimed at research, publishing, 
 
 ## Planned platforms
 
-To be decided in Phase 0. The recommendation is in [ROADMAP.md](ROADMAP.md): desktop (Windows, macOS, Linux) first on Electron, then Android on GeckoView.
+Desktop (Windows, macOS, Linux) on Electron first, then Android on GeckoView. See [docs/DECISIONS.md](docs/DECISIONS.md).
 
-## Repository layout (planned)
+## Repository layout
 
 ```
 annes-browser/
-├── README.md              This file
-├── ROADMAP.md             Phased plan, exit criteria, open decisions
-├── COST-ESTIMATE.md       Token and cost estimates (Claude and alternatives)
-├── CHANGELOG.md
-├── CONTRIBUTING.md
-├── LICENSE
-├── docs/
-│   └── COMMAND-CATALOG.md Command record schema and category taxonomy
-├── catalog/               (Phase 1) commands.yaml and per-browser source lists
-├── app/                   (Phase 2+) application code
-└── .github/ISSUE_TEMPLATE Command-request template
+├── catalog/            Command records, menu layouts, keymaps (YAML): the source of truth
+├── schema/             JSON Schema for the compiled catalog
+├── app/core/           All logic, no Electron: registry, keys, menus, policies, Gopher
+├── app/main/           Electron main process: windows, sessions, protocol handlers
+├── app/preload/        The four-function bridge for the browser UI
+├── app/ui/             Tab strip, address bar, palette
+├── tools/              Catalog compiler, bundler, end-to-end test
+├── tests/              Unit tests
+└── docs/
+    ├── ARCHITECTURE.md     How it fits together
+    ├── SECURITY-MODEL.md   Threats, controls, and what is not built yet
+    ├── DECISIONS.md        Decisions made, proposed, and waiting on the owner
+    ├── INTEGRATIONS.md     Gopher, Ruffle; specifications for FTP and others
+    ├── COMMAND-CATALOG.md  Catalog file formats
+    └── HANDOFF.md          What to do next, and with which model
 ```
 
 ## License
 
-MIT (placeholder, to be confirmed in Phase 0). See [LICENSE](LICENSE).
+MIT (placeholder, to be confirmed by the owner). See [LICENSE](LICENSE). Bundles [Ruffle](https://ruffle.rs) (MIT or Apache-2.0).

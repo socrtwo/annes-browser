@@ -1,7 +1,7 @@
 import { app, type Session, session, type WebContents } from 'electron';
 import { sanitizeFilename } from '../core/security/downloads.ts';
 import { PermissionPolicy } from '../core/security/permissions.ts';
-import { CHROME_ORIGIN, INTERNAL_SCHEME } from '../core/security/url-policy.ts';
+import { CHROME_ORIGIN, INTERNAL_SCHEME, RUFFLE_SCHEME } from '../core/security/url-policy.ts';
 
 /**
  * Two sessions, never mixed:
@@ -47,6 +47,13 @@ export function uiPreferences(preload: string) {
 
 export const permissions = new PermissionPolicy();
 
+/**
+ * Tabs (by WebContents id) where the user has turned Flash emulation on.
+ * Only these may load the emulator's files, so other pages cannot probe for
+ * them to identify the browser.
+ */
+export const flashTabs = new Set<number>();
+
 function originOf(url: string | undefined): string | undefined {
   try { return url ? new URL(url).origin : undefined; } catch { return undefined; }
 }
@@ -76,6 +83,10 @@ export function hardenWebSession(ses: Session): void {
     // Gopher opens raw TCP connections: allow it only as a top-level page the user can see,
     // never as an image, frame, script or fetch issued by a page.
     if (scheme === 'gopher' && type !== 'mainFrame') return callback({ cancel: true });
+    // The Flash emulator's files load only in tabs where the user enabled it, and never as a page.
+    if (scheme === RUFFLE_SCHEME && (type === 'mainFrame' || type === 'subFrame' || !flashTabs.has(details.webContentsId ?? -1))) {
+      return callback({ cancel: true });
+    }
     // Internal pages are documents, never subresources of web pages.
     if (scheme === INTERNAL_SCHEME && type !== 'mainFrame') return callback({ cancel: true });
     callback({});
@@ -118,9 +129,4 @@ export function installGlobalGuards(): void {
 
 export function sessions(): { ui: Session; web: Session } {
   return { ui: session.fromPartition(UI_PARTITION), web: session.fromPartition(WEB_PARTITION) };
-}
-
-/** Flags that turn a packaged build into a remote-control or unsandboxed one. */
-export function hasUnsafeSwitches(argv: readonly string[]): string | undefined {
-  return argv.find((a) => /^--(remote-debugging-(port|pipe|address)|inspect(-brk|-port)?|no-sandbox|disable-web-security|js-flags|load-extension|disable-site-isolation-trials)(=|$)/.test(a));
 }

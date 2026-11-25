@@ -9,8 +9,9 @@ import { CommandRegistry, type ExecuteResult, type InvocationSource } from '../c
 import { PAGES_ORIGIN } from '../core/security/url-policy.ts';
 import { registerHandlers } from './commands.ts';
 import { toElectronMenu } from './menu.ts';
-import { registerSchemes, serveUi, serveWeb } from './protocols.ts';
-import { hardenUiSession, hardenWebSession, hasUnsafeSwitches, installGlobalGuards, sessions } from './security.ts';
+import { registerSchemes, serveRuffle, serveUi, serveWeb } from './protocols.ts';
+import { hasUnsafeSwitches } from '../core/security/startup.ts';
+import { hardenUiSession, hardenWebSession, installGlobalGuards, sessions } from './security.ts';
 import { BrowserWindow } from './window.ts';
 
 const dist = join(__dirname, '..');
@@ -169,6 +170,7 @@ if (!app.requestSingleInstanceLock()) {
     hardenWebSession(web);
     serveUi(ui, join(dist, 'ui'));
     serveWeb(web, { visibleCommands: () => registry.visible(), command: (id) => registry.get(id) });
+    serveRuffle(web, join(dist, 'ruffle'));
     registerHandlers(registry, {
       newWindow: () => void newWindow(),
       layoutIds: () => layouts.map((l) => l.id),
