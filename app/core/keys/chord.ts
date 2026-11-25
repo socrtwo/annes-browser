@@ -110,8 +110,9 @@ export function chordFromInput(input: KeyInput): string | undefined {
  * only be bound in modal mode (enforced by the catalog build).
  */
 export function isTypingChord(canonical: string): boolean {
+  // Canonical chords never contain a literal "+" key (it is spelled "Plus"), so splitting is safe.
   const parts = canonical.split('+');
-  const key = canonical === '+' || canonical.endsWith('++') ? '+' : parts[parts.length - 1]!;
+  const key = parts.at(-1)!;
   const mods = new Set(parts.slice(0, -1));
   if (mods.has('Ctrl') || mods.has('Alt') || mods.has('Meta')) return false;
   return isPrintable(key) || ['Space', 'Enter', 'Backspace', 'Tab', 'Delete'].includes(key);

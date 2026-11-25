@@ -5,11 +5,10 @@ import { chordFromInput, isTypingChord, type OS } from '../core/keys/chord.ts';
 import { displayBinding, KeyDispatcher, type KeyResult, resolveKeymap, type ResolvedBinding } from '../core/keys/resolver.ts';
 import {
   CHROME_ORIGIN, decideFrameNavigation, decideNavigation, displayUrl, type Initiator, interpretAddressInput,
-  PAGES_ORIGIN, searchUrl,
+  PAGES_ORIGIN, RUFFLE_BASE, searchUrl,
 } from '../core/security/url-policy.ts';
 import type { Context } from '../core/when/when.ts';
 import { adopt, flashTabs, uiPreferences, WEB_PREFERENCES } from './security.ts';
-import { RUFFLE_BASE } from '../core/security/url-policy.ts';
 
 const TOOLBAR_HEIGHT = 76;
 const NOTICE_HEIGHT = 28;
