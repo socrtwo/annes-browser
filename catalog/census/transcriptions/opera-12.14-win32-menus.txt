@@ -1,0 +1,1951 @@
+# Menus read from Opera's menu specification file by tools/opera-dump.ts.
+# download: https://archive.org/download/opera-12.14-windows-32-bit/opera-12-14-Opera_1214_int_Setup.exe
+# unpacked: installer: ui/standard_menu.ini
+# file: standard_menu.ini, sha256 660c0fcc21af7f23a5cae011aab1456d7fbd8149e3011e0470402812b9593aff
+# Each MENUITEM: Opera's action name, then the string id of the label; the comment is the full action.
+
+OPERA MENU
+{
+    POPUP "Links Panel Item Menu"
+    {
+        MENUITEM "Open link", SI_OPEN_BUTTON_TEXT    // Open link
+        MENUITEM "Open link in new page", MI_IDM_MENU_PAGEBAR_LINK_IN_NEW_PAGE    // Open link in new page
+        MENUITEM "Open link in background page", MI_IDM_MENU_PAGEBAR_LINK_IN_BG_PAGE    // Open link in background page
+        MENUITEM "Open link in new window", MI_IDM_HLITEM_GET_IN_NEW_WINDOW    // Open link in new window
+        MENUITEM "Open link in background window", M_OPEN_BACKGROUND_WINDOW    // Open link in background window
+        MENUITEM "Add link to bookmarks", M_LINKS_PANEL_BOOKMARK_LINK    // Add link to bookmarks
+        MENUITEM "Copy", MI_IDM_POPUP_LINK_ADDRESS    // Copy
+        MENUITEM "Download url as", MI_IDM_SAVELINKDOCAS    // Download url as
+        MENUITEM "Download url", M_SAVE_LINK_TO_DOWNLOAD_FOLDER    // Download url
+        MENUITEM "Lock panel", M_PANEL_LOCK    // Lock panel | Unlock panel
+    }
+    POPUP "Links Panel Download Menu"
+    {
+        MENUITEM "Download url as", MI_IDM_SAVELINKDOCAS    // Download url as
+        MENUITEM "Download url", M_SAVE_LINK_TO_DOWNLOAD_FOLDER    // Download url
+    }
+    POPUP "Links Panel View Menu"
+    {
+    }
+    POPUP "Links Manager Open Menu"
+    {
+        MENUITEM "Open link in new page", MI_IDM_MENU_PAGEBAR_LINK_IN_NEW_PAGE    // Open link in new page
+        MENUITEM "Open link in background page", MI_IDM_MENU_PAGEBAR_LINK_IN_BG_PAGE    // Open link in background page
+        MENUITEM "Open link in new window", MI_IDM_HLITEM_GET_IN_NEW_WINDOW    // Open link in new window
+        MENUITEM "Open link in background window", M_OPEN_BACKGROUND_WINDOW    // Open link in background window
+    }
+    POPUP "Get Mail Popup Menu"
+    {
+        MENUITEM "Get mail", M_GETMAIL_ALL_ACCOUNTS    // Get mail
+    }
+    POPUP "Index Item Popup Menu"
+    {
+        MENUITEM "Compose mail", MI_IDM_NEW_MAIL_WINDOW    // Compose mail
+        MENUITEM "Get mail", DI_IDSTR_M2_MAILTOOLBAR_GETMAIL    // Get mail
+        MENUITEM "Mark all as read", M_INDEX_ITEM_POPUP_MENU_MARK_ALL_READ    // Mark all as read
+        MENUITEM "Empty spam", M_INDEX_ITEM_POPUP_MENU_EMPTY_SPAM    // Empty spam
+        MENUITEM "Empty trash", M_INDEX_ITEM_POPUP_MENU_EMPTY_TRASH    // Empty trash
+        MENUITEM "New folder", M_INDEX_ITEM_POPUP_MENU_NEW_FILTER    // New folder | New Folder ,, 'union', SI_NEW_FOLDER_BUTTON_TEXT
+        MENUITEM "Delete", MI_IDM_Delete    // Delete
+        MENUITEM "Export mail index", M_EXPORT    // Export mail index
+        MENUITEM "Edit properties", MI_IDM_HLITEM_PROPERTIES    // Edit properties | Rename ,,,D_PREFERENCES_TOOLBARS_AND_MENUS_RENAME
+    }
+    POPUP "Label Index Item Feed Only Popup Menu"
+    {
+        MENUITEM "Mark all as read", M_INDEX_ITEM_POPUP_MENU_MARK_ALL_READ    // Mark all as read
+        MENUITEM "New folder", M_INDEX_ITEM_POPUP_MENU_NEW_FILTER    // New folder
+        MENUITEM "Delete", MI_IDM_Delete    // Delete
+        MENUITEM "Export mail index", M_EXPORT    // Export mail index
+        MENUITEM "Edit properties", MI_IDM_HLITEM_PROPERTIES    // Edit properties
+    }
+    POPUP "Feed Index Item Popup Menu"
+    {
+        MENUITEM "Reload", S_MAIL_FEEDTOOLBAR_UPDATE    // Reload
+        MENUITEM "Mark all as read", M_INDEX_ITEM_POPUP_MENU_MARK_ALL_READ    // Mark all as read
+        MENUITEM "New Folder union", SI_NEW_FOLDER_BUTTON_TEXT    // New Folder ,, 'union'
+        MENUITEM "Delete", MI_IDM_Delete    // Delete
+        MENUITEM "Export mail index", M_EXPORT    // Export mail index
+        MENUITEM "Edit properties", MI_IDM_HLITEM_PROPERTIES    // Edit properties | Rename ,,, D_PREFERENCES_TOOLBARS_AND_MENUS_RENAME
+    }
+    POPUP "Filter Item Menu"
+    {
+        MENUITEM "New folder", M_INDEX_ITEM_POPUP_MENU_NEW_FILTER    // New folder
+        MENUITEM "Delete", MI_IDM_Delete    // Delete
+        MENUITEM "Edit properties", D_PREFERENCES_TOOLBARS_AND_MENUS_RENAME    // Edit properties
+    }
+    POPUP "Account Item Menu"
+    {
+        MENUITEM "New account", MI_IDM_NEW_ACCOUNT    // New account
+        MENUITEM "Edit account", MI_IDM_HLITEM_PROPERTIES    // Edit account
+        MENUITEM "Delete account", MI_IDM_Delete    // Delete account
+    }
+    POPUP "Mail Account Menu"
+    {
+        MENUITEM "Show account", M_ALL_ACCOUNTS    // Show account, 0
+        MENUITEM "Show account -3", M_MAIL_ACCOUNTS    // Show account, -3
+        MENUITEM "Show account -4", M_NEWS_ACCOUNTS    // Show account, -4
+        MENUITEM "Show account -5", M_MENU_BAR_FEEDS_SUBMENU    // Show account, -5 [Feature Feeds]
+    }
+    POPUP "Mail Body Popup Menu"
+    {
+        MENUITEM "Show raw mail", M_VIEW_ALL_HEADERS_AND_MESSAGE    // Show raw mail | Show raw mail
+    }
+    POPUP "Follow Ignore Thread Menu"
+    {
+        MENUITEM "Stop watching mail index", M_MAIL_FOLLOW_THREAD    // Stop watching mail index | Watch mail index
+        MENUITEM "Stop ignoring mail index", M_MAIL_IGNORE_THREAD    // Stop ignoring mail index | Ignore mail index
+    }
+    POPUP "Follow Ignore Contact Menu"
+    {
+        MENUITEM "Stop watching contact index", M_MAIL_FOLLOW_CONTACT    // Stop watching contact index | Watch contact index
+        MENUITEM "Stop ignoring contact index", M_MAIL_IGNORE_CONTACT    // Stop ignoring contact index | Ignore contact index
+    }
+    POPUP "Mail Item Popup Menu"
+    {
+        MENUITEM "Reply", DI_IDSTR_M2_MAILVIEWTOOLBAR_REPLY    // Reply
+        MENUITEM "Forward mail", DI_IDSTR_M2_MAILVIEWTOOLBAR_FORWARD    // Forward mail
+        MENUITEM "Redirect mail", M_INDEX_ITEM_POPUP_MENU_REDIRECT    // Redirect mail
+        MENUITEM "Select next unread", M_MAIL_ITEM_GOTO_NEXT_UNREAD    // Select next unread
+        MENUITEM "Select previous unread", M_MAIL_ITEM_GOTO_PREV_UNREAD    // Select previous unread
+        MENUITEM "Flag Message", S_MAIL_FLAG_MESSAGE    // Flag Message,1,,S_MAIL_FLAG_MESSAGE,'Mail Unflagged' | Flag Message,0,,S_MAIL_UNFLAG_MESSAGE,'Mail Flagged'
+        MENUITEM "Cut", MI_IDM_Cut    // Cut
+        MENUITEM "Copy", MI_IDM_Copy    // Copy
+        MENUITEM "Paste", MI_IDM_Paste    // Paste
+        MENUITEM "Cancel newsmessage", M_MAIL_INDEX_ITEM_POPUP_MENU_CANCEL_POST    // Cancel newsmessage
+        MENUITEM "Edit draft", MI_IDM_Cut_PARENT    // Edit draft
+        MENUITEM "Fetch complete message Mail Icon Get", S_MAIL_FETCH_COMPLETE_MESSAGE    // Fetch complete message,,,,'Mail Icon Get'
+    }
+    POPUP "Mail Item Reply Menu"
+    {
+        MENUITEM "Reply To Sender Reply", DI_IDSTR_M2_MAILVIEWTOOLBAR_REPLY_TO_SENDER    // Reply To Sender,,,,'Reply'
+        MENUITEM "Reply To List Reply All", DI_IDSTR_M2_MAILVIEWTOOLBAR_REPLY_TO_LIST    // Reply To List,,,,'Reply All'
+        MENUITEM "Reply All", DI_IDSTR_M2_MAILVIEWTOOLBAR_REPLYALL    // Reply All
+    }
+    POPUP "Mail Item Mark Menu"
+    {
+        MENUITEM "Mark as read", MI_IDM_MarkAsRead    // Mark as read
+        MENUITEM "Mark and select next unread", M_MAIL_INDEX_ITEM_POPUP_MENU_NEXT_UNREAD    // Mark and select next unread
+        MENUITEM "Mark as read & Select previous unread", M_MAIL_INDEX_ITEM_POPUP_MENU_PREVIOUS_UNREAD    // Mark as read & Select previous unread
+        MENUITEM "Mark all as read", M_INDEX_ITEM_POPUP_MENU_MARK_ALL_READ    // Mark all as read
+        MENUITEM "Mark as unread", MI_IDM_MarkAsUnread    // Mark as unread
+        MENUITEM "Mark as spam", M_MAIL_INDEX_ITEM_POPUP_MENU_MARK_AS_SPAM    // Mark as spam
+        MENUITEM "Mark as not spam", M_MAIL_INDEX_ITEM_POPUP_MENU_MARK_AS_NOT_SPAM    // Mark as not spam
+    }
+    POPUP "Mail Item Contact Menu"
+    {
+        MENUITEM "View messages from selected contact", M_MAIL_GO_TO_CONTACT    // View messages from selected contact
+    }
+    POPUP "Mail Folder Menu"
+    {
+        MENUITEM "New Folder Set label", M_INDEX_ITEM_POPUP_MENU_NEW_FILTER_DIALOG    // New Folder , 0,,,'Set label'
+    }
+    POPUP "Mail Attachment Popup"
+    {
+        MENUITEM "Open", MI_IDM_Open    // Open
+        MENUITEM "Add attachment", M_COMPOSEWINDOW_M2_MENU_ADD_ATTACHMENT    // Add attachment
+        MENUITEM "Remove attachment", M_COMPOSEWINDOW_M2_MENU_REMOVE_ATTACHMENT    // Remove attachment
+    }
+    POPUP "Mail Attachment Toolbar Popup"
+    {
+        MENUITEM "Open", MI_IDM_Open    // Open
+        MENUITEM "Save attachment to download folder", M_SAVE_TO_DOWNLOAD_FOLDER    // Save attachment to download folder
+        MENUITEM "Save", MI_IDM_SaveAs    // Save
+    }
+    POPUP "Mail Header Toolbar Popup"
+    {
+        MENUITEM "Show raw mail", M_VIEW_ALL_HEADERS_AND_MESSAGE    // Show raw mail | Show raw mail
+        MENUITEM "Expand Message Mail Expand Message", S_MAIL_EXPAND_MESSAGE    // Expand Message,,,,'Mail Expand Message' | Expand Message
+        MENUITEM "Customize toolbars", M_TOOLBARS_MENU_CUSTOMIZE    // Customize toolbars
+    }
+    POPUP "Mail View Show Menu"
+    {
+        MENUITEM "Set mail view flag", M_MAIL_VIEW_OPTION_MENU_SHOW_READ    // Set mail view flag, 0 | Clear mail view flag, 0
+        MENUITEM "Set mail view flag", M_MAIL_VIEW_OPTION_MENU_SHOW_TRASH    // Set mail view flag, 1 | Clear mail view flag, 1
+        MENUITEM "Set mail view flag 2", M_MAIL_VIEW_OPTION_MENU_SHOW_SPAM    // Set mail view flag, 2 | Clear mail view flag, 2
+        MENUITEM "Set mail view flag 3", M_MAIL_VIEW_OPTION_MENU_SHOW_MAILINGLIST    // Set mail view flag, 3 | Clear mail view flag, 3
+        MENUITEM "Set mail view flag 4", M_MAIL_VIEW_OPTION_MENU_SHOW_NEWSGR    // Set mail view flag, 4 | Clear mail view flag, 4
+        MENUITEM "Set mail view flag 6", M_MAIL_VIEW_OPTION_MENU_SHOW_NEWSFEEDS    // Set mail view flag, 6 | Clear mail view flag, 6
+        MENUITEM "Set mail view flag 5", M_MAIL_VIEW_OPTION_MENU_SHOW_FILTERED    // Set mail view flag, 5 | Clear mail view flag, 5
+        MENUITEM "Set mail view flag 7", M_MAIL_VIEW_OPTION_MENU_SHOW_SENT    // Set mail view flag, 7 | Clear mail view flag, 7
+        MENUITEM "Set mail view flag 8", M_MAIL_VIEW_OPTION_MENU_SHOW_DUPLICATES    // Set mail view flag, 8 | Clear mail view flag, 8
+    }
+    POPUP "Mail View Age Menu"
+    {
+        MENUITEM "Set mail view age", S_TIME_TODAY    // Set mail view age, 0
+        MENUITEM "Set mail view age", S_TIME_WEEK    // Set mail view age, 1
+        MENUITEM "Set mail view age 2", S_TIME_MONTH    // Set mail view age, 2
+        MENUITEM "Set mail view age 3", S_TIME_THREEMONTHS    // Set mail view age, 3
+        MENUITEM "Set mail view age 4", S_TIME_YEAR    // Set mail view age, 4
+        MENUITEM "Set mail view age 5", S_TIME_FOREVER    // Set mail view age, 5
+    }
+    POPUP "Mail List Option Menu"
+    {
+        MENUITEM "Set mail view type", M_MAIL_STAND_VIEW_MENU_FLAT    // Set mail view type, 0
+        MENUITEM "Set mail view type", M_MAIL_STAND_VIEW_MENU_THREADED    // Set mail view type, 1
+    }
+    POPUP "Mail Group Option Menu"
+    {
+        MENUITEM "Group mails", M_MAIL_GROUP_BY_NONE    // Group mails, -1
+        MENUITEM "Group mails", M_MAIL_GROUP_BY_READ    // Group mails, 0
+        MENUITEM "Group mails", M_MAIL_GROUP_BY_FLAG    // Group mails, 1
+        MENUITEM "Group mails 2", M_MAIL_GROUP_BY_DATE    // Group mails, 2
+    }
+    POPUP "Forward Mail Menu"
+    {
+        MENUITEM "Forward Mail", M_FORWARD_MAIL_FORWARD    // Forward Mail
+        MENUITEM "Redirect Mail", M_INDEX_ITEM_POPUP_MENU_REDIRECT    // Redirect Mail
+    }
+    POPUP "Reply Mail Menu"
+    {
+        MENUITEM "Reply", DI_IDSTR_M2_MAILVIEWTOOLBAR_REPLY    // Reply
+        MENUITEM "Reply To Sender Reply", DI_IDSTR_M2_MAILVIEWTOOLBAR_REPLY_TO_SENDER    // Reply To Sender,,,,'Reply'
+        MENUITEM "Reply To List Reply All", DI_IDSTR_M2_MAILVIEWTOOLBAR_REPLY_TO_LIST    // Reply To List,,,,'Reply All'
+    }
+    POPUP "Delete Mail Menu"
+    {
+        MENUITEM "Remove from view", M_MAIL_REMOVE_FROM_VIEW    // Remove from view
+        MENUITEM "Delete mail Move to trash", M_MAIL_MOVE_TO_TRASH    // Delete mail,,,,'Move to trash' | Undelete,,,DI_IDSTR_M2_MAILVIEWTOOLBAR_UNDELETE
+        MENUITEM "Delete permanently Delete", M_MAIL_DELETE_PERMANENTLY    // Delete permanently,,,,'Delete'
+    }
+    POPUP "Thread Menu"
+    {
+        MENUITEM "Go to thread", M_MAIL_GO_TO_THREAD    // Go to thread
+        MENUITEM "Mark thread as read", M_INDEX_ITEM_POPUP_MENU_MARK_THREAD_READ    // Mark thread as read
+        MENUITEM "Mark thread and select next unread", M_MAIL_INDEX_ITEM_POPUP_MENU_MARK_THREAD_NEXT_UNREAD    // Mark thread and select next unread
+    }
+    POPUP "From Address Popup Menu"
+    {
+        MENUITEM "Display external images", S_MAIL_SUPPRESS_EXTERNAL_EMBEDS_CONTACT    // Display external images, 0 | Display external images, 1
+    }
+    POPUP "From Contact Popup Menu"
+    {
+        MENUITEM "Display external images", S_MAIL_SUPPRESS_EXTERNAL_EMBEDS_CONTACT    // Display external images, 0 | Display external images, 1
+    }
+    POPUP "Mail Address Popup Menu"
+    {
+        MENUITEM "Copy", SI_COPY_BUTTON_TEXT    // Copy
+        MENUITEM "Compose mail", DI_IDSTR_M2_MAILTOOLBAR_COMPOSE    // Compose mail
+        MENUITEM "Add contact", DI_IDSTR_M2_MAILVIEWTOOLBAR_ADDCONTACT    // Add contact
+        MENUITEM "Stop watching contact index", M_MAIL_FOLLOW_CONTACT    // Stop watching contact index | Watch contact index
+        MENUITEM "Stop ignoring contact index", M_MAIL_IGNORE_CONTACT    // Stop ignoring contact index | Ignore contact index
+    }
+    POPUP "Mail Contact Popup Menu"
+    {
+        MENUITEM "Copy", SI_COPY_BUTTON_TEXT    // Copy
+        MENUITEM "View messages from contact", M_INDEX_ITEM_POPUP_MENU_READ    // View messages from contact
+        MENUITEM "Compose mail", DI_IDSTR_M2_MAILTOOLBAR_COMPOSE    // Compose mail
+        MENUITEM "Stop watching contact index", M_MAIL_FOLLOW_CONTACT    // Stop watching contact index | Watch contact index
+        MENUITEM "Stop ignoring contact index", M_MAIL_IGNORE_CONTACT    // Stop ignoring contact index | Ignore contact index
+        MENUITEM "Edit properties", MI_IDM_HLITEM_PROPERTIES    // Edit properties
+    }
+    POPUP "New bookmark menu"
+    {
+        MENUITEM "New bookmark", DI_IDSTR_M2_BOOKMARKTOOLBAR_NEW    // New bookmark
+        MENUITEM "New folder", DI_IDSTR_M2_BOOKMARKTOOLBAR_NEW_FOLDER    // New folder
+        MENUITEM "New Seperator", M_NEW_SEPARATOR    // New Seperator
+    }
+    POPUP "Bookmarks Panel Open Menu"
+    {
+        MENUITEM "Open link in new page", MI_IDM_MENU_PAGEBAR_LINK_IN_NEW_PAGE    // Open link in new page
+        MENUITEM "Open link in background page", MI_IDM_MENU_PAGEBAR_LINK_IN_BG_PAGE    // Open link in background page
+        MENUITEM "Open link in new window", MI_IDM_HLITEM_GET_IN_NEW_WINDOW    // Open link in new window
+        MENUITEM "Open link in background window", M_OPEN_BACKGROUND_WINDOW    // Open link in background window
+    }
+    POPUP "Bookmarks Panel View Menu"
+    {
+        MENUITEM "View style", M_FULL_VIEW    // View style, 0
+        MENUITEM "View style", M_SPLIT_VIEW    // View style, 1
+        MENUITEM "View style 2", M_SINGLE_FOLDER    // View style, 2
+        MENUITEM "Sort by column", M_BOOKM_PANEL_VIEW_MENU_SORT_BY_MY_ORDER    // Sort by column, -1
+        MENUITEM "Sort by column", M_BOOKM_PANEL_VIEW_MENU_SORT_BY_NAME    // Sort by column, 0
+        MENUITEM "Sort by column", M_BOOKM_PANEL_VIEW_MENU_SORT_BY_NICK    // Sort by column, 1
+        MENUITEM "Sort by column 2", M_BOOKM_PANEL_VIEW_MENU_SORT_BY_ADDR    // Sort by column, 2
+        MENUITEM "Sort by column 3", M_BOOKM_PANEL_VIEW_MENU_SORT_BY_DESCR    // Sort by column, 3
+        MENUITEM "Sort by column 4", M_BOOKM_PANEL_VIEW_MENU_SORT_BY_CREATED    // Sort by column, 4
+        MENUITEM "Sort by column 5", M_BOOKM_PANEL_VIEW_MENU_SORT_BY_VISITED    // Sort by column, 5
+        MENUITEM "Sort direction", M_BOOKM_PANEL_VIEW_MENU_SORT_ASCENDING    // Sort direction, 1
+        MENUITEM "Sort direction", M_BOOKM_PANEL_VIEW_MENU_SORT_DESCENDING    // Sort direction, 0
+    }
+    POPUP "Bookmark Trash Popup Menu"
+    {
+        MENUITEM "Empty trash", M_INDEX_ITEM_POPUP_MENU_EMPTY_TRASH    // Empty trash
+    }
+    POPUP "Bookmark Item Popup Menu"
+    {
+        MENUITEM "Open link", M_BOOKM_ITEM_POPUP_MENU_OPEN    // Open link
+        MENUITEM "Open link in new page", MI_IDM_MENU_PAGEBAR_LINK_IN_NEW_PAGE    // Open link in new page
+        MENUITEM "Open link in background page", MI_IDM_MENU_PAGEBAR_LINK_IN_BG_PAGE    // Open link in background page
+        MENUITEM "Open link in new window", MI_IDM_HLITEM_GET_IN_NEW_WINDOW    // Open link in new window
+        MENUITEM "Open link in background window", M_OPEN_BACKGROUND_WINDOW    // Open link in background window
+        MENUITEM "Show on personal bar", MI_IDM_HLITEM_SHOW_ON_BOOKMARKSBAR    // Show on personal bar | Hide from personal bar
+        MENUITEM "Add to bookmarks", M_DOCUMENT_POPUP_MENU_BOOKMARK_PAGE    // Add to bookmarks
+        MENUITEM "Add all to bookmarks", M_POPUP_MENU_BOOKMARK_ALL    // Add all to bookmarks
+        MENUITEM "Cut", MI_IDM_HLITEM_CUT    // Cut
+        MENUITEM "Copy", MI_IDM_HLITEM_COPY    // Copy
+        MENUITEM "Paste", MI_IDM_HLITEM_PASTE    // Paste
+        MENUITEM "Delete", MI_IDM_HLITEM_DELETE    // Delete
+        MENUITEM "Select all", MI_IDM_HLITEM_SELECTALL    // Select all
+        MENUITEM "New bookmark", DI_IDSTR_M2_BOOKMARKTOOLBAR_NEW    // New bookmark
+        MENUITEM "New folder", DI_IDSTR_M2_BOOKMARKTOOLBAR_NEW_FOLDER    // New folder
+        MENUITEM "New Seperator", M_NEW_SEPARATOR    // New Seperator
+        MENUITEM "Edit properties", MI_IDM_HLITEM_PROPERTIES    // Edit properties
+    }
+    POPUP "New contact menu"
+    {
+        MENUITEM "New contact", DI_IDSTR_M2_CONTACTSTOOLBAR_NEW    // New contact
+        MENUITEM "New folder", DI_IDSTR_M2_CONTACTSTOOLBAR_NEW_FOLDER    // New folder
+    }
+    POPUP "Contacts Panel View Menu"
+    {
+        MENUITEM "View style", M_FULL_VIEW    // View style, 0
+        MENUITEM "View style", M_SPLIT_VIEW    // View style, 1
+        MENUITEM "View style 2", M_SINGLE_FOLDER    // View style, 2
+        MENUITEM "Sort by column", M_BOOKM_PANEL_VIEW_MENU_SORT_BY_MY_ORDER    // Sort by column, -1
+        MENUITEM "Sort by column", M_BOOKM_PANEL_VIEW_MENU_SORT_BY_NAME    // Sort by column, 0
+    }
+    POPUP "Contact Trash Popup Menu"
+    {
+        MENUITEM "Empty trash", M_INDEX_ITEM_POPUP_MENU_EMPTY_TRASH    // Empty trash
+    }
+    POPUP "Contact Item Popup Menu"
+    {
+        MENUITEM "View messages from contact", M_INDEX_ITEM_POPUP_MENU_READ    // View messages from contact
+        MENUITEM "Compose mail", DI_IDSTR_M2_MAILTOOLBAR_COMPOSE    // Compose mail
+        MENUITEM "Go to contact homepage", M_CONTACT_ITEM_POPUP_MENU_VISIT_HOMEPAGE    // Go to contact homepage
+        MENUITEM "Show on personal bar", MI_IDM_HLITEM_SHOW_ON_BOOKMARKSBAR    // Show on personal bar | Hide from personal bar
+        MENUITEM "Cut", MI_IDM_HLITEM_CUT    // Cut
+        MENUITEM "Copy", MI_IDM_HLITEM_COPY    // Copy
+        MENUITEM "Paste", MI_IDM_HLITEM_PASTE    // Paste
+        MENUITEM "Delete", MI_IDM_HLITEM_DELETE    // Delete
+        MENUITEM "Select all", MI_IDM_HLITEM_SELECTALL    // Select all
+        MENUITEM "New contact", DI_IDSTR_M2_CONTACTSTOOLBAR_NEW    // New contact
+        MENUITEM "New folder", DI_IDSTR_M2_CONTACTSTOOLBAR_NEW_FOLDER    // New folder
+        MENUITEM "Edit properties", MI_IDM_HLITEM_PROPERTIES    // Edit properties
+    }
+    POPUP "New note menu"
+    {
+        MENUITEM "New note", M_NEW_NOTE    // New note
+        MENUITEM "New folder", SI_NEW_FOLDER_BUTTON_TEXT    // New folder
+        MENUITEM "New Seperator", M_NEW_SEPARATOR    // New Seperator
+    }
+    POPUP "Note Trash Popup Menu"
+    {
+        MENUITEM "Empty trash", M_INDEX_ITEM_POPUP_MENU_EMPTY_TRASH    // Empty trash
+    }
+    POPUP "Note Item Popup Menu"
+    {
+        MENUITEM "Send text in mail", MI_IDM_SELMAIL    // Send text in mail
+        MENUITEM "Cut", MI_IDM_HLITEM_CUT    // Cut
+        MENUITEM "Copy", MI_IDM_HLITEM_COPY    // Copy
+        MENUITEM "Paste", MI_IDM_HLITEM_PASTE    // Paste
+        MENUITEM "Delete", MI_IDM_HLITEM_DELETE    // Delete
+        MENUITEM "Select all", MI_IDM_HLITEM_SELECTALL    // Select all
+        MENUITEM "Sort by column", M_BOOKM_PANEL_VIEW_MENU_SORT_BY_MY_ORDER    // Sort by column, -1
+        MENUITEM "Sort by column", M_BOOKM_PANEL_VIEW_MENU_SORT_BY_NAME    // Sort by column, 0
+        MENUITEM "New note", M_NEW_NOTE    // New note
+        MENUITEM "New folder", SI_NEW_FOLDER_BUTTON_TEXT    // New folder
+        MENUITEM "New Seperator", M_NEW_SEPARATOR    // New Seperator
+    }
+    POPUP "Note Folder Popup Menu"
+    {
+        MENUITEM "Rename", D_PREFERENCES_TOOLBARS_AND_MENUS_RENAME    // Rename
+        MENUITEM "Cut", MI_IDM_HLITEM_CUT    // Cut
+        MENUITEM "Copy", MI_IDM_HLITEM_COPY    // Copy
+        MENUITEM "Paste", MI_IDM_HLITEM_PASTE    // Paste
+        MENUITEM "Delete", MI_IDM_HLITEM_DELETE    // Delete
+        MENUITEM "Select all", MI_IDM_HLITEM_SELECTALL    // Select all
+        MENUITEM "New note", M_NEW_NOTE    // New note
+        MENUITEM "New folder", SI_NEW_FOLDER_BUTTON_TEXT    // New folder
+        MENUITEM "New Seperator", M_NEW_SEPARATOR    // New Seperator
+    }
+    POPUP "History Item Popup Menu"
+    {
+        MENUITEM "Open link", M_BOOKM_ITEM_POPUP_MENU_OPEN    // Open link
+        MENUITEM "Open link in new page", MI_IDM_MENU_PAGEBAR_LINK_IN_NEW_PAGE    // Open link in new page
+        MENUITEM "Open link in background page", MI_IDM_MENU_PAGEBAR_LINK_IN_BG_PAGE    // Open link in background page
+        MENUITEM "Open link in new window", MI_IDM_HLITEM_GET_IN_NEW_WINDOW    // Open link in new window
+        MENUITEM "Open link in background window", M_OPEN_BACKGROUND_WINDOW    // Open link in background window
+        MENUITEM "Add to bookmarks", MI_IDM_HLITEM_ADDCURRENTDOC    // Add to bookmarks
+        MENUITEM "Cut", MI_IDM_HLITEM_CUT    // Cut
+        MENUITEM "Copy", MI_IDM_HLITEM_COPY    // Copy
+        MENUITEM "Delete", MI_IDM_HLITEM_DELETE    // Delete
+        MENUITEM "Select all", MI_IDM_HLITEM_SELECTALL    // Select all
+    }
+    POPUP "History Panel View Menu"
+    {
+        MENUITEM "View style", M_TIME_AND_SITE_VIEW_NAME    // View style, 0
+        MENUITEM "View style", M_SITE_VIEW_NAME    // View style, 1
+        MENUITEM "View style 2", M_TIME_VIEW_NAME    // View style, 2
+    }
+    POPUP "Windows Item Popup Menu"
+    {
+        MENUITEM "Activate window", M_ACTIVATE_PAGE    // Activate window
+        MENUITEM "Restore page 2", M_RESTORE_PAGE    // Restore page, 2 [Platform Windows-Unix]
+        MENUITEM "Minimize page 2", M_MINIMIZE_PAGE    // Minimize page, 2 [Platform Windows-Unix]
+        MENUITEM "Maximize page 2", M_PAGE_MAXIMIZE    // Maximize page, 2 [Platform Windows-Unix]
+        MENUITEM "Lock page", M_LOCK_TAB    // Lock page | Unlock page
+        MENUITEM "Close page 2", M_CLOSE_PAGE    // Close page, 2
+        MENUITEM "Detach page", M_DETACH_PAGE    // Detach page [Platform Unix]
+        MENUITEM "Reload", MI_IDM_POPUP_FRAME_RELOAD    // Reload
+    }
+    POPUP "New Widget Menu"
+    {
+        MENUITEM "Go to page http://widgets.opera.com/", M_NEW_WIDGET    // Go to page, 'http://widgets.opera.com/',,,'New item menu'
+    }
+    POPUP "Widget Trash Popup Menu"
+    {
+        MENUITEM "Empty trash", M_INDEX_ITEM_POPUP_MENU_EMPTY_TRASH    // Empty trash
+    }
+    POPUP "Widget Item Popup Menu"
+    {
+        MENUITEM "Open widget", DI_IDBTN_GET    // Open widget
+        MENUITEM "Delete", M_WIDGET_UNINSTALL    // Delete
+    }
+    POPUP "Widget Folder Popup Menu"
+    {
+        MENUITEM "Open widget", DI_IDBTN_GET    // Open widget |
+        MENUITEM "Close Widget", M_CLOSE_PAGE    // Close Widget
+        MENUITEM "Rename", D_PREFERENCES_TOOLBARS_AND_MENUS_RENAME    // Rename
+        MENUITEM "Delete", MI_IDM_HLITEM_DELETE    // Delete
+        MENUITEM "New folder", SI_NEW_FOLDER_BUTTON_TEXT    // New folder
+        MENUITEM "New Seperator", M_NEW_SEPARATOR    // New Seperator
+    }
+    POPUP "Sync Setup Popup Menu"
+    {
+        MENUITEM "Set up Sync", M_SYNC_ENABLE    // Set up Sync | Sync login
+        MENUITEM "Open URL in new page http://www.opera.com/link/start/", S_SYNC_HELP    // Open URL in new page, 'http://www.opera.com/link/start/',,,'Menu Info'
+    }
+    POPUP "Sync Popup Menu"
+    {
+        MENUITEM "Open URL in new page https://link.opera.com", M_SYNC_MY_PAGE    // Open URL in new page, 'https://link.opera.com'
+        MENUITEM "Open Sync settings", M_SYNC_CONFIGURE    // Open Sync settings
+        MENUITEM "Open URL in new page http://www.opera.com/link/start/", S_SYNC_HELP    // Open URL in new page, 'http://www.opera.com/link/start/',,,'Menu Info'
+    }
+    POPUP "Webserver Setup Popup Menu"
+    {
+        MENUITEM "Set up Webserver", M_WEBSERVER_ENABLE    // Set up Webserver | Opera Unite Enable
+        MENUITEM "Open URL in new page http://www.opera.com/unite/start/", S_UNITE_HELP    // Open URL in new page, 'http://www.opera.com/unite/start/',,,'Menu Info'
+    }
+    POPUP "Webserver Setup Status Popup Menu"
+    {
+        MENUITEM "Set up Webserver", M_WEBSERVER_ENABLE    // Set up Webserver | Opera Unite Enable
+        MENUITEM "Open URL in new page http://www.opera.com/unite/start/", S_UNITE_HELP    // Open URL in new page, 'http://www.opera.com/unite/start/',,,'Menu Info'
+    }
+    POPUP "Webserver Popup Menu"
+    {
+        MENUITEM "Show Opera Unite Root", M_WEBSERVER_MY_PAGE    // Show Opera Unite Root
+        MENUITEM "Open Webserver settings", M_WEBSERVER_CONFIGURE    // Open Webserver settings
+        MENUITEM "Focus panel Unite", M_WEBSERVER_MANAGE_SERVICES    // Focus panel, 'Unite'
+        MENUITEM "Open URL in new page http://www.opera.com/unite/start/", S_UNITE_HELP    // Open URL in new page, 'http://www.opera.com/unite/start/',,,'Menu Info'
+    }
+    POPUP "Webserver Status Popup Menu"
+    {
+        MENUITEM "Show Opera Unite Root", M_WEBSERVER_MY_PAGE    // Show Opera Unite Root
+        MENUITEM "Open Webserver settings", M_WEBSERVER_CONFIGURE    // Open Webserver settings
+        MENUITEM "Focus panel Unite", M_WEBSERVER_MANAGE_SERVICES    // Focus panel, 'Unite'
+        MENUITEM "Open URL in new page http://www.opera.com/unite/start/", S_UNITE_HELP    // Open URL in new page, 'http://www.opera.com/unite/start/',,,'Menu Info'
+    }
+    POPUP "Webserver Panel Setup Popup Menu"
+    {
+        MENUITEM "Set up Webserver", M_WEBSERVER_ENABLE    // Set up Webserver | Opera Unite Enable
+        MENUITEM "Open URL in new page http://www.opera.com/unite/start/", S_UNITE_HELP    // Open URL in new page, 'http://www.opera.com/unite/start/',,,'Menu Info'
+    }
+    POPUP "Webserver Panel Popup Menu"
+    {
+        MENUITEM "Show Opera Unite Root", M_WEBSERVER_MY_PAGE    // Show Opera Unite Root
+        MENUITEM "Open Webserver settings", M_WEBSERVER_CONFIGURE    // Open Webserver settings
+        MENUITEM "Open URL in new page http://www.opera.com/unite/start/", S_UNITE_HELP    // Open URL in new page, 'http://www.opera.com/unite/start/',,,'Menu Info'
+    }
+    POPUP "Unite Trash Popup Menu"
+    {
+        MENUITEM "Empty trash", M_INDEX_ITEM_POPUP_MENU_EMPTY_TRASH    // Empty trash
+    }
+    POPUP "Unite Item Popup Menu"
+    {
+        MENUITEM "Goto Public Page", MI_IDM_MENU_GOTO_PUBLIC_SERVICE_PAGE    // Goto Public Page
+        MENUITEM "Open widget", M_WEBSERVER_START_SERVICE    // Open widget | Close widget, , , M_WEBSERVER_STOP_SERVICE
+        MENUITEM "Delete", MI_IDM_HLITEM_DELETE    // Delete
+        MENUITEM "Edit properties", MI_IDM_HLITEM_PROPERTIES    // Edit properties
+    }
+    POPUP "Unite Folder Popup Menu"
+    {
+        MENUITEM "Rename", D_PREFERENCES_TOOLBARS_AND_MENUS_RENAME    // Rename
+        MENUITEM "Delete", MI_IDM_HLITEM_DELETE    // Delete
+    }
+    POPUP "Unite Separator Popup Menu"
+    {
+        MENUITEM "Delete", MI_IDM_HLITEM_DELETE    // Delete
+    }
+    POPUP "New Unite Service Menu"
+    {
+        MENUITEM "New folder", SI_NEW_FOLDER_BUTTON_TEXT    // New folder
+        MENUITEM "New Seperator", M_NEW_SEPARATOR    // New Seperator
+    }
+    POPUP "Web Panel View Menu"
+    {
+        MENUITEM "Enable handheld mode", M_BROWSER_VIEW_MENU_SMALL_SCREEN    // Enable handheld mode | Disable handheld mode
+        MENUITEM "Edit panel", MI_IDM_HLITEM_PROPERTIES    // Edit panel
+    }
+    POPUP "Chat Popup Menu"
+    {
+        MENUITEM "Print document Menu Print", MI_IDM_Print    // Print document,,,,'Menu Print'
+        MENUITEM "Enter fullscreen", MI_IDM_FULLSCREENTOGGLE    // Enter fullscreen | Leave fullscreen
+    }
+    POPUP "Chat Account Menu"
+    {
+        MENUITEM "Set chat status -2", M_CHAT_ACCOUNT_STATUS_ONLINE    // Set chat status, -2, 'online'
+        MENUITEM "Set chat status -2", M_CHAT_ACCOUNT_STATUS_BUSY    // Set chat status, -2, 'busy'
+        MENUITEM "Set chat status -2", M_CHAT_ACCOUNT_STATUS_BE_RIGHT_BACK    // Set chat status, -2, 'be right back'
+        MENUITEM "Set chat status -2", M_CHAT_ACCOUNT_STATUS_AWAY    // Set chat status, -2, 'away'
+        MENUITEM "Set chat status -2", M_CHAT_ACCOUNT_STATUS_ON_THE_PHONE    // Set chat status, -2, 'on the phone'
+        MENUITEM "Set chat status -2", M_CHAT_ACCOUNT_STATUS_OUT_TO_LUNCH    // Set chat status, -2, 'out to lunch'
+        MENUITEM "Set chat status -2", M_CHAT_ACCOUNT_STATUS_OFFLINE    // Set chat status, -2, 'offline'
+    }
+    POPUP "Chat Item Popup Menu"
+    {
+        MENUITEM "List chat rooms", M_CHAT_ITEM_POPUP_MENU_LIST_ROOMS    // List chat rooms
+        MENUITEM "New chat room", M_CHAT_ITEM_POPUP_MENU_NEW_ROOM    // New chat room
+        MENUITEM "Join chat room", M_CHAT_ITEM_POPUP_MENU_JOIN_ROOM    // Join chat room
+        MENUITEM "Leave chat room", M_CHAT_ITEM_POPUP_MENU_LEAVE_ROOM    // Leave chat room
+        MENUITEM "Delete", MI_IDM_HLITEM_DELETE    // Delete
+        MENUITEM "Edit properties", MI_IDM_HLITEM_PROPERTIES    // Edit properties
+    }
+    POPUP "Chat User Menu"
+    {
+        MENUITEM "Chat command", M_CHAT_USER_MENU_WHO_IS    // Chat command, 1
+        MENUITEM "Join private chat", M_CHAT_USER_MENU_PRIVATE_CHAT    // Join private chat
+        MENUITEM "Compose mail", MI_IDM_MENUGET_MAIL    // Compose mail
+        MENUITEM "Send file", S_CHAT_SEND_FILE_TITLE    // Send file
+        MENUITEM "Edit properties", MI_IDM_HLITEM_PROPERTIES    // Edit properties
+    }
+    POPUP "Chat User Control Menu"
+    {
+        MENUITEM "Chat command 4", M_CHAT_USER_CONTROL_MENU_GIVE_OPERATOR_STATUS    // Chat command, 4
+        MENUITEM "Chat command 5", M_CHAT_USER_CONTROL_MENU_REVOKE_OPERATOR_STATUS    // Chat command, 5
+        MENUITEM "Chat command 6", M_CHAT_USER_CONTROL_MENU_GIVE_VOICE    // Chat command, 6
+        MENUITEM "Chat command 7", M_CHAT_USER_CONTROL_MENU_REMOVE_VOICE    // Chat command, 7
+        MENUITEM "Chat command 8", M_CHAT_USER_CONTROL_MENU_KICK    // Chat command, 8
+        MENUITEM "Chat command 9", M_CHAT_USER_CONTROL_MENU_KICK_WITH_REASON    // Chat command, 9
+        MENUITEM "Chat command 10", M_CHAT_USER_CONTROL_MENU_BAN    // Chat command, 10
+    }
+    POPUP "Add Nick to Contact Menu"
+    {
+        MENUITEM "Add contact", M_ADD_CONTACT_HERE    // Add contact
+    }
+    POPUP "Link Popup Menu"
+    {
+        MENUITEM "Open link -2", M_BOOKM_ITEM_POPUP_MENU_OPEN    // Open link, -2, 'urlinfo'
+        MENUITEM "Open link in new page -2", MI_IDM_MENU_PAGEBAR_LINK_IN_NEW_PAGE    // Open link in new page, -2, 'urlinfo'
+        MENUITEM "Open link in background page -2", MI_IDM_MENU_PAGEBAR_LINK_IN_BG_PAGE    // Open link in background page, -2, 'urlinfo'
+        MENUITEM "Open link in new window -2", MI_IDM_HLITEM_GET_IN_NEW_WINDOW    // Open link in new window, -2, 'urlinfo'
+        MENUITEM "Open link in background window -2", M_OPEN_BACKGROUND_WINDOW    // Open link in background window, -2, 'urlinfo'
+        MENUITEM "Add link to bookmarks -2", M_LINKS_PANEL_BOOKMARK_LINK    // Add link to bookmarks, -2, 'urlinfo'
+        MENUITEM "Copy link -2", MI_IDM_POPUP_LINK_ADDRESS    // Copy link, -2, 'urlinfo'
+        MENUITEM "Save link -2", MI_IDM_SAVELINKDOCAS    // Save link, -2, 'urlinfo'
+        MENUITEM "Download url -2", M_SAVE_LINK_TO_DOWNLOAD_FOLDER    // Download url, -2, 'urlinfo'
+    }
+    POPUP "Gadget Link Popup Menu"
+    {
+        MENUITEM "Open link -2", M_BOOKM_ITEM_POPUP_MENU_OPEN    // Open link, -2, 'urlinfo'
+        MENUITEM "Copy link -2", MI_IDM_POPUP_LINK_ADDRESS    // Copy link, -2, 'urlinfo'
+        MENUITEM "Save link -2", MI_IDM_SAVELINKDOCAS    // Save link, -2, 'urlinfo'
+    }
+    POPUP "Link Selection Popup Menu"
+    {
+        MENUITEM "Hotclick search 200", MI_IDM_SELSEARCH    // Hotclick search, 200,,, 'Search Web'
+        MENUITEM "Copy", MI_IDM_DOCCOPY    // Copy
+        MENUITEM "Copy to note", M_COPY_TO_NOTE    // Copy to note
+        MENUITEM "Open link -2", M_BOOKM_ITEM_POPUP_MENU_OPEN    // Open link, -2, 'urlinfo'
+        MENUITEM "Open link in new page -2", MI_IDM_MENU_PAGEBAR_LINK_IN_NEW_PAGE    // Open link in new page, -2, 'urlinfo'
+        MENUITEM "Open link in background page -2", MI_IDM_MENU_PAGEBAR_LINK_IN_BG_PAGE    // Open link in background page, -2, 'urlinfo'
+        MENUITEM "Open link in new window -2", MI_IDM_HLITEM_GET_IN_NEW_WINDOW    // Open link in new window, -2, 'urlinfo'
+        MENUITEM "Open link in background window -2", M_OPEN_BACKGROUND_WINDOW    // Open link in background window, -2, 'urlinfo'
+    }
+    POPUP "Open in menu"
+    {
+    }
+    POPUP "Edit Form Popup Menu"
+    {
+    }
+    POPUP "Gadget Edit Form Popup Menu"
+    {
+    }
+    POPUP "Edit Form Popup Menu Spellcheck Enabled"
+    {
+    }
+    POPUP "Gadget Edit Form Popup Menu Spellcheck Enabled"
+    {
+    }
+    POPUP "Edit Form Popup Menu Spellcheck Word"
+    {
+    }
+    POPUP "Gadget Edit Form Popup Menu Spellcheck Word"
+    {
+    }
+    POPUP "Edit Label Popup Menu"
+    {
+        MENUITEM "Copy label text", MI_IDM_EDIT_COPY    // Copy label text
+    }
+    POPUP "Forward Menu"
+    {
+    }
+    POPUP "Back Menu"
+    {
+    }
+    POPUP "Document Popup Menu"
+    {
+        MENUITEM "Back", MI_IDM_Prev_PM_    // Back
+        MENUITEM "Forward", MI_IDM_Next_PM_    // Forward
+        MENUITEM "Rewind", M_REWIND_    // Rewind, 0
+        MENUITEM "Fast Forward", M_FAST_FORWARD_    // Fast Forward, 0
+        MENUITEM "Reload", MI_IDM_Reload_PM_    // Reload
+        MENUITEM "Add to bookmarks", M_DOCUMENT_POPUP_MENU_BOOKMARK_PAGE    // Add to bookmarks, 1
+        MENUITEM "Copy document address", MI_IDM_POPUP_ADDRESS    // Copy document address
+        MENUITEM "Send document address in mail", MI_IDM_SEND_URL_EMAIL    // Send document address in mail
+        MENUITEM "Print document Menu Print", MI_IDM_Print    // Print document,,,,'Menu Print'
+        MENUITEM "View document source", MI_IDM_Kilde    // View document source
+        MENUITEM "Validate frame source", M_DOCUMENT_POPUP_MENU_VALIDATE    // Validate frame source
+        MENUITEM "Content block mode on", M_BLOCK_CONTENT    // Content block mode on | Content block mode off
+        MENUITEM "Edit site preferences", M_EDIT_SITE_PREFERENCES    // Edit site preferences
+        MENUITEM "Enter fullscreen", MI_IDM_FULLSCREENTOGGLE    // Enter fullscreen | Leave fullscreen
+    }
+    POPUP "Document Popup Menu Spellcheck Disabled"
+    {
+        MENUITEM "Spell check", M_INTERNAL_SPELLCHECK_ENABLE    // Spell check | Spell check
+    }
+    POPUP "Document Popup Menu Spellcheck Enabled"
+    {
+    }
+    POPUP "SVG Popup Menu"
+    {
+        MENUITEM "Open image", M_OPEN_IMAGE    // Open image
+        MENUITEM "Copy image address", MI_IDM_COPY_FIG_ADDRESS    // Copy image address
+        MENUITEM "Save image", MI_IDM_SaveAs    // Save image
+        MENUITEM "Copy image", M_DOCUMENT_BACKGROUND_MENU_COPY_TO_CLIPBOARD    // Copy image
+        MENUITEM "Copy", MI_IDM_HLITEM_COPY    // Copy
+        MENUITEM "View document source", MI_IDM_Kilde    // View document source
+        MENUITEM "SVG zoom in 10", M_SVG_POPUP_MENU_ZOOM_IN    // SVG zoom in, 10
+        MENUITEM "SVG zoom out 10", M_SVG_POPUP_MENU_ZOOM_OUT    // SVG zoom out, 10
+        MENUITEM "SVG zoom 100", M_SVG_POPUP_MENU_TO_ORIGINAL_SIZE    // SVG zoom, 100 | SVG reset pan
+        MENUITEM "SVG start animation", M_SVG_POPUP_MENU_START_ANIMATION    // SVG start animation
+        MENUITEM "SVG pause animation", M_SVG_POPUP_MENU_PAUSE_ANIMATION    // SVG pause animation
+        MENUITEM "SVG stop animation", M_SVG_POPUP_MENU_STOP_ANIMATION    // SVG stop animation
+    }
+    POPUP "Document Background Menu"
+    {
+        MENUITEM "Open background image", M_OPEN_IMAGE    // Open background image
+        MENUITEM "Show background image", M_MENU_RELOAD_IMAGE    // Show background image
+        MENUITEM "Copy background image address", MI_IDM_BACKGROUND_COPY_ADDRESS    // Copy background image address
+        MENUITEM "Save background image", MI_IDM_BACKGROUND_SAVE    // Save background image
+        MENUITEM "Copy background image", M_DOCUMENT_BACKGROUND_MENU_COPY_TO_CLIPBOARD    // Copy background image
+        MENUITEM "Use background image as desktop background", M_DOCUMENT_BACKGROUND_MENU_USE_ON_DESKTOP_    // Use background image as desktop background [Platform Windows-Mac]
+        MENUITEM "Show background image properties", MI_IDM_BACKGROUND_IMAGE_PROPERTIES    // Show background image properties
+    }
+    POPUP "Image Link Popup Menu"
+    {
+        MENUITEM "Open link -2", M_BOOKM_ITEM_POPUP_MENU_OPEN    // Open link, -2, 'urlinfo'
+        MENUITEM "Open link in new page -2", MI_IDM_MENU_PAGEBAR_LINK_IN_NEW_PAGE    // Open link in new page, -2, 'urlinfo'
+        MENUITEM "Open link in background page -2", MI_IDM_MENU_PAGEBAR_LINK_IN_BG_PAGE    // Open link in background page, -2, 'urlinfo'
+        MENUITEM "Open link in new window -2", MI_IDM_HLITEM_GET_IN_NEW_WINDOW    // Open link in new window, -2, 'urlinfo'
+        MENUITEM "Open link in background window -2", M_OPEN_BACKGROUND_WINDOW    // Open link in background window, -2, 'urlinfo'
+        MENUITEM "Add link to bookmarks -2", M_LINKS_PANEL_BOOKMARK_LINK    // Add link to bookmarks, -2, 'urlinfo'
+        MENUITEM "Copy link -2", MI_IDM_POPUP_LINK_ADDRESS    // Copy link, -2, 'urlinfo'
+        MENUITEM "Save link -2", MI_IDM_SAVELINKDOCAS    // Save link, -2, 'urlinfo'
+        MENUITEM "Download url -2", M_SAVE_LINK_TO_DOWNLOAD_FOLDER    // Download url, -2, 'urlinfo'
+        MENUITEM "Open image", M_OPEN_IMAGE    // Open image
+        MENUITEM "Load image", M_MENU_RELOAD_IMAGE    // Load image
+        MENUITEM "Copy image address", MI_IDM_COPY_FIG_ADDRESS    // Copy image address
+        MENUITEM "Save image", MI_IDM_SAVE_FIGURE    // Save image
+        MENUITEM "Copy image", M_DOCUMENT_BACKGROUND_MENU_COPY_TO_CLIPBOARD    // Copy image
+        MENUITEM "Use image as desktop background", M_DOCUMENT_BACKGROUND_MENU_USE_ON_DESKTOP_    // Use image as desktop background [Platform Windows-Mac]
+        MENUITEM "Show image properties", MI_IDM_SHOW_FIGURE_PROPERTIES    // Show image properties
+    }
+    POPUP "Turbo Image Link Popup Menu"
+    {
+        MENUITEM "Open link -2", M_BOOKM_ITEM_POPUP_MENU_OPEN    // Open link, -2, 'urlinfo'
+        MENUITEM "Open link in new page -2", MI_IDM_MENU_PAGEBAR_LINK_IN_NEW_PAGE    // Open link in new page, -2, 'urlinfo'
+        MENUITEM "Open link in background page -2", MI_IDM_MENU_PAGEBAR_LINK_IN_BG_PAGE    // Open link in background page, -2, 'urlinfo'
+        MENUITEM "Open link in new window -2", MI_IDM_HLITEM_GET_IN_NEW_WINDOW    // Open link in new window, -2, 'urlinfo'
+        MENUITEM "Open link in background window -2", M_OPEN_BACKGROUND_WINDOW    // Open link in background window, -2, 'urlinfo'
+        MENUITEM "Add link to bookmarks -2", M_LINKS_PANEL_BOOKMARK_LINK    // Add link to bookmarks, -2, 'urlinfo'
+        MENUITEM "Copy link -2", MI_IDM_POPUP_LINK_ADDRESS    // Copy link, -2, 'urlinfo'
+        MENUITEM "Save link -2", MI_IDM_SAVELINKDOCAS    // Save link, -2, 'urlinfo'
+        MENUITEM "Download url -2", M_SAVE_LINK_TO_DOWNLOAD_FOLDER    // Download url, -2, 'urlinfo'
+        MENUITEM "Open image", M_OPEN_IMAGE    // Open image
+        MENUITEM "Load image in full quality", M_MENU_TURBO_RELOAD_IMAGE    // Load image in full quality
+        MENUITEM "Copy image address", MI_IDM_COPY_FIG_ADDRESS    // Copy image address
+        MENUITEM "Save image", MI_IDM_SAVE_FIGURE    // Save image
+        MENUITEM "Copy image", M_DOCUMENT_BACKGROUND_MENU_COPY_TO_CLIPBOARD    // Copy image
+        MENUITEM "Use image as desktop background", M_DOCUMENT_BACKGROUND_MENU_USE_ON_DESKTOP_    // Use image as desktop background [Platform Windows-Mac]
+        MENUITEM "Show image properties", MI_IDM_SHOW_FIGURE_PROPERTIES    // Show image properties
+    }
+    POPUP "Readonly Edit Widget Popup Menu"
+    {
+        MENUITEM "Copy", MI_IDM_EDIT_COPY    // Copy
+        MENUITEM "Copy to note", M_COPY_TO_NOTE    // Copy to note
+        MENUITEM "Select all", MI_IDM_EDIT_SELECTALL    // Select all
+    }
+    POPUP "Gadget Image Link Popup Menu"
+    {
+        MENUITEM "Open link", M_BOOKM_ITEM_POPUP_MENU_OPEN    // Open link
+        MENUITEM "Copy link", MI_IDM_POPUP_LINK_ADDRESS    // Copy link
+        MENUITEM "Save link", MI_IDM_SAVELINKDOCAS    // Save link
+        MENUITEM "Save image", MI_IDM_SAVE_FIGURE    // Save image
+        MENUITEM "Copy image", M_DOCUMENT_BACKGROUND_MENU_COPY_TO_CLIPBOARD    // Copy image
+        MENUITEM "Use image as desktop background", M_DOCUMENT_BACKGROUND_MENU_USE_ON_DESKTOP_    // Use image as desktop background [Platform Windows-Mac]
+    }
+    POPUP "Readonly Edit Widget Popup Menu"
+    {
+        MENUITEM "Copy", MI_IDM_EDIT_COPY    // Copy
+        MENUITEM "Copy to note", M_COPY_TO_NOTE    // Copy to note
+        MENUITEM "Select all", MI_IDM_EDIT_SELECTALL    // Select all
+    }
+    POPUP "Gadget Readonly Edit Widget Popup Menu"
+    {
+        MENUITEM "Copy", MI_IDM_EDIT_COPY    // Copy
+        MENUITEM "Select all", MI_IDM_EDIT_SELECTALL    // Select all
+    }
+    POPUP "Installer Readonly Edit Widget Popup Menu"
+    {
+        MENUITEM "Copy", MI_IDM_EDIT_COPY    // Copy
+        MENUITEM "Select all", MI_IDM_EDIT_SELECTALL    // Select all
+    }
+    POPUP "Installer Edit Folderchooser Popup Menu"
+    {
+        MENUITEM "Redo", M_REDO    // Redo
+        MENUITEM "Undo", MI_IDM_EDIT_UNDO    // Undo
+        MENUITEM "Cut", MI_IDM_EDIT_CUT    // Cut
+        MENUITEM "Copy", MI_IDM_EDIT_COPY    // Copy
+        MENUITEM "Paste", MI_IDM_EDIT_PASTE    // Paste
+        MENUITEM "Clear", M_CLEAR_ALL    // Clear
+        MENUITEM "Select all", MI_IDM_EDIT_SELECTALL    // Select all
+    }
+    POPUP "Edit Popup Menu"
+    {
+        MENUITEM "Redo", M_REDO    // Redo
+        MENUITEM "Undo", MI_IDM_EDIT_UNDO    // Undo
+        MENUITEM "Cut", MI_IDM_EDIT_CUT    // Cut
+        MENUITEM "Copy", MI_IDM_EDIT_COPY    // Copy
+        MENUITEM "Paste", MI_IDM_EDIT_PASTE    // Paste
+        MENUITEM "Clear", M_CLEAR_ALL    // Clear
+        MENUITEM "Select all", MI_IDM_EDIT_SELECTALL    // Select all
+    }
+    POPUP "Edit Filechooser Popup Menu"
+    {
+        MENUITEM "Open folder", M_TRANSFERS_NOTIFY_POPUP_MENU_OPEN_FOLDER    // Open folder
+        MENUITEM "Undo", MI_IDM_EDIT_UNDO    // Undo
+        MENUITEM "Redo", M_REDO    // Redo
+        MENUITEM "Cut", MI_IDM_EDIT_CUT    // Cut
+        MENUITEM "Copy", MI_IDM_EDIT_COPY    // Copy
+        MENUITEM "Paste", MI_IDM_EDIT_PASTE    // Paste
+        MENUITEM "Delete", MI_IDM_EDIT_DELETE    // Delete
+        MENUITEM "Copy to note", M_COPY_TO_NOTE    // Copy to note
+        MENUITEM "Clear", M_CLEAR_ALL    // Clear
+        MENUITEM "Select all", MI_IDM_EDIT_SELECTALL    // Select all
+    }
+    POPUP "Edit Widget Popup Menu"
+    {
+        MENUITEM "Undo", MI_IDM_EDIT_UNDO    // Undo
+        MENUITEM "Redo", M_REDO    // Redo
+        MENUITEM "Cut", MI_IDM_EDIT_CUT    // Cut
+        MENUITEM "Copy", MI_IDM_EDIT_COPY    // Copy
+        MENUITEM "Paste", MI_IDM_EDIT_PASTE    // Paste
+        MENUITEM "Delete", MI_IDM_EDIT_DELETE    // Delete
+        MENUITEM "Copy to note", M_COPY_TO_NOTE    // Copy to note
+        MENUITEM "Clear", M_CLEAR_ALL    // Clear
+        MENUITEM "Select all", MI_IDM_EDIT_SELECTALL    // Select all
+        MENUITEM "Create search", M_CREATE_SEARCH    // Create search|Manage Search Engines,,,M_MANAGE_SEARCH_ENGINES
+        MENUITEM "Spell check", M_INTERNAL_SPELLCHECK_ENABLE    // Spell check | Spell check
+    }
+    POPUP "Gadget Edit Widget Popup Menu"
+    {
+        MENUITEM "Undo", MI_IDM_EDIT_UNDO    // Undo
+        MENUITEM "Redo", M_REDO    // Redo
+        MENUITEM "Cut", MI_IDM_EDIT_CUT    // Cut
+        MENUITEM "Copy", MI_IDM_EDIT_COPY    // Copy
+        MENUITEM "Paste", MI_IDM_EDIT_PASTE    // Paste
+        MENUITEM "Delete", MI_IDM_EDIT_DELETE    // Delete
+        MENUITEM "Clear", M_CLEAR_ALL    // Clear
+        MENUITEM "Select all", MI_IDM_EDIT_SELECTALL    // Select all
+        MENUITEM "Spell check", M_INTERNAL_SPELLCHECK_ENABLE    // Spell check | Spell check
+    }
+    POPUP "Spellcheck Language"
+    {
+    }
+    POPUP "Mail Compose Insert Submenu"
+    {
+    }
+    POPUP "Mail Compose Paragraph Submenu"
+    {
+        MENUITEM "'Email Clear Formatting Mail Compose Clear Formatting'", D_MAIL_CLEAR_FORMATTING    // 'Email Clear Formatting ,,,,'Mail Compose Clear Formatting''
+        MENUITEM "'Email Indent Mail Compose Indent'", D_HTML_MAIL_INDENT_TEXT    // 'Email Indent,,,,'Mail Compose Indent''
+        MENUITEM "'Email Outdent Mail Compose Outdent'", D_HTML_MAIL_OUTDENT_TEXT    // 'Email Outdent,,,,'Mail Compose Outdent''
+        MENUITEM "'Email Align Left Mail Compose Left'", D_HTML_MAIL_LEFT_ALIGN_TEXT    // 'Email Align Left,,,,'Mail Compose Left''
+        MENUITEM "'Email Align Center Mail Compose Center'", D_HTML_MAIL_CENTER_ALIGN_TEXT    // 'Email Align Center,,,,'Mail Compose Center''
+        MENUITEM "'Email Align Right Mail Compose Right'", D_HTML_MAIL_RIGHT_ALIGN_TEXT    // 'Email Align Right,,,,'Mail Compose Right''
+        MENUITEM "'Email Align Justify Mail Compose Justify'", D_HTML_MAIL_JUSTIFY_TEXT    // 'Email Align Justify,,,,'Mail Compose Justify''
+        MENUITEM "'Email Set Ordered List Mail Compose Numbered List'", D_HTML_MAIL_ORDERED_LIST    // 'Email Set Ordered List,,,,'Mail Compose Numbered List''
+        MENUITEM "'Email Set Unordered List Mail Compose Bullet List'", D_HTML_MAIL_UNORDERED_LIST    // 'Email Set Unordered List,,,,'Mail Compose Bullet List''
+        MENUITEM "'Email Set Superscript Mail Compose Superscript'", D_HTML_MAIL_SET_SUPERSCRIPT    // 'Email Set Superscript,,,,'Mail Compose Superscript''
+        MENUITEM "'Email Set Subscript Mail Compose Subscript'", D_HTML_MAIL_SET_SUBSCRIPT    // 'Email Set Subscript,,,,'Mail Compose Subscript''
+    }
+    POPUP "Mail Compose Popup Menu"
+    {
+        MENUITEM "Cut", MI_IDM_EDIT_CUT    // Cut
+        MENUITEM "Copy", MI_IDM_EDIT_COPY    // Copy
+        MENUITEM "Paste", MI_IDM_EDIT_PASTE    // Paste
+        MENUITEM "'Toggle HTML Email", D_HTML_MAIL_USE_HTML    // 'Toggle HTML Email,1 | Toggle HTML Email,0'
+        MENUITEM "Open Font Dialog", M_OPEN_FONT_DIALOG    // Open Font Dialog
+        MENUITEM "Send mail", M_COMPOSE_WINDOW_SEND_MESSAGE    // Send mail
+        MENUITEM "Add attachment", M_COMPOSEWINDOW_M2_MENU_ADD_ATTACHMENT    // Add attachment
+        MENUITEM "Discard draft", S_MAIL_DISCARD_DRAFT    // Discard draft
+        MENUITEM "Spell check", D_SPELL_CHECK_TITLE    // Spell check | Spell check
+    }
+    POPUP "Mail Compose Popup Menu Spellcheck Enabled"
+    {
+    }
+    POPUP "Mail Compose Popup Menu Spellcheck Word"
+    {
+        MENUITEM "Add word", M_INTERNAL_SPELLCHECK_ADD_WORD    // Add word
+        MENUITEM "Ignore word", M_INTERNAL_SPELLCHECK_IGNORE_WORD    // Ignore word
+        MENUITEM "Remove word", M_INTERNAL_SPELLCHECK_REMOVE_WORD    // Remove word
+    }
+    POPUP "Edit Widget Popup Menu Spellcheck Enabled"
+    {
+    }
+    POPUP "Gadget Edit Widget Popup Menu Spellcheck Enabled"
+    {
+    }
+    POPUP "Edit Widget Popup Menu Spellcheck Word"
+    {
+        MENUITEM "Add word", M_INTERNAL_SPELLCHECK_ADD_WORD    // Add word
+        MENUITEM "Ignore word", M_INTERNAL_SPELLCHECK_IGNORE_WORD    // Ignore word
+        MENUITEM "Remove word", M_INTERNAL_SPELLCHECK_REMOVE_WORD    // Remove word
+    }
+    POPUP "Gadget Edit Widget Popup Menu Spellcheck Word"
+    {
+        MENUITEM "Add word", M_INTERNAL_SPELLCHECK_ADD_WORD    // Add word
+        MENUITEM "Ignore word", M_INTERNAL_SPELLCHECK_IGNORE_WORD    // Ignore word
+        MENUITEM "Remove word", M_INTERNAL_SPELLCHECK_REMOVE_WORD    // Remove word
+    }
+    POPUP "Edit Go Widget Popup Menu"
+    {
+        MENUITEM "Undo", MI_IDM_EDIT_UNDO    // Undo
+        MENUITEM "Redo", M_REDO    // Redo
+        MENUITEM "Cut", MI_IDM_EDIT_CUT    // Cut
+        MENUITEM "Copy", MI_IDM_EDIT_COPY    // Copy
+        MENUITEM "Paste", MI_IDM_EDIT_PASTE    // Paste
+        MENUITEM "Paste and go", M_PASTE_AND_GO    // Paste and go
+        MENUITEM "Delete", MI_IDM_EDIT_DELETE    // Delete
+        MENUITEM "Copy to note", M_COPY_TO_NOTE    // Copy to note
+        MENUITEM "Clear", M_CLEAR_ALL    // Clear
+        MENUITEM "Select all", MI_IDM_EDIT_SELECTALL    // Select all
+    }
+    POPUP "Edit Widget Insert Menu"
+    {
+        MENUITEM "Show Preferences", MI_IDM_INSERT_NAME_PARENT_PARENT    // Show Preferences, 1
+    }
+    POPUP "Edit Dropdown Menu"
+    {
+    }
+    POPUP "Frame Menu"
+    {
+        MENUITEM "Maximize frame", M_FRAME_MENU_OPEN    // Maximize frame
+        MENUITEM "Open frame in new page", MI_IDM_MENU_PAGEBAR_LINK_IN_NEW_PAGE    // Open frame in new page
+        MENUITEM "Open frame in background page", MI_IDM_MENU_PAGEBAR_LINK_IN_BG_PAGE    // Open frame in background page
+        MENUITEM "View frame source", MI_IDM_Kilde    // View frame source
+        MENUITEM "Reload frame", MI_IDM_POPUP_FRAME_RELOAD    // Reload frame
+        MENUITEM "Copy frame address", MI_IDM_CopyFrameAddress    // Copy frame address
+    }
+    POPUP "Hotclick Popup Menu"
+    {
+        MENUITEM "Hotclick search 200", MI_IDM_SELSEARCH    // Hotclick search, 200,,, 'Search Web'
+        MENUITEM "Copy", MI_IDM_DOCCOPY    // Copy
+        MENUITEM "Copy to note", M_COPY_TO_NOTE    // Copy to note
+        MENUITEM "Hotclick search 50", MI_IDM_SELDICTIONARY    // Hotclick search, 50
+        MENUITEM "Hotclick search 51", MI_IDM_SELENCYCLOPED    // Hotclick search, 51
+        MENUITEM "Go to page %t", M_HOTCLICK_POPUP_MENU_GOTO_URL    // Go to page, '%t'
+        MENUITEM "Send text in mail", MI_IDM_SELMAIL    // Send text in mail
+    }
+    POPUP "Console Hotclick Popup Menu"
+    {
+        MENUITEM "Copy", MI_IDM_DOCCOPY    // Copy
+    }
+    POPUP "Translate menu"
+    {
+        MENUITEM "Hotclick search 120", MI_IDM_SELTRANSLATE_EN_RU    // Hotclick search, 120 [Language ru]
+        MENUITEM "Hotclick search 121", MI_IDM_SELTRANSLATE_RU_EN    // Hotclick search, 121 [Language ru]
+        MENUITEM "Hotclick search 120", MI_IDM_SELTRANSLATE_EN_ZH    // Hotclick search, 120 [Language zh|zh-cn]
+        MENUITEM "Hotclick search 121", MI_IDM_SELTRANSLATE_ZH_EN    // Hotclick search, 121 [Language zh|zh-cn]
+        MENUITEM "Hotclick search 100", MI_IDM_SELTRANSLATE_EN_FR    // Hotclick search, 100
+        MENUITEM "Hotclick search 101", MI_IDM_SELTRANSLATE_EN_DE    // Hotclick search, 101
+        MENUITEM "Hotclick search 102", MI_IDM_SELTRANSLATE_EN_IT    // Hotclick search, 102
+        MENUITEM "Hotclick search 103", MI_IDM_SELTRANSLATE_EN_PT    // Hotclick search, 103
+        MENUITEM "Hotclick search 104", MI_IDM_SELTRANSLATE_EN_ES    // Hotclick search, 104
+        MENUITEM "Hotclick search 106", MI_IDM_SELTRANSLATE_FR_EN    // Hotclick search, 106
+        MENUITEM "Hotclick search 107", MI_IDM_SELTRANSLATE_FR_DE    // Hotclick search, 107
+        MENUITEM "Hotclick search 108", MI_IDM_SELTRANSLATE_FR_IT    // Hotclick search, 108
+        MENUITEM "Hotclick search 109", MI_IDM_SELTRANSLATE_FR_PT    // Hotclick search, 109
+        MENUITEM "Hotclick search 110", MI_IDM_SELTRANSLATE_FR_ES    // Hotclick search, 110
+        MENUITEM "Hotclick search 111", MI_IDM_SELTRANSLATE_DE_EN    // Hotclick search, 111
+        MENUITEM "Hotclick search 112", MI_IDM_SELTRANSLATE_DE_FR    // Hotclick search, 112
+        MENUITEM "Hotclick search 113", MI_IDM_SELTRANSLATE_IT_EN    // Hotclick search, 113
+        MENUITEM "Hotclick search 114", MI_IDM_SELTRANSLATE_IT_FR    // Hotclick search, 114
+        MENUITEM "Hotclick search 115", MI_IDM_SELTRANSLATE_PT_EN    // Hotclick search, 115
+        MENUITEM "Hotclick search 116", MI_IDM_SELTRANSLATE_ES_EN    // Hotclick search, 116
+        MENUITEM "Hotclick search 117", MI_IDM_SELTRANSLATE_ES_FR    // Hotclick search, 117
+        MENUITEM "Hotclick search 118", MI_IDM_SELTRANSLATE_EN_JA    // Hotclick search, 118
+        MENUITEM "Hotclick search 119", MI_IDM_SELTRANSLATE_JA_EN    // Hotclick search, 119
+    }
+    POPUP "Image Popup Menu"
+    {
+        MENUITEM "Open image", M_OPEN_IMAGE    // Open image
+        MENUITEM "Load image", M_MENU_RELOAD_IMAGE    // Load image
+        MENUITEM "Copy image address", MI_IDM_COPY_FIG_ADDRESS    // Copy image address
+        MENUITEM "Save image", MI_IDM_SAVE_FIGURE    // Save image
+        MENUITEM "Copy image", M_DOCUMENT_BACKGROUND_MENU_COPY_TO_CLIPBOARD    // Copy image
+        MENUITEM "Use image as desktop background", M_DOCUMENT_BACKGROUND_MENU_USE_ON_DESKTOP    // Use image as desktop background [Platform Windows-Mac]
+        MENUITEM "Use image as speed dial background", M_IMAGE_MENU_USE_ON_SPEEDDIAL    // Use image as speed dial background
+        MENUITEM "Show image properties", MI_IDM_SHOW_FIGURE_PROPERTIES    // Show image properties
+    }
+    POPUP "Gadget Image Popup Menu"
+    {
+        MENUITEM "Save image", MI_IDM_SAVE_FIGURE    // Save image
+        MENUITEM "Copy image", M_DOCUMENT_BACKGROUND_MENU_COPY_TO_CLIPBOARD    // Copy image
+        MENUITEM "Use image as desktop background", M_DOCUMENT_BACKGROUND_MENU_USE_ON_DESKTOP_    // Use image as desktop background [Platform Windows-Mac]
+        MENUITEM "Open Widget Preferences", M_WIDGET_SETTINGS    // Open Widget Preferences
+        MENUITEM "Download more widgets", M_WIDGET_DOWNLOAD_MORE    // Download more widgets
+        MENUITEM "Close window", M_CLOSE_PAGE    // Close window
+    }
+    POPUP "Turbo Image Popup Menu"
+    {
+        MENUITEM "Open image", M_OPEN_IMAGE    // Open image
+        MENUITEM "Load image in full quality", M_MENU_TURBO_RELOAD_IMAGE    // Load image in full quality
+        MENUITEM "Copy image address", MI_IDM_COPY_FIG_ADDRESS    // Copy image address
+        MENUITEM "Save image", MI_IDM_SAVE_FIGURE    // Save image
+        MENUITEM "Copy image", M_DOCUMENT_BACKGROUND_MENU_COPY_TO_CLIPBOARD    // Copy image
+        MENUITEM "Use image as desktop background", M_DOCUMENT_BACKGROUND_MENU_USE_ON_DESKTOP    // Use image as desktop background [Platform Windows-Mac]
+        MENUITEM "Use image as speed dial background", M_IMAGE_MENU_USE_ON_SPEEDDIAL    // Use image as speed dial background
+        MENUITEM "Show image properties", MI_IDM_SHOW_FIGURE_PROPERTIES    // Show image properties
+    }
+    POPUP "Mailto Link Popup Menu"
+    {
+        MENUITEM "Compose mail", MI_IDM_NEW_MAIL_WINDOW    // Compose mail
+        MENUITEM "Add link to contacts", M_ADD_LINK_TO_CONTACTS    // Add link to contacts
+        MENUITEM "Copy link mail address", MI_IDM_POPUP_MAILTO_COPY_EMAIL_ADDRESS    // Copy link mail address
+        MENUITEM "Copy link", MI_IDM_POPUP_LINK_ADDRESS    // Copy link
+    }
+    POPUP "Mailto Link Image Popup Menu"
+    {
+        MENUITEM "Compose mail active link", MI_IDM_NEW_MAIL_WINDOW    // Compose mail, 'active link'
+        MENUITEM "Add link to contacts", M_ADD_LINK_TO_CONTACTS    // Add link to contacts
+        MENUITEM "Copy link mail address", MI_IDM_POPUP_MAILTO_COPY_EMAIL_ADDRESS    // Copy link mail address
+        MENUITEM "Copy link", MI_IDM_POPUP_LINK_ADDRESS    // Copy link
+        MENUITEM "Open image", M_OPEN_IMAGE    // Open image
+        MENUITEM "Load image", M_MENU_RELOAD_IMAGE    // Load image
+        MENUITEM "Copy image address", MI_IDM_COPY_FIG_ADDRESS    // Copy image address
+        MENUITEM "Save image", MI_IDM_SAVE_FIGURE    // Save image
+        MENUITEM "Copy image", M_DOCUMENT_BACKGROUND_MENU_COPY_TO_CLIPBOARD    // Copy image
+        MENUITEM "Use image as desktop background", M_DOCUMENT_BACKGROUND_MENU_USE_ON_DESKTOP    // Use image as desktop background [Platform Windows-Mac]
+        MENUITEM "Use image as speed dial background", M_IMAGE_MENU_USE_ON_SPEEDDIAL    // Use image as speed dial background
+        MENUITEM "Show image properties", MI_IDM_SHOW_FIGURE_PROPERTIES    // Show image properties
+    }
+    POPUP "Browser Button Menu Bar"
+    {
+        MENUITEM "Manage notes", M_VIEW_HOTLIST_MENU_NOTES    // Manage, 'notes',,,'Menu Notes'
+        MENUITEM "Manage accounts", M_TOOLS_MAIL_AND_CHAT    // Manage accounts
+        MENUITEM "Manage contacts", M_VIEW_HOTLIST_MENU_CONTACTS    // Manage, 'contacts',,,'Menu Contacts' [Feature Mail-Chat]
+        MENUITEM "Customize toolbars", M_BROWSER_TOOLS_MENU_APPEARANCE    // Customize toolbars, -1
+        MENUITEM "Enable menu bar", M_MENU_SHOW_MENU_BAR    // Enable menu bar,,,, | Disable Menu Bar, , , M_MENU_HIDE_MENU_BAR,
+        MENUITEM "Exit", MI_IDM_Exit    // Exit
+    }
+    POPUP "Tabs O Menu"
+    {
+    }
+    POPUP "Page Tools O Menu"
+    {
+        MENUITEM "Open document", MI_IDM_Open    // Open document
+        MENUITEM "Save document", MI_IDM_SaveAs    // Save document
+        MENUITEM "Add to bookmarks", M_DOCUMENT_POPUP_MENU_BOOKMARK_PAGE    // Add to bookmarks, 1
+    }
+    POPUP "Print Menu"
+    {
+        MENUITEM "Print document Menu Print", MI_IDM_Print    // Print document,,,,'Menu Print'
+        MENUITEM "Show print options", MI_IDM_PRINT_SCALEMARGINS    // Show print options [Platform Windows]
+        MENUITEM "Show print preview as screen", MI_IDM_PRINT_PREVIEW_MODE    // Show print preview as screen | Show print preview one frame per sheet | Show print preview active frame | Leave print preview [Platform Windows-Unix]
+    }
+    POPUP "Prefs O Menu"
+    {
+        MENUITEM "Show preferences", MI_IDM_Preferences    // Show preferences, -1
+        MENUITEM "Work offline", 51099    // Work offline | Work online
+        MENUITEM "Delete private data", MI_IDM_CLEAR_PERSONAL_INFORMATION    // Delete private data
+    }
+    POPUP "Developer Menu"
+    {
+        MENUITEM "View document source", MI_IDM_Kilde    // View document source
+        MENUITEM "Validate frame source", M_DOCUMENT_POPUP_MENU_VALIDATE    // Validate frame source
+        MENUITEM "Refresh display", MI_IDM_REFRESH    // Refresh display
+        MENUITEM "Open Developer Tools Window", M_OPERA_DRAGONFLY    // Open Developer Tools Window | Close Developer Tools Window
+        MENUITEM "Focus panel Info", S_INFOPANEL_TITLE    // Focus panel, 'Info' | Set collapse, 'hotlist', 1
+        MENUITEM "Show security information", M_PAGE_SECURITY_INFORMATION    // Show security information
+        MENUITEM "Go to page opera:plugins", MI_IDM_PluginsWindow    // Go to page, 'opera:plugins',,,'Blank'
+        MENUITEM "Go to page opera:cache", MI_IDM_CacheWindow    // Go to page, 'opera:cache',,,'Blank'
+        MENUITEM "Show Message console", M_JAVASCRIPTCONSOLE    // Show Message console
+    }
+    POPUP "Widget Menu Bar"
+    {
+    }
+    POPUP "Browser Menu Bar"
+    {
+    }
+    POPUP "Browser Test Menu"
+    {
+        MENUITEM "Go to page www.opera.com", LITERAL_1242    // Go to page, 'www.opera.com', 2
+    }
+    POPUP "Mail View Menu Bar"
+    {
+    }
+    POPUP "Browser Tabs Menu"
+    {
+        MENUITEM "New page New item menu", MI_IDM_MENU_PAGEBAR_NEW_PAGE    // New page, 1,,,'New item menu' [Feature !Private]
+        MENUITEM "New private page New private page menu", MI_IDM_MENU_NEW_PRIVATE_PAGE    // New private page, 1,,,'New private page menu' [Feature !Private]
+        MENUITEM "New page New private page menu", MI_IDM_MENU_NEW_PRIVATE_PAGE    // New page, 1,,, 'New private page menu' [Feature Private]
+        MENUITEM "New browser window", MI_IDM_NEW    // New browser window
+        MENUITEM "New private browser window", MI_IDM_MENU_NEW_PRIVATE_WINDOW    // New private browser window
+    }
+    POPUP "Browser File Common Menu"
+    {
+        MENUITEM "Open document", MI_IDM_Open    // Open document
+        MENUITEM "Close page", MI_IDM_MENU_PAGEBAR_REMOVE    // Close page, 1
+        MENUITEM "Save document", MI_IDM_SaveAs    // Save document
+        MENUITEM "Work offline", MI_IDM_OFFLINE    // Work offline | Work online
+    }
+    POPUP "Browser File Menu"
+    {
+        MENUITEM "Enable menu bar", M_MENU_SHOW_MENU_BAR    // Enable menu bar | Disable Menu Bar, , , M_MENU_HIDE_MENU_BAR [Platform Windows-Unix]
+        MENUITEM "Exit", MI_IDM_Exit    // Exit
+    }
+    POPUP "Browser Top File Menu"
+    {
+        MENUITEM "Enable menu bar", M_MENU_SHOW_MENU_BAR    // Enable menu bar | Disable Menu Bar, , , M_MENU_HIDE_MENU_BAR [Platform Windows-Unix]
+    }
+    POPUP "Browser Edit Menu"
+    {
+        MENUITEM "Undo", MI_IDM_Undo    // Undo
+        MENUITEM "Redo", M_REDO    // Redo
+        MENUITEM "Cut", MI_IDM_Cut    // Cut
+        MENUITEM "Copy", MI_IDM_Copy    // Copy
+        MENUITEM "Copy to note", M_COPY_TO_NOTE    // Copy to note
+        MENUITEM "Paste", MI_IDM_Paste    // Paste
+        MENUITEM "Select all", MI_IDM_SelectAll    // Select all
+        MENUITEM "Find", MI_IDM_Search    // Find
+        MENUITEM "Find next", MI_IDM_SearchNext    // Find next
+        MENUITEM "Special characters", M_OPERA_MAC_SPECIAL_CHARACTERS    // Special characters [Platform Mac]
+    }
+    POPUP "Browser Edit O Menu"
+    {
+        MENUITEM "Undo", MI_IDM_Undo    // Undo
+        MENUITEM "Redo", M_REDO    // Redo
+        MENUITEM "Cut", MI_IDM_Cut    // Cut
+        MENUITEM "Copy", MI_IDM_Copy    // Copy
+        MENUITEM "Paste", MI_IDM_Paste    // Paste
+        MENUITEM "Find", MI_IDM_Search    // Find
+        MENUITEM "Select all", MI_IDM_SelectAll    // Select all
+        MENUITEM "Copy to note", M_COPY_TO_NOTE    // Copy to note
+    }
+    POPUP "Browser View Common Menu"
+    {
+        MENUITEM "Enter fullscreen", MI_IDM_FULLSCREENTOGGLE    // Enter fullscreen | Leave fullscreen [Platform Windows-Unix]
+        MENUITEM "Enter fullscreen", M_PRESENTATION_MODE_TOGGLE    // Enter fullscreen | Leave fullscreen [Platform Mac]
+        MENUITEM "Toggle system fullscreen", MI_IDM_FULLSCREENTOGGLE    // Toggle system fullscreen [Platform Mac]
+        MENUITEM "Enable mediumscreen mode", M_BROWSER_VIEW_MENU_MEDIUM_SCREEN    // Enable mediumscreen mode | Disable mediumscreen mode
+    }
+    POPUP "Browser View Menu"
+    {
+    }
+    POPUP "View Toolbars Menu"
+    {
+        MENUITEM "Set alignment hotlist", M_BROWSER_VIEW_MENU_PANELS    // Set alignment, 'hotlist', 6 | Set alignment, 'hotlist', 0
+        MENUITEM "Set alignment browser toolbar", MI_IDM_MENU_BUTTONS_SIMPLE_PARENT    // Set alignment, 'browser toolbar', 6 | Set alignment, 'browser toolbar', 0 [Platform Windows-Unix]
+        MENUITEM "Set alignment personalbar inline", D_BOOKMARKSBAR_TOP_PARENT    // Set alignment, 'personalbar inline', 6 | Set alignment, 'personalbar inline', 0 [Platform Windows-Unix]
+        MENUITEM "Set alignment pagebar", MI_IDM_MENU_PAGEBAR_TOP_PARENT    // Set alignment, 'pagebar', 6 | Set alignment, 'pagebar', 0 [Platform Windows-Unix]
+        MENUITEM "Set alignment status toolbar", MI_IDM_MENU_STATUS_BAR_TOP_PARENT    // Set alignment, 'status toolbar', 6 | Set alignment, 'status toolbar', 0 [Platform Windows-Unix]
+        MENUITEM "Set alignment document toolbar", MI_IDM_MENU_ADDRESS_BAR_TOP_PARENT    // Set alignment, 'document toolbar', 6 | Set alignment, 'document toolbar', 0 [Platform Windows-Unix]
+        MENUITEM "Set alignment site navigation toolbar", M_BROWSER_VIEW_MENU_NAVIGATION_BAR    // Set alignment, 'site navigation toolbar', 6 | Set alignment, 'site navigation toolbar', 0 [Platform Windows-Unix]
+        MENUITEM "Set alignment personalbar inline", D_BOOKMARKSBAR_TOP_PARENT    // Set alignment, 'personalbar inline', 6 | Set alignment, 'personalbar inline', 0 [Platform Mac]
+        MENUITEM "Set alignment status toolbar", MI_IDM_MENU_STATUS_BAR_TOP_PARENT    // Set alignment, 'status toolbar', 6 | Set alignment, 'status toolbar', 0 [Platform Mac]
+        MENUITEM "Set alignment document toolbar", MI_IDM_MENU_ADDRESS_BAR_TOP_PARENT    // Set alignment, 'document toolbar', 6 | Set alignment, 'document toolbar', 0 [Platform Mac]
+        MENUITEM "Set alignment pagebar", MI_IDM_MENU_PAGEBAR_TOP_PARENT    // Set alignment, 'pagebar', 6 | Set alignment, 'pagebar', 0 [Platform Mac]
+        MENUITEM "Customize toolbars -3", M_TOOLBARS_MENU_CUSTOMIZE    // Customize toolbars, -3
+    }
+    POPUP "Browser Navigation Menu"
+    {
+        MENUITEM "Back", MI_IDM_Prev    // Back
+        MENUITEM "Forward", MI_IDM_Next    // Forward
+        MENUITEM "Rewind", M_REWIND_    // Rewind, 0
+        MENUITEM "Fast Forward", M_FAST_FORWARD_    // Fast Forward, 0
+        MENUITEM "Stop", MI_IDM_Stop    // Stop
+        MENUITEM "Reload", MI_IDM_Reload    // Reload
+        MENUITEM "Reload all pages", MI_IDM_RELOAD_ALL    // Reload all pages
+        MENUITEM "Go to homepage", MI_IDM_HOME    // Go to homepage
+        MENUITEM "Go to page Blank", MI_IDM_OpenURL    // Go to page,,,,'Blank'
+    }
+    POPUP "Browser Bookmarks Menu"
+    {
+        MENUITEM "Add to bookmarks", M_DOCUMENT_POPUP_MENU_BOOKMARK_PAGE    // Add to bookmarks, 1
+        MENUITEM "Manage bookmarks", SI_IDSTR_HL_SHOW_BOOKMARKS    // Manage, 'bookmarks',,,'Panel Bookmarks'
+    }
+    POPUP "Runtime Browser Widgets Menu"
+    {
+        MENUITEM "Upgrade gadgets", M_UPGRADE_WIDGETS    // Upgrade gadgets [Feature Upgrade Widgets]
+        MENUITEM "Focus panel Widgets", M_MANAGE_WIDGETS    // Focus panel, 'Widgets'
+        MENUITEM "Open URL in new page http://www.opera.com/widgets/", M_ABOUT_WIDGETS    // Open URL in new page, 'http://www.opera.com/widgets/',,,'Menu Info'
+    }
+    POPUP "Extensions Menu"
+    {
+        MENUITEM "Open url in new page http://addons.opera.com/addons/extensions/", M_EXTENSIONS_GET    // Open url in new page, 'http://addons.opera.com/addons/extensions/',,,'Add widget'
+        MENUITEM "Manage extensions", M_EXTENSIONS_MANAGE    // Manage, 'extensions'
+        MENUITEM "Open url in new page http://www.opera.com/addons/extensions/", M_EXTENSIONS_WHAT_ARE    // Open url in new page, 'http://www.opera.com/addons/extensions/',,,'Menu Info'
+    }
+    POPUP "Extensions Panel Button Cogwheel Menu"
+    {
+        MENUITEM "Show extension options -2", DI_PREFERENCES    // Show extension options, -2, 'extensionid'
+        MENUITEM "Extension privacy -2", M_EXTENSIONS_PRIVACY    // Extension privacy, -2, 'extensionid'
+    }
+    POPUP "Bookmark Folder Menu"
+    {
+        MENUITEM "Add to bookmarks -2", M_DOCUMENT_POPUP_MENU_BOOKMARK_PAGE    // Add to bookmarks, -2, 'hotlistid'
+        MENUITEM "Open link -2", SI_IDSTR_HL_OPENALLURLS    // Open link, -2, 'hotlistid'
+    }
+    POPUP "Active Bookmark Folder Menu"
+    {
+        MENUITEM "Add to bookmarks", M_DOCUMENT_POPUP_MENU_BOOKMARK_PAGE    // Add to bookmarks, 0
+        MENUITEM "Open link -2", SI_IDSTR_HL_OPENALLURLS    // Open link, -2, 'hotlistid'
+    }
+    POPUP "Contact Folder Menu"
+    {
+        MENUITEM "Add contact", M_ADD_CONTACT_HERE    // Add contact
+    }
+    POPUP "Compose To Contact Menu"
+    {
+        MENUITEM "Compose to contact", M_ADD_ALL_CONTACTS_IN_FOLDER    // Compose to contact
+    }
+    POPUP "Compose CC Contact Menu"
+    {
+        MENUITEM "Compose cc contact", M_ADD_ALL_CONTACTS_IN_FOLDER    // Compose cc contact
+    }
+    POPUP "Compose BCC Contact Menu"
+    {
+        MENUITEM "Compose bcc contact", M_ADD_ALL_CONTACTS_IN_FOLDER    // Compose bcc contact
+    }
+    POPUP "Browser Feeds Menu"
+    {
+        MENUITEM "Read mail rss", M_FEEDS_MENU_READ    // Read mail, 'rss',,,'Mail Newsfeeds'
+        MENUITEM "Subscribe to groups rss", M_FEEDS_MENU_MANAGE    // Subscribe to groups, 'rss'
+    }
+    POPUP "Browser Mail Menu"
+    {
+        MENUITEM "Read mail Read mail icon", M_INDEX_ITEM_POPUP_MENU_READ    // Read mail, 1,,, 'Read mail icon'
+        MENUITEM "Compose mail", DI_IDSTR_M2_MAILTOOLBAR_COMPOSE    // Compose mail
+        MENUITEM "Disable Low Bandwidth Mode", D_MAIL_LOW_BANDWIDTH_MODE    // Disable Low Bandwidth Mode | Enable Low Bandwidth Mode
+        MENUITEM "Show mail filters Mail Filter", MI_IDM_FILTERS    // Show mail filters,,,,'Mail Filter'
+        MENUITEM "Subscribe to groups nntp", M_BROWSER_MAIL_MENU_NEWSGROUPS    // Subscribe to groups, 'nntp',,,'Mail Newsgroups'
+        MENUITEM "Subscribe to groups imap", M_BROWSER_MAIL_MENU_IMAPFOLDERS    // Subscribe to groups, 'imap',,,'Folder'
+    }
+    POPUP "Chat Status Menu"
+    {
+        MENUITEM "Set chat status online", M_CHAT_ACCOUNT_STATUS_ONLINE    // Set chat status, -1, 'online'
+        MENUITEM "Set chat status busy", M_CHAT_ACCOUNT_STATUS_BUSY    // Set chat status, -1, 'busy'
+        MENUITEM "Set chat status be right back", M_CHAT_ACCOUNT_STATUS_BE_RIGHT_BACK    // Set chat status, -1, 'be right back'
+        MENUITEM "Set chat status away", M_CHAT_ACCOUNT_STATUS_AWAY    // Set chat status, -1, 'away'
+        MENUITEM "Set chat status on the phone", M_CHAT_ACCOUNT_STATUS_ON_THE_PHONE    // Set chat status, -1, 'on the phone'
+        MENUITEM "Set chat status out to lunch", M_CHAT_ACCOUNT_STATUS_OUT_TO_LUNCH    // Set chat status, -1, 'out to lunch'
+    }
+    POPUP "Chat Connect Menu"
+    {
+        MENUITEM "Set chat status offline", M_CHAT_CONNECT_MENU_DISCONNECT    // Set chat status, -1, 'offline'
+    }
+    POPUP "Browser Chat Menu"
+    {
+        MENUITEM "List chat rooms", M_CHAT_ITEM_POPUP_MENU_LIST_ROOMS    // List chat rooms
+        MENUITEM "New chat room", M_CHAT_ITEM_POPUP_MENU_NEW_ROOM    // New chat room
+    }
+    POPUP "Get Mail Menu"
+    {
+        MENUITEM "Get mail", MI_IDM_UPDATE_ALL_MAILBOXES    // Get mail
+        MENUITEM "Stop mail", MI_IDM_Stop    // Stop mail
+    }
+    POPUP "Send Mail Menu"
+    {
+        MENUITEM "Send queued mail", MI_IDM_MAIL_MENU_SEND_QUEUED    // Send queued mail
+        MENUITEM "Stop mail", MI_IDM_Stop    // Stop mail
+        MENUITEM "Send document address in mail", MI_IDM_SEND_URL_EMAIL2    // Send document address in mail
+    }
+    POPUP "Get And Send And Stop Mail Menu"
+    {
+        MENUITEM "Get mail", MI_IDM_UPDATE_ALL_MAILBOXES    // Get mail
+        MENUITEM "Send queued mail", MI_IDM_MAIL_MENU_SEND_QUEUED    // Send queued mail
+        MENUITEM "Stop mail", MI_IDM_Stop    // Stop mail
+    }
+    POPUP "Get And Send Mail Menu"
+    {
+        MENUITEM "Get mail", MI_IDM_UPDATE_ALL_MAILBOXES    // Get mail
+        MENUITEM "Send queued mail", MI_IDM_MAIL_MENU_SEND_QUEUED    // Send queued mail
+    }
+    POPUP "Browser Tools Common Menu"
+    {
+        MENUITEM "Manage history", MI_IDM_HistoryWindow    // Manage, 'history',,,'Menu History'
+        MENUITEM "Manage transfers", MI_IDM_DownloadWindow    // Manage, 'transfers',,,'Menu Transfers'
+    }
+    POPUP "Browser Tools Menu"
+    {
+        MENUITEM "Manage accounts Menu Mail", M_TOOLS_MAIL_AND_CHAT    // Manage accounts,,,,'Menu Mail'
+        MENUITEM "Delete private data", MI_IDM_CLEAR_PERSONAL_INFORMATION    // Delete private data
+        MENUITEM "Manage contacts", M_VIEW_HOTLIST_MENU_CONTACTS    // Manage, 'contacts',,,'Panel Contacts' [Feature Mail-Chat]
+        MENUITEM "Manage notes", M_VIEW_HOTLIST_MENU_NOTES    // Manage, 'notes',,,'Menu Notes'
+        MENUITEM "Manage links", M_VIEW_HOTLIST_MENU_LINKS    // Manage, 'links',,,'Panel Links'
+        MENUITEM "Customize toolbars", M_BROWSER_TOOLS_MENU_APPEARANCE    // Customize toolbars, -1
+        MENUITEM "Show preferences", MI_IDM_Preferences    // Show preferences, -1
+    }
+    POPUP "Advanced Tools Menu"
+    {
+        MENUITEM "Manage cookies", M_MANAGE_COOKIES    // Manage cookies
+        MENUITEM "Manage wand", M_MANAGE_WAND_PASSWORDS    // Manage wand
+        MENUITEM "Content block details", D_PREFS_BLOCKED_CONTENT    // Content block details, 1
+        MENUITEM "Go to page opera:plugins", MI_IDM_PluginsWindow    // Go to page, 'opera:plugins',,,'Blank'
+        MENUITEM "Go to page opera:cache", MI_IDM_CacheWindow    // Go to page, 'opera:cache',,,'Blank'
+        MENUITEM "Open Developer Tools Window", M_OPERA_DRAGONFLY    // Open Developer Tools Window | Close Developer Tools Window
+        MENUITEM "Show Message console", M_JAVASCRIPTCONSOLE    // Show Message console
+        MENUITEM "Show security information", M_PAGE_SECURITY_INFORMATION    // Show security information
+        MENUITEM "Refresh display", MI_IDM_REFRESH    // Refresh display
+        MENUITEM "Minimize window", D_MINIMIZE_DIALOG    // Minimize window [Feature WidgetRuntime; Platform Mac]
+        MENUITEM "Close other", M_BROWSER_WINDOW_MENU_CLOSEALL_BUT_ACTIVE    // Close other [Feature WidgetRuntime]
+        MENUITEM "Exit", MI_IDM_Exit    // Exit [Feature WidgetRuntime; Platform Mac]
+    }
+    POPUP "Browser Window Menu"
+    {
+        MENUITEM "Minimize window", D_MINIMIZE_DIALOG    // Minimize window [Platform Mac]
+        MENUITEM "Duplicate page", MI_IDM_CLONE_WINDOW    // Duplicate page
+        MENUITEM "Create linked window", MI_IDM_CREATE_LINKED_WINDOW    // Create linked window
+        MENUITEM "Cascade", MI_IDM_Cascade    // Cascade [Platform Windows-Unix]
+        MENUITEM "Tile vertically", MI_IDM_Tile    // Tile vertically [Platform Windows-Unix]
+        MENUITEM "Tile horizontally", MI_IDM_TILEHORIZONTAL    // Tile horizontally [Platform Windows-Unix]
+        MENUITEM "Restore all", MI_IDM_MDI_RESTORE_ALL    // Restore all [Platform Windows-Unix]
+        MENUITEM "Minimize all", MI_IDM_MDI_MINIMIZE_ALL    // Minimize all [Platform Windows-Unix]
+        MENUITEM "Maximize all", MI_IDM_MDI_MAXIMIZE_ALL    // Maximize all [Platform Windows-Unix]
+        MENUITEM "Close all", MI_IDM_CloseAll    // Close all [Platform Windows-Unix]
+        MENUITEM "Close other", M_BROWSER_WINDOW_MENU_CLOSEALL_BUT_ACTIVE    // Close other
+    }
+    POPUP "Widget Help Menu"
+    {
+        MENUITEM "Open Widget About", M_WIDGET_ABOUT    // Open Widget About
+        MENUITEM "Open Widget Preferences", MI_IDM_Preferences    // Open Widget Preferences
+        MENUITEM "Show Help widgets.html", M_ABOUT_WIDGETS    // Show Help, 'widgets.html'
+    }
+    POPUP "Browser Help Menu"
+    {
+        MENUITEM "Open URL in new page opera:/help/index.html", M_OPERA_HELP    // Open URL in new page, 'opera:/help/index.html',,,'Menu Info'
+        MENUITEM "Open URL in new page http://redir.opera.com/community/", MI_IDM_WWW_MYOPERA    // Open URL in new page, 'http://redir.opera.com/community/',,,'Window Browser Icon'
+        MENUITEM "Open URL in new page http://redir.opera.com/www.opera.com/support/", MI_IDM_WWW_SUPPORT    // Open URL in new page, 'http://redir.opera.com/www.opera.com/support/',,,'Window Browser Icon'
+        MENUITEM "Check for upgrade", M_NEW_VERSION_CHECK    // Check for upgrade [Feature Autoupdate]
+        MENUITEM "Report site problem", M_BROWSER_HELP_MENU_REPORT    // Report site problem
+        MENUITEM "Open URL in new page opera:about", MI_IDM_About    // Open URL in new page, 'opera:about',,,'Blank'
+    }
+    POPUP "Bookmark Item File Menu"
+    {
+        MENUITEM "Open bookmarks file", MI_IDM_HLITEM_OPENFILE    // Open bookmarks file
+        MENUITEM "Import bookmarks", M_BOOKM_ITEM_FILE_MENU_IMP_OPERA_BOOKM    // Import bookmarks
+        MENUITEM "Import netscape bookmarks", M_BOOKM_ITEM_FILE_MENU_IMP_NETSC_BOOKM    // Import netscape bookmarks
+        MENUITEM "Import explorer favorites", M_BOOKM_ITEM_FILE_MENU_IMP_EXPLOR_FAVOR    // Import explorer favorites
+        MENUITEM "Import konqueror bookmarks", M_IMPORT_KONQUEROR_BOOKMARKS    // Import konqueror bookmarks
+        MENUITEM "Export bookmarks", M_BOOKM_ITEM_FILE_MENU_EXP_OPERA_BOOKM    // Export bookmarks
+        MENUITEM "Export bookmarks to HTML", M_EXPORT_BOOKMARKS_AS_HTML    // Export bookmarks to HTML
+        MENUITEM "Save selected bookmarks as", MI_IDM_HLITEM_SAVEFOLDERAS    // Save selected bookmarks as
+        MENUITEM "Export selected bookmarks to HTML", M_EXPORT_SELECTED_AS_HTML    // Export selected bookmarks to HTML
+    }
+    POPUP "Contact Item File Menu"
+    {
+        MENUITEM "New contacts file", M_CONTACT_ITEM_POPUP_MENU_FILE_NEW    // New contacts file
+        MENUITEM "Open contacts file", MI_IDM_Open    // Open contacts file
+        MENUITEM "Import contacts", M_IMPORT_OPERA_CONTACTS    // Import contacts
+        MENUITEM "Export contacts", M_EXPORT_OPERA_CONTACTS    // Export contacts
+        MENUITEM "Save selected contacts as", M_SAVE_SELECTED_CONTACTS_AS    // Save selected contacts as
+    }
+    POPUP "Browser Session Menu"
+    {
+        MENUITEM "Save window setup", M_BROWSER_FILE_MENU_SESSIONS_SAVE_SESS    // Save window setup
+        MENUITEM "Select session", M_BROWSER_SESSION_MENU_MANAGE    // Select session, -1
+    }
+    POPUP "Browser ImportExport Menu"
+    {
+        MENUITEM "Import mail", M_IMPORTEXPORT_IMPORT_MAIL    // Import mail
+        MENUITEM "Import newsfeed list", M_IMPORT_NEWSFEED_LIST    // Import newsfeed list
+        MENUITEM "Import bookmarks", M_BOOKM_ITEM_FILE_MENU_IMP_OPERA_BOOKM    // Import bookmarks
+        MENUITEM "Import netscape bookmarks", M_BOOKM_ITEM_FILE_MENU_IMP_NETSC_BOOKM    // Import netscape bookmarks
+        MENUITEM "Import explorer favorites", M_BOOKM_ITEM_FILE_MENU_IMP_EXPLOR_FAVOR    // Import explorer favorites [Platform !Mac]
+        MENUITEM "Import konqueror bookmarks", M_IMPORT_KONQUEROR_BOOKMARKS    // Import konqueror bookmarks
+        MENUITEM "Import contacts", M_IMPORT_OPERA_CONTACTS    // Import contacts
+        MENUITEM "Export newsfeed list", M_EXPORT_NEWSFEED_LIST    // Export newsfeed list
+        MENUITEM "Export bookmarks", M_BOOKM_ITEM_FILE_MENU_EXP_OPERA_BOOKM    // Export bookmarks
+        MENUITEM "Export bookmarks to HTML", M_IMPORTEXPORT_EXPORT_BOOKMARKS_AS_HTML    // Export bookmarks to HTML
+        MENUITEM "Export contacts", M_EXPORT_OPERA_CONTACTS    // Export contacts
+    }
+    POPUP "Browser Import Menu"
+    {
+        MENUITEM "Import mail", MI_IDM_IMPORT_MAIL    // Import mail
+        MENUITEM "Import bookmarks", MI_IDM_IMPORT_OPERA_BOOKMARKS    // Import bookmarks
+        MENUITEM "Import contacts", MI_IDM_IMPORT_OPERA_CONTACTS    // Import contacts
+        MENUITEM "Import netscape bookmarks", MI_IDM_IMPORT_NETSCAPE_BOOKMARKS    // Import netscape bookmarks
+        MENUITEM "Import explorer favorites", MI_IDM_IMPORT_IEXPLORER_FAVORITES    // Import explorer favorites
+        MENUITEM "Import konqueror bookmarks", M_KONQUEROR_BOOKMARKS    // Import konqueror bookmarks
+    }
+    POPUP "Browser Export Menu"
+    {
+        MENUITEM "Export bookmarks", MI_IDM_EXPORT_OPERA_BOOKMARKS    // Export bookmarks
+        MENUITEM "Export contacts", MI_IDM_EXPORT_OPERA_CONTACTS    // Export contacts
+        MENUITEM "Export bookmarks to HTML", M_BOOKMARKS_AS_HTML    // Export bookmarks to HTML
+    }
+    POPUP "Identify As Menu"
+    {
+        MENUITEM "Identify as", MI_IDM_CONTROL_MENU_IDENTIFY_OPERA    // Identify as, 0
+        MENUITEM "Identify as", M_IDAS_MENU_MOZILLA    // Identify as, 1
+        MENUITEM "Identify as 4", M_IDAS_MENU_INTERNET_EXPLORER    // Identify as, 4
+    }
+    POPUP "Quick Preferences Menu"
+    {
+        MENUITEM "Enable popup windows", MI_IDM_CONTROL_MENU_ACCEPT_POPUPS    // Enable popup windows
+        MENUITEM "Enable popup windows in background", MI_IDM_CONTROL_MENU_OPEN_POPUPS_IN_BACKGROUND    // Enable popup windows in background
+        MENUITEM "Enable requested popup windows", M_QUICKPREF_POPUP_MENU_REQUESTED_POPUP_ONLY    // Enable requested popup windows
+        MENUITEM "Disable popup windows", MI_IDM_CONTROL_MENU_REFUSE_POPUPS    // Disable popup windows
+        MENUITEM "Enable gif animation", MI_IDM_CONTROL_MENU_ENABLE_ANIMATION    // Enable gif animation | Disable gif animation
+        MENUITEM "Enable plugins", MI_IDM_CONTROL_MENU_ENABLE_PLUGINS    // Enable plugins | Disable plugins
+        MENUITEM "Enable javascript", MI_IDM_CONTROL_MENU_ENABLE_JAVASCRIPT    // Enable javascript | Disable javascript
+        MENUITEM "Enable Web Turbo", M_ENABLE_OPERA_TURBO    // Enable Web Turbo | Disable Web Turbo
+        MENUITEM "Enable cookies", MI_IDM_CONTROL_MENU_ENABLE_COOKIES    // Enable cookies | Disable cookies
+        MENUITEM "Enable referrer logging", MI_IDM_CONTROL_MENU_ENABLE_REFERRER    // Enable referrer logging| Disable referrer logging
+        MENUITEM "Enable proxy servers", MI_IDM_CONTROL_MENU_ENABLE_PROXY    // Enable proxy servers | Disable proxy servers
+        MENUITEM "Edit site preferences", M_EDIT_SITE_PREFERENCES    // Edit site preferences
+    }
+    POPUP "Hotlist Placement Menu"
+    {
+        MENUITEM "Set alignment hotlist", MI_IDM_MENU_PERSONALBAR_LEFT    // Set alignment, 'hotlist', 1
+        MENUITEM "Set alignment hotlist", MI_IDM_MENU_PERSONALBAR_RIGHT    // Set alignment, 'hotlist', 3
+        MENUITEM "Set alignment hotlist", MI_IDM_HL_FLOATING    // Set alignment, 'hotlist', 5
+        MENUITEM "Set alignment hotlist", MI_IDM_MENU_PERSONALBAR_OFF    // Set alignment, 'hotlist', 0
+    }
+    POPUP "Hotlist Selector Placement Menu"
+    {
+        MENUITEM "Set alignment hotlist panel selector", MI_IDM_MENU_PERSONALBAR_TOP    // Set alignment, 'hotlist panel selector', 2
+        MENUITEM "Set alignment hotlist panel selector", MI_IDM_MENU_PERSONALBAR_BOTTOM    // Set alignment, 'hotlist panel selector', 4
+        MENUITEM "Set alignment hotlist panel selector", MI_IDM_MENU_PERSONALBAR_LEFT    // Set alignment, 'hotlist panel selector', 1
+        MENUITEM "Set alignment hotlist panel selector", MI_IDM_MENU_PERSONALBAR_RIGHT    // Set alignment, 'hotlist panel selector', 3
+        MENUITEM "Set alignment hotlist panel selector", MI_IDM_MENU_PERSONALBAR_OFF    // Set alignment, 'hotlist panel selector', 0
+    }
+    POPUP "Skin Menu"
+    {
+        MENUITEM "Go to page http://redir.opera.com/community/skins/", MI_IDM_GET_SKINS    // Go to page, 'http://redir.opera.com/community/skins/',,,'Blank'
+    }
+    POPUP "Zoom Menu"
+    {
+        MENUITEM "Zoom to 50", MI_IDM_ZOOM_50    // Zoom to, 50
+        MENUITEM "Zoom to 80", MI_IDM_ZOOM_80    // Zoom to, 80
+        MENUITEM "Zoom to 90", MI_IDM_ZOOM_90    // Zoom to, 90
+        MENUITEM "Zoom to 100", MI_IDM_ZOOM_100    // Zoom to, 100
+        MENUITEM "Zoom to 120", MI_IDM_ZOOM_120    // Zoom to, 120
+        MENUITEM "Zoom to 150", MI_IDM_ZOOM_150    // Zoom to, 150
+        MENUITEM "Zoom to 200", MI_IDM_ZOOM_200    // Zoom to, 200
+        MENUITEM "Zoom out 100", MI_IDM_ZOOM_DEC_100    // Zoom out, 100
+        MENUITEM "Zoom in 100", MI_IDM_ZOOM_INC_100    // Zoom in, 100
+        MENUITEM "Zoom out 10", MI_IDM_ZOOM_DEC_10    // Zoom out, 10
+        MENUITEM "Zoom in 10", MI_IDM_ZOOM_INC_10    // Zoom in, 10
+    }
+    POPUP "Images Menu"
+    {
+        MENUITEM "Enable display images", M_IMAGE_MENU_SHOW    // Enable display images
+        MENUITEM "Display cached images only", M_IMAGE_MENU_CACHED    // Display cached images only
+        MENUITEM "Disable display images", M_IMAGE_MENU_NO    // Disable display images
+    }
+    POPUP "Style Menu"
+    {
+        MENUITEM "Select author mode", M_BROWSER_VIEW_MENU_STYLE_AUTHOR_MODE    // Select author mode
+        MENUITEM "Select user mode", M_BROWSER_VIEW_MENU_STYLE_USER_MODE    // Select user mode
+        MENUITEM "Manage modes", M_MANAGE_PRESENTATION_MODES    // Manage modes,1
+    }
+    POPUP "Images And Style Menu"
+    {
+    }
+    POPUP "Encoding Menu"
+    {
+        MENUITEM "Set encoding", MI_IDM_ENCODING_AUTOMATIC    // Set encoding, ''
+    }
+    POPUP "Unicode Encoding Menu"
+    {
+        MENUITEM "Set encoding utf-8", MI_IDM_ENCODING_UTF8    // Set encoding, 'utf-8'
+        MENUITEM "Set encoding utf-16", MI_IDM_ENCODING_UTF16    // Set encoding, 'utf-16'
+    }
+    POPUP "Western Encoding Menu"
+    {
+        MENUITEM "Set encoding iso-8859-1", MI_IDM_ENCODING_ISO8859_1    // Set encoding, 'iso-8859-1'
+        MENUITEM "Set encoding iso-8859-15", MI_IDM_ENCODING_ISO8859_15    // Set encoding, 'iso-8859-15'
+        MENUITEM "Set encoding windows-1252", MI_IDM_ENCODING_CP_1252    // Set encoding, 'windows-1252'
+        MENUITEM "Set encoding us-ascii", MI_IDM_ENCODING_USASCII    // Set encoding, 'us-ascii'
+    }
+    POPUP "Central Encoding Menu"
+    {
+        MENUITEM "Set encoding iso-8859-2", MI_IDM_ENCODING_ISO8859_2    // Set encoding, 'iso-8859-2'
+        MENUITEM "Set encoding iso-8859-16", M_ENCODING_ISO_8859_16    // Set encoding, 'iso-8859-16'
+        MENUITEM "Set encoding windows-1250", MI_IDM_ENCODING_CP_1250    // Set encoding, 'windows-1250'
+    }
+    POPUP "Southern Encoding Menu"
+    {
+        MENUITEM "Set encoding iso-8859-3", MI_IDM_ENCODING_ISO8859_3    // Set encoding, 'iso-8859-3'
+    }
+    POPUP "Baltic Encoding Menu"
+    {
+        MENUITEM "Set encoding iso-8859-13", MI_IDM_ENCODING_ISO8859_13    // Set encoding, 'iso-8859-13'
+        MENUITEM "Set encoding windows-1257", MI_IDM_ENCODING_CP_1257    // Set encoding, 'windows-1257'
+        MENUITEM "Set encoding iso-8859-4", MI_IDM_ENCODING_ISO8859_4    // Set encoding, 'iso-8859-4'
+    }
+    POPUP "Nordic Encoding Menu"
+    {
+        MENUITEM "Set encoding iso-8859-10", MI_IDM_ENCODING_ISO8859_10    // Set encoding, 'iso-8859-10'
+    }
+    POPUP "Celtic Encoding Menu"
+    {
+        MENUITEM "Set encoding iso-8859-14", MI_IDM_ENCODING_ISO8859_14    // Set encoding, 'iso-8859-14'
+    }
+    POPUP "Turkish Encoding Menu"
+    {
+        MENUITEM "Set encoding iso-8859-9", MI_IDM_ENCODING_ISO8859_9    // Set encoding, 'iso-8859-9'
+        MENUITEM "Set encoding windows-1254", MI_IDM_ENCODING_CP_1254    // Set encoding, 'windows-1254'
+    }
+    POPUP "Vietnamese Encoding Menu"
+    {
+        MENUITEM "Set encoding windows-1258", MI_IDM_ENCODING_CP_1258    // Set encoding, 'windows-1258'
+        MENUITEM "Set encoding viscii", MI_IDM_ENCODING_VISCII    // Set encoding, 'viscii'
+    }
+    POPUP "Cyrillic Encoding Menu"
+    {
+        MENUITEM "Set encoding AUTODETECT-RU", MI_IDM_ENCODING_AUTODETECT_JAPANESE    // Set encoding, 'AUTODETECT-RU'
+        MENUITEM "Set encoding iso-8859-5", MI_IDM_ENCODING_ISO8859_5    // Set encoding, 'iso-8859-5'
+        MENUITEM "Set encoding koi8-r", MI_IDM_ENCODING_KOI8_R    // Set encoding, 'koi8-r'
+        MENUITEM "Set encoding koi8-u", MI_IDM_ENCODING_KOI8_U    // Set encoding, 'koi8-u'
+        MENUITEM "Set encoding windows-1251", MI_IDM_ENCODING_CP_1251    // Set encoding, 'windows-1251'
+        MENUITEM "Set encoding ibm866", MI_IDM_ENCODING_IBM866    // Set encoding, 'ibm866'
+    }
+    POPUP "Greek Encoding Menu"
+    {
+        MENUITEM "Set encoding iso-8859-7", MI_IDM_ENCODING_ISO8859_7    // Set encoding, 'iso-8859-7'
+        MENUITEM "Set encoding windows-1253", MI_IDM_ENCODING_CP_1253    // Set encoding, 'windows-1253'
+    }
+    POPUP "Arabic Encoding Menu"
+    {
+        MENUITEM "Set encoding iso-8859-6", MI_IDM_ENCODING_ISO8859_6    // Set encoding, 'iso-8859-6'
+        MENUITEM "Set encoding windows-1256", MI_IDM_ENCODING_CP_1256    // Set encoding, 'windows-1256'
+    }
+    POPUP "Hebrew Encoding Menu"
+    {
+        MENUITEM "Set encoding iso-8859-8-i", MI_IDM_ENCODING_ISO8859_8    // Set encoding, 'iso-8859-8-i'
+        MENUITEM "Set encoding iso-8859-8", M_ENCODING_ISO8859_8_VISUAL    // Set encoding, 'iso-8859-8'
+        MENUITEM "Set encoding windows-1255", MI_IDM_ENCODING_CP_1255    // Set encoding, 'windows-1255'
+    }
+    POPUP "Thai Encoding Menu"
+    {
+        MENUITEM "Set encoding iso-8859-11", MI_IDM_ENCODING_ISO8859_11    // Set encoding, 'iso-8859-11'
+    }
+    POPUP "Chinese Encoding Menu"
+    {
+        MENUITEM "Set encoding AUTODETECT-ZH", MI_IDM_ENCODING_AUTODETECT_JAPANESE    // Set encoding, 'AUTODETECT-ZH'
+        MENUITEM "Set encoding big5", MI_IDM_ENCODING_BIG5    // Set encoding, 'big5'
+        MENUITEM "Set encoding big5-hkscs", M_ENCODING_BIG5_HKSCS    // Set encoding, 'big5-hkscs'
+        MENUITEM "Set encoding euc-tw", MI_IDM_ENCODING_EUC_TW    // Set encoding, 'euc-tw'
+        MENUITEM "Set encoding gbk", MI_IDM_ENCODING_GB2312    // Set encoding, 'gbk'
+        MENUITEM "Set encoding gb18030", M_ENCODING_GB18030    // Set encoding, 'gb18030'
+        MENUITEM "Set encoding hz-gb2312", MI_IDM_ENCODING_HZ_GB2312    // Set encoding, 'hz-gb2312'
+        MENUITEM "Set encoding iso-2022-cn", M_ENCODING_ISO2022_CN    // Set encoding, 'iso-2022-cn'
+    }
+    POPUP "Japanese Encoding Menu"
+    {
+        MENUITEM "Set encoding AUTODETECT-JP", MI_IDM_ENCODING_AUTODETECT_JAPANESE    // Set encoding, 'AUTODETECT-JP'
+        MENUITEM "Set encoding shift_jis", MI_IDM_ENCODING_SHIFTJIS    // Set encoding, 'shift_jis'
+        MENUITEM "Set encoding iso-2022-jp", MI_IDM_ENCODING_ISO2022_JP    // Set encoding, 'iso-2022-jp'
+        MENUITEM "Set encoding euc-jp", MI_IDM_ENCODING_EUC_JP    // Set encoding, 'euc-jp'
+    }
+    POPUP "Korean Encoding Menu"
+    {
+        MENUITEM "Set encoding AUTODETECT-KO", MI_IDM_ENCODING_AUTODETECT_JAPANESE    // Set encoding, 'AUTODETECT-KO'
+        MENUITEM "Set encoding euc-kr", MI_IDM_ENCODING_EUC_KR    // Set encoding, 'euc-kr'
+        MENUITEM "Set encoding iso-2022-kr", M_ENCODING_ISO_2022__KR    // Set encoding, 'iso-2022-kr'
+    }
+    POPUP "Reload Menu"
+    {
+        MENUITEM "Set automatic reload 1800", M_RELOAD_MENU_30_MIN    // Set automatic reload, 1800
+        MENUITEM "Set automatic reload 3600", M_RELOAD_MENU_1_HOUR    // Set automatic reload, 3600
+        MENUITEM "Set automatic reload 7200", M_RELOAD_MENU_2_HOUR    // Set automatic reload, 7200
+        MENUITEM "Set automatic reload 21600", M_RELOAD_MENU_6_HOUR    // Set automatic reload, 21600
+        MENUITEM "Set automatic reload 2147483646", M_RELOAD_MENU_NEVER    // Set automatic reload, 2147483646
+        MENUITEM "Set automatic reload", MI_IDM_AUTORELOAD_CONFIG    // Set automatic reload, 0
+    }
+    POPUP "Full Reload Menu"
+    {
+    }
+    POPUP "Site Navigation Menu"
+    {
+        MENUITEM "Go to link element home", M_SITE_NAVIGATION_MENU_HOME    // Go to link element, 'home' | Go to link element, 'start' | Go to link element, 'top'
+        MENUITEM "Go to link element index", M_SITE_NAVIGATION_MENU_INDEX    // Go to link element, 'index'
+        MENUITEM "Go to link element contents", M_SITE_NAVIGATION_MENU_CONTENTS    // Go to link element, 'contents' | Go to link element, 'toc'
+        MENUITEM "Go to link element search", M_SITE_NAVIGATION_MENU_SEARCH    // Go to link element, 'search' | Go to link element, 'find'
+        MENUITEM "Go to link element glossary", M_SITE_NAVIGATION_MENU_GLOSSARY    // Go to link element, 'glossary'
+        MENUITEM "Go to link element help", M_SITE_NAVIGATION_MENU_HELP    // Go to link element, 'help'
+        MENUITEM "Go to link element first", M_SITE_NAVIGATION_MENU_FIRST    // Go to link element, 'first' | Go to link element, 'begin'
+        MENUITEM "Go to link element previous", M_SITE_NAVIGATION_MENU_PREVIOUS    // Go to link element, 'previous' | Go to link element, 'prev'
+        MENUITEM "Go to link element next", M_SITE_NAVIGATION_MENU_NEXT    // Go to link element, 'next'
+        MENUITEM "Go to link element last", M_SITE_NAVIGATION_MENU_LAST    // Go to link element, 'last'
+        MENUITEM "Go to link element up", M_SITE_NAVIGATION_MENU_UP    // Go to link element, 'up'
+        MENUITEM "Go to link element copyright", M_SITE_NAVIGATION_MENU_COPYRIGHT    // Go to link element, 'copyright'
+        MENUITEM "Go to link element author", M_SITE_NAVIGATION_MENU_AUTHOR    // Go to link element, 'author'
+        MENUITEM "Go to link element 'application/rss", S_RSS_TYPE    // Go to link element, 'application/rss+xml'
+    }
+    POPUP "Transfers Item Popup Menu"
+    {
+        MENUITEM "Open transfer", M_TRANSFERS_NOTIFY_POPUP_MENU_OPEN    // Open transfer
+        MENUITEM "Open transfer folder", M_TRANSFERS_NOTIFY_POPUP_MENU_OPEN_FOLDER    // Open transfer folder
+        MENUITEM "Resume transfer", SI_IDM_TRANSFER_RESUME    // Resume transfer | Restart transfer, , , M_TRANSFER_ITEM_POPUP_MENU_RESTART_TRANSF
+        MENUITEM "Stop transfer", SI_IDM_TRANSFER_STOP    // Stop transfer
+        MENUITEM "Delete", M_TRANSFER_ITEM_POPUP_MENU_REMOVE_TRANSF    // Delete
+        MENUITEM "Remove all finished transfers", M_REMOVE_ALL_FINISHED_TRANSFERS    // Remove all finished transfers
+        MENUITEM "Copy transfer info", SI_IDSTR_TRANSWIN_MENU_COPYTEXTINFO    // Copy transfer info
+    }
+    POPUP "Transfers Notify Popup Menu"
+    {
+        MENUITEM "Open transfer", M_TRANSFERS_NOTIFY_POPUP_MENU_OPEN    // Open transfer
+        MENUITEM "Open transfer folder", M_TRANSFERS_NOTIFY_POPUP_MENU_OPEN_FOLDER    // Open transfer folder
+        MENUITEM "Manage transfers", M_TRANSFERS_NOTIFY_POPUP_MENU_SHOW_TRANSFERS    // Manage, 'transfers'
+    }
+    POPUP "Workspace Menu"
+    {
+        MENUITEM "New page New item menu", MI_IDM_MENU_PAGEBAR_NEW_PAGE    // New page,,,,'New item menu'
+    }
+    POPUP "Hotlist Popup Menu"
+    {
+        MENUITEM "Customize toolbars Hotlist Panel Selector", M_TOOLBARS_MENU_CUSTOMIZE    // Customize toolbars, 'Hotlist Panel Selector', 1
+    }
+    POPUP "Hotlist AddRemove Item Popup Menu"
+    {
+        MENUITEM "Show panel Bookmarks", M_VIEW_HOTLIST_MENU_BOOKM    // Show panel, 'Bookmarks' | Hide panel, 'Bookmarks'
+        MENUITEM "Show panel Mail", M_VIEW_HOTLIST_MENU_MAIL    // Show panel, 'Mail' | Hide panel, 'Mail'
+        MENUITEM "Show panel Contacts", M_VIEW_HOTLIST_MENU_CONTACTS    // Show panel, 'Contacts' | Hide panel, 'Contacts'
+        MENUITEM "Show panel History", M_VIEW_HOTLIST_MENU_HISTORY    // Show panel, 'History' | Hide panel, 'History'
+        MENUITEM "Show panel Transfers", M_VIEW_HOTLIST_MENU_TRANSFERS    // Show panel, 'Transfers' | Hide panel, 'Transfers'
+        MENUITEM "Show panel Links", M_VIEW_HOTLIST_MENU_LINKS    // Show panel, 'Links' | Hide panel, 'Links'
+        MENUITEM "Show panel Windows", M_VIEW_HOTLIST_MENU_WINDOWS    // Show panel, 'Windows' | Hide panel, 'Windows'
+        MENUITEM "Show panel Search", SI_IDPREFS_SEARCH    // Show panel, 'Search' | Hide panel, 'Search'
+        MENUITEM "Show panel Info", M_VIEW_HOTLIST_MENU_INFO    // Show panel, 'Info' | Hide panel, 'Info'
+        MENUITEM "Show panel Widgets", D_WIDGETS    // Show panel, 'Widgets' | Hide panel, 'Widgets' [Feature WidgetRuntime]
+        MENUITEM "Show panel Chat", M_BROWSER_MENU_BAR_CHAT    // Show panel, 'Chat' | Hide panel, 'Chat'
+        MENUITEM "Show panel Notes", M_VIEW_HOTLIST_MENU_NOTES    // Show panel, 'Notes' | Hide panel, 'Notes'
+        MENUITEM "Show panel Unite", S_UNITE_SERVICES    // Show panel, 'Unite' | Hide panel, 'Unite' [Feature Unite]
+        MENUITEM "Add Web Panel", M_WEB_PANEL_    // Add Web Panel
+        MENUITEM "Customize toolbars Hotlist Panel Selector", M_TOOLBARS_MENU_CUSTOMIZE    // Customize toolbars, 'Hotlist Panel Selector', 1
+    }
+    POPUP "Hotlist Item Popup Menu"
+    {
+        MENUITEM "Remove panel", M_HOTLIST_ITEM_POPUP_MENU_REMOVE_PANEL    // Remove panel
+        MENUITEM "Edit panel", MI_IDM_HL_EDIT_PANEL    // Edit panel
+    }
+    POPUP "Tab Group Popup Menu"
+    {
+        MENUITEM "Dissolve Tab Group", M_PAGEBAR_DISSOLVE_TAB_GROUP    // Dissolve Tab Group
+        MENUITEM "Close Tab Group", M_PAGEBAR_CLOSE_TAB_GROUP    // Close Tab Group
+    }
+    POPUP "Pagebar Customize Menu"
+    {
+        MENUITEM "Enable Tab Thumbnails", MI_PAGEBAR_ENABLE_TAB_THUMBNAILS    // Enable Tab Thumbnails | Enable Tab Thumbnails
+        MENUITEM "Customize toolbars", M_BROWSER_TOOLS_MENU_APPEARANCE    // Customize toolbars
+        MENUITEM "Restore to defaults selected toolbar", D_CUSTOMIZE_TOOLBAR_RESET_TO_DEFAULTS    // Restore to defaults, 'selected toolbar'
+        MENUITEM "Remove", M_MAINBAR_ITEM_POPUP_MENU_REMOVE_FROM_TOOLBAR    // Remove
+    }
+    POPUP "Pagebar Placement Menu"
+    {
+        MENUITEM "Set alignment pagebar", MI_IDM_MENU_PERSONALBAR_TOP    // Set alignment, 'pagebar', 2
+        MENUITEM "Set alignment pagebar", MI_IDM_MENU_PERSONALBAR_LEFT    // Set alignment, 'pagebar', 1
+        MENUITEM "Set alignment pagebar", MI_IDM_MENU_PERSONALBAR_RIGHT    // Set alignment, 'pagebar', 3
+        MENUITEM "Set alignment pagebar", MI_IDM_MENU_PERSONALBAR_BOTTOM    // Set alignment, 'pagebar', 4
+    }
+    POPUP "Pagebar Popup Menu"
+    {
+        MENUITEM "New Page New item menu", MI_IDM_MENU_PAGEBAR_NEW_PAGE    // New Page, 1,,,'New item menu' [Feature !Private]
+        MENUITEM "New private page New private page menu", MI_IDM_MENU_NEW_PRIVATE_PAGE    // New private page, 1,,,'New private page menu' [Feature !Private]
+        MENUITEM "New page New private page menu", MI_IDM_MENU_NEW_PRIVATE_PAGE    // New page, 1,,, 'New private page menu' [Feature Private]
+        MENUITEM "Close page", M_CLOSE_PAGE    // Close page, 1
+        MENUITEM "Close all", M_PAGEBAR_POPUP_MENU_CLOSE_ALL    // Close all [Platform Windows-Unix]
+        MENUITEM "Close private tabs", M_PAGEBAR_POPUP_MENU_CLOSE_ALL_PRIVATE    // Close private tabs
+        MENUITEM "Set window decoration", M_SHOW_WINDOW_BORDER    // Set window decoration | Set window decoration [Platform Unix]
+    }
+    POPUP "Pagebar Plus Popup Menu"
+    {
+        MENUITEM "New Page New item menu", MI_IDM_MENU_PAGEBAR_NEW_PAGE    // New Page, 1,,,'New item menu' [Feature !Private]
+        MENUITEM "New private page New private page menu", MI_IDM_MENU_NEW_PRIVATE_PAGE    // New private page, 1,,,'New private page menu' [Feature !Private]
+        MENUITEM "New page New private page menu", MI_IDM_MENU_NEW_PRIVATE_PAGE    // New page, 1,,, 'New private page menu' [Feature Private]
+    }
+    POPUP "Pagebar Item Group Popup Menu"
+    {
+    }
+    POPUP "Pagebar Item Popup Menu"
+    {
+        MENUITEM "New Page New item menu", MI_IDM_MENU_PAGEBAR_NEW_PAGE    // New Page, 1,,,'New item menu' [Feature !Private]
+        MENUITEM "New page New private page menu", MI_IDM_MENU_NEW_PRIVATE_PAGE    // New page, 1,,,'New private page menu' [Feature Private]
+        MENUITEM "Duplicate page", MI_IDM_CLONE_WINDOW    // Duplicate page
+        MENUITEM "Create linked window", MI_IDM_CREATE_LINKED_WINDOW    // Create linked window
+        MENUITEM "New private page New private page menu", MI_IDM_MENU_NEW_PRIVATE_PAGE    // New private page, 1,,,'New private page menu' [Feature !Private]
+        MENUITEM "Lock page", M_LOCK_TAB    // Lock page | Unlock page
+        MENUITEM "Close page", M_CLOSE_PAGE    // Close page, 1
+        MENUITEM "Close all", M_PAGEBAR_POPUP_MENU_CLOSE_ALL    // Close all [Platform Windows-Unix]
+        MENUITEM "Close other", M_PAGEBAR_POPUP_MENU_CLOSE_ALL_BUT_ACTIVE    // Close other
+        MENUITEM "Close private tabs", M_PAGEBAR_POPUP_MENU_CLOSE_ALL_PRIVATE    // Close private tabs
+        MENUITEM "Detach page", M_DETACH_PAGE    // Detach page [Platform Unix]
+        MENUITEM "Set window decoration", M_SHOW_WINDOW_BORDER    // Set window decoration | Set window decoration [Platform Unix]
+    }
+    POPUP "Pagebar Inactive Item Popup Menu"
+    {
+        MENUITEM "New Page New item menu", MI_IDM_MENU_PAGEBAR_NEW_PAGE    // New Page, 1,,,'New item menu' [Feature !Private]
+        MENUITEM "New page New private page menu", MI_IDM_MENU_NEW_PRIVATE_PAGE    // New page, 1,,,'New private page menu' [Feature Private]
+        MENUITEM "Duplicate page", MI_IDM_CLONE_WINDOW    // Duplicate page
+        MENUITEM "Create linked window", MI_IDM_CREATE_LINKED_WINDOW    // Create linked window
+        MENUITEM "New private page New private page menu", MI_IDM_MENU_NEW_PRIVATE_PAGE    // New private page, 1,,,'New private page menu' [Feature !Private]
+        MENUITEM "Lock page", M_LOCK_TAB    // Lock page | Unlock page
+        MENUITEM "Close clicked page", M_CLOSE_PAGE    // Close clicked page
+        MENUITEM "Close all", M_PAGEBAR_POPUP_MENU_CLOSE_ALL    // Close all [Platform Windows-Unix]
+        MENUITEM "Close other", M_PAGEBAR_POPUP_MENU_CLOSE_ALL_BUT_ACTIVE    // Close other
+        MENUITEM "Close private tabs", M_PAGEBAR_POPUP_MENU_CLOSE_ALL_PRIVATE    // Close private tabs
+        MENUITEM "Detach page", M_DETACH_PAGE    // Detach page [Platform Unix]
+        MENUITEM "Set window decoration", M_SHOW_WINDOW_BORDER    // Set window decoration | Set window decoration [Platform Unix]
+    }
+    POPUP "Pagebar Arrange All Menu"
+    {
+        MENUITEM "Restore all", MI_IDM_MDI_RESTORE_ALL    // Restore all
+        MENUITEM "Minimize all", MI_IDM_MDI_MINIMIZE_ALL    // Minimize all
+        MENUITEM "Maximize all", MI_IDM_MDI_MAXIMIZE_ALL    // Maximize all
+        MENUITEM "Cascade", MI_IDM_Cascade    // Cascade
+        MENUITEM "Tile vertically", MI_IDM_Tile    // Tile vertically
+        MENUITEM "Tile horizontally", MI_IDM_TILEHORIZONTAL    // Tile horizontally
+    }
+    POPUP "Pagebar Arrange Menu"
+    {
+        MENUITEM "Restore page", M_RESTORE_PAGE    // Restore page, 1 [Platform Windows-Unix]
+        MENUITEM "Restore all", MI_IDM_MDI_RESTORE_ALL    // Restore all
+        MENUITEM "Minimize all", MI_IDM_MDI_MINIMIZE_ALL    // Minimize all
+        MENUITEM "Maximize all", MI_IDM_MDI_MAXIMIZE_ALL    // Maximize all
+        MENUITEM "Cascade", MI_IDM_Cascade    // Cascade
+        MENUITEM "Tile vertically", MI_IDM_Tile    // Tile vertically
+        MENUITEM "Tile horizontally", MI_IDM_TILEHORIZONTAL    // Tile horizontally
+    }
+    POPUP "Menubar Menu"
+    {
+        MENUITEM "Set window decoration", M_SHOW_WINDOW_BORDER    // Set window decoration | Set window decoration [Platform Unix]
+    }
+    POPUP "Personalbar Inline Placement Menu"
+    {
+        MENUITEM "Set alignment personalbar inline", MI_IDM_MENU_PERSONALBAR_TOP    // Set alignment, 'personalbar inline', 2
+        MENUITEM "Set alignment personalbar inline", MI_IDM_MENU_PERSONALBAR_LEFT    // Set alignment, 'personalbar inline', 1
+        MENUITEM "Set alignment personalbar inline", MI_IDM_MENU_PERSONALBAR_RIGHT    // Set alignment, 'personalbar inline', 3
+        MENUITEM "Set alignment personalbar inline", MI_IDM_MENU_PERSONALBAR_BOTTOM    // Set alignment, 'personalbar inline', 4
+    }
+    POPUP "Personalbar Inline Style Menu"
+    {
+        MENUITEM "Set button style personalbar inline", SI_IDSTR_TOOLBAR_IMAGES_ONLY    // Set button style, 'personalbar inline', 0
+        MENUITEM "Set button style personalbar inline", SI_IDSTR_TOOLBAR_TEXT_ONLY    // Set button style, 'personalbar inline', 1
+        MENUITEM "Set button style personalbar inline", SI_IDSTR_TOOLBAR_TEXT_RIGHT    // Set button style, 'personalbar inline', 3
+        MENUITEM "Set button style personalbar inline", SI_IDSTR_TOOLBAR_TEXT_BELOW    // Set button style, 'personalbar inline', 2
+    }
+    POPUP "Personalbar Base Menu"
+    {
+        MENUITEM "Customize toolbars", M_BROWSER_TOOLS_MENU_APPEARANCE    // Customize toolbars
+    }
+    POPUP "Personalbar Popup Menu"
+    {
+        MENUITEM "Set alignment personalbar inline", M_CUSTOMIZE_SHOW_BOOKMARKSBAR_INLINE    // Set alignment, 'personalbar inline', 2 & Set alignment, 'personalbar', 0
+    }
+    POPUP "Personalbar Edit Item Popup Menu"
+    {
+        MENUITEM "Edit properties", MI_IDM_HLITEM_PROPERTIES    // Edit properties
+        MENUITEM "Hide from personal bar", M_MAINBAR_ITEM_POPUP_MENU_REMOVE_FROM_TOOLBAR    // Hide from personal bar
+    }
+    POPUP "Personalbar Inline Popup Menu"
+    {
+    }
+    POPUP "Personalbar Inline Item Popup Menu"
+    {
+        MENUITEM "Edit properties", MI_IDM_HLITEM_PROPERTIES    // Edit properties
+        MENUITEM "Hide from personal bar", M_MAINBAR_ITEM_POPUP_MENU_REMOVE_FROM_TOOLBAR    // Hide from personal bar
+    }
+    POPUP "Personalbar Item Popup Menu"
+    {
+        MENUITEM "Edit properties", MI_IDM_HLITEM_PROPERTIES    // Edit properties
+        MENUITEM "Hide from personal bar", M_MAINBAR_ITEM_POPUP_MENU_REMOVE_FROM_TOOLBAR    // Hide from personal bar
+        MENUITEM "Set alignment personalbar inline", M_CUSTOMIZE_SHOW_BOOKMARKSBAR_INLINE    // Set alignment, 'personalbar inline', 2 & Set alignment, 'personalbar', 0
+    }
+    POPUP "Toolbar Popup Customize Menu"
+    {
+        MENUITEM "Customize toolbars", M_BROWSER_TOOLS_MENU_APPEARANCE    // Customize toolbars
+        MENUITEM "Restore to defaults selected toolbar", D_CUSTOMIZE_TOOLBAR_RESET_TO_DEFAULTS    // Restore to defaults, 'selected toolbar'
+        MENUITEM "Remove", M_MAINBAR_ITEM_POPUP_MENU_REMOVE_FROM_TOOLBAR    // Remove
+    }
+    POPUP "Toolbar Popup Menu"
+    {
+    }
+    POPUP "Toolbar Item Popup Menu"
+    {
+    }
+    POPUP "Toolbar Identify Popup Menu"
+    {
+    }
+    POPUP "Toolbar Edit Item Popup Menu"
+    {
+    }
+    POPUP "Transfers View Popup Menu"
+    {
+        MENUITEM "Set show transferwindow", M_TRANSFERVIEW_POPUP_MENU_SHOW_TRWINDOW_ON_TRANSF    // Set show transferwindow, 1
+        MENUITEM "Set show transferwindow 2", M_TRANSFERS_VIEW_POPUP_MENU_SHOW    // Set show transferwindow, 2
+        MENUITEM "Set show transferwindow", M_TRANSFERS_VIEW_POPUP_NEVER_SHOW    // Set show transferwindow, 0
+        MENUITEM "Show transfer details", MI_IDM_TRANSFER_SHOW_DETAILS    // Show transfer details | Hide transfer details
+        MENUITEM "Show new transferitems on top", MI_IDM_TRANSFER_SHOW_NEW_ON_TOP    // Show new transferitems on top | Show new transferitems on bottom
+    }
+    POPUP "Tray Popup Menu"
+    {
+        MENUITEM "Show opera", M_OPEN_OPERA    // Show opera, 1
+        MENUITEM "Hide opera", M_HIDE_OPERA    // Hide opera, 1
+        MENUITEM "New page New item menu", MI_IDM_MENU_PAGEBAR_NEW_PAGE    // New page,,,,'New item menu'
+        MENUITEM "Read mail", M_INDEX_ITEM_POPUP_MENU_READ    // Read mail [Feature Mail]
+        MENUITEM "Compose mail", DI_IDSTR_M2_MAILTOOLBAR_COMPOSE    // Compose mail [Feature Mail]
+        MENUITEM "Manage bookmarks", M_VIEW_HOTLIST_MENU_BOOKM    // Manage, 'bookmarks',,,'Menu Bookmarks'
+        MENUITEM "Manage contacts", M_VIEW_HOTLIST_MENU_CONTACTS    // Manage, 'contacts',,,'Panel Contacts' [Feature Mail-Chat]
+        MENUITEM "Manage notes", M_VIEW_HOTLIST_MENU_NOTES    // Manage, 'notes',,,'Menu Notes'
+        MENUITEM "Manage transfers", MI_IDM_DownloadWindow    // Manage, 'transfers',,,'Menu Transfers'
+        MENUITEM "Manage history", MI_IDM_HistoryWindow    // Manage, 'history',,,'Menu History'
+        MENUITEM "Exit", MI_IDM_Exit    // Exit, 1
+    }
+    POPUP "Closed Pages Menu"
+    {
+        MENUITEM "Empty page trash", M_CLOSED_MENU_EMPTY_TRASH    // Empty page trash
+    }
+    POPUP "Opera Console Menu"
+    {
+        MENUITEM "Copy", SI_COPY_BUTTON_TEXT    // Copy
+    }
+    POPUP "Insert Smiley Menu"
+    {
+    }
+    POPUP "Desktop Widget Menu Styles"
+    {
+        MENUITEM "Set widget style", M_WIDGET_NORMAL    // Set widget style, 0
+        MENUITEM "Set widget style", M_WIDGET_ALWAYS_ON_TOP    // Set widget style, 1
+        MENUITEM "Set widget style 2", M_WIDGET_ALWAYS_BELOW    // Set widget style, 2
+    }
+    POPUP "Desktop Widget Menu Bottom"
+    {
+        MENUITEM "Reload", MI_IDM_POPUP_FRAME_RELOAD    // Reload
+        MENUITEM "Close window", M_CLOSE_PAGE    // Close window
+    }
+    POPUP "Widget View Submenu"
+    {
+    }
+    POPUP "Widget View Submenu 2"
+    {
+    }
+    POPUP "Desktop Widget Runtime Menu"
+    {
+        MENUITEM "Open Widget Preferences", M_WIDGET_SETTINGS    // Open Widget Preferences
+        MENUITEM "Download more widgets", M_WIDGET_DOWNLOAD_MORE    // Download more widgets
+        MENUITEM "Close window", M_CLOSE_PAGE    // Close window
+    }
+    POPUP "Desktop Widget Settings"
+    {
+        MENUITEM "Remote Debug Widget", M_WIDGET_REMOTE_DEBUG    // Remote Debug Widget
+        MENUITEM "Show Message console", M_JAVASCRIPTCONSOLE    // Show Message console
+        MENUITEM "Reload", MI_IDM_POPUP_FRAME_RELOAD    // Reload
+    }
+    POPUP "Desktop Widget Menu"
+    {
+    }
+    POPUP "Desktop Widget Runtime Menu With Copy"
+    {
+        MENUITEM "Copy", MI_IDM_DOCCOPY    // Copy
+    }
+    POPUP "Gadget Desktop Widget Runtime Menu With Copy"
+    {
+    }
+    POPUP "Gadget Desktop Widget Runtime Menu"
+    {
+        MENUITEM "Open Widget Preferences", M_WIDGET_SETTINGS    // Open Widget Preferences
+        MENUITEM "Download more widgets", M_WIDGET_DOWNLOAD_MORE    // Download more widgets
+        MENUITEM "Close window", M_CLOSE_PAGE    // Close window
+    }
+    POPUP "Gadget Desktop Widget Menu"
+    {
+    }
+    POPUP "Gadget Service Desktop Widget Menu"
+    {
+        MENUITEM "Show Widget WebServer Status", M_WIDGET_WEBSERVER_STATUS    // Show Widget WebServer Status
+    }
+    POPUP "Speed Dial Thumbnail Popup Menu"
+    {
+        MENUITEM "Edit thumbnail", M_SPEEDDIAL_CONFIGURE    // Edit thumbnail
+        MENUITEM "Reload thumbnail", M_SPEEDDIAL_RELOAD_THUMBNAIL    // Reload thumbnail
+        MENUITEM "Close thumbnail page", M_SPEEDDIAL_CLOSE    // Close thumbnail page
+    }
+    POPUP "Speed Dial Extension Popup Menu"
+    {
+        MENUITEM "Show Speed Dial extension options", DI_PREFERENCES    // Show Speed Dial extension options
+        MENUITEM "Disable Speed Dial extension", S_EXTENSIONS_DISABLE    // Disable Speed Dial extension
+        MENUITEM "Close thumbnail page", S_EXTENSIONS_UNINSTALL    // Close thumbnail page
+        MENUITEM "Manage extensions", S_EXTENSIONS_MANAGE    // Manage, 'extensions'
+    }
+    POPUP "Speed Dial Dev Extension Popup Menu"
+    {
+        MENUITEM "Reload Extension", MI_IDM_POPUP_FRAME_RELOAD    // Reload Extension
+    }
+    POPUP "HTML Compose Insert Menu"
+    {
+        MENUITEM "'Email Add Link Mail Compose Link'", M_HTML_MAIL_ADD_LINK    // 'Email Add Link,,,,'Mail Compose Link''
+        MENUITEM "'Email Insert Image Mail Compose Images'", M_HTML_MAIL_ADD_IMAGE    // 'Email Insert Image,,,,'Mail Compose Images''
+        MENUITEM "'Email Insert Horizontal Rule Mail Compose Horizontal Line'", M_HTML_MAIL_ADD_HORIZONTAL_LINE    // 'Email Insert Horizontal Rule,,,,'Mail Compose Horizontal Line''
+        MENUITEM "'Email Insert HTML Mail Compose HTML'", M_HTML_MAIL_ADD_HTML_SOURCE    // 'Email Insert HTML,,,,'Mail Compose HTML''
+    }
+    POPUP "Compose Toggle HTML Popup Menu"
+    {
+        MENUITEM "'Toggle HTML Email 0'", D_HTML_MAIL_USE_PLAIN_TEXT    // 'Toggle HTML Email,0'
+        MENUITEM "'Toggle HTML Email 1'", D_HTML_MAIL_USE_HTML    // 'Toggle HTML Email,1'
+    }
+    POPUP "Dock Widgets Menu"
+    {
+    }
+    POPUP "Dock Menu"
+    {
+        MENUITEM "New private browser window", MI_IDM_MENU_NEW_PRIVATE_WINDOW    // New private browser window
+        MENUITEM "New browser window", MI_IDM_NEW    // New browser window
+        MENUITEM "New private page New private page menu", MI_IDM_MENU_NEW_PRIVATE_PAGE    // New private page, 1,,,'New private page menu' [Feature !Private]
+        MENUITEM "New page New item menu", MI_IDM_MENU_PAGEBAR_NEW_PAGE    // New page, 1,,,'New item menu' | New private page, 1,, MI_IDM_MENU_NEW_PRIVATE_PAGE, 'New private page menu'
+        MENUITEM "Compose mail", DI_IDSTR_M2_MAILTOOLBAR_COMPOSE    // Compose mail [Feature Mail]
+        MENUITEM "Read mail", M_INDEX_ITEM_POPUP_MENU_READ    // Read mail [Feature Mail]
+    }
+    POPUP "Turbo Popup Menu"
+    {
+        MENUITEM "Enable Web Turbo", M_OPERA_TURBO_ENABLE    // Enable Web Turbo | Disable Web Turbo
+        MENUITEM "Open Web Turbo Dialog", M_OPERA_TURBO_CONFIGURE    // Open Web Turbo Dialog
+        MENUITEM "Open URL in new page http://www.opera.com/browser/turbo/", M_OPERA_TURBO_ABOUT    // Open URL in new page, 'http://www.opera.com/browser/turbo/',,,'Menu Info'
+    }
+    POPUP "Speed Dial Popup Menu"
+    {
+        MENUITEM "Show speed dial global config", M_SPEEDDIAL_GLOBAL_CONFIGURATION    // Show speed dial global config
+        MENUITEM "Customize toolbars", M_BROWSER_TOOLS_MENU_APPEARANCE    // Customize toolbars, -1
+    }
+    POPUP "Speed Dial Popup Menu Plus"
+    {
+        MENUITEM "Show speed dial global config", M_SPEEDDIAL_GLOBAL_CONFIGURATION    // Show speed dial global config
+        MENUITEM "Configure thumbnail", M_SPEEDDIAL_ADD_SPEEDDIAL    // Configure thumbnail, 0
+        MENUITEM "Customize toolbars", M_BROWSER_TOOLS_MENU_APPEARANCE    // Customize toolbars, -1
+    }
+    POPUP "Audio Popup Menu"
+    {
+        MENUITEM "Play media", M_MEDIA_PLAY    // Play media | Pause media,,,M_MEDIA_PAUSE
+        MENUITEM "Mute media", M_MEDIA_MUTE    // Mute media | Unmute media,,,M_MEDIA_UNMUTE
+        MENUITEM "Copy media address", M_COPY_AUDIO_ADDRESS    // Copy media address
+        MENUITEM "Save media", M_SAVE_AUDIO    // Save media
+    }
+    POPUP "Video Popup Menu"
+    {
+        MENUITEM "Play media", M_MEDIA_PLAY    // Play media | Pause media,,,M_MEDIA_PAUSE
+        MENUITEM "Mute media", M_MEDIA_MUTE    // Mute media | Unmute media,,,M_MEDIA_UNMUTE
+        MENUITEM "Show controls", M_MEDIA_SHOW_CONTROLS    // Show controls | Hide controls,,,M_MEDIA_HIDE_CONTROLS
+        MENUITEM "Copy media address", M_COPY_VIDEO_ADDRESS    // Copy media address
+        MENUITEM "Save media", M_SAVE_VIDEO    // Save media
+    }
+    POPUP "Protocol Button Context Menu"
+    {
+        MENUITEM "Enable Full URL", M_SHOW_FULL_URL_IN_ADDRESS_FIELD    // Enable Full URL | Disable Full URL
+    }
+    POPUP "Bookmark Menu Context Menu"
+    {
+        MENUITEM "Open link", M_BOOKM_ITEM_POPUP_MENU_OPEN    // Open link
+        MENUITEM "Open link in new page", MI_IDM_MENU_PAGEBAR_LINK_IN_NEW_PAGE    // Open link in new page
+        MENUITEM "Open link in background page", MI_IDM_MENU_PAGEBAR_LINK_IN_BG_PAGE    // Open link in background page
+        MENUITEM "Show on personal bar", MI_IDM_HLITEM_SHOW_ON_BOOKMARKSBAR    // Show on personal bar | Hide from personal bar
+        MENUITEM "Add to bookmarks", M_DOCUMENT_POPUP_MENU_BOOKMARK_PAGE    // Add to bookmarks
+        MENUITEM "Add all to bookmarks", M_POPUP_MENU_BOOKMARK_ALL    // Add all to bookmarks
+        MENUITEM "Cut", MI_IDM_HLITEM_CUT    // Cut
+        MENUITEM "Copy", MI_IDM_HLITEM_COPY    // Copy
+        MENUITEM "Paste", MI_IDM_HLITEM_PASTE    // Paste
+        MENUITEM "Delete", MI_IDM_HLITEM_DELETE    // Delete
+        MENUITEM "Edit properties", MI_IDM_HLITEM_PROPERTIES    // Edit properties
+    }
+    POPUP "Extension Toolbar Item Popup Menu Base"
+    {
+        MENUITEM "Show extension options", DI_PREFERENCES    // Show extension options
+        MENUITEM "Extension Button Disable", S_EXTENSIONS_DISABLE    // Extension Button Disable
+        MENUITEM "Extension Button Uninstall", S_EXTENSIONS_UNINSTALL    // Extension Button Uninstall
+        MENUITEM "Manage extensions", S_EXTENSIONS_MANAGE    // Manage, 'extensions'
+    }
+    POPUP "Extension Toolbar Item Popup Menu"
+    {
+    }
+    POPUP "Dev Extension Toolbar Item Popup Menu"
+    {
+        MENUITEM "Reload Extension", MI_IDM_POPUP_FRAME_RELOAD    // Reload Extension
+    }
+    POPUP "Label Image Menu"
+    {
+        MENUITEM "Choose Label Icon Label Important", DI_IDSTR_M2_FOLDER_IDX_IMPORTANT    // Choose Label Icon, 'Label Important',,,'Label Important'
+        MENUITEM "Choose Label Icon Label Todo", DI_IDSTR_M2_FOLDER_IDX_TODO    // Choose Label Icon, 'Label Todo',,,'Label Todo'
+        MENUITEM "Choose Label Icon Label Mail Back", DI_IDSTR_M2_FOLDER_IDX_MAILBACK    // Choose Label Icon, 'Label Mail Back',,,'Label Mail Back'
+        MENUITEM "Choose Label Icon Label Call Back", DI_IDSTR_M2_FOLDER_IDX_CALLBACK    // Choose Label Icon, 'Label Call Back',,,'Label Call Back'
+        MENUITEM "Choose Label Icon Label Meeting", DI_IDSTR_M2_FOLDER_IDX_MEETING    // Choose Label Icon, 'Label Meeting',,,'Label Meeting'
+        MENUITEM "Choose Label Icon Label Funny", DI_IDSTR_M2_FOLDER_IDX_FUNNY    // Choose Label Icon, 'Label Funny',,,'Label Funny'
+        MENUITEM "Choose Label Icon Label Valuable", DI_IDSTR_M2_FOLDER_IDX_VALUABLE    // Choose Label Icon, 'Label Valuable',,,'Label Valuable'
+        MENUITEM "Choose Custom Icon", M_MAIL_CUSTOM    // Choose Custom Icon
+    }
+    POPUP "Mail Priority Menu"
+    {
+        MENUITEM "Set Priority Priority High", S_HIGH_PRIORITY    // Set Priority, 1,,,'Priority High'
+        MENUITEM "Set Priority 3", S_NORMAL_PRIORITY    // Set Priority, 3,,,'Priority Normal'
+        MENUITEM "Set Priority 5", S_LOW_PRIORITY    // Set Priority, 5,,,'Priority Low'
+    }
+    POPUP "Page Sharing Menu"
+    {
+    }
+    POPUP "Viewpane Bookmark Model Options"
+    {
+        MENUITEM "New bookmark", M_BOOKMARK_MODEL_CREATE_BOOKMARK    // New bookmark
+        MENUITEM "New folder", M_BOOKMARK_MODEL_CREATE_FOLDER    // New folder
+    }
+    POPUP "Viewpane Delete Model Options"
+    {
+        MENUITEM "Empty trash", M_DELETE_MODEL_EMPTY_TRASH_BIN    // Empty trash
+    }
+    POPUP "Viewpane Bookmark Item Options"
+    {
+        MENUITEM "Open item", M_COLLECTION_ITEM_OPEN    // Open item
+        MENUITEM "Reload thumbnail", M_COLLECTION_ITEM_RELOAD_THUMBNAIL    // Reload thumbnail
+        MENUITEM "Edit properties", M_COLLECTION_ITEM_EDIT    // Edit properties
+        MENUITEM "Delete Item", M_COLLECTION_ITEM_DELETE    // Delete Item
+    }
+    POPUP "Navigationpane Bookmark Folder Options"
+    {
+        MENUITEM "New folder", M_BOOKMARK_MODEL_CREATE_FOLDER    // New folder
+        MENUITEM "Edit properties", MI_IDM_HLITEM_PROPERTIES    // Edit properties
+        MENUITEM "Delete", MI_IDM_HLITEM_DELETE    // Delete
+    }
+    POPUP "Navigationpane All Bookmarks Folder Options"
+    {
+        MENUITEM "New folder", M_BOOKMARK_MODEL_CREATE_FOLDER    // New folder
+        MENUITEM "New bookmark", M_BOOKMARK_MODEL_CREATE_BOOKMARK    // New bookmark
+    }
+    POPUP "Navigationpane TrashBin Options"
+    {
+        MENUITEM "Empty trash", M_DELETE_MODEL_EMPTY_TRASH_BIN    // Empty trash
+    }
+    POPUP "Navigationpane Folders in TrashBin Options"
+    {
+        MENUITEM "Delete", MI_IDM_HLITEM_DELETE    // Delete
+    }
+}

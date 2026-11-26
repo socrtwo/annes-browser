@@ -28,6 +28,9 @@ function page(title: string, body: string): string {
  */
 export function refUrl(ref: string): string | undefined {
   // A scanned manual at the Internet Archive. Its text page has no line anchors, so the link opens the text.
+  // Menus dumped from a program held by the Internet Archive: link to the item the program came from.
+  const dump = /^dump\/([A-Za-z0-9][\w-]*(?:\.[\w-]+)*)\/[a-z0-9][a-z0-9.-]*\.txt#L\d+$/.exec(ref);
+  if (dump) return `https://archive.org/details/${dump[1]}`;
   // A screenshot transcribed from Wikimedia Commons: link to the file's description page.
   const shot = /^commons\/([A-Za-z0-9][\w.(),-]*\.(?:png|jpe?g|gif|webp))#L\d+$/.exec(ref);
   if (shot) return `https://commons.wikimedia.org/wiki/File:${encodeURIComponent(shot[1]!)}`;

@@ -33,7 +33,13 @@ export interface SourceSpec {
    * item identifier. A manual is a third party's description of a browser, read by OCR: weaker
    * evidence than the browser's own code, and labelled as such wherever it is shown.
    */
-  host?: 'github' | 'archive.org' | 'local';
+  host?: 'github' | 'archive.org' | 'local' | 'dump';
+  /**
+   * `dump`: menus read from the browser program itself (Windows menu resources via tools/pe-dump.ts,
+   * Opera's menu file via tools/opera-dump.ts), kept as text in catalog/census/transcriptions/.
+   * `repo` is the Internet Archive item the program was downloaded from; the file's header records
+   * the download, how it was unpacked and each program's SHA-256. As strong as the browser's code.
+   */
   /**
    * `local`: a transcription of a screenshot, written by hand (or by a model reading the image) and
    * kept in catalog/census/transcriptions/. The weakest kind: the image is cited in the file's
@@ -76,7 +82,7 @@ export interface CensusFile {
   released: number;
   platform: string;
   source: {
-    host?: 'github' | 'archive.org' | 'local';
+    host?: 'github' | 'archive.org' | 'local' | 'dump';
     repo: string;
     ref: string;
     commit: string;

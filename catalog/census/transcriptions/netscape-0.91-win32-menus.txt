@@ -1,0 +1,98 @@
+# Menus read from Windows programs' own resources by tools/pe-dump.ts (the programs were not run).
+# download: https://archive.org/download/n32e091/n32e091.exe
+# unpacked: the program itself
+# program: n32e091.exe, sha256 20d569593649cef8f4107b3c6c4a0ac2ef1aee4cc01f60877f1fd0f96f9519c8: 1 menus, 32 shortcuts
+# Each MENUITEM: label, command id; the comment is the program's status-bar text for that id, and its shortcut.
+
+MENU__2 MENU
+{
+    POPUP "&File"
+    {
+        MENUITEM "&New Window\tCtrl+N", 32770    // Create a new top level document viewing window | Ctrl+N
+        MENUITEM "Open &Location...\tCtrl+L", 32769    // Open a networked document | Ctrl+L, Ctrl+U
+        MENUITEM "Open &File...\tCtrl+O", 57601    // Open an existing document | Ctrl+O
+        MENUITEM "&Save as...\tCtrl+S", 57604    // Save the active document with a new name | Ctrl+S
+        MENUITEM "&Mail Document...\tCtrl+M", 32810    // Mail the current document | Ctrl+M
+        MENUITEM SEPARATOR
+        MENUITEM "&Print", 57607    // Print the active document | Ctrl+P
+        MENUITEM "Print Pre&view", 57608    // Display full pages
+        MENUITEM SEPARATOR
+        MENUITEM "&Close\tCtrl+W", 57602    // Close the current window | Ctrl+W
+        MENUITEM "E&xit", 57665    // Quit WinMozilla
+    }
+    POPUP "&Edit"
+    {
+        MENUITEM "&Undo\tCtrl+Z", 57643    // Undo the last action | Alt+Backspace, Ctrl+Z
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X", 57635    // Cut the selection and put it on the Clipboard | Shift+Delete, Ctrl+X
+        MENUITEM "&Copy\tCtrl+C", 57634    // Copy the selection and put it on the Clipboard | Ctrl+C, Ctrl+Insert
+        MENUITEM "&Paste\tCtrl+V", 57637    // Insert Clipboard contents | Ctrl+V, Shift+Insert
+        MENUITEM SEPARATOR
+        MENUITEM "&Find...\tCtrl+F", 32819    // Search for text in the current document... | Ctrl+F
+    }
+    POPUP "&View"
+    {
+        MENUITEM "&Reload\tCtrl+R", 32782    // Reload current document | Ctrl+R
+        MENUITEM "Load &Images\tCrtl+I", 32804    // Reload the images in the current document | Ctrl+I
+        MENUITEM "Re&fresh", 32783    // Redraw the current document
+        MENUITEM "&Source...", 32789    // View the source of the current document
+    }
+    POPUP "&Go"
+    {
+        MENUITEM "&Back\tCtrl+<-", 32780    // Return to previous document in history list | Ctrl+Left
+        MENUITEM "&Forward\tCtrl+->", 32781    // Move forward to next document in history list | Ctrl+Right
+        MENUITEM "&Home", 32807    // Go to the homepage
+        MENUITEM SEPARATOR
+        MENUITEM "&Stop Loading\t<Esc>", 32795    // Interrupt the current transfer | Esc
+        MENUITEM SEPARATOR
+        MENUITEM "&View History...\tCtrl+H", 32808    // Pop up the history list | Ctrl+H
+    }
+    POPUP "&Bookmarks"
+    {
+        MENUITEM "&Add Bookmark\tCtrl+A", 32811    // Add the current document to the bookmark list | Ctrl+A
+        MENUITEM "View &Bookmarks...\tCtrl+B", 32812    // Bring up the bookmark window | Ctrl+B
+    }
+    POPUP "&Options"
+    {
+        MENUITEM "&Preferences...", 32791    // Modify program configuration
+        MENUITEM SEPARATOR
+        MENUITEM "Show &Toolbar", 59392    // Show or hide the toolbar
+        MENUITEM "Show &Location", 32788    // Show or hide the  location bar
+        MENUITEM "Show &Directory Buttons", 32840    // Show those wonderful starter buttons
+        MENUITEM "&Auto Load Images", 32817    // Automatically load inlined images
+        MENUITEM "Show &FTP File Information", 32841    // Give detailed FTP file descriptions (does not work with all FTP servers)
+        MENUITEM SEPARATOR
+        MENUITEM "P&roportional Font", 32843    // Change the Attributes of the Base Proportional Font
+        MENUITEM "F&ixed Font", 32844    // Change the Attributes of the Base Fixed Font
+        MENUITEM SEPARATOR
+        MENUITEM "&Save Options", 32839
+    }
+    POPUP "&Directory"
+    {
+        MENUITEM "&Welcome!", 32823    // Welcome
+        MENUITEM "What's &New!", 32824    // What's New
+        MENUITEM "What's &Cool!", 32842    // Cool sites on the net
+        MENUITEM SEPARATOR
+        MENUITEM "&Go to Newsgroups", 32825    // Read Newsgroups
+        MENUITEM SEPARATOR
+        MENUITEM "Internet &Directory", 32826    // Internet Index
+        MENUITEM "Internet &Search", 32827    // Internet Search
+        MENUITEM "Internet White &Pages", 32828    // Internet White Pages
+        MENUITEM "&About the Internet", 32829    // About the Internet
+        MENUITEM SEPARATOR
+        MENUITEM "&How to Create Mosaic Services", 32830    // How to create mosaic services
+        MENUITEM "&Mosaic Communications Corporation", 32831    // Mosaic Communications Corportaion Home Page
+    }
+    POPUP "&Help"
+    {
+        MENUITEM "&About Mosaic Netscape...", 57664    // Display program information, version number and copyright
+        MENUITEM "&Version Information", 32832    // Information about the version of Mosaic Netscape you are running
+        MENUITEM SEPARATOR
+        MENUITEM "&Guided Tour", 32833    // A guided tour of Mosaic Netscape...
+        MENUITEM "&Manual", 32834    // Online version of the manual
+        MENUITEM "&Frequently Asked Questions", 32835    // Answers to common questions
+        MENUITEM SEPARATOR
+        MENUITEM "&How to Give Feedback", 32836    // Instructions on how to give feedback about Mosaic Netscape
+        MENUITEM "How to Get &Support", 32837    // Instructions on getting support for Mosaic Netscape
+    }
+}

@@ -398,3 +398,136 @@
   files:
     - path: netscape-4.8-screenshot.txt
       role: primary
+# Menus dumped from the browsers' own programs (Internet Archive downloads), see tools/pe-dump.ts and tools/opera-dump.ts.
+- id: netscape-0.91-win32
+  browser: Mosaic Netscape
+  version: 0.91 beta
+  released: 1994
+  platform: Windows
+  host: dump
+  repo: n32e091
+  ref: "program menus: n32e091.exe"
+  extractor: rc-menu
+  files:
+    - path: netscape-0.91-win32-menus.txt
+      role: primary
+- id: netscape-2.02-win32
+  browser: Netscape Navigator
+  version: "2.02"
+  released: 1996
+  platform: Windows
+  host: dump
+  repo: n32e202
+  ref: "program menus: n32e202.exe"
+  extractor: rc-menu
+  files:
+    - path: netscape-2.02-win32-menus.txt
+      role: primary
+- id: netscape-3.0-win32
+  browser: Netscape Navigator
+  version: "3.0"
+  released: 1996
+  platform: Windows
+  host: dump
+  repo: n32e30
+  ref: "program menus: n32e30.exe"
+  extractor: rc-menu
+  files:
+    - path: netscape-3.0-win32-menus.txt
+      role: primary
+- id: netscape-4.05-win32
+  browser: Netscape Communicator
+  version: "4.05"
+  released: 1998
+  platform: Windows
+  host: dump
+  repo: cp32e405_exe_Netscape
+  ref: "program menus: cp32e405.exe"
+  extractor: rc-menu
+  files:
+    - path: netscape-4.05-win32-menus.txt
+      role: primary
+- id: netscape-4.7-win32
+  browser: Netscape Communicator
+  version: "4.7"
+  released: 1999
+  platform: Windows
+  host: dump
+  repo: cp32e47
+  ref: "program menus: cp32e47.exe"
+  extractor: rc-menu
+  files:
+    - path: netscape-4.7-win32-menus.txt
+      role: primary
+- id: ie-4.0-win32
+  browser: Internet Explorer
+  version: "4.0"
+  released: 1997
+  platform: Windows
+  host: dump
+  repo: ie4.0
+  ref: "program menus: CPQ_IE_4.iso"
+  extractor: rc-menu
+  files:
+    - path: ie-4.0-win32-menus.txt
+      role: primary
+- id: ie-5.0-win32
+  browser: Internet Explorer
+  version: "5.0"
+  released: 1999
+  platform: Windows
+  host: dump
+  repo: internet-explorer-5_202407
+  ref: "program menus: Internet Explorer 5.iso"
+  extractor: rc-menu
+  files:
+    - path: ie-5.0-win32-menus.txt
+      role: primary
+- id: ie-7-win32
+  browser: Internet Explorer
+  version: "7"
+  released: 2006
+  platform: Windows XP
+  host: dump
+  repo: ie7windowsxpx86enu_201102
+  ref: "program menus: IE7-WindowsXP-x86-enu.exe"
+  extractor: rc-menu
+  files:
+    - path: ie-7-win32-menus.txt
+      role: primary
+- id: ie-8-win32
+  browser: Internet Explorer
+  version: "8"
+  released: 2009
+  platform: Windows XP
+  host: dump
+  repo: ie-8-windows-xp-x-86-enu_202407
+  ref: "program menus: IE8-WindowsXP-x86-ENU.exe"
+  extractor: rc-menu
+  files:
+    - path: ie-8-win32-menus.txt
+      role: primary
+- id: opera-8.01-win32
+  browser: Opera
+  version: "8.01"
+  released: 2005
+  platform: Windows
+  host: dump
+  repo: ow32enen801
+  ref: "menu file: STANDARD_MENU.INI"
+  extractor: rc-menu
+  files:
+    - path: opera-8.01-win32-menus.txt
+      role: primary
+- id: opera-12.14-win32
+  browser: Opera
+  version: "12.14"
+  released: 2013
+  platform: Windows
+  host: dump
+  repo: opera-12.14-windows-32-bit
+  ref: "menu file: ui/standard_menu.ini"
+  extractor: rc-menu
+  files:
+    - path: opera-12.14-win32-menus.txt
+      role: primary

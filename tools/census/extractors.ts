@@ -440,15 +440,18 @@ const rcMenu: Extractor = (files, spec) => {
   const stack: string[] = [];
   let pending: string | undefined;
   let inMenu = false;
+  /** Dumps from binaries (tools/pe-dump.ts) name menus by resource number; keep it so different windows' menus stay apart. */
+  let root: string | undefined;
   lines(primary(files, spec)).forEach((l, i) => {
-    if (/^\s*\w+\s+MENU(EX)?\b/.test(l)) { inMenu = true; stack.length = 0; return; }
+    const head = /^\s*(\w+)\s+MENU(EX)?\b/.exec(l);
+    if (head) { inMenu = true; stack.length = 0; const n = /^MENU_(?:_(\w+?)_)?_(\d+)$/.exec(head[1]!); root = n ? `${n[1] ? `${n[1]} ` : ''}menu #${n[2]}` : undefined; return; }
     if (!inMenu) return;
     const popup = /^\s*POPUP\s+"([^"]+)"/.exec(l);
     if (popup) { pending = cleanLabel(popup[1]!); return; }
     if (/^\s*(\{|BEGIN)\s*$/.test(l)) { if (pending !== undefined) { stack.push(pending); pending = undefined; } else if (stack.length === 0) stack.push(''); return; }
     if (/^\s*(\}|END)\s*$/.test(l)) { stack.pop(); if (stack.length === 0) inMenu = false; return; }
     const mi = /^\s*MENUITEM\s+"([^"]+)"\s*,\s*(\w+)/.exec(l);
-    if (mi) out.push(item({ key: mi[2]!, label: cleanLabel(mi[1]!.replace(/(?:\\t|\t).*$/, '')), menu: path(...stack.filter(Boolean)), line: i + 1, text: l }));
+    if (mi) out.push(item({ key: mi[2]!, label: cleanLabel(mi[1]!.replace(/(?:\\t|\t).*$/, '')), menu: path(root, ...stack.filter(Boolean)), line: i + 1, text: l }));
   });
   return out;
 };

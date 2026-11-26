@@ -1,0 +1,2217 @@
+# Menus read from Windows programs' own resources by tools/pe-dump.ts (the programs were not run).
+# download: https://archive.org/download/cp32e47/cp32e47.exe
+# unpacked: zip member comm.z (InstallShield 3): program/resdll.dll
+# program: resdll.dll, sha256 35246e3c52055bdb02e7a5803e002fcaf489027fab6a26921255f0f959619bfc: 24 menus, 496 shortcuts
+# Each MENUITEM: label, command id; the comment is the program's status-bar text for that id, and its shortcut.
+
+MENU__2 MENU
+{
+    POPUP "&File"
+    {
+        MENUITEM "E&xit\tCtrl+Q", 57665    // Close all windows in the application and exit | Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q
+    }
+    POPUP "&Edit"
+    {
+        MENUITEM "Cu&t\tCtrl+X", 57635    // Cut the selection and put it on the clipboard | Shift+Delete, Ctrl+X, Ctrl+X, Ctrl+X, Ctrl+X, Shift+Delete, Ctrl+X, Shift+Delete, Ctrl+X, Ctrl+X, Ctrl+X, Ctrl+X, Shift+Delete, Ctrl+X, Ctrl+X
+    }
+    POPUP "&View"
+    {
+        MENUITEM "Show &Navigation Toolbar", 62376    // Show or hide the Navigation toolbar
+    }
+    POPUP "&Go"
+    {
+        MENUITEM "&Back\tAlt+<-", 32780    // Return to previous document in history list | Alt+Left
+    }
+    POPUP "&Communicator"
+    {
+        MENUITEM "&Navigator\tCtrl+1", 34458    // Access a web browser | Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1
+        MENUITEM "&Messenger\tCtrl+2", 10215    // Open a messenger window | Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2
+        MENUITEM "&Composer\tCtrl+4", 34461    // Access a web page composer | Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4
+        MENUITEM SEPARATOR
+        POPUP "&Bookmarks"
+        {
+            MENUITEM "&Add Bookmark\tCtrl+D", 32810    // Add the current document to the bookmark list | Ctrl+D, Ctrl+D, Ctrl+D, Ctrl+D, Ctrl+D
+            POPUP "&File Bookmark"
+            {
+                MENUITEM "Root", 62415
+            }
+            MENUITEM "&Edit Bookmarks...\tCtrl+B", 32811    // View bookmarks list | Ctrl+B, Ctrl+B, Ctrl+B, Ctrl+B, Ctrl+B, Ctrl+B
+            MENUITEM SEPARATOR
+            POPUP "&Guide"
+            {
+                MENUITEM "PLACEHOLDER", 65000
+            }
+        }
+        MENUITEM "N&ewsgroups", 10222    // Open the list of newsgroups
+        MENUITEM "&Address Book\tCtrl+Shift+2", 34399    // Access address book | Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2
+        MENUITEM SEPARATOR
+        POPUP "&Tools"
+        {
+            MENUITEM "&History\tCtrl+H", 32808    // Pop up the history list | Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H
+            MENUITEM "&Security Info\tCtrl+Shift+I", 32909    // Show security information | Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I
+            MENUITEM "&Message Center\tCtrl+Shift+1", 34420    // Access mail folders | Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+7, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+7, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+Shift+1
+            MENUITEM "&Import Utility", 10305    // Import mail messages and address books
+            MENUITEM "&Java Console", 32878    // Open the Java Console
+        }
+        POPUP "&Server Tools"
+        {
+            MENUITEM "Page Ser&vices", 34057    // View Page Services
+        }
+        MENUITEM SEPARATOR
+        POPUP "&Window"
+        {
+            MENUITEM "New Window", 34060
+        }
+    }
+    POPUP "&Help"
+    {
+        MENUITEM "PLACEHOLDER", 65200
+    }
+}
+
+MENU__6 MENU
+{
+    POPUP "&File"
+    {
+        POPUP "&New"
+        {
+            MENUITEM "&Folder...", 34008    // Create a new mail folder
+            MENUITEM "&Message\tCtrl+M", 34369    // Create a new mail or newsgroup message | Ctrl+M
+        }
+        MENUITEM "&Open Page...\tCtrl+O", 32769    // Open a local file or web page in current window | Ctrl+O, Ctrl+O, Ctrl+L, Ctrl+L, Ctrl+O
+        MENUITEM "O&pen", 34000    // Open selected folder or group | Ctrl+O
+        MENUITEM SEPARATOR
+        MENUITEM "Save As", 32771    // Save a copy of the current page | Ctrl+S, Ctrl+S, Ctrl+S
+        MENUITEM "Print", 57607    // Print this page | Ctrl+P, Ctrl+P, Ctrl+P, Ctrl+P, Ctrl+P
+        MENUITEM SEPARATOR
+        MENUITEM "&Close\tCtrl+W", 57602    // Close the current window | Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W
+        MENUITEM "E&xit\tCtrl+Q", 57665    // Close all windows in the application and exit | Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q
+    }
+}
+
+MENU__50 MENU
+{
+    POPUP "&New"
+    {
+        MENUITEM "&Navigator Window\tCtrl+N", 32770    // Create a new Navigator window for viewing web pages | Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N
+        MENUITEM "&Message\tCtrl+M", 32879    // Create a new mail or newsgroup message | Ctrl+M, Ctrl+M, Ctrl+M, Ctrl+M, Ctrl+M, Ctrl+M
+        MENUITEM "Blank &Page\tCtrl+Shift+N", 42279    // Create a new web page | Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N
+        MENUITEM SEPARATOR
+        MENUITEM "Page From &Template...", 34483    // Start a new page based on another page or using Netscape's Template Website.
+        MENUITEM "Page From &Wizard...", 65197    // Create a new page using New Page Wizard at Netscpape Web site
+    }
+    MENUITEM "&Open Page...\tCtrl+O", 32769    // Open a local file or web page in current window | Ctrl+O, Ctrl+O, Ctrl+L, Ctrl+L, Ctrl+O
+    MENUITEM SEPARATOR
+    MENUITEM "&Save As...\tCtrl+S", 32771    // Save a copy of the current page | Ctrl+S, Ctrl+S, Ctrl+S
+    MENUITEM "Save &Frame As...", 62431    // Save a copy of the selected frame
+    MENUITEM SEPARATOR
+    MENUITEM "Sen&d Page...", 32809    // Send the current page to a recipient | Ctrl+M, Ctrl+M
+    MENUITEM "&Edit Page", 42003    // Edit the current page
+    MENUITEM "Edit &Frame", 62432    // Edit the current frame
+    MENUITEM "&Upload File...", 34366    // Upload (send) a file to this FTP directory
+    POPUP "Off&line"
+    {
+        MENUITEM "Work Offl&ine", 42509    // Switch network connectedness mode
+        MENUITEM SEPARATOR
+        MENUITEM "&Synchronize...", 42600    // Download items for offline use and send unsent messages
+    }
+    MENUITEM SEPARATOR
+    MENUITEM "Pa&ge Setup...", 57605    // Change the printing options
+    MENUITEM "Print Pre&view", 57609    // Preview the full page
+    MENUITEM "&Print...\tCtrl+P", 57607    // Print this page | Ctrl+P, Ctrl+P, Ctrl+P, Ctrl+P, Ctrl+P
+    MENUITEM SEPARATOR
+    MENUITEM "&Close\tCtrl+W", 57602    // Close the current window | Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W
+    MENUITEM "E&xit\tCtrl+Q", 57665    // Close all windows in the application and exit | Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q
+}
+
+MENU__51 MENU
+{
+    MENUITEM "Cu&t\tCtrl+X", 57635    // Cut the selection and put it on the clipboard | Shift+Delete, Ctrl+X, Ctrl+X, Ctrl+X, Ctrl+X, Shift+Delete, Ctrl+X, Shift+Delete, Ctrl+X, Ctrl+X, Ctrl+X, Ctrl+X, Shift+Delete, Ctrl+X, Ctrl+X
+    MENUITEM "&Copy\tCtrl+C", 57634    // Copy the selection and put it on the clipboard | Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+C, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C
+    MENUITEM "&Paste\tCtrl+V", 57637    // Insert clipboard contents | Ctrl+V, Shift+Insert, Ctrl+V, Shift+Insert, Ctrl+V, Shift+Insert, Ctrl+V, Ctrl+V, Ctrl+V, Ctrl+V, Ctrl+V
+    MENUITEM SEPARATOR
+    MENUITEM "Select &All\tCtrl+A", 57642    // Select the entire document | Ctrl+A, Ctrl+A, Ctrl+A
+    MENUITEM SEPARATOR
+    MENUITEM "&Find in Page...\tCtrl+F", 62640    // Search for text in the current page or frame | Ctrl+F
+    MENUITEM "Find A&gain\tCtrl+G", 32880    // Repeat the last find operation | Ctrl+G, F3, Ctrl+G, F3, Ctrl+G, F3, F3, Ctrl+G, Ctrl+G, F3, Ctrl+G, F3
+    MENUITEM "Search &Internet", 32910    // Search the Internet for information
+    MENUITEM SEPARATOR
+    MENUITEM "Pr&eferences...", 42526    // Change user preferences for the application
+}
+
+MENU__52 MENU
+{
+    POPUP "Sho&w"
+    {
+        MENUITEM "&Navigation Toolbar", 62376    // Show or hide the Navigation toolbar
+        MENUITEM "&Location Toolbar", 62377    // Show or hide the Location toolbar
+        MENUITEM "&Personal Toolbar", 62378    // Show or hide the Personal toolbar
+        MENUITEM SEPARATOR
+        MENUITEM "&Floating Component Bar", 62414    // Undock or dock the Component Bar
+    }
+    MENUITEM SEPARATOR
+    MENUITEM "In&crease Font\tCtrl+]", 62537    // Increase the font size for viewing this page | Ctrl+], Ctrl+], Ctrl+]
+    MENUITEM "&Decrease Font\tCtrl+[", 62538    // Decrease the font size for viewing this page | Ctrl+[, Ctrl+[, Ctrl+[
+    MENUITEM SEPARATOR
+    MENUITEM "&Reload\tCtrl+R", 32782    // Reload the current page | Ctrl+R, Ctrl+R
+    MENUITEM "Show Ima&ges", 32804    // Show images in current page
+    MENUITEM "Re&fresh", 32783    // Redraw the current document
+    MENUITEM "&Stop Page Loading\t<Esc>", 32795    // Stop the current transfer | Esc, Esc, Esc, Esc, Esc, Esc, Esc, Esc
+    MENUITEM "Stop &Animations", 32795    // Stop the current transfer | Esc, Esc, Esc, Esc, Esc, Esc, Esc, Esc
+    MENUITEM SEPARATOR
+    MENUITEM "Page So&urce\tCtrl+U", 32789    // View the source of the current page | Ctrl+U, Ctrl+U, Ctrl+U
+    MENUITEM "Page &Info\tCtrl+I", 32842    // View information about the current page | Ctrl+I
+    POPUP "Character Set"
+    {
+        MENUITEM "Western (ISO-8859-1)", 33115
+        MENUITEM SEPARATOR
+        MENUITEM "Central European (ISO-8859-2)", 33116
+        MENUITEM "Central European (Windows-1250)", 34474
+        MENUITEM SEPARATOR
+        MENUITEM "Japanese (Auto-Detect)", 33117
+        MENUITEM "Japanese (Shift_JIS)", 33118
+        MENUITEM "Japanese (EUC-JP)", 33119
+        MENUITEM SEPARATOR
+        MENUITEM "Traditional Chinese (Big5)", 33120
+        MENUITEM "Traditional Chinese (EUC-TW)", 33121
+        MENUITEM SEPARATOR
+        MENUITEM "Simplified Chinese (GB2312)", 33122
+        MENUITEM SEPARATOR
+        MENUITEM "Korean (Auto-Detect)", 33123
+        MENUITEM SEPARATOR
+        MENUITEM "Cyrillic (KOI8-R)", 34477
+        MENUITEM "Cyrillic (ISO-8859-5)", 34476
+        MENUITEM "Cyrillic (Windows-1251)", 34475
+        MENUITEM "Cyrillic (CP866)", 34490
+        MENUITEM SEPARATOR
+        MENUITEM "Baltic (ISO-8859-4)", 34491
+        MENUITEM "Baltic (Windows-1257)", 34492
+        MENUITEM SEPARATOR
+        MENUITEM "Greek (ISO-8859-7)", 34478
+        MENUITEM "Greek (Windows-1253)", 34479
+        MENUITEM SEPARATOR
+        MENUITEM "Turkish (ISO-8859-9)", 34480
+        MENUITEM SEPARATOR
+        MENUITEM "Unicode (UTF-8)", 34481
+        MENUITEM "Unicode (UTF-7)", 34489
+        MENUITEM SEPARATOR
+        MENUITEM "User-Defined", 33124
+        MENUITEM SEPARATOR
+        MENUITEM "&Set Default Character Set", 32836    // Set default document encoding
+    }
+}
+
+MENU__53 MENU
+{
+    MENUITEM "&Back\tAlt+<-", 32780    // Return to previous document in history list | Alt+Left
+    MENUITEM "&Forward\tAlt+->", 32781    // Move forward to next document in history list | Alt+Right
+    MENUITEM "&Home", 32807    // Go to the Home page
+}
+
+MENU__54 MENU
+{
+    POPUP "&New"
+    {
+        MENUITEM "&Navigator Window\tCtrl+N", 32770    // Create a new Navigator window for viewing web pages | Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N
+        MENUITEM "&Message\tCtrl+M", 34369    // Create a new mail or newsgroup message | Ctrl+M
+        MENUITEM "Blank &Page\tCtrl+Shift+N", 42279    // Create a new web page | Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N
+        MENUITEM SEPARATOR
+        MENUITEM "Page From &Template...", 34483    // Start a new page based on another page or using Netscape's Template Website.
+        MENUITEM "Page From &Wizard...", 65197    // Create a new page using New Page Wizard at Netscpape Web site
+    }
+    MENUITEM "Ne&w Folder...", 34008    // Create a new mail folder
+    POPUP "&Open Attachment"
+    {
+        MENUITEM "&Replace Me", 22784
+    }
+    POPUP "&Save As"
+    {
+        MENUITEM "&File...\tCtrl+S", 34437    // Save selected message(s) to a file | Ctrl+S, Ctrl+S
+        MENUITEM "&Template", 10304    // Save this message in the Templates folder to use again
+    }
+    MENUITEM SEPARATOR
+    MENUITEM "Get New &Messages", 34006    // Get new mail or newsgroup messages | Ctrl+T, Ctrl+T, Ctrl+T
+    MENUITEM "&Get Next N Messages", 42522    // Get next %d messages
+    MENUITEM "Sen&d Unsent Messages", 34007    // Send the messages in the %s folder now
+    MENUITEM "&Update Message Count", 42545    // Update number of unread messages
+    MENUITEM "Su&bscribe...", 34521    // Subscribe to Newsgroups
+    MENUITEM SEPARATOR
+    MENUITEM "&Rename Folder...", 34455    // Change the name of the selected folder
+    MENUITEM "Empt&y Trash Folder", 34011    // Empty the trash folder
+    MENUITEM "Compac&t Folders", 34010    // Compress all mail folders
+    MENUITEM SEPARATOR
+    MENUITEM "&Import...", 10305    // Import mail messages and address books
+    MENUITEM SEPARATOR
+    POPUP "Off&line"
+    {
+        MENUITEM "Work Offl&ine", 42509    // Switch network connectedness mode
+        MENUITEM SEPARATOR
+        MENUITEM "&Synchronize...", 42600    // Download items for offline use and send unsent messages
+        MENUITEM SEPARATOR
+        MENUITEM "Get Selected &Messages", 42532
+        MENUITEM "Get &Flagged Messages", 42376
+    }
+    MENUITEM SEPARATOR
+    MENUITEM "Pa&ge Setup...", 57605    // Change the printing options
+    MENUITEM "Print Pre&view", 57609    // Preview the full page
+    MENUITEM "&Print...\tCtrl+P", 57607    // Print this page | Ctrl+P, Ctrl+P, Ctrl+P, Ctrl+P, Ctrl+P
+    MENUITEM SEPARATOR
+    MENUITEM "&Close\tCtrl+W", 57602    // Close the current window | Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W
+    MENUITEM "E&xit\tCtrl+Q", 57665    // Close all windows in the application and exit | Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q
+}
+
+MENU__55 MENU
+{
+    MENUITEM "&Undo\tCtrl+Z", 57643    // Undo the last action | Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z, Ctrl+Z, Alt+Backspace, Ctrl+Z, Alt+Backspace, Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z, Ctrl+Z, Ctrl+Z, Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z
+    MENUITEM "&Redo\tCtrl+Y", 57644    // Redo what was undone | Ctrl+Shift+Z, Ctrl+E, Alt+Shift+Backspace, Ctrl+Y, Ctrl+E, Ctrl+Y, Ctrl+Y, Ctrl+Y, Ctrl+Y, Ctrl+Shift+Z
+    MENUITEM SEPARATOR
+    MENUITEM "Cu&t\tCtrl+X", 57635    // Cut the selection and put it on the clipboard | Shift+Delete, Ctrl+X, Ctrl+X, Ctrl+X, Ctrl+X, Shift+Delete, Ctrl+X, Shift+Delete, Ctrl+X, Ctrl+X, Ctrl+X, Ctrl+X, Shift+Delete, Ctrl+X, Ctrl+X
+    MENUITEM "&Copy\tCtrl+C", 57634    // Copy the selection and put it on the clipboard | Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+C, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C
+    MENUITEM "&Paste\tCtrl+V", 57637    // Insert clipboard contents | Ctrl+V, Shift+Insert, Ctrl+V, Shift+Insert, Ctrl+V, Shift+Insert, Ctrl+V, Ctrl+V, Ctrl+V, Ctrl+V, Ctrl+V
+    MENUITEM "&Delete Message\tDel", 34017    // Delete the selected message
+    POPUP "Se&lect"
+    {
+        MENUITEM "&All\tCtrl+A", 34338    // Select all items | Ctrl+A, Ctrl+A, Ctrl+A, Ctrl+A, Ctrl+A, Ctrl+A
+        MENUITEM "&Thread\tCtrl+Shift+A", 34024    // Select all messages in this thread or folder | Ctrl+Shift+A
+        MENUITEM "&Flagged Messages", 34025    // Select all flagged messages in this folder
+    }
+    MENUITEM SEPARATOR
+    MENUITEM "&Find...\tCtrl+F", 32818    // Search for text in the current page | Ctrl+F, Ctrl+F, Ctrl+F, Ctrl+F, Ctrl+F, Ctrl+F
+    MENUITEM "Find A&gain\tCtrl+G", 32880    // Repeat the last find operation | Ctrl+G, F3, Ctrl+G, F3, Ctrl+G, F3, F3, Ctrl+G, Ctrl+G, F3, Ctrl+G, F3
+    MENUITEM SEPARATOR
+    MENUITEM "&Search Messages\tCtrl+Shift+F", 34352    // Search mail and Newsgroup messages | Ctrl+F, Ctrl+Shift+F, Ctrl+Shift+F, Ctrl+Shift+F
+    MENUITEM SEPARATOR
+    MENUITEM "Message F&ilters...", 34380    // Set rules for filtering mail into folders
+    MENUITEM "Pr&operties", 42372    // View the current selection's properties | Alt+Enter, Alt+Enter, Alt+Enter
+    MENUITEM SEPARATOR
+    MENUITEM "Pr&eferences...", 32882    // Change user preferences for the application
+}
+
+MENU__56 MENU
+{
+    POPUP "Sho&w"
+    {
+        MENUITEM "&Message Toolbar", 62376    // Show or hide the Navigation toolbar
+        MENUITEM "&Location Toolbar", 62377    // Show or hide the Location toolbar
+        MENUITEM "Messa&ge", 42423    // Show or hide message area
+        MENUITEM "&Folders", 34444    // Show or hide folder area
+        MENUITEM SEPARATOR
+        MENUITEM "Floating &Component Bar", 62414    // Undock or dock the Component Bar
+    }
+    MENUITEM SEPARATOR
+    POPUP "S&ort"
+    {
+        MENUITEM "by Dat&e", 34050    // Sort messages by date
+        MENUITEM "by &Flag", 42525    // Sort messages by flag
+        MENUITEM "by &Priority", 34448    // Sort messages by priority
+        MENUITEM "by Sende&r", 34052    // Sort messages by sender
+        MENUITEM "by Si&ze", 42530    // Sort messages by message size
+        MENUITEM "by Stat&us", 42528    // Sort message by status
+        MENUITEM "by &Subject", 34051    // Sort messages by subject
+        MENUITEM "by &Thread", 34449    // Sort messages by thread
+        MENUITEM "by U&nread", 42535    // Sort message by unread status
+        MENUITEM "by &Order received", 34364    // Sort messages by order received
+        MENUITEM SEPARATOR
+        MENUITEM "&Ascending", 34049    // Sort messages ascending
+        MENUITEM "&Descending", 42524    // Sort messages descending
+    }
+    POPUP "&Messages"
+    {
+        MENUITEM "&All", 34566    // Show all threads
+        MENUITEM "&Unread", 42039    // Show only unread messages
+        MENUITEM "&Threads with Unread", 34568    // View threads with new messages
+        MENUITEM "&Watched Threads with Unread", 34567    // Show watched threads with new messages
+        MENUITEM SEPARATOR
+        MENUITEM "&Ignored Threads", 34569    // Show all ignored threads
+    }
+    POPUP "Hea&ders"
+    {
+        MENUITEM "&All", 34469    // Shows all header information
+        MENUITEM "&Normal", 34468    // Shows normal headers
+        MENUITEM "&Brief", 34467    // Shows short list of headers
+    }
+    MENUITEM SEPARATOR
+    MENUITEM "View &Attachment Inline", 10005
+    MENUITEM "Wra&p Long Lines", 34496    // Wrap long message lines to fit in window
+    MENUITEM SEPARATOR
+    MENUITEM "Increase &Font\tCtrl+]", 62537    // Increase the font size for viewing this page | Ctrl+], Ctrl+], Ctrl+]
+    MENUITEM "Decrease Fo&nt\tCtrl+[", 62538    // Decrease the font size for viewing this page | Ctrl+[, Ctrl+[, Ctrl+[
+    MENUITEM SEPARATOR
+    MENUITEM "&Reload", 32782    // Reload the current page | Ctrl+R, Ctrl+R
+    MENUITEM "Show Ima&ges", 32804    // Show images in current page
+    MENUITEM "Refres&h", 32783    // Redraw the current document
+    MENUITEM "&Stop\tESC", 32795    // Stop the current transfer | Esc, Esc, Esc, Esc, Esc, Esc, Esc, Esc
+    MENUITEM SEPARATOR
+    MENUITEM "Page So&urce", 32789    // View the source of the current page | Ctrl+U, Ctrl+U, Ctrl+U
+    MENUITEM "Page &Info", 32842    // View information about the current page | Ctrl+I
+    MENUITEM SEPARATOR
+    POPUP "&Character Set"
+    {
+        MENUITEM "Western (ISO-8859-1)", 33115
+        MENUITEM SEPARATOR
+        MENUITEM "Central European (ISO-8859-2)", 33116
+        MENUITEM "Central European (Windows-1250)", 34474
+        MENUITEM SEPARATOR
+        MENUITEM "Japanese (Auto-Detect)", 33117
+        MENUITEM "Japanese (Shift_JIS)", 33118
+        MENUITEM "Japanese (EUC-JP)", 33119
+        MENUITEM SEPARATOR
+        MENUITEM "Traditional Chinese (Big5)", 33120
+        MENUITEM "Traditional Chinese (EUC-TW)", 33121
+        MENUITEM SEPARATOR
+        MENUITEM "Simplified Chinese (GB2312)", 33122
+        MENUITEM SEPARATOR
+        MENUITEM "Korean (Auto-Detect)", 33123
+        MENUITEM SEPARATOR
+        MENUITEM "Cyrillic (KOI8-R)", 34477
+        MENUITEM "Cyrillic (ISO-8859-5)", 34476
+        MENUITEM "Cyrillic (Windows-1251)", 34475
+        MENUITEM "Cyrillic (CP866)", 34490
+        MENUITEM SEPARATOR
+        MENUITEM "Baltic (ISO-8859-4)", 34491
+        MENUITEM "Baltic (Windows-1257)", 34492
+        MENUITEM SEPARATOR
+        MENUITEM "Greek (ISO-8859-7)", 34478
+        MENUITEM "Greek (Windows-1253)", 34479
+        MENUITEM SEPARATOR
+        MENUITEM "Turkish (ISO-8859-9)", 34480
+        MENUITEM SEPARATOR
+        MENUITEM "Unicode (UTF-8)", 34481
+        MENUITEM "Unicode (UTF-7)", 34489
+        MENUITEM SEPARATOR
+        MENUITEM "User-Defined", 33124
+        MENUITEM SEPARATOR
+        MENUITEM "&Set Default Character Set", 32836    // Set default document encoding
+    }
+}
+
+MENU__57 MENU
+{
+    MENUITEM "First &Unread Message", 34572    // Go to the first unread message
+    MENUITEM "&First Flagged Message", 42416    // Go to the first flagged message
+    MENUITEM SEPARATOR
+    POPUP "&Next"
+    {
+        MENUITEM "&Message\tShift+N", 34410    // Go to the next message | Shift+N
+        MENUITEM "&Unread Message\tN", 34412    // Go to the next unread message | Alt+Down, Alt+Down, N
+        MENUITEM "&Flagged Message", 42415    // Go to the next flagged message
+        MENUITEM SEPARATOR
+        MENUITEM "Unread &Thread\tT", 34563    // Read next unread thread | Alt+Shift+Down, Alt+Shift+Down, T
+        MENUITEM SEPARATOR
+        MENUITEM "Folder", 42417    // Go to the next folder
+        MENUITEM "Unrea&d Folder\tG", 42418    // Go to the next unread folder | G
+    }
+    POPUP "&Previous"
+    {
+        MENUITEM "&Message\tShift+P", 34411    // Go to the previous message | Shift+P
+        MENUITEM "&Unread Message\tP", 34441    // Go to the previous unread message | Alt+Up, P
+        MENUITEM "Fla&gged Message", 42414    // Go to the previous flagged message
+    }
+    MENUITEM SEPARATOR
+    MENUITEM "&Back\tAlt+<-", 42411    // Go back to the last message | Alt+Left, Alt+Up, Alt+Left
+    MENUITEM "For&ward\tAlt+->", 42412    // Go to the next visited message | Alt+Right, Alt+Right
+}
+
+MENU__58 MENU
+{
+    MENUITEM "&New Message\tCtrl+M", 34369    // Create a new mail or newsgroup message | Ctrl+M
+    MENUITEM "&Reply\tCtrl+R", 10032    // Reply to the sender only
+    MENUITEM "Re&ply to All\tCtrl+Shift+R", 10033    // Reply to sender and all recipients
+    POPUP "&Reply"
+    {
+        MENUITEM "to &Sender Only", 10211    // Reply to sender only
+        MENUITEM "to &Newsgroup\tCtrl+R", 34435    // Post a reply to the Newsgroup
+    }
+    POPUP "Re&ply All"
+    {
+        MENUITEM "to &Sender and All Recipients", 10212    // Reply to sender and all recipients
+        MENUITEM "to Sender and &Newsgroup\tCtrl+Shift+R", 34436    // Post reply to the Newsgroup and mail a reply to the author
+    }
+    MENUITEM "&Forward\tCtrl+L", 34592    // Forward the selected message | Ctrl+L
+    POPUP "F&orward As"
+    {
+        MENUITEM "&Inline", 34321    // Forward the current message as inline text
+        MENUITEM "&Quoted\tCtrl+Shift+L", 34319    // Forward the current message as quoted text | Ctrl+Shift+L, Ctrl+Shift+L
+        MENUITEM "&Attachment", 34031    // Forward the current message as attachment
+    }
+    MENUITEM "&Edit Message as New", 42422    // Edit the currently selected messages
+    MENUITEM SEPARATOR
+    POPUP "&Move Message"
+    {
+        MENUITEM "&Replace Me", 20736
+    }
+    POPUP "&Copy Message"
+    {
+        MENUITEM "&Replace Me", 21760    // Employee Type
+    }
+    MENUITEM SEPARATOR
+    MENUITEM "Add &Sender to Address Book", 34453    // Add message sender to address book
+    MENUITEM "Add &All to Address Book", 34454    // Add all message addresses to address book
+    MENUITEM SEPARATOR
+    POPUP "Mar&k"
+    {
+        MENUITEM "as &Read\tM", 34120    // Mark selected messages as read | M
+        MENUITEM "&Thread as Read", 34579    // Mark selected thread as read | Shift+M
+        MENUITEM "by &Date...\tC", 34576    // Catch up to a certain date | C
+        MENUITEM "&All Read\tShift+C", 34526    // Mark all messages read | Shift+C
+        MENUITEM SEPARATOR
+        MENUITEM "&Flag", 34125    // Flag the current message
+    }
+    MENUITEM SEPARATOR
+    MENUITEM "&Ignore Thread\tK", 34564    // Ignore selected thread | Ctrl+I, Ctrl+I, K
+    MENUITEM "&Watch Thread\tW", 34565    // Show when new messages arrive in this thread | W
+}
+
+MENU__101 MENU
+{
+    POPUP "&File"
+    {
+        POPUP "&New"
+        {
+            MENUITEM "&Navigator Window\tCtrl+N", 32770    // Create a new Navigator window for viewing web pages | Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N
+            MENUITEM "&Message\tCtrl+M", 32879    // Create a new mail or newsgroup message | Ctrl+M, Ctrl+M, Ctrl+M, Ctrl+M, Ctrl+M, Ctrl+M
+            MENUITEM "Blank &Page\tCtrl+Shift+N", 42279    // Create a new web page | Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N
+            MENUITEM SEPARATOR
+            MENUITEM "Page From &Template...", 34483    // Start a new page based on another page or using Netscape's Template Website.
+            MENUITEM "Page From &Wizard...", 65197    // Create a new page using New Page Wizard at Netscpape Web site
+        }
+        MENUITEM "&Open Page...\tCtrl+O", 32769    // Open a local file or web page in current window | Ctrl+O, Ctrl+O, Ctrl+L, Ctrl+L, Ctrl+O
+        MENUITEM SEPARATOR
+        MENUITEM "&Save\tCtrl+S", 42001    // Save the current page | Ctrl+S
+        MENUITEM "Save &As...", 42002    // Save the page with a new name
+        MENUITEM "P&ublish...", 42216    // Upload current file or directory to a server for public viewing
+        MENUITEM SEPARATOR
+        MENUITEM "Sen&d Page", 32809    // Send the current page to a recipient | Ctrl+M, Ctrl+M
+        MENUITEM "&Browse Page", 42022    // Preview current edit page in a new Navigator window
+        MENUITEM SEPARATOR
+        MENUITEM "Page Se&tup...", 57605    // Change the printing options
+        MENUITEM "Print Pre&view", 57609    // Preview the full page
+        MENUITEM "&Print...", 57607    // Print this page | Ctrl+P, Ctrl+P, Ctrl+P, Ctrl+P, Ctrl+P
+        MENUITEM SEPARATOR
+        MENUITEM "&Close\tCtrl+W", 57602    // Close the current window | Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W
+        MENUITEM "E&xit\tCtrl+Q", 57665    // Close all windows in the application and exit | Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q
+    }
+    POPUP "&Edit"
+    {
+        MENUITEM "{&U&R}", 57643    // Undo the last action | Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z, Ctrl+Z, Alt+Backspace, Ctrl+Z, Alt+Backspace, Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z, Ctrl+Z, Ctrl+Z, Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X", 57635    // Cut the selection and put it on the clipboard | Shift+Delete, Ctrl+X, Ctrl+X, Ctrl+X, Ctrl+X, Shift+Delete, Ctrl+X, Shift+Delete, Ctrl+X, Ctrl+X, Ctrl+X, Ctrl+X, Shift+Delete, Ctrl+X, Ctrl+X
+        MENUITEM "&Copy\tCtrl+C", 57634    // Copy the selection and put it on the clipboard | Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+C, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C
+        MENUITEM "&Paste\tCtrl+V", 57637    // Insert clipboard contents | Ctrl+V, Shift+Insert, Ctrl+V, Shift+Insert, Ctrl+V, Shift+Insert, Ctrl+V, Ctrl+V, Ctrl+V, Ctrl+V, Ctrl+V
+        MENUITEM "&Delete\tDel", 32871    // Delete the current selection | Delete
+        MENUITEM SEPARATOR
+        POPUP "De&lete Table"
+        {
+            MENUITEM "&Table", 42322    // Delete the table at the insertion location
+            MENUITEM "&Row", 42323    // Delete a row in the table
+            MENUITEM "C&olumn", 42324    // Delete a column in the table
+            MENUITEM "&Cell", 42325    // Delete a cell (row and column) in the table
+        }
+        MENUITEM "Remove Lin&k", 42270    // Remove link at the insertion point or all links within the selection
+        MENUITEM SEPARATOR
+        MENUITEM "Select &All\tCtrl+A", 34338    // Select all items | Ctrl+A, Ctrl+A, Ctrl+A, Ctrl+A, Ctrl+A, Ctrl+A
+        MENUITEM "Select Ta&ble", 42357    // Select the entire table
+        MENUITEM SEPARATOR
+        MENUITEM "&Find in Page...\tCtrl+F", 32818    // Search for text in the current page | Ctrl+F, Ctrl+F, Ctrl+F, Ctrl+F, Ctrl+F, Ctrl+F
+        MENUITEM "Find A&gain\tF3", 32880    // Repeat the last find operation | Ctrl+G, F3, Ctrl+G, F3, Ctrl+G, F3, F3, Ctrl+G, Ctrl+G, F3, Ctrl+G, F3
+        MENUITEM SEPARATOR
+        MENUITEM "&HTML Source", 42217    // Edit page file with another program
+        MENUITEM SEPARATOR
+        MENUITEM "Pr&eferences", 42526    // Change user preferences for the application
+    }
+    POPUP "&View"
+    {
+        POPUP "Sho&w"
+        {
+            MENUITEM "&Composition Toolbar", 42004    // Show or Hide the Composition Toolbar
+            MENUITEM "&Formatting Toolbar", 42005    // Show or Hide the Formatting Toolbar
+            MENUITEM SEPARATOR
+            MENUITEM "Floating Component Bar", 62414    // Undock or dock the Component Bar
+            MENUITEM SEPARATOR
+            MENUITEM "Paragraph Marks", 42291    // Display graphic at end of each paragraph
+        }
+        MENUITEM SEPARATOR
+        MENUITEM "&Reload", 32782    // Reload the current page | Ctrl+R, Ctrl+R
+        MENUITEM "Show &Images", 32804    // Show images in current page
+        MENUITEM "Re&fresh", 32783    // Redraw the current document
+        MENUITEM "&Stop Loading\t<Esc>", 32795    // Stop the current transfer | Esc, Esc, Esc, Esc, Esc, Esc, Esc, Esc
+        MENUITEM SEPARATOR
+        MENUITEM "Page So&urce", 32789    // View the source of the current page | Ctrl+U, Ctrl+U, Ctrl+U
+        MENUITEM "Page I&nfo", 32842    // View information about the current page | Ctrl+I
+        POPUP "Character Set"
+        {
+            MENUITEM "Western (ISO-8859-1)", 33115
+            MENUITEM SEPARATOR
+            MENUITEM "Central European (ISO-8859-2)", 33116
+            MENUITEM "Central European (Windows-1250)", 34474
+            MENUITEM SEPARATOR
+            MENUITEM "Japanese (Auto-Detect)", 33117
+            MENUITEM "Japanese (Shift_JIS)", 33118
+            MENUITEM "Japanese (EUC-JP)", 33119
+            MENUITEM SEPARATOR
+            MENUITEM "Traditional Chinese (Big5)", 33120
+            MENUITEM "Traditional Chinese (EUC-TW)", 33121
+            MENUITEM SEPARATOR
+            MENUITEM "Simplified Chinese (GB2312)", 33122
+            MENUITEM SEPARATOR
+            MENUITEM "Korean (Auto-Detect)", 33123
+            MENUITEM SEPARATOR
+            MENUITEM "Cyrillic (KOI8-R)", 34477
+            MENUITEM "Cyrillic (ISO-8859-5)", 34476
+            MENUITEM "Cyrillic (Windows-1251)", 34475
+            MENUITEM "Cyrillic (CP866)", 34490
+            MENUITEM SEPARATOR
+            MENUITEM "Baltic (ISO-8859-4)", 34491
+            MENUITEM "Baltic (Windows-1257)", 34492
+            MENUITEM SEPARATOR
+            MENUITEM "Greek (Windows-1253)", 34479
+            MENUITEM "Greek (ISO-8859-7)", 34478
+            MENUITEM SEPARATOR
+            MENUITEM "Turkish (ISO-8859-9)", 34480
+            MENUITEM SEPARATOR
+            MENUITEM "Unicode (UTF-8)", 34481
+            MENUITEM "Unicode (UTF-7)", 34489
+            MENUITEM SEPARATOR
+            MENUITEM "User-Defined", 33124
+            MENUITEM SEPARATOR
+            MENUITEM "&Set Default Character Set", 32836    // Set default document encoding
+        }
+    }
+    POPUP "&Insert"
+    {
+        MENUITEM "&Link...\tCtrl+Shift+L", 42134    // Insert a new link or create a link to the selection
+        MENUITEM "T&arget...", 42108    // Insert a Target
+        MENUITEM "&Image...", 42100    // Insert an image at the insertion location
+        MENUITEM "H&orizontal Line", 42101    // Insert a horizontal Line at the insertion location
+        POPUP "&Table"
+        {
+            MENUITEM "&Table...", 42317    // Insert a table at the insertion location
+            MENUITEM "&Row", 42318    // Insert a new row in the table
+            MENUITEM "C&olumn", 42319    // Insert a new column in the table
+            MENUITEM "&Cell", 42320    // Insert a new cell (row and column) in the table
+        }
+        MENUITEM "&HTML Tag...", 42109    // Insert an arbitrary HTML Tag at the insertion location
+        MENUITEM SEPARATOR
+        MENUITEM "&New Line Break\tShift+Enter", 42102    // Insert break to continue text on a new line
+        MENUITEM "&Break below Image(s)", 42105    // Insert break to continue text below images to the left and the right
+    }
+    POPUP "F&ormat"
+    {
+        POPUP "&Font"
+        {
+            MENUITEM "{}", 36479
+        }
+        POPUP "Si&ze"
+        {
+            MENUITEM "{}", 36319    // Decrease font size by 2 levels
+        }
+        POPUP "&Style"
+        {
+            MENUITEM "&Bold\tCtrl+B", 42009    // Set the style to Bold | Ctrl+B, Ctrl+B, Ctrl+B
+            MENUITEM "&Italic\tCtrl+I", 42010    // Set the style to Italic | Ctrl+I, Ctrl+I
+            MENUITEM "&Underline\tCtrl+U", 42011    // Set the style to Underline | Ctrl+U, Ctrl+U
+            MENUITEM "S&trikethrough", 42015    // Set the style to Strikethrough
+            MENUITEM "Su&perscript", 42013    // Set the style to Superscript
+            MENUITEM "&Subscript", 42014    // Set the style to Subscript
+            MENUITEM "Blin&king", 42016    // Set the style to Blink
+            MENUITEM "&Nonbreaking", 42012    // Set the style to not break between words (no word wrap)
+        }
+        MENUITEM "&Color...", 950    // Change the current text color | Ctrl+Shift+C, Ctrl+Shift+C
+        MENUITEM "&Remove All Styles\tCtrl+Shift+K", 42017    // Remove all character styles and link(s) | Ctrl+Shift+K, Ctrl+Shift+K
+        MENUITEM SEPARATOR
+        POPUP "&Heading"
+        {
+            MENUITEM "&1", 36005    // Set the style to Heading 1
+            MENUITEM "&2", 36006    // Set the style to Heading 2
+            MENUITEM "&3", 36007    // Set the style to Heading 3
+            MENUITEM "&4", 36008    // Set the style to Heading 4
+            MENUITEM "&5", 36009    // Set the style to Heading 5
+            MENUITEM "&6", 36010    // Set the style to Heading 6
+        }
+        POPUP "&Paragraph"
+        {
+            MENUITEM "&Normal", 36101    // Set the style to Normal
+            MENUITEM "&Address", 36013    // Set the style to Address
+            MENUITEM "&Formatted", 36017    // Set the style to Preformat
+            MENUITEM "&Block Quote", 36038    // Set the style to Block Quote
+            MENUITEM "Description &Title", 36025    // Set the style to Description Title
+            MENUITEM "&Description Text", 36026    // Set the style to Description Text
+        }
+        POPUP "&List"
+        {
+            MENUITEM "N&one", 42527    // Remove list style
+            MENUITEM "&Bulletted", 42180    // Start, change to, or clear an unnumbered (bulleted) list
+            MENUITEM "&Numbered", 42181    // Start, change to, or clear a numbered list
+            MENUITEM "&Description", 36024    // Start, change to, or clear a description list
+            MENUITEM "D&irectory", 36022    // Set the style to Directory List
+            MENUITEM "&Menu", 36021    // Set the style to Menu List
+        }
+        POPUP "&Align"
+        {
+            MENUITEM "&Left\tCtrl+L", 42092    // Align to left margin | Ctrl+L, Ctrl+L
+            MENUITEM "&Center\tCtrl+E", 42094    // Center between margins | Ctrl+E, Ctrl+E
+            MENUITEM "&Right\tCtrl+R", 42093    // Align to right margin | Ctrl+R, Ctrl+R
+        }
+        MENUITEM SEPARATOR
+        MENUITEM "&Increase Indent\tCtrl =", 42097    // Increase indent of paragraph one level
+        MENUITEM "&Decrease Indent\tCtrl -", 42098    // Decrease indent of paragraph one level
+        MENUITEM SEPARATOR
+        MENUITEM "{}", 42075    // Change properties of selected object or text | Alt+Enter, Alt+Enter, Alt+Enter
+        MENUITEM "&Table Properties", 42332    // Change table properties
+        MENUITEM "Pa&ge Colors and Properties", 42082    // Change page properties
+        MENUITEM "Save &Encrypted", 42549
+    }
+    POPUP "&Tools"
+    {
+        MENUITEM "Check &Spelling...\tCtrl+K", 36419    // Check spelling in the message | Ctrl+K, Ctrl+K, Ctrl+K
+        MENUITEM "{Editor Plug-ins}", 36429
+        MENUITEM "Stop Active &Plug-in", 36420    // Stop currently running editor plug-in
+    }
+    POPUP "&Communicator"
+    {
+        MENUITEM "&Navigator\tCtrl+1", 34458    // Access a web browser | Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1
+        MENUITEM "&Messenger\tCtrl+2", 10215    // Open a messenger window | Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2
+        MENUITEM "&Composer\tCtrl+4", 34461    // Access a web page composer | Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4
+        MENUITEM SEPARATOR
+        POPUP "&Bookmarks"
+        {
+            MENUITEM "&Add Bookmark\tCtrl+D", 32810    // Add the current document to the bookmark list | Ctrl+D, Ctrl+D, Ctrl+D, Ctrl+D, Ctrl+D
+            POPUP "&File Bookmark"
+            {
+                MENUITEM "Root", 62415
+            }
+            MENUITEM "&Edit Bookmarks...", 32811    // View bookmarks list | Ctrl+B, Ctrl+B, Ctrl+B, Ctrl+B, Ctrl+B, Ctrl+B
+            MENUITEM SEPARATOR
+            POPUP "&Places"
+            {
+                MENUITEM "PLACEHOLDER", 65000
+            }
+        }
+        MENUITEM "N&ewsgroups", 10222    // Open the list of newsgroups
+        MENUITEM "&Address Book\tCtrl+Shift+2", 34399    // Access address book | Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2
+        MENUITEM SEPARATOR
+        POPUP "&Tools"
+        {
+            MENUITEM "&History\tCtrl+H", 32808    // Pop up the history list | Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H
+            MENUITEM "&Message Center\tCtrl+Shift+1", 34420    // Access mail folders | Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+7, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+7, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+Shift+1
+            MENUITEM "&Import Utility", 10305    // Import mail messages and address books
+            MENUITEM "&Security Info\tCtrl+Shift+I", 32909    // Show security information | Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I
+            MENUITEM "&Java Console", 32878    // Open the Java Console
+        }
+        MENUITEM SEPARATOR
+        POPUP "&Window"
+        {
+            MENUITEM "New Window", 34060
+        }
+    }
+    POPUP "&Help"
+    {
+        MENUITEM "PLACEHOLDER", 65200
+    }
+}
+
+MENU__120 MENU
+{
+    POPUP "&File"
+    {
+        POPUP "&New"
+        {
+            MENUITEM "&Navigator Window\tCtrl+N", 32770    // Create a new Navigator window for viewing web pages | Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N
+            MENUITEM "&Message\tCtrl+M", 32879    // Create a new mail or newsgroup message | Ctrl+M, Ctrl+M, Ctrl+M, Ctrl+M, Ctrl+M, Ctrl+M
+            MENUITEM "Blank &Page\tCtrl+Shift+N", 42279    // Create a new web page | Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N
+            MENUITEM SEPARATOR
+            MENUITEM "Page From &Template...", 34483    // Start a new page based on another page or using Netscape's Template Website.
+            MENUITEM "Page From &Wizard...", 65197    // Create a new page using New Page Wizard at Netscpape Web site
+        }
+        MENUITEM SEPARATOR
+        MENUITEM "&Save As...\tCtrl+S", 32874    // Save this address book to a file | Ctrl+S, Ctrl+S
+        MENUITEM SEPARATOR
+        MENUITEM "Go to Pag&e", 32769    // Open a local file or web page in current window | Ctrl+O, Ctrl+O, Ctrl+L, Ctrl+L, Ctrl+O
+        MENUITEM "Add To Bookmar&ks", 34497
+        MENUITEM "&Add Page to Toolbar", 43020
+        MENUITEM "Create Shortcu&t", 43021
+        MENUITEM SEPARATOR
+        MENUITEM "&Close\tCtrl+W", 57602    // Close the current window | Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W
+    }
+    POPUP "&Edit"
+    {
+        MENUITEM "&Undo\tCtrl+Z", 57643    // Undo the last action | Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z, Ctrl+Z, Alt+Backspace, Ctrl+Z, Alt+Backspace, Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z, Ctrl+Z, Ctrl+Z, Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z
+        MENUITEM "&Redo\tCtrl+E", 57644    // Redo what was undone | Ctrl+Shift+Z, Ctrl+E, Alt+Shift+Backspace, Ctrl+Y, Ctrl+E, Ctrl+Y, Ctrl+Y, Ctrl+Y, Ctrl+Y, Ctrl+Shift+Z
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X", 57635    // Cut the selection and put it on the clipboard | Shift+Delete, Ctrl+X, Ctrl+X, Ctrl+X, Ctrl+X, Shift+Delete, Ctrl+X, Shift+Delete, Ctrl+X, Ctrl+X, Ctrl+X, Ctrl+X, Shift+Delete, Ctrl+X, Ctrl+X
+        MENUITEM "&Copy\tCtrl+C", 57634    // Copy the selection and put it on the clipboard | Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+C, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C
+        MENUITEM "&Delete\tDel", 32871    // Delete the current selection | Delete
+        MENUITEM "Select &All\tCtrl+A", 34338    // Select all items | Ctrl+A, Ctrl+A, Ctrl+A, Ctrl+A, Ctrl+A, Ctrl+A
+        MENUITEM SEPARATOR
+        MENUITEM "&Search History List", 34352    // Search mail and Newsgroup messages | Ctrl+F, Ctrl+Shift+F, Ctrl+Shift+F, Ctrl+Shift+F
+        MENUITEM SEPARATOR
+        MENUITEM "Pr&eferences...", 42526    // Change user preferences for the application
+    }
+    POPUP "&View"
+    {
+        POPUP "Sho&w"
+        {
+            MENUITEM "&Floating Component Bar", 62414    // Undock or dock the Component Bar
+        }
+        MENUITEM SEPARATOR
+        MENUITEM "by &Title", 34547
+        MENUITEM "by &Location", 34548
+        MENUITEM "by &First Visited", 34549
+        MENUITEM "by &Last Visited", 34550
+        MENUITEM "by &Expiration", 34551
+        MENUITEM "by &Visit Count", 34552
+        MENUITEM SEPARATOR
+        MENUITEM "Sort &Ascending", 34553    // Sort Ascending
+        MENUITEM "Sort &Descending", 34554    // Sort Descending
+    }
+    POPUP "&Communicator"
+    {
+        MENUITEM "&Navigator\tCtrl+1", 34458    // Access a web browser | Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1
+        MENUITEM "&Messenger\tCtrl+2", 10215    // Open a messenger window | Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2
+        MENUITEM "&Composer\tCtrl+4", 34461    // Access a web page composer | Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4
+        MENUITEM SEPARATOR
+        POPUP "&Bookmarks"
+        {
+            MENUITEM "&Add Bookmark\tCtrl+D", 32810    // Add the current document to the bookmark list | Ctrl+D, Ctrl+D, Ctrl+D, Ctrl+D, Ctrl+D
+            POPUP "&File Bookmark"
+            {
+                MENUITEM "Root", 62415
+            }
+            MENUITEM "&Edit Bookmarks...\tCtrl+B", 32811    // View bookmarks list | Ctrl+B, Ctrl+B, Ctrl+B, Ctrl+B, Ctrl+B, Ctrl+B
+            MENUITEM SEPARATOR
+            POPUP "&Guide"
+            {
+                MENUITEM "PLACEHOLDER", 65000
+            }
+        }
+        MENUITEM "N&ewsgroups", 10222    // Open the list of newsgroups
+        MENUITEM "&Address Book\tCtrl+Shift+2", 34399    // Access address book | Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2
+        MENUITEM SEPARATOR
+        POPUP "&Tools"
+        {
+            MENUITEM "&History\tCtrl+H", 32808    // Pop up the history list | Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H
+            MENUITEM "&Security Info\tCtrl+Shift+I", 32909    // Show security information | Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I
+            MENUITEM "&Message Center\tCtrl+Shift+1", 34420    // Access mail folders | Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+7, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+7, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+Shift+1
+            MENUITEM "&Import Utility", 10305    // Import mail messages and address books
+            MENUITEM "&Java Console", 32878    // Open the Java Console
+        }
+        MENUITEM SEPARATOR
+        POPUP "&Window"
+        {
+            MENUITEM "Replace Me!", 34060
+        }
+    }
+    POPUP "&Help"
+    {
+        MENUITEM "PLACEHOLDER", 65200
+    }
+}
+
+MENU__121 MENU
+{
+    POPUP "&File"
+    {
+        MENUITEM "&Save As...\tCtrl+S", 32874    // Save this address book to a file | Ctrl+S, Ctrl+S
+        MENUITEM SEPARATOR
+        MENUITEM "Go to Pag&e", 32769    // Open a local file or web page in current window | Ctrl+O, Ctrl+O, Ctrl+L, Ctrl+L, Ctrl+O
+        MENUITEM "Add To Bookmar&ks", 34497
+        MENUITEM "&Add Page to Toolbar", 43020
+        MENUITEM "Create Shortcu&t", 43021
+        MENUITEM SEPARATOR
+        MENUITEM "&Close\tCtrl+W", 57602    // Close the current window | Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W
+    }
+    POPUP "&Edit"
+    {
+        MENUITEM "&Undo\tCtrl+Z", 57643    // Undo the last action | Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z, Ctrl+Z, Alt+Backspace, Ctrl+Z, Alt+Backspace, Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z, Ctrl+Z, Ctrl+Z, Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z
+        MENUITEM "&Redo\tCtrl+E", 57644    // Redo what was undone | Ctrl+Shift+Z, Ctrl+E, Alt+Shift+Backspace, Ctrl+Y, Ctrl+E, Ctrl+Y, Ctrl+Y, Ctrl+Y, Ctrl+Y, Ctrl+Shift+Z
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X", 57635    // Cut the selection and put it on the clipboard | Shift+Delete, Ctrl+X, Ctrl+X, Ctrl+X, Ctrl+X, Shift+Delete, Ctrl+X, Shift+Delete, Ctrl+X, Ctrl+X, Ctrl+X, Ctrl+X, Shift+Delete, Ctrl+X, Ctrl+X
+        MENUITEM "&Copy\tCtrl+C", 57634    // Copy the selection and put it on the clipboard | Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+C, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C
+        MENUITEM "&Delete\tDel", 32871    // Delete the current selection | Delete
+        MENUITEM "Select &All\tCtrl+A", 34338    // Select all items | Ctrl+A, Ctrl+A, Ctrl+A, Ctrl+A, Ctrl+A, Ctrl+A
+    }
+    POPUP "&View"
+    {
+        MENUITEM "by &Title", 34547
+        MENUITEM "by &Location", 34548
+        MENUITEM "by &First Visited", 34549
+        MENUITEM "by &Last Visited", 34550
+        MENUITEM "by &Expiration", 34551
+        MENUITEM "by &Visit Count", 34552
+        MENUITEM SEPARATOR
+        MENUITEM "Sort &Ascending", 34553    // Sort Ascending
+        MENUITEM "Sort &Descending", 34554    // Sort Descending
+        MENUITEM SEPARATOR
+        MENUITEM "&More Options", 704
+        MENUITEM "&Fewer Options", 705
+    }
+    POPUP "&Help"
+    {
+        MENUITEM "PLACEHOLDER", 65200
+    }
+}
+
+MENU__214 MENU
+{
+    MENUITEM SEPARATOR
+    POPUP "&Edit"
+    {
+        MENUITEM "Cu&t\tCtrl+X", 57635    // Cut the selection and put it on the clipboard | Shift+Delete, Ctrl+X, Ctrl+X, Ctrl+X, Ctrl+X, Shift+Delete, Ctrl+X, Shift+Delete, Ctrl+X, Ctrl+X, Ctrl+X, Ctrl+X, Shift+Delete, Ctrl+X, Ctrl+X
+        MENUITEM "&Copy\tCtrl+C", 57634    // Copy the selection and put it on the clipboard | Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+C, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C
+        MENUITEM "&Paste\tCtrl+V", 57637    // Insert clipboard contents | Ctrl+V, Shift+Insert, Ctrl+V, Shift+Insert, Ctrl+V, Shift+Insert, Ctrl+V, Ctrl+V, Ctrl+V, Ctrl+V, Ctrl+V
+        MENUITEM SEPARATOR
+        MENUITEM "Select &All\tCtrl+A", 57642    // Select the entire document | Ctrl+A, Ctrl+A, Ctrl+A
+        MENUITEM SEPARATOR
+        MENUITEM "&Find in Page...\tCtrl+F", 62640    // Search for text in the current page or frame | Ctrl+F
+        MENUITEM "Find A&gain\tCtrl+G", 32880    // Repeat the last find operation | Ctrl+G, F3, Ctrl+G, F3, Ctrl+G, F3, F3, Ctrl+G, Ctrl+G, F3, Ctrl+G, F3
+        MENUITEM SEPARATOR
+        MENUITEM "Pr&eferences...", 42526    // Change user preferences for the application
+    }
+    POPUP "&View"
+    {
+        POPUP "Sho&w"
+        {
+            MENUITEM "&Navigation Toolbar", 62376    // Show or hide the Navigation toolbar
+            MENUITEM "&Location Toolbar", 62377    // Show or hide the Location toolbar
+            MENUITEM "&Personal Toolbar", 62378    // Show or hide the Personal toolbar
+        }
+        MENUITEM SEPARATOR
+        MENUITEM "In&crease Font\tCtrl+]", 62537    // Increase the font size for viewing this page | Ctrl+], Ctrl+], Ctrl+]
+        MENUITEM "&Decrease Font\tCtrl+[", 62538    // Decrease the font size for viewing this page | Ctrl+[, Ctrl+[, Ctrl+[
+        MENUITEM SEPARATOR
+        MENUITEM "&Reload\tCtrl+R", 32782    // Reload the current page | Ctrl+R, Ctrl+R
+        MENUITEM "Show Ima&ges", 32804    // Show images in current page
+        MENUITEM "Re&fresh", 32783    // Redraw the current document
+        MENUITEM "&Stop Page Loading\t<Esc>", 32795    // Stop the current transfer | Esc, Esc, Esc, Esc, Esc, Esc, Esc, Esc
+        MENUITEM "Stop &Animations", 32795    // Stop the current transfer | Esc, Esc, Esc, Esc, Esc, Esc, Esc, Esc
+        MENUITEM SEPARATOR
+        MENUITEM "Page So&urce\tCtrl+U", 32789    // View the source of the current page | Ctrl+U, Ctrl+U, Ctrl+U
+        MENUITEM "Page &Info\tCtrl+I", 32842    // View information about the current page | Ctrl+I
+        POPUP "&Character Set"
+        {
+            MENUITEM "Western (ISO-8859-1)", 33115
+            MENUITEM SEPARATOR
+            MENUITEM "Central European (ISO-8859-2)", 33116
+            MENUITEM "Central European (Windows-1250)", 34474
+            MENUITEM SEPARATOR
+            MENUITEM "Japanese (Auto-Detect)", 33117
+            MENUITEM "Japanese (Shift_JIS)", 33118
+            MENUITEM "Japanese (EUC-JP)", 33119
+            MENUITEM SEPARATOR
+            MENUITEM "Traditional Chinese (Big5)", 33120
+            MENUITEM "Traditional Chinese (EUC-TW)", 33121
+            MENUITEM SEPARATOR
+            MENUITEM "Simplified Chinese (GB2312)", 33122
+            MENUITEM SEPARATOR
+            MENUITEM "Korean (Auto-Detect)", 33123
+            MENUITEM SEPARATOR
+            MENUITEM "Cyrillic (KOI8-R)", 34477
+            MENUITEM "Cyrillic (ISO-8859-5)", 34476
+            MENUITEM "Cyrillic (Windows-1251)", 34475
+            MENUITEM "Cyrillic (CP866)", 34490
+            MENUITEM SEPARATOR
+            MENUITEM "Baltic (ISO-8859-4)", 34491
+            MENUITEM "Baltic (Windows-1257)", 34492
+            MENUITEM SEPARATOR
+            MENUITEM "Greek (ISO-8859-7)", 34478
+            MENUITEM "Greek (Windows-1253)", 34479
+            MENUITEM SEPARATOR
+            MENUITEM "Turkish (ISO-8859-9)", 34480
+            MENUITEM SEPARATOR
+            MENUITEM "Unicode (UTF-8)", 34481
+            MENUITEM "Unicode (UTF-7)", 34489
+            MENUITEM SEPARATOR
+            MENUITEM "User-Defined", 33124
+            MENUITEM SEPARATOR
+            MENUITEM "&Set Default Character Set", 32836    // Set default document encoding
+        }
+    }
+    POPUP "&Go"
+    {
+        MENUITEM "&Back\tAlt+<-", 32780    // Return to previous document in history list | Alt+Left
+        MENUITEM "&Forward\tAlt+->", 32781    // Move forward to next document in history list | Alt+Right
+        MENUITEM "&Home", 32807    // Go to the Home page
+    }
+    POPUP "&Communicator"
+    {
+        MENUITEM "&Navigator\tCtrl+1", 34458    // Access a web browser | Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1
+        MENUITEM "&Messenger\tCtrl+2", 10215    // Open a messenger window | Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2
+        MENUITEM "&Composer\tCtrl+4", 34461    // Access a web page composer | Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4
+        MENUITEM SEPARATOR
+        POPUP "&Bookmarks"
+        {
+            MENUITEM "&Add Bookmark\tCtrl+D", 32810    // Add the current document to the bookmark list | Ctrl+D, Ctrl+D, Ctrl+D, Ctrl+D, Ctrl+D
+            POPUP "&File Bookmark"
+            {
+                MENUITEM "Root", 62415
+            }
+            MENUITEM "&Edit Bookmarks...\tCtrl+B", 32811    // View bookmarks list | Ctrl+B, Ctrl+B, Ctrl+B, Ctrl+B, Ctrl+B, Ctrl+B
+            MENUITEM SEPARATOR
+            POPUP "&Guide"
+            {
+                MENUITEM "PLACEHOLDER", 65000
+            }
+        }
+        MENUITEM "N&ewsgroups", 10222    // Open the list of newsgroups
+        MENUITEM "&Address Book\tCtrl+Shift+2", 34399    // Access address book | Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2
+        POPUP "&Tools"
+        {
+            MENUITEM "&History\tCtrl+H", 32808    // Pop up the history list | Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H
+            MENUITEM "&Security Info\tCtrl+Shift+I", 32909    // Show security information | Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I
+            MENUITEM "&Message Center\tCtrl+Shift+1", 34420    // Access mail folders | Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+7, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+7, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+Shift+1
+            MENUITEM "&Import Utility", 10305    // Import mail messages and address books
+        }
+    }
+    POPUP "&Help"
+    {
+        MENUITEM "PLACEHOLDER", 65200
+    }
+}
+
+MENU__218 MENU
+{
+    POPUP "&File"
+    {
+        POPUP "&New"
+        {
+            MENUITEM "&Browser Window\tCtrl+N", 32770    // Create a new Navigator window for viewing web pages | Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N
+            MENUITEM "&Message\tCtrl+M", 32879    // Create a new mail or newsgroup message | Ctrl+M, Ctrl+M, Ctrl+M, Ctrl+M, Ctrl+M, Ctrl+M
+            MENUITEM "Blank &Page\tCtrl+Shift+N", 42279    // Create a new web page | Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N
+            MENUITEM SEPARATOR
+            MENUITEM "Page From &Template...", 34483    // Start a new page based on another page or using Netscape's Template Website.
+            MENUITEM "Page From &Wizard...", 65197    // Create a new page using New Page Wizard at Netscpape Web site
+        }
+        MENUITEM "&Open Page...\tCtrl+O", 32769    // Open a local file or web page in current window | Ctrl+O, Ctrl+O, Ctrl+L, Ctrl+L, Ctrl+O
+        MENUITEM "&Close\tCtrl+W", 57602    // Close the current window | Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W
+        MENUITEM SEPARATOR
+        MENUITEM "&Save As...\tCtrl+S", 32771    // Save a copy of the current page | Ctrl+S, Ctrl+S, Ctrl+S
+        MENUITEM "Save &Frame As...", 62431    // Save a copy of the selected frame
+        MENUITEM SEPARATOR
+        MENUITEM "Sen&d Page...", 32809    // Send the current page to a recipient | Ctrl+M, Ctrl+M
+        MENUITEM "&Edit Page", 42003    // Edit the current page
+        MENUITEM "Edit &Frame", 62432    // Edit the current frame
+        MENUITEM "&Upload File...", 34366    // Upload (send) a file to this FTP directory
+        MENUITEM SEPARATOR
+        MENUITEM "S&ynchronize...", 42600    // Download items for offline use and send unsent messages
+        MENUITEM "Work Offl&ine", 42509    // Switch network connectedness mode
+        MENUITEM SEPARATOR
+        MENUITEM "Pa&ge Setup...", 57605    // Change the printing options
+        MENUITEM "Print Pre&view", 57609    // Preview the full page
+        MENUITEM "&Print...\tCtrl+P", 57607    // Print this page | Ctrl+P, Ctrl+P, Ctrl+P, Ctrl+P, Ctrl+P
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit\tCtrl+Q", 57665    // Close all windows in the application and exit | Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q
+    }
+    POPUP "&Edit"
+    {
+        MENUITEM "Cu&t\tCtrl+X", 57635    // Cut the selection and put it on the clipboard | Shift+Delete, Ctrl+X, Ctrl+X, Ctrl+X, Ctrl+X, Shift+Delete, Ctrl+X, Shift+Delete, Ctrl+X, Ctrl+X, Ctrl+X, Ctrl+X, Shift+Delete, Ctrl+X, Ctrl+X
+        MENUITEM "&Copy\tCtrl+C", 57634    // Copy the selection and put it on the clipboard | Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+C, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C
+        MENUITEM "&Paste\tCtrl+V", 57637    // Insert clipboard contents | Ctrl+V, Shift+Insert, Ctrl+V, Shift+Insert, Ctrl+V, Shift+Insert, Ctrl+V, Ctrl+V, Ctrl+V, Ctrl+V, Ctrl+V
+        MENUITEM SEPARATOR
+        MENUITEM "Select &All\tCtrl+A", 57642    // Select the entire document | Ctrl+A, Ctrl+A, Ctrl+A
+        MENUITEM SEPARATOR
+        MENUITEM "&Find in Page...\tCtrl+F", 32818    // Search for text in the current page | Ctrl+F, Ctrl+F, Ctrl+F, Ctrl+F, Ctrl+F, Ctrl+F
+        MENUITEM "Find A&gain\tF3", 32880    // Repeat the last find operation | Ctrl+G, F3, Ctrl+G, F3, Ctrl+G, F3, F3, Ctrl+G, Ctrl+G, F3, Ctrl+G, F3
+        MENUITEM SEPARATOR
+        MENUITEM "Pr&eferences...", 42526    // Change user preferences for the application
+    }
+    POPUP "&View"
+    {
+        POPUP "&Toolbars"
+        {
+            MENUITEM "Show Command Toolbar", 62376    // Show or hide the Navigation toolbar
+            MENUITEM "Show Location Toolbar", 62377    // Show or hide the Location toolbar
+            MENUITEM "Show Custom Toolbar", 62378    // Show or hide the Personal toolbar
+        }
+        MENUITEM SEPARATOR
+        MENUITEM "&Reload\tCtrl+R", 32782    // Reload the current page | Ctrl+R, Ctrl+R
+        MENUITEM "Show Ima&ges\tCtrl+I", 32804    // Show images in current page
+        MENUITEM "Re&fresh", 32783    // Redraw the current document
+        MENUITEM "&Stop Page Loading\t<Esc>", 32795    // Stop the current transfer | Esc, Esc, Esc, Esc, Esc, Esc, Esc, Esc
+        MENUITEM "Stop &Animations", 32795    // Stop the current transfer | Esc, Esc, Esc, Esc, Esc, Esc, Esc, Esc
+        MENUITEM SEPARATOR
+        MENUITEM "S&ource", 32789    // View the source of the current page | Ctrl+U, Ctrl+U, Ctrl+U
+        MENUITEM "I&nfo", 32842    // View information about the current page | Ctrl+I
+        POPUP "&Encoding"
+        {
+            MENUITEM "Western (ISO-8859-1)", 33115
+            MENUITEM SEPARATOR
+            MENUITEM "Central European (ISO-8859-2)", 33116
+            MENUITEM "Central European (Windows-1250)", 34474
+            MENUITEM SEPARATOR
+            MENUITEM "Japanese (Auto-Detect)", 33117
+            MENUITEM "Japanese (Shift_JIS)", 33118
+            MENUITEM "Japanese (EUC-JP)", 33119
+            MENUITEM SEPARATOR
+            MENUITEM "Traditional Chinese (Big5)", 33120
+            MENUITEM "Traditional Chinese (EUC-TW)", 33121
+            MENUITEM SEPARATOR
+            MENUITEM "Simplified Chinese (GB2312)", 33122
+            MENUITEM SEPARATOR
+            MENUITEM "Korean (Auto-Detect)", 33123
+            MENUITEM SEPARATOR
+            MENUITEM "Cyrillic (KOI8-R)", 34477
+            MENUITEM "Cyrillic (ISO-8859-5)", 34476
+            MENUITEM "Cyrillic (Windows-1251)", 34475
+            MENUITEM "Cyrillic (CP866)", 34490
+            MENUITEM SEPARATOR
+            MENUITEM "Baltic (ISO-8859-4)", 34491
+            MENUITEM "Baltic (Windows-1257)", 34492
+            MENUITEM SEPARATOR
+            MENUITEM "Greek (ISO-8859-7)", 34478
+            MENUITEM "Greek (Windows-1253)", 34479
+            MENUITEM SEPARATOR
+            MENUITEM "Turkish (ISO-8859-9)", 34480
+            MENUITEM SEPARATOR
+            MENUITEM "Unicode (UTF-8)", 34481
+            MENUITEM "Unicode (UTF-7)", 34489
+            MENUITEM SEPARATOR
+            MENUITEM "User-Defined", 33124
+            MENUITEM SEPARATOR
+            MENUITEM "&Set Default Character Set", 32836    // Set default document encoding
+        }
+    }
+    POPUP "&Go"
+    {
+        MENUITEM "&Back\tAlt+<-", 32780    // Return to previous document in history list | Alt+Left
+        MENUITEM "&Forward\tAlt+->", 32781    // Move forward to next document in history list | Alt+Right
+        MENUITEM "&Home", 32807    // Go to the Home page
+        MENUITEM SEPARATOR
+        MENUITEM "&Default Publish Location", 34484    // Go to your default publishing location to view your web site
+    }
+    POPUP "&Communicator"
+    {
+        MENUITEM "&Navigator\tCtrl+1", 34458    // Access a web browser | Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1
+        MENUITEM "&Messenger\tCtrl+2", 10215    // Open a messenger window | Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2
+        MENUITEM "Collabra &Newsgroups\tCtrl+3", 34421    // Access Newsgroups | Ctrl+3, Ctrl+3, Ctrl+3, Ctrl+3, Ctrl+3, Ctrl+3, Ctrl+3, Ctrl+3, Ctrl+3, Ctrl+3
+        MENUITEM "&Composer\tCtrl+4", 34461    // Access a web page composer | Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4
+        MENUITEM "C&onference\tCtrl+5", 62429    // Open the conferencing window | Ctrl+5, Ctrl+5, Ctrl+5, Ctrl+5, Ctrl+5, Ctrl+5, Ctrl+5, Ctrl+5, Ctrl+5, Ctrl+5
+        MENUITEM SEPARATOR
+        MENUITEM "N&ewsgroups", 10222    // Open the list of newsgroups
+        MENUITEM "&Address Book\tCtrl+Shift+2", 34399    // Access address book | Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2
+        POPUP "&Bookmarks"
+        {
+            MENUITEM "&Add Bookmark\tCtrl+D", 32810    // Add the current document to the bookmark list | Ctrl+D, Ctrl+D, Ctrl+D, Ctrl+D, Ctrl+D
+            MENUITEM "&Edit Bookmarks...\tCtrl+B", 32811    // View bookmarks list | Ctrl+B, Ctrl+B, Ctrl+B, Ctrl+B, Ctrl+B, Ctrl+B
+            MENUITEM SEPARATOR
+            POPUP "&Guide"
+            {
+                MENUITEM "PLACEHOLDER", 65000
+            }
+        }
+        MENUITEM "&History", 32808    // Pop up the history list | Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H
+        MENUITEM "&Java Console", 32878    // Open the Java Console
+        MENUITEM "Show Taskbar", 62414    // Undock or dock the Component Bar
+        MENUITEM SEPARATOR
+        MENUITEM "New Window", 34060
+    }
+    POPUP "&Help"
+    {
+        MENUITEM "PLACEHOLDER", 65200
+    }
+}
+
+MENU__221 MENU
+{
+    POPUP "&File"
+    {
+        POPUP "&New"
+        {
+            MENUITEM "&Navigator Window\tCtrl+N", 32770    // Create a new Navigator window for viewing web pages | Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N
+            MENUITEM "&Message\tCtrl+M", 34369    // Create a new mail or newsgroup message | Ctrl+M
+            MENUITEM "Blank &Page\tCtrl+Shift+N", 42279    // Create a new web page | Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N
+            MENUITEM SEPARATOR
+            MENUITEM "Page From &Template...", 34483    // Start a new page based on another page or using Netscape's Template Website.
+            MENUITEM "Page From &Wizard...", 65197    // Create a new page using New Page Wizard at Netscpape Web site
+        }
+        MENUITEM "Ne&w Folder...", 34008    // Create a new mail folder
+        MENUITEM "&Open\tCtrl+O", 34000    // Open selected folder or group | Ctrl+O
+        MENUITEM SEPARATOR
+        MENUITEM "Get New &Messages\tCtrl+T", 34006    // Get new mail or newsgroup messages | Ctrl+T, Ctrl+T, Ctrl+T
+        MENUITEM "Sen&d Unsent Messages", 34007    // Send the messages in the %s folder now
+        MENUITEM "&Update Message Count", 42545    // Update number of unread messages
+        MENUITEM "Su&bscribe...", 34521    // Subscribe to Newsgroups
+        MENUITEM SEPARATOR
+        MENUITEM "&Rename Folder...", 34455    // Change the name of the selected folder
+        MENUITEM "Empt&y Trash Folder", 34011    // Empty the trash folder
+        MENUITEM "Compac&t Folders", 34010    // Compress all mail folders
+        MENUITEM SEPARATOR
+        MENUITEM "&Import...", 10305    // Import mail messages and address books
+        MENUITEM SEPARATOR
+        POPUP "Off&line"
+        {
+            MENUITEM "Work Offl&ine", 42509    // Switch network connectedness mode
+            MENUITEM SEPARATOR
+            MENUITEM "&Synchronize...", 42600    // Download items for offline use and send unsent messages
+            MENUITEM SEPARATOR
+            MENUITEM "Get Selected &Messages", 42532
+            MENUITEM "Get &Flagged Messages", 42376
+        }
+        MENUITEM SEPARATOR
+        MENUITEM "&Close\tCtrl+W", 57602    // Close the current window | Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W
+        MENUITEM "E&xit\tCtrl+Q", 57665    // Close all windows in the application and exit | Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q
+    }
+    POPUP "&Edit"
+    {
+        MENUITEM "&Undo\tCtrl+Z", 57643    // Undo the last action | Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z, Ctrl+Z, Alt+Backspace, Ctrl+Z, Alt+Backspace, Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z, Ctrl+Z, Ctrl+Z, Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z
+        MENUITEM "&Redo\tCtrl+Y", 57644    // Redo what was undone | Ctrl+Shift+Z, Ctrl+E, Alt+Shift+Backspace, Ctrl+Y, Ctrl+E, Ctrl+Y, Ctrl+Y, Ctrl+Y, Ctrl+Y, Ctrl+Shift+Z
+        MENUITEM SEPARATOR
+        MENUITEM "&Delete Folder\tDel", 34406    // Delete the selected folder(s) | Delete
+        MENUITEM "Select &All\tCtrl+A", 34338    // Select all items | Ctrl+A, Ctrl+A, Ctrl+A, Ctrl+A, Ctrl+A, Ctrl+A
+        MENUITEM SEPARATOR
+        MENUITEM "&Search Messages\tCtrl+Shift+F", 34352    // Search mail and Newsgroup messages | Ctrl+F, Ctrl+Shift+F, Ctrl+Shift+F, Ctrl+Shift+F
+        MENUITEM SEPARATOR
+        MENUITEM "Message F&ilters...", 34380    // Set rules for filtering mail into folders
+        MENUITEM "Pr&operties\tAlt+Enter", 42372    // View the current selection's properties | Alt+Enter, Alt+Enter, Alt+Enter
+        MENUITEM SEPARATOR
+        MENUITEM "Pr&eferences...", 32882    // Change user preferences for the application
+    }
+    POPUP "&View"
+    {
+        POPUP "Sho&w"
+        {
+            MENUITEM "&Message Toolbar", 62376    // Show or hide the Navigation toolbar
+            MENUITEM "&Location Toolbar", 62377    // Show or hide the Location toolbar
+            MENUITEM SEPARATOR
+            MENUITEM "Floating &Component Bar", 62414    // Undock or dock the Component Bar
+        }
+        MENUITEM SEPARATOR
+        MENUITEM "&Stop\tESC", 32795    // Stop the current transfer | Esc, Esc, Esc, Esc, Esc, Esc, Esc, Esc
+    }
+    POPUP "&Communicator"
+    {
+        MENUITEM "&Navigator\tCtrl+1", 34458    // Access a web browser | Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1
+        MENUITEM "&Messenger\tCtrl+2", 10215    // Open a messenger window | Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2
+        MENUITEM "&Composer\tCtrl+4", 34461    // Access a web page composer | Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4
+        MENUITEM SEPARATOR
+        POPUP "&Bookmarks"
+        {
+            MENUITEM "&Add Bookmark\tCtrl+D", 32810    // Add the current document to the bookmark list | Ctrl+D, Ctrl+D, Ctrl+D, Ctrl+D, Ctrl+D
+            POPUP "&File Bookmark"
+            {
+                MENUITEM "Root", 62415
+            }
+            MENUITEM "&Edit Bookmarks...\tCtrl+B", 32811    // View bookmarks list | Ctrl+B, Ctrl+B, Ctrl+B, Ctrl+B, Ctrl+B, Ctrl+B
+            MENUITEM SEPARATOR
+            POPUP "&Guide"
+            {
+                MENUITEM "PLACEHOLDER", 65000
+            }
+        }
+        MENUITEM "N&ewsgroups", 10222    // Open the list of newsgroups
+        MENUITEM "&Address Book\tCtrl+Shift+2", 34399    // Access address book | Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2
+        MENUITEM SEPARATOR
+        POPUP "&Tools"
+        {
+            MENUITEM "&History\tCtrl+H", 32808    // Pop up the history list | Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H
+            MENUITEM "&Security Info\tCtrl+Shift+I", 32909    // Show security information | Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I
+            MENUITEM "&Message Center\tCtrl+Shift+1", 34420    // Access mail folders | Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+7, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+7, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+Shift+1
+            MENUITEM "&Import Utility", 10305    // Import mail messages and address books
+            MENUITEM "&Java Console", 32878    // Open the Java Console
+        }
+        POPUP "&Server Tools"
+        {
+            MENUITEM "&Page Services", 34057    // View Page Services
+            MENUITEM "&Mail Account", 42539    // Change mail password, set up mail forwarding and vacation notices
+            MENUITEM "Mailing &Lists", 10017
+            MENUITEM "&Folder Permissions", 10018
+            MENUITEM "Manage &Newsgroups", 42510    // Go to Newsgroup server administration page
+        }
+        MENUITEM SEPARATOR
+        POPUP "&Window"
+        {
+            MENUITEM "Replace Me!", 34060
+        }
+    }
+    POPUP "&Help"
+    {
+        MENUITEM "PLACEHOLDER", 65200
+    }
+}
+
+MENU__224 MENU
+{
+    POPUP "&File"
+    {
+        POPUP "&New"
+        {
+            MENUITEM "&Navigator Window\tCtrl+N", 32770    // Create a new Navigator window for viewing web pages | Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N
+            MENUITEM "&Message\tCtrl+M", 34369    // Create a new mail or newsgroup message | Ctrl+M
+            MENUITEM "Blank &Page\tCtrl+Shift+N", 42279    // Create a new web page | Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N
+            MENUITEM SEPARATOR
+            MENUITEM "Page From &Template", 34483    // Start a new page based on another page or using Netscape's Template Website.
+            MENUITEM "Page From &Wizard...", 65197    // Create a new page using New Page Wizard at Netscpape Web site
+        }
+        MENUITEM "Save\tCtrl+S", 10049    // Save this message | Ctrl+S, Ctrl+S
+        POPUP "Save &As"
+        {
+            MENUITEM "&File...", 42426    // Save a copy of the current message
+            MENUITEM SEPARATOR
+            MENUITEM "&Draft", 42427    // Save the message in the Drafts folder to send later
+            MENUITEM "&Template", 10304    // Save this message in the Templates folder to use again
+        }
+        POPUP "Attac&h"
+        {
+            MENUITEM "&File...", 42455    // Attach a file to the current message
+            MENUITEM "&Web Page...", 42456    // Attach a web page to the current message
+            MENUITEM SEPARATOR
+            MENUITEM "&Personal Card (vCard)", 42534    // Attach my personal address book card to the current message
+        }
+        MENUITEM SEPARATOR
+        MENUITEM "Sen&d Now\tCtrl+Enter", 42448    // Send the message now
+        MENUITEM "Send &Later", 42449    // Queue message for later delivery
+        MENUITEM "&Quote Original Message", 42458    // Paste text from the original page in quoted form
+        MENUITEM "Selec&t Addresses...", 59405    // Select addresses of recipients
+        MENUITEM SEPARATOR
+        MENUITEM "Pa&ge Setup...", 57605    // Change the printing options
+        MENUITEM "Print Pre&view", 57609    // Preview the full page
+        MENUITEM "&Print...\tCtrl+P", 57607    // Print this page | Ctrl+P, Ctrl+P, Ctrl+P, Ctrl+P, Ctrl+P
+        MENUITEM SEPARATOR
+        MENUITEM "&Close\tCtrl+W", 57602    // Close the current window | Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W
+        MENUITEM "E&xit\tCtrl+Q", 57665    // Close all windows in the application and exit | Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q
+    }
+    POPUP "&Edit"
+    {
+        MENUITEM "{&U&R}", 57643    // Undo the last action | Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z, Ctrl+Z, Alt+Backspace, Ctrl+Z, Alt+Backspace, Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z, Ctrl+Z, Ctrl+Z, Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X", 57635    // Cut the selection and put it on the clipboard | Shift+Delete, Ctrl+X, Ctrl+X, Ctrl+X, Ctrl+X, Shift+Delete, Ctrl+X, Shift+Delete, Ctrl+X, Ctrl+X, Ctrl+X, Ctrl+X, Shift+Delete, Ctrl+X, Ctrl+X
+        MENUITEM "&Copy\tCtrl+C", 57634    // Copy the selection and put it on the clipboard | Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+C, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C
+        MENUITEM "&Paste\tCtrl+V", 57637    // Insert clipboard contents | Ctrl+V, Shift+Insert, Ctrl+V, Shift+Insert, Ctrl+V, Shift+Insert, Ctrl+V, Ctrl+V, Ctrl+V, Ctrl+V, Ctrl+V
+        MENUITEM "Paste as &Quotation", 42441    // Paste clipboard contents in quoted form
+        MENUITEM "&Delete\tDel", 32871    // Delete the current selection | Delete
+        MENUITEM "Select &All\tCtrl+A", 34338    // Select all items | Ctrl+A, Ctrl+A, Ctrl+A, Ctrl+A, Ctrl+A, Ctrl+A
+        MENUITEM "Select Ta&ble", 42357    // Select the entire table
+        MENUITEM SEPARATOR
+        POPUP "De&lete Table"
+        {
+            MENUITEM "&Table", 42322    // Delete the table at the insertion location
+            MENUITEM "&Cell", 42325    // Delete a cell (row and column) in the table
+            MENUITEM "&Row", 42323    // Delete a row in the table
+            MENUITEM "C&olumn", 42324    // Delete a column in the table
+        }
+        MENUITEM "Remove Lin&k", 42270    // Remove link at the insertion point or all links within the selection
+        MENUITEM SEPARATOR
+        MENUITEM "&Find...\tCtrl+F", 32818    // Search for text in the current page | Ctrl+F, Ctrl+F, Ctrl+F, Ctrl+F, Ctrl+F, Ctrl+F
+        MENUITEM "Find A&gain\tCtrl+G", 32880    // Repeat the last find operation | Ctrl+G, F3, Ctrl+G, F3, Ctrl+G, F3, F3, Ctrl+G, Ctrl+G, F3, Ctrl+G, F3
+        MENUITEM SEPARATOR
+        MENUITEM "Name Completion", 42551    // Accept email addresses as typed | Ctrl+D
+        MENUITEM "&Show Matching Addresses\tCtrl+J", 42550    // Display list of matching email addresses | Ctrl+J
+        MENUITEM SEPARATOR
+        MENUITEM "Pr&eferences...", 42526    // Change user preferences for the application
+    }
+    POPUP "&View"
+    {
+        POPUP "Sho&w"
+        {
+            MENUITEM "Message &Toolbar", 42006    // Show or hide Message Toolbar
+            MENUITEM "Addressing Area", 42447    // View the message body and hide the addresses
+            MENUITEM "Formatting Toolbar", 42005    // Show or Hide the Formatting Toolbar
+            MENUITEM SEPARATOR
+            MENUITEM "Floating Component Bar", 62414    // Undock or dock the Component Bar
+            MENUITEM SEPARATOR
+            MENUITEM "Paragraph Marks", 42291    // Display graphic at end of each paragraph
+        }
+        MENUITEM SEPARATOR
+        MENUITEM "&Address", 42445    // View addresses of recipients
+        MENUITEM "A&ttachments", 42446    // View message attachments
+        MENUITEM "&Options", 42518    // View message options
+        MENUITEM SEPARATOR
+        MENUITEM "Page So&urce", 32789    // View the source of the current page | Ctrl+U, Ctrl+U, Ctrl+U
+        MENUITEM "Page &Info", 32842    // View information about the current page | Ctrl+I
+        MENUITEM SEPARATOR
+        POPUP "&Character Set"
+        {
+            MENUITEM "Western (ISO-8859-1)", 33115
+            MENUITEM SEPARATOR
+            MENUITEM "Central European (ISO-8859-2)", 33116
+            MENUITEM "Central European (Windows-1250)", 34474
+            MENUITEM SEPARATOR
+            MENUITEM "Japanese (Auto-Detect)", 33117
+            MENUITEM "Japanese (Shift_JIS)", 33118
+            MENUITEM "Japanese (EUC-JP)", 33119
+            MENUITEM SEPARATOR
+            MENUITEM "Traditional Chinese (Big5)", 33120
+            MENUITEM "Traditional Chinese (EUC-TW)", 33121
+            MENUITEM SEPARATOR
+            MENUITEM "Simplified Chinese (GB2312)", 33122
+            MENUITEM SEPARATOR
+            MENUITEM "Korean (Auto-Detect)", 33123
+            MENUITEM SEPARATOR
+            MENUITEM "Cyrillic (KOI8-R)", 34477
+            MENUITEM "Cyrillic (ISO-8859-5)", 34476
+            MENUITEM "Cyrillic (Windows-1251)", 34475
+            MENUITEM "Cyrillic (CP866)", 34490
+            MENUITEM SEPARATOR
+            MENUITEM "Baltic (ISO-8859-4)", 34491
+            MENUITEM "Baltic (Windows-1257)", 34492
+            MENUITEM SEPARATOR
+            MENUITEM "Greek (Windows-1253)", 34479
+            MENUITEM "Greek (ISO-8859-7)", 34478
+            MENUITEM SEPARATOR
+            MENUITEM "Turkish (ISO-8859-9)", 34480
+            MENUITEM SEPARATOR
+            MENUITEM "Unicode (UTF-8)", 34481
+            MENUITEM "Unicode (UTF-7)", 34489
+            MENUITEM SEPARATOR
+            MENUITEM "User-Defined", 33124
+            MENUITEM SEPARATOR
+            MENUITEM "&Set Default Character Set", 32836    // Set default document encoding
+        }
+    }
+    POPUP "&Insert"
+    {
+        MENUITEM "&Link...\tCtrl+Shift+L", 42134    // Insert a new link or create a link to the selection
+        MENUITEM "T&arget...", 42108    // Insert a Target
+        MENUITEM "&Image...", 42100    // Insert an image at the insertion location
+        MENUITEM "H&orizontal Line", 42101    // Insert a horizontal Line at the insertion location
+        POPUP "&Table"
+        {
+            MENUITEM "&Table...", 42317    // Insert a table at the insertion location
+            MENUITEM "&Row", 42318    // Insert a new row in the table
+            MENUITEM "C&olumn", 42319    // Insert a new column in the table
+            MENUITEM "&Cell", 42320    // Insert a new cell (row and column) in the table
+        }
+        MENUITEM "&HTML Tag...", 42109    // Insert an arbitrary HTML Tag at the insertion location
+        MENUITEM SEPARATOR
+        MENUITEM "&New Line Break\tShift+Enter", 42102    // Insert break to continue text on a new line
+        MENUITEM "&Break below Image(s)", 42105    // Insert break to continue text below images to the left and the right
+    }
+    POPUP "F&ormat"
+    {
+        POPUP "&Font"
+        {
+            MENUITEM "{}", 36479
+        }
+        POPUP "Si&ze"
+        {
+            MENUITEM "{}", 36319    // Decrease font size by 2 levels
+        }
+        POPUP "&Style"
+        {
+            MENUITEM "&Bold\tCtrl+B", 42009    // Set the style to Bold | Ctrl+B, Ctrl+B, Ctrl+B
+            MENUITEM "&Italic\tCtrl+I", 42010    // Set the style to Italic | Ctrl+I, Ctrl+I
+            MENUITEM "&Underline\tCtrl+U", 42011    // Set the style to Underline | Ctrl+U, Ctrl+U
+            MENUITEM "S&trikethrough", 42015    // Set the style to Strikethrough
+            MENUITEM "Su&perscript", 42013    // Set the style to Superscript
+            MENUITEM "&Subscript", 42014    // Set the style to Subscript
+            MENUITEM "Blin&king", 42016    // Set the style to Blink
+            MENUITEM "&Nonbreaking", 42012    // Set the style to not break between words (no word wrap)
+        }
+        MENUITEM "&Color...", 950    // Change the current text color | Ctrl+Shift+C, Ctrl+Shift+C
+        MENUITEM "&Remove All Styles\tCtrl+Shift+K", 42017    // Remove all character styles and link(s) | Ctrl+Shift+K, Ctrl+Shift+K
+        MENUITEM SEPARATOR
+        POPUP "&Heading"
+        {
+            MENUITEM "&1", 36005    // Set the style to Heading 1
+            MENUITEM "&2", 36006    // Set the style to Heading 2
+            MENUITEM "&3", 36007    // Set the style to Heading 3
+            MENUITEM "&4", 36008    // Set the style to Heading 4
+            MENUITEM "&5", 36009    // Set the style to Heading 5
+            MENUITEM "&6", 36010    // Set the style to Heading 6
+        }
+        POPUP "&Paragraph"
+        {
+            MENUITEM "&Normal", 36101    // Set the style to Normal
+            MENUITEM "&Address", 36013    // Set the style to Address
+            MENUITEM "&Formatted", 36017    // Set the style to Preformat
+            MENUITEM "&Block Quote", 36038    // Set the style to Block Quote
+            MENUITEM "Description &Title", 36025    // Set the style to Description Title
+            MENUITEM "&Description Text", 36026    // Set the style to Description Text
+        }
+        POPUP "&List"
+        {
+            MENUITEM "N&one", 42527    // Remove list style
+            MENUITEM "&Bulletted", 42180    // Start, change to, or clear an unnumbered (bulleted) list
+            MENUITEM "&Numbered", 42181    // Start, change to, or clear a numbered list
+            MENUITEM "&Description", 36024    // Start, change to, or clear a description list
+            MENUITEM "D&irectory", 36022    // Set the style to Directory List
+            MENUITEM "&Menu", 36021    // Set the style to Menu List
+        }
+        POPUP "&Align"
+        {
+            MENUITEM "&Left\tCtrl+L", 42092    // Align to left margin | Ctrl+L, Ctrl+L
+            MENUITEM "&Center\tCtrl+E", 42094    // Center between margins | Ctrl+E, Ctrl+E
+            MENUITEM "&Right\tCtrl+R", 42093    // Align to right margin | Ctrl+R, Ctrl+R
+        }
+        MENUITEM SEPARATOR
+        MENUITEM "&Increase Indent\tCtrl =", 42097    // Increase indent of paragraph one level
+        MENUITEM "&Decrease Indent\tCtrl -", 42098    // Decrease indent of paragraph one level
+        MENUITEM SEPARATOR
+        MENUITEM "{}", 42075    // Change properties of selected object or text | Alt+Enter, Alt+Enter, Alt+Enter
+        MENUITEM "&Table Properties", 42332    // Change table properties
+        MENUITEM "Pa&ge Colors and Properties", 42082    // Change page properties
+    }
+    POPUP "&Tools"
+    {
+        MENUITEM "Check &Spelling...\tCtrl+K", 36419    // Check spelling in the message | Ctrl+K, Ctrl+K, Ctrl+K
+        MENUITEM "{Editor Plug-ins}", 36429
+        MENUITEM "Stop Active &Plug-in", 36420    // Stop currently running editor plug-in
+    }
+    POPUP "&Communicator"
+    {
+        MENUITEM "&Navigator\tCtrl+1", 34458    // Access a web browser | Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1
+        MENUITEM "&Messenger\tCtrl+2", 10215    // Open a messenger window | Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2
+        MENUITEM "&Composer\tCtrl+4", 34461    // Access a web page composer | Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4
+        MENUITEM SEPARATOR
+        POPUP "&Bookmarks"
+        {
+            MENUITEM "&Add Bookmark\tCtrl+D", 32810    // Add the current document to the bookmark list | Ctrl+D, Ctrl+D, Ctrl+D, Ctrl+D, Ctrl+D
+            POPUP "&File Bookmark"
+            {
+                MENUITEM "Root", 62415
+            }
+            MENUITEM "&Edit Bookmarks...", 32811    // View bookmarks list | Ctrl+B, Ctrl+B, Ctrl+B, Ctrl+B, Ctrl+B, Ctrl+B
+            MENUITEM SEPARATOR
+            POPUP "&Places"
+            {
+                MENUITEM "PLACEHOLDER", 65000
+            }
+        }
+        MENUITEM "N&ewsgroups", 10222    // Open the list of newsgroups
+        MENUITEM "&Address Book\tCtrl+Shift+2", 34399    // Access address book | Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2
+        MENUITEM SEPARATOR
+        POPUP "&Tools"
+        {
+            MENUITEM "&History\tCtrl+H", 32808    // Pop up the history list | Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H
+            MENUITEM "&Security Info\tCtrl+Shift+I", 32909    // Show security information | Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I
+            MENUITEM "&Message Center\tCtrl+Shift+1", 34420    // Access mail folders | Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+7, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+7, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+Shift+1
+            MENUITEM "&Import Utility", 10305    // Import mail messages and address books
+            MENUITEM "&Java Console", 32878    // Open the Java Console
+        }
+        MENUITEM SEPARATOR
+        POPUP "&Window"
+        {
+            MENUITEM "{}", 34060
+        }
+    }
+    POPUP "&Help"
+    {
+        MENUITEM "PLACEHOLDER", 65200
+    }
+}
+
+MENU__231 MENU
+{
+    POPUP "&File"
+    {
+        POPUP "&New"
+        {
+            MENUITEM "&Navigator\tCtrl+N", 32770    // Create a new Navigator window for viewing web pages | Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N
+            MENUITEM "&Message\tCtrl+M", 34369    // Create a new mail or newsgroup message | Ctrl+M
+            MENUITEM "Blank &Page\tCtrl+Shift+N", 42279    // Create a new web page | Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N
+            MENUITEM SEPARATOR
+            MENUITEM "Page From &Template...", 34483    // Start a new page based on another page or using Netscape's Template Website.
+            MENUITEM "Page From &Wizard...", 65197    // Create a new page using New Page Wizard at Netscpape Web site
+        }
+        MENUITEM "New &Card...", 34135    // Create a new address book card entry
+        MENUITEM "New &List...", 34136    // Create a new address book list
+        MENUITEM "New &Address Book ...", 34145    // Create a new address book
+        MENUITEM "New &Directory ...", 34156    // Create a new directory
+        MENUITEM SEPARATOR
+        MENUITEM "C&all", 42378    // Place a call with conference software
+        MENUITEM SEPARATOR
+        MENUITEM "&Import...", 34138    // Import a file into the address book
+        MENUITEM "&Export...", 32874    // Save this address book to a file | Ctrl+S, Ctrl+S
+        MENUITEM SEPARATOR
+        MENUITEM "&Close\tCtrl+W", 57602    // Close the current window | Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W
+        MENUITEM "E&xit\tCtrl+Q", 57665    // Close all windows in the application and exit | Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q
+    }
+    POPUP "&Edit"
+    {
+        MENUITEM "&Undo\tCtrl+Z", 57643    // Undo the last action | Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z, Ctrl+Z, Alt+Backspace, Ctrl+Z, Alt+Backspace, Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z, Ctrl+Z, Ctrl+Z, Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z
+        MENUITEM "&Redo\tCtrl+E", 57644    // Redo what was undone | Ctrl+Shift+Z, Ctrl+E, Alt+Shift+Backspace, Ctrl+Y, Ctrl+E, Ctrl+Y, Ctrl+Y, Ctrl+Y, Ctrl+Y, Ctrl+Shift+Z
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X", 57635    // Cut the selection and put it on the clipboard | Shift+Delete, Ctrl+X, Ctrl+X, Ctrl+X, Ctrl+X, Shift+Delete, Ctrl+X, Shift+Delete, Ctrl+X, Ctrl+X, Ctrl+X, Ctrl+X, Shift+Delete, Ctrl+X, Ctrl+X
+        MENUITEM "&Copy\tCtrl+C", 57634    // Copy the selection and put it on the clipboard | Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+C, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C
+        MENUITEM "&Paste\tCtrl+V", 57637    // Insert clipboard contents | Ctrl+V, Shift+Insert, Ctrl+V, Shift+Insert, Ctrl+V, Shift+Insert, Ctrl+V, Ctrl+V, Ctrl+V, Ctrl+V, Ctrl+V
+        MENUITEM "&Delete\tDel", 32871    // Delete the current selection | Delete
+        MENUITEM "Select &All\tCtrl+A", 57642    // Select the entire document | Ctrl+A, Ctrl+A, Ctrl+A
+        MENUITEM SEPARATOR
+        MENUITEM "&Search for...", 1351    // Search an LDAP directory from the address book
+        MENUITEM SEPARATOR
+        MENUITEM "&HTML Domains...", 42543    // Edit the list of domains that can receive HTML messages
+        MENUITEM "Card &Properties", 34137    // View and edit properties of entry's address book card | Alt+Enter, Alt+Enter
+        MENUITEM SEPARATOR
+        MENUITEM "P&references...", 32882    // Change user preferences for the application
+    }
+    POPUP "&View"
+    {
+        POPUP "Sho&w"
+        {
+            MENUITEM "&Address Book Toolbar", 10004    // Show or hide the Address Book toolbar
+            MENUITEM "Address &Books", 34598    // Show or hide the Directory pane.
+            MENUITEM "Floating &Component Bar", 62414    // Undock or dock the Component Bar
+        }
+        POPUP "S&ort"
+        {
+            MENUITEM "by &Type", 42553    // Sort address book entries by type
+            MENUITEM "by &Name", 42554    // Sort address book entries by name
+            MENUITEM "by &Email", 42555    // Sort address book entries by email address
+            MENUITEM "by &Organization", 42556    // Sort address book entries by company
+            MENUITEM "by &City", 42557    // Sort address book entries by city
+            MENUITEM "by &Phone", 42558    // Sort address book entries by phone number
+            MENUITEM "by Nic&kname", 42559    // Sort address book entries by nickname
+            MENUITEM SEPARATOR
+            MENUITEM "&Ascending", 34553    // Sort Ascending
+            MENUITEM "De&scending", 34554    // Sort Descending
+        }
+        MENUITEM SEPARATOR
+        MENUITEM "&Stop Searching\tESC", 32795    // Stop the current transfer | Esc, Esc, Esc, Esc, Esc, Esc, Esc, Esc
+    }
+    POPUP "&Communicator"
+    {
+        MENUITEM "&Navigator\tCtrl+1", 34458    // Access a web browser | Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1
+        MENUITEM "&Messenger\tCtrl+2", 10215    // Open a messenger window | Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2
+        MENUITEM "&Composer\tCtrl+4", 34461    // Access a web page composer | Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4
+        MENUITEM SEPARATOR
+        POPUP "&Bookmarks"
+        {
+            MENUITEM "&Add Bookmark\tCtrl+D", 32810    // Add the current document to the bookmark list | Ctrl+D, Ctrl+D, Ctrl+D, Ctrl+D, Ctrl+D
+            POPUP "&File Bookmark"
+            {
+                MENUITEM "Root", 62415
+            }
+            MENUITEM "&Edit Bookmarks...\tCtrl+B", 32811    // View bookmarks list | Ctrl+B, Ctrl+B, Ctrl+B, Ctrl+B, Ctrl+B, Ctrl+B
+            MENUITEM SEPARATOR
+            POPUP "&Guide"
+            {
+                MENUITEM "PLACEHOLDER", 65000
+            }
+        }
+        MENUITEM "N&ewsgroups", 10222    // Open the list of newsgroups
+        MENUITEM "&Address Book\tCtrl+Shift+2", 34399    // Access address book | Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2
+        MENUITEM SEPARATOR
+        POPUP "&Tools"
+        {
+            MENUITEM "&History\tCtrl+H", 32808    // Pop up the history list | Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H
+            MENUITEM "&Security Info\tCtrl+Shift+I", 32909    // Show security information | Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I
+            MENUITEM "&Message Center\tCtrl+Shift+1", 34420    // Access mail folders | Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+7, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+7, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+Shift+1
+            MENUITEM "&Import Utility", 10305    // Import mail messages and address books
+            MENUITEM "&Java Console", 32878    // Open the Java Console
+        }
+        MENUITEM SEPARATOR
+        POPUP "&Window"
+        {
+            MENUITEM "Replace Me!", 34060
+        }
+    }
+    POPUP "&Help"
+    {
+        MENUITEM "PLACEHOLDER", 65200
+    }
+}
+
+MENU__1203 MENU
+{
+    POPUP "&File"
+    {
+        POPUP "&New"
+        {
+            MENUITEM "&Navigator Window\tCtrl+N", 32770    // Create a new Navigator window for viewing web pages | Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N
+            MENUITEM "&Message\tCtrl+M", 32879    // Create a new mail or newsgroup message | Ctrl+M, Ctrl+M, Ctrl+M, Ctrl+M, Ctrl+M, Ctrl+M
+            MENUITEM "Blank &Page\tCtrl+Shift+N", 42279    // Create a new web page | Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N
+            MENUITEM SEPARATOR
+            MENUITEM "Page From &Template...", 34483    // Start a new page based on another page or using Netscape's Template Website.
+            MENUITEM "Page From &Wizard...", 65197    // Create a new page using New Page Wizard at Netscpape Web site
+        }
+        MENUITEM "New &Bookmark...", 34343    // Insert a new bookmark entry
+        MENUITEM "New &Folder...", 34344    // Insert a new bookmark folder
+        MENUITEM "New S&eparator", 34345    // Insert a separator
+        MENUITEM "Open Bookmarks &File", 57601    // Open a local document | Ctrl+Shift+O, Ctrl+O, Ctrl+O
+        MENUITEM "&Import...", 34138    // Import a file into the address book
+        MENUITEM SEPARATOR
+        MENUITEM "&Save As...\tCtrl+S", 32874    // Save this address book to a file | Ctrl+S, Ctrl+S
+        MENUITEM SEPARATOR
+        MENUITEM "Go to Bookmar&k", 34346    // Goto the currently selected item
+        MENUITEM "&Add Selection to Toolbar", 42536    // Mark selected category as read
+        MENUITEM "Create Shortcu&t", 42537    // Go to the next category
+        MENUITEM SEPARATOR
+        MENUITEM "Go Offl&ine...", 42538
+        MENUITEM SEPARATOR
+        MENUITEM "&Close\tCtrl+W", 57602    // Close the current window | Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W
+    }
+    POPUP "&Edit"
+    {
+        MENUITEM "&Undo\tCtrl+Z", 57643    // Undo the last action | Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z, Ctrl+Z, Alt+Backspace, Ctrl+Z, Alt+Backspace, Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z, Ctrl+Z, Ctrl+Z, Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z
+        MENUITEM "&Redo\tCtrl+E", 57644    // Redo what was undone | Ctrl+Shift+Z, Ctrl+E, Alt+Shift+Backspace, Ctrl+Y, Ctrl+E, Ctrl+Y, Ctrl+Y, Ctrl+Y, Ctrl+Y, Ctrl+Shift+Z
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X", 57635    // Cut the selection and put it on the clipboard | Shift+Delete, Ctrl+X, Ctrl+X, Ctrl+X, Ctrl+X, Shift+Delete, Ctrl+X, Shift+Delete, Ctrl+X, Ctrl+X, Ctrl+X, Ctrl+X, Shift+Delete, Ctrl+X, Ctrl+X
+        MENUITEM "&Copy\tCtrl+C", 57634    // Copy the selection and put it on the clipboard | Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+C, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C
+        MENUITEM "&Paste\tCtrl+V", 57637    // Insert clipboard contents | Ctrl+V, Shift+Insert, Ctrl+V, Shift+Insert, Ctrl+V, Shift+Insert, Ctrl+V, Ctrl+V, Ctrl+V, Ctrl+V, Ctrl+V
+        MENUITEM "&Delete\tDel", 32871    // Delete the current selection | Delete
+        MENUITEM "Select &All\tCtrl+A", 34338    // Select all items | Ctrl+A, Ctrl+A, Ctrl+A, Ctrl+A, Ctrl+A, Ctrl+A
+        MENUITEM SEPARATOR
+        MENUITEM "&Find in Bookmarks..\tCtrl+F", 57636    // Search for text in the current message | Ctrl+F, Ctrl+F
+        MENUITEM "Find A&gain\tCtrl+G", 32880    // Repeat the last find operation | Ctrl+G, F3, Ctrl+G, F3, Ctrl+G, F3, F3, Ctrl+G, Ctrl+G, F3, Ctrl+G, F3
+        MENUITEM SEPARATOR
+        MENUITEM "Bookmar&k Properties", 34137    // View and edit properties of entry's address book card | Alt+Enter, Alt+Enter
+    }
+    POPUP "&View"
+    {
+        POPUP "Sho&w"
+        {
+            MENUITEM "&Floating Component Bar", 62414    // Undock or dock the Component Bar
+        }
+        MENUITEM SEPARATOR
+        MENUITEM "By Nam&e", 34547
+        MENUITEM "By &Location", 34548
+        MENUITEM "By &Created On", 34549
+        MENUITEM "By Last &Visited", 34550
+        MENUITEM SEPARATOR
+        MENUITEM "Sort &Ascending", 34553    // Sort Ascending
+        MENUITEM "Sort &Descending", 34554    // Sort Descending
+        MENUITEM SEPARATOR
+        MENUITEM "&Update Bookmarks", 34337    // Search for items that have changed since the last visit
+        MENUITEM SEPARATOR
+        MENUITEM "Set as Toolbar &Folder", 42500
+        MENUITEM "Set as &New Bookmarks Folder", 34341    // Add new bookmarks to the current folder
+        MENUITEM "Set as Bookmark &Menu", 34342    // Create the Bookmarks menu with the current folder and its children
+    }
+    POPUP "&Communicator"
+    {
+        MENUITEM "&Navigator\tCtrl+1", 34458    // Access a web browser | Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1
+        MENUITEM "&Messenger\tCtrl+2", 10215    // Open a messenger window | Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2
+        MENUITEM "&Composer\tCtrl+4", 34461    // Access a web page composer | Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4
+        MENUITEM SEPARATOR
+        POPUP "&Bookmarks"
+        {
+            MENUITEM "&Add Bookmark\tCtrl+D", 32810    // Add the current document to the bookmark list | Ctrl+D, Ctrl+D, Ctrl+D, Ctrl+D, Ctrl+D
+            POPUP "&File Bookmark"
+            {
+                MENUITEM "Root", 62415
+            }
+            MENUITEM "&Edit Bookmarks...\tCtrl+B", 32811    // View bookmarks list | Ctrl+B, Ctrl+B, Ctrl+B, Ctrl+B, Ctrl+B, Ctrl+B
+            MENUITEM SEPARATOR
+            POPUP "&Guide"
+            {
+                MENUITEM "First Place", 65000
+            }
+        }
+        MENUITEM "N&ewsgroups", 10222    // Open the list of newsgroups
+        MENUITEM "&Address Book\tCtrl+Shift+2", 34399    // Access address book | Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2
+        MENUITEM SEPARATOR
+        POPUP "&Tools"
+        {
+            MENUITEM "&History\tCtrl+H", 32808    // Pop up the history list | Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H
+            MENUITEM "&Security Info\tCtrl+Shift+I", 32909    // Show security information | Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I
+            MENUITEM "&Message Center\tCtrl+Shift+1", 34420    // Access mail folders | Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+7, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+7, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+Shift+1
+            MENUITEM "&Import Utility", 10305    // Import mail messages and address books
+            MENUITEM "&Java Console", 32878    // Open the Java Console
+        }
+        MENUITEM SEPARATOR
+        POPUP "&Window"
+        {
+            MENUITEM "Replace Me!", 34060
+        }
+    }
+    POPUP "&Help"
+    {
+        MENUITEM "PLACEHOLDER", 65200
+    }
+}
+
+MENU__1255 MENU
+{
+    POPUP "&File"
+    {
+        POPUP "&New"
+        {
+            MENUITEM "&Navigator Window\tCtrl+N", 32770    // Create a new Navigator window for viewing web pages | Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N
+            MENUITEM "&Message\tCtrl+M", 34369    // Create a new mail or newsgroup message | Ctrl+M
+            MENUITEM "Blank &Page\tCtrl+Shift+N", 42279    // Create a new web page | Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N
+            MENUITEM SEPARATOR
+            MENUITEM "Page From &Template...", 34483    // Start a new page based on another page or using Netscape's Template Website.
+            MENUITEM "Page From &Wizard...", 65197    // Create a new page using New Page Wizard at Netscpape Web site
+        }
+        MENUITEM "Ne&w Folder...", 34008    // Create a new mail folder
+        POPUP "&Open Attachment"
+        {
+            MENUITEM "&Replace Me", 22784
+        }
+        POPUP "&Save As"
+        {
+            MENUITEM "&File...\tCtrl+S", 34437    // Save selected message(s) to a file | Ctrl+S, Ctrl+S
+            MENUITEM "&Template", 10304    // Save this message in the Templates folder to use again
+        }
+        MENUITEM SEPARATOR
+        MENUITEM "Get New &Messages\tCtrl+T", 34006    // Get new mail or newsgroup messages | Ctrl+T, Ctrl+T, Ctrl+T
+        MENUITEM "Sen&d Unsent Messages", 34007    // Send the messages in the %s folder now
+        MENUITEM "Su&bscribe...", 34521    // Subscribe to Newsgroups
+        MENUITEM SEPARATOR
+        MENUITEM "Empt&y Trash Folder", 34011    // Empty the trash folder
+        MENUITEM "Compac&t Folders", 34010    // Compress all mail folders
+        MENUITEM SEPARATOR
+        MENUITEM "&Import...", 10305    // Import mail messages and address books
+        MENUITEM SEPARATOR
+        POPUP "Off&line"
+        {
+            MENUITEM "Work Offl&ine", 42509    // Switch network connectedness mode
+            MENUITEM SEPARATOR
+            MENUITEM "&Synchronize...", 42600    // Download items for offline use and send unsent messages
+            MENUITEM SEPARATOR
+            MENUITEM "Get Selected &Messages", 42532
+            MENUITEM "Get &Flagged Messages", 42376
+        }
+        MENUITEM SEPARATOR
+        MENUITEM "Pa&ge Setup...", 57605    // Change the printing options
+        MENUITEM "Print Pre&view", 57609    // Preview the full page
+        MENUITEM "&Print...\tCtrl+P", 57607    // Print this page | Ctrl+P, Ctrl+P, Ctrl+P, Ctrl+P, Ctrl+P
+        MENUITEM SEPARATOR
+        MENUITEM "&Close\tCtrl+W", 57602    // Close the current window | Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W
+        MENUITEM "E&xit\tCtrl+Q", 57665    // Close all windows in the application and exit | Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q
+    }
+    POPUP "&Edit"
+    {
+        MENUITEM "&Undo\tCtrl+Z", 57643    // Undo the last action | Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z, Ctrl+Z, Alt+Backspace, Ctrl+Z, Alt+Backspace, Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z, Ctrl+Z, Ctrl+Z, Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z
+        MENUITEM "&Redo\tCtrl+Y", 57644    // Redo what was undone | Ctrl+Shift+Z, Ctrl+E, Alt+Shift+Backspace, Ctrl+Y, Ctrl+E, Ctrl+Y, Ctrl+Y, Ctrl+Y, Ctrl+Y, Ctrl+Shift+Z
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X", 57635    // Cut the selection and put it on the clipboard | Shift+Delete, Ctrl+X, Ctrl+X, Ctrl+X, Ctrl+X, Shift+Delete, Ctrl+X, Shift+Delete, Ctrl+X, Ctrl+X, Ctrl+X, Ctrl+X, Shift+Delete, Ctrl+X, Ctrl+X
+        MENUITEM "&Copy\tCtrl+C", 57634    // Copy the selection and put it on the clipboard | Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+C, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C
+        MENUITEM "&Paste\tCtrl+V", 57637    // Insert clipboard contents | Ctrl+V, Shift+Insert, Ctrl+V, Shift+Insert, Ctrl+V, Shift+Insert, Ctrl+V, Ctrl+V, Ctrl+V, Ctrl+V, Ctrl+V
+        MENUITEM "&Delete Message\tDel", 34022    // Delete the selected message
+        MENUITEM "&Select All\tCtrl+A", 57642    // Select the entire document | Ctrl+A, Ctrl+A, Ctrl+A
+        MENUITEM SEPARATOR
+        MENUITEM "&Find in Message...\tCtrl+F", 32818    // Search for text in the current page | Ctrl+F, Ctrl+F, Ctrl+F, Ctrl+F, Ctrl+F, Ctrl+F
+        MENUITEM "Find A&gain\tCtrl+G", 32880    // Repeat the last find operation | Ctrl+G, F3, Ctrl+G, F3, Ctrl+G, F3, F3, Ctrl+G, Ctrl+G, F3, Ctrl+G, F3
+        MENUITEM SEPARATOR
+        MENUITEM "&Search Messages\tCrtl+Shift+F", 34352    // Search mail and Newsgroup messages | Ctrl+F, Ctrl+Shift+F, Ctrl+Shift+F, Ctrl+Shift+F
+        MENUITEM SEPARATOR
+        MENUITEM "Message F&ilters...", 34380    // Set rules for filtering mail into folders
+        MENUITEM SEPARATOR
+        MENUITEM "Pr&eferences...", 32882    // Change user preferences for the application
+    }
+    POPUP "&View"
+    {
+        POPUP "Sho&w"
+        {
+            MENUITEM "&Message Toolbar", 62376    // Show or hide the Navigation toolbar
+            MENUITEM "&Location Toolbar", 62377    // Show or hide the Location toolbar
+            MENUITEM SEPARATOR
+            MENUITEM "Floating Component Bar", 62414    // Undock or dock the Component Bar
+        }
+        MENUITEM SEPARATOR
+        POPUP "Hea&ders"
+        {
+            MENUITEM "&All", 34469    // Shows all header information
+            MENUITEM "&Normal", 34468    // Shows normal headers
+            MENUITEM "&Brief", 34467    // Shows short list of headers
+        }
+        MENUITEM SEPARATOR
+        MENUITEM "View &Attachment Inline", 10005
+        MENUITEM "Wrap Lon&g Lines", 34496    // Wrap long message lines to fit in window
+        MENUITEM SEPARATOR
+        MENUITEM "Increase &Font\tCtrl+]", 62537    // Increase the font size for viewing this page | Ctrl+], Ctrl+], Ctrl+]
+        MENUITEM "Decrease Fon&t\tCtrl+[", 62538    // Decrease the font size for viewing this page | Ctrl+[, Ctrl+[, Ctrl+[
+        MENUITEM SEPARATOR
+        MENUITEM "&Reload", 32782    // Reload the current page | Ctrl+R, Ctrl+R
+        MENUITEM "Show Ima&ges", 32804    // Show images in current page
+        MENUITEM "Refres&h", 32783    // Redraw the current document
+        MENUITEM "&Stop\tESC", 32795    // Stop the current transfer | Esc, Esc, Esc, Esc, Esc, Esc, Esc, Esc
+        MENUITEM SEPARATOR
+        MENUITEM "Page So&urce\tCtrl+U", 32789    // View the source of the current page | Ctrl+U, Ctrl+U, Ctrl+U
+        MENUITEM "Page &Info", 32842    // View information about the current page | Ctrl+I
+        MENUITEM SEPARATOR
+        POPUP "Character Set"
+        {
+            MENUITEM "Western (ISO-8859-1)", 33115
+            MENUITEM SEPARATOR
+            MENUITEM "Central European (ISO-8859-2)", 33116
+            MENUITEM "Central European (Windows-1250)", 34474
+            MENUITEM SEPARATOR
+            MENUITEM "Japanese (Auto-Detect)", 33117
+            MENUITEM "Japanese (Shift_JIS)", 33118
+            MENUITEM "Japanese (EUC-JP)", 33119
+            MENUITEM SEPARATOR
+            MENUITEM "Traditional Chinese (Big5)", 33120
+            MENUITEM "Traditional Chinese (EUC-TW)", 33121
+            MENUITEM SEPARATOR
+            MENUITEM "Simplified Chinese (GB2312)", 33122
+            MENUITEM SEPARATOR
+            MENUITEM "Korean (Auto-Detect)", 33123
+            MENUITEM SEPARATOR
+            MENUITEM "Cyrillic (KOI8-R)", 34477
+            MENUITEM "Cyrillic (ISO-8859-5)", 34476
+            MENUITEM "Cyrillic (Windows-1251)", 34475
+            MENUITEM "Cyrillic (CP866)", 34490
+            MENUITEM SEPARATOR
+            MENUITEM "Baltic (ISO-8859-4)", 34491
+            MENUITEM "Baltic (Windows-1257)", 34492
+            MENUITEM SEPARATOR
+            MENUITEM "Greek (ISO-8859-7)", 34478
+            MENUITEM "Greek (Windows-1253)", 34479
+            MENUITEM SEPARATOR
+            MENUITEM "Turkish (ISO-8859-9)", 34480
+            MENUITEM SEPARATOR
+            MENUITEM "Unicode (UTF-8)", 34481
+            MENUITEM "Unicode (UTF-7)", 34489
+            MENUITEM SEPARATOR
+            MENUITEM "User-Defined", 33124
+            MENUITEM SEPARATOR
+            MENUITEM "&Set Default Character Set", 32836    // Set default document encoding
+        }
+    }
+    POPUP "&Go"
+    {
+        MENUITEM "First &Unread Message", 34572    // Go to the first unread message
+        MENUITEM "&First Flagged Message", 42416    // Go to the first flagged message
+        MENUITEM SEPARATOR
+        POPUP "&Next"
+        {
+            MENUITEM "&Message\tShift+N", 34410    // Go to the next message | Shift+N
+            MENUITEM "&Unread Message\tN", 34412    // Go to the next unread message | Alt+Down, Alt+Down, N
+            MENUITEM "&Flagged Message", 42415    // Go to the next flagged message
+            MENUITEM SEPARATOR
+            MENUITEM "Unread &Thread\tT", 34563    // Read next unread thread | Alt+Shift+Down, Alt+Shift+Down, T
+            MENUITEM SEPARATOR
+            MENUITEM "F&older", 42417    // Go to the next folder
+            MENUITEM "Unrea&d Folder\tG", 42418    // Go to the next unread folder | G
+        }
+        POPUP "&Previous"
+        {
+            MENUITEM "&Message\tShift+P", 34411    // Go to the previous message | Shift+P
+            MENUITEM "Un&read Message\tP", 34441    // Go to the previous unread message | Alt+Up, P
+            MENUITEM "&Flagged Message", 42414    // Go to the previous flagged message
+        }
+        MENUITEM SEPARATOR
+        MENUITEM "&Back\tAlt+<-", 42411    // Go back to the last message | Alt+Left, Alt+Up, Alt+Left
+        MENUITEM "For&ward\tAlt+->", 42412    // Go to the next visited message | Alt+Right, Alt+Right
+    }
+    POPUP "&Message"
+    {
+        MENUITEM "&New Message\tCtrl+M", 34369    // Create a new mail or newsgroup message | Ctrl+M
+        MENUITEM "&Reply\tCtrl+R", 10032    // Reply to the sender only
+        MENUITEM "Re&ply to All\tCtrl+Shift+R", 10033    // Reply to sender and all recipients
+        POPUP "&Reply"
+        {
+            MENUITEM "to &Sender Only", 10211    // Reply to sender only
+            MENUITEM "to &Newsgroup\tCtrl+R", 34435    // Post a reply to the Newsgroup
+        }
+        POPUP "Re&ply All"
+        {
+            MENUITEM "to &Sender and All Recipients", 10212    // Reply to sender and all recipients
+            MENUITEM "to Sender and &Newsgroup\tCtrl+Shift+R", 34436    // Post reply to the Newsgroup and mail a reply to the author
+        }
+        MENUITEM "&Forward\tCtrl+L", 34592    // Forward the selected message | Ctrl+L
+        POPUP "F&orward As"
+        {
+            MENUITEM "&Inline", 34321    // Forward the current message as inline text
+            MENUITEM "&Quoted\tCtrl+Shift+L", 34319    // Forward the current message as quoted text | Ctrl+Shift+L, Ctrl+Shift+L
+            MENUITEM "&Attachment", 34031    // Forward the current message as attachment
+        }
+        MENUITEM "&Edit Message as New", 42422    // Edit the currently selected messages
+        MENUITEM SEPARATOR
+        POPUP "&Move Message"
+        {
+            MENUITEM "&Replace Me", 20736
+        }
+        POPUP "&Copy Message"
+        {
+            MENUITEM "&Replace Me", 21760    // Employee Type
+        }
+        MENUITEM SEPARATOR
+        MENUITEM "Add &Sender to Address Book", 34453    // Add message sender to address book
+        MENUITEM "Add &All to Address Book", 34454    // Add all message addresses to address book
+        MENUITEM SEPARATOR
+        POPUP "Mar&k"
+        {
+            MENUITEM "as &Read\tM", 34120    // Mark selected messages as read | M
+            MENUITEM "&Thread as Read", 34579    // Mark selected thread as read | Shift+M
+            MENUITEM "by &Date...\tC", 34576    // Catch up to a certain date | C
+            MENUITEM "&All Read\tShift+C", 34526    // Mark all messages read | Shift+C
+            MENUITEM SEPARATOR
+            MENUITEM "&Flag", 34125    // Flag the current message
+        }
+        MENUITEM SEPARATOR
+        MENUITEM "&Ignore Thread\tK", 34564    // Ignore selected thread | Ctrl+I, Ctrl+I, K
+        MENUITEM "&Watch Thread\tW", 34565    // Show when new messages arrive in this thread | W
+    }
+    POPUP "&Communicator"
+    {
+        MENUITEM "&Navigator\tCtrl+1", 34458    // Access a web browser | Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1
+        MENUITEM "&Messenger\tCtrl+2", 10215    // Open a messenger window | Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2
+        MENUITEM "&Composer\tCtrl+4", 34461    // Access a web page composer | Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4
+        MENUITEM SEPARATOR
+        POPUP "&Bookmarks"
+        {
+            MENUITEM "&Add Bookmark\tCtrl+D", 32810    // Add the current document to the bookmark list | Ctrl+D, Ctrl+D, Ctrl+D, Ctrl+D, Ctrl+D
+            POPUP "&File Bookmark"
+            {
+                MENUITEM "Root", 62415
+            }
+            MENUITEM "&Edit Bookmarks...\tCtrl+B", 32811    // View bookmarks list | Ctrl+B, Ctrl+B, Ctrl+B, Ctrl+B, Ctrl+B, Ctrl+B
+            MENUITEM SEPARATOR
+            POPUP "&Guide"
+            {
+                MENUITEM "PLACEHOLDER", 65000
+            }
+        }
+        MENUITEM "N&ewsgroups", 10222    // Open the list of newsgroups
+        MENUITEM "&Address Book\tCtrl+Shift+2", 34399    // Access address book | Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2
+        MENUITEM SEPARATOR
+        POPUP "&Tools"
+        {
+            MENUITEM "&History\tCtrl+H", 32808    // Pop up the history list | Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H
+            MENUITEM "&Security Info\tCtrl+Shift+I", 32909    // Show security information | Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I
+            MENUITEM "&Message Center\tCtrl+Shift+1", 34420    // Access mail folders | Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+7, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+7, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+Shift+1
+            MENUITEM "&Import Utility", 10305    // Import mail messages and address books
+            MENUITEM "&Java Console", 32878    // Open the Java Console
+        }
+        POPUP "&Server Tools"
+        {
+            MENUITEM "&Page Services", 34057    // View Page Services
+            MENUITEM "&Mail Account", 42539    // Change mail password, set up mail forwarding and vacation notices
+            MENUITEM "Mailing &Lists", 10017
+            MENUITEM "&Folder Permissions", 10018
+            MENUITEM "Manage &Newsgroup", 42510    // Go to Newsgroup server administration page
+        }
+        MENUITEM SEPARATOR
+        POPUP "&Window"
+        {
+            MENUITEM "Replace Me!", 34060
+        }
+    }
+    POPUP "&Help"
+    {
+        MENUITEM "PLACEHOLDER", 65200
+    }
+}
+
+MENU__1349 MENU
+{
+    POPUP "&File"
+    {
+        MENUITEM "E&xit\tCtrl+Q", 57665    // Close all windows in the application and exit | Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q
+    }
+    POPUP "&Edit"
+    {
+        MENUITEM "&Undo\tCtrl+Z", 57643    // Undo the last action | Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z, Ctrl+Z, Alt+Backspace, Ctrl+Z, Alt+Backspace, Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z, Ctrl+Z, Ctrl+Z, Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z
+    }
+    POPUP "&View"
+    {
+        MENUITEM "&Navigation Toolbar", 62376    // Show or hide the Navigation toolbar
+    }
+    POPUP "&Go"
+    {
+        MENUITEM "&Next Message\tShift+N", 34410    // Go to the next message | Shift+N
+    }
+    POPUP "&Message"
+    {
+        MENUITEM "&New Message\tCtrl+M", 34369    // Create a new mail or newsgroup message | Ctrl+M
+    }
+    POPUP "&Communicator"
+    {
+        MENUITEM "&Navigator\tCtrl+1", 34458    // Access a web browser | Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1
+        MENUITEM "&Messenger\tCtrl+2", 10215    // Open a messenger window | Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2
+        MENUITEM "&Composer\tCtrl+4", 34461    // Access a web page composer | Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4
+        MENUITEM SEPARATOR
+        POPUP "&Bookmarks"
+        {
+            MENUITEM "&Add Bookmark\tCtrl+D", 32810    // Add the current document to the bookmark list | Ctrl+D, Ctrl+D, Ctrl+D, Ctrl+D, Ctrl+D
+            POPUP "&File Bookmark"
+            {
+                MENUITEM "Root", 62415
+            }
+            MENUITEM "&Edit Bookmarks...\tCtrl+B", 32811    // View bookmarks list | Ctrl+B, Ctrl+B, Ctrl+B, Ctrl+B, Ctrl+B, Ctrl+B
+            MENUITEM SEPARATOR
+            POPUP "&Guide"
+            {
+                MENUITEM "PLACEHOLDER", 65000
+            }
+        }
+        MENUITEM "N&ewsgroups", 10222    // Open the list of newsgroups
+        MENUITEM "&Address Book\tCtrl+Shift+2", 34399    // Access address book | Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2
+        MENUITEM SEPARATOR
+        POPUP "&Tools"
+        {
+            MENUITEM "&History\tCtrl+H", 32808    // Pop up the history list | Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H
+            MENUITEM "&Security Info\tCtrl+Shift+I", 32909    // Show security information | Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I
+            MENUITEM "&Message Center\tCtrl+Shift+1", 34420    // Access mail folders | Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+7, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+7, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+Shift+1
+            MENUITEM "&Import Utility", 10305    // Import mail messages and address books
+            MENUITEM "&Java Console", 32878    // Open the Java Console
+        }
+        POPUP "&Server Tools"
+        {
+            MENUITEM "&Page Services", 34057    // View Page Services
+            MENUITEM "&Mail Account", 42539    // Change mail password, set up mail forwarding and vacation notices
+            MENUITEM "Mailing &Lists", 10017
+            MENUITEM "&Folder Permissions", 10018
+            MENUITEM "Manage &Newsgroups", 42510    // Go to Newsgroup server administration page
+        }
+        MENUITEM SEPARATOR
+        POPUP "&Window"
+        {
+            MENUITEM "Replace Me!", 34060
+        }
+    }
+    POPUP "&Help"
+    {
+        MENUITEM "PLACEHOLDER", 65200
+    }
+}
+
+MENU__1360 MENU
+{
+    POPUP "(untitled)"
+    {
+        MENUITEM "Always On Top", 32700
+        MENUITEM "Horizontal", 32702
+        MENUITEM "Show Text", 32701
+    }
+}
+
+MENU__1377 MENU
+{
+    POPUP "&File"
+    {
+        POPUP "&New"
+        {
+            MENUITEM "&Navigator Window\tCtrl+N", 32770    // Create a new Navigator window for viewing web pages | Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N
+            MENUITEM "&Message\tCtrl+M", 34369    // Create a new mail or newsgroup message | Ctrl+M
+            MENUITEM "Blank &Page\tCtrl+Shift+N", 42279    // Create a new web page | Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N, Ctrl+Shift+N
+            MENUITEM SEPARATOR
+            MENUITEM "Page From &Template...", 34483    // Start a new page based on another page or using Netscape's Template Website.
+            MENUITEM "Page From &Wizard...", 65197    // Create a new page using New Page Wizard at Netscpape Web site
+        }
+        MENUITEM "Save\tCtrl+S", 10049    // Save this message | Ctrl+S, Ctrl+S
+        POPUP "Save &As"
+        {
+            MENUITEM "&File...", 42426    // Save a copy of the current message
+            MENUITEM SEPARATOR
+            MENUITEM "&Draft", 42427    // Save the message in the Drafts folder to send later
+            MENUITEM "&Template", 10304    // Save this message in the Templates folder to use again
+        }
+        POPUP "Attac&h"
+        {
+            MENUITEM "&File...", 42455    // Attach a file to the current message
+            MENUITEM "&Web Page...", 42456    // Attach a web page to the current message
+            MENUITEM SEPARATOR
+            MENUITEM "&Personal Card (vCard)", 42534    // Attach my personal address book card to the current message
+        }
+        MENUITEM SEPARATOR
+        MENUITEM "Sen&d Now\tCtrl+Enter", 42448    // Send the message now
+        MENUITEM "Send &Later", 42449    // Queue message for later delivery
+        MENUITEM "&Quote Original Message", 42458    // Paste text from the original page in quoted form
+        MENUITEM "Selec&t Addresses...", 59405    // Select addresses of recipients
+        MENUITEM SEPARATOR
+        MENUITEM "&Close\tCtrl+W", 57602    // Close the current window | Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W, Ctrl+W
+        MENUITEM "E&xit\tCtrl+Q", 57665    // Close all windows in the application and exit | Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q, Ctrl+Q
+    }
+    POPUP "&Edit"
+    {
+        MENUITEM "&Undo\tCtrl+Z", 57643    // Undo the last action | Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z, Ctrl+Z, Alt+Backspace, Ctrl+Z, Alt+Backspace, Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z, Ctrl+Z, Ctrl+Z, Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z, Alt+Backspace, Ctrl+Z
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X", 57635    // Cut the selection and put it on the clipboard | Shift+Delete, Ctrl+X, Ctrl+X, Ctrl+X, Ctrl+X, Shift+Delete, Ctrl+X, Shift+Delete, Ctrl+X, Ctrl+X, Ctrl+X, Ctrl+X, Shift+Delete, Ctrl+X, Ctrl+X
+        MENUITEM "&Copy\tCtrl+C", 57634    // Copy the selection and put it on the clipboard | Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+C, Ctrl+C, Ctrl+Insert, Ctrl+C, Ctrl+Insert, Ctrl+C
+        MENUITEM "&Paste\tCtrl+V", 57637    // Insert clipboard contents | Ctrl+V, Shift+Insert, Ctrl+V, Shift+Insert, Ctrl+V, Shift+Insert, Ctrl+V, Ctrl+V, Ctrl+V, Ctrl+V, Ctrl+V
+        MENUITEM "Paste as &Quotation", 42441    // Paste clipboard contents in quoted form
+        MENUITEM "&Delete\tDEL", 32871    // Delete the current selection | Delete
+        MENUITEM "Select &All\tCtrl+A", 42442    // Ctrl+A
+        MENUITEM SEPARATOR
+        MENUITEM "&Find...\tCtrl+F", 42432    // Ctrl+F
+        MENUITEM "Find A&gain\tCtrl+G", 42433    // Ctrl+G, F3
+        MENUITEM SEPARATOR
+        MENUITEM "Name Completion", 42551    // Accept email addresses as typed | Ctrl+D
+        MENUITEM "&Show Matching Addresses\tCtrl+J", 42550    // Display list of matching email addresses | Ctrl+J
+        MENUITEM SEPARATOR
+        MENUITEM "&Preferences...", 42526    // Change user preferences for the application
+    }
+    POPUP "&View"
+    {
+        POPUP "Sho&w"
+        {
+            MENUITEM "Message &Toolbar", 42006    // Show or hide Message Toolbar
+            MENUITEM "Addressing Area", 42447    // View the message body and hide the addresses
+            MENUITEM SEPARATOR
+            MENUITEM "Floating Component Bar", 62414    // Undock or dock the Component Bar
+        }
+        MENUITEM SEPARATOR
+        MENUITEM "&Address", 42445    // View addresses of recipients
+        MENUITEM "A&ttachments", 42446    // View message attachments
+        MENUITEM "&Options", 42518    // View message options
+        MENUITEM SEPARATOR
+        MENUITEM "&Wrap Long Lines", 34496    // Wrap long message lines to fit in window
+        MENUITEM SEPARATOR
+        POPUP "&Character Set"
+        {
+            MENUITEM "Western (ISO-8859-1)", 33115
+            MENUITEM SEPARATOR
+            MENUITEM "Central European (ISO-8859-2)", 33116
+            MENUITEM "Central European (Windows-1250)", 34474
+            MENUITEM SEPARATOR
+            MENUITEM "Japanese (Auto-Detect)", 33117
+            MENUITEM "Japanese (Shift_JIS)", 33118
+            MENUITEM "Japanese (EUC-JP)", 33119
+            MENUITEM SEPARATOR
+            MENUITEM "Traditional Chinese (Big5)", 33120
+            MENUITEM "Traditional Chinese (EUC-TW)", 33121
+            MENUITEM SEPARATOR
+            MENUITEM "Simplified Chinese (GB2312)", 33122
+            MENUITEM SEPARATOR
+            MENUITEM "Korean (Auto-Detect)", 33123
+            MENUITEM SEPARATOR
+            MENUITEM "Cyrillic (KOI8-R)", 34477
+            MENUITEM "Cyrillic (ISO-8859-5)", 34476
+            MENUITEM "Cyrillic (Windows-1251)", 34475
+            MENUITEM "Cyrillic (CP866)", 34490
+            MENUITEM SEPARATOR
+            MENUITEM "Baltic (ISO-8859-4)", 34491
+            MENUITEM "Baltic (Windows-1257)", 34492
+            MENUITEM SEPARATOR
+            MENUITEM "Greek (ISO-8859-7)", 34478
+            MENUITEM "Greek (Windows-1253)", 34479
+            MENUITEM SEPARATOR
+            MENUITEM "Turkish (ISO-8859-9)", 34480
+            MENUITEM SEPARATOR
+            MENUITEM "Unicode (UTF-8)", 34481
+            MENUITEM "Unicode (UTF-7)", 34489
+            MENUITEM SEPARATOR
+            MENUITEM "User-Defined", 33124
+            MENUITEM SEPARATOR
+            MENUITEM "&Set Default Character Set", 32836    // Set default document encoding
+        }
+    }
+    POPUP "&Tools"
+    {
+        MENUITEM "Check &Spelling...\tCtrl+K", 36419    // Check spelling in the message | Ctrl+K, Ctrl+K, Ctrl+K
+    }
+    POPUP "&Communicator"
+    {
+        MENUITEM "&Navigator\tCtrl+1", 34458    // Access a web browser | Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1, Ctrl+1
+        MENUITEM "&Messenger\tCtrl+2", 10215    // Open a messenger window | Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2, Ctrl+2
+        MENUITEM "&Composer\tCtrl+4", 34461    // Access a web page composer | Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4, Ctrl+4
+        MENUITEM SEPARATOR
+        POPUP "&Bookmarks"
+        {
+            MENUITEM "&Add Bookmark\tCtrl+D", 32810    // Add the current document to the bookmark list | Ctrl+D, Ctrl+D, Ctrl+D, Ctrl+D, Ctrl+D
+            POPUP "&File Bookmark"
+            {
+                MENUITEM "Root", 62415
+            }
+            MENUITEM "&Edit Bookmarks...", 32811    // View bookmarks list | Ctrl+B, Ctrl+B, Ctrl+B, Ctrl+B, Ctrl+B, Ctrl+B
+            MENUITEM SEPARATOR
+            POPUP "&Places"
+            {
+                MENUITEM "PLACEHOLDER", 65000
+            }
+        }
+        MENUITEM "N&ewsgroups", 10222    // Open the list of newsgroups
+        MENUITEM "&Address Book\tCtrl+Shift+2", 34399    // Access address book | Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2, Ctrl+Shift+2
+        MENUITEM SEPARATOR
+        POPUP "&Tools"
+        {
+            MENUITEM "&History\tCtrl+H", 32808    // Pop up the history list | Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H, Ctrl+H
+            MENUITEM "&Security Info\tCtrl+Shift+I", 32909    // Show security information | Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I, Ctrl+Shift+I
+            MENUITEM "&Message Center\tCtrl+Shift+1", 34420    // Access mail folders | Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+7, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+7, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+Shift+1, Ctrl+Shift+1
+            MENUITEM "&Import Utility", 10305    // Import mail messages and address books
+            MENUITEM "&Java Console", 32878    // Open the Java Console
+        }
+        MENUITEM SEPARATOR
+        POPUP "&Window"
+        {
+            MENUITEM "{}", 34060
+        }
+    }
+    POPUP "&Help"
+    {
+        MENUITEM "PLACEHOLDER", 65200
+    }
+}

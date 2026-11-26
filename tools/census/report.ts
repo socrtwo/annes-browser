@@ -12,9 +12,9 @@ const cell = (s: string) => s.replace(/\|/g, '\\|').replace(/\s+/g, ' ');
 
 /** Browsers that cannot be read from open source, and why. */
 const NOT_COVERED: [string, string][] = [
-  ['Internet Explorer 1–11, Edge Legacy', 'Closed source. Only indirectly covered, through Wine\'s re-creation of its main menu (13 items). No freely readable manual was found; the Wayback Machine and Toastytech were not reachable.'],
-  ['Netscape Navigator and Communicator 1–4', 'Partly covered from three scanned manuals (1.1, 3.0, 4.5) and two screenshots (0.92, 4.8): toolbars, menu titles and about 30 menu commands, not full menus. Installers exist at the Internet Archive but its download servers are not reachable from here.'],
-  ['Opera 3–12 (Presto), Opera 15+', 'Closed source. Otter Browser, an Opera 12 style clone, is covered instead; it shows what that lineage offered, not what Opera shipped.'],
+  ['Internet Explorer 1–3, 6, 9–11, Edge Legacy', 'IE 4, 5, 7 and 8 are covered from menus read out of their own programs (Internet Archive downloads). IE 1–3 at the Archive are 16-bit or AOL builds the reader does not handle; IE 6 there is a web installer with nothing inside; the stand-alone IE collection is password-encrypted and was not opened. IE 9–11 not yet tried.'],
+  ['Netscape 1.x, 4.5, 4.8, 6–9', 'Mosaic Netscape 0.91, Navigator 2.02 and 3.0 and Communicator 4.05 and 4.7 are covered from their own programs, plus three manuals and two screenshots. Netscape 6–9 are Mozilla-based (their menus are in Mozilla\'s code, covered by SeaMonkey).'],
+  ['Opera 2–6, 9–11, 15+', 'Opera 8.01 and 12.14 are covered from their menu files. Opera 2–3 at the Archive are 16-bit programs; the 9.x and 10.x installers use an InstallShield format not unpacked here. Opera 15+ is Chromium-based. Otter Browser, an Opera 12 style clone, is also covered.'],
   ['Safari (menu bar), Camino, OmniWeb, iCab', 'Closed source. Safari\'s page context menu is covered from WebKit (2010 and current); its menu bar is not.'],
   ['Vivaldi, Arc, Sidekick, SigmaOS, Zen, Floorp', 'Closed source or no menu file in a reachable repository. Vivaldi and Arc features appear in the roadmap from memory and are not in the lineage.'],
   ['Firefox 1.0–100 (history)', 'The gecko-dev mirror has no release tags; only the current tree was read. SeaMonkey 2.0 covers 2009.'],
@@ -57,6 +57,7 @@ export function writeCensusReports(files: readonly CensusFile[], catalog: Catalo
     '- **Proves:** a command with that identifier (and, where the source has one, that label or description) existed in that file at that commit. `npm run census:verify` re-fetches every file and checks its hash and that each cited line still contains the recorded text.',
     '- **Does not prove:** that two items in different browsers behave the same. That is a judgement made when linking, recorded in `catalog/census/names/` and `catalog/census/overrides.yaml`, and checked against each source\'s own description where it has one (Lynx, w3m, ELinks, Vimium, qutebrowser). Wrong links were caught that way (for example the w3m command `UNDO`, which undoes a cursor movement); see the `why` fields in the overrides file.',
     '- **Manuals** (sources marked "manual (OCR)") are scanned books about a browser, held by the Internet Archive. Only fixed phrasings such as "From the File menu, choose Open Location" are read, so they give a sample of the menus, not a full listing; OCR can misspell; and a book may describe other programs too. Every manual item was read in context before linking, and look-alikes are listed below with the reason. They are shown in the app as "manual", distinct from source code.',
+    '- **Menus read from programs** (where column \"program\'s own menus\"): installers downloaded from the Internet Archive were unpacked (InstallShield 3 archives by `tools/census/is3.ts`, cabinets by `cabextract`, Inno Setup by `innoextract`) and the Windows menu resources read by `tools/pe-dump.ts`; nothing was run. Opera 8 and 12 keep their menus in a text file, read by `tools/opera-dump.ts`. Each dump in `catalog/census/transcriptions/` records the download, how it was unpacked and the SHA-256 of every file read. Netscape\'s comments carry its own status-bar text; Internet Explorer does not keep that text by command id, so its dumps carry only shortcuts. Mail, news, Composer, address book and script-debugger menus were dumped too, but most of their items are left unlinked: they belong to programs this browser does not include.',
     '- **Screenshots** (sources marked "screenshot") are transcriptions of images on Wikimedia Commons, read by a model and kept in `catalog/census/transcriptions/` with the image address and hash. They show only what was visible: menu titles and toolbar buttons, not the contents of closed menus. Menu titles are recorded but never linked as commands.',
     '- **Re-creations and engines.** Wine\'s `ieframe.dll` is a re-implementation of Internet Explorer: it shows the menu Wine copied, not Internet Explorer itself. Safari\'s page context menu is defined in WebKit, which Apple publishes, so that part of Safari is read from Apple\'s own code; Safari\'s menu bar is not.',
     '- **Release years** are not read from the source. They are common knowledge, entered by hand in `catalog/census/sources.yaml`. Check before citing.',
@@ -71,7 +72,9 @@ export function writeCensusReports(files: readonly CensusFile[], catalog: Catalo
   for (const f of files) {
     const p = perSource(f);
     const sha = f.source.commit.slice(0, 10);
-    const where = f.source.host === 'local'
+    const where = f.source.host === 'dump'
+      ? `program's own menus: [archive.org/${cell(f.source.repo)}](https://archive.org/details/${f.source.repo})`
+      : f.source.host === 'local'
       ? `screenshot: [Commons ${cell(f.source.repo)}](https://commons.wikimedia.org/wiki/File:${encodeURIComponent(f.source.repo)})`
       : f.source.host === 'archive.org'
       ? `manual (OCR): [archive.org/${f.source.repo}](https://archive.org/details/${f.source.repo})`

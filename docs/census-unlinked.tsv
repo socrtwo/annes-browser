@@ -1562,3 +1562,2020 @@ safari-current-webkit	contextMenuItemTagProofread	Proofread	Page context menu	51
 safari-current-webkit	contextMenuItemTagRewrite	Rewrite	Page context menu	517
 safari-current-webkit	contextMenuItemTagSummarize	Summarize	Page context menu	522
 safari-current-webkit	contextMenuItemTagShowMediaStats	Show Media Statistics	Page context menu	1497
+netscape-2.02-win32	34336	Update	menu #218 > File	219
+netscape-2.02-win32	34008	New Folder	menu #221 > File	334
+netscape-2.02-win32	34001	Add Folder	menu #221 > File	336
+netscape-2.02-win32	34100	Get New Mail	menu #221 > File	339
+netscape-2.02-win32	34007	Send Mail in Outbox	menu #221 > File	340
+netscape-2.02-win32	34011	Empty Trash Folder	menu #221 > File	341
+netscape-2.02-win32	34009	Compress This Folder	menu #221 > File	342
+netscape-2.02-win32	34013	Print Message(s)	menu #221 > File	345
+netscape-2.02-win32	34112	Delete Message	menu #221 > Edit	360
+netscape-2.02-win32	34354	Delete Folder	menu #221 > Edit	361
+netscape-2.02-win32	34024	Select Thread	menu #221 > Edit	363
+netscape-2.02-win32	34025	Select Flagged Messages	menu #221 > Edit	364
+netscape-2.02-win32	34026	Select All Messages	menu #221 > Edit	365
+netscape-2.02-win32	34111	Again	menu #221 > View > Sort	374
+netscape-2.02-win32	34048	Thread Messages	menu #221 > View > Sort	376
+netscape-2.02-win32	34049	Ascending	menu #221 > View > Sort	378
+netscape-2.02-win32	34050	by Date	menu #221 > View > Sort	380
+netscape-2.02-win32	34051	by Subject	menu #221 > View > Sort	381
+netscape-2.02-win32	34052	by Sender	menu #221 > View > Sort	382
+netscape-2.02-win32	34364	by Message Number	menu #221 > View > Sort	383
+netscape-2.02-win32	34055	Unscramble (ROT-13)	menu #221 > View	386
+netscape-2.02-win32	34355	Attachments Inline	menu #221 > View	394
+netscape-2.02-win32	34356	Attachments as Links	menu #221 > View	395
+netscape-2.02-win32	34108	Reply	menu #221 > Message	399
+netscape-2.02-win32	34109	Reply to All	menu #221 > Message	400
+netscape-2.02-win32	34319	Forward Quoted	menu #221 > Message	402
+netscape-2.02-win32	34120	Mark as Read	menu #221 > Message	404
+netscape-2.02-win32	34121	Mark as Unread	menu #221 > Message	405
+netscape-2.02-win32	34125	Flag Message	menu #221 > Message	407
+netscape-2.02-win32	34126	Unflag Message	menu #221 > Message	408
+netscape-2.02-win32	34322	Add to Address Book	menu #221 > Message	410
+netscape-2.02-win32	34032	To File	menu #221 > Message > Move	414
+netscape-2.02-win32	34033	Inbox	menu #221 > Message > Move	416
+netscape-2.02-win32	34127	Sent Mail	menu #221 > Message > Move	417
+netscape-2.02-win32	34034	Trash	menu #221 > Message > Move	418
+netscape-2.02-win32	34104	Next Message	menu #221 > Go	429
+netscape-2.02-win32	34102	Previous Message	menu #221 > Go	430
+netscape-2.02-win32	34043	First Unread	menu #221 > Go	432
+netscape-2.02-win32	34103	Next Unread	menu #221 > Go	433
+netscape-2.02-win32	34101	Previous Unread	menu #221 > Go	434
+netscape-2.02-win32	34323	First Flagged	menu #221 > Go	436
+netscape-2.02-win32	34324	Next Flagged	menu #221 > Go	437
+netscape-2.02-win32	34325	Previous Flagged	menu #221 > Go	438
+netscape-2.02-win32	34119	Show All Messages	menu #221 > Options	449
+netscape-2.02-win32	34335	Show Only Unread Messages	menu #221 > Options	450
+netscape-2.02-win32	34054	Show All Headers	menu #221 > Options	452
+netscape-2.02-win32	34084	Send Now	menu #224 > File	502
+netscape-2.02-win32	34085	Attach File	menu #224 > File	504
+netscape-2.02-win32	34086	Include Original Text	menu #224 > File	505
+netscape-2.02-win32	34067	Paste as Quotation	menu #224 > Edit	521
+netscape-2.02-win32	34300	Show All	menu #224 > View	527
+netscape-2.02-win32	34365	From	menu #224 > View	529
+netscape-2.02-win32	34301	Reply To	menu #224 > View	530
+netscape-2.02-win32	34302	Mail To	menu #224 > View	531
+netscape-2.02-win32	34303	Mail Cc	menu #224 > View	532
+netscape-2.02-win32	34304	Mail Bcc	menu #224 > View	533
+netscape-2.02-win32	34305	Newsgroups	menu #224 > View	534
+netscape-2.02-win32	34306	Followups To	menu #224 > View	535
+netscape-2.02-win32	34307	Subject	menu #224 > View	536
+netscape-2.02-win32	34308	Attachment	menu #224 > View	537
+netscape-2.02-win32	34358	Immediate Delivery	menu #224 > Options	543
+netscape-2.02-win32	34359	Deferred Delivery	menu #224 > Options	544
+netscape-2.02-win32	34116	New News Message	menu #225 > File	558
+netscape-2.02-win32	34087	Open News Host	menu #225 > File	561
+netscape-2.02-win32	34088	Remove News Host	menu #225 > File	562
+netscape-2.02-win32	34312	Add Newsgroup	menu #225 > File	563
+netscape-2.02-win32	34313	Get More Messages	menu #225 > File	565
+netscape-2.02-win32	34315	Cancel Message	menu #225 > Edit	590
+netscape-2.02-win32	34117	Post Reply	menu #225 > Message	621
+netscape-2.02-win32	34118	Post and Mail Reply	menu #225 > Message	622
+netscape-2.02-win32	34105	Mark Thread Read	menu #225 > Message	629
+netscape-2.02-win32	34106	Mark Newsgroup Read	menu #225 > Message	630
+netscape-2.02-win32	34098	Show Subscribed Newsgroups	menu #225 > Options	659
+netscape-2.02-win32	34091	Show Active Newsgroups	menu #225 > Options	660
+netscape-2.02-win32	34092	Show All Newsgroups	menu #225 > Options	661
+netscape-2.02-win32	34093	Show New Newsgroups	menu #225 > Options	662
+netscape-2.02-win32	34349	Add from Newest Messages	menu #225 > Options	669
+netscape-2.02-win32	34350	Add from Oldest Messages	menu #225 > Options	670
+netscape-2.02-win32	34134	Mail New Message	menu #231 > File	720
+netscape-2.02-win32	34138	Import	menu #231 > File	721
+netscape-2.02-win32	34135	Add User	menu #231 > Item	738
+netscape-2.02-win32	34136	Add List	menu #231 > Item	739
+netscape-2.02-win32	34137	Properties	menu #231 > Item	741
+netscape-2.02-win32	34346	Go to Bookmark	menu #1203 > Item	773
+netscape-2.02-win32	34339	Sort Bookmarks	menu #1203 > Item	775
+netscape-2.02-win32	34343	Insert Bookmark	menu #1203 > Item	777
+netscape-2.02-win32	34344	Insert Folder	menu #1203 > Item	778
+netscape-2.02-win32	34345	Insert Separator	menu #1203 > Item	779
+netscape-2.02-win32	34340	Make Alias	menu #1203 > Item	781
+netscape-2.02-win32	34341	Set to New Bookmarks Folder	menu #1203 > Item	783
+netscape-2.02-win32	34342	Set to Bookmark Menu Folder	menu #1203 > Item	784
+netscape-3.0-win32	34336	Update	menu #218 > File	237
+netscape-3.0-win32	34008	New Folder	menu #221 > File	365
+netscape-3.0-win32	34001	Add Folder	menu #221 > File	367
+netscape-3.0-win32	34100	Get New Mail	menu #221 > File	370
+netscape-3.0-win32	34007	Send Messages in Outbox	menu #221 > File	371
+netscape-3.0-win32	34011	Empty Trash Folder	menu #221 > File	372
+netscape-3.0-win32	34009	Compress Folder	menu #221 > File	373
+netscape-3.0-win32	34112	Delete Message	menu #221 > Edit	391
+netscape-3.0-win32	34354	Delete Folder	menu #221 > Edit	392
+netscape-3.0-win32	34024	Select Thread	menu #221 > Edit	394
+netscape-3.0-win32	34025	Select Flagged Messages	menu #221 > Edit	395
+netscape-3.0-win32	34026	Select All Messages	menu #221 > Edit	396
+netscape-3.0-win32	34111	Again	menu #221 > View > Sort	405
+netscape-3.0-win32	34048	Thread Messages	menu #221 > View > Sort	407
+netscape-3.0-win32	34049	Ascending	menu #221 > View > Sort	409
+netscape-3.0-win32	34050	by Date	menu #221 > View > Sort	411
+netscape-3.0-win32	34051	by Subject	menu #221 > View > Sort	412
+netscape-3.0-win32	34052	by Sender	menu #221 > View > Sort	413
+netscape-3.0-win32	34364	by Message Number	menu #221 > View > Sort	414
+netscape-3.0-win32	34378	Wrap Long Lines	menu #221 > View	417
+netscape-3.0-win32	34055	Unscramble (ROT-13)	menu #221 > View	418
+netscape-3.0-win32	34355	Attachments Inline	menu #221 > View	426
+netscape-3.0-win32	34356	Attachments as Links	menu #221 > View	427
+netscape-3.0-win32	34108	Reply	menu #221 > Message	431
+netscape-3.0-win32	34109	Reply to All	menu #221 > Message	432
+netscape-3.0-win32	34319	Forward Quoted	menu #221 > Message	434
+netscape-3.0-win32	34120	Mark as Read	menu #221 > Message	436
+netscape-3.0-win32	34121	Mark as Unread	menu #221 > Message	437
+netscape-3.0-win32	34125	Flag Message	menu #221 > Message	439
+netscape-3.0-win32	34126	Unflag Message	menu #221 > Message	440
+netscape-3.0-win32	34322	Add to Address Book	menu #221 > Message	442
+netscape-3.0-win32	34032	To File	menu #221 > Message > Move	446
+netscape-3.0-win32	34033	Inbox	menu #221 > Message > Move	448
+netscape-3.0-win32	34127	Sent Mail	menu #221 > Message > Move	449
+netscape-3.0-win32	34034	Trash	menu #221 > Message > Move	450
+netscape-3.0-win32	34104	Next Message	menu #221 > Go	461
+netscape-3.0-win32	34102	Previous Message	menu #221 > Go	462
+netscape-3.0-win32	34043	First Unread	menu #221 > Go	464
+netscape-3.0-win32	34103	Next Unread	menu #221 > Go	465
+netscape-3.0-win32	34101	Previous Unread	menu #221 > Go	466
+netscape-3.0-win32	34323	First Flagged	menu #221 > Go	468
+netscape-3.0-win32	34324	Next Flagged	menu #221 > Go	469
+netscape-3.0-win32	34325	Previous Flagged	menu #221 > Go	470
+netscape-3.0-win32	34119	Show All Messages	menu #221 > Options	481
+netscape-3.0-win32	34335	Show Only Unread Messages	menu #221 > Options	482
+netscape-3.0-win32	34054	All	menu #221 > Options > Show Headers	486
+netscape-3.0-win32	34367	Normal	menu #221 > Options > Show Headers	487
+netscape-3.0-win32	34368	Brief	menu #221 > Options > Show Headers	488
+netscape-3.0-win32	34084	Send Now	menu #224 > File	551
+netscape-3.0-win32	34085	Attach File	menu #224 > File	553
+netscape-3.0-win32	34086	Include Original Text	menu #224 > File	554
+netscape-3.0-win32	34139	Paste as Quotation	menu #224 > Edit	566
+netscape-3.0-win32	34300	Show All	menu #224 > View	572
+netscape-3.0-win32	34365	From	menu #224 > View	574
+netscape-3.0-win32	34301	Reply To	menu #224 > View	575
+netscape-3.0-win32	34302	Mail To	menu #224 > View	576
+netscape-3.0-win32	34303	Mail Cc	menu #224 > View	577
+netscape-3.0-win32	34304	Mail Bcc	menu #224 > View	578
+netscape-3.0-win32	34305	Newsgroups	menu #224 > View	579
+netscape-3.0-win32	34306	Followups To	menu #224 > View	580
+netscape-3.0-win32	34307	Subject	menu #224 > View	581
+netscape-3.0-win32	34308	Attachment	menu #224 > View	582
+netscape-3.0-win32	34358	Immediate Delivery	menu #224 > Options	590
+netscape-3.0-win32	34359	Deferred Delivery	menu #224 > Options	591
+netscape-3.0-win32	34116	New News Message	menu #225 > File	605
+netscape-3.0-win32	34087	Open News Host	menu #225 > File	608
+netscape-3.0-win32	34088	Remove News Host	menu #225 > File	609
+netscape-3.0-win32	34312	Add Newsgroup	menu #225 > File	610
+netscape-3.0-win32	34313	Get More Messages	menu #225 > File	612
+netscape-3.0-win32	34315	Cancel Message	menu #225 > Edit	638
+netscape-3.0-win32	34117	Post Reply	menu #225 > Message	670
+netscape-3.0-win32	34118	Post and Mail Reply	menu #225 > Message	671
+netscape-3.0-win32	34105	Mark Thread Read	menu #225 > Message	678
+netscape-3.0-win32	34106	Mark Newsgroup Read	menu #225 > Message	679
+netscape-3.0-win32	34098	Show Subscribed Newsgroups	menu #225 > Options	708
+netscape-3.0-win32	34091	Show Active Newsgroups	menu #225 > Options	709
+netscape-3.0-win32	34092	Show All Newsgroups	menu #225 > Options	710
+netscape-3.0-win32	34093	Show New Newsgroups	menu #225 > Options	711
+netscape-3.0-win32	34349	Add from Newest Messages	menu #225 > Options	723
+netscape-3.0-win32	34350	Add from Oldest Messages	menu #225 > Options	724
+netscape-3.0-win32	65022	On News	menu #225 > Help	774
+netscape-3.0-win32	34134	Mail New Message	menu #231 > File	787
+netscape-3.0-win32	34138	Import	menu #231 > File	788
+netscape-3.0-win32	34135	Add User	menu #231 > Item	806
+netscape-3.0-win32	34136	Add List	menu #231 > Item	807
+netscape-3.0-win32	34137	Properties	menu #231 > Item	809
+netscape-3.0-win32	34346	Go to Bookmark	menu #1203 > Item	842
+netscape-3.0-win32	34339	Sort Bookmarks	menu #1203 > Item	844
+netscape-3.0-win32	34343	Insert Bookmark	menu #1203 > Item	846
+netscape-3.0-win32	34344	Insert Folder	menu #1203 > Item	847
+netscape-3.0-win32	34345	Insert Separator	menu #1203 > Item	848
+netscape-3.0-win32	34340	Make Alias	menu #1203 > Item	850
+netscape-3.0-win32	34341	Set to New Bookmarks Folder	menu #1203 > Item	852
+netscape-3.0-win32	34342	Set to Bookmark Menu Folder	menu #1203 > Item	853
+netscape-4.05-win32	62415	Root	menu #2 > Communicator > Bookmarks > File Bookmark	41
+netscape-4.05-win32	34008	Folder	menu #6 > File > New	66
+netscape-4.05-win32	34000	Open	menu #6 > File	70
+netscape-4.05-win32	32879	Message	menu #50 > New	85
+netscape-4.05-win32	62431	Save Frame As	menu #50	94
+netscape-4.05-win32	62432	Edit Frame	menu #50	98
+netscape-4.05-win32	42509	Go Offline	menu #50	101
+netscape-4.05-win32	32910	Search Internet	menu #51	121
+netscape-4.05-win32	34570	Search Directory	menu #51	122
+netscape-4.05-win32	62377	Show Location Toolbar	menu #52	129
+netscape-4.05-win32	62378	Show Personal Toolbar	menu #52	130
+netscape-4.05-win32	62537	Increase Font	menu #52	132
+netscape-4.05-win32	62538	Decrease Font	menu #52	133
+netscape-4.05-win32	32804	Show Images	menu #52	136
+netscape-4.05-win32	32783	Refresh	menu #52	137
+netscape-4.05-win32	32795	Stop Page Loading	menu #52	138
+netscape-4.05-win32	34370	Open Message	menu #54	199
+netscape-4.05-win32	22784	Replace Me	menu #54 > Open Attachments	202
+netscape-4.05-win32	42422	Edit Message	menu #54	206
+netscape-4.05-win32	34455	Rename Folder	menu #54	208
+netscape-4.05-win32	34011	Empty Trash Folder	menu #54	209
+netscape-4.05-win32	34010	Compress Folders	menu #54	210
+netscape-4.05-win32	34006	New	menu #54 > Get Messages	214
+netscape-4.05-win32	42522	Next ###	menu #54 > Get Messages	215
+netscape-4.05-win32	42532	Selected For Offline Reading	menu #54 > Get Messages	217
+netscape-4.05-win32	42376	Flagged For Offline Reading	menu #54 > Get Messages	218
+netscape-4.05-win32	34007	Send Unsent Messages	menu #54	220
+netscape-4.05-win32	34521	Subscribe to Discussion Groups	menu #54	221
+netscape-4.05-win32	34022	Delete Message	menu #55	241
+netscape-4.05-win32	34024	Thread	menu #55 > Select Message	244
+netscape-4.05-win32	34025	Flagged	menu #55 > Select Message	245
+netscape-4.05-win32	34338	All	menu #55 > Select Message	246
+netscape-4.05-win32	32818	Find in Message	menu #55	249
+netscape-4.05-win32	34352	Search Messages	menu #55	251
+netscape-4.05-win32	42539	Manage Mail Account	menu #55	254
+netscape-4.05-win32	42510	Manage Discussion Group	menu #55	255
+netscape-4.05-win32	34380	Mail Filters	menu #55	257
+netscape-4.05-win32	42372	Properties	menu #55	258
+netscape-4.05-win32	42505	Categories	menu #56	266
+netscape-4.05-win32	42423	Message	menu #56	267
+netscape-4.05-win32	34050	by Date	menu #56 > Sort	271
+netscape-4.05-win32	42525	by Flag	menu #56 > Sort	272
+netscape-4.05-win32	34364	by Order received	menu #56 > Sort	273
+netscape-4.05-win32	34448	by Priority	menu #56 > Sort	274
+netscape-4.05-win32	34052	by Sender	menu #56 > Sort	275
+netscape-4.05-win32	42530	by Size	menu #56 > Sort	276
+netscape-4.05-win32	42528	by Status	menu #56 > Sort	277
+netscape-4.05-win32	34051	by Subject	menu #56 > Sort	278
+netscape-4.05-win32	34449	by Thread	menu #56 > Sort	279
+netscape-4.05-win32	42535	by Unread	menu #56 > Sort	280
+netscape-4.05-win32	34049	Ascending	menu #56 > Sort	282
+netscape-4.05-win32	42524	Descending	menu #56 > Sort	283
+netscape-4.05-win32	42039	New	menu #56 > Messages	287
+netscape-4.05-win32	34568	Threads with New	menu #56 > Messages	288
+netscape-4.05-win32	34567	Watched Threads with New	menu #56 > Messages	289
+netscape-4.05-win32	34566	All	menu #56 > Messages	290
+netscape-4.05-win32	34569	Ignored	menu #56 > Messages	292
+netscape-4.05-win32	34469	All	menu #56 > Headers	296
+netscape-4.05-win32	34468	Normal	menu #56 > Headers	297
+netscape-4.05-win32	34467	Brief	menu #56 > Headers	298
+netscape-4.05-win32	34355	Inline	menu #56 > Attachments	302
+netscape-4.05-win32	34356	As Links	menu #56 > Attachments	303
+netscape-4.05-win32	34394	Unscramble (ROT13)	menu #56	314
+netscape-4.05-win32	34496	Wrap Long Lines	menu #56	315
+netscape-4.05-win32	34410	Next Message	menu #57	358
+netscape-4.05-win32	34412	Next Unread Message	menu #57	359
+netscape-4.05-win32	42415	Next Flagged Message	menu #57	360
+netscape-4.05-win32	34563	Next Unread Thread	menu #57	361
+netscape-4.05-win32	42537	Next Category	menu #57	362
+netscape-4.05-win32	42504	Next Unread Category	menu #57	363
+netscape-4.05-win32	42417	Next Folder	menu #57	364
+netscape-4.05-win32	42418	Next Unread Folder	menu #57	365
+netscape-4.05-win32	34411	Previous Message	menu #57	367
+netscape-4.05-win32	34441	Previous Unread Message	menu #57	368
+netscape-4.05-win32	42414	Previous Flagged Message	menu #57	369
+netscape-4.05-win32	42416	First Flagged Message	menu #57	371
+netscape-4.05-win32	34029	to Sender	menu #58 > Reply	382
+netscape-4.05-win32	34415	to Sender and All Recipients	menu #58 > Reply	383
+netscape-4.05-win32	34435	to Group	menu #58 > Reply	384
+netscape-4.05-win32	34436	to Sender and Group	menu #58 > Reply	385
+netscape-4.05-win32	34319	Forward Quoted	menu #58	388
+netscape-4.05-win32	34453	Sender	menu #58 > Add to Address Book	392
+netscape-4.05-win32	34454	All	menu #58 > Add to Address Book	393
+netscape-4.05-win32	20736	Replace Me	menu #58 > File Message	397
+netscape-4.05-win32	34121	as Unread	menu #58 > Mark	406
+netscape-4.05-win32	34120	as Read	menu #58 > Mark	407
+netscape-4.05-win32	34579	Thread Read	menu #58 > Mark	408
+netscape-4.05-win32	42536	Category Read	menu #58 > Mark	409
+netscape-4.05-win32	34526	All Read	menu #58 > Mark	410
+netscape-4.05-win32	34576	by Date	menu #58 > Mark	411
+netscape-4.05-win32	34584	for Later	menu #58 > Mark	412
+netscape-4.05-win32	34125	Flag	menu #58	414
+netscape-4.05-win32	34126	Unflag	menu #58	415
+netscape-4.05-win32	34564	Ignore Thread	menu #58	417
+netscape-4.05-win32	34565	Watch Thread	menu #58	418
+netscape-4.05-win32	42216	Publish	menu #101 > File	438
+netscape-4.05-win32	42022	Browse Page	menu #101 > File	441
+netscape-4.05-win32	42322	Table	menu #101 > Edit > Delete Table	461
+netscape-4.05-win32	42323	Row	menu #101 > Edit > Delete Table	462
+netscape-4.05-win32	42324	Column	menu #101 > Edit > Delete Table	463
+netscape-4.05-win32	42325	Cell	menu #101 > Edit > Delete Table	464
+netscape-4.05-win32	42270	Remove Link	menu #101 > Edit	466
+netscape-4.05-win32	42357	Select Table	menu #101 > Edit	469
+netscape-4.05-win32	42434	Search Directory	menu #101 > Edit	473
+netscape-4.05-win32	42217	HTML Source	menu #101 > Edit	475
+netscape-4.05-win32	42004	{C}	menu #101 > View	481
+netscape-4.05-win32	42005	{F}	menu #101 > View	482
+netscape-4.05-win32	42291	{P}	menu #101 > View	484
+netscape-4.05-win32	42134	Link	menu #101 > Insert	528
+netscape-4.05-win32	42108	Target	menu #101 > Insert	529
+netscape-4.05-win32	42100	Image	menu #101 > Insert	530
+netscape-4.05-win32	42101	Horizontal Line	menu #101 > Insert	531
+netscape-4.05-win32	42317	Table	menu #101 > Insert > Table	534
+netscape-4.05-win32	42318	Row	menu #101 > Insert > Table	535
+netscape-4.05-win32	42319	Column	menu #101 > Insert > Table	536
+netscape-4.05-win32	42320	Cell	menu #101 > Insert > Table	537
+netscape-4.05-win32	42109	HTML Tag	menu #101 > Insert	539
+netscape-4.05-win32	42102	New Line Break	menu #101 > Insert	541
+netscape-4.05-win32	42105	Break below Image(s)	menu #101 > Insert	542
+netscape-4.05-win32	36479	{}	menu #101 > Format > Font	548
+netscape-4.05-win32	36319	{}	menu #101 > Format > Size	552
+netscape-4.05-win32	42010	Bold	menu #101 > Format > Style	556
+netscape-4.05-win32	42011	Italic	menu #101 > Format > Style	557
+netscape-4.05-win32	42363	Underline	menu #101 > Format > Style	558
+netscape-4.05-win32	42015	Strikethrough	menu #101 > Format > Style	559
+netscape-4.05-win32	42013	Superscript	menu #101 > Format > Style	560
+netscape-4.05-win32	42014	Subscript	menu #101 > Format > Style	561
+netscape-4.05-win32	42016	Blinking	menu #101 > Format > Style	562
+netscape-4.05-win32	42012	Nonbreaking	menu #101 > Format > Style	563
+netscape-4.05-win32	950	Color	menu #101 > Format	565
+netscape-4.05-win32	42017	Remove All Styles	menu #101 > Format	566
+netscape-4.05-win32	36005	1	menu #101 > Format > Heading	570
+netscape-4.05-win32	36006	2	menu #101 > Format > Heading	571
+netscape-4.05-win32	36007	3	menu #101 > Format > Heading	572
+netscape-4.05-win32	36008	4	menu #101 > Format > Heading	573
+netscape-4.05-win32	36009	5	menu #101 > Format > Heading	574
+netscape-4.05-win32	36010	6	menu #101 > Format > Heading	575
+netscape-4.05-win32	36101	Normal	menu #101 > Format > Paragraph	579
+netscape-4.05-win32	36013	Address	menu #101 > Format > Paragraph	580
+netscape-4.05-win32	36017	Formatted	menu #101 > Format > Paragraph	581
+netscape-4.05-win32	36038	Block Quote	menu #101 > Format > Paragraph	582
+netscape-4.05-win32	36025	Description Title	menu #101 > Format > Paragraph	583
+netscape-4.05-win32	36026	Description Text	menu #101 > Format > Paragraph	584
+netscape-4.05-win32	42527	None	menu #101 > Format > List	588
+netscape-4.05-win32	42180	Bulletted	menu #101 > Format > List	589
+netscape-4.05-win32	42181	Numbered	menu #101 > Format > List	590
+netscape-4.05-win32	36024	Description	menu #101 > Format > List	591
+netscape-4.05-win32	36022	Directory	menu #101 > Format > List	592
+netscape-4.05-win32	42092	Left	menu #101 > Format > Align	597
+netscape-4.05-win32	42094	Center	menu #101 > Format > Align	598
+netscape-4.05-win32	42093	Right	menu #101 > Format > Align	599
+netscape-4.05-win32	42097	Increase Indent	menu #101 > Format	602
+netscape-4.05-win32	42098	Decrease Indent	menu #101 > Format	603
+netscape-4.05-win32	42075	{}	menu #101 > Format	605
+netscape-4.05-win32	42332	Table Properties	menu #101 > Format	606
+netscape-4.05-win32	42082	Page Colors and Properties	menu #101 > Format	607
+netscape-4.05-win32	42549	Save Encrypted	menu #101 > Format	608
+netscape-4.05-win32	36429	{Editor Plug-ins}	menu #101 > Tools	613
+netscape-4.05-win32	36420	Stop Active Plug-in	menu #101 > Tools	614
+netscape-4.05-win32	43020	Add Page to Toolbar	menu #120 > File	669
+netscape-4.05-win32	34547	by Title	menu #120 > View	691
+netscape-4.05-win32	34548	by Location	menu #120 > View	692
+netscape-4.05-win32	34549	by First Visited	menu #120 > View	693
+netscape-4.05-win32	34550	by Last Visited	menu #120 > View	694
+netscape-4.05-win32	34551	by Expiration	menu #120 > View	695
+netscape-4.05-win32	34552	by Visit Count	menu #120 > View	696
+netscape-4.05-win32	34553	Sort Ascending	menu #120 > View	698
+netscape-4.05-win32	34554	Sort Descending	menu #120 > View	699
+netscape-4.05-win32	34060	Replace Me!	menu #120 > Communicator	730
+netscape-4.05-win32	704	More Options	menu #121 > View	773
+netscape-4.05-win32	705	Fewer Options	menu #121 > View	774
+netscape-4.05-win32	34484	Default Publish Location	menu #218 > Go	992
+netscape-4.05-win32	42529	New Discussion Group Server	menu #221 > File	1039
+netscape-4.05-win32	42545	Update Message Count	menu #221 > File	1052
+netscape-4.05-win32	34406	Delete Folder	menu #221 > Edit	1068
+netscape-4.05-win32	42427	Save Draft	menu #224 > File	1144
+netscape-4.05-win32	42448	Send Now	menu #224 > File	1147
+netscape-4.05-win32	42449	Send Later	menu #224 > File	1148
+netscape-4.05-win32	42458	Quote Original Text	menu #224 > File	1149
+netscape-4.05-win32	59405	Select Addresses	menu #224 > File	1150
+netscape-4.05-win32	42455	File	menu #224 > File > Attach	1153
+netscape-4.05-win32	42456	Web Page	menu #224 > File > Attach	1154
+netscape-4.05-win32	42457	Address Book Card	menu #224 > File > Attach	1155
+netscape-4.05-win32	42534	My Address Book Card	menu #224 > File > Attach	1157
+netscape-4.05-win32	42441	Paste as Quotation	menu #224 > Edit	1176
+netscape-4.05-win32	42006	{M}	menu #224 > View	1199
+netscape-4.05-win32	42447	{A}	menu #224 > View	1200
+netscape-4.05-win32	42445	Address	menu #224 > View	1203
+netscape-4.05-win32	42446	Attachments	menu #224 > View	1204
+netscape-4.05-win32	34135	New Card	menu #231 > File	1384
+netscape-4.05-win32	34136	New List	menu #231 > File	1385
+netscape-4.05-win32	34138	Import	menu #231 > File	1386
+netscape-4.05-win32	42378	Call	menu #231 > File	1389
+netscape-4.05-win32	34516	Search Directory	menu #231 > Edit	1400
+netscape-4.05-win32	42543	HTML Domains	menu #231 > Edit	1402
+netscape-4.05-win32	34137	Card Properties	menu #231 > Edit	1403
+netscape-4.05-win32	42499	My Address Book Card	menu #231 > View	1420
+netscape-4.05-win32	34343	New Bookmark	menu #1203 > File	1472
+netscape-4.05-win32	34344	New Folder	menu #1203 > File	1473
+netscape-4.05-win32	34345	New Separator	menu #1203 > File	1474
+netscape-4.05-win32	57601	Open Bookmarks File	menu #1203 > File	1475
+netscape-4.05-win32	34346	Go to Bookmark	menu #1203 > File	1480
+netscape-4.05-win32	42538	Go Offline	menu #1203 > File	1484
+netscape-4.05-win32	57636	Find in Bookmarks..	menu #1203 > Edit	1499
+netscape-4.05-win32	34337	Update Bookmarks	menu #1203 > View	1514
+netscape-4.05-win32	42500	Set as Toolbar Folder	menu #1203 > View	1516
+netscape-4.05-win32	34341	Set as New Bookmarks Folder	menu #1203 > View	1517
+netscape-4.05-win32	34342	Set as Bookmark Menu	menu #1203 > View	1518
+netscape-4.05-win32	42533	Manage Discussion Group	menu #1255 > Edit	1617
+netscape-4.05-win32	42432	Find in Message	menu #1377 > Edit	1902
+netscape-4.7-win32	62415	Root	menu #2 > Communicator > Bookmarks > File Bookmark	36
+netscape-4.7-win32	34008	Folder	menu #6 > File > New	78
+netscape-4.7-win32	34000	Open	menu #6 > File	82
+netscape-4.7-win32	32879	Message	menu #50 > New	97
+netscape-4.7-win32	62431	Save Frame As	menu #50	106
+netscape-4.7-win32	62432	Edit Frame	menu #50	110
+netscape-4.7-win32	32910	Search Internet	menu #51	137
+netscape-4.7-win32	62537	Increase Font	menu #52	153
+netscape-4.7-win32	62538	Decrease Font	menu #52	154
+netscape-4.7-win32	32804	Show Images	menu #52	157
+netscape-4.7-win32	32783	Refresh	menu #52	158
+netscape-4.7-win32	32795	Stop Page Loading	menu #52	159
+netscape-4.7-win32	22784	Replace Me	menu #54 > Open Attachment	225
+netscape-4.7-win32	34437	File	menu #54 > Save As	229
+netscape-4.7-win32	10304	Template	menu #54 > Save As	230
+netscape-4.7-win32	34006	Get New Messages	menu #54	233
+netscape-4.7-win32	42522	Get Next N Messages	menu #54	234
+netscape-4.7-win32	34007	Send Unsent Messages	menu #54	235
+netscape-4.7-win32	42545	Update Message Count	menu #54	236
+netscape-4.7-win32	34521	Subscribe	menu #54	237
+netscape-4.7-win32	34455	Rename Folder	menu #54	239
+netscape-4.7-win32	34011	Empty Trash Folder	menu #54	240
+netscape-4.7-win32	34010	Compact Folders	menu #54	241
+netscape-4.7-win32	42532	Get Selected Messages	menu #54 > Offline	251
+netscape-4.7-win32	42376	Get Flagged Messages	menu #54 > Offline	252
+netscape-4.7-win32	34017	Delete Message	menu #55	271
+netscape-4.7-win32	34338	All	menu #55 > Select	274
+netscape-4.7-win32	34024	Thread	menu #55 > Select	275
+netscape-4.7-win32	34025	Flagged Messages	menu #55 > Select	276
+netscape-4.7-win32	34352	Search Messages	menu #55	282
+netscape-4.7-win32	34380	Message Filters	menu #55	284
+netscape-4.7-win32	42372	Properties	menu #55	285
+netscape-4.7-win32	42423	Message	menu #56 > Show	296
+netscape-4.7-win32	34444	Folders	menu #56 > Show	297
+netscape-4.7-win32	34050	by Date	menu #56 > Sort	304
+netscape-4.7-win32	42525	by Flag	menu #56 > Sort	305
+netscape-4.7-win32	34448	by Priority	menu #56 > Sort	306
+netscape-4.7-win32	34052	by Sender	menu #56 > Sort	307
+netscape-4.7-win32	42530	by Size	menu #56 > Sort	308
+netscape-4.7-win32	42528	by Status	menu #56 > Sort	309
+netscape-4.7-win32	34051	by Subject	menu #56 > Sort	310
+netscape-4.7-win32	34449	by Thread	menu #56 > Sort	311
+netscape-4.7-win32	42535	by Unread	menu #56 > Sort	312
+netscape-4.7-win32	34364	by Order received	menu #56 > Sort	313
+netscape-4.7-win32	34049	Ascending	menu #56 > Sort	315
+netscape-4.7-win32	42524	Descending	menu #56 > Sort	316
+netscape-4.7-win32	34566	All	menu #56 > Messages	320
+netscape-4.7-win32	42039	Unread	menu #56 > Messages	321
+netscape-4.7-win32	34568	Threads with Unread	menu #56 > Messages	322
+netscape-4.7-win32	34567	Watched Threads with Unread	menu #56 > Messages	323
+netscape-4.7-win32	34569	Ignored Threads	menu #56 > Messages	325
+netscape-4.7-win32	34469	All	menu #56 > Headers	329
+netscape-4.7-win32	34468	Normal	menu #56 > Headers	330
+netscape-4.7-win32	34467	Brief	menu #56 > Headers	331
+netscape-4.7-win32	10005	View Attachment Inline	menu #56	334
+netscape-4.7-win32	34496	Wrap Long Lines	menu #56	335
+netscape-4.7-win32	34572	First Unread Message	menu #57	390
+netscape-4.7-win32	42416	First Flagged Message	menu #57	391
+netscape-4.7-win32	34410	Message	menu #57 > Next	395
+netscape-4.7-win32	34412	Unread Message	menu #57 > Next	396
+netscape-4.7-win32	42415	Flagged Message	menu #57 > Next	397
+netscape-4.7-win32	34563	Unread Thread	menu #57 > Next	399
+netscape-4.7-win32	42417	Folder	menu #57 > Next	401
+netscape-4.7-win32	42418	Unread Folder	menu #57 > Next	402
+netscape-4.7-win32	34411	Message	menu #57 > Previous	406
+netscape-4.7-win32	34441	Unread Message	menu #57 > Previous	407
+netscape-4.7-win32	42414	Flagged Message	menu #57 > Previous	408
+netscape-4.7-win32	10032	Reply	menu #58	418
+netscape-4.7-win32	10033	Reply to All	menu #58	419
+netscape-4.7-win32	10211	to Sender Only	menu #58 > Reply	422
+netscape-4.7-win32	34435	to Newsgroup	menu #58 > Reply	423
+netscape-4.7-win32	10212	to Sender and All Recipients	menu #58 > Reply All	427
+netscape-4.7-win32	34436	to Sender and Newsgroup	menu #58 > Reply All	428
+netscape-4.7-win32	34321	Inline	menu #58 > Forward As	433
+netscape-4.7-win32	34319	Quoted	menu #58 > Forward As	434
+netscape-4.7-win32	34031	Attachment	menu #58 > Forward As	435
+netscape-4.7-win32	42422	Edit Message as New	menu #58	437
+netscape-4.7-win32	20736	Replace Me	menu #58 > Move Message	441
+netscape-4.7-win32	21760	Replace Me	menu #58 > Copy Message	445
+netscape-4.7-win32	34453	Add Sender to Address Book	menu #58	448
+netscape-4.7-win32	34454	Add All to Address Book	menu #58	449
+netscape-4.7-win32	34120	as Read	menu #58 > Mark	453
+netscape-4.7-win32	34579	Thread as Read	menu #58 > Mark	454
+netscape-4.7-win32	34576	by Date	menu #58 > Mark	455
+netscape-4.7-win32	34526	All Read	menu #58 > Mark	456
+netscape-4.7-win32	34125	Flag	menu #58 > Mark	458
+netscape-4.7-win32	34564	Ignore Thread	menu #58	461
+netscape-4.7-win32	34565	Watch Thread	menu #58	462
+netscape-4.7-win32	42216	Publish	menu #101 > File	482
+netscape-4.7-win32	42022	Browse Page	menu #101 > File	485
+netscape-4.7-win32	42322	Table	menu #101 > Edit > Delete Table	505
+netscape-4.7-win32	42323	Row	menu #101 > Edit > Delete Table	506
+netscape-4.7-win32	42324	Column	menu #101 > Edit > Delete Table	507
+netscape-4.7-win32	42325	Cell	menu #101 > Edit > Delete Table	508
+netscape-4.7-win32	42270	Remove Link	menu #101 > Edit	510
+netscape-4.7-win32	42357	Select Table	menu #101 > Edit	513
+netscape-4.7-win32	42217	HTML Source	menu #101 > Edit	518
+netscape-4.7-win32	42004	Composition Toolbar	menu #101 > View > Show	526
+netscape-4.7-win32	42005	Formatting Toolbar	menu #101 > View > Show	527
+netscape-4.7-win32	42291	Paragraph Marks	menu #101 > View > Show	531
+netscape-4.7-win32	42134	Link	menu #101 > Insert	582
+netscape-4.7-win32	42108	Target	menu #101 > Insert	583
+netscape-4.7-win32	42100	Image	menu #101 > Insert	584
+netscape-4.7-win32	42101	Horizontal Line	menu #101 > Insert	585
+netscape-4.7-win32	42317	Table	menu #101 > Insert > Table	588
+netscape-4.7-win32	42318	Row	menu #101 > Insert > Table	589
+netscape-4.7-win32	42319	Column	menu #101 > Insert > Table	590
+netscape-4.7-win32	42320	Cell	menu #101 > Insert > Table	591
+netscape-4.7-win32	42109	HTML Tag	menu #101 > Insert	593
+netscape-4.7-win32	42102	New Line Break	menu #101 > Insert	595
+netscape-4.7-win32	42105	Break below Image(s)	menu #101 > Insert	596
+netscape-4.7-win32	36479	{}	menu #101 > Format > Font	602
+netscape-4.7-win32	36319	{}	menu #101 > Format > Size	606
+netscape-4.7-win32	42009	Bold	menu #101 > Format > Style	610
+netscape-4.7-win32	42010	Italic	menu #101 > Format > Style	611
+netscape-4.7-win32	42011	Underline	menu #101 > Format > Style	612
+netscape-4.7-win32	42015	Strikethrough	menu #101 > Format > Style	613
+netscape-4.7-win32	42013	Superscript	menu #101 > Format > Style	614
+netscape-4.7-win32	42014	Subscript	menu #101 > Format > Style	615
+netscape-4.7-win32	42016	Blinking	menu #101 > Format > Style	616
+netscape-4.7-win32	42012	Nonbreaking	menu #101 > Format > Style	617
+netscape-4.7-win32	950	Color	menu #101 > Format	619
+netscape-4.7-win32	42017	Remove All Styles	menu #101 > Format	620
+netscape-4.7-win32	36005	1	menu #101 > Format > Heading	624
+netscape-4.7-win32	36006	2	menu #101 > Format > Heading	625
+netscape-4.7-win32	36007	3	menu #101 > Format > Heading	626
+netscape-4.7-win32	36008	4	menu #101 > Format > Heading	627
+netscape-4.7-win32	36009	5	menu #101 > Format > Heading	628
+netscape-4.7-win32	36010	6	menu #101 > Format > Heading	629
+netscape-4.7-win32	36101	Normal	menu #101 > Format > Paragraph	633
+netscape-4.7-win32	36013	Address	menu #101 > Format > Paragraph	634
+netscape-4.7-win32	36017	Formatted	menu #101 > Format > Paragraph	635
+netscape-4.7-win32	36038	Block Quote	menu #101 > Format > Paragraph	636
+netscape-4.7-win32	36025	Description Title	menu #101 > Format > Paragraph	637
+netscape-4.7-win32	36026	Description Text	menu #101 > Format > Paragraph	638
+netscape-4.7-win32	42527	None	menu #101 > Format > List	642
+netscape-4.7-win32	42180	Bulletted	menu #101 > Format > List	643
+netscape-4.7-win32	42181	Numbered	menu #101 > Format > List	644
+netscape-4.7-win32	36024	Description	menu #101 > Format > List	645
+netscape-4.7-win32	36022	Directory	menu #101 > Format > List	646
+netscape-4.7-win32	42092	Left	menu #101 > Format > Align	651
+netscape-4.7-win32	42094	Center	menu #101 > Format > Align	652
+netscape-4.7-win32	42093	Right	menu #101 > Format > Align	653
+netscape-4.7-win32	42097	Increase Indent	menu #101 > Format	656
+netscape-4.7-win32	42098	Decrease Indent	menu #101 > Format	657
+netscape-4.7-win32	42075	{}	menu #101 > Format	659
+netscape-4.7-win32	42332	Table Properties	menu #101 > Format	660
+netscape-4.7-win32	42082	Page Colors and Properties	menu #101 > Format	661
+netscape-4.7-win32	42549	Save Encrypted	menu #101 > Format	662
+netscape-4.7-win32	36429	{Editor Plug-ins}	menu #101 > Tools	667
+netscape-4.7-win32	36420	Stop Active Plug-in	menu #101 > Tools	668
+netscape-4.7-win32	43020	Add Page to Toolbar	menu #120 > File	731
+netscape-4.7-win32	34547	by Title	menu #120 > View	757
+netscape-4.7-win32	34548	by Location	menu #120 > View	758
+netscape-4.7-win32	34549	by First Visited	menu #120 > View	759
+netscape-4.7-win32	34550	by Last Visited	menu #120 > View	760
+netscape-4.7-win32	34551	by Expiration	menu #120 > View	761
+netscape-4.7-win32	34552	by Visit Count	menu #120 > View	762
+netscape-4.7-win32	34553	Sort Ascending	menu #120 > View	764
+netscape-4.7-win32	34554	Sort Descending	menu #120 > View	765
+netscape-4.7-win32	704	More Options	menu #121 > View	845
+netscape-4.7-win32	705	Fewer Options	menu #121 > View	846
+netscape-4.7-win32	34484	Default Publish Location	menu #218 > Go	1079
+netscape-4.7-win32	34421	Collabra Newsgroups	menu #218 > Communicator	1085
+netscape-4.7-win32	34406	Delete Folder	menu #221 > Edit	1158
+netscape-4.7-win32	42539	Mail Account	menu #221 > Communicator > Server Tools	1214
+netscape-4.7-win32	10017	Mailing Lists	menu #221 > Communicator > Server Tools	1215
+netscape-4.7-win32	10018	Folder Permissions	menu #221 > Communicator > Server Tools	1216
+netscape-4.7-win32	42510	Manage Newsgroups	menu #221 > Communicator > Server Tools	1217
+netscape-4.7-win32	42426	File	menu #224 > File > Save As	1247
+netscape-4.7-win32	42427	Draft	menu #224 > File > Save As	1249
+netscape-4.7-win32	42455	File	menu #224 > File > Attach	1254
+netscape-4.7-win32	42456	Web Page	menu #224 > File > Attach	1255
+netscape-4.7-win32	42534	Personal Card (vCard)	menu #224 > File > Attach	1257
+netscape-4.7-win32	42448	Send Now	menu #224 > File	1260
+netscape-4.7-win32	42449	Send Later	menu #224 > File	1261
+netscape-4.7-win32	42458	Quote Original Message	menu #224 > File	1262
+netscape-4.7-win32	59405	Select Addresses	menu #224 > File	1263
+netscape-4.7-win32	42441	Paste as Quotation	menu #224 > Edit	1279
+netscape-4.7-win32	42551	Name Completion	menu #224 > Edit	1296
+netscape-4.7-win32	42550	Show Matching Addresses	menu #224 > Edit	1297
+netscape-4.7-win32	42006	Message Toolbar	menu #224 > View > Show	1305
+netscape-4.7-win32	42447	Addressing Area	menu #224 > View > Show	1306
+netscape-4.7-win32	42445	Address	menu #224 > View	1314
+netscape-4.7-win32	42446	Attachments	menu #224 > View	1315
+netscape-4.7-win32	34135	New Card	menu #231 > File	1505
+netscape-4.7-win32	34136	New List	menu #231 > File	1506
+netscape-4.7-win32	34145	New Address Book	menu #231 > File	1507
+netscape-4.7-win32	34156	New Directory	menu #231 > File	1508
+netscape-4.7-win32	42378	Call	menu #231 > File	1510
+netscape-4.7-win32	34138	Import	menu #231 > File	1512
+netscape-4.7-win32	1351	Search for	menu #231 > Edit	1529
+netscape-4.7-win32	42543	HTML Domains	menu #231 > Edit	1531
+netscape-4.7-win32	34137	Card Properties	menu #231 > Edit	1532
+netscape-4.7-win32	10004	Address Book Toolbar	menu #231 > View > Show	1540
+netscape-4.7-win32	34598	Address Books	menu #231 > View > Show	1541
+netscape-4.7-win32	42553	by Type	menu #231 > View > Sort	1546
+netscape-4.7-win32	42554	by Name	menu #231 > View > Sort	1547
+netscape-4.7-win32	42555	by Email	menu #231 > View > Sort	1548
+netscape-4.7-win32	42556	by Organization	menu #231 > View > Sort	1549
+netscape-4.7-win32	42557	by City	menu #231 > View > Sort	1550
+netscape-4.7-win32	42558	by Phone	menu #231 > View > Sort	1551
+netscape-4.7-win32	42559	by Nickname	menu #231 > View > Sort	1552
+netscape-4.7-win32	34343	New Bookmark	menu #1203 > File	1616
+netscape-4.7-win32	34344	New Folder	menu #1203 > File	1617
+netscape-4.7-win32	34345	New Separator	menu #1203 > File	1618
+netscape-4.7-win32	57601	Open Bookmarks File	menu #1203 > File	1619
+netscape-4.7-win32	34346	Go to Bookmark	menu #1203 > File	1624
+netscape-4.7-win32	42536	Add Selection to Toolbar	menu #1203 > File	1625
+netscape-4.7-win32	42538	Go Offline	menu #1203 > File	1628
+netscape-4.7-win32	57636	Find in Bookmarks..	menu #1203 > Edit	1643
+netscape-4.7-win32	34337	Update Bookmarks	menu #1203 > View	1663
+netscape-4.7-win32	42500	Set as Toolbar Folder	menu #1203 > View	1665
+netscape-4.7-win32	34341	Set as New Bookmarks Folder	menu #1203 > View	1666
+netscape-4.7-win32	34342	Set as Bookmark Menu	menu #1203 > View	1667
+netscape-4.7-win32	34022	Delete Message	menu #1255 > Edit	1770
+ie-4.0-win32	41265	Manage Subscriptions	shdocvw menu #257 > (untitled)	91
+ie-4.0-win32	41334	Update All Subscriptions	shdocvw menu #257 > (untitled)	92
+ie-4.0-win32	393	Journal	shdocvw menu #258 > File > New	112
+ie-4.0-win32	41476	Standard Buttons	shdocvw menu #264 > (untitled)	255
+ie-4.0-win32	41477	Address Bar	shdocvw menu #264 > (untitled)	256
+ie-4.0-win32	41479	Text Labels	shdocvw menu #264 > (untitled)	259
+ie-4.0-win32	41481	Auto Hide	shdocvw menu #264 > (untitled)	260
+ie-4.0-win32	1	Close	shdocvw menu #265 > (untitled)	268
+ie-4.0-win32	6	Always on Top	shdocvw menu #272 > WebBar	276
+ie-4.0-win32	8	Auto Hide	shdocvw menu #272 > WebBar	277
+ie-4.0-win32	3	Desktop	shdocvw menu #273 > (untitled) > Toolbars	287
+ie-4.0-win32	4	Quick Launch	shdocvw menu #273 > (untitled) > Toolbars	288
+ie-4.0-win32	2	Small	shdocvw menu #276 > (untitled) > View	328
+ie-4.0-win32	5	Refresh	shdocvw menu #276 > (untitled)	331
+ie-4.0-win32	41826	Properties	shdocvw menu #279 > (untitled)	494
+ie-4.0-win32	41832	Customize My Desktop	shdocvw menu #279 > (untitled)	496
+ie-4.0-win32	41833	Close	shdocvw menu #279 > (untitled)	498
+ie-4.0-win32	4294967295	Empty	shdocvw menu #281	512
+ie-4.0-win32	3334	Open	shdocvw menu #289 > Script Debugger	527
+ie-4.0-win32	3335	Break at Next Statement	shdocvw menu #289 > Script Debugger	528
+ie-4.0-win32	0	Open	shdocvw menu #20680 > (untitled)	536
+ie-4.0-win32	10	by Title	shdocvw menu #20683 > (untitled)	568
+ie-4.0-win32	11	by Internet Address	shdocvw menu #20683 > (untitled)	569
+ie-4.0-win32	12	by Last Visited	shdocvw menu #20683 > (untitled)	570
+ie-4.0-win32	13	by Last Updated	shdocvw menu #20683 > (untitled)	571
+ie-4.0-win32	20	by Name	shdocvw menu #20684 > (untitled)	579
+ie-4.0-win32	21	by Internet Address	shdocvw menu #20684 > (untitled)	580
+ie-4.0-win32	22	by Size	shdocvw menu #20684 > (untitled)	581
+ie-4.0-win32	23	by Expires	shdocvw menu #20684 > (untitled)	582
+ie-4.0-win32	24	by Modified	shdocvw menu #20684 > (untitled)	583
+ie-4.0-win32	25	by Last Accessed	shdocvw menu #20684 > (untitled)	584
+ie-4.0-win32	26	by Last Checked	shdocvw menu #20684 > (untitled)	585
+ie-4.0-win32	17	Clear	mshtml menu #907 > Edit	608
+ie-4.0-win32	2124	Link	mshtml menu #907 > Edit	614
+ie-4.0-win32	2128	Remove Bookmark	mshtml menu #907 > Edit	615
+ie-4.0-win32	2125	Remove Link	mshtml menu #907 > Edit	616
+ie-4.0-win32	2130	Toolbar	mshtml menu #907 > View	620
+ie-4.0-win32	2132	Format Marks	mshtml menu #907 > View	623
+ie-4.0-win32	2133	Text Only	mshtml menu #907 > View	624
+ie-4.0-win32	2136	In Current Window	mshtml menu #907 > View > Open Link	640
+ie-4.0-win32	2137	In New Window	mshtml menu #907 > View > Open Link	641
+ie-4.0-win32	28	Properties	mshtml menu #907 > View	644
+ie-4.0-win32	2150	Horizontal Line	mshtml menu #907 > Insert	649
+ie-4.0-win32	2151	Normal Line Break	mshtml menu #907 > Insert > Line Break	652
+ie-4.0-win32	2152	Clear Left Margin	mshtml menu #907 > Insert > Line Break	653
+ie-4.0-win32	2153	Clear Right Margin	mshtml menu #907 > Insert > Line Break	654
+ie-4.0-win32	2154	Clear Both Margins	mshtml menu #907 > Insert > Line Break	655
+ie-4.0-win32	2155	Non-Breaking Space	mshtml menu #907 > Insert	657
+ie-4.0-win32	2177	Page Break	mshtml menu #907 > Insert	658
+ie-4.0-win32	2156	Special Character	mshtml menu #907 > Insert	659
+ie-4.0-win32	2182	Marquee	mshtml menu #907 > Insert	661
+ie-4.0-win32	2170	HTML Text	mshtml menu #907 > Insert	662
+ie-4.0-win32	2161	Text Box	mshtml menu #907 > Insert > Control	665
+ie-4.0-win32	2162	Text Area	mshtml menu #907 > Insert > Control	666
+ie-4.0-win32	2163	Check Box	mshtml menu #907 > Insert > Control	667
+ie-4.0-win32	2164	Radio Button	mshtml menu #907 > Insert > Control	668
+ie-4.0-win32	2165	Dropdown Box	mshtml menu #907 > Insert > Control	669
+ie-4.0-win32	2166	List Box	mshtml menu #907 > Insert > Control	670
+ie-4.0-win32	2167	Button	mshtml menu #907 > Insert > Control	671
+ie-4.0-win32	2168	Image	mshtml menu #907 > Insert	674
+ie-4.0-win32	2158	Frame	mshtml menu #907 > Insert	675
+ie-4.0-win32	90	Characters	mshtml menu #907 > Format	680
+ie-4.0-win32	2186	Increase Indent	mshtml menu #907 > Format	682
+ie-4.0-win32	2187	Decrease Indent	mshtml menu #907 > Format	683
+ie-4.0-win32	2220	Trident Help Topics	mshtml menu #907 > Help	687
+ie-4.0-win32	2222	Trident Readme File	mshtml menu #907 > Help	688
+ie-4.0-win32	2221	About Microsoft Trident	mshtml menu #907 > Help	689
+ie-4.0-win32	2292	Language	mshtml menu #908 > View	725
+ie-4.0-win32	2310	Launch Debugger	mshtml menu #908 > View > Debugger	733
+ie-4.0-win32	2311	Break at Next	mshtml menu #908 > View > Debugger	734
+ie-4.0-win32	2126	Browse View	mshtml menu #24640 > Default	766
+ie-4.0-win32	2120	Paste Insert	mshtml menu #24640 > Table	797
+ie-4.0-win32	2206	Cell	mshtml menu #24640 > Table > Select	801
+ie-4.0-win32	2207	Row	mshtml menu #24640 > Table > Select	802
+ie-4.0-win32	2208	Column	mshtml menu #24640 > Table > Select	803
+ie-4.0-win32	2209	Table	mshtml menu #24640 > Table > Select	804
+ie-4.0-win32	2211	Cell Properties	mshtml menu #24640 > Table	807
+ie-4.0-win32	2210	Table Properties	mshtml menu #24640 > Table	808
+ie-4.0-win32	6042	Refresh	mshtml menu #24641 > Default	850
+ie-4.0-win32	2274	Play	mshtml menu #24641 > ART Image	954
+ie-4.0-win32	2290	Create Link Here	mshtml menu #24643 > Drag File	971
+ie-4.0-win32	2291	Copy Content Here	mshtml menu #24643 > Drag File	972
+ie-4.0-win32	89	Cancel	mshtml menu #24643 > Drag File	974
+ie-4.0-win32	9000	New Rectangle	mshtml menu #24646 > Map	993
+ie-4.0-win32	9001	New Circle	mshtml menu #24646 > Map	994
+ie-4.0-win32	9002	New Polygon	mshtml menu #24646 > Map	995
+ie-4.0-win32	9005	Delete All areas from the map	mshtml menu #24647 > Edit	1015
+ie-4.0-win32	9003	Automatic Link Dialog	mshtml menu #24647 > Edit	1018
+ie-4.0-win32	9006	Image Map Editor	mshtml menu #24647 > Help	1029
+ie-5.0-win32	393	Journal	shdoclc menu #258 > File > New	23
+ie-5.0-win32	3334	Open	shdoclc menu #259 > Script Debugger	74
+ie-5.0-win32	3335	Break at Next Statement	shdoclc menu #259 > Script Debugger	75
+ie-5.0-win32	17	Clear	shdoclc menu #907 > Edit	90
+ie-5.0-win32	2124	Link	shdoclc menu #907 > Edit	96
+ie-5.0-win32	2128	Remove Bookmark	shdoclc menu #907 > Edit	97
+ie-5.0-win32	2125	Remove Link	shdoclc menu #907 > Edit	98
+ie-5.0-win32	2130	Toolbar	shdoclc menu #907 > View	102
+ie-5.0-win32	2132	Format Marks	shdoclc menu #907 > View	105
+ie-5.0-win32	2133	Text Only	shdoclc menu #907 > View	106
+ie-5.0-win32	2136	In Current Window	shdoclc menu #907 > View > Open Link	122
+ie-5.0-win32	2137	In New Window	shdoclc menu #907 > View > Open Link	123
+ie-5.0-win32	28	Properties	shdoclc menu #907 > View	126
+ie-5.0-win32	2150	Horizontal Line	shdoclc menu #907 > Insert	131
+ie-5.0-win32	2151	Normal Line Break	shdoclc menu #907 > Insert > Line Break	134
+ie-5.0-win32	2152	Clear Left Margin	shdoclc menu #907 > Insert > Line Break	135
+ie-5.0-win32	2153	Clear Right Margin	shdoclc menu #907 > Insert > Line Break	136
+ie-5.0-win32	2154	Clear Both Margins	shdoclc menu #907 > Insert > Line Break	137
+ie-5.0-win32	2155	Non-Breaking Space	shdoclc menu #907 > Insert	139
+ie-5.0-win32	2177	Page Break	shdoclc menu #907 > Insert	140
+ie-5.0-win32	2156	Special Character	shdoclc menu #907 > Insert	141
+ie-5.0-win32	2182	Marquee	shdoclc menu #907 > Insert	143
+ie-5.0-win32	2170	HTML Text	shdoclc menu #907 > Insert	144
+ie-5.0-win32	2161	Text Box	shdoclc menu #907 > Insert > Control	147
+ie-5.0-win32	2162	Text Area	shdoclc menu #907 > Insert > Control	148
+ie-5.0-win32	2163	Check Box	shdoclc menu #907 > Insert > Control	149
+ie-5.0-win32	2164	Radio Button	shdoclc menu #907 > Insert > Control	150
+ie-5.0-win32	2165	Dropdown Box	shdoclc menu #907 > Insert > Control	151
+ie-5.0-win32	2166	List Box	shdoclc menu #907 > Insert > Control	152
+ie-5.0-win32	2167	Button	shdoclc menu #907 > Insert > Control	153
+ie-5.0-win32	2168	Image	shdoclc menu #907 > Insert	156
+ie-5.0-win32	2158	Frame	shdoclc menu #907 > Insert	157
+ie-5.0-win32	25	Object	shdoclc menu #907 > Insert	158
+ie-5.0-win32	90	Characters	shdoclc menu #907 > Format	162
+ie-5.0-win32	2186	Increase Indent	shdoclc menu #907 > Format	164
+ie-5.0-win32	2187	Decrease Indent	shdoclc menu #907 > Format	165
+ie-5.0-win32	2220	Trident Help Topics	shdoclc menu #907 > Help	169
+ie-5.0-win32	2222	Trident Readme File	shdoclc menu #907 > Help	170
+ie-5.0-win32	2221	About Microsoft Trident	shdoclc menu #907 > Help	171
+ie-5.0-win32	2292	Language	shdoclc menu #908 > View	207
+ie-5.0-win32	2310	Launch Debugger	shdoclc menu #908 > View > Debugger	215
+ie-5.0-win32	2311	Break at Next	shdoclc menu #908 > View > Debugger	216
+ie-5.0-win32	2350	Left-To-Right Document	shdoclc menu #909	237
+ie-5.0-win32	2351	Right-To-Left Document	shdoclc menu #909	238
+ie-5.0-win32	1	Open	shdoclc menu #3400 > (untitled)	245
+ie-5.0-win32	5	Create New Folder	shdoclc menu #3400 > (untitled)	246
+ie-5.0-win32	7	Open in New Window	shdoclc menu #20680 > (untitled)	255
+ie-5.0-win32	4	Properties	shdoclc menu #20680 > (untitled)	262
+ie-5.0-win32	10	by Title	shdoclc menu #20683 > (untitled)	288
+ie-5.0-win32	11	by Internet Address	shdoclc menu #20683 > (untitled)	289
+ie-5.0-win32	12	by Last Visited	shdoclc menu #20683 > (untitled)	290
+ie-5.0-win32	13	by Last Updated	shdoclc menu #20683 > (untitled)	291
+ie-5.0-win32	20	by Name	shdoclc menu #20684 > (untitled)	299
+ie-5.0-win32	21	by Internet Address	shdoclc menu #20684 > (untitled)	300
+ie-5.0-win32	22	by Size	shdoclc menu #20684 > (untitled)	301
+ie-5.0-win32	23	by Expires	shdoclc menu #20684 > (untitled)	302
+ie-5.0-win32	24	by Modified	shdoclc menu #20684 > (untitled)	303
+ie-5.0-win32	2126	Browse View	shdoclc menu #24640 > Default	322
+ie-5.0-win32	2120	Paste Insert	shdoclc menu #24640 > Table	354
+ie-5.0-win32	2206	Cell	shdoclc menu #24640 > Table > Select	358
+ie-5.0-win32	2207	Row	shdoclc menu #24640 > Table > Select	359
+ie-5.0-win32	2208	Column	shdoclc menu #24640 > Table > Select	360
+ie-5.0-win32	2209	Table	shdoclc menu #24640 > Table > Select	361
+ie-5.0-win32	2211	Cell Properties	shdoclc menu #24640 > Table	364
+ie-5.0-win32	2210	Table Properties	shdoclc menu #24640 > Table	365
+ie-5.0-win32	6004	Trace Tags	shdoclc menu #24640 > Debug	384
+ie-5.0-win32	6005	Resource Failures	shdoclc menu #24640 > Debug	385
+ie-5.0-win32	6006	Dump Tracking Info	shdoclc menu #24640 > Debug	386
+ie-5.0-win32	6007	Debug Break	shdoclc menu #24640 > Debug	387
+ie-5.0-win32	6008	Debug View	shdoclc menu #24640 > Debug	388
+ie-5.0-win32	6009	Dump Tree	shdoclc menu #24640 > Debug	389
+ie-5.0-win32	6010	Dump Lines	shdoclc menu #24640 > Debug	390
+ie-5.0-win32	6015	Dump DisplayTree	shdoclc menu #24640 > Debug	391
+ie-5.0-win32	6016	Dump FormatCaches	shdoclc menu #24640 > Debug	392
+ie-5.0-win32	6013	Memory Monitor	shdoclc menu #24640 > Debug	393
+ie-5.0-win32	6014	Performance Meters	shdoclc menu #24640 > Debug	394
+ie-5.0-win32	2127	Edit View	shdoclc menu #24640 > Debug	397
+ie-5.0-win32	6042	Refresh	shdoclc menu #24641 > Default	423
+ie-5.0-win32	2274	Play	shdoclc menu #24641 > ART Image	541
+ie-5.0-win32	0	Cancel	shdoclc menu #24645 > Drag	573
+ie-5.0-win32	8	Auto-Hide	browselc menu #259 > (untitled)	616
+ie-5.0-win32	41476	Standard Buttons	browselc menu #264 > (untitled)	739
+ie-5.0-win32	41477	Address Bar	browselc menu #264 > (untitled)	740
+ie-5.0-win32	41481	Auto-Hide	browselc menu #264 > (untitled)	743
+ie-5.0-win32	41501	Customize	browselc menu #264 > (untitled)	744
+ie-5.0-win32	41479	Text Labels	browselc menu #264 > (untitled)	745
+ie-5.0-win32	41483	Go Button	browselc menu #264 > (untitled)	746
+ie-5.0-win32	4633	None	browselc menu #267 > View > Encoding	930
+ie-7-win32	2	Show Title	menu #256 > (untitled)	11
+ie-7-win32	1	Close Toolbar	menu #257 > (untitled)	19
+ie-7-win32	3	Disable Add, Close, Drag and Drop (IEAK)	menu #257 > (untitled)	20
+ie-7-win32	4	Disable Resizing (IEAK)	menu #257 > (untitled)	21
+ie-7-win32	6	Always on Top	menu #259 > (untitled)	29
+ie-7-win32	8	Auto-Hide	menu #259 > (untitled)	30
+ie-7-win32	376	Trusted Sites Zone	menu #267 > File > Add this site to	230
+ie-7-win32	377	Local Intranet Zone	menu #267 > File > Add this site to	231
+ie-7-win32	4633	None	menu #267 > View > Encoding	285
+ie-7-win32	41521	International Website Address	menu #267 > View	290
+ie-7-win32	41507	Web Page Privacy Policy	menu #267 > View	292
+ie-7-win32	380	Panning hand	menu #267 > View	293
+ie-7-win32	41266	Diagnose Connection Problems	menu #267 > Tools	309
+ie-7-win32	8808	Subscribe to this Feed	menu #267 > Tools	318
+ie-7-win32	8706	feed1	menu #267 > Tools > Feed Discovery	321
+ie-7-win32	342	Windows Update	menu #267 > Tools	323
+ie-7-win32	7	Properties	menu #271 > (untitled)	367
+ie-7-win32	1536	Edit Address	menu #272 > (untitled)	376
+ie-7-win32	1538	Auto-Hide	menu #275	397
+ie-7-win32	3334	Open	menu #289 > Script Debugger	413
+ie-7-win32	3335	Break at Next Statement	menu #289 > Script Debugger	414
+ie-7-win32	42432	Menu Bar	menu #320 > (untitled)	436
+ie-7-win32	42433	Links	menu #320 > (untitled)	437
+ie-7-win32	42445	Show Document Tools	menu #320 > (untitled)	440
+ie-7-win32	42434	Use Large Icons	menu #320 > (untitled)	442
+ie-7-win32	42403	Refresh	menu #321 > (untitled)	461
+ie-7-win32	42448	Open	menu #329 > (untitled)	492
+ie-7-win32	42452	Close	menu #329 > (untitled)	494
+ie-7-win32	42449	Refresh	menu #329 > (untitled)	497
+ie-7-win32	42481	Find More Providers	menu #330 > (untitled)	509
+ie-7-win32	42482	Change Search Defaults	menu #330 > (untitled)	510
+ie-7-win32	17	Clear	menu #907 > Edit	562
+ie-7-win32	2124	Link	menu #907 > Edit	568
+ie-7-win32	2128	Remove Bookmark	menu #907 > Edit	569
+ie-7-win32	2125	Remove Link	menu #907 > Edit	570
+ie-7-win32	2130	Toolbar	menu #907 > View	574
+ie-7-win32	2132	Format Marks	menu #907 > View	577
+ie-7-win32	2133	Text Only	menu #907 > View	578
+ie-7-win32	2136	In Current Window	menu #907 > View > Open Link	594
+ie-7-win32	2435	In New Tab	menu #907 > View > Open Link	595
+ie-7-win32	2137	In New Window	menu #907 > View > Open Link	596
+ie-7-win32	28	Properties	menu #907 > View	599
+ie-7-win32	2150	Horizontal Line	menu #907 > Insert	604
+ie-7-win32	2151	Normal Line Break	menu #907 > Insert > Line Break	607
+ie-7-win32	2152	Clear Left Margin	menu #907 > Insert > Line Break	608
+ie-7-win32	2153	Clear Right Margin	menu #907 > Insert > Line Break	609
+ie-7-win32	2154	Clear Both Margins	menu #907 > Insert > Line Break	610
+ie-7-win32	2155	Non-Breaking Space	menu #907 > Insert	612
+ie-7-win32	2177	Page Break	menu #907 > Insert	613
+ie-7-win32	2156	Special Character	menu #907 > Insert	614
+ie-7-win32	2182	Marquee	menu #907 > Insert	616
+ie-7-win32	2170	HTML Text	menu #907 > Insert	617
+ie-7-win32	2161	Text Box	menu #907 > Insert > Control	620
+ie-7-win32	2162	Text Area	menu #907 > Insert > Control	621
+ie-7-win32	2163	Check Box	menu #907 > Insert > Control	622
+ie-7-win32	2164	Radio Button	menu #907 > Insert > Control	623
+ie-7-win32	2165	Dropdown Box	menu #907 > Insert > Control	624
+ie-7-win32	2166	List Box	menu #907 > Insert > Control	625
+ie-7-win32	2167	Button	menu #907 > Insert > Control	626
+ie-7-win32	2168	Image	menu #907 > Insert	629
+ie-7-win32	2158	Frame	menu #907 > Insert	630
+ie-7-win32	25	Object	menu #907 > Insert	631
+ie-7-win32	90	Characters	menu #907 > Format	635
+ie-7-win32	2186	Increase Indent	menu #907 > Format	637
+ie-7-win32	2187	Decrease Indent	menu #907 > Format	638
+ie-7-win32	2220	Trident Help Topics	menu #907 > Help	642
+ie-7-win32	2222	Trident Readme File	menu #907 > Help	643
+ie-7-win32	2221	About Microsoft Trident	menu #907 > Help	644
+ie-7-win32	2292	Language	menu #908 > View	680
+ie-7-win32	2310	Launch Debugger	menu #908 > View > Debugger	688
+ie-7-win32	2311	Break at Next	menu #908 > View > Debugger	689
+ie-7-win32	2350	Left-To-Right Document	menu #909	710
+ie-7-win32	2351	Right-To-Left Document	menu #909	711
+ie-7-win32	9	Collapse	menu #3400 > (untitled)	719
+ie-7-win32	10	Sort by Name	menu #3400 > (untitled)	722
+ie-7-win32	4094	Use default behavior for this site.	menu #4091 > Default	744
+ie-7-win32	11	by Internet Address	menu #20683 > (untitled)	787
+ie-7-win32	12	by Last Visited	menu #20683 > (untitled)	788
+ie-7-win32	13	by Last Updated	menu #20683 > (untitled)	789
+ie-7-win32	20	by Name	menu #20684 > (untitled)	797
+ie-7-win32	21	by Internet Address	menu #20684 > (untitled)	798
+ie-7-win32	22	by Size	menu #20684 > (untitled)	799
+ie-7-win32	23	by Expires	menu #20684 > (untitled)	800
+ie-7-win32	24	by Modified	menu #20684 > (untitled)	801
+ie-7-win32	2126	Browse View	menu #24640 > Default	821
+ie-7-win32	2120	Paste Insert	menu #24640 > Table	854
+ie-7-win32	2206	Cell	menu #24640 > Table > Select	858
+ie-7-win32	2207	Row	menu #24640 > Table > Select	859
+ie-7-win32	2208	Column	menu #24640 > Table > Select	860
+ie-7-win32	2209	Table	menu #24640 > Table > Select	861
+ie-7-win32	2211	Cell Properties	menu #24640 > Table	864
+ie-7-win32	2210	Table Properties	menu #24640 > Table	865
+ie-7-win32	6004	Trace Tags	menu #24640 > Debug	890
+ie-7-win32	6005	Resource Failures	menu #24640 > Debug	891
+ie-7-win32	6006	Dump Tracking Info	menu #24640 > Debug	892
+ie-7-win32	6007	Debug Break	menu #24640 > Debug	893
+ie-7-win32	6008	Debug View	menu #24640 > Debug	894
+ie-7-win32	6009	Dump Tree	menu #24640 > Debug	895
+ie-7-win32	6010	Dump Lines	menu #24640 > Debug	896
+ie-7-win32	6015	Dump DisplayTree	menu #24640 > Debug	897
+ie-7-win32	6016	Dump FormatCaches	menu #24640 > Debug	898
+ie-7-win32	6017	Dump LayoutRects	menu #24640 > Debug	899
+ie-7-win32	6013	Memory Monitor	menu #24640 > Debug	900
+ie-7-win32	6014	Performance Meters	menu #24640 > Debug	901
+ie-7-win32	6012	Save HTML	menu #24640 > Debug	902
+ie-7-win32	2127	Edit View	menu #24640 > Debug	905
+ie-7-win32	2389	Page Left	menu #24640 > Horizontal Scrollbar	927
+ie-7-win32	2390	Page Right	menu #24640 > Horizontal Scrollbar	928
+ie-7-win32	6042	Refresh	menu #24641 > Default	957
+ie-7-win32	2274	Play	menu #24641 > ART Image	1080
+ie-7-win32	0	Cancel	menu #24645 > Drag	1140
+ie-7-win32	37713	Temporarily Allow Pop-ups	menu #37632 > (untitled)	1204
+ie-7-win32	37730	Turn Off Pop-up Blocker	menu #37632 > (untitled) > Settings	1209
+ie-7-win32	37731	Turn On Pop-up Blocker	menu #37632 > (untitled) > Settings	1210
+ie-7-win32	37733	Show Information Bar for Pop-ups	menu #37632 > (untitled) > Settings	1211
+ie-7-win32	37732	More Settings	menu #37632 > (untitled) > Settings	1212
+ie-7-win32	37665	Install ActiveX Control	menu #37632 > (untitled)	1214
+ie-7-win32	37666	What's the Risk?	menu #37632 > (untitled)	1215
+ie-7-win32	37649	Download File	menu #37632 > (untitled)	1216
+ie-7-win32	37650	What's the Risk?	menu #37632 > (untitled)	1217
+ie-7-win32	37697	What's the Risk?	menu #37632 > (untitled)	1218
+ie-7-win32	37745	Allow Blocked Content	menu #37632 > (untitled)	1219
+ie-7-win32	37746	What's the Risk?	menu #37632 > (untitled)	1220
+ie-7-win32	37777	Show Restricted Content	menu #37632 > (untitled)	1221
+ie-7-win32	37778	What's the Risk?	menu #37632 > (untitled)	1222
+ie-7-win32	37761	Install ActiveX Control	menu #37632 > (untitled)	1223
+ie-7-win32	37762	What's the Risk?	menu #37632 > (untitled)	1224
+ie-7-win32	37764	Run ActiveX Control	menu #37632 > (untitled)	1225
+ie-7-win32	37765	What's the Risk?	menu #37632 > (untitled)	1226
+ie-7-win32	38037	About add-ons	menu #37632 > (untitled)	1227
+ie-7-win32	37889	Allow All Protocols	menu #37632 > (untitled)	1228
+ie-7-win32	37905	Allow All Protocols	menu #37632 > (untitled)	1229
+ie-7-win32	37921	Allow All Protocols	menu #37632 > (untitled)	1230
+ie-7-win32	37937	Allow All Protocols	menu #37632 > (untitled)	1231
+ie-7-win32	37953	Allow All Protocols	menu #37632 > (untitled)	1232
+ie-7-win32	37985	Run ActiveX Control	menu #37632 > (untitled)	1233
+ie-7-win32	37986	What's the Risk?	menu #37632 > (untitled)	1234
+ie-7-win32	38001	Display Blocked Content	menu #37632 > (untitled)	1235
+ie-7-win32	38002	Help with blocked content	menu #37632 > (untitled)	1236
+ie-7-win32	37988	What is Protected Mode?	menu #37632 > (untitled)	1237
+ie-7-win32	38008	About Parental Controls	menu #37632 > (untitled)	1238
+ie-7-win32	38007	View Blocked Content	menu #37632 > (untitled)	1239
+ie-7-win32	38010	About Parental Controls	menu #37632 > (untitled)	1240
+ie-7-win32	38033	Fix Settings for Me	menu #37632 > (untitled)	1241
+ie-7-win32	38034	Open Security Settings	menu #37632 > (untitled)	1242
+ie-7-win32	38035	Help about Security Settings	menu #37632 > (untitled)	1243
+ie-7-win32	38004	Display Blocked Content	menu #37632 > (untitled)	1244
+ie-7-win32	38005	What's the Risk?	menu #37632 > (untitled)	1245
+ie-7-win32	38017	Don't Show Me this Again	menu #37632 > (untitled)	1246
+ie-7-win32	38018	Enable Intranet Settings	menu #37632 > (untitled)	1247
+ie-7-win32	38019	What are Intranet Settings?	menu #37632 > (untitled)	1248
+ie-7-win32	38417	Change language settings.	menu #37632 > (untitled)	1249
+ie-7-win32	38434	Don't show this message again.	menu #37632 > (untitled)	1250
+ie-7-win32	38451	Why am I seeing this?	menu #37632 > (untitled)	1251
+ie-7-win32	38039	Install Add-on from Website	menu #37632 > (untitled)	1252
+ie-7-win32	38041	Don't show this message again.	menu #37632 > (untitled)	1253
+ie-7-win32	38042	Open Security Settings	menu #37632 > (untitled)	1254
+ie-7-win32	38044	Temporarily Allow Scripted Windows	menu #37632 > (untitled)	1255
+ie-7-win32	37634	More information	menu #37632 > (untitled)	1257
+ie-7-win32	37681	What's the Risk?	menu #37633 > (untitled) > ActiveX Control Blocked	1290
+ie-7-win32	37969	What's the Risk?	menu #37633 > (untitled) > Protocol Blocked	1342
+ie-8-win32	2	Show Title	menu #256 > (untitled)	11
+ie-8-win32	1	Close Toolbar	menu #257 > (untitled)	19
+ie-8-win32	3	Disable Add, Close, Drag and Drop (IEAK)	menu #257 > (untitled)	20
+ie-8-win32	4	Disable Resizing (IEAK)	menu #257 > (untitled)	21
+ie-8-win32	6	Always on Top	menu #259 > (untitled)	29
+ie-8-win32	8	Auto-Hide	menu #259 > (untitled)	30
+ie-8-win32	42448	Disable Toolbars and Extensions When InPrivate Browsing Starts	menu #264 > (untitled)	52
+ie-8-win32	1538	Auto-Hide	menu #275	126
+ie-8-win32	3334	Open	menu #289 > External Script Debugger	143
+ie-8-win32	3335	Break at Next Statement	menu #289 > External Script Debugger	144
+ie-8-win32	42432	Menu Bar	menu #320 > (untitled)	152
+ie-8-win32	42433	Favorites Bar	menu #320 > (untitled)	153
+ie-8-win32	42447	Compatibility View Button	menu #320 > (untitled)	154
+ie-8-win32	42445	Show Document Tools	menu #320 > (untitled)	158
+ie-8-win32	42434	Use Large Icons	menu #320 > (untitled) > Customize	163
+ie-8-win32	42453	Show Stop and Refresh Buttons before Address Bar	menu #320 > (untitled) > Customize	164
+ie-8-win32	41522	Favorites	menu #323 > (untitled)	194
+ie-8-win32	41526	Feeds	menu #323 > (untitled)	196
+ie-8-win32	42452	Close	menu #329 > (untitled)	208
+ie-8-win32	42449	Refresh	menu #329 > (untitled)	213
+ie-8-win32	42499	None	menu #332 > (untitled) > Group By	227
+ie-8-win32	42503	More Information	menu #332 > (untitled)	234
+ie-8-win32	285	New Session	menu #333 > File	245
+ie-8-win32	376	Trusted Sites Zone	menu #333 > File > Add this site to	265
+ie-8-win32	377	Local Intranet Zone	menu #333 > File > Add this site to	266
+ie-8-win32	4633	None	menu #335 > View > Encoding	331
+ie-8-win32	41521	International Website Address	menu #335 > View	341
+ie-8-win32	41507	Webpage Privacy Policy	menu #335 > View	343
+ie-8-win32	380	Panning hand	menu #335 > View	344
+ie-8-win32	41266	Diagnose Connection Problems	menu #337 > Tools	370
+ie-8-win32	41422	InPrivate Filtering Settings	menu #337 > Tools	374
+ie-8-win32	8808	Subscribe to this Feed	menu #337 > Tools	382
+ie-8-win32	8706	feed1	menu #337 > Tools > Feed Discovery	385
+ie-8-win32	342	Windows Update	menu #337 > Tools	387
+ie-8-win32	41221	What's New in Internet Explorer 8	menu #338 > Help	402
+ie-8-win32	17	Clear	menu #907 > Edit	465
+ie-8-win32	2124	Link	menu #907 > Edit	471
+ie-8-win32	2128	Remove Bookmark	menu #907 > Edit	472
+ie-8-win32	2125	Remove Link	menu #907 > Edit	473
+ie-8-win32	2130	Toolbar	menu #907 > View	477
+ie-8-win32	2132	Format Marks	menu #907 > View	480
+ie-8-win32	2133	Text Only	menu #907 > View	481
+ie-8-win32	2136	In Current Window	menu #907 > View > Open Link	497
+ie-8-win32	2435	In New Tab	menu #907 > View > Open Link	498
+ie-8-win32	2137	In New Window	menu #907 > View > Open Link	499
+ie-8-win32	28	Properties	menu #907 > View	502
+ie-8-win32	2150	Horizontal Line	menu #907 > Insert	507
+ie-8-win32	2151	Normal Line Break	menu #907 > Insert > Line Break	510
+ie-8-win32	2152	Clear Left Margin	menu #907 > Insert > Line Break	511
+ie-8-win32	2153	Clear Right Margin	menu #907 > Insert > Line Break	512
+ie-8-win32	2154	Clear Both Margins	menu #907 > Insert > Line Break	513
+ie-8-win32	2155	Non-Breaking Space	menu #907 > Insert	515
+ie-8-win32	2177	Page Break	menu #907 > Insert	516
+ie-8-win32	2156	Special Character	menu #907 > Insert	517
+ie-8-win32	2182	Marquee	menu #907 > Insert	519
+ie-8-win32	2170	HTML Text	menu #907 > Insert	520
+ie-8-win32	2161	Text Box	menu #907 > Insert > Control	523
+ie-8-win32	2162	Text Area	menu #907 > Insert > Control	524
+ie-8-win32	2163	Check Box	menu #907 > Insert > Control	525
+ie-8-win32	2164	Radio Button	menu #907 > Insert > Control	526
+ie-8-win32	2165	Dropdown Box	menu #907 > Insert > Control	527
+ie-8-win32	2166	List Box	menu #907 > Insert > Control	528
+ie-8-win32	2167	Button	menu #907 > Insert > Control	529
+ie-8-win32	2168	Image	menu #907 > Insert	532
+ie-8-win32	2158	Frame	menu #907 > Insert	533
+ie-8-win32	25	Object	menu #907 > Insert	534
+ie-8-win32	90	Characters	menu #907 > Format	538
+ie-8-win32	2186	Increase Indent	menu #907 > Format	540
+ie-8-win32	2187	Decrease Indent	menu #907 > Format	541
+ie-8-win32	2220	Trident Help Topics	menu #907 > Help	545
+ie-8-win32	2222	Trident Readme File	menu #907 > Help	546
+ie-8-win32	2221	About Microsoft Trident	menu #907 > Help	547
+ie-8-win32	2292	Language	menu #908 > View	583
+ie-8-win32	2310	Launch Debugger	menu #908 > View > Debugger	591
+ie-8-win32	2311	Break at Next	menu #908 > View > Debugger	592
+ie-8-win32	2350	Left-To-Right Document	menu #909	613
+ie-8-win32	2351	Right-To-Left Document	menu #909	614
+ie-8-win32	9	Collapse	menu #3400 > (untitled)	622
+ie-8-win32	5	Create New Folder	menu #3400 > (untitled)	624
+ie-8-win32	10	Sort by Name	menu #3400 > (untitled)	625
+ie-8-win32	45056	No Style	menu #3401 > (untitled)	633
+ie-8-win32	45057	Default Style	menu #3401 > (untitled)	634
+ie-8-win32	45072	Automatically block	menu #3403 > (untitled)	655
+ie-8-win32	45073	Choose content to block	menu #3403 > (untitled)	656
+ie-8-win32	45074	Off	menu #3403 > (untitled)	657
+ie-8-win32	45075	Settings	menu #3403 > (untitled)	659
+ie-8-win32	4094	Use default behavior for this site.	menu #4091 > Default	669
+ie-8-win32	7	Open in New Window	menu #20680 > (untitled)	678
+ie-8-win32	11	by Internet Address	menu #20683 > (untitled)	712
+ie-8-win32	12	by Last Visited	menu #20683 > (untitled)	713
+ie-8-win32	13	by Last Updated	menu #20683 > (untitled)	714
+ie-8-win32	20	by Name	menu #20684 > (untitled)	722
+ie-8-win32	21	by Internet Address	menu #20684 > (untitled)	723
+ie-8-win32	22	by Size	menu #20684 > (untitled)	724
+ie-8-win32	23	by Expires	menu #20684 > (untitled)	725
+ie-8-win32	24	by Modified	menu #20684 > (untitled)	726
+ie-8-win32	2126	Browse View	menu #24640 > Default	746
+ie-8-win32	2120	Paste Insert	menu #24640 > Table	779
+ie-8-win32	2206	Cell	menu #24640 > Table > Select	783
+ie-8-win32	2207	Row	menu #24640 > Table > Select	784
+ie-8-win32	2208	Column	menu #24640 > Table > Select	785
+ie-8-win32	2209	Table	menu #24640 > Table > Select	786
+ie-8-win32	2211	Cell Properties	menu #24640 > Table	789
+ie-8-win32	2210	Table Properties	menu #24640 > Table	790
+ie-8-win32	6004	Trace Tags	menu #24640 > Debug	815
+ie-8-win32	6005	Resource Failures	menu #24640 > Debug	816
+ie-8-win32	6006	Dump Tracking Info	menu #24640 > Debug	817
+ie-8-win32	6007	Debug Break	menu #24640 > Debug	818
+ie-8-win32	6008	Debug View	menu #24640 > Debug	819
+ie-8-win32	6009	Dump Tree	menu #24640 > Debug	820
+ie-8-win32	7103	Dump Parser Statistics	menu #24640 > Debug	821
+ie-8-win32	7104	Dump Splay Tree	menu #24640 > Debug	822
+ie-8-win32	6010	Dump Lines	menu #24640 > Debug	823
+ie-8-win32	6019	Dump Layout	menu #24640 > Debug	824
+ie-8-win32	6015	Dump DisplayTree	menu #24640 > Debug	825
+ie-8-win32	6016	Dump FormatCaches	menu #24640 > Debug	826
+ie-8-win32	6017	Dump LayoutRects	menu #24640 > Debug	827
+ie-8-win32	6013	Memory Monitor	menu #24640 > Debug	828
+ie-8-win32	6014	Performance Meters	menu #24640 > Debug	829
+ie-8-win32	6012	Save HTML	menu #24640 > Debug	830
+ie-8-win32	2127	Edit View	menu #24640 > Debug	833
+ie-8-win32	2389	Page Left	menu #24640 > Horizontal Scrollbar	855
+ie-8-win32	2390	Page Right	menu #24640 > Horizontal Scrollbar	856
+ie-8-win32	6042	Refresh	menu #24641 > Default	885
+ie-8-win32	2274	Play	menu #24641 > ART Image	1008
+ie-8-win32	0	Cancel	menu #24645 > Drag	1071
+ie-8-win32	37713	Temporarily Allow Pop-ups	menu #37632 > (untitled)	1087
+ie-8-win32	37730	Turn Off Pop-up Blocker	menu #37632 > (untitled) > Settings	1092
+ie-8-win32	37731	Turn On Pop-up Blocker	menu #37632 > (untitled) > Settings	1093
+ie-8-win32	37733	Show Information Bar for Pop-ups	menu #37632 > (untitled) > Settings	1094
+ie-8-win32	37732	More Settings	menu #37632 > (untitled) > Settings	1095
+ie-8-win32	37667	Install This Add-on	menu #37632 > (untitled)	1097
+ie-8-win32	37665	Install This Add-on for All Users on This Computer	menu #37632 > (untitled)	1098
+ie-8-win32	37666	What's the Risk?	menu #37632 > (untitled)	1099
+ie-8-win32	37649	Download File	menu #37632 > (untitled)	1100
+ie-8-win32	37650	What's the Risk?	menu #37632 > (untitled)	1101
+ie-8-win32	37697	What's the Risk?	menu #37632 > (untitled)	1102
+ie-8-win32	37745	Allow Blocked Content	menu #37632 > (untitled)	1103
+ie-8-win32	37746	What's the Risk?	menu #37632 > (untitled)	1104
+ie-8-win32	37777	Show Restricted Content	menu #37632 > (untitled)	1105
+ie-8-win32	37778	What's the Risk?	menu #37632 > (untitled)	1106
+ie-8-win32	37761	Install This Add-on	menu #37632 > (untitled)	1107
+ie-8-win32	37762	What's the Risk?	menu #37632 > (untitled)	1108
+ie-8-win32	37764	Run Add-on	menu #37632 > (untitled)	1109
+ie-8-win32	37765	What's the Risk?	menu #37632 > (untitled)	1110
+ie-8-win32	37767	Run Add-on	menu #37632 > (untitled)	1111
+ie-8-win32	37768	Run Add-on on All Websites	menu #37632 > (untitled)	1112
+ie-8-win32	37769	What's the Risk?	menu #37632 > (untitled)	1113
+ie-8-win32	38047	About Add-ons	menu #37632 > (untitled)	1115
+ie-8-win32	37889	Allow All Protocols	menu #37632 > (untitled)	1116
+ie-8-win32	37905	Allow All Protocols	menu #37632 > (untitled)	1117
+ie-8-win32	37921	Allow All Protocols	menu #37632 > (untitled)	1118
+ie-8-win32	37937	Allow All Protocols	menu #37632 > (untitled)	1119
+ie-8-win32	37953	Allow All Protocols	menu #37632 > (untitled)	1120
+ie-8-win32	37985	Run Add-on	menu #37632 > (untitled)	1121
+ie-8-win32	37986	What's the Risk?	menu #37632 > (untitled)	1122
+ie-8-win32	37988	Run Add-on	menu #37632 > (untitled)	1123
+ie-8-win32	37989	Run Add-on on All Websites	menu #37632 > (untitled)	1124
+ie-8-win32	37990	What's the Risk?	menu #37632 > (untitled)	1125
+ie-8-win32	38001	Display Blocked Content	menu #37632 > (untitled)	1126
+ie-8-win32	38002	Help with Blocked Content	menu #37632 > (untitled)	1127
+ie-8-win32	38008	About Parental Controls	menu #37632 > (untitled)	1128
+ie-8-win32	38007	View Blocked Content	menu #37632 > (untitled)	1129
+ie-8-win32	38010	About Parental Controls	menu #37632 > (untitled)	1130
+ie-8-win32	38033	Fix Settings for Me	menu #37632 > (untitled)	1131
+ie-8-win32	38034	Open Security Settings	menu #37632 > (untitled)	1132
+ie-8-win32	38035	Help about Security Settings	menu #37632 > (untitled)	1133
+ie-8-win32	38004	Display Blocked Content	menu #37632 > (untitled)	1134
+ie-8-win32	38005	What's the Risk?	menu #37632 > (untitled)	1135
+ie-8-win32	38017	Don't Show This Message Again	menu #37632 > (untitled)	1136
+ie-8-win32	38018	Enable Intranet Settings	menu #37632 > (untitled)	1137
+ie-8-win32	38019	What are Intranet Settings?	menu #37632 > (untitled)	1138
+ie-8-win32	38417	Change Language Settings	menu #37632 > (untitled)	1139
+ie-8-win32	38434	Don't Show This Message Again	menu #37632 > (untitled)	1140
+ie-8-win32	38451	Why Am I Seeing This?	menu #37632 > (untitled)	1141
+ie-8-win32	38039	Install This Add-on from Website	menu #37632 > (untitled)	1142
+ie-8-win32	38041	Don't Show This Message Again	menu #37632 > (untitled)	1143
+ie-8-win32	38042	Open Security Settings	menu #37632 > (untitled)	1144
+ie-8-win32	38044	Temporarily Allow Scripted Windows	menu #37632 > (untitled)	1145
+ie-8-win32	38453	What's the Risk?	menu #37632 > (untitled)	1146
+ie-8-win32	37634	Information Bar Help	menu #37632 > (untitled)	1148
+ie-8-win32	37681	What's the Risk?	menu #37633 > (untitled) > Add-on Blocked	1182
+ie-8-win32	37969	What's the Risk?	menu #37633 > (untitled) > Protocol Blocked	1241
+ie-8-win32	38049	Match Whole Word Only	menu #38048 > (untitled)	1317
+ie-8-win32	38050	Match Case	menu #38048 > (untitled)	1318
+ie-8-win32	38051	Match Diacritic	menu #38048 > (untitled)	1319
+ie-8-win32	38052	Match Alef Hamza	menu #38048 > (untitled)	1320
+ie-8-win32	38053	Match Kashida	menu #38048 > (untitled)	1321
+ie-8-win32	42756	Allow	menu #42101 > (untitled)	1329
+ie-8-win32	42760	Block	menu #42101 > (untitled)	1330
+opera-8.01-win32	53018	Open link in new page	Links Panel Item Menu	12
+opera-8.01-win32	53019	Open link in background page	Links Panel Item Menu	13
+opera-8.01-win32	67633	Open link in background window	Links Panel Item Menu	15
+opera-8.01-win32	70463	Add link to bookmarks	Links Panel Item Menu	16
+opera-8.01-win32	50761	Download url as	Links Panel Item Menu	18
+opera-8.01-win32	67350	Download url	Links Panel Item Menu	19
+opera-8.01-win32	67351	Lock panel	Links Panel Item Menu	20
+opera-8.01-win32	67352	Get mail	Get Mail Popup Menu	39
+opera-8.01-win32	67353	Read mail	Index Item Popup Menu	43
+opera-8.01-win32	26527	Get mail	Index Item Popup Menu	45
+opera-8.01-win32	67362	Mark all as read	Index Item Popup Menu	46
+opera-8.01-win32	69650	Empty spam	Index Item Popup Menu	47
+opera-8.01-win32	67363	Empty trash	Index Item Popup Menu	48
+opera-8.01-win32	69651	New folder	Index Item Popup Menu	49
+opera-8.01-win32	67411	Subscribe to groups nntp	Index Item Popup Menu	51
+opera-8.01-win32	69652	Subscribe to groups rss	Index Item Popup Menu	52
+opera-8.01-win32	67412	Subscribe to groups imap	Index Item Popup Menu	53
+opera-8.01-win32	69381	Export mail index	Index Item Popup Menu	54
+opera-8.01-win32	54006	Edit properties	Index Item Popup Menu	55
+opera-8.01-win32	68065	Edit properties	Filter Item Menu	61
+opera-8.01-win32	51145	New account	Account Item Menu	65
+opera-8.01-win32	69366	Show account	Mail Account Menu	71
+opera-8.01-win32	69367	Show account -3	Mail Account Menu	72
+opera-8.01-win32	69368	Show account -4	Mail Account Menu	73
+opera-8.01-win32	26529	Reply	Mail Item Popup Menu	80
+opera-8.01-win32	26530	Reply All	Mail Item Popup Menu	81
+opera-8.01-win32	26531	Forward mail	Mail Item Popup Menu	82
+opera-8.01-win32	67364	Redirect mail	Mail Item Popup Menu	83
+opera-8.01-win32	67355	Cancel newsmessage	Mail Item Popup Menu	88
+opera-8.01-win32	140080	Edit draft	Mail Item Popup Menu	89
+opera-8.01-win32	44004	Mark as read	Mail Item Mark Menu	93
+opera-8.01-win32	67354	Mark and select next unread	Mail Item Mark Menu	94
+opera-8.01-win32	70126	Mark thread as read	Mail Item Mark Menu	95
+opera-8.01-win32	70382	Mark thread and select next unread	Mail Item Mark Menu	96
+opera-8.01-win32	44005	Mark as unread	Mail Item Mark Menu	98
+opera-8.01-win32	69640	Mark as spam	Mail Item Mark Menu	99
+opera-8.01-win32	69641	Mark as not spam	Mail Item Mark Menu	100
+opera-8.01-win32	67359	Select next unread	Mail Item Goto Menu	104
+opera-8.01-win32	67360	Select previous unread	Mail Item Goto Menu	105
+opera-8.01-win32	67366	View messages from selected contact	Mail Item Goto Menu	106
+opera-8.01-win32	67367	Set mail view type	Mail Standard View Menu	113
+opera-8.01-win32	67368	Set mail view type	Mail Standard View Menu	114
+opera-8.01-win32	26522	Set mail view type 3	Mail Contact View Menu	118
+opera-8.01-win32	26523	Set mail view type 2	Mail Contact View Menu	119
+opera-8.01-win32	67369	Set mail view type	Mail Contact View Menu	120
+opera-8.01-win32	67376	Show quick reply	Mail View Option Menu	128
+opera-8.01-win32	67371	Set mail view flag	Mail View Show Menu	132
+opera-8.01-win32	67372	Set mail view flag	Mail View Show Menu	133
+opera-8.01-win32	67373	Set mail view flag 2	Mail View Show Menu	134
+opera-8.01-win32	67374	Set mail view flag 3	Mail View Show Menu	135
+opera-8.01-win32	67375	Set mail view flag 4	Mail View Show Menu	136
+opera-8.01-win32	69644	Set mail view flag 6	Mail View Show Menu	137
+opera-8.01-win32	69645	Set mail view flag 5	Mail View Show Menu	138
+opera-8.01-win32	67085	Set mail view age	Mail View Age Menu	142
+opera-8.01-win32	67086	Set mail view age	Mail View Age Menu	143
+opera-8.01-win32	67087	Set mail view age 2	Mail View Age Menu	144
+opera-8.01-win32	67088	Set mail view age 3	Mail View Age Menu	145
+opera-8.01-win32	67089	Set mail view age 4	Mail View Age Menu	146
+opera-8.01-win32	67090	Set mail view age 5	Mail View Age Menu	147
+opera-8.01-win32	67635	Mark as read automatically	Mark As Read Menu	151
+opera-8.01-win32	67636	Mark as read automatically 1000	Mark As Read Menu	152
+opera-8.01-win32	67637	Mark as read automatically 2000	Mark As Read Menu	153
+opera-8.01-win32	67638	Mark as read automatically 3000	Mark As Read Menu	154
+opera-8.01-win32	67639	Mark as read automatically 5000	Mark As Read Menu	155
+opera-8.01-win32	67640	Mark as read automatically 10000	Mark As Read Menu	156
+opera-8.01-win32	69646	Show list view	Mail Display Type Menu	160
+opera-8.01-win32	69647	Show message view	Mail Display Type Menu	161
+opera-8.01-win32	69648	Show split view	Mail Display Type Menu	162
+opera-8.01-win32	69649	Show split view	Mail Display Type Menu	163
+opera-8.01-win32	67641	Set mail display type	Mail Display Type Menu	164
+opera-8.01-win32	67642	Set mail display type	Mail Display Type Menu	165
+opera-8.01-win32	67643	Suppress external embeds	Mail Display Type Menu	166
+opera-8.01-win32	69653	Enable smileys	Mail Display Type Menu	167
+opera-8.01-win32	67378	Forward Mail	Forward Mail Menu	176
+opera-8.01-win32	67053	Show Compose Header	Display Headers Menu	181
+opera-8.01-win32	67379	Show Compose Header 2	Display Headers Menu	182
+opera-8.01-win32	26524	Show Compose Header 4	Display Headers Menu	184
+opera-8.01-win32	67098	Show Compose Header 5	Display Headers Menu	185
+opera-8.01-win32	26582	Show Compose Header 6	Display Headers Menu	186
+opera-8.01-win32	67100	Show Compose Header 7	Display Headers Menu	187
+opera-8.01-win32	67099	Show Compose Header 11	Display Headers Menu	188
+opera-8.01-win32	26525	Show Compose Header 9	Display Headers Menu	189
+opera-8.01-win32	26584	Show Compose Header 10	Display Headers Menu	190
+opera-8.01-win32	157500	Show Compose Header 12	Display Headers Menu	191
+opera-8.01-win32	26542	New bookmark	New bookmark menu	195
+opera-8.01-win32	26543	New folder	New bookmark menu	196
+opera-8.01-win32	69654	New Seperator	New bookmark menu	197
+opera-8.01-win32	67644	View style	Bookmarks Panel View Menu	208
+opera-8.01-win32	67645	View style	Bookmarks Panel View Menu	209
+opera-8.01-win32	67646	View style 2	Bookmarks Panel View Menu	210
+opera-8.01-win32	67380	Sort by column	Bookmarks Panel View Menu	211
+opera-8.01-win32	67381	Sort by column	Bookmarks Panel View Menu	212
+opera-8.01-win32	67382	Sort by column	Bookmarks Panel View Menu	213
+opera-8.01-win32	67383	Sort by column 2	Bookmarks Panel View Menu	214
+opera-8.01-win32	67384	Sort by column 3	Bookmarks Panel View Menu	215
+opera-8.01-win32	67385	Sort by column 4	Bookmarks Panel View Menu	216
+opera-8.01-win32	67386	Sort by column 5	Bookmarks Panel View Menu	217
+opera-8.01-win32	67387	Sort direction	Bookmarks Panel View Menu	218
+opera-8.01-win32	67388	Sort direction	Bookmarks Panel View Menu	219
+opera-8.01-win32	54023	Show on personal bar	Bookmark Trash Popup Menu	224
+opera-8.01-win32	70490	Add all to bookmarks	Bookmark Item Popup Menu	236
+opera-8.01-win32	26545	New contact	New contact menu	249
+opera-8.01-win32	26546	New folder	New contact menu	250
+opera-8.01-win32	67392	Go to contact homepage	Contact Item Popup Menu	268
+opera-8.01-win32	67647	New note	New note menu	281
+opera-8.01-win32	21199	New folder	New note menu	282
+opera-8.01-win32	65218	Send text in mail	Note Item Popup Menu	291
+opera-8.01-win32	69337	Activate window	Windows Item Popup Menu	318
+opera-8.01-win32	69338	Restore page 2	Windows Item Popup Menu	319
+opera-8.01-win32	69339	Minimize page 2	Windows Item Popup Menu	320
+opera-8.01-win32	69340	Maximize page 2	Windows Item Popup Menu	321
+opera-8.01-win32	69336	Close page 2	Windows Item Popup Menu	322
+opera-8.01-win32	69884	Detach page	Windows Item Popup Menu	323
+opera-8.01-win32	67406	Enable handheld mode	Web Panel View Menu	328
+opera-8.01-win32	69655	Set chat status -2	Chat Account Menu	333
+opera-8.01-win32	69656	Set chat status -2	Chat Account Menu	334
+opera-8.01-win32	69657	Set chat status -2	Chat Account Menu	335
+opera-8.01-win32	69658	Set chat status -2	Chat Account Menu	336
+opera-8.01-win32	69659	Set chat status -2	Chat Account Menu	337
+opera-8.01-win32	69660	Set chat status -2	Chat Account Menu	338
+opera-8.01-win32	69662	Set chat status -2	Chat Account Menu	339
+opera-8.01-win32	69663	List chat rooms	Chat Item Popup Menu	343
+opera-8.01-win32	69664	New chat room	Chat Item Popup Menu	344
+opera-8.01-win32	69665	Join chat room	Chat Item Popup Menu	345
+opera-8.01-win32	69666	Leave chat room	Chat Item Popup Menu	346
+opera-8.01-win32	69667	Chat command	Chat User Menu	352
+opera-8.01-win32	69668	Join private chat	Chat User Menu	353
+opera-8.01-win32	69543	Send file	Chat User Menu	355
+opera-8.01-win32	69671	Chat command 4	Chat User Control Menu	360
+opera-8.01-win32	69672	Chat command 5	Chat User Control Menu	361
+opera-8.01-win32	69673	Chat command 6	Chat User Control Menu	362
+opera-8.01-win32	69674	Chat command 7	Chat User Control Menu	363
+opera-8.01-win32	69675	Chat command 8	Chat User Control Menu	364
+opera-8.01-win32	70044	Chat command 9	Chat User Control Menu	365
+opera-8.01-win32	70047	Chat command 10	Chat User Control Menu	366
+opera-8.01-win32	67659	Add contact -2	Add Nick to Contact Menu	370
+opera-8.01-win32	50866	Copy label text	Edit Label Popup Menu	389
+opera-8.01-win32	70465	Validate frame source	Document Popup Menu	406
+opera-8.01-win32	70692	SVG zoom in 10	SVG Popup Menu	411
+opera-8.01-win32	70693	SVG zoom out 10	SVG Popup Menu	412
+opera-8.01-win32	70694	SVG zoom 100	SVG Popup Menu	413
+opera-8.01-win32	70695	SVG set quality 25	SVG Popup Menu	414
+opera-8.01-win32	70696	SVG start animation	SVG Popup Menu	415
+opera-8.01-win32	70697	SVG pause animation	SVG Popup Menu	416
+opera-8.01-win32	70698	SVG stop animation	SVG Popup Menu	417
+opera-8.01-win32	67651	Open background image	Document Background Menu	421
+opera-8.01-win32	70486	Show background image	Document Background Menu	422
+opera-8.01-win32	50673	Copy background image address	Document Background Menu	423
+opera-8.01-win32	50672	Save background image	Document Background Menu	424
+opera-8.01-win32	70466	Copy background image	Document Background Menu	425
+opera-8.01-win32	70467_	Use background image as desktop background	Document Background Menu	426
+opera-8.01-win32	65244	Show background image properties	Document Background Menu	427
+opera-8.01-win32	67655	Clear	Edit Widget Popup Menu	463
+opera-8.01-win32	1127000	Show Preferences	Edit Widget Insert Menu	482
+opera-8.01-win32	70468	Maximize frame	Frame Menu	489
+opera-8.01-win32	50668	Copy frame address	Frame Menu	494
+opera-8.01-win32	70494	Speak selection	Hotclick Popup Menu	500
+opera-8.01-win32	65184	Hotclick search 200	Hotclick Popup Menu	501
+opera-8.01-win32	65187	Hotclick search 50	Hotclick Popup Menu	502
+opera-8.01-win32	65188	Hotclick search 51	Hotclick Popup Menu	503
+opera-8.01-win32	67394	Go to page %t	Hotclick Popup Menu	504
+opera-8.01-win32	17171	Hotclick search	Search with menu	513
+opera-8.01-win32	17187	Hotclick search	Search with menu	514
+opera-8.01-win32	17189	Hotclick search 2	Search with menu	515
+opera-8.01-win32	69676	Hotclick search 3	Search with menu	516
+opera-8.01-win32	69677	Hotclick search 4	Search with menu	517
+opera-8.01-win32	69678	Hotclick search 5	Search with menu	518
+opera-8.01-win32	69679	Hotclick search 6	Search with menu	519
+opera-8.01-win32	17174	Hotclick search 7	Search with menu	520
+opera-8.01-win32	69680	Hotclick search 8	Search with menu	521
+opera-8.01-win32	17176	Hotclick search 9	Search with menu	522
+opera-8.01-win32	17180	Hotclick search 10	Search with menu	523
+opera-8.01-win32	17181	Hotclick search 11	Search with menu	524
+opera-8.01-win32	67482	Hotclick search 12	Search with menu	525
+opera-8.01-win32	17188	Hotclick search 13	Search with menu	526
+opera-8.01-win32	17203	Hotclick search 14	Search with menu	527
+opera-8.01-win32	17182	Hotclick search 15	Search with menu	528
+opera-8.01-win32	65196	Hotclick search 100	Translate menu	532
+opera-8.01-win32	65197	Hotclick search 101	Translate menu	533
+opera-8.01-win32	65198	Hotclick search 102	Translate menu	534
+opera-8.01-win32	65199	Hotclick search 103	Translate menu	535
+opera-8.01-win32	65200	Hotclick search 104	Translate menu	536
+opera-8.01-win32	65202	Hotclick search 106	Translate menu	537
+opera-8.01-win32	65203	Hotclick search 107	Translate menu	538
+opera-8.01-win32	65204	Hotclick search 108	Translate menu	539
+opera-8.01-win32	65205	Hotclick search 109	Translate menu	540
+opera-8.01-win32	65206	Hotclick search 110	Translate menu	541
+opera-8.01-win32	65207	Hotclick search 111	Translate menu	542
+opera-8.01-win32	65208	Hotclick search 112	Translate menu	543
+opera-8.01-win32	65209	Hotclick search 113	Translate menu	544
+opera-8.01-win32	65210	Hotclick search 114	Translate menu	545
+opera-8.01-win32	65211	Hotclick search 115	Translate menu	546
+opera-8.01-win32	65212	Hotclick search 116	Translate menu	547
+opera-8.01-win32	65213	Hotclick search 117	Translate menu	548
+opera-8.01-win32	65214	Hotclick search 118	Translate menu	549
+opera-8.01-win32	65215	Hotclick search 119	Translate menu	550
+opera-8.01-win32	60242	Go to buypage	Banner Popup Menu	564
+opera-8.01-win32	50394	Show Preferences 3	Banner Popup Menu	565
+opera-8.01-win32	69242	Add link to contacts	Mailto Link Popup Menu	570
+opera-8.01-win32	50977	Save document with images as	Browser File Menu	602
+opera-8.01-win32	69482	Enable mediumscreen mode	Browser View Menu	626
+opera-8.01-win32	69682	Set alignment hotlist	View Toolbars Menu	631
+opera-8.01-win32	145550	Set alignment browser toolbar	View Toolbars Menu	632
+opera-8.01-win32	170510	Set alignment personalbar	View Toolbars Menu	633
+opera-8.01-win32	170210	Set alignment pagebar	View Toolbars Menu	634
+opera-8.01-win32	145570	Set alignment status toolbar	View Toolbars Menu	635
+opera-8.01-win32	150740	Set alignment document toolbar	View Toolbars Menu	636
+opera-8.01-win32	67400	Set alignment site navigation toolbar	View Toolbars Menu	637
+opera-8.01-win32	70470	Customize toolbars -3	View Toolbars Menu	638
+opera-8.01-win32	50059	Go to page Blank	Go Menu	649
+opera-8.01-win32	21504	Open link -2	Bookmark Folder Menu	671
+opera-8.01-win32	67660	Compose to contact -2	Compose To Contact Menu	684
+opera-8.01-win32	70471	Read mail rss	Browser Feeds Menu	696
+opera-8.01-win32	70472	Subscribe to groups rss	Browser Feeds Menu	697
+opera-8.01-win32	67410	Search mail	Browser Mail Menu	703
+opera-8.01-win32	51139	Show mail filters	Browser Mail Menu	704
+opera-8.01-win32	70473	Set chat status offline	Chat Connect Menu	719
+opera-8.01-win32	51723	Get mail	Get Mail Menu	728
+opera-8.01-win32	54070	Send queued mail	Send Mail Menu	733
+opera-8.01-win32	70475	Manage accounts	Browser Tools Menu	750
+opera-8.01-win32	69887	Manage cookies	Advanced Tools Menu	762
+opera-8.01-win32	69888	Manage wand	Advanced Tools Menu	763
+opera-8.01-win32	50838	Go to page opera:plugins	Advanced Tools Menu	764
+opera-8.01-win32	50835	Go to page opera:cache	Advanced Tools Menu	765
+opera-8.01-win32	54122	Show Java console	Advanced Tools Menu	766
+opera-8.01-win32	67476	Show Javascript console	Advanced Tools Menu	767
+opera-8.01-win32	69312	Show Voice Console	Advanced Tools Menu	768
+opera-8.01-win32	51212	Refresh display	Advanced Tools Menu	769
+opera-8.01-win32	52035	Create linked window	Browser Window Menu	775
+opera-8.01-win32	50567	Restore all	Browser Window Menu	779
+opera-8.01-win32	50565	Minimize all	Browser Window Menu	780
+opera-8.01-win32	50545	Maximize all	Browser Window Menu	781
+opera-8.01-win32	69385	Go to page opera:/help/index.html	Browser Help Menu	787
+opera-8.01-win32	50015	Go to page opera:about	Browser Help Menu	792
+opera-8.01-win32	54013	New bookmarks file	Bookmark Item File Menu	796
+opera-8.01-win32	54010	Open bookmarks file	Bookmark Item File Menu	797
+opera-8.01-win32	54015	Save bookmarks as	Bookmark Item File Menu	798
+opera-8.01-win32	54014	Save selected bookmarks as	Bookmark Item File Menu	799
+opera-8.01-win32	67664	Export selected bookmarks to HTML	Bookmark Item File Menu	800
+opera-8.01-win32	67420	New contacts file	Contact Item File Menu	810
+opera-8.01-win32	67667	Save selected contacts as	Contact Item File Menu	813
+opera-8.01-win32	67665	Import contacts	Contact Item File Menu	814
+opera-8.01-win32	67666	Export contacts	Contact Item File Menu	815
+opera-8.01-win32	70476	Import mail	Browser ImportExport Menu	824
+opera-8.01-win32	52250	Import mail	Browser Import Menu	836
+opera-8.01-win32	52252	Import contacts	Browser Import Menu	838
+opera-8.01-win32	52257	Export contacts	Browser Export Menu	846
+opera-8.01-win32	52210	Identify as	Identify As Menu	851
+opera-8.01-win32	70478	Identify as	Identify As Menu	852
+opera-8.01-win32	70479	Identify as 4	Identify As Menu	853
+opera-8.01-win32	52203	Enable gif animation	Quick Preferences Menu	861
+opera-8.01-win32	52205	Enable embedded audio	Quick Preferences Menu	862
+opera-8.01-win32	52207	Enable plugins	Quick Preferences Menu	864
+opera-8.01-win32	11522	Show panel Search	View Hotlist Menu	875
+opera-8.01-win32	67425	Show panel Bookmarks	View Hotlist Menu	876
+opera-8.01-win32	67426	Show panel Mail	View Hotlist Menu	877
+opera-8.01-win32	69944	Show panel Chat	View Hotlist Menu	879
+opera-8.01-win32	67429	Show panel Transfers	View Hotlist Menu	881
+opera-8.01-win32	67428	Show panel History	View Hotlist Menu	882
+opera-8.01-win32	67431	Show panel Windows	View Hotlist Menu	884
+opera-8.01-win32	67671	Show panel Info	View Hotlist Menu	885
+opera-8.01-win32	65307	Add panel	View Hotlist Menu	886
+opera-8.01-win32	65310	Go to page http://my.opera.com/customize/panel/	View Hotlist Menu	887
+opera-8.01-win32	69688	Show panel toggle	View Hotlist Menu	888
+opera-8.01-win32	53053	Set alignment hotlist	Hotlist Placement Menu	892
+opera-8.01-win32	53054	Set alignment hotlist	Hotlist Placement Menu	893
+opera-8.01-win32	50845	Set alignment hotlist	Hotlist Placement Menu	894
+opera-8.01-win32	53050	Set alignment hotlist	Hotlist Placement Menu	895
+opera-8.01-win32	53051	Set alignment hotlist panel selector	Hotlist Selector Placement Menu	899
+opera-8.01-win32	53052	Set alignment hotlist panel selector	Hotlist Selector Placement Menu	900
+opera-8.01-win32	10222	View progress bar	View Progress Bar Menu	907
+opera-8.01-win32	67699	View progress bar	View Progress Bar Menu	908
+opera-8.01-win32	67433	Disable skin coloring	Color Scheme Menu	913
+opera-8.01-win32	67434	Use system skin coloring	Color Scheme Menu	914
+opera-8.01-win32	67435	Set skin coloring #803C00	Color Scheme Menu	915
+opera-8.01-win32	67436	Set skin coloring #BD9431	Color Scheme Menu	916
+opera-8.01-win32	67437	Set skin coloring #2FB35E	Color Scheme Menu	917
+opera-8.01-win32	67438	Set skin coloring #2F83B3	Color Scheme Menu	918
+opera-8.01-win32	67439	Set skin coloring #001E80	Color Scheme Menu	919
+opera-8.01-win32	67440	Set skin coloring #606090	Color Scheme Menu	920
+opera-8.01-win32	67441	Set skin coloring #4B0082	Color Scheme Menu	921
+opera-8.01-win32	67442	Set skin coloring #DC143C	Color Scheme Menu	922
+opera-8.01-win32	67443	Set skin coloring #900000	Color Scheme Menu	923
+opera-8.01-win32	56073	Go to page http://my.opera.com/customize/skins/	Skin Menu	927
+opera-8.01-win32	51739	Zoom out 100	Zoom Menu	938
+opera-8.01-win32	51740	Zoom in 100	Zoom Menu	939
+opera-8.01-win32	51737	Zoom out 10	Zoom Menu	940
+opera-8.01-win32	51738	Zoom in 10	Zoom Menu	941
+opera-8.01-win32	70704	Enable display images	Images Menu	945
+opera-8.01-win32	70705	Display cached images only	Images Menu	946
+opera-8.01-win32	70706	Disable display images	Images Menu	947
+opera-8.01-win32	67445	Select author mode	Style Menu	951
+opera-8.01-win32	67446	Select user mode	Style Menu	952
+opera-8.01-win32	51750	Set encoding	Encoding Menu	959
+opera-8.01-win32	51751	Set encoding utf-8	Unicode Encoding Menu	963
+opera-8.01-win32	51752	Set encoding utf-16	Unicode Encoding Menu	964
+opera-8.01-win32	67447	Set encoding utf-32	Unicode Encoding Menu	965
+opera-8.01-win32	67448	Set encoding utf-7	Unicode Encoding Menu	966
+opera-8.01-win32	51754	Set encoding iso-8859-1	Western Encoding Menu	970
+opera-8.01-win32	51767	Set encoding iso-8859-15	Western Encoding Menu	971
+opera-8.01-win32	51771	Set encoding windows-1252	Western Encoding Menu	972
+opera-8.01-win32	51753	Set encoding us-ascii	Western Encoding Menu	973
+opera-8.01-win32	51755	Set encoding iso-8859-2	Central Encoding Menu	977
+opera-8.01-win32	67449	Set encoding iso-8859-16	Central Encoding Menu	978
+opera-8.01-win32	51769	Set encoding windows-1250	Central Encoding Menu	979
+opera-8.01-win32	51756	Set encoding iso-8859-3	Southern Encoding Menu	983
+opera-8.01-win32	51765	Set encoding iso-8859-13	Baltic Encoding Menu	987
+opera-8.01-win32	51776	Set encoding windows-1257	Baltic Encoding Menu	988
+opera-8.01-win32	51757	Set encoding iso-8859-4	Baltic Encoding Menu	989
+opera-8.01-win32	51763	Set encoding iso-8859-10	Nordic Encoding Menu	993
+opera-8.01-win32	51791	Set encoding windows-sami-2	Nordic Encoding Menu	994
+opera-8.01-win32	51766	Set encoding iso-8859-14	Celtic Encoding Menu	998
+opera-8.01-win32	51762	Set encoding iso-8859-9	Turkish Encoding Menu	1002
+opera-8.01-win32	51773	Set encoding windows-1254	Turkish Encoding Menu	1003
+opera-8.01-win32	51777	Set encoding windows-1258	Vietnamese Encoding Menu	1007
+opera-8.01-win32	51783	Set encoding viscii	Vietnamese Encoding Menu	1008
+opera-8.01-win32	67450	Set encoding x-vps	Vietnamese Encoding Menu	1009
+opera-8.01-win32	51788	Set encoding AUTODETECT-RU	Cyrillic Encoding Menu	1013
+opera-8.01-win32	51758	Set encoding iso-8859-5	Cyrillic Encoding Menu	1014
+opera-8.01-win32	51768	Set encoding koi8-r	Cyrillic Encoding Menu	1015
+opera-8.01-win32	51785	Set encoding koi8-u	Cyrillic Encoding Menu	1016
+opera-8.01-win32	51770	Set encoding windows-1251	Cyrillic Encoding Menu	1017
+opera-8.01-win32	51792	Set encoding ibm866	Cyrillic Encoding Menu	1018
+opera-8.01-win32	51760	Set encoding iso-8859-7	Greek Encoding Menu	1022
+opera-8.01-win32	51772	Set encoding windows-1253	Greek Encoding Menu	1023
+opera-8.01-win32	51759	Set encoding iso-8859-6	Arabic Encoding Menu	1027
+opera-8.01-win32	51775	Set encoding windows-1256	Arabic Encoding Menu	1028
+opera-8.01-win32	51761	Set encoding iso-8859-8-i	Hebrew Encoding Menu	1032
+opera-8.01-win32	67451	Set encoding iso-8859-8	Hebrew Encoding Menu	1033
+opera-8.01-win32	51774	Set encoding windows-1255	Hebrew Encoding Menu	1034
+opera-8.01-win32	51764	Set encoding iso-8859-11	Thai Encoding Menu	1038
+opera-8.01-win32	51780	Set encoding big5	Chinese Encoding Menu	1043
+opera-8.01-win32	67452	Set encoding big5-hkscs	Chinese Encoding Menu	1044
+opera-8.01-win32	51790	Set encoding euc-tw	Chinese Encoding Menu	1045
+opera-8.01-win32	51782	Set encoding gbk	Chinese Encoding Menu	1046
+opera-8.01-win32	67453	Set encoding gb18030	Chinese Encoding Menu	1047
+opera-8.01-win32	51786	Set encoding hz-gb2312	Chinese Encoding Menu	1048
+opera-8.01-win32	67454	Set encoding iso-2022-cn	Chinese Encoding Menu	1049
+opera-8.01-win32	51778	Set encoding shiftjis	Japanese Encoding Menu	1054
+opera-8.01-win32	51779	Set encoding iso-2022-jp	Japanese Encoding Menu	1055
+opera-8.01-win32	51781	Set encoding euc-jp	Japanese Encoding Menu	1056
+opera-8.01-win32	51784	Set encoding euc-kr	Korean Encoding Menu	1061
+opera-8.01-win32	70480	Set encoding iso-2022-kr	Korean Encoding Menu	1062
+opera-8.01-win32	56000	Enable automatic reload	Reload Menu	1066
+opera-8.01-win32	56001	Set automatic reload	Reload Menu	1067
+opera-8.01-win32	67455	Set automatic reload 5	Reload Menu	1068
+opera-8.01-win32	67456	Set automatic reload 15	Reload Menu	1069
+opera-8.01-win32	67457	Set automatic reload 30	Reload Menu	1070
+opera-8.01-win32	67458	Set automatic reload 60	Reload Menu	1071
+opera-8.01-win32	67459	Set automatic reload 120	Reload Menu	1072
+opera-8.01-win32	67460	Set automatic reload 300	Reload Menu	1073
+opera-8.01-win32	67461	Set automatic reload 900	Reload Menu	1074
+opera-8.01-win32	67462	Set automatic reload 1800	Reload Menu	1075
+opera-8.01-win32	67463	Go to link element home	Site Navigation Menu	1079
+opera-8.01-win32	67464	Go to link element index	Site Navigation Menu	1080
+opera-8.01-win32	67465	Go to link element contents	Site Navigation Menu	1081
+opera-8.01-win32	67466	Go to link element search	Site Navigation Menu	1082
+opera-8.01-win32	67467	Go to link element glossary	Site Navigation Menu	1083
+opera-8.01-win32	67468	Go to link element help	Site Navigation Menu	1084
+opera-8.01-win32	67469	Go to link element first	Site Navigation Menu	1085
+opera-8.01-win32	67470	Go to link element previous	Site Navigation Menu	1086
+opera-8.01-win32	67471	Go to link element next	Site Navigation Menu	1087
+opera-8.01-win32	67472	Go to link element last	Site Navigation Menu	1088
+opera-8.01-win32	67473	Go to link element up	Site Navigation Menu	1089
+opera-8.01-win32	67474	Go to link element copyright	Site Navigation Menu	1090
+opera-8.01-win32	67475	Go to link element author	Site Navigation Menu	1091
+opera-8.01-win32	69447	Go to link element 'application/rss	Site Navigation Menu	1092
+opera-8.01-win32	50525	Go to page opera:/help/mouse.html	Help Contents Menu	1096
+opera-8.01-win32	50479	Go to page opera:/help/keyboard.html	Help Contents Menu	1097
+opera-8.01-win32	70493	Go to page opera:/help/voice.html	Help Contents Menu	1098
+opera-8.01-win32	69692	Go to page opera:/help/panels.html	Help Contents Menu	1099
+opera-8.01-win32	69388	Go to page opera:/help/toolbars.html	Help Contents Menu	1100
+opera-8.01-win32	69389	Go to page opera:/help/menus.html	Help Contents Menu	1101
+opera-8.01-win32	69390	Go to page opera:/help/dialogs.html	Help Contents Menu	1102
+opera-8.01-win32	67397	Go to page opera:/help/mail.html	Help Contents Menu	1103
+opera-8.01-win32	69693	Go to page opera:/help/mail.html#news	Help Contents Menu	1104
+opera-8.01-win32	69694	Go to page opera:/help/chat.html	Help Contents Menu	1105
+opera-8.01-win32	69391	Go to page opera:/help/preferences.html	Help Contents Menu	1106
+opera-8.01-win32	69695	Go to page opera:/help/glossary.html	Help Contents Menu	1107
+opera-8.01-win32	60240	Go to page http://redir.opera.com/www.opera.com/	On The Web Menu	1111
+opera-8.01-win32	60241	Go to page http://redir.opera.com/www.opera.com/support/	On The Web Menu	1112
+opera-8.01-win32	60246	Go to page http://redir.opera.com/my.opera.com/	On The Web Menu	1113
+opera-8.01-win32	51131	Go to page http://redir.opera.com/www.operamail.com/	On The Web Menu	1114
+opera-8.01-win32	69392	Go to page http://redir.opera.com/www.opera.com/startup/	On The Web Menu	1115
+opera-8.01-win32	69393	Go to page http://redir.opera.com/www.opera.com/features/access	On The Web Menu	1116
+opera-8.01-win32	69394	Go to page http://redir.opera.com/www.opera.com/support/tutorials/security/	On The Web Menu	1117
+opera-8.01-win32	14134	Resume transfer	Transfers Item Popup Menu	1121
+opera-8.01-win32	14136	Stop transfer	Transfers Item Popup Menu	1122
+opera-8.01-win32	67477	Restart transfer	Transfers Item Popup Menu	1123
+opera-8.01-win32	69422	Remove all finished transfers	Transfers Item Popup Menu	1125
+opera-8.01-win32	69696	Open transfer	Transfers Item Popup Menu	1126
+opera-8.01-win32	69697	Open transfer folder	Transfers Item Popup Menu	1127
+opera-8.01-win32	22109	Copy transfer info	Transfers Item Popup Menu	1128
+opera-8.01-win32	67480	Remove panel	Hotlist Item Popup Menu	1146
+opera-8.01-win32	65309	Edit panel	Hotlist Item Popup Menu	1147
+opera-8.01-win32	67483	Close all	Pagebar Popup Menu	1152
+opera-8.01-win32	67481	Hide from personal bar	Personalbar Edit Item Popup Menu	1201
+opera-8.01-win32	67488	Set show transferwindow	Transfers View Popup Menu	1226
+opera-8.01-win32	70702	Set show transferwindow 2	Transfers View Popup Menu	1227
+opera-8.01-win32	70703	Set show transferwindow	Transfers View Popup Menu	1228
+opera-8.01-win32	54139	Show transfer details	Transfers View Popup Menu	1229
+opera-8.01-win32	67520	Show new transferitems on top	Transfers View Popup Menu	1230
+opera-8.01-win32	67674	Show voice preferences	Voice Menu	1234
+opera-8.01-win32	69886	Show opera	Tray Popup Menu	1238
+opera-8.01-win32	69896	Hide opera	Tray Popup Menu	1239
+opera-8.01-win32	70484	Empty page trash	Closed Pages Menu	1252
+opera-8.01-win32	25156	Enable delete private data 3	Delete Private Data Menu	1256
+opera-8.01-win32	25159	Enable delete private data	Delete Private Data Menu	1257
+opera-8.01-win32	25157	Enable delete private data 2	Delete Private Data Menu	1258
+opera-8.01-win32	25164	Enable delete private data 8	Delete Private Data Menu	1259
+opera-8.01-win32	25160	Enable delete private data 5	Delete Private Data Menu	1260
+opera-8.01-win32	25161	Enable delete private data 6	Delete Private Data Menu	1261
+opera-8.01-win32	25163	Enable delete private data 7	Delete Private Data Menu	1262
+opera-8.01-win32	25165	Enable delete private data 9	Delete Private Data Menu	1263
+opera-8.01-win32	68044	Enable delete private data 11	Delete Private Data Menu	1264
+opera-8.01-win32	25162	Enable delete private data 4	Delete Private Data Menu	1265
+opera-8.01-win32	25169	Enable delete private data 10	Delete Private Data Menu	1266
+opera-8.01-win32	70446	Enable delete private data 12	Delete Private Data Menu	1267
+opera-8.01-win32	68042	Manage cookies	Delete Private Data Menu	1268
+opera-8.01-win32	68043	Manage wand	Delete Private Data Menu	1269
+opera-12.14-win32	MI_IDM_MENU_PAGEBAR_LINK_IN_NEW_PAGE	Open link in new page	Links Panel Item Menu	12
+opera-12.14-win32	MI_IDM_MENU_PAGEBAR_LINK_IN_BG_PAGE	Open link in background page	Links Panel Item Menu	13
+opera-12.14-win32	M_OPEN_BACKGROUND_WINDOW	Open link in background window	Links Panel Item Menu	15
+opera-12.14-win32	M_LINKS_PANEL_BOOKMARK_LINK	Add link to bookmarks	Links Panel Item Menu	16
+opera-12.14-win32	MI_IDM_SAVELINKDOCAS	Download url as	Links Panel Item Menu	18
+opera-12.14-win32	M_SAVE_LINK_TO_DOWNLOAD_FOLDER	Download url	Links Panel Item Menu	19
+opera-12.14-win32	M_PANEL_LOCK	Lock panel	Links Panel Item Menu	20
+opera-12.14-win32	M_GETMAIL_ALL_ACCOUNTS	Get mail	Get Mail Popup Menu	39
+opera-12.14-win32	DI_IDSTR_M2_MAILTOOLBAR_GETMAIL	Get mail	Index Item Popup Menu	44
+opera-12.14-win32	M_INDEX_ITEM_POPUP_MENU_MARK_ALL_READ	Mark all as read	Index Item Popup Menu	45
+opera-12.14-win32	M_INDEX_ITEM_POPUP_MENU_EMPTY_SPAM	Empty spam	Index Item Popup Menu	46
+opera-12.14-win32	M_INDEX_ITEM_POPUP_MENU_EMPTY_TRASH	Empty trash	Index Item Popup Menu	47
+opera-12.14-win32	M_INDEX_ITEM_POPUP_MENU_NEW_FILTER	New folder	Index Item Popup Menu	48
+opera-12.14-win32	M_EXPORT	Export mail index	Index Item Popup Menu	50
+opera-12.14-win32	MI_IDM_HLITEM_PROPERTIES	Edit properties	Index Item Popup Menu	51
+opera-12.14-win32	SI_NEW_FOLDER_BUTTON_TEXT	New Folder union	Feed Index Item Popup Menu	65
+opera-12.14-win32	D_PREFERENCES_TOOLBARS_AND_MENUS_RENAME	Edit properties	Filter Item Menu	74
+opera-12.14-win32	MI_IDM_NEW_ACCOUNT	New account	Account Item Menu	78
+opera-12.14-win32	M_ALL_ACCOUNTS	Show account	Mail Account Menu	84
+opera-12.14-win32	M_MAIL_ACCOUNTS	Show account -3	Mail Account Menu	85
+opera-12.14-win32	M_NEWS_ACCOUNTS	Show account -4	Mail Account Menu	86
+opera-12.14-win32	M_MENU_BAR_FEEDS_SUBMENU	Show account -5	Mail Account Menu	87
+opera-12.14-win32	M_VIEW_ALL_HEADERS_AND_MESSAGE	Show raw mail	Mail Body Popup Menu	91
+opera-12.14-win32	M_MAIL_FOLLOW_THREAD	Stop watching mail index	Follow Ignore Thread Menu	95
+opera-12.14-win32	M_MAIL_IGNORE_THREAD	Stop ignoring mail index	Follow Ignore Thread Menu	96
+opera-12.14-win32	M_MAIL_FOLLOW_CONTACT	Stop watching contact index	Follow Ignore Contact Menu	100
+opera-12.14-win32	M_MAIL_IGNORE_CONTACT	Stop ignoring contact index	Follow Ignore Contact Menu	101
+opera-12.14-win32	DI_IDSTR_M2_MAILVIEWTOOLBAR_REPLY	Reply	Mail Item Popup Menu	105
+opera-12.14-win32	DI_IDSTR_M2_MAILVIEWTOOLBAR_FORWARD	Forward mail	Mail Item Popup Menu	106
+opera-12.14-win32	M_INDEX_ITEM_POPUP_MENU_REDIRECT	Redirect mail	Mail Item Popup Menu	107
+opera-12.14-win32	M_MAIL_ITEM_GOTO_NEXT_UNREAD	Select next unread	Mail Item Popup Menu	108
+opera-12.14-win32	M_MAIL_ITEM_GOTO_PREV_UNREAD	Select previous unread	Mail Item Popup Menu	109
+opera-12.14-win32	S_MAIL_FLAG_MESSAGE	Flag Message	Mail Item Popup Menu	110
+opera-12.14-win32	M_MAIL_INDEX_ITEM_POPUP_MENU_CANCEL_POST	Cancel newsmessage	Mail Item Popup Menu	114
+opera-12.14-win32	MI_IDM_Cut_PARENT	Edit draft	Mail Item Popup Menu	115
+opera-12.14-win32	S_MAIL_FETCH_COMPLETE_MESSAGE	Fetch complete message Mail Icon Get	Mail Item Popup Menu	116
+opera-12.14-win32	DI_IDSTR_M2_MAILVIEWTOOLBAR_REPLY_TO_SENDER	Reply To Sender Reply	Mail Item Reply Menu	120
+opera-12.14-win32	DI_IDSTR_M2_MAILVIEWTOOLBAR_REPLY_TO_LIST	Reply To List Reply All	Mail Item Reply Menu	121
+opera-12.14-win32	DI_IDSTR_M2_MAILVIEWTOOLBAR_REPLYALL	Reply All	Mail Item Reply Menu	122
+opera-12.14-win32	MI_IDM_MarkAsRead	Mark as read	Mail Item Mark Menu	126
+opera-12.14-win32	M_MAIL_INDEX_ITEM_POPUP_MENU_NEXT_UNREAD	Mark and select next unread	Mail Item Mark Menu	127
+opera-12.14-win32	M_MAIL_INDEX_ITEM_POPUP_MENU_PREVIOUS_UNREAD	Mark as read & Select previous unread	Mail Item Mark Menu	128
+opera-12.14-win32	MI_IDM_MarkAsUnread	Mark as unread	Mail Item Mark Menu	130
+opera-12.14-win32	M_MAIL_INDEX_ITEM_POPUP_MENU_MARK_AS_SPAM	Mark as spam	Mail Item Mark Menu	131
+opera-12.14-win32	M_MAIL_INDEX_ITEM_POPUP_MENU_MARK_AS_NOT_SPAM	Mark as not spam	Mail Item Mark Menu	132
+opera-12.14-win32	M_MAIL_GO_TO_CONTACT	View messages from selected contact	Mail Item Contact Menu	136
+opera-12.14-win32	M_INDEX_ITEM_POPUP_MENU_NEW_FILTER_DIALOG	New Folder Set label	Mail Folder Menu	140
+opera-12.14-win32	MI_IDM_Open	Open	Mail Attachment Popup	144
+opera-12.14-win32	M_COMPOSEWINDOW_M2_MENU_ADD_ATTACHMENT	Add attachment	Mail Attachment Popup	145
+opera-12.14-win32	M_COMPOSEWINDOW_M2_MENU_REMOVE_ATTACHMENT	Remove attachment	Mail Attachment Popup	146
+opera-12.14-win32	M_SAVE_TO_DOWNLOAD_FOLDER	Save attachment to download folder	Mail Attachment Toolbar Popup	151
+opera-12.14-win32	S_MAIL_EXPAND_MESSAGE	Expand Message Mail Expand Message	Mail Header Toolbar Popup	157
+opera-12.14-win32	M_MAIL_VIEW_OPTION_MENU_SHOW_READ	Set mail view flag	Mail View Show Menu	162
+opera-12.14-win32	M_MAIL_VIEW_OPTION_MENU_SHOW_TRASH	Set mail view flag	Mail View Show Menu	163
+opera-12.14-win32	M_MAIL_VIEW_OPTION_MENU_SHOW_SPAM	Set mail view flag 2	Mail View Show Menu	164
+opera-12.14-win32	M_MAIL_VIEW_OPTION_MENU_SHOW_MAILINGLIST	Set mail view flag 3	Mail View Show Menu	165
+opera-12.14-win32	M_MAIL_VIEW_OPTION_MENU_SHOW_NEWSGR	Set mail view flag 4	Mail View Show Menu	166
+opera-12.14-win32	M_MAIL_VIEW_OPTION_MENU_SHOW_NEWSFEEDS	Set mail view flag 6	Mail View Show Menu	167
+opera-12.14-win32	M_MAIL_VIEW_OPTION_MENU_SHOW_FILTERED	Set mail view flag 5	Mail View Show Menu	168
+opera-12.14-win32	M_MAIL_VIEW_OPTION_MENU_SHOW_SENT	Set mail view flag 7	Mail View Show Menu	169
+opera-12.14-win32	M_MAIL_VIEW_OPTION_MENU_SHOW_DUPLICATES	Set mail view flag 8	Mail View Show Menu	170
+opera-12.14-win32	S_TIME_TODAY	Set mail view age	Mail View Age Menu	174
+opera-12.14-win32	S_TIME_WEEK	Set mail view age	Mail View Age Menu	175
+opera-12.14-win32	S_TIME_MONTH	Set mail view age 2	Mail View Age Menu	176
+opera-12.14-win32	S_TIME_THREEMONTHS	Set mail view age 3	Mail View Age Menu	177
+opera-12.14-win32	S_TIME_YEAR	Set mail view age 4	Mail View Age Menu	178
+opera-12.14-win32	S_TIME_FOREVER	Set mail view age 5	Mail View Age Menu	179
+opera-12.14-win32	M_MAIL_STAND_VIEW_MENU_FLAT	Set mail view type	Mail List Option Menu	183
+opera-12.14-win32	M_MAIL_STAND_VIEW_MENU_THREADED	Set mail view type	Mail List Option Menu	184
+opera-12.14-win32	M_MAIL_GROUP_BY_NONE	Group mails	Mail Group Option Menu	188
+opera-12.14-win32	M_MAIL_GROUP_BY_READ	Group mails	Mail Group Option Menu	189
+opera-12.14-win32	M_MAIL_GROUP_BY_FLAG	Group mails	Mail Group Option Menu	190
+opera-12.14-win32	M_MAIL_GROUP_BY_DATE	Group mails 2	Mail Group Option Menu	191
+opera-12.14-win32	M_FORWARD_MAIL_FORWARD	Forward Mail	Forward Mail Menu	195
+opera-12.14-win32	M_MAIL_REMOVE_FROM_VIEW	Remove from view	Delete Mail Menu	206
+opera-12.14-win32	M_MAIL_MOVE_TO_TRASH	Delete mail Move to trash	Delete Mail Menu	207
+opera-12.14-win32	M_MAIL_DELETE_PERMANENTLY	Delete permanently Delete	Delete Mail Menu	208
+opera-12.14-win32	M_MAIL_GO_TO_THREAD	Go to thread	Thread Menu	212
+opera-12.14-win32	M_INDEX_ITEM_POPUP_MENU_MARK_THREAD_READ	Mark thread as read	Thread Menu	213
+opera-12.14-win32	M_MAIL_INDEX_ITEM_POPUP_MENU_MARK_THREAD_NEXT_UNREAD	Mark thread and select next unread	Thread Menu	214
+opera-12.14-win32	S_MAIL_SUPPRESS_EXTERNAL_EMBEDS_CONTACT	Display external images	From Address Popup Menu	218
+opera-12.14-win32	DI_IDSTR_M2_MAILVIEWTOOLBAR_ADDCONTACT	Add contact	Mail Address Popup Menu	228
+opera-12.14-win32	M_INDEX_ITEM_POPUP_MENU_READ	View messages from contact	Mail Contact Popup Menu	235
+opera-12.14-win32	DI_IDSTR_M2_BOOKMARKTOOLBAR_NEW	New bookmark	New bookmark menu	243
+opera-12.14-win32	DI_IDSTR_M2_BOOKMARKTOOLBAR_NEW_FOLDER	New folder	New bookmark menu	244
+opera-12.14-win32	M_NEW_SEPARATOR	New Seperator	New bookmark menu	245
+opera-12.14-win32	M_FULL_VIEW	View style	Bookmarks Panel View Menu	256
+opera-12.14-win32	M_SPLIT_VIEW	View style	Bookmarks Panel View Menu	257
+opera-12.14-win32	M_SINGLE_FOLDER	View style 2	Bookmarks Panel View Menu	258
+opera-12.14-win32	M_BOOKM_PANEL_VIEW_MENU_SORT_BY_MY_ORDER	Sort by column	Bookmarks Panel View Menu	259
+opera-12.14-win32	M_BOOKM_PANEL_VIEW_MENU_SORT_BY_NAME	Sort by column	Bookmarks Panel View Menu	260
+opera-12.14-win32	M_BOOKM_PANEL_VIEW_MENU_SORT_BY_NICK	Sort by column	Bookmarks Panel View Menu	261
+opera-12.14-win32	M_BOOKM_PANEL_VIEW_MENU_SORT_BY_ADDR	Sort by column 2	Bookmarks Panel View Menu	262
+opera-12.14-win32	M_BOOKM_PANEL_VIEW_MENU_SORT_BY_DESCR	Sort by column 3	Bookmarks Panel View Menu	263
+opera-12.14-win32	M_BOOKM_PANEL_VIEW_MENU_SORT_BY_CREATED	Sort by column 4	Bookmarks Panel View Menu	264
+opera-12.14-win32	M_BOOKM_PANEL_VIEW_MENU_SORT_BY_VISITED	Sort by column 5	Bookmarks Panel View Menu	265
+opera-12.14-win32	M_BOOKM_PANEL_VIEW_MENU_SORT_ASCENDING	Sort direction	Bookmarks Panel View Menu	266
+opera-12.14-win32	M_BOOKM_PANEL_VIEW_MENU_SORT_DESCENDING	Sort direction	Bookmarks Panel View Menu	267
+opera-12.14-win32	MI_IDM_HLITEM_SHOW_ON_BOOKMARKSBAR	Show on personal bar	Bookmark Item Popup Menu	280
+opera-12.14-win32	M_POPUP_MENU_BOOKMARK_ALL	Add all to bookmarks	Bookmark Item Popup Menu	282
+opera-12.14-win32	DI_IDSTR_M2_CONTACTSTOOLBAR_NEW	New contact	New contact menu	295
+opera-12.14-win32	DI_IDSTR_M2_CONTACTSTOOLBAR_NEW_FOLDER	New folder	New contact menu	296
+opera-12.14-win32	M_CONTACT_ITEM_POPUP_MENU_VISIT_HOMEPAGE	Go to contact homepage	Contact Item Popup Menu	314
+opera-12.14-win32	M_NEW_NOTE	New note	New note menu	327
+opera-12.14-win32	MI_IDM_SELMAIL	Send text in mail	Note Item Popup Menu	337
+opera-12.14-win32	M_TIME_AND_SITE_VIEW_NAME	View style	History Panel View Menu	376
+opera-12.14-win32	M_SITE_VIEW_NAME	View style	History Panel View Menu	377
+opera-12.14-win32	M_TIME_VIEW_NAME	View style 2	History Panel View Menu	378
+opera-12.14-win32	M_ACTIVATE_PAGE	Activate window	Windows Item Popup Menu	382
+opera-12.14-win32	M_RESTORE_PAGE	Restore page 2	Windows Item Popup Menu	383
+opera-12.14-win32	M_MINIMIZE_PAGE	Minimize page 2	Windows Item Popup Menu	384
+opera-12.14-win32	M_PAGE_MAXIMIZE	Maximize page 2	Windows Item Popup Menu	385
+opera-12.14-win32	M_LOCK_TAB	Lock page	Windows Item Popup Menu	386
+opera-12.14-win32	M_CLOSE_PAGE	Close page 2	Windows Item Popup Menu	387
+opera-12.14-win32	M_DETACH_PAGE	Detach page	Windows Item Popup Menu	388
+opera-12.14-win32	M_NEW_WIDGET	Go to page http://widgets.opera.com/	New Widget Menu	393
+opera-12.14-win32	DI_IDBTN_GET	Open widget	Widget Item Popup Menu	401
+opera-12.14-win32	M_SYNC_ENABLE	Set up Sync	Sync Setup Popup Menu	415
+opera-12.14-win32	S_SYNC_HELP	Open URL in new page http://www.opera.com/link/start/	Sync Setup Popup Menu	416
+opera-12.14-win32	M_SYNC_MY_PAGE	Open URL in new page https://link.opera.com	Sync Popup Menu	420
+opera-12.14-win32	M_SYNC_CONFIGURE	Open Sync settings	Sync Popup Menu	421
+opera-12.14-win32	M_WEBSERVER_ENABLE	Set up Webserver	Webserver Setup Popup Menu	426
+opera-12.14-win32	S_UNITE_HELP	Open URL in new page http://www.opera.com/unite/start/	Webserver Setup Popup Menu	427
+opera-12.14-win32	M_WEBSERVER_MY_PAGE	Show Opera Unite Root	Webserver Popup Menu	436
+opera-12.14-win32	M_WEBSERVER_CONFIGURE	Open Webserver settings	Webserver Popup Menu	437
+opera-12.14-win32	M_WEBSERVER_MANAGE_SERVICES	Focus panel Unite	Webserver Popup Menu	438
+opera-12.14-win32	MI_IDM_MENU_GOTO_PUBLIC_SERVICE_PAGE	Goto Public Page	Unite Item Popup Menu	465
+opera-12.14-win32	M_WEBSERVER_START_SERVICE	Open widget	Unite Item Popup Menu	466
+opera-12.14-win32	M_BROWSER_VIEW_MENU_SMALL_SCREEN	Enable handheld mode	Web Panel View Menu	486
+opera-12.14-win32	MI_IDM_Print	Print document Menu Print	Chat Popup Menu	491
+opera-12.14-win32	M_CHAT_ACCOUNT_STATUS_ONLINE	Set chat status -2	Chat Account Menu	496
+opera-12.14-win32	M_CHAT_ACCOUNT_STATUS_BUSY	Set chat status -2	Chat Account Menu	497
+opera-12.14-win32	M_CHAT_ACCOUNT_STATUS_BE_RIGHT_BACK	Set chat status -2	Chat Account Menu	498
+opera-12.14-win32	M_CHAT_ACCOUNT_STATUS_AWAY	Set chat status -2	Chat Account Menu	499
+opera-12.14-win32	M_CHAT_ACCOUNT_STATUS_ON_THE_PHONE	Set chat status -2	Chat Account Menu	500
+opera-12.14-win32	M_CHAT_ACCOUNT_STATUS_OUT_TO_LUNCH	Set chat status -2	Chat Account Menu	501
+opera-12.14-win32	M_CHAT_ACCOUNT_STATUS_OFFLINE	Set chat status -2	Chat Account Menu	502
+opera-12.14-win32	M_CHAT_ITEM_POPUP_MENU_LIST_ROOMS	List chat rooms	Chat Item Popup Menu	506
+opera-12.14-win32	M_CHAT_ITEM_POPUP_MENU_NEW_ROOM	New chat room	Chat Item Popup Menu	507
+opera-12.14-win32	M_CHAT_ITEM_POPUP_MENU_JOIN_ROOM	Join chat room	Chat Item Popup Menu	508
+opera-12.14-win32	M_CHAT_ITEM_POPUP_MENU_LEAVE_ROOM	Leave chat room	Chat Item Popup Menu	509
+opera-12.14-win32	M_CHAT_USER_MENU_WHO_IS	Chat command	Chat User Menu	515
+opera-12.14-win32	M_CHAT_USER_MENU_PRIVATE_CHAT	Join private chat	Chat User Menu	516
+opera-12.14-win32	S_CHAT_SEND_FILE_TITLE	Send file	Chat User Menu	518
+opera-12.14-win32	M_CHAT_USER_CONTROL_MENU_GIVE_OPERATOR_STATUS	Chat command 4	Chat User Control Menu	523
+opera-12.14-win32	M_CHAT_USER_CONTROL_MENU_REVOKE_OPERATOR_STATUS	Chat command 5	Chat User Control Menu	524
+opera-12.14-win32	M_CHAT_USER_CONTROL_MENU_GIVE_VOICE	Chat command 6	Chat User Control Menu	525
+opera-12.14-win32	M_CHAT_USER_CONTROL_MENU_REMOVE_VOICE	Chat command 7	Chat User Control Menu	526
+opera-12.14-win32	M_CHAT_USER_CONTROL_MENU_KICK	Chat command 8	Chat User Control Menu	527
+opera-12.14-win32	M_CHAT_USER_CONTROL_MENU_KICK_WITH_REASON	Chat command 9	Chat User Control Menu	528
+opera-12.14-win32	M_CHAT_USER_CONTROL_MENU_BAN	Chat command 10	Chat User Control Menu	529
+opera-12.14-win32	M_ADD_CONTACT_HERE	Add contact	Add Nick to Contact Menu	533
+opera-12.14-win32	MI_IDM_SELSEARCH	Hotclick search 200	Link Selection Popup Menu	555
+opera-12.14-win32	MI_IDM_EDIT_COPY	Copy label text	Edit Label Popup Menu	587
+opera-12.14-win32	M_DOCUMENT_POPUP_MENU_VALIDATE	Validate frame source	Document Popup Menu	607
+opera-12.14-win32	M_SVG_POPUP_MENU_ZOOM_IN	SVG zoom in 10	SVG Popup Menu	627
+opera-12.14-win32	M_SVG_POPUP_MENU_ZOOM_OUT	SVG zoom out 10	SVG Popup Menu	628
+opera-12.14-win32	M_SVG_POPUP_MENU_TO_ORIGINAL_SIZE	SVG zoom 100	SVG Popup Menu	629
+opera-12.14-win32	M_SVG_POPUP_MENU_START_ANIMATION	SVG start animation	SVG Popup Menu	630
+opera-12.14-win32	M_SVG_POPUP_MENU_PAUSE_ANIMATION	SVG pause animation	SVG Popup Menu	631
+opera-12.14-win32	M_SVG_POPUP_MENU_STOP_ANIMATION	SVG stop animation	SVG Popup Menu	632
+opera-12.14-win32	M_MENU_RELOAD_IMAGE	Show background image	Document Background Menu	637
+opera-12.14-win32	MI_IDM_BACKGROUND_COPY_ADDRESS	Copy background image address	Document Background Menu	638
+opera-12.14-win32	MI_IDM_BACKGROUND_SAVE	Save background image	Document Background Menu	639
+opera-12.14-win32	M_DOCUMENT_BACKGROUND_MENU_USE_ON_DESKTOP_	Use background image as desktop background	Document Background Menu	641
+opera-12.14-win32	MI_IDM_BACKGROUND_IMAGE_PROPERTIES	Show background image properties	Document Background Menu	642
+opera-12.14-win32	M_MENU_TURBO_RELOAD_IMAGE	Load image in full quality	Turbo Image Link Popup Menu	675
+opera-12.14-win32	M_CLEAR_ALL	Clear	Installer Edit Folderchooser Popup Menu	720
+opera-12.14-win32	M_TRANSFERS_NOTIFY_POPUP_MENU_OPEN_FOLDER	Open folder	Edit Filechooser Popup Menu	735
+opera-12.14-win32	D_MAIL_CLEAR_FORMATTING	'Email Clear Formatting Mail Compose Clear Formatting'	Mail Compose Paragraph Submenu	780
+opera-12.14-win32	D_HTML_MAIL_INDENT_TEXT	'Email Indent Mail Compose Indent'	Mail Compose Paragraph Submenu	781
+opera-12.14-win32	D_HTML_MAIL_OUTDENT_TEXT	'Email Outdent Mail Compose Outdent'	Mail Compose Paragraph Submenu	782
+opera-12.14-win32	D_HTML_MAIL_LEFT_ALIGN_TEXT	'Email Align Left Mail Compose Left'	Mail Compose Paragraph Submenu	783
+opera-12.14-win32	D_HTML_MAIL_CENTER_ALIGN_TEXT	'Email Align Center Mail Compose Center'	Mail Compose Paragraph Submenu	784
+opera-12.14-win32	D_HTML_MAIL_RIGHT_ALIGN_TEXT	'Email Align Right Mail Compose Right'	Mail Compose Paragraph Submenu	785
+opera-12.14-win32	D_HTML_MAIL_JUSTIFY_TEXT	'Email Align Justify Mail Compose Justify'	Mail Compose Paragraph Submenu	786
+opera-12.14-win32	D_HTML_MAIL_ORDERED_LIST	'Email Set Ordered List Mail Compose Numbered List'	Mail Compose Paragraph Submenu	787
+opera-12.14-win32	D_HTML_MAIL_UNORDERED_LIST	'Email Set Unordered List Mail Compose Bullet List'	Mail Compose Paragraph Submenu	788
+opera-12.14-win32	D_HTML_MAIL_SET_SUPERSCRIPT	'Email Set Superscript Mail Compose Superscript'	Mail Compose Paragraph Submenu	789
+opera-12.14-win32	D_HTML_MAIL_SET_SUBSCRIPT	'Email Set Subscript Mail Compose Subscript'	Mail Compose Paragraph Submenu	790
+opera-12.14-win32	D_HTML_MAIL_USE_HTML	'Toggle HTML Email	Mail Compose Popup Menu	797
+opera-12.14-win32	M_OPEN_FONT_DIALOG	Open Font Dialog	Mail Compose Popup Menu	798
+opera-12.14-win32	M_COMPOSE_WINDOW_SEND_MESSAGE	Send mail	Mail Compose Popup Menu	799
+opera-12.14-win32	S_MAIL_DISCARD_DRAFT	Discard draft	Mail Compose Popup Menu	801
+opera-12.14-win32	M_INTERNAL_SPELLCHECK_ADD_WORD	Add word	Mail Compose Popup Menu Spellcheck Word	809
+opera-12.14-win32	M_INTERNAL_SPELLCHECK_IGNORE_WORD	Ignore word	Mail Compose Popup Menu Spellcheck Word	810
+opera-12.14-win32	M_INTERNAL_SPELLCHECK_REMOVE_WORD	Remove word	Mail Compose Popup Menu Spellcheck Word	811
+opera-12.14-win32	MI_IDM_INSERT_NAME_PARENT_PARENT	Show Preferences	Edit Widget Insert Menu	846
+opera-12.14-win32	M_FRAME_MENU_OPEN	Maximize frame	Frame Menu	853
+opera-12.14-win32	MI_IDM_CopyFrameAddress	Copy frame address	Frame Menu	858
+opera-12.14-win32	MI_IDM_SELDICTIONARY	Hotclick search 50	Hotclick Popup Menu	865
+opera-12.14-win32	MI_IDM_SELENCYCLOPED	Hotclick search 51	Hotclick Popup Menu	866
+opera-12.14-win32	M_HOTCLICK_POPUP_MENU_GOTO_URL	Go to page %t	Hotclick Popup Menu	867
+opera-12.14-win32	MI_IDM_SELTRANSLATE_EN_RU	Hotclick search 120	Translate menu	876
+opera-12.14-win32	MI_IDM_SELTRANSLATE_RU_EN	Hotclick search 121	Translate menu	877
+opera-12.14-win32	MI_IDM_SELTRANSLATE_EN_ZH	Hotclick search 120	Translate menu	878
+opera-12.14-win32	MI_IDM_SELTRANSLATE_ZH_EN	Hotclick search 121	Translate menu	879
+opera-12.14-win32	MI_IDM_SELTRANSLATE_EN_FR	Hotclick search 100	Translate menu	880
+opera-12.14-win32	MI_IDM_SELTRANSLATE_EN_DE	Hotclick search 101	Translate menu	881
+opera-12.14-win32	MI_IDM_SELTRANSLATE_EN_IT	Hotclick search 102	Translate menu	882
+opera-12.14-win32	MI_IDM_SELTRANSLATE_EN_PT	Hotclick search 103	Translate menu	883
+opera-12.14-win32	MI_IDM_SELTRANSLATE_EN_ES	Hotclick search 104	Translate menu	884
+opera-12.14-win32	MI_IDM_SELTRANSLATE_FR_EN	Hotclick search 106	Translate menu	885
+opera-12.14-win32	MI_IDM_SELTRANSLATE_FR_DE	Hotclick search 107	Translate menu	886
+opera-12.14-win32	MI_IDM_SELTRANSLATE_FR_IT	Hotclick search 108	Translate menu	887
+opera-12.14-win32	MI_IDM_SELTRANSLATE_FR_PT	Hotclick search 109	Translate menu	888
+opera-12.14-win32	MI_IDM_SELTRANSLATE_FR_ES	Hotclick search 110	Translate menu	889
+opera-12.14-win32	MI_IDM_SELTRANSLATE_DE_EN	Hotclick search 111	Translate menu	890
+opera-12.14-win32	MI_IDM_SELTRANSLATE_DE_FR	Hotclick search 112	Translate menu	891
+opera-12.14-win32	MI_IDM_SELTRANSLATE_IT_EN	Hotclick search 113	Translate menu	892
+opera-12.14-win32	MI_IDM_SELTRANSLATE_IT_FR	Hotclick search 114	Translate menu	893
+opera-12.14-win32	MI_IDM_SELTRANSLATE_PT_EN	Hotclick search 115	Translate menu	894
+opera-12.14-win32	MI_IDM_SELTRANSLATE_ES_EN	Hotclick search 116	Translate menu	895
+opera-12.14-win32	MI_IDM_SELTRANSLATE_ES_FR	Hotclick search 117	Translate menu	896
+opera-12.14-win32	MI_IDM_SELTRANSLATE_EN_JA	Hotclick search 118	Translate menu	897
+opera-12.14-win32	MI_IDM_SELTRANSLATE_JA_EN	Hotclick search 119	Translate menu	898
+opera-12.14-win32	M_IMAGE_MENU_USE_ON_SPEEDDIAL	Use image as speed dial background	Image Popup Menu	908
+opera-12.14-win32	M_WIDGET_SETTINGS	Open Widget Preferences	Gadget Image Popup Menu	916
+opera-12.14-win32	M_WIDGET_DOWNLOAD_MORE	Download more widgets	Gadget Image Popup Menu	917
+opera-12.14-win32	M_ADD_LINK_TO_CONTACTS	Add link to contacts	Mailto Link Popup Menu	934
+opera-12.14-win32	M_TOOLS_MAIL_AND_CHAT	Manage accounts	Browser Button Menu Bar	956
+opera-12.14-win32	MI_IDM_Preferences	Show preferences	Prefs O Menu	979
+opera-12.14-win32	MI_IDM_REFRESH	Refresh display	Developer Menu	987
+opera-12.14-win32	M_OPERA_DRAGONFLY	Open Developer Tools Window	Developer Menu	988
+opera-12.14-win32	S_INFOPANEL_TITLE	Focus panel Info	Developer Menu	989
+opera-12.14-win32	M_PAGE_SECURITY_INFORMATION	Show security information	Developer Menu	990
+opera-12.14-win32	MI_IDM_PluginsWindow	Go to page opera:plugins	Developer Menu	991
+opera-12.14-win32	MI_IDM_CacheWindow	Go to page opera:cache	Developer Menu	992
+opera-12.14-win32	M_JAVASCRIPTCONSOLE	Show Message console	Developer Menu	993
+opera-12.14-win32	LITERAL_1242	Go to page www.opera.com	Browser Test Menu	1003
+opera-12.14-win32	MI_IDM_MENU_PAGEBAR_NEW_PAGE	New page New item menu	Browser Tabs Menu	1010
+opera-12.14-win32	MI_IDM_MENU_NEW_PRIVATE_PAGE	New private page New private page menu	Browser Tabs Menu	1011
+opera-12.14-win32	M_OPERA_MAC_SPECIAL_CHARACTERS	Special characters	Browser Edit Menu	1043
+opera-12.14-win32	M_BROWSER_VIEW_MENU_MEDIUM_SCREEN	Enable mediumscreen mode	Browser View Common Menu	1061
+opera-12.14-win32	M_BROWSER_VIEW_MENU_PANELS	Set alignment hotlist	View Toolbars Menu	1068
+opera-12.14-win32	MI_IDM_MENU_BUTTONS_SIMPLE_PARENT	Set alignment browser toolbar	View Toolbars Menu	1069
+opera-12.14-win32	D_BOOKMARKSBAR_TOP_PARENT	Set alignment personalbar inline	View Toolbars Menu	1070
+opera-12.14-win32	MI_IDM_MENU_PAGEBAR_TOP_PARENT	Set alignment pagebar	View Toolbars Menu	1071
+opera-12.14-win32	MI_IDM_MENU_STATUS_BAR_TOP_PARENT	Set alignment status toolbar	View Toolbars Menu	1072
+opera-12.14-win32	MI_IDM_MENU_ADDRESS_BAR_TOP_PARENT	Set alignment document toolbar	View Toolbars Menu	1073
+opera-12.14-win32	M_BROWSER_VIEW_MENU_NAVIGATION_BAR	Set alignment site navigation toolbar	View Toolbars Menu	1074
+opera-12.14-win32	MI_IDM_OpenURL	Go to page Blank	Browser Navigation Menu	1091
+opera-12.14-win32	M_UPGRADE_WIDGETS	Upgrade gadgets	Runtime Browser Widgets Menu	1100
+opera-12.14-win32	M_MANAGE_WIDGETS	Focus panel Widgets	Runtime Browser Widgets Menu	1101
+opera-12.14-win32	M_ABOUT_WIDGETS	Open URL in new page http://www.opera.com/widgets/	Runtime Browser Widgets Menu	1102
+opera-12.14-win32	M_EXTENSIONS_GET	Open url in new page http://addons.opera.com/addons/extensions/	Extensions Menu	1106
+opera-12.14-win32	M_EXTENSIONS_WHAT_ARE	Open url in new page http://www.opera.com/addons/extensions/	Extensions Menu	1108
+opera-12.14-win32	DI_PREFERENCES	Show extension options -2	Extensions Panel Button Cogwheel Menu	1112
+opera-12.14-win32	M_EXTENSIONS_PRIVACY	Extension privacy -2	Extensions Panel Button Cogwheel Menu	1113
+opera-12.14-win32	SI_IDSTR_HL_OPENALLURLS	Open link -2	Bookmark Folder Menu	1118
+opera-12.14-win32	M_ADD_ALL_CONTACTS_IN_FOLDER	Compose to contact	Compose To Contact Menu	1131
+opera-12.14-win32	M_FEEDS_MENU_READ	Read mail rss	Browser Feeds Menu	1143
+opera-12.14-win32	M_FEEDS_MENU_MANAGE	Subscribe to groups rss	Browser Feeds Menu	1144
+opera-12.14-win32	D_MAIL_LOW_BANDWIDTH_MODE	Disable Low Bandwidth Mode	Browser Mail Menu	1150
+opera-12.14-win32	MI_IDM_FILTERS	Show mail filters Mail Filter	Browser Mail Menu	1151
+opera-12.14-win32	M_BROWSER_MAIL_MENU_NEWSGROUPS	Subscribe to groups nntp	Browser Mail Menu	1152
+opera-12.14-win32	M_BROWSER_MAIL_MENU_IMAPFOLDERS	Subscribe to groups imap	Browser Mail Menu	1153
+opera-12.14-win32	M_CHAT_CONNECT_MENU_DISCONNECT	Set chat status offline	Chat Connect Menu	1166
+opera-12.14-win32	MI_IDM_UPDATE_ALL_MAILBOXES	Get mail	Get Mail Menu	1175
+opera-12.14-win32	MI_IDM_MAIL_MENU_SEND_QUEUED	Send queued mail	Send Mail Menu	1180
+opera-12.14-win32	M_MANAGE_COOKIES	Manage cookies	Advanced Tools Menu	1212
+opera-12.14-win32	M_MANAGE_WAND_PASSWORDS	Manage wand	Advanced Tools Menu	1213
+opera-12.14-win32	D_PREFS_BLOCKED_CONTENT	Content block details	Advanced Tools Menu	1214
+opera-12.14-win32	MI_IDM_CREATE_LINKED_WINDOW	Create linked window	Browser Window Menu	1229
+opera-12.14-win32	MI_IDM_MDI_RESTORE_ALL	Restore all	Browser Window Menu	1233
+opera-12.14-win32	MI_IDM_MDI_MINIMIZE_ALL	Minimize all	Browser Window Menu	1234
+opera-12.14-win32	MI_IDM_MDI_MAXIMIZE_ALL	Maximize all	Browser Window Menu	1235
+opera-12.14-win32	M_WIDGET_ABOUT	Open Widget About	Widget Help Menu	1241
+opera-12.14-win32	M_OPERA_HELP	Open URL in new page opera:/help/index.html	Browser Help Menu	1247
+opera-12.14-win32	MI_IDM_WWW_MYOPERA	Open URL in new page http://redir.opera.com/community/	Browser Help Menu	1248
+opera-12.14-win32	MI_IDM_WWW_SUPPORT	Open URL in new page http://redir.opera.com/www.opera.com/support/	Browser Help Menu	1249
+opera-12.14-win32	MI_IDM_About	Open URL in new page opera:about	Browser Help Menu	1252
+opera-12.14-win32	MI_IDM_HLITEM_OPENFILE	Open bookmarks file	Bookmark Item File Menu	1256
+opera-12.14-win32	MI_IDM_HLITEM_SAVEFOLDERAS	Save selected bookmarks as	Bookmark Item File Menu	1263
+opera-12.14-win32	M_EXPORT_SELECTED_AS_HTML	Export selected bookmarks to HTML	Bookmark Item File Menu	1264
+opera-12.14-win32	M_CONTACT_ITEM_POPUP_MENU_FILE_NEW	New contacts file	Contact Item File Menu	1268
+opera-12.14-win32	M_IMPORT_OPERA_CONTACTS	Import contacts	Contact Item File Menu	1270
+opera-12.14-win32	M_EXPORT_OPERA_CONTACTS	Export contacts	Contact Item File Menu	1271
+opera-12.14-win32	M_SAVE_SELECTED_CONTACTS_AS	Save selected contacts as	Contact Item File Menu	1272
+opera-12.14-win32	M_IMPORTEXPORT_IMPORT_MAIL	Import mail	Browser ImportExport Menu	1281
+opera-12.14-win32	M_IMPORT_NEWSFEED_LIST	Import newsfeed list	Browser ImportExport Menu	1282
+opera-12.14-win32	M_EXPORT_NEWSFEED_LIST	Export newsfeed list	Browser ImportExport Menu	1288
+opera-12.14-win32	MI_IDM_IMPORT_MAIL	Import mail	Browser Import Menu	1295
+opera-12.14-win32	MI_IDM_IMPORT_OPERA_CONTACTS	Import contacts	Browser Import Menu	1297
+opera-12.14-win32	MI_IDM_EXPORT_OPERA_CONTACTS	Export contacts	Browser Export Menu	1305
+opera-12.14-win32	MI_IDM_CONTROL_MENU_IDENTIFY_OPERA	Identify as	Identify As Menu	1310
+opera-12.14-win32	M_IDAS_MENU_MOZILLA	Identify as	Identify As Menu	1311
+opera-12.14-win32	M_IDAS_MENU_INTERNET_EXPLORER	Identify as 4	Identify As Menu	1312
+opera-12.14-win32	MI_IDM_CONTROL_MENU_ENABLE_ANIMATION	Enable gif animation	Quick Preferences Menu	1320
+opera-12.14-win32	MI_IDM_CONTROL_MENU_ENABLE_PLUGINS	Enable plugins	Quick Preferences Menu	1321
+opera-12.14-win32	M_ENABLE_OPERA_TURBO	Enable Web Turbo	Quick Preferences Menu	1323
+opera-12.14-win32	MI_IDM_MENU_PERSONALBAR_LEFT	Set alignment hotlist	Hotlist Placement Menu	1331
+opera-12.14-win32	MI_IDM_MENU_PERSONALBAR_RIGHT	Set alignment hotlist	Hotlist Placement Menu	1332
+opera-12.14-win32	MI_IDM_HL_FLOATING	Set alignment hotlist	Hotlist Placement Menu	1333
+opera-12.14-win32	MI_IDM_MENU_PERSONALBAR_OFF	Set alignment hotlist	Hotlist Placement Menu	1334
+opera-12.14-win32	MI_IDM_MENU_PERSONALBAR_TOP	Set alignment hotlist panel selector	Hotlist Selector Placement Menu	1338
+opera-12.14-win32	MI_IDM_MENU_PERSONALBAR_BOTTOM	Set alignment hotlist panel selector	Hotlist Selector Placement Menu	1339
+opera-12.14-win32	MI_IDM_GET_SKINS	Go to page http://redir.opera.com/community/skins/	Skin Menu	1346
+opera-12.14-win32	MI_IDM_ZOOM_DEC_100	Zoom out 100	Zoom Menu	1357
+opera-12.14-win32	MI_IDM_ZOOM_INC_100	Zoom in 100	Zoom Menu	1358
+opera-12.14-win32	MI_IDM_ZOOM_DEC_10	Zoom out 10	Zoom Menu	1359
+opera-12.14-win32	MI_IDM_ZOOM_INC_10	Zoom in 10	Zoom Menu	1360
+opera-12.14-win32	M_IMAGE_MENU_SHOW	Enable display images	Images Menu	1364
+opera-12.14-win32	M_IMAGE_MENU_CACHED	Display cached images only	Images Menu	1365
+opera-12.14-win32	M_IMAGE_MENU_NO	Disable display images	Images Menu	1366
+opera-12.14-win32	M_BROWSER_VIEW_MENU_STYLE_AUTHOR_MODE	Select author mode	Style Menu	1370
+opera-12.14-win32	M_BROWSER_VIEW_MENU_STYLE_USER_MODE	Select user mode	Style Menu	1371
+opera-12.14-win32	M_MANAGE_PRESENTATION_MODES	Manage modes	Style Menu	1372
+opera-12.14-win32	MI_IDM_ENCODING_AUTOMATIC	Set encoding	Encoding Menu	1379
+opera-12.14-win32	MI_IDM_ENCODING_UTF8	Set encoding utf-8	Unicode Encoding Menu	1383
+opera-12.14-win32	MI_IDM_ENCODING_UTF16	Set encoding utf-16	Unicode Encoding Menu	1384
+opera-12.14-win32	MI_IDM_ENCODING_ISO8859_1	Set encoding iso-8859-1	Western Encoding Menu	1388
+opera-12.14-win32	MI_IDM_ENCODING_ISO8859_15	Set encoding iso-8859-15	Western Encoding Menu	1389
+opera-12.14-win32	MI_IDM_ENCODING_CP_1252	Set encoding windows-1252	Western Encoding Menu	1390
+opera-12.14-win32	MI_IDM_ENCODING_USASCII	Set encoding us-ascii	Western Encoding Menu	1391
+opera-12.14-win32	MI_IDM_ENCODING_ISO8859_2	Set encoding iso-8859-2	Central Encoding Menu	1395
+opera-12.14-win32	M_ENCODING_ISO_8859_16	Set encoding iso-8859-16	Central Encoding Menu	1396
+opera-12.14-win32	MI_IDM_ENCODING_CP_1250	Set encoding windows-1250	Central Encoding Menu	1397
+opera-12.14-win32	MI_IDM_ENCODING_ISO8859_3	Set encoding iso-8859-3	Southern Encoding Menu	1401
+opera-12.14-win32	MI_IDM_ENCODING_ISO8859_13	Set encoding iso-8859-13	Baltic Encoding Menu	1405
+opera-12.14-win32	MI_IDM_ENCODING_CP_1257	Set encoding windows-1257	Baltic Encoding Menu	1406
+opera-12.14-win32	MI_IDM_ENCODING_ISO8859_4	Set encoding iso-8859-4	Baltic Encoding Menu	1407
+opera-12.14-win32	MI_IDM_ENCODING_ISO8859_10	Set encoding iso-8859-10	Nordic Encoding Menu	1411
+opera-12.14-win32	MI_IDM_ENCODING_ISO8859_14	Set encoding iso-8859-14	Celtic Encoding Menu	1415
+opera-12.14-win32	MI_IDM_ENCODING_ISO8859_9	Set encoding iso-8859-9	Turkish Encoding Menu	1419
+opera-12.14-win32	MI_IDM_ENCODING_CP_1254	Set encoding windows-1254	Turkish Encoding Menu	1420
+opera-12.14-win32	MI_IDM_ENCODING_CP_1258	Set encoding windows-1258	Vietnamese Encoding Menu	1424
+opera-12.14-win32	MI_IDM_ENCODING_VISCII	Set encoding viscii	Vietnamese Encoding Menu	1425
+opera-12.14-win32	MI_IDM_ENCODING_AUTODETECT_JAPANESE	Set encoding AUTODETECT-RU	Cyrillic Encoding Menu	1429
+opera-12.14-win32	MI_IDM_ENCODING_ISO8859_5	Set encoding iso-8859-5	Cyrillic Encoding Menu	1430
+opera-12.14-win32	MI_IDM_ENCODING_KOI8_R	Set encoding koi8-r	Cyrillic Encoding Menu	1431
+opera-12.14-win32	MI_IDM_ENCODING_KOI8_U	Set encoding koi8-u	Cyrillic Encoding Menu	1432
+opera-12.14-win32	MI_IDM_ENCODING_CP_1251	Set encoding windows-1251	Cyrillic Encoding Menu	1433
+opera-12.14-win32	MI_IDM_ENCODING_IBM866	Set encoding ibm866	Cyrillic Encoding Menu	1434
+opera-12.14-win32	MI_IDM_ENCODING_ISO8859_7	Set encoding iso-8859-7	Greek Encoding Menu	1438
+opera-12.14-win32	MI_IDM_ENCODING_CP_1253	Set encoding windows-1253	Greek Encoding Menu	1439
+opera-12.14-win32	MI_IDM_ENCODING_ISO8859_6	Set encoding iso-8859-6	Arabic Encoding Menu	1443
+opera-12.14-win32	MI_IDM_ENCODING_CP_1256	Set encoding windows-1256	Arabic Encoding Menu	1444
+opera-12.14-win32	MI_IDM_ENCODING_ISO8859_8	Set encoding iso-8859-8-i	Hebrew Encoding Menu	1448
+opera-12.14-win32	M_ENCODING_ISO8859_8_VISUAL	Set encoding iso-8859-8	Hebrew Encoding Menu	1449
+opera-12.14-win32	MI_IDM_ENCODING_CP_1255	Set encoding windows-1255	Hebrew Encoding Menu	1450
+opera-12.14-win32	MI_IDM_ENCODING_ISO8859_11	Set encoding iso-8859-11	Thai Encoding Menu	1454
+opera-12.14-win32	MI_IDM_ENCODING_BIG5	Set encoding big5	Chinese Encoding Menu	1459
+opera-12.14-win32	M_ENCODING_BIG5_HKSCS	Set encoding big5-hkscs	Chinese Encoding Menu	1460
+opera-12.14-win32	MI_IDM_ENCODING_EUC_TW	Set encoding euc-tw	Chinese Encoding Menu	1461
+opera-12.14-win32	MI_IDM_ENCODING_GB2312	Set encoding gbk	Chinese Encoding Menu	1462
+opera-12.14-win32	M_ENCODING_GB18030	Set encoding gb18030	Chinese Encoding Menu	1463
+opera-12.14-win32	MI_IDM_ENCODING_HZ_GB2312	Set encoding hz-gb2312	Chinese Encoding Menu	1464
+opera-12.14-win32	M_ENCODING_ISO2022_CN	Set encoding iso-2022-cn	Chinese Encoding Menu	1465
+opera-12.14-win32	MI_IDM_ENCODING_SHIFTJIS	Set encoding shiftjis	Japanese Encoding Menu	1470
+opera-12.14-win32	MI_IDM_ENCODING_ISO2022_JP	Set encoding iso-2022-jp	Japanese Encoding Menu	1471
+opera-12.14-win32	MI_IDM_ENCODING_EUC_JP	Set encoding euc-jp	Japanese Encoding Menu	1472
+opera-12.14-win32	MI_IDM_ENCODING_EUC_KR	Set encoding euc-kr	Korean Encoding Menu	1477
+opera-12.14-win32	M_ENCODING_ISO_2022__KR	Set encoding iso-2022-kr	Korean Encoding Menu	1478
+opera-12.14-win32	M_RELOAD_MENU_30_MIN	Set automatic reload 1800	Reload Menu	1482
+opera-12.14-win32	M_RELOAD_MENU_1_HOUR	Set automatic reload 3600	Reload Menu	1483
+opera-12.14-win32	M_RELOAD_MENU_2_HOUR	Set automatic reload 7200	Reload Menu	1484
+opera-12.14-win32	M_RELOAD_MENU_6_HOUR	Set automatic reload 21600	Reload Menu	1485
+opera-12.14-win32	M_RELOAD_MENU_NEVER	Set automatic reload 2147483646	Reload Menu	1486
+opera-12.14-win32	MI_IDM_AUTORELOAD_CONFIG	Set automatic reload	Reload Menu	1487
+opera-12.14-win32	M_SITE_NAVIGATION_MENU_HOME	Go to link element home	Site Navigation Menu	1494
+opera-12.14-win32	M_SITE_NAVIGATION_MENU_INDEX	Go to link element index	Site Navigation Menu	1495
+opera-12.14-win32	M_SITE_NAVIGATION_MENU_CONTENTS	Go to link element contents	Site Navigation Menu	1496
+opera-12.14-win32	M_SITE_NAVIGATION_MENU_SEARCH	Go to link element search	Site Navigation Menu	1497
+opera-12.14-win32	M_SITE_NAVIGATION_MENU_GLOSSARY	Go to link element glossary	Site Navigation Menu	1498
+opera-12.14-win32	M_SITE_NAVIGATION_MENU_HELP	Go to link element help	Site Navigation Menu	1499
+opera-12.14-win32	M_SITE_NAVIGATION_MENU_FIRST	Go to link element first	Site Navigation Menu	1500
+opera-12.14-win32	M_SITE_NAVIGATION_MENU_PREVIOUS	Go to link element previous	Site Navigation Menu	1501
+opera-12.14-win32	M_SITE_NAVIGATION_MENU_NEXT	Go to link element next	Site Navigation Menu	1502
+opera-12.14-win32	M_SITE_NAVIGATION_MENU_LAST	Go to link element last	Site Navigation Menu	1503
+opera-12.14-win32	M_SITE_NAVIGATION_MENU_UP	Go to link element up	Site Navigation Menu	1504
+opera-12.14-win32	M_SITE_NAVIGATION_MENU_COPYRIGHT	Go to link element copyright	Site Navigation Menu	1505
+opera-12.14-win32	M_SITE_NAVIGATION_MENU_AUTHOR	Go to link element author	Site Navigation Menu	1506
+opera-12.14-win32	S_RSS_TYPE	Go to link element 'application/rss	Site Navigation Menu	1507
+opera-12.14-win32	M_TRANSFERS_NOTIFY_POPUP_MENU_OPEN	Open transfer	Transfers Item Popup Menu	1511
+opera-12.14-win32	SI_IDM_TRANSFER_RESUME	Resume transfer	Transfers Item Popup Menu	1513
+opera-12.14-win32	SI_IDM_TRANSFER_STOP	Stop transfer	Transfers Item Popup Menu	1514
+opera-12.14-win32	M_REMOVE_ALL_FINISHED_TRANSFERS	Remove all finished transfers	Transfers Item Popup Menu	1516
+opera-12.14-win32	SI_IDSTR_TRANSWIN_MENU_COPYTEXTINFO	Copy transfer info	Transfers Item Popup Menu	1517
+opera-12.14-win32	M_VIEW_HOTLIST_MENU_BOOKM	Show panel Bookmarks	Hotlist AddRemove Item Popup Menu	1535
+opera-12.14-win32	M_VIEW_HOTLIST_MENU_MAIL	Show panel Mail	Hotlist AddRemove Item Popup Menu	1536
+opera-12.14-win32	M_VIEW_HOTLIST_MENU_HISTORY	Show panel History	Hotlist AddRemove Item Popup Menu	1538
+opera-12.14-win32	M_VIEW_HOTLIST_MENU_TRANSFERS	Show panel Transfers	Hotlist AddRemove Item Popup Menu	1539
+opera-12.14-win32	M_VIEW_HOTLIST_MENU_WINDOWS	Show panel Windows	Hotlist AddRemove Item Popup Menu	1541
+opera-12.14-win32	SI_IDPREFS_SEARCH	Show panel Search	Hotlist AddRemove Item Popup Menu	1542
+opera-12.14-win32	M_VIEW_HOTLIST_MENU_INFO	Show panel Info	Hotlist AddRemove Item Popup Menu	1543
+opera-12.14-win32	D_WIDGETS	Show panel Widgets	Hotlist AddRemove Item Popup Menu	1544
+opera-12.14-win32	M_BROWSER_MENU_BAR_CHAT	Show panel Chat	Hotlist AddRemove Item Popup Menu	1545
+opera-12.14-win32	S_UNITE_SERVICES	Show panel Unite	Hotlist AddRemove Item Popup Menu	1547
+opera-12.14-win32	M_WEB_PANEL_	Add Web Panel	Hotlist AddRemove Item Popup Menu	1548
+opera-12.14-win32	M_HOTLIST_ITEM_POPUP_MENU_REMOVE_PANEL	Remove panel	Hotlist Item Popup Menu	1553
+opera-12.14-win32	MI_IDM_HL_EDIT_PANEL	Edit panel	Hotlist Item Popup Menu	1554
+opera-12.14-win32	M_PAGEBAR_DISSOLVE_TAB_GROUP	Dissolve Tab Group	Tab Group Popup Menu	1558
+opera-12.14-win32	M_PAGEBAR_CLOSE_TAB_GROUP	Close Tab Group	Tab Group Popup Menu	1559
+opera-12.14-win32	MI_PAGEBAR_ENABLE_TAB_THUMBNAILS	Enable Tab Thumbnails	Pagebar Customize Menu	1563
+opera-12.14-win32	D_CUSTOMIZE_TOOLBAR_RESET_TO_DEFAULTS	Restore to defaults selected toolbar	Pagebar Customize Menu	1565
+opera-12.14-win32	M_MAINBAR_ITEM_POPUP_MENU_REMOVE_FROM_TOOLBAR	Remove	Pagebar Customize Menu	1566
+opera-12.14-win32	M_PAGEBAR_POPUP_MENU_CLOSE_ALL	Close all	Pagebar Popup Menu	1581
+opera-12.14-win32	M_SHOW_WINDOW_BORDER	Set window decoration	Pagebar Popup Menu	1583
+opera-12.14-win32	SI_IDSTR_TOOLBAR_IMAGES_ONLY	Set button style personalbar inline	Personalbar Inline Style Menu	1656
+opera-12.14-win32	SI_IDSTR_TOOLBAR_TEXT_ONLY	Set button style personalbar inline	Personalbar Inline Style Menu	1657
+opera-12.14-win32	SI_IDSTR_TOOLBAR_TEXT_RIGHT	Set button style personalbar inline	Personalbar Inline Style Menu	1658
+opera-12.14-win32	SI_IDSTR_TOOLBAR_TEXT_BELOW	Set button style personalbar inline	Personalbar Inline Style Menu	1659
+opera-12.14-win32	M_CUSTOMIZE_SHOW_BOOKMARKSBAR_INLINE	Set alignment personalbar inline	Personalbar Popup Menu	1667
+opera-12.14-win32	M_TRANSFERVIEW_POPUP_MENU_SHOW_TRWINDOW_ON_TRANSF	Set show transferwindow	Transfers View Popup Menu	1708
+opera-12.14-win32	M_TRANSFERS_VIEW_POPUP_MENU_SHOW	Set show transferwindow 2	Transfers View Popup Menu	1709
+opera-12.14-win32	M_TRANSFERS_VIEW_POPUP_NEVER_SHOW	Set show transferwindow	Transfers View Popup Menu	1710
+opera-12.14-win32	MI_IDM_TRANSFER_SHOW_DETAILS	Show transfer details	Transfers View Popup Menu	1711
+opera-12.14-win32	MI_IDM_TRANSFER_SHOW_NEW_ON_TOP	Show new transferitems on top	Transfers View Popup Menu	1712
+opera-12.14-win32	M_OPEN_OPERA	Show opera	Tray Popup Menu	1716
+opera-12.14-win32	M_HIDE_OPERA	Hide opera	Tray Popup Menu	1717
+opera-12.14-win32	M_CLOSED_MENU_EMPTY_TRASH	Empty page trash	Closed Pages Menu	1730
+opera-12.14-win32	M_WIDGET_NORMAL	Set widget style	Desktop Widget Menu Styles	1741
+opera-12.14-win32	M_WIDGET_ALWAYS_ON_TOP	Set widget style	Desktop Widget Menu Styles	1742
+opera-12.14-win32	M_WIDGET_ALWAYS_BELOW	Set widget style 2	Desktop Widget Menu Styles	1743
+opera-12.14-win32	M_WIDGET_REMOTE_DEBUG	Remote Debug Widget	Desktop Widget Settings	1764
+opera-12.14-win32	M_WIDGET_WEBSERVER_STATUS	Show Widget WebServer Status	Gadget Service Desktop Widget Menu	1789
+opera-12.14-win32	M_SPEEDDIAL_CONFIGURE	Edit thumbnail	Speed Dial Thumbnail Popup Menu	1793
+opera-12.14-win32	M_SPEEDDIAL_RELOAD_THUMBNAIL	Reload thumbnail	Speed Dial Thumbnail Popup Menu	1794
+opera-12.14-win32	M_SPEEDDIAL_CLOSE	Close thumbnail page	Speed Dial Thumbnail Popup Menu	1795
+opera-12.14-win32	S_EXTENSIONS_DISABLE	Disable Speed Dial extension	Speed Dial Extension Popup Menu	1800
+opera-12.14-win32	S_EXTENSIONS_UNINSTALL	Close thumbnail page	Speed Dial Extension Popup Menu	1801
+opera-12.14-win32	M_HTML_MAIL_ADD_LINK	'Email Add Link Mail Compose Link'	HTML Compose Insert Menu	1810
+opera-12.14-win32	M_HTML_MAIL_ADD_IMAGE	'Email Insert Image Mail Compose Images'	HTML Compose Insert Menu	1811
+opera-12.14-win32	M_HTML_MAIL_ADD_HORIZONTAL_LINE	'Email Insert Horizontal Rule Mail Compose Horizontal Line'	HTML Compose Insert Menu	1812
+opera-12.14-win32	M_HTML_MAIL_ADD_HTML_SOURCE	'Email Insert HTML Mail Compose HTML'	HTML Compose Insert Menu	1813
+opera-12.14-win32	D_HTML_MAIL_USE_PLAIN_TEXT	'Toggle HTML Email 0'	Compose Toggle HTML Popup Menu	1817
+opera-12.14-win32	M_OPERA_TURBO_ENABLE	Enable Web Turbo	Turbo Popup Menu	1834
+opera-12.14-win32	M_OPERA_TURBO_CONFIGURE	Open Web Turbo Dialog	Turbo Popup Menu	1835
+opera-12.14-win32	M_OPERA_TURBO_ABOUT	Open URL in new page http://www.opera.com/browser/turbo/	Turbo Popup Menu	1836
+opera-12.14-win32	M_SPEEDDIAL_GLOBAL_CONFIGURATION	Show speed dial global config	Speed Dial Popup Menu	1840
+opera-12.14-win32	M_SPEEDDIAL_ADD_SPEEDDIAL	Configure thumbnail	Speed Dial Popup Menu Plus	1846
+opera-12.14-win32	M_MEDIA_PLAY	Play media	Audio Popup Menu	1851
+opera-12.14-win32	M_MEDIA_MUTE	Mute media	Audio Popup Menu	1852
+opera-12.14-win32	M_COPY_AUDIO_ADDRESS	Copy media address	Audio Popup Menu	1853
+opera-12.14-win32	M_SAVE_AUDIO	Save media	Audio Popup Menu	1854
+opera-12.14-win32	M_MEDIA_SHOW_CONTROLS	Show controls	Video Popup Menu	1860
+opera-12.14-win32	M_COPY_VIDEO_ADDRESS	Copy media address	Video Popup Menu	1861
+opera-12.14-win32	M_SAVE_VIDEO	Save media	Video Popup Menu	1862
+opera-12.14-win32	M_SHOW_FULL_URL_IN_ADDRESS_FIELD	Enable Full URL	Protocol Button Context Menu	1866
+opera-12.14-win32	DI_IDSTR_M2_FOLDER_IDX_IMPORTANT	Choose Label Icon Label Important	Label Image Menu	1898
+opera-12.14-win32	DI_IDSTR_M2_FOLDER_IDX_TODO	Choose Label Icon Label Todo	Label Image Menu	1899
+opera-12.14-win32	DI_IDSTR_M2_FOLDER_IDX_MAILBACK	Choose Label Icon Label Mail Back	Label Image Menu	1900
+opera-12.14-win32	DI_IDSTR_M2_FOLDER_IDX_CALLBACK	Choose Label Icon Label Call Back	Label Image Menu	1901
+opera-12.14-win32	DI_IDSTR_M2_FOLDER_IDX_MEETING	Choose Label Icon Label Meeting	Label Image Menu	1902
+opera-12.14-win32	DI_IDSTR_M2_FOLDER_IDX_FUNNY	Choose Label Icon Label Funny	Label Image Menu	1903
+opera-12.14-win32	DI_IDSTR_M2_FOLDER_IDX_VALUABLE	Choose Label Icon Label Valuable	Label Image Menu	1904
+opera-12.14-win32	M_MAIL_CUSTOM	Choose Custom Icon	Label Image Menu	1905
+opera-12.14-win32	S_HIGH_PRIORITY	Set Priority Priority High	Mail Priority Menu	1909
+opera-12.14-win32	S_NORMAL_PRIORITY	Set Priority 3	Mail Priority Menu	1910
+opera-12.14-win32	S_LOW_PRIORITY	Set Priority 5	Mail Priority Menu	1911
+opera-12.14-win32	M_BOOKMARK_MODEL_CREATE_BOOKMARK	New bookmark	Viewpane Bookmark Model Options	1918
+opera-12.14-win32	M_BOOKMARK_MODEL_CREATE_FOLDER	New folder	Viewpane Bookmark Model Options	1919
+opera-12.14-win32	M_DELETE_MODEL_EMPTY_TRASH_BIN	Empty trash	Viewpane Delete Model Options	1923
+opera-12.14-win32	M_COLLECTION_ITEM_OPEN	Open item	Viewpane Bookmark Item Options	1927
+opera-12.14-win32	M_COLLECTION_ITEM_RELOAD_THUMBNAIL	Reload thumbnail	Viewpane Bookmark Item Options	1928
+opera-12.14-win32	M_COLLECTION_ITEM_EDIT	Edit properties	Viewpane Bookmark Item Options	1929
+opera-12.14-win32	M_COLLECTION_ITEM_DELETE	Delete Item	Viewpane Bookmark Item Options	1930

@@ -32,7 +32,7 @@ export function pinSources(resolve: (repo: string, ref: string) => string = reso
   // Same repo and ref resolve once.
   const memo = new Map<string, string>();
   for (const s of specs) {
-    if (s.commit || s.host === 'archive.org' || s.host === 'local') continue;
+    if (s.commit || s.host === 'archive.org' || s.host === 'local' || s.host === 'dump') continue;
     const k = `${s.repo}@${s.ref}`;
     if (!memo.has(k)) memo.set(k, resolve(s.repo, s.ref));
     s.commit = memo.get(k)!;
@@ -52,7 +52,7 @@ export async function readFiles(spec: SourceSpec, fetcher?: Fetcher): Promise<Re
     for (const f of spec.files) out[f.path] = await getArchiveText(spec.repo, f.path, fetcher);
     return out;
   }
-  if (spec.host === 'local') {
+  if (spec.host === 'local' || spec.host === 'dump') {
     for (const f of spec.files) out[f.path] = readLocal(f.path);
     return out;
   }
@@ -71,7 +71,7 @@ export async function buildCensus(spec: SourceSpec, today: string, fetcher?: Fet
     released: spec.released,
     platform: spec.platform,
     source: {
-      ...((spec.host === 'archive.org' || spec.host === 'local') && { host: spec.host }),
+      ...((spec.host === 'archive.org' || spec.host === 'local' || spec.host === 'dump') && { host: spec.host }),
       repo: spec.repo,
       ref: spec.ref,
       commit: spec.commit ?? '',
@@ -100,7 +100,7 @@ export async function verifyCensus(c: CensusFile, fetcher?: Fetcher): Promise<Ve
   const fail = (message: string) => problems.push({ id: c.id, message });
   const texts: Record<string, string[]> = {};
   for (const f of c.source.files) {
-    const text = c.source.host === 'local' ? readLocal(f.path)
+    const text = c.source.host === 'local' || c.source.host === 'dump' ? readLocal(f.path)
       : c.source.host === 'archive.org'
       ? await getArchiveText(c.source.repo, f.path, fetcher)
       : await getSource({ repo: c.source.repo, commit: c.source.commit, path: f.path }, fetcher);

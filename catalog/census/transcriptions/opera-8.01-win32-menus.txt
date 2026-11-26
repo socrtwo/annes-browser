@@ -1,0 +1,1271 @@
+# Menus read from Opera's menu specification file by tools/opera-dump.ts.
+# download: https://archive.org/download/ow32enen801/ow32enen801.exe
+# unpacked: installer: STANDARD_MENU.INI
+# file: STANDARD_MENU.INI, sha256 2e7871a29f0a16f136662a05a3f909256c421498300fe01b2b7ea48d86fa884a
+# Each MENUITEM: Opera's action name, then the string id of the label; the comment is the full action.
+
+OPERA MENU
+{
+    POPUP "Links Panel Item Menu"
+    {
+        MENUITEM "Open link", 21204    // Open link
+        MENUITEM "Open link in new page", 53018    // Open link in new page
+        MENUITEM "Open link in background page", 53019    // Open link in background page
+        MENUITEM "Open link in new window", 54020    // Open link in new window
+        MENUITEM "Open link in background window", 67633    // Open link in background window
+        MENUITEM "Add link to bookmarks", 70463    // Add link to bookmarks
+        MENUITEM "Copy", 50216    // Copy
+        MENUITEM "Download url as", 50761    // Download url as
+        MENUITEM "Download url", 67350    // Download url
+        MENUITEM "Lock panel", 67351    // Lock panel | Unlock panel
+    }
+    POPUP "Links Panel Download Menu"
+    {
+        MENUITEM "Download url as", 50761    // Download url as
+        MENUITEM "Download url", 67350    // Download url
+    }
+    POPUP "Links Panel View Menu"
+    {
+    }
+    POPUP "Links Manager Open Menu"
+    {
+        MENUITEM "Open link in new page", 53018    // Open link in new page
+        MENUITEM "Open link in background page", 53019    // Open link in background page
+        MENUITEM "Open link in new window", 54020    // Open link in new window
+        MENUITEM "Open link in background window", 67633    // Open link in background window
+    }
+    POPUP "Get Mail Popup Menu"
+    {
+        MENUITEM "Get mail", 67352    // Get mail
+    }
+    POPUP "Index Item Popup Menu"
+    {
+        MENUITEM "Read mail", 67353    // Read mail
+        MENUITEM "Compose mail", 50679    // Compose mail
+        MENUITEM "Get mail", 26527    // Get mail
+        MENUITEM "Mark all as read", 67362    // Mark all as read
+        MENUITEM "Empty spam", 69650    // Empty spam
+        MENUITEM "Empty trash", 67363    // Empty trash
+        MENUITEM "New folder", 69651    // New folder
+        MENUITEM "Delete", 50424    // Delete
+        MENUITEM "Subscribe to groups nntp", 67411    // Subscribe to groups, 'nntp'
+        MENUITEM "Subscribe to groups rss", 69652    // Subscribe to groups, 'rss'
+        MENUITEM "Subscribe to groups imap", 67412    // Subscribe to groups, 'imap'
+        MENUITEM "Export mail index", 69381    // Export mail index
+        MENUITEM "Edit properties", 54006    // Edit properties
+    }
+    POPUP "Filter Item Menu"
+    {
+        MENUITEM "New folder", 69651    // New folder
+        MENUITEM "Delete", 50424    // Delete
+        MENUITEM "Edit properties", 68065    // Edit properties
+    }
+    POPUP "Account Item Menu"
+    {
+        MENUITEM "New account", 51145    // New account
+        MENUITEM "Edit account", 54006    // Edit account
+        MENUITEM "Delete account", 50424    // Delete account
+    }
+    POPUP "Mail Account Menu"
+    {
+        MENUITEM "Show account", 69366    // Show account, 0
+        MENUITEM "Show account -3", 69367    // Show account, -3
+        MENUITEM "Show account -4", 69368    // Show account, -4
+    }
+    POPUP "Mail Body Popup Menu"
+    {
+    }
+    POPUP "Mail Item Popup Menu"
+    {
+        MENUITEM "Reply", 26529    // Reply
+        MENUITEM "Reply All", 26530    // Reply All
+        MENUITEM "Forward mail", 26531    // Forward mail
+        MENUITEM "Redirect mail", 67364    // Redirect mail
+        MENUITEM "Cut", 67377    // Cut
+        MENUITEM "Copy", 21207    // Copy
+        MENUITEM "Paste", 67348    // Paste
+        MENUITEM "Delete", 67218    // Delete
+        MENUITEM "Cancel newsmessage", 67355    // Cancel newsmessage
+        MENUITEM "Edit draft", 140080    // Edit draft
+    }
+    POPUP "Mail Item Mark Menu"
+    {
+        MENUITEM "Mark as read", 44004    // Mark as read
+        MENUITEM "Mark and select next unread", 67354    // Mark and select next unread
+        MENUITEM "Mark thread as read", 70126    // Mark thread as read
+        MENUITEM "Mark thread and select next unread", 70382    // Mark thread and select next unread
+        MENUITEM "Mark all as read", 67362    // Mark all as read
+        MENUITEM "Mark as unread", 44005    // Mark as unread
+        MENUITEM "Mark as spam", 69640    // Mark as spam
+        MENUITEM "Mark as not spam", 69641    // Mark as not spam
+    }
+    POPUP "Mail Item Goto Menu"
+    {
+        MENUITEM "Select next unread", 67359    // Select next unread
+        MENUITEM "Select previous unread", 67360    // Select previous unread
+        MENUITEM "View messages from selected contact", 67366    // View messages from selected contact
+    }
+    POPUP "Mail Folder Menu"
+    {
+    }
+    POPUP "Mail Standard View Menu"
+    {
+        MENUITEM "Set mail view type", 67367    // Set mail view type, 0
+        MENUITEM "Set mail view type", 67368    // Set mail view type, 1
+    }
+    POPUP "Mail Contact View Menu"
+    {
+        MENUITEM "Set mail view type 3", 26522    // Set mail view type, 3
+        MENUITEM "Set mail view type 2", 26523    // Set mail view type, 2
+        MENUITEM "Set mail view type", 67369    // Set mail view type, 0
+        MENUITEM "Set mail view type", 67368    // Set mail view type, 1
+    }
+    POPUP "Mail Attachment View Menu"
+    {
+    }
+    POPUP "Mail View Option Menu"
+    {
+        MENUITEM "Show quick reply", 67376    // Show quick reply | Hide quick reply
+    }
+    POPUP "Mail View Show Menu"
+    {
+        MENUITEM "Set mail view flag", 67371    // Set mail view flag, 0 | Clear mail view flag, 0
+        MENUITEM "Set mail view flag", 67372    // Set mail view flag, 1 | Clear mail view flag, 1
+        MENUITEM "Set mail view flag 2", 67373    // Set mail view flag, 2 | Clear mail view flag, 2
+        MENUITEM "Set mail view flag 3", 67374    // Set mail view flag, 3 | Clear mail view flag, 3
+        MENUITEM "Set mail view flag 4", 67375    // Set mail view flag, 4 | Clear mail view flag, 4
+        MENUITEM "Set mail view flag 6", 69644    // Set mail view flag, 6 | Clear mail view flag, 6
+        MENUITEM "Set mail view flag 5", 69645    // Set mail view flag, 5 | Clear mail view flag, 5
+    }
+    POPUP "Mail View Age Menu"
+    {
+        MENUITEM "Set mail view age", 67085    // Set mail view age, 0
+        MENUITEM "Set mail view age", 67086    // Set mail view age, 1
+        MENUITEM "Set mail view age 2", 67087    // Set mail view age, 2
+        MENUITEM "Set mail view age 3", 67088    // Set mail view age, 3
+        MENUITEM "Set mail view age 4", 67089    // Set mail view age, 4
+        MENUITEM "Set mail view age 5", 67090    // Set mail view age, 5
+    }
+    POPUP "Mark As Read Menu"
+    {
+        MENUITEM "Mark as read automatically", 67635    // Mark as read automatically, 0
+        MENUITEM "Mark as read automatically 1000", 67636    // Mark as read automatically, 1000
+        MENUITEM "Mark as read automatically 2000", 67637    // Mark as read automatically, 2000
+        MENUITEM "Mark as read automatically 3000", 67638    // Mark as read automatically, 3000
+        MENUITEM "Mark as read automatically 5000", 67639    // Mark as read automatically, 5000
+        MENUITEM "Mark as read automatically 10000", 67640    // Mark as read automatically, 10000
+    }
+    POPUP "Mail Display Type Menu"
+    {
+        MENUITEM "Show list view", 69646    // Show list view
+        MENUITEM "Show message view", 69647    // Show message view
+        MENUITEM "Show split view", 69648    // Show split view
+        MENUITEM "Show split view", 69649    // Show split view, 1
+        MENUITEM "Set mail display type", 67641    // Set mail display type, 0
+        MENUITEM "Set mail display type", 67642    // Set mail display type, 1
+        MENUITEM "Suppress external embeds", 67643    // Suppress external embeds | Allow external embeds
+        MENUITEM "Enable smileys", 69653    // Enable smileys| Disable smileys
+    }
+    POPUP "Delete Mail Menu"
+    {
+        MENUITEM "Delete", 26532    // Delete
+        MENUITEM "Cut", 67377    // Cut
+    }
+    POPUP "Forward Mail Menu"
+    {
+        MENUITEM "Forward Mail", 67378    // Forward Mail
+        MENUITEM "Redirect Mail", 67364    // Redirect Mail
+    }
+    POPUP "Display Headers Menu"
+    {
+        MENUITEM "Show Compose Header", 67053    // Show Compose Header, 0 | Hide Compose Header, 0
+        MENUITEM "Show Compose Header 2", 67379    // Show Compose Header, 2 | Hide Compose Header, 2
+        MENUITEM "Show Compose Header 3", 26523    // Show Compose Header, 3 | Hide Compose Header, 3
+        MENUITEM "Show Compose Header 4", 26524    // Show Compose Header, 4 | Hide Compose Header, 4
+        MENUITEM "Show Compose Header 5", 67098    // Show Compose Header, 5 | Hide Compose Header, 5
+        MENUITEM "Show Compose Header 6", 26582    // Show Compose Header, 6 | Hide Compose Header, 6
+        MENUITEM "Show Compose Header 7", 67100    // Show Compose Header, 7 | Hide Compose Header, 7
+        MENUITEM "Show Compose Header 11", 67099    // Show Compose Header, 11 | Hide Compose Header, 11
+        MENUITEM "Show Compose Header 9", 26525    // Show Compose Header, 9 | Hide Compose Header, 9
+        MENUITEM "Show Compose Header 10", 26584    // Show Compose Header, 10 | Hide Compose Header, 10
+        MENUITEM "Show Compose Header 12", 157500    // Show Compose Header, 12 | Hide Compose Header, 12
+    }
+    POPUP "New bookmark menu"
+    {
+        MENUITEM "New bookmark", 26542    // New bookmark
+        MENUITEM "New folder", 26543    // New folder
+        MENUITEM "New Seperator", 69654    // New Seperator
+    }
+    POPUP "Bookmarks Panel Open Menu"
+    {
+        MENUITEM "Open link in new page", 53018    // Open link in new page
+        MENUITEM "Open link in background page", 53019    // Open link in background page
+        MENUITEM "Open link in new window", 54020    // Open link in new window
+        MENUITEM "Open link in background window", 67633    // Open link in background window
+    }
+    POPUP "Bookmarks Panel View Menu"
+    {
+        MENUITEM "View style", 67644    // View style, 0
+        MENUITEM "View style", 67645    // View style, 1
+        MENUITEM "View style 2", 67646    // View style, 2
+        MENUITEM "Sort by column", 67380    // Sort by column, -1
+        MENUITEM "Sort by column", 67381    // Sort by column, 0
+        MENUITEM "Sort by column", 67382    // Sort by column, 1
+        MENUITEM "Sort by column 2", 67383    // Sort by column, 2
+        MENUITEM "Sort by column 3", 67384    // Sort by column, 3
+        MENUITEM "Sort by column 4", 67385    // Sort by column, 4
+        MENUITEM "Sort by column 5", 67386    // Sort by column, 5
+        MENUITEM "Sort direction", 67387    // Sort direction, 1
+        MENUITEM "Sort direction", 67388    // Sort direction, 0
+    }
+    POPUP "Bookmark Trash Popup Menu"
+    {
+        MENUITEM "Empty trash", 67363    // Empty trash
+        MENUITEM "Show on personal bar", 54023    // Show on personal bar | Hide from personal bar
+        MENUITEM "Edit properties", 54006    // Edit properties
+    }
+    POPUP "Bookmark Item Popup Menu"
+    {
+        MENUITEM "Open link", 67389    // Open link
+        MENUITEM "Open link in new page", 53018    // Open link in new page
+        MENUITEM "Open link in background page", 53019    // Open link in background page
+        MENUITEM "Open link in new window", 54020    // Open link in new window
+        MENUITEM "Open link in background window", 67633    // Open link in background window
+        MENUITEM "Show on personal bar", 54023    // Show on personal bar | Hide from personal bar
+        MENUITEM "Add to bookmarks", 70464    // Add to bookmarks
+        MENUITEM "Add all to bookmarks", 70490    // Add all to bookmarks
+        MENUITEM "Cut", 54002    // Cut
+        MENUITEM "Copy", 54003    // Copy
+        MENUITEM "Paste", 54004    // Paste
+        MENUITEM "Delete", 54005    // Delete
+        MENUITEM "Select all", 63001    // Select all
+        MENUITEM "New bookmark", 26542    // New bookmark
+        MENUITEM "New folder", 26543    // New folder
+        MENUITEM "New Seperator", 69654    // New Seperator
+        MENUITEM "Edit properties", 54006    // Edit properties
+    }
+    POPUP "New contact menu"
+    {
+        MENUITEM "New contact", 26545    // New contact
+        MENUITEM "New folder", 26546    // New folder
+    }
+    POPUP "Contacts Panel View Menu"
+    {
+        MENUITEM "View style", 67644    // View style, 0
+        MENUITEM "View style", 67645    // View style, 1
+        MENUITEM "View style 2", 67646    // View style, 2
+    }
+    POPUP "Contact Trash Popup Menu"
+    {
+        MENUITEM "Empty trash", 67363    // Empty trash
+        MENUITEM "Show on personal bar", 54023    // Show on personal bar | Hide from personal bar
+        MENUITEM "Edit properties", 54006    // Edit properties
+    }
+    POPUP "Contact Item Popup Menu"
+    {
+        MENUITEM "View messages from contact", 67353    // View messages from contact
+        MENUITEM "Compose mail", 26528    // Compose mail
+        MENUITEM "Go to contact homepage", 67392    // Go to contact homepage
+        MENUITEM "Show on personal bar", 54023    // Show on personal bar | Hide from personal bar
+        MENUITEM "Cut", 54002    // Cut
+        MENUITEM "Copy", 54003    // Copy
+        MENUITEM "Paste", 54004    // Paste
+        MENUITEM "Delete", 54005    // Delete
+        MENUITEM "Select all", 63001    // Select all
+        MENUITEM "New contact", 26545    // New contact
+        MENUITEM "New folder", 26546    // New folder
+        MENUITEM "Edit properties", 54006    // Edit properties
+    }
+    POPUP "New note menu"
+    {
+        MENUITEM "New note", 67647    // New note
+        MENUITEM "New folder", 21199    // New folder
+        MENUITEM "New Seperator", 69654    // New Seperator
+    }
+    POPUP "Note Trash Popup Menu"
+    {
+        MENUITEM "Empty trash", 67363    // Empty trash
+    }
+    POPUP "Note Item Popup Menu"
+    {
+        MENUITEM "Send text in mail", 65218    // Send text in mail
+        MENUITEM "Cut", 54002    // Cut
+        MENUITEM "Copy", 54003    // Copy
+        MENUITEM "Paste", 54004    // Paste
+        MENUITEM "Delete", 54005    // Delete
+        MENUITEM "Select all", 63001    // Select all
+        MENUITEM "New note", 67647    // New note
+        MENUITEM "New folder", 21199    // New folder
+        MENUITEM "New Seperator", 69654    // New Seperator
+    }
+    POPUP "History Item Popup Menu"
+    {
+        MENUITEM "Open link", 67389    // Open link
+        MENUITEM "Open link in new page", 53018    // Open link in new page
+        MENUITEM "Open link in background page", 53019    // Open link in background page
+        MENUITEM "Open link in new window", 54020    // Open link in new window
+        MENUITEM "Open link in background window", 67633    // Open link in background window
+        MENUITEM "Cut", 54002    // Cut
+        MENUITEM "Copy", 54003    // Copy
+        MENUITEM "Delete", 54005    // Delete
+        MENUITEM "Select all", 63001    // Select all
+    }
+    POPUP "History Panel View Menu"
+    {
+    }
+    POPUP "Windows Item Popup Menu"
+    {
+        MENUITEM "Activate window", 69337    // Activate window
+        MENUITEM "Restore page 2", 69338    // Restore page, 2
+        MENUITEM "Minimize page 2", 69339    // Minimize page, 2
+        MENUITEM "Maximize page 2", 69340    // Maximize page, 2
+        MENUITEM "Close page 2", 69336    // Close page, 2
+        MENUITEM "Detach page", 69884    // Detach page [Platform Unix-QNX]
+        MENUITEM "Reload", 50664    // Reload
+    }
+    POPUP "Web Panel View Menu"
+    {
+        MENUITEM "Enable handheld mode", 67406    // Enable handheld mode | Disable handheld mode
+        MENUITEM "Edit panel", 54006    // Edit panel
+    }
+    POPUP "Chat Account Menu"
+    {
+        MENUITEM "Set chat status -2", 69655    // Set chat status, -2, 'online'
+        MENUITEM "Set chat status -2", 69656    // Set chat status, -2, 'busy'
+        MENUITEM "Set chat status -2", 69657    // Set chat status, -2, 'be right back'
+        MENUITEM "Set chat status -2", 69658    // Set chat status, -2, 'away'
+        MENUITEM "Set chat status -2", 69659    // Set chat status, -2, 'on the phone'
+        MENUITEM "Set chat status -2", 69660    // Set chat status, -2, 'out to lunch'
+        MENUITEM "Set chat status -2", 69662    // Set chat status, -2, 'offline'
+    }
+    POPUP "Chat Item Popup Menu"
+    {
+        MENUITEM "List chat rooms", 69663    // List chat rooms
+        MENUITEM "New chat room", 69664    // New chat room
+        MENUITEM "Join chat room", 69665    // Join chat room
+        MENUITEM "Leave chat room", 69666    // Leave chat room
+        MENUITEM "Delete", 54005    // Delete
+        MENUITEM "Edit properties", 54006    // Edit properties
+    }
+    POPUP "Chat User Menu"
+    {
+        MENUITEM "Chat command", 69667    // Chat command, 1
+        MENUITEM "Join private chat", 69668    // Join private chat
+        MENUITEM "Compose mail", 50436    // Compose mail
+        MENUITEM "Send file", 69543    // Send file
+        MENUITEM "Edit properties", 54006    // Edit properties
+    }
+    POPUP "Chat User Control Menu"
+    {
+        MENUITEM "Chat command 4", 69671    // Chat command, 4
+        MENUITEM "Chat command 5", 69672    // Chat command, 5
+        MENUITEM "Chat command 6", 69673    // Chat command, 6
+        MENUITEM "Chat command 7", 69674    // Chat command, 7
+        MENUITEM "Chat command 8", 69675    // Chat command, 8
+        MENUITEM "Chat command 9", 70044    // Chat command, 9
+        MENUITEM "Chat command 10", 70047    // Chat command, 10
+    }
+    POPUP "Add Nick to Contact Menu"
+    {
+        MENUITEM "Add contact -2", 67659    // Add contact, -2
+    }
+    POPUP "Link Popup Menu"
+    {
+        MENUITEM "Open link", 67389    // Open link
+        MENUITEM "Open link in new page", 53018    // Open link in new page
+        MENUITEM "Open link in background page", 53019    // Open link in background page
+        MENUITEM "Open link in new window", 54020    // Open link in new window
+        MENUITEM "Open link in background window", 67633    // Open link in background window
+        MENUITEM "Add link to bookmarks", 70463    // Add link to bookmarks
+        MENUITEM "Copy link", 50216    // Copy link
+        MENUITEM "Save link", 50761    // Save link
+        MENUITEM "Download url", 67350    // Download url
+    }
+    POPUP "Edit Form Popup Menu"
+    {
+    }
+    POPUP "Edit Label Popup Menu"
+    {
+        MENUITEM "Copy label text", 50866    // Copy label text
+    }
+    POPUP "Forward Menu"
+    {
+    }
+    POPUP "Document Popup Menu"
+    {
+        MENUITEM "Back", 50426_    // Back
+        MENUITEM "Forward", 50427_    // Forward
+        MENUITEM "Rewind", 67648_    // Rewind
+        MENUITEM "Fast Forward", 67649_    // Fast Forward
+        MENUITEM "Reload", 50428_    // Reload
+        MENUITEM "Add to bookmarks", 70464    // Add to bookmarks, 1
+        MENUITEM "Copy document address", 50215    // Copy document address
+        MENUITEM "Send document address in mail", 65178    // Send document address in mail
+        MENUITEM "Print document", 50004    // Print document
+        MENUITEM "View document source", 44002    // View document source
+        MENUITEM "Validate frame source", 70465    // Validate frame source
+        MENUITEM "Enter fullscreen", 50995    // Enter fullscreen | Leave fullscreen
+    }
+    POPUP "SVG Popup Menu"
+    {
+        MENUITEM "SVG zoom in 10", 70692    // SVG zoom in, 10
+        MENUITEM "SVG zoom out 10", 70693    // SVG zoom out, 10
+        MENUITEM "SVG zoom 100", 70694    // SVG zoom, 100
+        MENUITEM "SVG set quality 25", 70695    // SVG set quality, 25 | SVG set quality, 100
+        MENUITEM "SVG start animation", 70696    // SVG start animation
+        MENUITEM "SVG pause animation", 70697    // SVG pause animation
+        MENUITEM "SVG stop animation", 70698    // SVG stop animation
+    }
+    POPUP "Document Background Menu"
+    {
+        MENUITEM "Open background image", 67651    // Open background image
+        MENUITEM "Show background image", 70486    // Show background image
+        MENUITEM "Copy background image address", 50673    // Copy background image address
+        MENUITEM "Save background image", 50672    // Save background image
+        MENUITEM "Copy background image", 70466    // Copy background image
+        MENUITEM "Use background image as desktop background", 70467_    // Use background image as desktop background [Platform Windows-Mac-QNX]
+        MENUITEM "Show background image properties", 65244    // Show background image properties
+    }
+    POPUP "Image Link Popup Menu"
+    {
+        MENUITEM "Open link", 67389    // Open link
+        MENUITEM "Open link in new page", 53018    // Open link in new page
+        MENUITEM "Open link in background page", 53019    // Open link in background page
+        MENUITEM "Open link in new window", 54020    // Open link in new window
+        MENUITEM "Open link in background window", 67633    // Open link in background window
+        MENUITEM "Add link to bookmarks", 70463    // Add link to bookmarks
+        MENUITEM "Copy link", 50216    // Copy link
+        MENUITEM "Save link", 50761    // Save link
+        MENUITEM "Download url", 67350    // Download url
+        MENUITEM "Open image", 67651    // Open image
+        MENUITEM "Load image", 70486    // Load image
+        MENUITEM "Copy image address", 50419    // Copy image address
+        MENUITEM "Save image", 50262    // Save image
+        MENUITEM "Copy image", 70466    // Copy image
+        MENUITEM "Use image as desktop background", 70467_    // Use image as desktop background [Platform Windows-Mac-QNX]
+        MENUITEM "Show image properties", 56064    // Show image properties
+    }
+    POPUP "Readonly Edit Widget Popup Menu"
+    {
+        MENUITEM "Copy", 50866    // Copy
+        MENUITEM "Copy to note", 67652    // Copy to note
+        MENUITEM "Select all", 50869    // Select all
+    }
+    POPUP "Edit Widget Popup Menu"
+    {
+        MENUITEM "Undo", 50864    // Undo
+        MENUITEM "Redo", 68116    // Redo
+        MENUITEM "Cut", 50865    // Cut
+        MENUITEM "Copy", 50866    // Copy
+        MENUITEM "Paste", 50867    // Paste
+        MENUITEM "Delete", 50868    // Delete
+        MENUITEM "Copy to note", 67652    // Copy to note
+        MENUITEM "Clear", 67655    // Clear
+        MENUITEM "Select all", 50869    // Select all
+        MENUITEM "Spell check", 69620    // Spell check
+    }
+    POPUP "Edit Go Widget Popup Menu"
+    {
+        MENUITEM "Undo", 50864    // Undo
+        MENUITEM "Redo", 68116    // Redo
+        MENUITEM "Cut", 50865    // Cut
+        MENUITEM "Copy", 50866    // Copy
+        MENUITEM "Paste", 50867    // Paste
+        MENUITEM "Paste and go", 67490    // Paste and go
+        MENUITEM "Delete", 50868    // Delete
+        MENUITEM "Copy to note", 67652    // Copy to note
+        MENUITEM "Clear", 67655    // Clear
+        MENUITEM "Select all", 50869    // Select all
+    }
+    POPUP "Edit Widget Insert Menu"
+    {
+        MENUITEM "Show Preferences", 1127000    // Show Preferences, 1
+    }
+    POPUP "Edit Dropdown Menu"
+    {
+    }
+    POPUP "Frame Menu"
+    {
+        MENUITEM "Maximize frame", 70468    // Maximize frame
+        MENUITEM "Open frame in new page", 53018    // Open frame in new page
+        MENUITEM "Open frame in background page", 53019    // Open frame in background page
+        MENUITEM "View frame source", 44002    // View frame source
+        MENUITEM "Reload frame", 50664    // Reload frame
+        MENUITEM "Copy frame address", 50668    // Copy frame address
+    }
+    POPUP "Hotclick Popup Menu"
+    {
+        MENUITEM "Copy", 50872    // Copy
+        MENUITEM "Copy to note", 67652    // Copy to note
+        MENUITEM "Speak selection", 70494    // Speak selection [Feature Voice]
+        MENUITEM "Hotclick search 200", 65184    // Hotclick search, 200
+        MENUITEM "Hotclick search 50", 65187    // Hotclick search, 50
+        MENUITEM "Hotclick search 51", 65188    // Hotclick search, 51
+        MENUITEM "Go to page %t", 67394    // Go to page, '%t'
+        MENUITEM "Send text in mail", 65218    // Send text in mail
+    }
+    POPUP "Console Hotclick Popup Menu"
+    {
+        MENUITEM "Copy", 50872    // Copy
+    }
+    POPUP "Search with menu"
+    {
+        MENUITEM "Hotclick search", 17171    // Hotclick search, 0
+        MENUITEM "Hotclick search", 17187    // Hotclick search, 1
+        MENUITEM "Hotclick search 2", 17189    // Hotclick search, 2
+        MENUITEM "Hotclick search 3", 69676    // Hotclick search, 3
+        MENUITEM "Hotclick search 4", 69677    // Hotclick search, 4
+        MENUITEM "Hotclick search 5", 69678    // Hotclick search, 5
+        MENUITEM "Hotclick search 6", 69679    // Hotclick search, 6
+        MENUITEM "Hotclick search 7", 17174    // Hotclick search, 7
+        MENUITEM "Hotclick search 8", 69680    // Hotclick search, 8
+        MENUITEM "Hotclick search 9", 17176    // Hotclick search, 9
+        MENUITEM "Hotclick search 10", 17180    // Hotclick search, 10
+        MENUITEM "Hotclick search 11", 17181    // Hotclick search, 11
+        MENUITEM "Hotclick search 12", 67482    // Hotclick search, 12
+        MENUITEM "Hotclick search 13", 17188    // Hotclick search, 13
+        MENUITEM "Hotclick search 14", 17203    // Hotclick search, 14
+        MENUITEM "Hotclick search 15", 17182    // Hotclick search, 15
+    }
+    POPUP "Translate menu"
+    {
+        MENUITEM "Hotclick search 100", 65196    // Hotclick search, 100
+        MENUITEM "Hotclick search 101", 65197    // Hotclick search, 101
+        MENUITEM "Hotclick search 102", 65198    // Hotclick search, 102
+        MENUITEM "Hotclick search 103", 65199    // Hotclick search, 103
+        MENUITEM "Hotclick search 104", 65200    // Hotclick search, 104
+        MENUITEM "Hotclick search 106", 65202    // Hotclick search, 106
+        MENUITEM "Hotclick search 107", 65203    // Hotclick search, 107
+        MENUITEM "Hotclick search 108", 65204    // Hotclick search, 108
+        MENUITEM "Hotclick search 109", 65205    // Hotclick search, 109
+        MENUITEM "Hotclick search 110", 65206    // Hotclick search, 110
+        MENUITEM "Hotclick search 111", 65207    // Hotclick search, 111
+        MENUITEM "Hotclick search 112", 65208    // Hotclick search, 112
+        MENUITEM "Hotclick search 113", 65209    // Hotclick search, 113
+        MENUITEM "Hotclick search 114", 65210    // Hotclick search, 114
+        MENUITEM "Hotclick search 115", 65211    // Hotclick search, 115
+        MENUITEM "Hotclick search 116", 65212    // Hotclick search, 116
+        MENUITEM "Hotclick search 117", 65213    // Hotclick search, 117
+        MENUITEM "Hotclick search 118", 65214    // Hotclick search, 118
+        MENUITEM "Hotclick search 119", 65215    // Hotclick search, 119
+    }
+    POPUP "Image Popup Menu"
+    {
+        MENUITEM "Open image", 67651    // Open image
+        MENUITEM "Load image", 70486    // Load image
+        MENUITEM "Copy image address", 50419    // Copy image address
+        MENUITEM "Save image", 50262    // Save image
+        MENUITEM "Copy image", 70466    // Copy image
+        MENUITEM "Use image as desktop background", 70467    // Use image as desktop background [Platform Windows-Mac-QNX]
+        MENUITEM "Show image properties", 56064    // Show image properties
+    }
+    POPUP "Banner Popup Menu"
+    {
+        MENUITEM "Go to buypage", 60242    // Go to buypage
+        MENUITEM "Show Preferences 3", 50394    // Show Preferences, 3
+    }
+    POPUP "Mailto Link Popup Menu"
+    {
+        MENUITEM "Compose mail active link", 50679    // Compose mail, 'active link'
+        MENUITEM "Add link to contacts", 69242    // Add link to contacts
+        MENUITEM "Copy link mail address", 50542    // Copy link mail address
+        MENUITEM "Copy link", 50216    // Copy link
+    }
+    POPUP "Mailto Link Image Popup Menu"
+    {
+        MENUITEM "Compose mail active link", 50679    // Compose mail, 'active link'
+        MENUITEM "Add link to contacts", 69242    // Add link to contacts
+        MENUITEM "Copy link mail address", 50542    // Copy link mail address
+        MENUITEM "Copy link", 50216    // Copy link
+        MENUITEM "Open image", 67651    // Open image
+        MENUITEM "Load image", 70486    // Load image
+        MENUITEM "Copy image address", 50419    // Copy image address
+        MENUITEM "Save image", 50262    // Save image
+        MENUITEM "Copy image", 70466    // Copy image
+        MENUITEM "Use image as desktop background", 70467    // Use image as desktop background [Platform Windows-Mac-QNX]
+        MENUITEM "Show image properties", 56064    // Show image properties
+    }
+    POPUP "Browser Menu Bar"
+    {
+    }
+    POPUP "Mail View Menu Bar"
+    {
+    }
+    POPUP "Browser File Menu"
+    {
+        MENUITEM "New page", 53028    // New page [Feature MDI-Tabbed]
+        MENUITEM "New page", 53028    // New page, 1 [Feature SDI]
+        MENUITEM "New browser window", 50466    // New browser window [Feature MDI-Tabbed]
+        MENUITEM "New page", 50466    // New page [Feature SDI]
+        MENUITEM "Open document", 50001    // Open document
+        MENUITEM "Save document", 50003    // Save document
+        MENUITEM "Save document with images as", 50977    // Save document with images as [Platform Mac]
+        MENUITEM "Print document", 50004    // Print document
+        MENUITEM "Show print options", 50476    // Show print options [Platform Windows-Mac-QNX]
+        MENUITEM "Show print preview as screen", 54271    // Show print preview as screen | Show print preview one frame per sheet | Show print preview active frame | Leave print preview
+        MENUITEM "Work offline", 51099    // Work offline | Work online
+        MENUITEM "Exit", 50006    // Exit
+    }
+    POPUP "Browser Edit Menu"
+    {
+        MENUITEM "Undo", 50007    // Undo
+        MENUITEM "Redo", 68116    // Redo
+        MENUITEM "Cut", 50008    // Cut
+        MENUITEM "Copy", 50009    // Copy
+        MENUITEM "Copy to note", 67652    // Copy to note
+        MENUITEM "Paste", 50010    // Paste
+        MENUITEM "Select all", 50641    // Select all
+        MENUITEM "Spell check", 69620    // Spell check
+        MENUITEM "Find", 50058    // Find
+        MENUITEM "Find next", 50086    // Find next
+    }
+    POPUP "Browser View Menu"
+    {
+        MENUITEM "View document source", 44002    // View document source
+        MENUITEM "Enable handheld mode", 67406    // Enable handheld mode | Disable handheld mode
+        MENUITEM "Enable mediumscreen mode", 69482    // Enable mediumscreen mode | Disable mediumscreen mode
+        MENUITEM "Enter fullscreen", 50995    // Enter fullscreen | Leave fullscreen
+    }
+    POPUP "View Toolbars Menu"
+    {
+        MENUITEM "Set alignment hotlist", 69682    // Set alignment, 'hotlist', 6 | Set alignment, 'hotlist', 0
+        MENUITEM "Set alignment browser toolbar", 145550    // Set alignment, 'browser toolbar', 6 | Set alignment, 'browser toolbar', 0
+        MENUITEM "Set alignment personalbar", 170510    // Set alignment, 'personalbar', 6 | Set alignment, 'personalbar', 0
+        MENUITEM "Set alignment pagebar", 170210    // Set alignment, 'pagebar', 6 | Set alignment, 'pagebar', 0
+        MENUITEM "Set alignment status toolbar", 145570    // Set alignment, 'status toolbar', 6 | Set alignment, 'status toolbar', 0
+        MENUITEM "Set alignment document toolbar", 150740    // Set alignment, 'document toolbar', 6 | Set alignment, 'document toolbar', 0
+        MENUITEM "Set alignment site navigation toolbar", 67400    // Set alignment, 'site navigation toolbar', 6 | Set alignment, 'site navigation toolbar', 0
+        MENUITEM "Customize toolbars -3", 70470    // Customize toolbars, -3
+    }
+    POPUP "Go Menu"
+    {
+        MENUITEM "Back", 50032    // Back
+        MENUITEM "Forward", 50031    // Forward
+        MENUITEM "Rewind", 67648_    // Rewind
+        MENUITEM "Fast Forward", 67649_    // Fast Forward
+        MENUITEM "Stop", 50420    // Stop
+        MENUITEM "Reload", 50065    // Reload
+        MENUITEM "Go to homepage", 50477    // Go to homepage
+        MENUITEM "Go to page Blank", 50059    // Go to page,,,,'Blank'
+    }
+    POPUP "Browser Navigation Menu"
+    {
+        MENUITEM "Back", 50032    // Back
+        MENUITEM "Forward", 50031    // Forward
+        MENUITEM "Rewind", 67648_    // Rewind
+        MENUITEM "Fast Forward", 67649_    // Fast Forward
+        MENUITEM "Stop", 50420    // Stop
+        MENUITEM "Reload", 50065    // Reload
+        MENUITEM "Reload all pages", 50725    // Reload all pages
+        MENUITEM "Go to homepage", 50477    // Go to homepage
+        MENUITEM "Go to page Blank", 50059    // Go to page,,,,'Blank'
+    }
+    POPUP "Browser Bookmarks Menu"
+    {
+        MENUITEM "Add to bookmarks", 70464    // Add to bookmarks, 1
+        MENUITEM "Manage bookmarks", 21525    // Manage, 'bookmarks'
+    }
+    POPUP "Bookmark Folder Menu"
+    {
+        MENUITEM "Add to bookmarks -2", 70464    // Add to bookmarks, -2
+        MENUITEM "Open link -2", 21504    // Open link, -2
+    }
+    POPUP "Active Bookmark Folder Menu"
+    {
+        MENUITEM "Add to bookmarks", 70464    // Add to bookmarks, 0
+        MENUITEM "Open link -2", 21504    // Open link, -2
+    }
+    POPUP "Contact Folder Menu"
+    {
+        MENUITEM "Add contact -2", 67659    // Add contact, -2
+    }
+    POPUP "Compose To Contact Menu"
+    {
+        MENUITEM "Compose to contact -2", 67660    // Compose to contact, -2
+    }
+    POPUP "Compose CC Contact Menu"
+    {
+        MENUITEM "Compose cc contact -2", 67660    // Compose cc contact, -2
+    }
+    POPUP "Compose BCC Contact Menu"
+    {
+        MENUITEM "Compose bcc contact -2", 67660    // Compose bcc contact, -2
+    }
+    POPUP "Browser Feeds Menu"
+    {
+        MENUITEM "Read mail rss", 70471    // Read mail, 'rss',,,'Blank'
+        MENUITEM "Subscribe to groups rss", 70472    // Subscribe to groups, 'rss'
+    }
+    POPUP "Browser Mail Menu"
+    {
+        MENUITEM "Read mail", 67353    // Read mail
+        MENUITEM "Compose mail", 26528    // Compose mail
+        MENUITEM "Search mail", 67410    // Search mail
+        MENUITEM "Show mail filters", 51139    // Show mail filters
+        MENUITEM "Subscribe to groups nntp", 67411    // Subscribe to groups, 'nntp'
+        MENUITEM "Subscribe to groups imap", 67412    // Subscribe to groups, 'imap'
+    }
+    POPUP "Chat Status Menu"
+    {
+        MENUITEM "Set chat status online", 69655    // Set chat status, -1, 'online'
+        MENUITEM "Set chat status busy", 69656    // Set chat status, -1, 'busy'
+        MENUITEM "Set chat status be right back", 69657    // Set chat status, -1, 'be right back'
+        MENUITEM "Set chat status away", 69658    // Set chat status, -1, 'away'
+        MENUITEM "Set chat status on the phone", 69659    // Set chat status, -1, 'on the phone'
+        MENUITEM "Set chat status out to lunch", 69660    // Set chat status, -1, 'out to lunch'
+    }
+    POPUP "Chat Connect Menu"
+    {
+        MENUITEM "Set chat status offline", 70473    // Set chat status, -1, 'offline'
+    }
+    POPUP "Browser Chat Menu"
+    {
+        MENUITEM "List chat rooms", 69663    // List chat rooms
+        MENUITEM "New chat room", 69664    // New chat room
+    }
+    POPUP "Get Mail Menu"
+    {
+        MENUITEM "Get mail", 51723    // Get mail
+        MENUITEM "Stop mail", 50420    // Stop mail
+    }
+    POPUP "Send Mail Menu"
+    {
+        MENUITEM "Send queued mail", 54070    // Send queued mail
+        MENUITEM "Stop mail", 50420    // Stop mail
+        MENUITEM "Send document address in mail", 65180    // Send document address in mail
+    }
+    POPUP "Get And Send And Stop Mail Menu"
+    {
+        MENUITEM "Get mail", 51723    // Get mail
+        MENUITEM "Send queued mail", 54070    // Send queued mail
+        MENUITEM "Stop mail", 50420    // Stop mail
+    }
+    POPUP "Get And Send Mail Menu"
+    {
+        MENUITEM "Get mail", 51723    // Get mail
+        MENUITEM "Send queued mail", 54070    // Send queued mail
+    }
+    POPUP "Browser Tools Menu"
+    {
+        MENUITEM "Manage accounts", 70475    // Manage accounts
+        MENUITEM "Delete private data", 54493    // Delete private data
+        MENUITEM "Manage contacts", 67427    // Manage, 'contacts' [Feature Mail-Chat]
+        MENUITEM "Manage notes", 67672    // Manage, 'notes'
+        MENUITEM "Manage transfers", 50836    // Manage, 'transfers'
+        MENUITEM "Manage history", 50837    // Manage, 'history'
+        MENUITEM "Manage links", 67430    // Manage, 'links'
+        MENUITEM "Customize toolbars", 70699    // Customize toolbars, -1
+        MENUITEM "Show preferences", 50394    // Show preferences, -1
+    }
+    POPUP "Advanced Tools Menu"
+    {
+        MENUITEM "Manage cookies", 69887    // Manage cookies
+        MENUITEM "Manage wand", 69888    // Manage wand
+        MENUITEM "Go to page opera:plugins", 50838    // Go to page, 'opera:plugins',,,'Blank'
+        MENUITEM "Go to page opera:cache", 50835    // Go to page, 'opera:cache',,,'Blank'
+        MENUITEM "Show Java console", 54122    // Show Java console
+        MENUITEM "Show Javascript console", 67476    // Show Javascript console
+        MENUITEM "Show Voice Console", 69312    // Show Voice Console [Feature Voice]
+        MENUITEM "Refresh display", 51212    // Refresh display
+    }
+    POPUP "Browser Window Menu"
+    {
+        MENUITEM "Minimize window", 69311    // Minimize window [Platform Mac]
+        MENUITEM "Duplicate page", 50498    // Duplicate page
+        MENUITEM "Create linked window", 52035    // Create linked window
+        MENUITEM "Cascade", 50018    // Cascade [Platform Windows-Unix-QNX]
+        MENUITEM "Tile vertically", 50019    // Tile vertically [Platform Windows-Unix-QNX]
+        MENUITEM "Tile horizontally", 51136    // Tile horizontally [Platform Windows-Unix-QNX]
+        MENUITEM "Restore all", 50567    // Restore all [Platform Windows-Unix-QNX]
+        MENUITEM "Minimize all", 50565    // Minimize all [Platform Windows-Unix-QNX]
+        MENUITEM "Maximize all", 50545    // Maximize all [Platform Windows-Unix-QNX]
+        MENUITEM "Close all", 50564    // Close all
+        MENUITEM "Close other", 67413    // Close other
+    }
+    POPUP "Browser Help Menu"
+    {
+        MENUITEM "Go to page opera:/help/index.html", 69385    // Go to page, 'opera:/help/index.html',,,'Panel Info'
+        MENUITEM "Go to buypage", 60242    // Go to buypage
+        MENUITEM "Register", 50976    // Register
+        MENUITEM "Check for upgrade", 70398    // Check for upgrade
+        MENUITEM "Report site problem", 70700    // Report site problem
+        MENUITEM "Go to page opera:about", 50015    // Go to page, 'opera:about',,,'Blank'
+    }
+    POPUP "Bookmark Item File Menu"
+    {
+        MENUITEM "New bookmarks file", 54013    // New bookmarks file
+        MENUITEM "Open bookmarks file", 54010    // Open bookmarks file
+        MENUITEM "Save bookmarks as", 54015    // Save bookmarks as
+        MENUITEM "Save selected bookmarks as", 54014    // Save selected bookmarks as
+        MENUITEM "Export selected bookmarks to HTML", 67664    // Export selected bookmarks to HTML
+        MENUITEM "Import bookmarks", 67414    // Import bookmarks
+        MENUITEM "Import netscape bookmarks", 67415    // Import netscape bookmarks
+        MENUITEM "Import explorer favorites", 67416    // Import explorer favorites
+        MENUITEM "Import konqueror bookmarks", 67662    // Import konqueror bookmarks
+        MENUITEM "Export bookmarks", 67417    // Export bookmarks
+        MENUITEM "Export bookmarks to HTML", 67663    // Export bookmarks to HTML
+    }
+    POPUP "Contact Item File Menu"
+    {
+        MENUITEM "New contacts file", 67420    // New contacts file
+        MENUITEM "Open contacts file", 50001    // Open contacts file
+        MENUITEM "Save contacts as", 50003    // Save contacts as
+        MENUITEM "Save selected contacts as", 67667    // Save selected contacts as
+        MENUITEM "Import contacts", 67665    // Import contacts
+        MENUITEM "Export contacts", 67666    // Export contacts
+    }
+    POPUP "Browser Session Menu"
+    {
+        MENUITEM "Save window setup", 67423    // Save window setup
+        MENUITEM "Select session", 70701    // Select session, -1
+    }
+    POPUP "Browser ImportExport Menu"
+    {
+        MENUITEM "Import mail", 70476    // Import mail
+        MENUITEM "Import bookmarks", 67414    // Import bookmarks
+        MENUITEM "Import netscape bookmarks", 67415    // Import netscape bookmarks
+        MENUITEM "Import explorer favorites", 67416    // Import explorer favorites
+        MENUITEM "Import konqueror bookmarks", 67662    // Import konqueror bookmarks
+        MENUITEM "Import contacts", 67665    // Import contacts
+        MENUITEM "Export bookmarks", 67417    // Export bookmarks
+        MENUITEM "Export bookmarks to HTML", 70477    // Export bookmarks to HTML
+        MENUITEM "Export contacts", 67666    // Export contacts
+    }
+    POPUP "Browser Import Menu"
+    {
+        MENUITEM "Import mail", 52250    // Import mail
+        MENUITEM "Import bookmarks", 52251    // Import bookmarks
+        MENUITEM "Import contacts", 52252    // Import contacts
+        MENUITEM "Import netscape bookmarks", 52254    // Import netscape bookmarks
+        MENUITEM "Import explorer favorites", 52255    // Import explorer favorites
+        MENUITEM "Import konqueror bookmarks", 67669    // Import konqueror bookmarks
+    }
+    POPUP "Browser Export Menu"
+    {
+        MENUITEM "Export bookmarks", 52256    // Export bookmarks
+        MENUITEM "Export contacts", 52257    // Export contacts
+        MENUITEM "Export bookmarks to HTML", 67670    // Export bookmarks to HTML
+    }
+    POPUP "Identify As Menu"
+    {
+        MENUITEM "Identify as", 52210    // Identify as, 0
+        MENUITEM "Identify as", 70478    // Identify as, 1
+        MENUITEM "Identify as 4", 70479    // Identify as, 4
+    }
+    POPUP "Quick Preferences Menu"
+    {
+        MENUITEM "Enable popup windows", 52200    // Enable popup windows
+        MENUITEM "Enable popup windows in background", 52202    // Enable popup windows in background
+        MENUITEM "Enable requested popup windows", 67424    // Enable requested popup windows
+        MENUITEM "Disable popup windows", 52201    // Disable popup windows
+        MENUITEM "Enable gif animation", 52203    // Enable gif animation | Disable gif animation
+        MENUITEM "Enable embedded audio", 52205    // Enable embedded audio | Disable embedded audio
+        MENUITEM "Enable Java", 52206    // Enable Java | Disable Java
+        MENUITEM "Enable plugins", 52207    // Enable plugins | Disable plugins
+        MENUITEM "Enable javascript", 52208    // Enable javascript | Disable javascript
+        MENUITEM "Enable cookies", 52209    // Enable cookies | Disable cookies
+        MENUITEM "Enable referrer logging", 52215    // Enable referrer logging| Disable referrer logging
+        MENUITEM "Enable proxy servers", 52216    // Enable proxy servers | Disable proxy servers
+        MENUITEM "Identify as", 52210    // Identify as, 0
+        MENUITEM "Identify as", 70478    // Identify as, 1
+        MENUITEM "Identify as 4", 70479    // Identify as, 4
+    }
+    POPUP "View Hotlist Menu"
+    {
+        MENUITEM "Show panel Search", 11522    // Show panel, 'Search' | Hide panel, 'Search'
+        MENUITEM "Show panel Bookmarks", 67425    // Show panel, 'Bookmarks' | Hide panel, 'Bookmarks'
+        MENUITEM "Show panel Mail", 67426    // Show panel, 'Mail' | Hide panel, 'Mail' [Feature Mail]
+        MENUITEM "Show panel Contacts", 67427    // Show panel, 'Contacts' | Hide panel, 'Contacts' [Feature Mail-Chat]
+        MENUITEM "Show panel Chat", 69944    // Show panel, 'Chat' | Hide panel, 'Chat' [Feature Mail]
+        MENUITEM "Show panel Notes", 67672    // Show panel, 'Notes' | Hide panel, 'Notes'
+        MENUITEM "Show panel Transfers", 67429    // Show panel, 'Transfers' | Hide panel, 'Transfers'
+        MENUITEM "Show panel History", 67428    // Show panel, 'History' | Hide panel, 'History'
+        MENUITEM "Show panel Links", 67430    // Show panel, 'Links' | Hide panel, 'Links'
+        MENUITEM "Show panel Windows", 67431    // Show panel, 'Windows' | Hide panel, 'Windows'
+        MENUITEM "Show panel Info", 67671    // Show panel, 'Info' | Hide panel, 'Info'
+        MENUITEM "Add panel", 65307    // Add panel
+        MENUITEM "Go to page http://my.opera.com/customize/panel/", 65310    // Go to page, 'http://my.opera.com/customize/panel/',,,Blank
+        MENUITEM "Show panel toggle", 69688    // Show panel toggle | Hide panel toggle
+    }
+    POPUP "Hotlist Placement Menu"
+    {
+        MENUITEM "Set alignment hotlist", 53053    // Set alignment, 'hotlist', 1
+        MENUITEM "Set alignment hotlist", 53054    // Set alignment, 'hotlist', 3
+        MENUITEM "Set alignment hotlist", 50845    // Set alignment, 'hotlist', 5
+        MENUITEM "Set alignment hotlist", 53050    // Set alignment, 'hotlist', 0
+    }
+    POPUP "Hotlist Selector Placement Menu"
+    {
+        MENUITEM "Set alignment hotlist panel selector", 53051    // Set alignment, 'hotlist panel selector', 2
+        MENUITEM "Set alignment hotlist panel selector", 53052    // Set alignment, 'hotlist panel selector', 4
+        MENUITEM "Set alignment hotlist panel selector", 53053    // Set alignment, 'hotlist panel selector', 1
+        MENUITEM "Set alignment hotlist panel selector", 53054    // Set alignment, 'hotlist panel selector', 3
+        MENUITEM "Set alignment hotlist panel selector", 53050    // Set alignment, 'hotlist panel selector', 0
+    }
+    POPUP "View Progress Bar Menu"
+    {
+        MENUITEM "View progress bar", 10222    // View progress bar, 0
+        MENUITEM "View progress bar", 67699    // View progress bar, 1
+        MENUITEM "View progress bar 2", 53050    // View progress bar, 2
+    }
+    POPUP "Color Scheme Menu"
+    {
+        MENUITEM "Disable skin coloring", 67433    // Disable skin coloring
+        MENUITEM "Use system skin coloring", 67434    // Use system skin coloring
+        MENUITEM "Set skin coloring #803C00", 67435    // Set skin coloring, #803C00
+        MENUITEM "Set skin coloring #BD9431", 67436    // Set skin coloring, #BD9431
+        MENUITEM "Set skin coloring #2FB35E", 67437    // Set skin coloring, #2FB35E
+        MENUITEM "Set skin coloring #2F83B3", 67438    // Set skin coloring, #2F83B3
+        MENUITEM "Set skin coloring #001E80", 67439    // Set skin coloring, #001E80
+        MENUITEM "Set skin coloring #606090", 67440    // Set skin coloring, #606090
+        MENUITEM "Set skin coloring #4B0082", 67441    // Set skin coloring, #4B0082
+        MENUITEM "Set skin coloring #DC143C", 67442    // Set skin coloring, #DC143C
+        MENUITEM "Set skin coloring #900000", 67443    // Set skin coloring, #900000
+    }
+    POPUP "Skin Menu"
+    {
+        MENUITEM "Go to page http://my.opera.com/customize/skins/", 56073    // Go to page, 'http://my.opera.com/customize/skins/',,,'Blank'
+    }
+    POPUP "Zoom Menu"
+    {
+        MENUITEM "Zoom to 50", 51730    // Zoom to, 50
+        MENUITEM "Zoom to 80", 51731    // Zoom to, 80
+        MENUITEM "Zoom to 90", 51732    // Zoom to, 90
+        MENUITEM "Zoom to 100", 51733    // Zoom to, 100
+        MENUITEM "Zoom to 120", 51734    // Zoom to, 120
+        MENUITEM "Zoom to 150", 51735    // Zoom to, 150
+        MENUITEM "Zoom to 200", 51736    // Zoom to, 200
+        MENUITEM "Zoom out 100", 51739    // Zoom out, 100
+        MENUITEM "Zoom in 100", 51740    // Zoom in, 100
+        MENUITEM "Zoom out 10", 51737    // Zoom out, 10
+        MENUITEM "Zoom in 10", 51738    // Zoom in, 10
+    }
+    POPUP "Images Menu"
+    {
+        MENUITEM "Enable display images", 70704    // Enable display images
+        MENUITEM "Display cached images only", 70705    // Display cached images only
+        MENUITEM "Disable display images", 70706    // Disable display images
+    }
+    POPUP "Style Menu"
+    {
+        MENUITEM "Select author mode", 67445    // Select author mode
+        MENUITEM "Select user mode", 67446    // Select user mode
+    }
+    POPUP "Images And Style Menu"
+    {
+    }
+    POPUP "Encoding Menu"
+    {
+        MENUITEM "Set encoding", 51750    // Set encoding, ''
+    }
+    POPUP "Unicode Encoding Menu"
+    {
+        MENUITEM "Set encoding utf-8", 51751    // Set encoding, 'utf-8'
+        MENUITEM "Set encoding utf-16", 51752    // Set encoding, 'utf-16'
+        MENUITEM "Set encoding utf-32", 67447    // Set encoding, 'utf-32'
+        MENUITEM "Set encoding utf-7", 67448    // Set encoding, 'utf-7'
+    }
+    POPUP "Western Encoding Menu"
+    {
+        MENUITEM "Set encoding iso-8859-1", 51754    // Set encoding, 'iso-8859-1'
+        MENUITEM "Set encoding iso-8859-15", 51767    // Set encoding, 'iso-8859-15'
+        MENUITEM "Set encoding windows-1252", 51771    // Set encoding, 'windows-1252'
+        MENUITEM "Set encoding us-ascii", 51753    // Set encoding, 'us-ascii'
+    }
+    POPUP "Central Encoding Menu"
+    {
+        MENUITEM "Set encoding iso-8859-2", 51755    // Set encoding, 'iso-8859-2'
+        MENUITEM "Set encoding iso-8859-16", 67449    // Set encoding, 'iso-8859-16'
+        MENUITEM "Set encoding windows-1250", 51769    // Set encoding, 'windows-1250'
+    }
+    POPUP "Southern Encoding Menu"
+    {
+        MENUITEM "Set encoding iso-8859-3", 51756    // Set encoding, 'iso-8859-3'
+    }
+    POPUP "Baltic Encoding Menu"
+    {
+        MENUITEM "Set encoding iso-8859-13", 51765    // Set encoding, 'iso-8859-13'
+        MENUITEM "Set encoding windows-1257", 51776    // Set encoding, 'windows-1257'
+        MENUITEM "Set encoding iso-8859-4", 51757    // Set encoding, 'iso-8859-4'
+    }
+    POPUP "Nordic Encoding Menu"
+    {
+        MENUITEM "Set encoding iso-8859-10", 51763    // Set encoding, 'iso-8859-10'
+        MENUITEM "Set encoding windows-sami-2", 51791    // Set encoding, 'windows-sami-2'
+    }
+    POPUP "Celtic Encoding Menu"
+    {
+        MENUITEM "Set encoding iso-8859-14", 51766    // Set encoding, 'iso-8859-14'
+    }
+    POPUP "Turkish Encoding Menu"
+    {
+        MENUITEM "Set encoding iso-8859-9", 51762    // Set encoding, 'iso-8859-9'
+        MENUITEM "Set encoding windows-1254", 51773    // Set encoding, 'windows-1254'
+    }
+    POPUP "Vietnamese Encoding Menu"
+    {
+        MENUITEM "Set encoding windows-1258", 51777    // Set encoding, 'windows-1258'
+        MENUITEM "Set encoding viscii", 51783    // Set encoding, 'viscii'
+        MENUITEM "Set encoding x-vps", 67450    // Set encoding, 'x-vps'
+    }
+    POPUP "Cyrillic Encoding Menu"
+    {
+        MENUITEM "Set encoding AUTODETECT-RU", 51788    // Set encoding, 'AUTODETECT-RU'
+        MENUITEM "Set encoding iso-8859-5", 51758    // Set encoding, 'iso-8859-5'
+        MENUITEM "Set encoding koi8-r", 51768    // Set encoding, 'koi8-r'
+        MENUITEM "Set encoding koi8-u", 51785    // Set encoding, 'koi8-u'
+        MENUITEM "Set encoding windows-1251", 51770    // Set encoding, 'windows-1251'
+        MENUITEM "Set encoding ibm866", 51792    // Set encoding, 'ibm866'
+    }
+    POPUP "Greek Encoding Menu"
+    {
+        MENUITEM "Set encoding iso-8859-7", 51760    // Set encoding, 'iso-8859-7'
+        MENUITEM "Set encoding windows-1253", 51772    // Set encoding, 'windows-1253'
+    }
+    POPUP "Arabic Encoding Menu"
+    {
+        MENUITEM "Set encoding iso-8859-6", 51759    // Set encoding, 'iso-8859-6'
+        MENUITEM "Set encoding windows-1256", 51775    // Set encoding, 'windows-1256'
+    }
+    POPUP "Hebrew Encoding Menu"
+    {
+        MENUITEM "Set encoding iso-8859-8-i", 51761    // Set encoding, 'iso-8859-8-i'
+        MENUITEM "Set encoding iso-8859-8", 67451    // Set encoding, 'iso-8859-8'
+        MENUITEM "Set encoding windows-1255", 51774    // Set encoding, 'windows-1255'
+    }
+    POPUP "Thai Encoding Menu"
+    {
+        MENUITEM "Set encoding iso-8859-11", 51764    // Set encoding, 'iso-8859-11'
+    }
+    POPUP "Chinese Encoding Menu"
+    {
+        MENUITEM "Set encoding AUTODETECT-ZH", 51788    // Set encoding, 'AUTODETECT-ZH'
+        MENUITEM "Set encoding big5", 51780    // Set encoding, 'big5'
+        MENUITEM "Set encoding big5-hkscs", 67452    // Set encoding, 'big5-hkscs'
+        MENUITEM "Set encoding euc-tw", 51790    // Set encoding, 'euc-tw'
+        MENUITEM "Set encoding gbk", 51782    // Set encoding, 'gbk'
+        MENUITEM "Set encoding gb18030", 67453    // Set encoding, 'gb18030'
+        MENUITEM "Set encoding hz-gb2312", 51786    // Set encoding, 'hz-gb2312'
+        MENUITEM "Set encoding iso-2022-cn", 67454    // Set encoding, 'iso-2022-cn'
+    }
+    POPUP "Japanese Encoding Menu"
+    {
+        MENUITEM "Set encoding AUTODETECT-JP", 51788    // Set encoding, 'AUTODETECT-JP'
+        MENUITEM "Set encoding shift_jis", 51778    // Set encoding, 'shift_jis'
+        MENUITEM "Set encoding iso-2022-jp", 51779    // Set encoding, 'iso-2022-jp'
+        MENUITEM "Set encoding euc-jp", 51781    // Set encoding, 'euc-jp'
+    }
+    POPUP "Korean Encoding Menu"
+    {
+        MENUITEM "Set encoding AUTODETECT-KO", 51788    // Set encoding, 'AUTODETECT-KO'
+        MENUITEM "Set encoding euc-kr", 51784    // Set encoding, 'euc-kr'
+        MENUITEM "Set encoding iso-2022-kr", 70480    // Set encoding, 'iso-2022-kr'
+    }
+    POPUP "Reload Menu"
+    {
+        MENUITEM "Enable automatic reload", 56000    // Enable automatic reload | Disable automatic reload
+        MENUITEM "Set automatic reload", 56001    // Set automatic reload
+        MENUITEM "Set automatic reload 5", 67455    // Set automatic reload, 5
+        MENUITEM "Set automatic reload 15", 67456    // Set automatic reload, 15
+        MENUITEM "Set automatic reload 30", 67457    // Set automatic reload, 30
+        MENUITEM "Set automatic reload 60", 67458    // Set automatic reload, 60
+        MENUITEM "Set automatic reload 120", 67459    // Set automatic reload, 120
+        MENUITEM "Set automatic reload 300", 67460    // Set automatic reload, 300
+        MENUITEM "Set automatic reload 900", 67461    // Set automatic reload, 900
+        MENUITEM "Set automatic reload 1800", 67462    // Set automatic reload, 1800
+    }
+    POPUP "Site Navigation Menu"
+    {
+        MENUITEM "Go to link element home", 67463    // Go to link element, 'home' | Go to link element, 'start' | Go to link element, 'top'
+        MENUITEM "Go to link element index", 67464    // Go to link element, 'index'
+        MENUITEM "Go to link element contents", 67465    // Go to link element, 'contents' | Go to link element, 'toc'
+        MENUITEM "Go to link element search", 67466    // Go to link element, 'search' | Go to link element, 'find'
+        MENUITEM "Go to link element glossary", 67467    // Go to link element, 'glossary'
+        MENUITEM "Go to link element help", 67468    // Go to link element, 'help'
+        MENUITEM "Go to link element first", 67469    // Go to link element, 'first' | Go to link element, 'begin'
+        MENUITEM "Go to link element previous", 67470    // Go to link element, 'previous' | Go to link element, 'prev'
+        MENUITEM "Go to link element next", 67471    // Go to link element, 'next'
+        MENUITEM "Go to link element last", 67472    // Go to link element, 'last'
+        MENUITEM "Go to link element up", 67473    // Go to link element, 'up'
+        MENUITEM "Go to link element copyright", 67474    // Go to link element, 'copyright'
+        MENUITEM "Go to link element author", 67475    // Go to link element, 'author'
+        MENUITEM "Go to link element 'application/rss", 69447    // Go to link element, 'application/rss+xml'
+    }
+    POPUP "Help Contents Menu"
+    {
+        MENUITEM "Go to page opera:/help/mouse.html", 50525    // Go to page, 'opera:/help/mouse.html'
+        MENUITEM "Go to page opera:/help/keyboard.html", 50479    // Go to page, 'opera:/help/keyboard.html'
+        MENUITEM "Go to page opera:/help/voice.html", 70493    // Go to page, 'opera:/help/voice.html' [Feature Voice]
+        MENUITEM "Go to page opera:/help/panels.html", 69692    // Go to page, 'opera:/help/panels.html'
+        MENUITEM "Go to page opera:/help/toolbars.html", 69388    // Go to page, 'opera:/help/toolbars.html'
+        MENUITEM "Go to page opera:/help/menus.html", 69389    // Go to page, 'opera:/help/menus.html'
+        MENUITEM "Go to page opera:/help/dialogs.html", 69390    // Go to page, 'opera:/help/dialogs.html'
+        MENUITEM "Go to page opera:/help/mail.html", 67397    // Go to page, 'opera:/help/mail.html'
+        MENUITEM "Go to page opera:/help/mail.html#news", 69693    // Go to page, 'opera:/help/mail.html#news'
+        MENUITEM "Go to page opera:/help/chat.html", 69694    // Go to page, 'opera:/help/chat.html'
+        MENUITEM "Go to page opera:/help/preferences.html", 69391    // Go to page, 'opera:/help/preferences.html'
+        MENUITEM "Go to page opera:/help/glossary.html", 69695    // Go to page, 'opera:/help/glossary.html'
+    }
+    POPUP "On The Web Menu"
+    {
+        MENUITEM "Go to page http://redir.opera.com/www.opera.com/", 60240    // Go to page, 'http://redir.opera.com/www.opera.com/'
+        MENUITEM "Go to page http://redir.opera.com/www.opera.com/support/", 60241    // Go to page, 'http://redir.opera.com/www.opera.com/support/'
+        MENUITEM "Go to page http://redir.opera.com/my.opera.com/", 60246    // Go to page, 'http://redir.opera.com/my.opera.com/'
+        MENUITEM "Go to page http://redir.opera.com/www.operamail.com/", 51131    // Go to page, 'http://redir.opera.com/www.operamail.com/'
+        MENUITEM "Go to page http://redir.opera.com/www.opera.com/startup/", 69392    // Go to page, 'http://redir.opera.com/www.opera.com/startup/'
+        MENUITEM "Go to page http://redir.opera.com/www.opera.com/features/access", 69393    // Go to page, 'http://redir.opera.com/www.opera.com/features/access'
+        MENUITEM "Go to page http://redir.opera.com/www.opera.com/support/tutorials/security/", 69394    // Go to page, 'http://redir.opera.com/www.opera.com/support/tutorials/security/'
+    }
+    POPUP "Transfers Item Popup Menu"
+    {
+        MENUITEM "Resume transfer", 14134    // Resume transfer
+        MENUITEM "Stop transfer", 14136    // Stop transfer
+        MENUITEM "Restart transfer", 67477    // Restart transfer
+        MENUITEM "Delete", 67478    // Delete
+        MENUITEM "Remove all finished transfers", 69422    // Remove all finished transfers
+        MENUITEM "Open transfer", 69696    // Open transfer [Platform Unix]
+        MENUITEM "Open transfer folder", 69697    // Open transfer folder [Platform Unix]
+        MENUITEM "Copy transfer info", 22109    // Copy transfer info
+    }
+    POPUP "Transfers Notify Popup Menu"
+    {
+        MENUITEM "Open transfer -2", 69696    // Open transfer, -2
+        MENUITEM "Open transfer folder -2", 69697    // Open transfer folder, -2
+        MENUITEM "Manage transfers", 69698    // Manage, 'transfers'
+    }
+    POPUP "Workspace Menu"
+    {
+        MENUITEM "New page", 53028    // New page
+    }
+    POPUP "Hotlist Popup Menu"
+    {
+        MENUITEM "Customize toolbars Hotlist Panel Selector", 70470    // Customize toolbars, 'Hotlist Panel Selector', 1
+    }
+    POPUP "Hotlist Item Popup Menu"
+    {
+        MENUITEM "Remove panel", 67480    // Remove panel
+        MENUITEM "Edit panel", 65309    // Edit panel
+    }
+    POPUP "Pagebar Popup Menu"
+    {
+        MENUITEM "New Page", 53028    // New Page, 1
+        MENUITEM "Close all", 67483    // Close all
+        MENUITEM "Close other", 67484    // Close other
+    }
+    POPUP "Pagebar Item Popup Menu"
+    {
+        MENUITEM "New Page", 53028    // New Page, 1
+        MENUITEM "Duplicate page", 50498    // Duplicate page
+        MENUITEM "Create linked window", 52035    // Create linked window
+        MENUITEM "Restore page", 69338    // Restore page, 1 [Platform Windows-Unix-QNX]
+        MENUITEM "Close page", 69336    // Close page, 1
+        MENUITEM "Close all", 67483    // Close all
+        MENUITEM "Close other", 67484    // Close other
+        MENUITEM "Detach page", 69884    // Detach page [Platform Unix-QNX]
+    }
+    POPUP "Pagebar Inactive Item Popup Menu"
+    {
+        MENUITEM "New Page", 53028    // New Page, 1
+        MENUITEM "Duplicate page", 50498    // Duplicate page
+        MENUITEM "Create linked window", 52035    // Create linked window
+        MENUITEM "Restore page", 69338    // Restore page, 1 [Platform Windows-Unix-QNX]
+        MENUITEM "Close clicked page", 69336    // Close clicked page
+        MENUITEM "Close all", 67483    // Close all
+        MENUITEM "Close other", 67484    // Close other
+        MENUITEM "Detach page", 69884    // Detach page [Platform Unix-QNX]
+    }
+    POPUP "Pagebar Arrange All Menu"
+    {
+        MENUITEM "Restore all", 50567    // Restore all
+        MENUITEM "Minimize all", 50565    // Minimize all
+        MENUITEM "Maximize all", 50545    // Maximize all
+        MENUITEM "Cascade", 50018    // Cascade
+        MENUITEM "Tile vertically", 50019    // Tile vertically
+        MENUITEM "Tile horizontally", 51136    // Tile horizontally
+    }
+    POPUP "Pagebar Arrange Menu"
+    {
+        MENUITEM "Restore all", 50567    // Restore all
+        MENUITEM "Minimize all", 50565    // Minimize all
+        MENUITEM "Maximize all", 50545    // Maximize all
+        MENUITEM "Cascade", 50018    // Cascade
+        MENUITEM "Tile vertically", 50019    // Tile vertically
+        MENUITEM "Tile horizontally", 51136    // Tile horizontally
+    }
+    POPUP "Personalbar Popup Menu"
+    {
+    }
+    POPUP "Personalbar Edit Item Popup Menu"
+    {
+        MENUITEM "Edit properties", 54006    // Edit properties
+        MENUITEM "Hide from personal bar", 67481    // Hide from personal bar
+    }
+    POPUP "Personalbar Item Popup Menu"
+    {
+        MENUITEM "Edit properties", 54006    // Edit properties
+        MENUITEM "Hide from personal bar", 67481    // Hide from personal bar
+    }
+    POPUP "Toolbar Popup Menu"
+    {
+        MENUITEM "Customize toolbars", 70470    // Customize toolbars
+    }
+    POPUP "Toolbar Item Popup Menu"
+    {
+        MENUITEM "Remove", 67481    // Remove
+    }
+    POPUP "Toolbar Identify Popup Menu"
+    {
+        MENUITEM "Remove", 67481    // Remove
+    }
+    POPUP "Toolbar Edit Item Popup Menu"
+    {
+        MENUITEM "Remove", 67481    // Remove
+    }
+    POPUP "Transfers View Popup Menu"
+    {
+        MENUITEM "Set show transferwindow", 67488    // Set show transferwindow, 1
+        MENUITEM "Set show transferwindow 2", 70702    // Set show transferwindow, 2
+        MENUITEM "Set show transferwindow", 70703    // Set show transferwindow, 0
+        MENUITEM "Show transfer details", 54139    // Show transfer details | Hide transfer details
+        MENUITEM "Show new transferitems on top", 67520    // Show new transferitems on top | Show new transferitems on bottom
+    }
+    POPUP "Voice Menu"
+    {
+        MENUITEM "Show voice preferences", 67674    // Show voice preferences
+    }
+    POPUP "Tray Popup Menu"
+    {
+        MENUITEM "Show opera", 69886    // Show opera
+        MENUITEM "Hide opera", 69896    // Hide opera
+        MENUITEM "New page", 53028    // New page
+        MENUITEM "Read mail", 67353    // Read mail [Feature Mail]
+        MENUITEM "Compose mail", 26528    // Compose mail [Feature Mail]
+        MENUITEM "Manage bookmarks", 67425    // Manage, 'bookmarks'
+        MENUITEM "Manage contacts", 67427    // Manage, 'contacts' [Feature Mail-Chat]
+        MENUITEM "Manage notes", 67672    // Manage, 'notes'
+        MENUITEM "Manage transfers", 50836    // Manage, 'transfers'
+        MENUITEM "Manage history", 50837    // Manage, 'history'
+        MENUITEM "Exit", 50006    // Exit
+    }
+    POPUP "Closed Pages Menu"
+    {
+        MENUITEM "Empty page trash", 70484    // Empty page trash
+    }
+    POPUP "Delete Private Data Menu"
+    {
+        MENUITEM "Enable delete private data 3", 25156    // Enable delete private data, 3 | Disable delete private data, 3
+        MENUITEM "Enable delete private data", 25159    // Enable delete private data, 1 | Disable delete private data, 1
+        MENUITEM "Enable delete private data 2", 25157    // Enable delete private data, 2 | Disable delete private data, 2
+        MENUITEM "Enable delete private data 8", 25164    // Enable delete private data, 8 | Disable delete private data, 8
+        MENUITEM "Enable delete private data 5", 25160    // Enable delete private data, 5 | Disable delete private data, 5
+        MENUITEM "Enable delete private data 6", 25161    // Enable delete private data, 6 | Disable delete private data, 6
+        MENUITEM "Enable delete private data 7", 25163    // Enable delete private data, 7 | Disable delete private data, 7
+        MENUITEM "Enable delete private data 9", 25165    // Enable delete private data, 9 | Disable delete private data, 9
+        MENUITEM "Enable delete private data 11", 68044    // Enable delete private data, 11 | Disable delete private data, 11
+        MENUITEM "Enable delete private data 4", 25162    // Enable delete private data, 4 | Disable delete private data, 4
+        MENUITEM "Enable delete private data 10", 25169    // Enable delete private data, 10 | Disable delete private data, 10
+        MENUITEM "Enable delete private data 12", 70446    // Enable delete private data, 12 | Disable delete private data, 12
+        MENUITEM "Manage cookies", 68042    // Manage cookies
+        MENUITEM "Manage wand", 68043    // Manage wand
+    }
+}

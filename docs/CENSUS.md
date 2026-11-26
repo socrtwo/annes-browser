@@ -6,15 +6,16 @@ The census records which commands real browsers offered, read from their own sou
 
 ## Summary
 
-- **31 browser versions** from **21 browsers**, **2984 items** read.
-- **1374 items (46%)** are linked to a canonical command; **47** were read and deliberately not linked; **1563** are not yet linked (work queue: [census-unlinked.tsv](census-unlinked.tsv)).
-- **305 canonical commands**: 288 have lineage read from source, 5 have only lineage written from memory (marked *recalled*), 12 have none yet.
+- **42 browser versions** from **24 browsers**, **6239 items** read.
+- **2531 items (41%)** are linked to a canonical command; **128** were read and deliberately not linked; **3580** are not yet linked (work queue: [census-unlinked.tsv](census-unlinked.tsv)).
+- **328 canonical commands**: 315 have lineage read from source, 4 have only lineage written from memory (marked *recalled*), 9 have none yet.
 
 ## What a census entry proves, and what it does not
 
 - **Proves:** a command with that identifier (and, where the source has one, that label or description) existed in that file at that commit. `npm run census:verify` re-fetches every file and checks its hash and that each cited line still contains the recorded text.
 - **Does not prove:** that two items in different browsers behave the same. That is a judgement made when linking, recorded in `catalog/census/names/` and `catalog/census/overrides.yaml`, and checked against each source's own description where it has one (Lynx, w3m, ELinks, Vimium, qutebrowser). Wrong links were caught that way (for example the w3m command `UNDO`, which undoes a cursor movement); see the `why` fields in the overrides file.
 - **Manuals** (sources marked "manual (OCR)") are scanned books about a browser, held by the Internet Archive. Only fixed phrasings such as "From the File menu, choose Open Location" are read, so they give a sample of the menus, not a full listing; OCR can misspell; and a book may describe other programs too. Every manual item was read in context before linking, and look-alikes are listed below with the reason. They are shown in the app as "manual", distinct from source code.
+- **Menus read from programs** (where column "program's own menus"): installers downloaded from the Internet Archive were unpacked (InstallShield 3 archives by `tools/census/is3.ts`, cabinets by `cabextract`, Inno Setup by `innoextract`) and the Windows menu resources read by `tools/pe-dump.ts`; nothing was run. Opera 8 and 12 keep their menus in a text file, read by `tools/opera-dump.ts`. Each dump in `catalog/census/transcriptions/` records the download, how it was unpacked and the SHA-256 of every file read. Netscape's comments carry its own status-bar text; Internet Explorer does not keep that text by command id, so its dumps carry only shortcuts. Mail, news, Composer, address book and script-debugger menus were dumped too, but most of their items are left unlinked: they belong to programs this browser does not include.
 - **Screenshots** (sources marked "screenshot") are transcriptions of images on Wikimedia Commons, read by a model and kept in `catalog/census/transcriptions/` with the image address and hash. They show only what was visible: menu titles and toolbar buttons, not the contents of closed menus. Menu titles are recorded but never linked as commands.
 - **Re-creations and engines.** Wine's `ieframe.dll` is a re-implementation of Internet Explorer: it shows the menu Wine copied, not Internet Explorer itself. Safari's page context menu is defined in WebKit, which Apple publishes, so that part of Safari is read from Apple's own code; Safari's menu bar is not.
 - **Release years** are not read from the source. They are common knowledge, entered by hand in `catalog/census/sources.yaml`. Check before citing.
@@ -56,6 +57,17 @@ The census records which commands real browsers offered, read from their own sou
 | `safari-current-webkit` | Safari (WebKit context menu) | development snapshot | 2026 | [apple-oss-distributions/WebKit@2331c43da3](https://github.com/apple-oss-distributions/WebKit/tree/2331c43da3e7123e51ba8682d7ec023b8591460e) | 61 | 37 (61%) | 0 | 24 |
 | `netscape-0.92-screenshot` | Netscape | 0.92 Beta | 1994 | screenshot: [Commons Netscape_0.92_Screenshot.png](https://commons.wikimedia.org/wiki/File:Netscape_0.92_Screenshot.png) | 22 | 13 (59%) | 9 | 0 |
 | `netscape-4.8-screenshot` | Netscape Communicator | 4.8 | 2002 | screenshot: [Commons Netscape_Communicator_4.8_Screenshot.png](https://commons.wikimedia.org/wiki/File:Netscape_Communicator_4.8_Screenshot.png) | 26 | 10 (38%) | 16 | 0 |
+| `netscape-0.91-win32` | Mosaic Netscape | 0.91 beta | 1994 | program's own menus: [archive.org/n32e091](https://archive.org/details/n32e091) | 51 | 49 (96%) | 2 | 0 |
+| `netscape-2.02-win32` | Netscape Navigator | 2.02 | 1996 | program's own menus: [archive.org/n32e202](https://archive.org/details/n32e202) | 172 | 80 (47%) | 1 | 91 |
+| `netscape-3.0-win32` | Netscape Navigator | 3.0 | 1996 | program's own menus: [archive.org/n32e30](https://archive.org/details/n32e30) | 187 | 93 (50%) | 0 | 94 |
+| `netscape-4.05-win32` | Netscape Communicator | 4.05 | 1998 | program's own menus: [archive.org/cp32e405_exe_Netscape](https://archive.org/details/cp32e405_exe_Netscape) | 297 | 78 (26%) | 9 | 210 |
+| `netscape-4.7-win32` | Netscape Communicator | 4.7 | 1999 | program's own menus: [archive.org/cp32e47](https://archive.org/details/cp32e47) | 314 | 90 (29%) | 8 | 216 |
+| `ie-4.0-win32` | Internet Explorer | 4.0 | 1997 | program's own menus: [archive.org/ie4.0](https://archive.org/details/ie4.0) | 218 | 106 (49%) | 23 | 89 |
+| `ie-5.0-win32` | Internet Explorer | 5.0 | 1999 | program's own menus: [archive.org/internet-explorer-5_202407](https://archive.org/details/internet-explorer-5_202407) | 226 | 116 (51%) | 22 | 88 |
+| `ie-7-win32` | Internet Explorer | 7 | 2006 | program's own menus: [archive.org/ie7windowsxpx86enu_201102](https://archive.org/details/ie7windowsxpx86enu_201102) | 330 | 158 (48%) | 11 | 161 |
+| `ie-8-win32` | Internet Explorer | 8 | 2009 | program's own menus: [archive.org/ie-8-windows-xp-x-86-enu_202407](https://archive.org/details/ie-8-windows-xp-x-86-enu_202407) | 335 | 140 (42%) | 5 | 190 |
+| `opera-8.01-win32` | Opera | 8.01 | 2005 | program's own menus: [archive.org/ow32enen801](https://archive.org/details/ow32enen801) | 539 | 119 (22%) | 0 | 420 |
+| `opera-12.14-win32` | Opera | 12.14 | 2013 | program's own menus: [archive.org/opera-12.14-windows-32-bit](https://archive.org/details/opera-12.14-windows-32-bit) | 586 | 128 (22%) | 0 | 458 |
 
 ## Not covered
 
@@ -63,9 +75,9 @@ These cannot be read from the build environment, so they have **no census lineag
 
 | Browsers | Why |
 |---|---|
-| Internet Explorer 1–11, Edge Legacy | Closed source. Only indirectly covered, through Wine's re-creation of its main menu (13 items). No freely readable manual was found; the Wayback Machine and Toastytech were not reachable. |
-| Netscape Navigator and Communicator 1–4 | Partly covered from three scanned manuals (1.1, 3.0, 4.5) and two screenshots (0.92, 4.8): toolbars, menu titles and about 30 menu commands, not full menus. Installers exist at the Internet Archive but its download servers are not reachable from here. |
-| Opera 3–12 (Presto), Opera 15+ | Closed source. Otter Browser, an Opera 12 style clone, is covered instead; it shows what that lineage offered, not what Opera shipped. |
+| Internet Explorer 1–3, 6, 9–11, Edge Legacy | IE 4, 5, 7 and 8 are covered from menus read out of their own programs (Internet Archive downloads). IE 1–3 at the Archive are 16-bit or AOL builds the reader does not handle; IE 6 there is a web installer with nothing inside; the stand-alone IE collection is password-encrypted and was not opened. IE 9–11 not yet tried. |
+| Netscape 1.x, 4.5, 4.8, 6–9 | Mosaic Netscape 0.91, Navigator 2.02 and 3.0 and Communicator 4.05 and 4.7 are covered from their own programs, plus three manuals and two screenshots. Netscape 6–9 are Mozilla-based (their menus are in Mozilla's code, covered by SeaMonkey). |
+| Opera 2–6, 9–11, 15+ | Opera 8.01 and 12.14 are covered from their menu files. Opera 2–3 at the Archive are 16-bit programs; the 9.x and 10.x installers use an InstallShield format not unpacked here. Opera 15+ is Chromium-based. Otter Browser, an Opera 12 style clone, is also covered. |
 | Safari (menu bar), Camino, OmniWeb, iCab | Closed source. Safari's page context menu is covered from WebKit (2010 and current); its menu bar is not. |
 | Vivaldi, Arc, Sidekick, SigmaOS, Zen, Floorp | Closed source or no menu file in a reachable repository. Vivaldi and Arc features appear in the roadmap from memory and are not in the lineage. |
 | Firefox 1.0–100 (history) | The gecko-dev mirror has no release tags; only the current tree was read. SeaMonkey 2.0 covers 2009. |
@@ -124,15 +136,96 @@ These cannot be read from the build environment, so they have **no census lineag
 | `netscape-4.8-screenshot` | `Personal toolbar/Yellow Pages` | a bookmark to a Netscape web service, not a browser command |
 | `netscape-4.8-screenshot` | `Personal toolbar/Download` | a bookmark to a Netscape web service, not a browser command |
 | `netscape-4.8-screenshot` | `Personal toolbar/Customize` | a bookmark to a Netscape web service, not a browser command |
+| `netscape-0.91-win32` | `32841` | switched FTP listings between short and long form; listings are always shown in full |
+| `netscape-0.91-win32` | `32839` | saved settings and window positions by hand; settings are saved as they change |
+| `netscape-2.02-win32` | `32839` | saved settings and window positions by hand; settings are saved as they change |
+| `netscape-4.05-win32` | `62429` | opened Netscape Conference, a separate voice and whiteboard program |
+| `netscape-4.05-win32` | `62414` | Communicator's component bar switched between its own programs (mail, news, editor) |
+| `netscape-4.05-win32` | `65000` | an empty slot that Communicator filled at run time |
+| `netscape-4.05-win32` | `65200` | an empty slot that Communicator filled at run time |
+| `netscape-4.05-win32` | `34057` | opened a page of the web server's own administration tools |
+| `netscape-4.05-win32` | `36021` | Composer's Format > List > Menu sets an HTML list style |
+| `netscape-4.05-win32` | `32700` | settings of Communicator's floating component bar |
+| `netscape-4.05-win32` | `32702` | settings of Communicator's floating component bar |
+| `netscape-4.05-win32` | `32701` | settings of Communicator's floating component bar |
+| `netscape-4.7-win32` | `65000` | an empty slot that Communicator filled at run time |
+| `netscape-4.7-win32` | `34057` | opened a page of the web server's own administration tools |
+| `netscape-4.7-win32` | `65200` | an empty slot that Communicator filled at run time |
+| `netscape-4.7-win32` | `62414` | Communicator's component bar switched between its own programs (mail, news, editor) |
+| `netscape-4.7-win32` | `62429` | opened Netscape Conference, a separate voice and whiteboard program |
+| `netscape-4.7-win32` | `32700` | settings of Communicator's floating component bar |
+| `netscape-4.7-win32` | `32702` | settings of Communicator's floating component bar |
+| `netscape-4.7-win32` | `32701` | settings of Communicator's floating component bar |
+| `ie-4.0-win32` | `41281` | a placeholder shown when the list is empty |
+| `ie-4.0-win32` | `41525` | part of the Windows desktop shell that Internet Explorer 4 merged into its window, not a browser command |
+| `ie-4.0-win32` | `41251` | part of the Windows desktop shell that Internet Explorer 4 merged into its window, not a browser command |
+| `ie-4.0-win32` | `41266` | part of the Windows desktop shell that Internet Explorer 4 merged into its window, not a browser command |
+| `ie-4.0-win32` | `41794` | an Outlook item type that Outlook adds to Internet Explorer's File > New menu |
+| `ie-4.0-win32` | `41795` | an Outlook item type that Outlook adds to Internet Explorer's File > New menu |
+| `ie-4.0-win32` | `41796` | an Outlook item type that Outlook adds to Internet Explorer's File > New menu |
+| `ie-4.0-win32` | `41798` | started NetMeeting, a separate conferencing program |
+| `ie-4.0-win32` | `41330` | a placeholder shown when the list is empty |
+| `ie-4.0-win32` | `41089` | part of the Windows desktop shell that Internet Explorer 4 merged into its window, not a browser command |
+| `ie-4.0-win32` | `41090` | part of the Windows desktop shell that Internet Explorer 4 merged into its window, not a browser command |
+| `ie-4.0-win32` | `41218` | a Windows or Microsoft program entry, not a browser command |
+| `ie-4.0-win32` | `387` | an Outlook item type that Outlook adds to Internet Explorer's File > New menu |
+| `ie-4.0-win32` | `390` | an Outlook item type that Outlook adds to Internet Explorer's File > New menu |
+| `ie-4.0-win32` | `388` | an Outlook item type that Outlook adds to Internet Explorer's File > New menu |
+| `ie-4.0-win32` | `389` | an Outlook item type that Outlook adds to Internet Explorer's File > New menu |
+| `ie-4.0-win32` | `391` | an Outlook item type that Outlook adds to Internet Explorer's File > New menu |
+| `ie-4.0-win32` | `392` | an Outlook item type that Outlook adds to Internet Explorer's File > New menu |
+| `ie-4.0-win32` | `394` | an Outlook item type that Outlook adds to Internet Explorer's File > New menu |
+| `ie-4.0-win32` | `395` | an Outlook item type that Outlook adds to Internet Explorer's File > New menu |
+| `ie-4.0-win32` | `40996` | part of the Windows desktop shell that Internet Explorer 4 merged into its window, not a browser command |
+| `ie-4.0-win32` | `2239` | Go To (Ctrl+G) in MSHTML's editing menus moves to a line; it does not open an address |
+| `ie-4.0-win32` | `2276` | rewinds an animated image or movie on the page, not page history |
+| `ie-5.0-win32` | `387` | an Outlook item type that Outlook adds to Internet Explorer's File > New menu |
+| `ie-5.0-win32` | `390` | an Outlook item type that Outlook adds to Internet Explorer's File > New menu |
+| `ie-5.0-win32` | `388` | an Outlook item type that Outlook adds to Internet Explorer's File > New menu |
+| `ie-5.0-win32` | `389` | an Outlook item type that Outlook adds to Internet Explorer's File > New menu |
+| `ie-5.0-win32` | `391` | an Outlook item type that Outlook adds to Internet Explorer's File > New menu |
+| `ie-5.0-win32` | `392` | an Outlook item type that Outlook adds to Internet Explorer's File > New menu |
+| `ie-5.0-win32` | `394` | an Outlook item type that Outlook adds to Internet Explorer's File > New menu |
+| `ie-5.0-win32` | `395` | an Outlook item type that Outlook adds to Internet Explorer's File > New menu |
+| `ie-5.0-win32` | `2239` | Go To (Ctrl+G) in MSHTML's editing menus moves to a line; it does not open an address |
+| `ie-5.0-win32` | `2278` | put the page on the Active Desktop, which this browser omits (see the roadmap) |
+| `ie-5.0-win32` | `40996` | part of the Windows desktop shell that Internet Explorer 4 merged into its window, not a browser command |
+| `ie-5.0-win32` | `41525` | part of the Windows desktop shell that Internet Explorer 4 merged into its window, not a browser command |
+| `ie-5.0-win32` | `41251` | part of the Windows desktop shell that Internet Explorer 4 merged into its window, not a browser command |
+| `ie-5.0-win32` | `41266` | part of the Windows desktop shell that Internet Explorer 4 merged into its window, not a browser command |
+| `ie-5.0-win32` | `41794` | an Outlook item type that Outlook adds to Internet Explorer's File > New menu |
+| `ie-5.0-win32` | `41795` | an Outlook item type that Outlook adds to Internet Explorer's File > New menu |
+| `ie-5.0-win32` | `41796` | an Outlook item type that Outlook adds to Internet Explorer's File > New menu |
+| `ie-5.0-win32` | `41798` | started NetMeeting, a separate conferencing program |
+| `ie-5.0-win32` | `41342` | a placeholder shown when the list is empty |
+| `ie-5.0-win32` | `41089` | part of the Windows desktop shell that Internet Explorer 4 merged into its window, not a browser command |
+| `ie-5.0-win32` | `41090` | part of the Windows desktop shell that Internet Explorer 4 merged into its window, not a browser command |
+| `ie-5.0-win32` | `41218` | a Windows or Microsoft program entry, not a browser command |
+| `ie-7-win32` | `40996` | part of the Windows desktop shell that Internet Explorer 4 merged into its window, not a browser command |
+| `ie-7-win32` | `41342` | a placeholder shown when the list is empty |
+| `ie-7-win32` | `41089` | part of the Windows desktop shell that Internet Explorer 4 merged into its window, not a browser command |
+| `ie-7-win32` | `41090` | part of the Windows desktop shell that Internet Explorer 4 merged into its window, not a browser command |
+| `ie-7-win32` | `41251` | part of the Windows desktop shell that Internet Explorer 4 merged into its window, not a browser command |
+| `ie-7-win32` | `41220` | a Windows or Microsoft program entry, not a browser command |
+| `ie-7-win32` | `41218` | a Windows or Microsoft program entry, not a browser command |
+| `ie-7-win32` | `346` | a Windows or Microsoft program entry, not a browser command |
+| `ie-7-win32` | `375` | a Windows or Microsoft program entry, not a browser command |
+| `ie-7-win32` | `2380` | moves to the point of the scroll bar that was clicked; a scroll bar gesture, not a command |
+| `ie-7-win32` | `2287` | part of the Windows desktop shell that Internet Explorer 4 merged into its window, not a browser command |
+| `ie-8-win32` | `41342` | a placeholder shown when the list is empty |
+| `ie-8-win32` | `346` | a Windows or Microsoft program entry, not a browser command |
+| `ie-8-win32` | `375` | a Windows or Microsoft program entry, not a browser command |
+| `ie-8-win32` | `2380` | moves to the point of the scroll bar that was clicked; a scroll bar gesture, not a command |
+| `ie-8-win32` | `2287` | part of the Windows desktop shell that Internet Explorer 4 merged into its window, not a browser command |
 
 ## Work queue
 
-1563 items are not yet linked. They fall into these groups:
+3580 items are not yet linked. They fall into these groups:
 
 | Group | Items |
 |---|---|
+| Other | 2520 |
 | Other Chromium and Brave ids | 569 |
-| Other | 503 |
 | Chromium page context menu entries | 212 |
 | qutebrowser caret, readline, config, debug and prompt commands | 69 |
 | Chromium developer, cast, spelling and assistant entries | 64 |
@@ -145,4 +238,4 @@ To work through it: read an item in [census-unlinked.tsv](census-unlinked.tsv), 
 
 ## Commands without census lineage
 
-`help.whats-new`, `view.menu-layout`, `view.keymap`, `help.menu-archaeology`, `legacy.ftp-open`, `legacy.flash`, `edit.replace-misspelling`, `bookmark.open`, `history.open`, `history.remove`, `tools.download-show`, `tools.search-engine`
+`view.menu-layout`, `view.keymap`, `help.menu-archaeology`, `legacy.flash`, `edit.replace-misspelling`, `history.open`, `history.remove`, `tools.download-show`, `tools.search-engine`

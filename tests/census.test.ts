@@ -322,7 +322,7 @@ describe('the committed census data', () => {
     expect(files.map((f) => f.id)).toEqual(sources.map((s) => s.id));
     for (const s of sources) {
       // A scanned manual has no commit; its pin is the text hash recorded in its census file.
-      if (s.host === 'archive.org' || s.host === 'local') expect(s.commit, s.id).toBeUndefined();
+      if (s.host === 'archive.org' || s.host === 'local' || s.host === 'dump') expect(s.commit, s.id).toBeUndefined();
       else expect(s.commit, s.id).toMatch(/^[0-9a-f]{40}$/);
     }
     for (const f of files) {
@@ -355,7 +355,7 @@ describe('the committed census data', () => {
     const lines = new Map<string, Set<number>>();
     for (const f of files) {
       const key = f.source.host === 'archive.org' ? `archive.org/${f.source.repo}/${f.source.files[0]!.path}`
-        : f.source.host === 'local' ? `commons/${f.source.repo}` : `${f.source.repo}@${f.source.commit.slice(0, 12)}`;
+        : f.source.host === 'local' ? `commons/${f.source.repo}` : f.source.host === 'dump' ? `dump/${f.source.repo}/${f.source.files[0]!.path}` : `${f.source.repo}@${f.source.commit.slice(0, 12)}`;
       lines.set(key, new Set(f.items.map((i) => i.line)));
     }
     let checked = 0;
@@ -367,7 +367,7 @@ describe('the committed census data', () => {
     const r = matchCensus(files, loadNames(), loadOverrides(), ids);
     for (const m of r.matches.slice(0, 400)) {
       const [lin] = lineageFor(m.command, [m]);
-      const [, repo, line] = (/^((?:archive\.org|commons)\/.+)#L(\d+)$/.exec(lin!.ref!) ?? /^(.+?):.*#L(\d+)$/.exec(lin!.ref!))!;
+      const [, repo, line] = (/^((?:archive\.org|commons|dump)\/.+)#L(\d+)$/.exec(lin!.ref!) ?? /^(.+?):.*#L(\d+)$/.exec(lin!.ref!))!;
       expect(lines.get(repo!)?.has(Number(line)), lin!.ref).toBe(true);
       checked++;
     }

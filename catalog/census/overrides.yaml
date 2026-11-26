@@ -114,3 +114,729 @@
 - { source: netscape-4.8-screenshot, key: "Menu bar/Go", command: none, why: "a menu title, not a command" }
 - { source: netscape-4.8-screenshot, key: "Menu bar/Communicator", command: none, why: "a menu title, not a command" }
 - { source: netscape-4.8-screenshot, key: "Menu bar/Help", command: none, why: "a menu title, not a command" }
+
+# ---- menus dumped from programs (Netscape 0.91–4.7, Internet Explorer 4–8, Opera 8 and 12) ----
+- { source: netscape-0.91-win32, key: "32789", command: view.page-source }
+- { source: ie-4.0-win32, key: "41521", command: input.focus-search }
+- { source: ie-5.0-win32, key: "41521", command: input.focus-search }
+- { source: ie-4.0-win32, key: "2239", command: none, why: "Go To (Ctrl+G) in MSHTML's editing menus moves to a line; it does not open an address" }
+- { source: ie-5.0-win32, key: "2239", command: none, why: "Go To (Ctrl+G) in MSHTML's editing menus moves to a line; it does not open an address" }
+- { source: ie-4.0-win32, key: "2276", command: none, why: "rewinds an animated image or movie on the page, not page history" }
+- { source: netscape-4.05-win32, key: "36021", command: none, why: "Composer's Format > List > Menu sets an HTML list style" }
+
+# ---- generated from the rule table for dumped menus (one line per item; each rule was checked against the item's menu and status text) ----
+- { source: netscape-0.91-win32, key: "57602", command: app.close-window }
+- { source: netscape-0.91-win32, key: "32783", command: view.redraw }
+- { source: netscape-0.91-win32, key: "32788", command: view.address-bar }
+- { source: netscape-0.91-win32, key: "32840", command: legacy.directory-pages }
+- { source: netscape-0.91-win32, key: "32841", command: none, why: "switched FTP listings between short and long form; listings are always shown in full" }
+- { source: netscape-0.91-win32, key: "32843", command: view.text-font }
+- { source: netscape-0.91-win32, key: "32844", command: view.text-font }
+- { source: netscape-0.91-win32, key: "32839", command: none, why: "saved settings and window positions by hand; settings are saved as they change" }
+- { source: netscape-0.91-win32, key: "32823", command: legacy.directory-pages }
+- { source: netscape-0.91-win32, key: "32824", command: legacy.directory-pages }
+- { source: netscape-0.91-win32, key: "32842", command: legacy.directory-pages }
+- { source: netscape-0.91-win32, key: "32825", command: module.read-news }
+- { source: netscape-0.91-win32, key: "32826", command: legacy.directory-pages }
+- { source: netscape-0.91-win32, key: "32827", command: nav.search-page }
+- { source: netscape-0.91-win32, key: "32828", command: legacy.directory-pages }
+- { source: netscape-0.91-win32, key: "32829", command: legacy.directory-pages }
+- { source: netscape-0.91-win32, key: "32830", command: legacy.directory-pages }
+- { source: netscape-0.91-win32, key: "32831", command: legacy.directory-pages }
+- { source: netscape-0.91-win32, key: "57664", command: help.about }
+- { source: netscape-0.91-win32, key: "32832", command: help.whats-new }
+- { source: netscape-0.91-win32, key: "32833", command: legacy.directory-pages }
+- { source: netscape-0.91-win32, key: "32835", command: help.faq }
+- { source: netscape-0.91-win32, key: "32836", command: help.feedback }
+- { source: netscape-0.91-win32, key: "32837", command: help.support }
+- { source: netscape-2.02-win32, key: "32879", command: module.compose-mail }
+- { source: netscape-2.02-win32, key: "34366", command: legacy.ftp-upload }
+- { source: netscape-2.02-win32, key: "57602", command: app.close-window }
+- { source: netscape-2.02-win32, key: "32783", command: view.redraw }
+- { source: netscape-2.02-win32, key: "32812", command: bookmark.show }
+- { source: netscape-2.02-win32, key: "32882", command: tools.preferences }
+- { source: netscape-2.02-win32, key: "32884", command: tools.proxy-settings }
+- { source: netscape-2.02-win32, key: "32883", command: tools.preferences }
+- { source: netscape-2.02-win32, key: "32788", command: view.address-bar }
+- { source: netscape-2.02-win32, key: "32840", command: legacy.directory-pages }
+- { source: netscape-2.02-win32, key: "32878", command: legacy.java-console }
+- { source: netscape-2.02-win32, key: "33115", command: view.repair-text-encoding }
+- { source: netscape-2.02-win32, key: "33116", command: view.repair-text-encoding }
+- { source: netscape-2.02-win32, key: "33117", command: view.repair-text-encoding }
+- { source: netscape-2.02-win32, key: "33118", command: view.repair-text-encoding }
+- { source: netscape-2.02-win32, key: "33119", command: view.repair-text-encoding }
+- { source: netscape-2.02-win32, key: "33120", command: view.repair-text-encoding }
+- { source: netscape-2.02-win32, key: "33121", command: view.repair-text-encoding }
+- { source: netscape-2.02-win32, key: "33122", command: view.repair-text-encoding }
+- { source: netscape-2.02-win32, key: "33123", command: view.repair-text-encoding }
+- { source: netscape-2.02-win32, key: "33124", command: view.repair-text-encoding }
+- { source: netscape-2.02-win32, key: "32839", command: none, why: "saved settings and window positions by hand; settings are saved as they change" }
+- { source: netscape-2.02-win32, key: "65000", command: legacy.directory-pages }
+- { source: netscape-2.02-win32, key: "65001", command: legacy.directory-pages }
+- { source: netscape-2.02-win32, key: "65002", command: legacy.directory-pages }
+- { source: netscape-2.02-win32, key: "65004", command: legacy.directory-pages }
+- { source: netscape-2.02-win32, key: "65005", command: legacy.directory-pages }
+- { source: netscape-2.02-win32, key: "65006", command: nav.search-page }
+- { source: netscape-2.02-win32, key: "65007", command: legacy.directory-pages }
+- { source: netscape-2.02-win32, key: "65008", command: legacy.directory-pages }
+- { source: netscape-2.02-win32, key: "65009", command: help.about }
+- { source: netscape-2.02-win32, key: "65018", command: help.about-plugins }
+- { source: netscape-2.02-win32, key: "65010", command: legacy.directory-pages }
+- { source: netscape-2.02-win32, key: "65019", command: legacy.directory-pages }
+- { source: netscape-2.02-win32, key: "65011", command: help.contents }
+- { source: netscape-2.02-win32, key: "65012", command: help.whats-new }
+- { source: netscape-2.02-win32, key: "65013", command: help.faq }
+- { source: netscape-2.02-win32, key: "65014", command: legacy.directory-pages }
+- { source: netscape-2.02-win32, key: "65015", command: help.feedback }
+- { source: netscape-2.02-win32, key: "65016", command: help.support }
+- { source: netscape-2.02-win32, key: "65017", command: legacy.directory-pages }
+- { source: netscape-2.02-win32, key: "34107", command: module.compose-mail }
+- { source: netscape-2.02-win32, key: "34337", command: legacy.directory-pages }
+- { source: netscape-3.0-win32, key: "32879", command: module.compose-mail }
+- { source: netscape-3.0-win32, key: "34366", command: legacy.ftp-upload }
+- { source: netscape-3.0-win32, key: "57602", command: app.close-window }
+- { source: netscape-3.0-win32, key: "32783", command: view.redraw }
+- { source: netscape-3.0-win32, key: "34404", command: page.view-frame-source }
+- { source: netscape-3.0-win32, key: "34405", command: page.info }
+- { source: netscape-3.0-win32, key: "32812", command: bookmark.show }
+- { source: netscape-3.0-win32, key: "32882", command: tools.preferences }
+- { source: netscape-3.0-win32, key: "32884", command: tools.proxy-settings }
+- { source: netscape-3.0-win32, key: "32883", command: tools.preferences }
+- { source: netscape-3.0-win32, key: "32788", command: view.address-bar }
+- { source: netscape-3.0-win32, key: "32840", command: legacy.directory-pages }
+- { source: netscape-3.0-win32, key: "32878", command: legacy.java-console }
+- { source: netscape-3.0-win32, key: "33115", command: view.repair-text-encoding }
+- { source: netscape-3.0-win32, key: "34369", command: view.repair-text-encoding }
+- { source: netscape-3.0-win32, key: "33116", command: view.repair-text-encoding }
+- { source: netscape-3.0-win32, key: "33117", command: view.repair-text-encoding }
+- { source: netscape-3.0-win32, key: "33118", command: view.repair-text-encoding }
+- { source: netscape-3.0-win32, key: "33119", command: view.repair-text-encoding }
+- { source: netscape-3.0-win32, key: "33120", command: view.repair-text-encoding }
+- { source: netscape-3.0-win32, key: "33121", command: view.repair-text-encoding }
+- { source: netscape-3.0-win32, key: "33122", command: view.repair-text-encoding }
+- { source: netscape-3.0-win32, key: "33123", command: view.repair-text-encoding }
+- { source: netscape-3.0-win32, key: "34370", command: view.repair-text-encoding }
+- { source: netscape-3.0-win32, key: "34371", command: view.repair-text-encoding }
+- { source: netscape-3.0-win32, key: "34372", command: view.repair-text-encoding }
+- { source: netscape-3.0-win32, key: "34374", command: view.repair-text-encoding }
+- { source: netscape-3.0-win32, key: "34376", command: view.repair-text-encoding }
+- { source: netscape-3.0-win32, key: "34377", command: view.repair-text-encoding }
+- { source: netscape-3.0-win32, key: "33124", command: view.repair-text-encoding }
+- { source: netscape-3.0-win32, key: "32839", command: view.repair-text-encoding }
+- { source: netscape-3.0-win32, key: "65000", command: legacy.directory-pages }
+- { source: netscape-3.0-win32, key: "65001", command: legacy.directory-pages }
+- { source: netscape-3.0-win32, key: "65002", command: legacy.directory-pages }
+- { source: netscape-3.0-win32, key: "65004", command: legacy.directory-pages }
+- { source: netscape-3.0-win32, key: "65005", command: legacy.directory-pages }
+- { source: netscape-3.0-win32, key: "65006", command: nav.search-page }
+- { source: netscape-3.0-win32, key: "65007", command: legacy.directory-pages }
+- { source: netscape-3.0-win32, key: "65008", command: legacy.directory-pages }
+- { source: netscape-3.0-win32, key: "65199", command: help.about }
+- { source: netscape-3.0-win32, key: "65018", command: help.about-plugins }
+- { source: netscape-3.0-win32, key: "65010", command: legacy.directory-pages }
+- { source: netscape-3.0-win32, key: "65019", command: legacy.directory-pages }
+- { source: netscape-3.0-win32, key: "65011", command: help.contents }
+- { source: netscape-3.0-win32, key: "65012", command: help.whats-new }
+- { source: netscape-3.0-win32, key: "65013", command: help.faq }
+- { source: netscape-3.0-win32, key: "65014", command: legacy.directory-pages }
+- { source: netscape-3.0-win32, key: "65015", command: help.feedback }
+- { source: netscape-3.0-win32, key: "65016", command: help.support }
+- { source: netscape-3.0-win32, key: "65017", command: legacy.directory-pages }
+- { source: netscape-3.0-win32, key: "34107", command: module.compose-mail }
+- { source: netscape-3.0-win32, key: "34337", command: legacy.directory-pages }
+- { source: netscape-4.05-win32, key: "62376", command: view.toolbar }
+- { source: netscape-4.05-win32, key: "34458", command: app.new-window }
+- { source: netscape-4.05-win32, key: "42371", command: module.read-mail }
+- { source: netscape-4.05-win32, key: "34421", command: module.read-news }
+- { source: netscape-4.05-win32, key: "34461", command: module.new-page }
+- { source: netscape-4.05-win32, key: "62429", command: none, why: "opened Netscape Conference, a separate voice and whiteboard program" }
+- { source: netscape-4.05-win32, key: "62414", command: none, why: "Communicator's component bar switched between its own programs (mail, news, editor)" }
+- { source: netscape-4.05-win32, key: "34420", command: module.read-mail }
+- { source: netscape-4.05-win32, key: "34399", command: module.address-book }
+- { source: netscape-4.05-win32, key: "32811", command: bookmark.show }
+- { source: netscape-4.05-win32, key: "65000", command: none, why: "an empty slot that Communicator filled at run time" }
+- { source: netscape-4.05-win32, key: "32878", command: legacy.java-console }
+- { source: netscape-4.05-win32, key: "32909", command: page.certificate-info }
+- { source: netscape-4.05-win32, key: "65200", command: none, why: "an empty slot that Communicator filled at run time" }
+- { source: netscape-4.05-win32, key: "34369", command: module.compose-mail }
+- { source: netscape-4.05-win32, key: "32769", command: file.open-location }
+- { source: netscape-4.05-win32, key: "57602", command: app.close-window }
+- { source: netscape-4.05-win32, key: "32770", command: app.new-window }
+- { source: netscape-4.05-win32, key: "42279", command: module.new-page }
+- { source: netscape-4.05-win32, key: "34483", command: legacy.directory-pages }
+- { source: netscape-4.05-win32, key: "65197", command: legacy.directory-pages }
+- { source: netscape-4.05-win32, key: "34366", command: legacy.ftp-upload }
+- { source: netscape-4.05-win32, key: "34057", command: none, why: "opened a page of the web server's own administration tools" }
+- { source: netscape-4.05-win32, key: "33115", command: view.repair-text-encoding }
+- { source: netscape-4.05-win32, key: "33116", command: view.repair-text-encoding }
+- { source: netscape-4.05-win32, key: "34474", command: view.repair-text-encoding }
+- { source: netscape-4.05-win32, key: "33117", command: view.repair-text-encoding }
+- { source: netscape-4.05-win32, key: "33118", command: view.repair-text-encoding }
+- { source: netscape-4.05-win32, key: "33119", command: view.repair-text-encoding }
+- { source: netscape-4.05-win32, key: "33120", command: view.repair-text-encoding }
+- { source: netscape-4.05-win32, key: "33121", command: view.repair-text-encoding }
+- { source: netscape-4.05-win32, key: "33122", command: view.repair-text-encoding }
+- { source: netscape-4.05-win32, key: "33123", command: view.repair-text-encoding }
+- { source: netscape-4.05-win32, key: "34477", command: view.repair-text-encoding }
+- { source: netscape-4.05-win32, key: "34476", command: view.repair-text-encoding }
+- { source: netscape-4.05-win32, key: "34475", command: view.repair-text-encoding }
+- { source: netscape-4.05-win32, key: "34478", command: view.repair-text-encoding }
+- { source: netscape-4.05-win32, key: "34479", command: view.repair-text-encoding }
+- { source: netscape-4.05-win32, key: "34480", command: view.repair-text-encoding }
+- { source: netscape-4.05-win32, key: "34481", command: view.repair-text-encoding }
+- { source: netscape-4.05-win32, key: "34489", command: view.repair-text-encoding }
+- { source: netscape-4.05-win32, key: "33124", command: view.repair-text-encoding }
+- { source: netscape-4.05-win32, key: "32836", command: view.repair-text-encoding }
+- { source: netscape-4.05-win32, key: "32700", command: none, why: "settings of Communicator's floating component bar" }
+- { source: netscape-4.05-win32, key: "32702", command: none, why: "settings of Communicator's floating component bar" }
+- { source: netscape-4.05-win32, key: "32701", command: none, why: "settings of Communicator's floating component bar" }
+- { source: netscape-4.7-win32, key: "62376", command: view.toolbar }
+- { source: netscape-4.7-win32, key: "34458", command: app.new-window }
+- { source: netscape-4.7-win32, key: "10215", command: module.read-mail }
+- { source: netscape-4.7-win32, key: "34461", command: module.new-page }
+- { source: netscape-4.7-win32, key: "32811", command: bookmark.show }
+- { source: netscape-4.7-win32, key: "65000", command: none, why: "an empty slot that Communicator filled at run time" }
+- { source: netscape-4.7-win32, key: "10222", command: module.read-news }
+- { source: netscape-4.7-win32, key: "34399", command: module.address-book }
+- { source: netscape-4.7-win32, key: "32909", command: page.certificate-info }
+- { source: netscape-4.7-win32, key: "34420", command: module.read-mail }
+- { source: netscape-4.7-win32, key: "10305", command: tools.import-settings }
+- { source: netscape-4.7-win32, key: "32878", command: legacy.java-console }
+- { source: netscape-4.7-win32, key: "34057", command: none, why: "opened a page of the web server's own administration tools" }
+- { source: netscape-4.7-win32, key: "65200", command: none, why: "an empty slot that Communicator filled at run time" }
+- { source: netscape-4.7-win32, key: "34369", command: module.compose-mail }
+- { source: netscape-4.7-win32, key: "32769", command: file.open-location }
+- { source: netscape-4.7-win32, key: "57602", command: app.close-window }
+- { source: netscape-4.7-win32, key: "32770", command: app.new-window }
+- { source: netscape-4.7-win32, key: "42279", command: module.new-page }
+- { source: netscape-4.7-win32, key: "34483", command: legacy.directory-pages }
+- { source: netscape-4.7-win32, key: "65197", command: legacy.directory-pages }
+- { source: netscape-4.7-win32, key: "34366", command: legacy.ftp-upload }
+- { source: netscape-4.7-win32, key: "42600", command: tools.update-offline-pages }
+- { source: netscape-4.7-win32, key: "62377", command: view.address-bar }
+- { source: netscape-4.7-win32, key: "62378", command: view.toggle-bookmarks-bar }
+- { source: netscape-4.7-win32, key: "62414", command: none, why: "Communicator's component bar switched between its own programs (mail, news, editor)" }
+- { source: netscape-4.7-win32, key: "33115", command: view.repair-text-encoding }
+- { source: netscape-4.7-win32, key: "33116", command: view.repair-text-encoding }
+- { source: netscape-4.7-win32, key: "34474", command: view.repair-text-encoding }
+- { source: netscape-4.7-win32, key: "33117", command: view.repair-text-encoding }
+- { source: netscape-4.7-win32, key: "33118", command: view.repair-text-encoding }
+- { source: netscape-4.7-win32, key: "33119", command: view.repair-text-encoding }
+- { source: netscape-4.7-win32, key: "33120", command: view.repair-text-encoding }
+- { source: netscape-4.7-win32, key: "33121", command: view.repair-text-encoding }
+- { source: netscape-4.7-win32, key: "33122", command: view.repair-text-encoding }
+- { source: netscape-4.7-win32, key: "33123", command: view.repair-text-encoding }
+- { source: netscape-4.7-win32, key: "34477", command: view.repair-text-encoding }
+- { source: netscape-4.7-win32, key: "34476", command: view.repair-text-encoding }
+- { source: netscape-4.7-win32, key: "34475", command: view.repair-text-encoding }
+- { source: netscape-4.7-win32, key: "34490", command: view.repair-text-encoding }
+- { source: netscape-4.7-win32, key: "34491", command: view.repair-text-encoding }
+- { source: netscape-4.7-win32, key: "34492", command: view.repair-text-encoding }
+- { source: netscape-4.7-win32, key: "34478", command: view.repair-text-encoding }
+- { source: netscape-4.7-win32, key: "34479", command: view.repair-text-encoding }
+- { source: netscape-4.7-win32, key: "34480", command: view.repair-text-encoding }
+- { source: netscape-4.7-win32, key: "34481", command: view.repair-text-encoding }
+- { source: netscape-4.7-win32, key: "34489", command: view.repair-text-encoding }
+- { source: netscape-4.7-win32, key: "33124", command: view.repair-text-encoding }
+- { source: netscape-4.7-win32, key: "32836", command: view.repair-text-encoding }
+- { source: netscape-4.7-win32, key: "62429", command: none, why: "opened Netscape Conference, a separate voice and whiteboard program" }
+- { source: netscape-4.7-win32, key: "32700", command: none, why: "settings of Communicator's floating component bar" }
+- { source: netscape-4.7-win32, key: "32702", command: none, why: "settings of Communicator's floating component bar" }
+- { source: netscape-4.7-win32, key: "32701", command: none, why: "settings of Communicator's floating component bar" }
+- { source: ie-4.0-win32, key: "41281", command: none, why: "a placeholder shown when the list is empty" }
+- { source: ie-4.0-win32, key: "40993", command: app.close-window }
+- { source: ie-4.0-win32, key: "41522", command: bookmark.show }
+- { source: ie-4.0-win32, key: "41524", command: module.read-feeds }
+- { source: ie-4.0-win32, key: "41525", command: none, why: "part of the Windows desktop shell that Internet Explorer 4 merged into its window, not a browser command" }
+- { source: ie-4.0-win32, key: "41529", command: view.toggle-sidebar }
+- { source: ie-4.0-win32, key: "41504", command: nav.reload }
+- { source: ie-4.0-win32, key: "41500", command: legacy.java-console }
+- { source: ie-4.0-win32, key: "41251", command: none, why: "part of the Windows desktop shell that Internet Explorer 4 merged into its window, not a browser command" }
+- { source: ie-4.0-win32, key: "40994", command: nav.up }
+- { source: ie-4.0-win32, key: "41253", command: nav.home }
+- { source: ie-4.0-win32, key: "41254", command: nav.search-page }
+- { source: ie-4.0-win32, key: "41256", command: legacy.directory-pages }
+- { source: ie-4.0-win32, key: "41258", command: module.read-mail }
+- { source: ie-4.0-win32, key: "41259", command: module.read-news }
+- { source: ie-4.0-win32, key: "41266", command: none, why: "part of the Windows desktop shell that Internet Explorer 4 merged into its window, not a browser command" }
+- { source: ie-4.0-win32, key: "41793", command: module.address-book }
+- { source: ie-4.0-win32, key: "41794", command: none, why: "an Outlook item type that Outlook adds to Internet Explorer's File > New menu" }
+- { source: ie-4.0-win32, key: "41795", command: none, why: "an Outlook item type that Outlook adds to Internet Explorer's File > New menu" }
+- { source: ie-4.0-win32, key: "41796", command: none, why: "an Outlook item type that Outlook adds to Internet Explorer's File > New menu" }
+- { source: ie-4.0-win32, key: "41798", command: none, why: "started NetMeeting, a separate conferencing program" }
+- { source: ie-4.0-win32, key: "41330", command: none, why: "a placeholder shown when the list is empty" }
+- { source: ie-4.0-win32, key: "41089", command: none, why: "part of the Windows desktop shell that Internet Explorer 4 merged into its window, not a browser command" }
+- { source: ie-4.0-win32, key: "41090", command: none, why: "part of the Windows desktop shell that Internet Explorer 4 merged into its window, not a browser command" }
+- { source: ie-4.0-win32, key: "41218", command: none, why: "a Windows or Microsoft program entry, not a browser command" }
+- { source: ie-4.0-win32, key: "41331", command: bookmark.toggle }
+- { source: ie-4.0-win32, key: "275", command: app.new-window }
+- { source: ie-4.0-win32, key: "279", command: module.compose-mail }
+- { source: ie-4.0-win32, key: "387", command: none, why: "an Outlook item type that Outlook adds to Internet Explorer's File > New menu" }
+- { source: ie-4.0-win32, key: "390", command: none, why: "an Outlook item type that Outlook adds to Internet Explorer's File > New menu" }
+- { source: ie-4.0-win32, key: "388", command: none, why: "an Outlook item type that Outlook adds to Internet Explorer's File > New menu" }
+- { source: ie-4.0-win32, key: "389", command: none, why: "an Outlook item type that Outlook adds to Internet Explorer's File > New menu" }
+- { source: ie-4.0-win32, key: "391", command: none, why: "an Outlook item type that Outlook adds to Internet Explorer's File > New menu" }
+- { source: ie-4.0-win32, key: "392", command: none, why: "an Outlook item type that Outlook adds to Internet Explorer's File > New menu" }
+- { source: ie-4.0-win32, key: "394", command: none, why: "an Outlook item type that Outlook adds to Internet Explorer's File > New menu" }
+- { source: ie-4.0-win32, key: "395", command: none, why: "an Outlook item type that Outlook adds to Internet Explorer's File > New menu" }
+- { source: ie-4.0-win32, key: "256", command: file.open-location }
+- { source: ie-4.0-win32, key: "282", command: file.send-link }
+- { source: ie-4.0-win32, key: "283", command: file.send-link }
+- { source: ie-4.0-win32, key: "284", command: tools.create-shortcut }
+- { source: ie-4.0-win32, key: "262", command: page.info }
+- { source: ie-4.0-win32, key: "337", command: help.contents }
+- { source: ie-4.0-win32, key: "341", command: help.check-for-updates }
+- { source: ie-4.0-win32, key: "338", command: legacy.directory-pages }
+- { source: ie-4.0-win32, key: "343", command: help.support }
+- { source: ie-4.0-win32, key: "340", command: legacy.directory-pages }
+- { source: ie-4.0-win32, key: "348", command: legacy.directory-pages }
+- { source: ie-4.0-win32, key: "342", command: legacy.directory-pages }
+- { source: ie-4.0-win32, key: "349", command: legacy.directory-pages }
+- { source: ie-4.0-win32, key: "344", command: legacy.directory-pages }
+- { source: ie-4.0-win32, key: "345", command: legacy.directory-pages }
+- { source: ie-4.0-win32, key: "346", command: legacy.directory-pages }
+- { source: ie-4.0-win32, key: "347", command: legacy.directory-pages }
+- { source: ie-4.0-win32, key: "336", command: help.about }
+- { source: ie-4.0-win32, key: "41261", command: module.compose-mail }
+- { source: ie-4.0-win32, key: "41262", command: file.send-link }
+- { source: ie-4.0-win32, key: "40996", command: none, why: "part of the Windows desktop shell that Internet Explorer 4 merged into its window, not a browser command" }
+- { source: ie-4.0-win32, key: "40997", command: page.info }
+- { source: ie-4.0-win32, key: "41482", command: view.menu-bar }
+- { source: ie-4.0-win32, key: "41478", command: view.toggle-bookmarks-bar }
+- { source: ie-4.0-win32, key: "41030", command: page.edit-in-composer }
+- { source: ie-4.0-win32, key: "1091", command: edit.find }
+- { source: ie-4.0-win32, key: "3169", command: view.text-size }
+- { source: ie-4.0-win32, key: "3168", command: view.text-size }
+- { source: ie-4.0-win32, key: "3167", command: view.text-size }
+- { source: ie-4.0-win32, key: "3166", command: view.text-size }
+- { source: ie-4.0-win32, key: "3165", command: view.text-size }
+- { source: ie-4.0-win32, key: "2145", command: view.text-size }
+- { source: ie-4.0-win32, key: "2144", command: view.text-size }
+- { source: ie-4.0-win32, key: "2143", command: view.text-size }
+- { source: ie-4.0-win32, key: "2142", command: view.text-size }
+- { source: ie-4.0-win32, key: "2141", command: view.text-size }
+- { source: ie-4.0-win32, key: "6041", command: nav.reload }
+- { source: ie-4.0-win32, key: "2260", command: page.info }
+- { source: ie-4.0-win32, key: "2269", command: page.reload-image }
+- { source: ie-4.0-win32, key: "2263", command: file.save-background-image }
+- { source: ie-4.0-win32, key: "2264", command: page.set-desktop-background }
+- { source: ie-4.0-win32, key: "2265", command: edit.copy-background-image }
+- { source: ie-4.0-win32, key: "2261", command: bookmark.toggle }
+- { source: ie-4.0-win32, key: "2268", command: file.save-link }
+- { source: ie-4.0-win32, key: "2273", command: file.print-link }
+- { source: ie-4.0-win32, key: "2270", command: file.save-image }
+- { source: ie-4.0-win32, key: "2262", command: edit.copy-link }
+- { source: ie-4.0-win32, key: "2271", command: page.media-play-pause }
+- { source: ie-5.0-win32, key: "275", command: app.new-window }
+- { source: ie-5.0-win32, key: "279", command: module.compose-mail }
+- { source: ie-5.0-win32, key: "387", command: none, why: "an Outlook item type that Outlook adds to Internet Explorer's File > New menu" }
+- { source: ie-5.0-win32, key: "390", command: none, why: "an Outlook item type that Outlook adds to Internet Explorer's File > New menu" }
+- { source: ie-5.0-win32, key: "388", command: none, why: "an Outlook item type that Outlook adds to Internet Explorer's File > New menu" }
+- { source: ie-5.0-win32, key: "389", command: none, why: "an Outlook item type that Outlook adds to Internet Explorer's File > New menu" }
+- { source: ie-5.0-win32, key: "391", command: none, why: "an Outlook item type that Outlook adds to Internet Explorer's File > New menu" }
+- { source: ie-5.0-win32, key: "392", command: none, why: "an Outlook item type that Outlook adds to Internet Explorer's File > New menu" }
+- { source: ie-5.0-win32, key: "394", command: none, why: "an Outlook item type that Outlook adds to Internet Explorer's File > New menu" }
+- { source: ie-5.0-win32, key: "395", command: none, why: "an Outlook item type that Outlook adds to Internet Explorer's File > New menu" }
+- { source: ie-5.0-win32, key: "256", command: file.open-location }
+- { source: ie-5.0-win32, key: "282", command: file.send-link }
+- { source: ie-5.0-win32, key: "283", command: file.send-link }
+- { source: ie-5.0-win32, key: "284", command: tools.create-shortcut }
+- { source: ie-5.0-win32, key: "374", command: tools.import-settings }
+- { source: ie-5.0-win32, key: "262", command: page.info }
+- { source: ie-5.0-win32, key: "337", command: help.contents }
+- { source: ie-5.0-win32, key: "342", command: help.check-for-updates }
+- { source: ie-5.0-win32, key: "338", command: legacy.directory-pages }
+- { source: ie-5.0-win32, key: "344", command: help.support }
+- { source: ie-5.0-win32, key: "341", command: legacy.directory-pages }
+- { source: ie-5.0-win32, key: "349", command: legacy.directory-pages }
+- { source: ie-5.0-win32, key: "343", command: legacy.directory-pages }
+- { source: ie-5.0-win32, key: "350", command: legacy.directory-pages }
+- { source: ie-5.0-win32, key: "345", command: legacy.directory-pages }
+- { source: ie-5.0-win32, key: "346", command: legacy.directory-pages }
+- { source: ie-5.0-win32, key: "347", command: legacy.directory-pages }
+- { source: ie-5.0-win32, key: "348", command: legacy.directory-pages }
+- { source: ie-5.0-win32, key: "336", command: help.about }
+- { source: ie-5.0-win32, key: "2145", command: view.text-size }
+- { source: ie-5.0-win32, key: "2144", command: view.text-size }
+- { source: ie-5.0-win32, key: "2143", command: view.text-size }
+- { source: ie-5.0-win32, key: "2142", command: view.text-size }
+- { source: ie-5.0-win32, key: "2141", command: view.text-size }
+- { source: ie-5.0-win32, key: "6041", command: nav.reload }
+- { source: ie-5.0-win32, key: "6", command: bookmark.toggle }
+- { source: ie-5.0-win32, key: "2260", command: page.info }
+- { source: ie-5.0-win32, key: "2269", command: page.reload-image }
+- { source: ie-5.0-win32, key: "2263", command: file.save-background-image }
+- { source: ie-5.0-win32, key: "2264", command: page.set-desktop-background }
+- { source: ie-5.0-win32, key: "2265", command: edit.copy-background-image }
+- { source: ie-5.0-win32, key: "2278", command: none, why: "put the page on the Active Desktop, which this browser omits (see the roadmap)" }
+- { source: ie-5.0-win32, key: "2261", command: bookmark.toggle }
+- { source: ie-5.0-win32, key: "2268", command: file.save-link }
+- { source: ie-5.0-win32, key: "2273", command: file.print-link }
+- { source: ie-5.0-win32, key: "2270", command: file.save-image }
+- { source: ie-5.0-win32, key: "2262", command: edit.copy-link }
+- { source: ie-5.0-win32, key: "2271", command: page.media-play-pause }
+- { source: ie-5.0-win32, key: "41258", command: module.read-mail }
+- { source: ie-5.0-win32, key: "41261", command: module.compose-mail }
+- { source: ie-5.0-win32, key: "41262", command: file.send-link }
+- { source: ie-5.0-win32, key: "41259", command: module.read-news }
+- { source: ie-5.0-win32, key: "40996", command: none, why: "part of the Windows desktop shell that Internet Explorer 4 merged into its window, not a browser command" }
+- { source: ie-5.0-win32, key: "40997", command: page.info }
+- { source: ie-5.0-win32, key: "40993", command: app.close-window }
+- { source: ie-5.0-win32, key: "41522", command: bookmark.show }
+- { source: ie-5.0-win32, key: "41525", command: none, why: "part of the Windows desktop shell that Internet Explorer 4 merged into its window, not a browser command" }
+- { source: ie-5.0-win32, key: "40994", command: nav.up }
+- { source: ie-5.0-win32, key: "41253", command: nav.home }
+- { source: ie-5.0-win32, key: "41504", command: nav.reload }
+- { source: ie-5.0-win32, key: "41500", command: legacy.java-console }
+- { source: ie-5.0-win32, key: "41251", command: none, why: "part of the Windows desktop shell that Internet Explorer 4 merged into its window, not a browser command" }
+- { source: ie-5.0-win32, key: "41329", command: tools.preferences }
+- { source: ie-5.0-win32, key: "41256", command: legacy.directory-pages }
+- { source: ie-5.0-win32, key: "41254", command: nav.search-page }
+- { source: ie-5.0-win32, key: "41266", command: none, why: "part of the Windows desktop shell that Internet Explorer 4 merged into its window, not a browser command" }
+- { source: ie-5.0-win32, key: "41793", command: module.address-book }
+- { source: ie-5.0-win32, key: "41794", command: none, why: "an Outlook item type that Outlook adds to Internet Explorer's File > New menu" }
+- { source: ie-5.0-win32, key: "41795", command: none, why: "an Outlook item type that Outlook adds to Internet Explorer's File > New menu" }
+- { source: ie-5.0-win32, key: "41796", command: none, why: "an Outlook item type that Outlook adds to Internet Explorer's File > New menu" }
+- { source: ie-5.0-win32, key: "41798", command: none, why: "started NetMeeting, a separate conferencing program" }
+- { source: ie-5.0-win32, key: "41331", command: bookmark.toggle }
+- { source: ie-5.0-win32, key: "41330", command: bookmark.show }
+- { source: ie-5.0-win32, key: "41342", command: none, why: "a placeholder shown when the list is empty" }
+- { source: ie-5.0-win32, key: "41089", command: none, why: "part of the Windows desktop shell that Internet Explorer 4 merged into its window, not a browser command" }
+- { source: ie-5.0-win32, key: "41090", command: none, why: "part of the Windows desktop shell that Internet Explorer 4 merged into its window, not a browser command" }
+- { source: ie-5.0-win32, key: "41334", command: tools.update-offline-pages }
+- { source: ie-5.0-win32, key: "41218", command: none, why: "a Windows or Microsoft program entry, not a browser command" }
+- { source: ie-5.0-win32, key: "41482", command: view.menu-bar }
+- { source: ie-5.0-win32, key: "41478", command: view.toggle-bookmarks-bar }
+- { source: ie-5.0-win32, key: "1091", command: edit.find }
+- { source: ie-5.0-win32, key: "3169", command: view.text-size }
+- { source: ie-5.0-win32, key: "3168", command: view.text-size }
+- { source: ie-5.0-win32, key: "3167", command: view.text-size }
+- { source: ie-5.0-win32, key: "3166", command: view.text-size }
+- { source: ie-5.0-win32, key: "3165", command: view.text-size }
+- { source: ie-5.0-win32, key: "41257", command: tools.reset-settings }
+- { source: ie-5.0-win32, key: "41219", command: help.tip-of-the-day }
+- { source: ie-5.0-win32, key: "351", command: legacy.directory-pages }
+- { source: ie-7-win32, key: "41258", command: module.read-mail }
+- { source: ie-7-win32, key: "41261", command: module.compose-mail }
+- { source: ie-7-win32, key: "41262", command: file.send-link }
+- { source: ie-7-win32, key: "41259", command: module.read-news }
+- { source: ie-7-win32, key: "40996", command: none, why: "part of the Windows desktop shell that Internet Explorer 4 merged into its window, not a browser command" }
+- { source: ie-7-win32, key: "40997", command: page.info }
+- { source: ie-7-win32, key: "41522", command: bookmark.show }
+- { source: ie-7-win32, key: "41526", command: module.read-feeds }
+- { source: ie-7-win32, key: "40994", command: nav.up }
+- { source: ie-7-win32, key: "41253", command: nav.home }
+- { source: ie-7-win32, key: "41504", command: nav.reload }
+- { source: ie-7-win32, key: "41500", command: legacy.java-console }
+- { source: ie-7-win32, key: "41331", command: bookmark.toggle }
+- { source: ie-7-win32, key: "41344", command: bookmark.add-all-tabs }
+- { source: ie-7-win32, key: "41330", command: bookmark.show }
+- { source: ie-7-win32, key: "41342", command: none, why: "a placeholder shown when the list is empty" }
+- { source: ie-7-win32, key: "41089", command: none, why: "part of the Windows desktop shell that Internet Explorer 4 merged into its window, not a browser command" }
+- { source: ie-7-win32, key: "41090", command: none, why: "part of the Windows desktop shell that Internet Explorer 4 merged into its window, not a browser command" }
+- { source: ie-7-win32, key: "41251", command: none, why: "part of the Windows desktop shell that Internet Explorer 4 merged into its window, not a browser command" }
+- { source: ie-7-win32, key: "41329", command: tools.preferences }
+- { source: ie-7-win32, key: "41220", command: none, why: "a Windows or Microsoft program entry, not a browser command" }
+- { source: ie-7-win32, key: "41218", command: none, why: "a Windows or Microsoft program entry, not a browser command" }
+- { source: ie-7-win32, key: "41511", command: view.menu-bar }
+- { source: ie-7-win32, key: "41478", command: view.toggle-bookmarks-bar }
+- { source: ie-7-win32, key: "41484", command: view.lock-toolbars }
+- { source: ie-7-win32, key: "41510", command: tab.show-all }
+- { source: ie-7-win32, key: "256", command: file.open-location }
+- { source: ie-7-win32, key: "282", command: file.send-link }
+- { source: ie-7-win32, key: "283", command: file.send-link }
+- { source: ie-7-win32, key: "284", command: tools.create-shortcut }
+- { source: ie-7-win32, key: "374", command: tools.import-settings }
+- { source: ie-7-win32, key: "262", command: page.info }
+- { source: ie-7-win32, key: "1091", command: edit.find }
+- { source: ie-7-win32, key: "3169", command: view.text-size }
+- { source: ie-7-win32, key: "3168", command: view.text-size }
+- { source: ie-7-win32, key: "3167", command: view.text-size }
+- { source: ie-7-win32, key: "3166", command: view.text-size }
+- { source: ie-7-win32, key: "3165", command: view.text-size }
+- { source: ie-7-win32, key: "41509", command: page.certificate-info }
+- { source: ie-7-win32, key: "41422", command: legacy.ftp-open }
+- { source: ie-7-win32, key: "41267", command: privacy.clear-data }
+- { source: ie-7-win32, key: "41296", command: privacy.popups }
+- { source: ie-7-win32, key: "41423", command: tools.manage-extensions }
+- { source: ie-7-win32, key: "41421", command: tools.manage-extensions }
+- { source: ie-7-win32, key: "337", command: help.contents }
+- { source: ie-7-win32, key: "41221", command: legacy.directory-pages }
+- { source: ie-7-win32, key: "344", command: help.support }
+- { source: ie-7-win32, key: "346", command: none, why: "a Windows or Microsoft program entry, not a browser command" }
+- { source: ie-7-win32, key: "345", command: help.feedback }
+- { source: ie-7-win32, key: "375", command: none, why: "a Windows or Microsoft program entry, not a browser command" }
+- { source: ie-7-win32, key: "336", command: help.about }
+- { source: ie-7-win32, key: "1540", command: tab.open-link }
+- { source: ie-7-win32, key: "1541", command: bookmark.open }
+- { source: ie-7-win32, key: "42372", command: view.zoom-set }
+- { source: ie-7-win32, key: "42373", command: view.zoom-set }
+- { source: ie-7-win32, key: "42374", command: view.zoom-set }
+- { source: ie-7-win32, key: "42375", command: view.zoom-set }
+- { source: ie-7-win32, key: "42376", command: view.zoom-set }
+- { source: ie-7-win32, key: "42377", command: view.zoom-set }
+- { source: ie-7-win32, key: "42378", command: view.zoom-set }
+- { source: ie-7-win32, key: "42442", command: view.customize-toolbar }
+- { source: ie-7-win32, key: "42443", command: view.customize-toolbar }
+- { source: ie-7-win32, key: "42444", command: view.customize-toolbar }
+- { source: ie-7-win32, key: "42437", command: view.customize-toolbar }
+- { source: ie-7-win32, key: "42406", command: tab.close }
+- { source: ie-7-win32, key: "42404", command: tab.reload-all }
+- { source: ie-7-win32, key: "42450", command: tab.reload-all }
+- { source: ie-7-win32, key: "42480", command: edit.find }
+- { source: ie-7-win32, key: "2145", command: view.text-size }
+- { source: ie-7-win32, key: "2144", command: view.text-size }
+- { source: ie-7-win32, key: "2143", command: view.text-size }
+- { source: ie-7-win32, key: "2142", command: view.text-size }
+- { source: ie-7-win32, key: "2141", command: view.text-size }
+- { source: ie-7-win32, key: "6041", command: nav.reload }
+- { source: ie-7-win32, key: "61440", command: view.zoom-set }
+- { source: ie-7-win32, key: "4092", command: privacy.site-preferences }
+- { source: ie-7-win32, key: "4093", command: privacy.site-preferences }
+- { source: ie-7-win32, key: "2260", command: page.info }
+- { source: ie-7-win32, key: "2269", command: page.reload-image }
+- { source: ie-7-win32, key: "2380", command: none, why: "moves to the point of the scroll bar that was clicked; a scroll bar gesture, not a command" }
+- { source: ie-7-win32, key: "2381", command: view.scroll-top }
+- { source: ie-7-win32, key: "2382", command: view.scroll-bottom }
+- { source: ie-7-win32, key: "2387", command: view.scroll-far-left }
+- { source: ie-7-win32, key: "2388", command: view.scroll-far-right }
+- { source: ie-7-win32, key: "2263", command: file.save-background-image }
+- { source: ie-7-win32, key: "2264", command: page.set-desktop-background }
+- { source: ie-7-win32, key: "2265", command: edit.copy-background-image }
+- { source: ie-7-win32, key: "2261", command: bookmark.toggle }
+- { source: ie-7-win32, key: "2268", command: file.save-link }
+- { source: ie-7-win32, key: "2273", command: file.print-link }
+- { source: ie-7-win32, key: "2270", command: file.save-image }
+- { source: ie-7-win32, key: "2288", command: file.send-image }
+- { source: ie-7-win32, key: "2289", command: file.print-image }
+- { source: ie-7-win32, key: "2287", command: none, why: "part of the Windows desktop shell that Internet Explorer 4 merged into its window, not a browser command" }
+- { source: ie-7-win32, key: "2262", command: edit.copy-link }
+- { source: ie-7-win32, key: "2271", command: page.media-play-pause }
+- { source: ie-7-win32, key: "338", command: legacy.directory-pages }
+- { source: ie-7-win32, key: "341", command: legacy.directory-pages }
+- { source: ie-7-win32, key: "349", command: legacy.directory-pages }
+- { source: ie-7-win32, key: "343", command: legacy.directory-pages }
+- { source: ie-7-win32, key: "350", command: legacy.directory-pages }
+- { source: ie-7-win32, key: "347", command: legacy.directory-pages }
+- { source: ie-7-win32, key: "348", command: legacy.directory-pages }
+- { source: ie-7-win32, key: "37728", command: privacy.site-preferences }
+- { source: ie-7-win32, key: "37729", command: privacy.site-preferences }
+- { source: ie-8-win32, key: "41511", command: view.menu-bar }
+- { source: ie-8-win32, key: "41478", command: view.toggle-bookmarks-bar }
+- { source: ie-8-win32, key: "41481", command: view.toolbar }
+- { source: ie-8-win32, key: "41484", command: view.lock-toolbars }
+- { source: ie-8-win32, key: "1540", command: tab.open-link }
+- { source: ie-8-win32, key: "1541", command: bookmark.open }
+- { source: ie-8-win32, key: "1543", command: bookmark.toggle }
+- { source: ie-8-win32, key: "42454", command: view.toolbar }
+- { source: ie-8-win32, key: "42442", command: view.customize-toolbar }
+- { source: ie-8-win32, key: "42443", command: view.customize-toolbar }
+- { source: ie-8-win32, key: "42444", command: view.customize-toolbar }
+- { source: ie-8-win32, key: "42437", command: view.customize-toolbar }
+- { source: ie-8-win32, key: "42450", command: tab.reload-all }
+- { source: ie-8-win32, key: "256", command: file.open-location }
+- { source: ie-8-win32, key: "282", command: file.send-link }
+- { source: ie-8-win32, key: "283", command: file.send-link }
+- { source: ie-8-win32, key: "284", command: tools.create-shortcut }
+- { source: ie-8-win32, key: "374", command: tools.import-settings }
+- { source: ie-8-win32, key: "262", command: page.info }
+- { source: ie-8-win32, key: "1091", command: edit.find }
+- { source: ie-8-win32, key: "41510", command: tab.show-all }
+- { source: ie-8-win32, key: "41253", command: nav.home }
+- { source: ie-8-win32, key: "41504", command: nav.reload }
+- { source: ie-8-win32, key: "3169", command: view.text-size }
+- { source: ie-8-win32, key: "3168", command: view.text-size }
+- { source: ie-8-win32, key: "3167", command: view.text-size }
+- { source: ie-8-win32, key: "3166", command: view.text-size }
+- { source: ie-8-win32, key: "3165", command: view.text-size }
+- { source: ie-8-win32, key: "3460", command: input.caret-mode }
+- { source: ie-8-win32, key: "41509", command: page.certificate-info }
+- { source: ie-8-win32, key: "41421", command: legacy.ftp-open }
+- { source: ie-8-win32, key: "41500", command: legacy.java-console }
+- { source: ie-8-win32, key: "41331", command: bookmark.toggle }
+- { source: ie-8-win32, key: "41345", command: bookmark.toggle }
+- { source: ie-8-win32, key: "41344", command: bookmark.add-all-tabs }
+- { source: ie-8-win32, key: "41330", command: bookmark.show }
+- { source: ie-8-win32, key: "41342", command: none, why: "a placeholder shown when the list is empty" }
+- { source: ie-8-win32, key: "41267", command: privacy.clear-data }
+- { source: ie-8-win32, key: "41268", command: app.new-private-window }
+- { source: ie-8-win32, key: "41270", command: history.restore-session }
+- { source: ie-8-win32, key: "41423", command: privacy.content-blocking }
+- { source: ie-8-win32, key: "41296", command: privacy.popups }
+- { source: ie-8-win32, key: "41414", command: tools.manage-extensions }
+- { source: ie-8-win32, key: "41271", command: tools.user-agent }
+- { source: ie-8-win32, key: "41272", command: tools.user-agent }
+- { source: ie-8-win32, key: "41530", command: tools.dev-tools }
+- { source: ie-8-win32, key: "41251", command: tools.preferences }
+- { source: ie-8-win32, key: "337", command: help.contents }
+- { source: ie-8-win32, key: "344", command: help.support }
+- { source: ie-8-win32, key: "346", command: none, why: "a Windows or Microsoft program entry, not a browser command" }
+- { source: ie-8-win32, key: "375", command: none, why: "a Windows or Microsoft program entry, not a browser command" }
+- { source: ie-8-win32, key: "41222", command: help.report-broken-site }
+- { source: ie-8-win32, key: "336", command: help.about }
+- { source: ie-8-win32, key: "1542", command: bookmark.open }
+- { source: ie-8-win32, key: "2145", command: view.text-size }
+- { source: ie-8-win32, key: "2144", command: view.text-size }
+- { source: ie-8-win32, key: "2143", command: view.text-size }
+- { source: ie-8-win32, key: "2142", command: view.text-size }
+- { source: ie-8-win32, key: "2141", command: view.text-size }
+- { source: ie-8-win32, key: "6041", command: nav.reload }
+- { source: ie-8-win32, key: "61440", command: view.zoom-set }
+- { source: ie-8-win32, key: "4092", command: privacy.site-preferences }
+- { source: ie-8-win32, key: "4093", command: privacy.site-preferences }
+- { source: ie-8-win32, key: "2260", command: page.info }
+- { source: ie-8-win32, key: "2269", command: page.reload-image }
+- { source: ie-8-win32, key: "2380", command: none, why: "moves to the point of the scroll bar that was clicked; a scroll bar gesture, not a command" }
+- { source: ie-8-win32, key: "2381", command: view.scroll-top }
+- { source: ie-8-win32, key: "2382", command: view.scroll-bottom }
+- { source: ie-8-win32, key: "2387", command: view.scroll-far-left }
+- { source: ie-8-win32, key: "2388", command: view.scroll-far-right }
+- { source: ie-8-win32, key: "2263", command: file.save-background-image }
+- { source: ie-8-win32, key: "2264", command: page.set-desktop-background }
+- { source: ie-8-win32, key: "2265", command: edit.copy-background-image }
+- { source: ie-8-win32, key: "2261", command: bookmark.toggle }
+- { source: ie-8-win32, key: "2268", command: file.save-link }
+- { source: ie-8-win32, key: "2273", command: file.print-link }
+- { source: ie-8-win32, key: "2270", command: file.save-image }
+- { source: ie-8-win32, key: "2288", command: file.send-image }
+- { source: ie-8-win32, key: "2289", command: file.print-image }
+- { source: ie-8-win32, key: "2287", command: none, why: "part of the Windows desktop shell that Internet Explorer 4 merged into its window, not a browser command" }
+- { source: ie-8-win32, key: "2262", command: edit.copy-link }
+- { source: ie-8-win32, key: "2271", command: page.media-play-pause }
+- { source: ie-8-win32, key: "37728", command: privacy.site-preferences }
+- { source: ie-8-win32, key: "37729", command: privacy.site-preferences }
+- { source: ie-8-win32, key: "38046", command: tools.manage-extensions }
+- { source: opera-8.01-win32, key: "50679", command: module.compose-mail }
+- { source: opera-8.01-win32, key: "26528", command: module.compose-mail }
+- { source: opera-8.01-win32, key: "50436", command: module.compose-mail }
+- { source: opera-8.01-win32, key: "50215", command: edit.copy-page-url }
+- { source: opera-8.01-win32, key: "65178", command: file.send-link }
+- { source: opera-8.01-win32, key: "44002", command: view.page-source }
+- { source: opera-8.01-win32, key: "50419", command: edit.copy-image-location }
+- { source: opera-8.01-win32, key: "56064", command: page.image-properties }
+- { source: opera-8.01-win32, key: "67652", command: module.notes }
+- { source: opera-8.01-win32, key: "69620", command: edit.spell-check }
+- { source: opera-8.01-win32, key: "70467", command: page.set-desktop-background }
+- { source: opera-8.01-win32, key: "50542", command: edit.copy-link }
+- { source: opera-8.01-win32, key: "53028", command: tab.new }
+- { source: opera-8.01-win32, key: "50466", command: app.new-window }
+- { source: opera-8.01-win32, key: "50001", command: file.open-file }
+- { source: opera-8.01-win32, key: "50476", command: file.page-setup }
+- { source: opera-8.01-win32, key: "54271", command: file.print-preview }
+- { source: opera-8.01-win32, key: "50725", command: tab.reload-all }
+- { source: opera-8.01-win32, key: "65180", command: file.send-link }
+- { source: opera-8.01-win32, key: "54493", command: privacy.clear-data }
+- { source: opera-8.01-win32, key: "67427", command: module.address-book }
+- { source: opera-8.01-win32, key: "67672", command: module.notes }
+- { source: opera-8.01-win32, key: "50836", command: tools.downloads }
+- { source: opera-8.01-win32, key: "50837", command: history.show }
+- { source: opera-8.01-win32, key: "67430", command: page.links-list }
+- { source: opera-8.01-win32, key: "50498", command: tab.duplicate }
+- { source: opera-8.01-win32, key: "50018", command: app.cascade-windows }
+- { source: opera-8.01-win32, key: "50019", command: app.tile-windows }
+- { source: opera-8.01-win32, key: "51136", command: app.tile-windows }
+- { source: opera-8.01-win32, key: "50564", command: tab.close-all }
+- { source: opera-8.01-win32, key: "67413", command: tab.close-others }
+- { source: opera-8.01-win32, key: "50976", command: legacy.directory-pages }
+- { source: opera-8.01-win32, key: "70398", command: help.check-for-updates }
+- { source: opera-8.01-win32, key: "70700", command: help.report-broken-site }
+- { source: opera-8.01-win32, key: "67414", command: tools.import-settings }
+- { source: opera-8.01-win32, key: "67415", command: tools.import-settings }
+- { source: opera-8.01-win32, key: "67416", command: tools.import-settings }
+- { source: opera-8.01-win32, key: "67662", command: tools.import-settings }
+- { source: opera-8.01-win32, key: "67417", command: bookmark.export }
+- { source: opera-8.01-win32, key: "67663", command: bookmark.export }
+- { source: opera-8.01-win32, key: "67423", command: history.save-session }
+- { source: opera-8.01-win32, key: "70701", command: history.load-session }
+- { source: opera-8.01-win32, key: "70477", command: bookmark.export }
+- { source: opera-8.01-win32, key: "52251", command: tools.import-settings }
+- { source: opera-8.01-win32, key: "52254", command: tools.import-settings }
+- { source: opera-8.01-win32, key: "52255", command: tools.import-settings }
+- { source: opera-8.01-win32, key: "67669", command: tools.import-settings }
+- { source: opera-8.01-win32, key: "52256", command: bookmark.export }
+- { source: opera-8.01-win32, key: "67670", command: bookmark.export }
+- { source: opera-8.01-win32, key: "52200", command: privacy.popups }
+- { source: opera-8.01-win32, key: "52202", command: privacy.popups }
+- { source: opera-8.01-win32, key: "67424", command: privacy.popups }
+- { source: opera-8.01-win32, key: "52201", command: privacy.popups }
+- { source: opera-8.01-win32, key: "52206", command: legacy.java-applets }
+- { source: opera-8.01-win32, key: "52209", command: privacy.cookies }
+- { source: opera-8.01-win32, key: "52215", command: privacy.referrer }
+- { source: opera-8.01-win32, key: "52216", command: tools.proxy-settings }
+- { source: opera-8.01-win32, key: "51730", command: view.zoom-set }
+- { source: opera-8.01-win32, key: "51731", command: view.zoom-set }
+- { source: opera-8.01-win32, key: "51732", command: view.zoom-set }
+- { source: opera-8.01-win32, key: "51733", command: view.zoom-set }
+- { source: opera-8.01-win32, key: "51734", command: view.zoom-set }
+- { source: opera-8.01-win32, key: "51735", command: view.zoom-set }
+- { source: opera-8.01-win32, key: "51736", command: view.zoom-set }
+- { source: opera-8.01-win32, key: "69698", command: tools.downloads }
+- { source: opera-8.01-win32, key: "67484", command: tab.close-others }
+- { source: opera-12.14-win32, key: MI_IDM_NEW_MAIL_WINDOW, command: module.compose-mail }
+- { source: opera-12.14-win32, key: DI_IDSTR_M2_MAILTOOLBAR_COMPOSE, command: module.compose-mail }
+- { source: opera-12.14-win32, key: MI_IDM_MENUGET_MAIL, command: module.compose-mail }
+- { source: opera-12.14-win32, key: M_COPY_TO_NOTE, command: module.notes }
+- { source: opera-12.14-win32, key: MI_IDM_POPUP_ADDRESS, command: edit.copy-page-url }
+- { source: opera-12.14-win32, key: MI_IDM_SEND_URL_EMAIL, command: file.send-link }
+- { source: opera-12.14-win32, key: MI_IDM_Kilde, command: view.page-source }
+- { source: opera-12.14-win32, key: M_BLOCK_CONTENT, command: privacy.content-blocking }
+- { source: opera-12.14-win32, key: M_EDIT_SITE_PREFERENCES, command: privacy.site-preferences }
+- { source: opera-12.14-win32, key: M_INTERNAL_SPELLCHECK_ENABLE, command: edit.spell-check }
+- { source: opera-12.14-win32, key: MI_IDM_COPY_FIG_ADDRESS, command: edit.copy-image-location }
+- { source: opera-12.14-win32, key: MI_IDM_SHOW_FIGURE_PROPERTIES, command: page.image-properties }
+- { source: opera-12.14-win32, key: D_SPELL_CHECK_TITLE, command: edit.spell-check }
+- { source: opera-12.14-win32, key: M_DOCUMENT_BACKGROUND_MENU_USE_ON_DESKTOP, command: page.set-desktop-background }
+- { source: opera-12.14-win32, key: MI_IDM_POPUP_MAILTO_COPY_EMAIL_ADDRESS, command: edit.copy-link }
+- { source: opera-12.14-win32, key: M_VIEW_HOTLIST_MENU_NOTES, command: module.notes }
+- { source: opera-12.14-win32, key: M_VIEW_HOTLIST_MENU_CONTACTS, command: module.address-book }
+- { source: opera-12.14-win32, key: M_MENU_SHOW_MENU_BAR, command: view.menu-bar }
+- { source: opera-12.14-win32, key: MI_IDM_PRINT_SCALEMARGINS, command: file.page-setup }
+- { source: opera-12.14-win32, key: MI_IDM_PRINT_PREVIEW_MODE, command: file.print-preview }
+- { source: opera-12.14-win32, key: MI_IDM_CLEAR_PERSONAL_INFORMATION, command: privacy.clear-data }
+- { source: opera-12.14-win32, key: MI_IDM_NEW, command: app.new-window }
+- { source: opera-12.14-win32, key: MI_IDM_MENU_NEW_PRIVATE_WINDOW, command: app.new-private-window }
+- { source: opera-12.14-win32, key: MI_IDM_MENU_PAGEBAR_REMOVE, command: tab.close }
+- { source: opera-12.14-win32, key: MI_IDM_RELOAD_ALL, command: tab.reload-all }
+- { source: opera-12.14-win32, key: MI_IDM_SEND_URL_EMAIL2, command: file.send-link }
+- { source: opera-12.14-win32, key: MI_IDM_HistoryWindow, command: history.show }
+- { source: opera-12.14-win32, key: MI_IDM_DownloadWindow, command: tools.downloads }
+- { source: opera-12.14-win32, key: M_VIEW_HOTLIST_MENU_LINKS, command: page.links-list }
+- { source: opera-12.14-win32, key: M_BROWSER_WINDOW_MENU_CLOSEALL_BUT_ACTIVE, command: tab.close-others }
+- { source: opera-12.14-win32, key: MI_IDM_CLONE_WINDOW, command: tab.duplicate }
+- { source: opera-12.14-win32, key: MI_IDM_Cascade, command: app.cascade-windows }
+- { source: opera-12.14-win32, key: MI_IDM_Tile, command: app.tile-windows }
+- { source: opera-12.14-win32, key: MI_IDM_TILEHORIZONTAL, command: app.tile-windows }
+- { source: opera-12.14-win32, key: MI_IDM_CloseAll, command: tab.close-all }
+- { source: opera-12.14-win32, key: M_NEW_VERSION_CHECK, command: help.check-for-updates }
+- { source: opera-12.14-win32, key: M_BROWSER_HELP_MENU_REPORT, command: help.report-broken-site }
+- { source: opera-12.14-win32, key: M_BOOKM_ITEM_FILE_MENU_IMP_OPERA_BOOKM, command: tools.import-settings }
+- { source: opera-12.14-win32, key: M_BOOKM_ITEM_FILE_MENU_IMP_NETSC_BOOKM, command: tools.import-settings }
+- { source: opera-12.14-win32, key: M_BOOKM_ITEM_FILE_MENU_IMP_EXPLOR_FAVOR, command: tools.import-settings }
+- { source: opera-12.14-win32, key: M_IMPORT_KONQUEROR_BOOKMARKS, command: tools.import-settings }
+- { source: opera-12.14-win32, key: M_BOOKM_ITEM_FILE_MENU_EXP_OPERA_BOOKM, command: bookmark.export }
+- { source: opera-12.14-win32, key: M_EXPORT_BOOKMARKS_AS_HTML, command: bookmark.export }
+- { source: opera-12.14-win32, key: M_BROWSER_FILE_MENU_SESSIONS_SAVE_SESS, command: history.save-session }
+- { source: opera-12.14-win32, key: M_BROWSER_SESSION_MENU_MANAGE, command: history.load-session }
+- { source: opera-12.14-win32, key: M_IMPORTEXPORT_EXPORT_BOOKMARKS_AS_HTML, command: bookmark.export }
+- { source: opera-12.14-win32, key: MI_IDM_IMPORT_OPERA_BOOKMARKS, command: tools.import-settings }
+- { source: opera-12.14-win32, key: MI_IDM_IMPORT_NETSCAPE_BOOKMARKS, command: tools.import-settings }
+- { source: opera-12.14-win32, key: MI_IDM_IMPORT_IEXPLORER_FAVORITES, command: tools.import-settings }
+- { source: opera-12.14-win32, key: M_KONQUEROR_BOOKMARKS, command: tools.import-settings }
+- { source: opera-12.14-win32, key: MI_IDM_EXPORT_OPERA_BOOKMARKS, command: bookmark.export }
+- { source: opera-12.14-win32, key: M_BOOKMARKS_AS_HTML, command: bookmark.export }
+- { source: opera-12.14-win32, key: MI_IDM_CONTROL_MENU_ACCEPT_POPUPS, command: privacy.popups }
+- { source: opera-12.14-win32, key: MI_IDM_CONTROL_MENU_OPEN_POPUPS_IN_BACKGROUND, command: privacy.popups }
+- { source: opera-12.14-win32, key: M_QUICKPREF_POPUP_MENU_REQUESTED_POPUP_ONLY, command: privacy.popups }
+- { source: opera-12.14-win32, key: MI_IDM_CONTROL_MENU_REFUSE_POPUPS, command: privacy.popups }
+- { source: opera-12.14-win32, key: MI_IDM_CONTROL_MENU_ENABLE_COOKIES, command: privacy.cookies }
+- { source: opera-12.14-win32, key: MI_IDM_CONTROL_MENU_ENABLE_REFERRER, command: privacy.referrer }
+- { source: opera-12.14-win32, key: MI_IDM_CONTROL_MENU_ENABLE_PROXY, command: tools.proxy-settings }
+- { source: opera-12.14-win32, key: MI_IDM_ZOOM_50, command: view.zoom-set }
+- { source: opera-12.14-win32, key: MI_IDM_ZOOM_80, command: view.zoom-set }
+- { source: opera-12.14-win32, key: MI_IDM_ZOOM_90, command: view.zoom-set }
+- { source: opera-12.14-win32, key: MI_IDM_ZOOM_100, command: view.zoom-set }
+- { source: opera-12.14-win32, key: MI_IDM_ZOOM_120, command: view.zoom-set }
+- { source: opera-12.14-win32, key: MI_IDM_ZOOM_150, command: view.zoom-set }
+- { source: opera-12.14-win32, key: MI_IDM_ZOOM_200, command: view.zoom-set }
+- { source: opera-12.14-win32, key: M_TRANSFERS_NOTIFY_POPUP_MENU_SHOW_TRANSFERS, command: tools.downloads }
+- { source: opera-12.14-win32, key: M_PAGEBAR_POPUP_MENU_CLOSE_ALL_BUT_ACTIVE, command: tab.close-others }
