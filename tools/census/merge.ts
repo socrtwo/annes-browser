@@ -102,6 +102,8 @@ export function lineageFor(command: string, matches: readonly Match[]): Lineage[
           ? `commons/${source.source.repo}#L${item.line}`
           : source.source.host === 'dump'
             ? `dump/${source.source.repo}/${item.file ?? source.source.files[0]!.path}#L${item.line}`
+            : source.source.host === 'machine'
+              ? `machine/${item.file ?? source.source.files[0]!.path}#L${item.line}`
           : `${source.source.repo}@${source.source.commit.slice(0, 12)}:${item.file ?? source.source.files[0]!.path}#L${item.line}`,
     });
   }

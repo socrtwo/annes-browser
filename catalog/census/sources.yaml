@@ -591,3 +591,39 @@
   files:
     - path: vivaldi-6.9-linux-menus.txt
       role: primary
+- id: netscape-1.0n-screenshot
+  browser: Netscape Navigator
+  version: 1.0N
+  released: 1994
+  platform: Windows
+  host: local
+  repo: Netscape-1.0N.png
+  ref: "screenshot: Wikimedia Commons, read 2026-11-26"
+  extractor: transcription
+  files:
+    - path: netscape-1.0n-screenshot.txt
+      role: primary
+- id: netscape-1.22-screenshot
+  browser: Netscape Navigator
+  version: "1.22"
+  released: 1995
+  platform: Windows
+  host: local
+  repo: Netscape_Navigator_1.22_Screenshot.png
+  ref: "screenshot: Wikimedia Commons, read 2026-11-26"
+  extractor: transcription
+  files:
+    - path: netscape-1.22-screenshot.txt
+      role: primary
+- id: ie-11-win32
+  browser: Internet Explorer
+  version: "11"
+  released: 2013
+  platform: Windows 7
+  host: dump
+  repo: internet-explorer-11-setup-for-windows-7
+  ref: "program menus: IE11 setup (IEAK package with Microsoft's redistributable)"
+  extractor: rc-menu
+  files:
+    - path: ie-11-win32-menus.txt
+      role: primary

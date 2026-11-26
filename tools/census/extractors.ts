@@ -420,14 +420,17 @@ const manualPhrases: Extractor = (files, spec) => {
 
 // ---------------------------------------------------------------- Screenshot transcriptions
 
-/** Lines `<where> | <label>`; `#` lines are the header (image address, hash, who read it). */
+/**
+ * Lines `<where> | <label>` or `<where> | <label> | <shortcut>`; `#` lines are the header (image
+ * address or program, hash, who read it) and lines left commented out for review.
+ */
 const transcription: Extractor = (files, spec) => {
   const out: CensusItem[] = [];
   lines(primary(files, spec)).forEach((l, i) => {
     if (l.startsWith('#') || !l.trim()) return;
-    const m = /^([^|]+?)\s*\|\s*(.+?)\s*$/.exec(l);
+    const m = /^([^|]+?)\s*\|\s*([^|]+?)\s*(?:\|\s*(.*?)\s*)?$/.exec(l);
     if (!m) return;
-    out.push(item({ key: `${m[1]}/${m[2]}`, label: m[2]!, menu: m[1]!, line: i + 1, text: l }));
+    out.push(item({ key: `${m[1]}/${m[2]}`, label: m[2]!, menu: m[1]!, ...(m[3] ? { shortcut: m[3] } : {}), line: i + 1, text: l }));
   });
   return out;
 };

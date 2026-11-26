@@ -6,8 +6,8 @@ The census records which commands real browsers offered, read from their own sou
 
 ## Summary
 
-- **47 browser versions** from **26 browsers**, **6891 items** read.
-- **2882 items (42%)** are linked to a canonical command; **128** were read and deliberately not linked; **3881** are not yet linked (work queue: [census-unlinked.tsv](census-unlinked.tsv)).
+- **50 browser versions** from **26 browsers**, **7245 items** read.
+- **3030 items (42%)** are linked to a canonical command; **135** were read and deliberately not linked; **4080** are not yet linked (work queue: [census-unlinked.tsv](census-unlinked.tsv)).
 - **328 canonical commands**: 317 have lineage read from source, 4 have only lineage written from memory (marked *recalled*), 7 have none yet.
 
 ## What a census entry proves, and what it does not
@@ -55,7 +55,7 @@ The census records which commands real browsers offered, read from their own sou
 | `wine-ie-recreation` | Wine re-creation of Internet Explorer | development snapshot | 2026 | [wine-mirror/wine@274fcfa969](https://github.com/wine-mirror/wine/tree/274fcfa9691bf3b7f24c0833ad33e9d57c3df65f) | 13 | 13 (100%) | 0 | 0 |
 | `safari-5-webkit` | Safari (WebKit context menu) | 5.0 (WebKit 533.16) | 2010 | [apple-oss-distributions/WebKit@0c0e67aa15](https://github.com/apple-oss-distributions/WebKit/tree/0c0e67aa1536fa31e575605d4da1309f50d765ad) | 54 | 26 (48%) | 0 | 28 |
 | `safari-current-webkit` | Safari (WebKit context menu) | development snapshot | 2026 | [apple-oss-distributions/WebKit@2331c43da3](https://github.com/apple-oss-distributions/WebKit/tree/2331c43da3e7123e51ba8682d7ec023b8591460e) | 61 | 37 (61%) | 0 | 24 |
-| `netscape-0.92-screenshot` | Netscape | 0.92 Beta | 1994 | screenshot: [Commons Netscape_0.92_Screenshot.png](https://commons.wikimedia.org/wiki/File:Netscape_0.92_Screenshot.png) | 22 | 13 (59%) | 9 | 0 |
+| `netscape-0.92-screenshot` | Netscape | 0.92 Beta | 1994 | screenshot: [Commons Netscape_0.92_Screenshot.png](https://commons.wikimedia.org/wiki/File:Netscape_0.92_Screenshot.png) | 22 | 14 (64%) | 8 | 0 |
 | `netscape-4.8-screenshot` | Netscape Communicator | 4.8 | 2002 | screenshot: [Commons Netscape_Communicator_4.8_Screenshot.png](https://commons.wikimedia.org/wiki/File:Netscape_Communicator_4.8_Screenshot.png) | 26 | 10 (38%) | 16 | 0 |
 | `netscape-0.91-win32` | Mosaic Netscape | 0.91 beta | 1994 | program's own menus: [archive.org/n32e091](https://archive.org/details/n32e091) | 51 | 49 (96%) | 2 | 0 |
 | `netscape-2.02-win32` | Netscape Navigator | 2.02 | 1996 | program's own menus: [archive.org/n32e202](https://archive.org/details/n32e202) | 172 | 80 (47%) | 1 | 91 |
@@ -73,6 +73,9 @@ The census records which commands real browsers offered, read from their own sou
 | `konqueror-4.14-handbook` | Konqueror (handbook) | 4.14 | 2014 | [KDE/kde-baseapps@dcc45ea70b](https://github.com/KDE/kde-baseapps/tree/dcc45ea70b0b408c8017c6f423b978fe6ca6163a) | 113 | 35 (31%) | 0 | 78 |
 | `vivaldi-3.4-linux` | Vivaldi | 3.4 | 2020 | program's own menus: [archive.org/archlinux_pkg_vivaldi](https://archive.org/details/archlinux_pkg_vivaldi) | 126 | 90 (71%) | 0 | 36 |
 | `vivaldi-6.9-linux` | Vivaldi | 6.9 | 2024 | program's own menus: [archive.org/archlinux_pkg_vivaldi](https://archive.org/details/archlinux_pkg_vivaldi) | 324 | 163 (50%) | 0 | 161 |
+| `netscape-1.0n-screenshot` | Netscape Navigator | 1.0N | 1994 | screenshot: [Commons Netscape-1.0N.png](https://commons.wikimedia.org/wiki/File:Netscape-1.0N.png) | 22 | 20 (91%) | 2 | 0 |
+| `netscape-1.22-screenshot` | Netscape Navigator | 1.22 | 1995 | screenshot: [Commons Netscape_Navigator_1.22_Screenshot.png](https://commons.wikimedia.org/wiki/File:Netscape_Navigator_1.22_Screenshot.png) | 15 | 13 (87%) | 2 | 0 |
+| `ie-11-win32` | Internet Explorer | 11 | 2013 | program's own menus: [archive.org/internet-explorer-11-setup-for-windows-7](https://archive.org/details/internet-explorer-11-setup-for-windows-7) | 317 | 114 (36%) | 4 | 199 |
 
 ## Not covered
 
@@ -124,7 +127,6 @@ These cannot be read from the build environment, so they have **no census lineag
 | `netscape-0.92-screenshot` | `Menu bar/Options` | a menu title, not a command |
 | `netscape-0.92-screenshot` | `Menu bar/Directory` | a menu title, not a command |
 | `netscape-0.92-screenshot` | `Menu bar/Help` | a menu title, not a command |
-| `netscape-0.92-screenshot` | `Directory buttons/Newsgroups` | opened the news reader; no news reader command exists yet |
 | `netscape-4.8-screenshot` | `Menu bar/File` | a menu title, not a command |
 | `netscape-4.8-screenshot` | `Menu bar/Edit` | a menu title, not a command |
 | `netscape-4.8-screenshot` | `Menu bar/View` | a menu title, not a command |
@@ -222,14 +224,22 @@ These cannot be read from the build environment, so they have **no census lineag
 | `ie-8-win32` | `375` | a Windows or Microsoft program entry, not a browser command |
 | `ie-8-win32` | `2380` | moves to the point of the scroll bar that was clicked; a scroll bar gesture, not a command |
 | `ie-8-win32` | `2287` | part of the Windows desktop shell that Internet Explorer 4 merged into its window, not a browser command |
+| `netscape-1.0n-screenshot` | `Menu bar/File` | a menu title, not a command |
+| `netscape-1.0n-screenshot` | `Menu bar/Directory` | a menu title, not a command |
+| `netscape-1.22-screenshot` | `Menu bar/File` | a menu title, not a command |
+| `netscape-1.22-screenshot` | `Menu bar/Directory` | a menu title, not a command |
+| `ie-11-win32` | `41342` | a placeholder shown when the list is empty |
+| `ie-11-win32` | `375` | a Windows or Microsoft program entry, not a browser command |
+| `ie-11-win32` | `2380` | moves to the point of the scroll bar that was clicked; a scroll bar gesture, not a command |
+| `ie-11-win32` | `2287` | part of the Windows desktop shell that Internet Explorer 4 merged into its window, not a browser command |
 
 ## Work queue
 
-3881 items are not yet linked. They fall into these groups:
+4080 items are not yet linked. They fall into these groups:
 
 | Group | Items |
 |---|---|
-| Other | 2821 |
+| Other | 3020 |
 | Other Chromium and Brave ids | 569 |
 | Chromium page context menu entries | 212 |
 | qutebrowser caret, readline, config, debug and prompt commands | 69 |

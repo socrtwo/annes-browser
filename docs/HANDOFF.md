@@ -76,9 +76,18 @@ Adding a browser version:
 2. `npm run census -- pin`, then `npm run census -- extract <id>`, then `npm run census:verify <id>`.
 3. Link its items as above.
 
+Menus from programs (`host: dump`):
+
+1. Find the installer at the Internet Archive (`archive.org/advancedsearch.php`, then `archive.org/metadata/<item>`). Skip uploads named as cracks or with spam titles.
+2. Unpack: `7z`, `cabextract` (multi-volume cabinets), `innoextract`, `tar --zstd`; InstallShield 3 `.z` archives with `tools/census/is3.ts` (see tests/binaries.test.ts for use). Find the files with menus by scanning with `readResources` from `tools/census/pe.ts`.
+3. `node tools/pe-dump.ts [--no-status-text] <out.txt> <archive download URL> "<how it was unpacked>" <program>...`. Use `--no-status-text` unless the program is MFC-style (Netscape is; Internet Explorer is not: its string table ids do not match its command ids). Opera 7–12: `tools/opera-dump.ts`; Vivaldi: `tools/vivaldi-dump.ts`.
+4. Add the source (`host: dump`, `repo:` the Archive item, `extractor: rc-menu`), extract, verify, then `python3 tools/census/dump-rules.py` to propose overrides; review before appending.
+
+Not possible here: 16-bit programs (Netscape 1.x, Opera 2–3, IE 1–3 builds at the Archive), InstallShield 5+ "stream" installers (Opera 9–10), and the password-encrypted IE collection (deliberately not opened).
+
 Things that need a decision, not just effort:
 
-- **Closed-source browsers.** Internet Explorer, Opera, Safari, Netscape 4, Vivaldi cannot be read directly. Partly covered now: scanned Netscape manuals (archive.org), Wine's IE menu re-creation, WebKit's context-menu strings for Safari, and screenshot transcriptions (`host: local`, files in `catalog/census/transcriptions/`, one `<where> | <label>` per line, header with the Commons address and image sha256). Transcribe only what is legible; menu titles and toolbar captions go to overrides as `none`. Do not enter them from memory: that is what `recalled` is for, and it is not evidence.
+- **Closed-source browsers.** Netscape 0.91–4.7, IE 4–11 (not 6, 9, 10), Opera 8 and 12 and Vivaldi 3.4 and 6.9 are now read from their programs. Safari's menu bar and current Opera and Edge need a machine (docs/MENU-DUMPS.md). Partly covered now: scanned Netscape manuals (archive.org), Wine's IE menu re-creation, WebKit's context-menu strings for Safari, and screenshot transcriptions (`host: local`, files in `catalog/census/transcriptions/`, one `<where> | <label>` per line, header with the Commons address and image sha256). Transcribe only what is legible; menu titles and toolbar captions go to overrides as `none`. Do not enter them from memory: that is what `recalled` is for, and it is not evidence.
 - **Release years** in `sources.yaml` are from memory. Check them against release notes.
 - **Which unlinked items matter.** About half of Chromium's ids are internal. Decide whether to link the user-facing remainder or leave the tail.
 

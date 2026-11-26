@@ -1,0 +1,28 @@
+# Transcription of a screenshot. Each line: <where in the window> | <label as shown>.
+# image: https://commons.wikimedia.org/wiki/File:Netscape-1.0N.png
+# fetched: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Netscape-1.0N.png/960px-Netscape-1.0N.png
+# sha256 of the 960px image read: 0c0039a58ea2b690839ff40e9d3a66979db04757672174cbeb5c7fb4b3f20f5a
+# read on 2026-11-26 by Claude (vision). Shows the window of Netscape Navigator version 1.0N (1994), Windows.
+# Only what is visible: menu titles, toolbar buttons and directory buttons. No menu is open.
+Menu bar | File
+Menu bar | Edit
+Menu bar | View
+Menu bar | Go
+Menu bar | Bookmarks
+Menu bar | Options
+Menu bar | Directory
+Menu bar | Help
+Toolbar | Back
+Toolbar | Forward
+Toolbar | Home
+Toolbar | Reload
+Toolbar | Images
+Toolbar | Open
+Toolbar | Find
+Toolbar | Stop
+Directory buttons | Welcome
+Directory buttons | What's New!
+Directory buttons | What's Cool!
+Directory buttons | Questions
+Directory buttons | Net Search
+Directory buttons | Net Directory

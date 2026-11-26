@@ -5,6 +5,14 @@ All notable changes to this project are documented here. Format: [Keep a Changel
 ## [Unreleased]
 
 ### Added
+- 2026-11-26: Census from the browsers' own programs.
+  - Installers from the Internet Archive are unpacked and their menus read without running anything: Mosaic Netscape 0.91, Navigator 2.02 and 3.0, Communicator 4.05 and 4.7, Internet Explorer 4, 5, 7, 8 and 11 (Windows menu resources), Opera 8.01 and 12.14 (menu file), Vivaldi 3.4 and 6.9 (menu files, labels from its command table).
+  - New readers, all without dependencies: Windows PE resources (menus, MENUEX, accelerators, string tables), PKWARE DCL implode, InstallShield 3 archives.
+  - Konqueror 4.0 and 4.14 from kde-baseapps (menu file, and the handbook through a new DocBook extractor).
+  - Screenshots of Netscape 1.0N and 1.22 transcribed.
+  - Scripts to read menus on a contributor's own computer (`tools/menu-dump/`, macOS for any app, Windows for classic menus) and a `machine` source kind; see docs/MENU-DUMPS.md. Not yet run on a real machine.
+  - 23 new commands (328 in all). Linked items 1,374 → 3,030; rule table for dumped menus in `tools/census/dump-rules.py`.
+  - 13 new unit tests.
 - 2026-11-26: Census sources for closed-source browsers, indirectly.
   - Wine's re-creation of Internet Explorer's main menu (`ieframe.rc`, 13 items), read by a new Windows resource-script extractor.
   - Safari's page context menu from WebKit, Apple's open engine: the 2010 tag (Safari 5, 54 items) and current (61 items), read by a new extractor for WebKit's localized strings.

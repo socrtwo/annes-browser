@@ -158,3 +158,11 @@ describe('Vivaldi menu files', () => {
     ]);
   });
 });
+
+describe('transcriptions from scripts', () => {
+  it('read an optional shortcut column, and skip lines left for review', () => {
+    const t = '# header\nFile | New Window | Cmd+N\nFile | Close\n#? History | Some Page I Visited\n';
+    const got = EXTRACTORS['transcription']({ 't.txt': t }, { files: [{ path: 't.txt', role: 'primary' }] } as never);
+    expect(got.map((i) => [i.key, i.label, i.menu, i.shortcut])).toEqual([['File/New Window', 'New Window', 'File', 'Cmd+N'], ['File/Close', 'Close', 'File', undefined]]);
+  });
+});

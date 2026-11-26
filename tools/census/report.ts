@@ -72,7 +72,9 @@ export function writeCensusReports(files: readonly CensusFile[], catalog: Catalo
   for (const f of files) {
     const p = perSource(f);
     const sha = f.source.commit.slice(0, 10);
-    const where = f.source.host === 'dump'
+    const where = f.source.host === 'machine'
+      ? `menus read on a contributor's computer: ${cell(f.source.repo)}`
+      : f.source.host === 'dump'
       ? `program's own menus: [archive.org/${cell(f.source.repo)}](https://archive.org/details/${f.source.repo})`
       : f.source.host === 'local'
       ? `screenshot: [Commons ${cell(f.source.repo)}](https://commons.wikimedia.org/wiki/File:${encodeURIComponent(f.source.repo)})`

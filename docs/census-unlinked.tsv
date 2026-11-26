@@ -3880,3 +3880,202 @@ vivaldi-6.9-linux	CONTEXT_WORKSPACE_OPEN_IN_NEW_WINDOW	Open in a New Window	Cont
 vivaldi-6.9-linux	CONTEXT_WORKSPACE_RENAME	Rename Workspace	Context menu: workspacelist	1073
 vivaldi-6.9-linux	CONTEXT_WORKSPACE_DELETE	Delete Workspace	Context menu: workspacelist	1074
 vivaldi-6.9-linux	CONTEXT_WORKSPACE_HIBERNATE	Workspace hibernate	Context menu: workspacelist	1076
+ie-11-win32	2	Show title	menu #256 > (untitled)	11
+ie-11-win32	1	Close toolbar	menu #257 > (untitled)	19
+ie-11-win32	3	Disable add, close, drag and drop (IEAK)	menu #257 > (untitled)	20
+ie-11-win32	4	Disable resizing (IEAK)	menu #257 > (untitled)	21
+ie-11-win32	6	Always on top	menu #259 > (untitled)	29
+ie-11-win32	8	Auto-hide	menu #259 > (untitled)	30
+ie-11-win32	42448	Disable toolbars and extensions when InPrivate Browsing starts	menu #264 > (untitled)	52
+ie-11-win32	42519	Go to copied address	menu #269 > (untitled)	115
+ie-11-win32	42520	Search using copied text	menu #269 > (untitled)	116
+ie-11-win32	42512	Open	menu #270 > (untitled)	124
+ie-11-win32	42513	Open in new tab	menu #270 > (untitled)	125
+ie-11-win32	42515	Remove this page	menu #270 > (untitled)	126
+ie-11-win32	42516	Add site to Start Menu	menu #270 > (untitled)	127
+ie-11-win32	42521	Add site to Apps	menu #270 > (untitled)	128
+ie-11-win32	1538	Auto-hide	menu #275	149
+ie-11-win32	3334	Open	menu #289 > External script debugger	166
+ie-11-win32	3335	Break at next statement	menu #289 > External script debugger	167
+ie-11-win32	42432	Menu bar	menu #320 > (untitled)	175
+ie-11-win32	42433	Favorites bar	menu #320 > (untitled)	176
+ie-11-win32	42455	Show tabs on a separate row	menu #320 > (untitled)	181
+ie-11-win32	42453	Show Stop and Refresh before Address bar	menu #320 > (untitled)	182
+ie-11-win32	42456	Add or change home page	menu #320 > (untitled)	183
+ie-11-win32	42457	Add as a home page	menu #320 > (untitled)	184
+ie-11-win32	42528	Disable add-ons	menu #322 > (untitled)	206
+ie-11-win32	41522	Favorites	menu #323 > (untitled)	219
+ie-11-win32	41526	Feeds	menu #323 > (untitled)	221
+ie-11-win32	42499	None	menu #332 > (untitled) > Group by	236
+ie-11-win32	42503	More information	menu #332 > (untitled)	243
+ie-11-win32	285	New session	menu #333 > File	254
+ie-11-win32	385	Open in Immersive Browser	menu #333 > File	255
+ie-11-win32	376	Trusted sites zone	menu #333 > File > Add this site to	275
+ie-11-win32	377	Local intranet zone	menu #333 > File > Add this site to	276
+ie-11-win32	41253	Home Page	menu #335 > View > Go to	320
+ie-11-win32	3169	Largest	menu #335 > View > Text size	331
+ie-11-win32	3168	Large	menu #335 > View > Text size	332
+ie-11-win32	3167	Medium	menu #335 > View > Text size	333
+ie-11-win32	3166	Small	menu #335 > View > Text size	334
+ie-11-win32	3165	Smallest	menu #335 > View > Text size	335
+ie-11-win32	4633	None	menu #335 > View > Encoding	339
+ie-11-win32	41521	International website address	menu #335 > View	349
+ie-11-win32	41421	Open FTP site in File Explorer	menu #335 > View	350
+ie-11-win32	41507	Webpage privacy policy	menu #335 > View	351
+ie-11-win32	380	Panning hand	menu #335 > View	352
+ie-11-win32	41422	Turn Off Tracking Protection	menu #337 > Tools	378
+ie-11-win32	41423	ActiveX Filtering	menu #337 > Tools	379
+ie-11-win32	41266	Fix connection problems	menu #337 > Tools	380
+ie-11-win32	41264	Add site to Start menu	menu #337 > Tools	382
+ie-11-win32	41265	Add site to Apps	menu #337 > Tools	383
+ie-11-win32	41259	View downloads	menu #337 > Tools	386
+ie-11-win32	41271	Manage media licenses	menu #337 > Tools	387
+ie-11-win32	8808	Subscribe to this feed	menu #337 > Tools	392
+ie-11-win32	8706	feed1	menu #337 > Tools > Feed discovery	395
+ie-11-win32	342	Windows Update	menu #337 > Tools	397
+ie-11-win32	42560	Performance dashboard	menu #337 > Tools	399
+ie-11-win32	41530	F12 Developer Tools	menu #337 > Tools	400
+ie-11-win32	41221	What's New in Internet Explorer 11	menu #338 > Help	413
+ie-11-win32	9	Collapse	menu #3400 > (untitled)	469
+ie-11-win32	5	Create new folder	menu #3400 > (untitled)	471
+ie-11-win32	10	Sort by name	menu #3400 > (untitled)	472
+ie-11-win32	45056	No style	menu #3401 > (untitled)	480
+ie-11-win32	45057	Default style	menu #3401 > (untitled)	481
+ie-11-win32	4094	Use default behavior for this site.	menu #4091 > Default	504
+ie-11-win32	7	Open in new window	menu #20680 > (untitled)	513
+ie-11-win32	11	by Internet address	menu #20683 > (untitled)	547
+ie-11-win32	12	by last visited	menu #20683 > (untitled)	548
+ie-11-win32	13	by last updated	menu #20683 > (untitled)	549
+ie-11-win32	20	by name	menu #20684 > (untitled)	557
+ie-11-win32	21	by Internet address	menu #20684 > (untitled)	558
+ie-11-win32	22	by size	menu #20684 > (untitled)	559
+ie-11-win32	23	by expires	menu #20684 > (untitled)	560
+ie-11-win32	24	by modified	menu #20684 > (untitled)	561
+ie-11-win32	25	by last accessed	menu #20684 > (untitled)	562
+ie-11-win32	26	by last checked	menu #20684 > (untitled)	563
+ie-11-win32	2136	Open	menu #24640 > Default	571
+ie-11-win32	2435	Open in new tab	menu #24640 > Default	572
+ie-11-win32	2137	Open in new window	menu #24640 > Default	573
+ie-11-win32	2126	Browse view	menu #24640 > Default	581
+ie-11-win32	2124	Edit hyperlink	menu #24640 > Default	585
+ie-11-win32	2168	Insert image	menu #24640 > Default	586
+ie-11-win32	28	Properties	menu #24640 > Default	588
+ie-11-win32	2120	Paste insert	menu #24640 > Table	614
+ie-11-win32	2206	Cell	menu #24640 > Table > Select	618
+ie-11-win32	2207	Row	menu #24640 > Table > Select	619
+ie-11-win32	2208	Column	menu #24640 > Table > Select	620
+ie-11-win32	2209	Table	menu #24640 > Table > Select	621
+ie-11-win32	2211	Cell properties	menu #24640 > Table	624
+ie-11-win32	2210	Table properties	menu #24640 > Table	625
+ie-11-win32	6004	Trace tags	menu #24640 > Debug	647
+ie-11-win32	6005	Resource failures	menu #24640 > Debug	648
+ie-11-win32	6006	Dump tracking info	menu #24640 > Debug	649
+ie-11-win32	6007	Debug break	menu #24640 > Debug	650
+ie-11-win32	6008	Debug view	menu #24640 > Debug	651
+ie-11-win32	6009	Dump tree	menu #24640 > Debug	652
+ie-11-win32	7103	Dump parser statistics	menu #24640 > Debug	653
+ie-11-win32	7104	Dump splay tree	menu #24640 > Debug	654
+ie-11-win32	6010	Dump lines	menu #24640 > Debug	655
+ie-11-win32	6015	Dump DisplayTree	menu #24640 > Debug	656
+ie-11-win32	6016	Dump FormatCaches	menu #24640 > Debug	657
+ie-11-win32	6017	Dump LayoutRects	menu #24640 > Debug	658
+ie-11-win32	6013	Memory monitor	menu #24640 > Debug	659
+ie-11-win32	6014	Performance meters	menu #24640 > Debug	660
+ie-11-win32	6012	Save HTML	menu #24640 > Debug	661
+ie-11-win32	2127	Edit view	menu #24640 > Debug	664
+ie-11-win32	2381	Top	menu #24640 > Vertical scrollbar	670
+ie-11-win32	2382	Bottom	menu #24640 > Vertical scrollbar	671
+ie-11-win32	2389	Page left	menu #24640 > Horizontal scrollbar	686
+ie-11-win32	2390	Page right	menu #24640 > Horizontal scrollbar	687
+ie-11-win32	2441	Play	menu #24640 > Media	694
+ie-11-win32	2442	Mute	menu #24640 > Media	695
+ie-11-win32	2268	Save file	menu #24640 > Media	697
+ie-11-win32	2285	Go to copied address	menu #24641 > Default	716
+ie-11-win32	2286	Search using copied text	menu #24641 > Default	717
+ie-11-win32	2292	Encoding	menu #24641 > Default	731
+ie-11-win32	6042	Refresh	menu #24641 > Default	735
+ie-11-win32	15207	Share	menu #24642 > Control	933
+ie-11-win32	37713	Temporarily allow pop-ups	menu #37632 > (untitled)	994
+ie-11-win32	37730	Turn off Pop-up Blocker	menu #37632 > (untitled) > Settings	999
+ie-11-win32	37731	Turn on Pop-up Blocker	menu #37632 > (untitled) > Settings	1000
+ie-11-win32	37733	Show Notification bar for pop-ups	menu #37632 > (untitled) > Settings	1001
+ie-11-win32	37732	More settings	menu #37632 > (untitled) > Settings	1002
+ie-11-win32	37667	Install this add-on	menu #37632 > (untitled)	1004
+ie-11-win32	37665	Install this add-on for all users on this computer	menu #37632 > (untitled)	1005
+ie-11-win32	37666	What’s the risk?	menu #37632 > (untitled)	1006
+ie-11-win32	37649	Download file	menu #37632 > (untitled)	1007
+ie-11-win32	37650	What’s the risk?	menu #37632 > (untitled)	1008
+ie-11-win32	37745	Allow blocked content	menu #37632 > (untitled)	1009
+ie-11-win32	37746	What’s the risk?	menu #37632 > (untitled)	1010
+ie-11-win32	37777	Show restricted content	menu #37632 > (untitled)	1011
+ie-11-win32	37778	What’s the risk?	menu #37632 > (untitled)	1012
+ie-11-win32	37761	Install This add-on	menu #37632 > (untitled)	1013
+ie-11-win32	37762	What’s the risk?	menu #37632 > (untitled)	1014
+ie-11-win32	37764	Run add-on	menu #37632 > (untitled)	1015
+ie-11-win32	37765	What’s the risk?	menu #37632 > (untitled)	1016
+ie-11-win32	37767	Run add-on	menu #37632 > (untitled)	1017
+ie-11-win32	37768	Run add-on on all websites	menu #37632 > (untitled)	1018
+ie-11-win32	37769	What’s the risk?	menu #37632 > (untitled)	1019
+ie-11-win32	38047	About add-ons	menu #37632 > (untitled)	1021
+ie-11-win32	37889	Allow all protocols	menu #37632 > (untitled)	1022
+ie-11-win32	37905	Allow all protocols	menu #37632 > (untitled)	1023
+ie-11-win32	37921	Allow all protocols	menu #37632 > (untitled)	1024
+ie-11-win32	37937	Allow all protocols	menu #37632 > (untitled)	1025
+ie-11-win32	37953	Allow all protocols	menu #37632 > (untitled)	1026
+ie-11-win32	37985	Run add-on	menu #37632 > (untitled)	1027
+ie-11-win32	37986	What’s the risk?	menu #37632 > (untitled)	1028
+ie-11-win32	37988	Run add-on	menu #37632 > (untitled)	1029
+ie-11-win32	37989	Run add-on on all websites	menu #37632 > (untitled)	1030
+ie-11-win32	37990	What’s the risk?	menu #37632 > (untitled)	1031
+ie-11-win32	38001	Show all content	menu #37632 > (untitled)	1032
+ie-11-win32	38002	What’s the risk?	menu #37632 > (untitled)	1033
+ie-11-win32	38008	About Family Safety	menu #37632 > (untitled)	1034
+ie-11-win32	38007	View blocked content	menu #37632 > (untitled)	1035
+ie-11-win32	38010	About Family Safety	menu #37632 > (untitled)	1036
+ie-11-win32	38033	Fix settings for me	menu #37632 > (untitled)	1037
+ie-11-win32	38034	Open security settings	menu #37632 > (untitled)	1038
+ie-11-win32	38035	Help about security settings	menu #37632 > (untitled)	1039
+ie-11-win32	38004	Display blocked content	menu #37632 > (untitled)	1040
+ie-11-win32	38005	What’s the risk?	menu #37632 > (untitled)	1041
+ie-11-win32	38017	Don’t show this message again	menu #37632 > (untitled)	1042
+ie-11-win32	38018	Enable intranet settings	menu #37632 > (untitled)	1043
+ie-11-win32	38019	What are intranet settings?	menu #37632 > (untitled)	1044
+ie-11-win32	38417	Change language settings	menu #37632 > (untitled)	1045
+ie-11-win32	38434	Don’t show this message again	menu #37632 > (untitled)	1046
+ie-11-win32	38451	Why am I seeing this?	menu #37632 > (untitled)	1047
+ie-11-win32	38039	Install this add-on from website	menu #37632 > (untitled)	1048
+ie-11-win32	38041	Don’t show this message again	menu #37632 > (untitled)	1049
+ie-11-win32	38042	Turn on Protected mode	menu #37632 > (untitled)	1050
+ie-11-win32	38044	Temporarily allow scripted windows	menu #37632 > (untitled)	1051
+ie-11-win32	38453	What’s the risk?	menu #37632 > (untitled)	1052
+ie-11-win32	38022	Disable	menu #37632 > (untitled)	1053
+ie-11-win32	38023	Always ignore	menu #37632 > (untitled)	1054
+ie-11-win32	38112	Don’t show again for this site	menu #37632 > (untitled)	1055
+ie-11-win32	38113	Open desktop	menu #37632 > (untitled)	1056
+ie-11-win32	37634	Notification bar Help	menu #37632 > (untitled)	1058
+ie-11-win32	38114	Open desktop	menu #37632 > (untitled)	1059
+ie-11-win32	37681	What’s the risk?	menu #37633 > (untitled) > Add-on blocked	1093
+ie-11-win32	37969	What’s the risk?	menu #37633 > (untitled) > Protocol blocked	1148
+ie-11-win32	37770	Always allow	menu #37796 > (untitled)	1265
+ie-11-win32	37771	Always deny and don’t tell me	menu #37796 > (untitled)	1266
+ie-11-win32	37773	Deny once	menu #37797 > (untitled)	1275
+ie-11-win32	38049	Match whole word only	menu #38048 > (untitled)	1283
+ie-11-win32	38050	Match case	menu #38048 > (untitled)	1284
+ie-11-win32	38051	Match Diacritic	menu #38048 > (untitled)	1285
+ie-11-win32	38052	Match Alef Hamza	menu #38048 > (untitled)	1286
+ie-11-win32	38053	Match Kashida	menu #38048 > (untitled)	1287
+ie-11-win32	42756	Allow	menu #42101 > (untitled)	1295
+ie-11-win32	42760	Block	menu #42101 > (untitled)	1296
+ie-11-win32	53410	Save and run	menu #53392 > (untitled)	1309
+ie-11-win32	53411	Open	menu #53396 > (untitled)	1327
+ie-11-win32	53412	Open with	menu #53396 > (untitled)	1328
+ie-11-win32	53841	No	menu #53840 > (untitled)	1336
+ie-11-win32	53842	Don’t ask again	menu #53840 > (untitled)	1337
+ie-11-win32	54054	Ask me later	menu #54053 > (untitled)	1345
+ie-11-win32	54055	Don’t disable	menu #54053 > (untitled)	1346
+ie-11-win32	54109	Turn off ActiveX Filtering	menu #54108 > (untitled)	1354
+ie-11-win32	54110	Turn off Tracking Protection	menu #54108 > (untitled)	1355
+ie-11-win32	54111	Turn off all filtering	menu #54108 > (untitled)	1356
+ie-11-win32	54113	Turn on all filtering	menu #54112 > (untitled)	1364
+ie-11-win32	54114	Turn on ActiveX Filtering	menu #54112 > (untitled)	1365
+ie-11-win32	54115	Turn on Tracking Protection	menu #54112 > (untitled)	1366

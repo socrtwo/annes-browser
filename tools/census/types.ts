@@ -33,7 +33,12 @@ export interface SourceSpec {
    * item identifier. A manual is a third party's description of a browser, read by OCR: weaker
    * evidence than the browser's own code, and labelled as such wherever it is shown.
    */
-  host?: 'github' | 'archive.org' | 'local' | 'dump';
+  host?: 'github' | 'archive.org' | 'local' | 'dump' | 'machine';
+  /**
+   * `machine`: menus read from a program running on a contributor's computer
+   * (tools/menu-dump/macos-menus.js or windows-menus.ps1). `repo` names the program and version.
+   * The browser's own menus, but only the contributor can re-read them.
+   */
   /**
    * `dump`: menus read from the browser program itself (Windows menu resources via tools/pe-dump.ts,
    * Opera's menu file via tools/opera-dump.ts), kept as text in catalog/census/transcriptions/.
@@ -82,7 +87,7 @@ export interface CensusFile {
   released: number;
   platform: string;
   source: {
-    host?: 'github' | 'archive.org' | 'local' | 'dump';
+    host?: 'github' | 'archive.org' | 'local' | 'dump' | 'machine';
     repo: string;
     ref: string;
     commit: string;

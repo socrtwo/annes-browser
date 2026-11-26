@@ -1,0 +1,1368 @@
+# Menus read from Windows programs' own resources by tools/pe-dump.ts (the programs were not run).
+# download: https://archive.org/download/internet-explorer-11-setup-for-windows-7/Internet%20Explorer%2011%20Setup%20for%20windows7.EXE
+# unpacked: IEAK package: IE-REDIST.EXE, x86_microsoft-windows-ieframe.resources_31bf3856ad364e35_11.2.9600.16428_en-us/ieframe.dll.mui
+# program: ieframe.dll.mui, sha256 936bde827b5c1f33d9d9684b022116c51fd453f3eb8ed64cb7000b90f5b713d4: 57 menus, 112 shortcuts
+# Each MENUITEM: label, command id; the comment is its shortcut. (This program does not keep status-bar text by command id.)
+
+MENU__256 MENU
+{
+    POPUP "(untitled)"
+    {
+        MENUITEM "Sho&w title", 2
+    }
+}
+
+MENU__257 MENU
+{
+    POPUP "(untitled)"
+    {
+        MENUITEM "&Close toolbar", 1    // Ctrl+T, Ctrl+T
+        MENUITEM "Disable add, close, drag and drop (IEAK)", 3    // Ctrl+Shift+T, Ctrl+Shift+T
+        MENUITEM "Disable resizing (IEAK)", 4
+    }
+}
+
+MENU__259 MENU
+{
+    POPUP "(untitled)"
+    {
+        MENUITEM "&Always on top", 6    // F3, F3
+        MENUITEM "A&uto-hide", 8    // Ctrl+Shift+P, Ctrl+Shift+P
+    }
+}
+
+MENU__261 MENU
+{
+    POPUP "(untitled)"
+    {
+        MENUITEM "&Refresh", 1    // Ctrl+T, Ctrl+T
+        MENUITEM "&Open in window", 2
+    }
+}
+
+MENU__264 MENU
+{
+    POPUP "(untitled)"
+    {
+        MENUITEM "&Menu bar", 41511
+        MENUITEM "&Favorites bar", 41478    // Ctrl+Shift+B
+        MENUITEM "&Command bar", 41481
+        MENUITEM "&Status bar", 41474
+        MENUITEM SEPARATOR
+        MENUITEM "Disab&le toolbars and extensions when InPrivate Browsing starts", 42448
+        MENUITEM "&Lock the toolbars", 41484
+    }
+}
+
+MENU__266 MENU
+{
+    POPUP "&File"
+    {
+    }
+    POPUP "&Go to"
+    {
+    }
+    POPUP "F&avorites"
+    {
+    }
+    POPUP "&Help"
+    {
+    }
+}
+
+MENU__267 MENU
+{
+    POPUP "&File"
+    {
+    }
+    POPUP "&Edit"
+    {
+    }
+    POPUP "&View"
+    {
+    }
+    POPUP "F&avorites"
+    {
+    }
+    POPUP "&Tools"
+    {
+    }
+    POPUP "&Help"
+    {
+    }
+}
+
+MENU__268 MENU
+{
+    POPUP "(untitled)"
+    {
+        POPUP "&Toolbars"
+        {
+            MENUITEM "&Desktop", 3    // Ctrl+Shift+T, Ctrl+Shift+T
+            MENUITEM "&Quick launch", 4
+            MENUITEM SEPARATOR
+            MENUITEM "&New toolbar...", 1    // Ctrl+T, Ctrl+T
+        }
+    }
+}
+
+MENU__269 MENU
+{
+    POPUP "(untitled)"
+    {
+        MENUITEM "&Back", 42517
+        MENUITEM "F&orward", 42518
+        MENUITEM "Go to copie&d address\tCtrl+Shift+L", 42519
+        MENUITEM "Search using copie&d text\tCtrl+Shift+L", 42520
+    }
+}
+
+MENU__270 MENU
+{
+    POPUP "(untitled)"
+    {
+        MENUITEM "&Open", 42512
+        MENUITEM "Open in ne&w tab", 42513
+        MENUITEM "Remove this &page", 42515
+        MENUITEM "Add site to Start &Menu", 42516
+        MENUITEM "Add site to &Apps", 42521
+    }
+}
+
+MENU__274 MENU
+{
+    POPUP "(untitled)"
+    {
+        MENUITEM "&Undo", 41761
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t", 41762
+        MENUITEM "&Copy", 41763
+        MENUITEM "&Paste", 41764
+        MENUITEM "&Delete", 41765
+        MENUITEM SEPARATOR
+        MENUITEM "Select &all", 41766
+    }
+}
+
+MENU__275 MENU
+{
+    MENUITEM "Auto-&hide", 1538
+}
+
+MENU__276 MENU
+{
+    POPUP "(untitled)"
+    {
+        MENUITEM "Open in new t&ab", 1540
+        MENUITEM "Open in tab &group", 1541
+        MENUITEM "Add to &Favorites bar", 1543
+    }
+}
+
+MENU__289 MENU
+{
+    POPUP "External script deb&ugger"
+    {
+        MENUITEM "&Open", 3334
+        MENUITEM "&Break at next statement", 3335
+    }
+}
+
+MENU__320 MENU
+{
+    POPUP "(untitled)"
+    {
+        MENUITEM "M&enu bar", 42432
+        MENUITEM "F&avorites bar", 42433
+        MENUITEM "C&ommand bar", 42454
+        MENUITEM "S&tatus bar", 41474
+        MENUITEM SEPARATOR
+        MENUITEM "Lock the tool&bars", 41484
+        MENUITEM "S&how tabs on a separate row", 42455
+        MENUITEM "Show Stop and &Refresh before Address bar", 42453
+        MENUITEM "Add or &change home page", 42456
+        MENUITEM "Add as a home &page", 42457
+        POPUP "&Customize"
+        {
+            MENUITEM SEPARATOR
+            MENUITEM "Show &all text labels", 42442
+            MENUITEM "Show &selective text", 42443
+            MENUITEM "Show &only icons", 42444
+            MENUITEM SEPARATOR
+            MENUITEM "Add or remove &commands", 42437
+        }
+    }
+}
+
+MENU__322 MENU
+{
+    POPUP "(untitled)"
+    {
+        MENUITEM "&Menu bar", 42432
+        MENUITEM "F&avorites bar", 42433
+        MENUITEM "&Command bar", 42454
+        MENUITEM "&Status bar", 41474
+        MENUITEM SEPARATOR
+        MENUITEM "&Disable add-ons", 42528
+        MENUITEM "Manage &add-ons", 41414
+        MENUITEM SEPARATOR
+        MENUITEM "Disab&le toolbars and extensions when InPrivate Browsing starts", 42448
+        MENUITEM "Lock the tool&bars", 41484
+        MENUITEM "&Customize", 42437
+    }
+}
+
+MENU__323 MENU
+{
+    POPUP "(untitled)"
+    {
+        MENUITEM "&Favorites\tCtrl+Shift+I", 41522    // Ctrl+Shift+I
+        MENUITEM "&History\tCtrl+Shift+H", 41523    // Ctrl+Shift+H
+        MENUITEM "Fee&ds\tCtrl+Shift+G", 41526    // Ctrl+Shift+G
+        MENUITEM SEPARATOR
+        MENUITEM SEPARATOR
+    }
+}
+
+MENU__332 MENU
+{
+    POPUP "(untitled)"
+    {
+        POPUP "&Columns"
+        {
+        }
+        POPUP "&Group by"
+        {
+            MENUITEM "N&one", 42499
+            MENUITEM SEPARATOR
+        }
+        POPUP "&Sort by"
+        {
+        }
+        MENUITEM "C&opy", 42500
+        MENUITEM "Mo&re information", 42503
+    }
+}
+
+MENU__333 MENU
+{
+    POPUP "&File"
+    {
+        MENUITEM "New &tab \tCtrl+T", 381
+        MENUITEM "Duplicate ta&b \tCtrl+K", 384    // Ctrl+K, Ctrl+Shift+K, Ctrl+K, Ctrl+Shift+K, Ctrl+K, Ctrl+Shift+K, Ctrl+K, Ctrl+Shift+K
+        MENUITEM "&New window \tCtrl+N", 275    // Ctrl+N, Ctrl+N, Ctrl+N, Ctrl+N
+        MENUITEM "New sess&ion", 285
+        MENUITEM "Open in Immersive Bro&wser", 385
+        MENUITEM "&Open...\tCtrl+O", 256    // Ctrl+O, Ctrl+L, Ctrl+O
+        MENUITEM "E&dit", 41030
+        MENUITEM "&Save", 257    // Ctrl+S
+        MENUITEM "Save &as...\tCtrl+S", 258    // Ctrl+S
+        MENUITEM "&Close tab \tCtrl+W", 382    // Ctrl+W, Ctrl+F4, Ctrl+W, Ctrl+F4
+        MENUITEM SEPARATOR
+        MENUITEM "Page set&up...", 259
+        MENUITEM "&Print...\tCtrl+P", 260    // Ctrl+P, Ctrl+P
+        MENUITEM "Print pre&view...", 277
+        MENUITEM SEPARATOR
+        POPUP "S&end"
+        {
+            MENUITEM "&Page by e-mail...", 282
+            MENUITEM "&Link by e-mail...", 283
+            MENUITEM "&Shortcut to Desktop", 284
+        }
+        MENUITEM "I&mport and export...", 374
+        POPUP "A&dd this site to"
+        {
+            MENUITEM "&Trusted sites zone...", 376
+            MENUITEM "&Local intranet zone...", 377
+        }
+        MENUITEM SEPARATOR
+        MENUITEM "P&roperties", 262
+        MENUITEM "E&xit", 40993
+    }
+}
+
+MENU__334 MENU
+{
+    POPUP "&Edit"
+    {
+        MENUITEM "Cu&t\tCtrl+X", 41025    // Ctrl+X
+        MENUITEM "&Copy\tCtrl+C", 41026    // Ctrl+C, Ctrl+Insert
+        MENUITEM "&Paste\tCtrl+V", 41027    // Ctrl+V, Shift+Insert
+        MENUITEM SEPARATOR
+        MENUITEM "Select &all\tCtrl+A", 41028
+        MENUITEM SEPARATOR
+        MENUITEM "&Find on this page...\tCtrl+F", 1091
+    }
+}
+
+MENU__335 MENU
+{
+    POPUP "&View"
+    {
+        POPUP "&Toolbars"
+        {
+            MENUITEM SEPARATOR
+        }
+        POPUP "&Explorer bars"
+        {
+            MENUITEM "&Favorites\tCtrl+Shift+I", 41522    // Ctrl+Shift+I
+            MENUITEM "&History\tCtrl+Shift+H", 41523    // Ctrl+Shift+H
+            MENUITEM "Fee&ds\tCtrl+Shift+G", 41526    // Ctrl+Shift+G
+            MENUITEM SEPARATOR
+            MENUITEM SEPARATOR
+        }
+        MENUITEM SEPARATOR
+        POPUP "&Go to"
+        {
+            MENUITEM "&Back\tAlt+Left Arrow", 41249    // Alt+Left, Alt+Left
+            MENUITEM "&Forward\tAlt+Right Arrow", 41250    // Alt+Right, Alt+Right
+            MENUITEM SEPARATOR
+            MENUITEM "&Home Page\tAlt+Home", 41253    // Alt+Home
+        }
+        MENUITEM "Sto&p\tEsc", 41498    // Esc, Esc
+        MENUITEM "&Refresh\tF5", 41504    // F5, Ctrl+F5, Ctrl+R, F5, Ctrl+F5, Ctrl+R
+        MENUITEM SEPARATOR
+        POPUP "&Zoom"
+        {
+            MENUITEM SEPARATOR
+        }
+        POPUP "Te&xt size"
+        {
+            MENUITEM "La&rgest", 3169
+            MENUITEM "&Large", 3168
+            MENUITEM "&Medium", 3167
+            MENUITEM "&Small", 3166
+            MENUITEM "Sm&allest", 3165
+        }
+        POPUP "Enco&ding"
+        {
+            MENUITEM "None", 4633
+        }
+        POPUP "St&yle"
+        {
+            MENUITEM SEPARATOR
+        }
+        MENUITEM "Caret &browsing\tF7", 3460
+        MENUITEM SEPARATOR
+        MENUITEM "Sour&ce\tCtrl+U", 3163    // Ctrl+U
+        MENUITEM "&Security report", 41509
+        MENUITEM "&International website address", 41521
+        MENUITEM "&Open FTP site in File Explorer", 41421
+        MENUITEM "Webpage pri&vacy policy...", 41507
+        MENUITEM "Pa&nning hand", 380
+        MENUITEM "&Full screen\tF11", 41499
+        MENUITEM "&Java console", 41500
+    }
+}
+
+MENU__336 MENU
+{
+    POPUP "F&avorites"
+    {
+        MENUITEM "&Add to favorites...", 41331    // Ctrl+D, Alt+Z, Alt+A
+        MENUITEM "Add to Favorites &bar", 41345    // Ctrl+Shift+D
+        MENUITEM "Add current &tabs to favorites...", 41344
+        MENUITEM SEPARATOR
+        MENUITEM "&Organize favorites...", 41330    // Ctrl+B
+        MENUITEM SEPARATOR
+        MENUITEM "(Empty)", 41342
+    }
+}
+
+MENU__337 MENU
+{
+    POPUP "&Tools"
+    {
+        MENUITEM "&Delete browsing history...\tCtrl+Shift+Del", 41267
+        MENUITEM "&InPrivate Browsing\tCtrl+Shift+P", 41268
+        MENUITEM "Turn Off Trac&king Protection", 41422
+        MENUITEM "Active&X Filtering", 41423
+        MENUITEM "Fix &connection problems...", 41266
+        MENUITEM "Reopen last browsing &session", 41270    // Ctrl+C
+        MENUITEM "Add site to Start &menu", 41264
+        MENUITEM "Add site to &Apps", 41265
+        MENUITEM SEPARATOR
+        MENUITEM "&Pop-up Blocker", 41296
+        MENUITEM "View dow&nloads\tCtrl+J", 41259
+        MENUITEM "&Manage media licenses", 41271
+        MENUITEM "Manage &add-ons", 41414
+        MENUITEM SEPARATOR
+        MENUITEM "Compati&bility View settings", 41272
+        MENUITEM SEPARATOR
+        MENUITEM "Subscribe to this &feed...", 8808
+        POPUP "F&eed discovery"
+        {
+            MENUITEM "feed1", 8706
+        }
+        MENUITEM "Windows &Update", 342
+        MENUITEM SEPARATOR
+        MENUITEM "Performance dashboard\tCtrl+Shift+U", 42560
+        MENUITEM "F12 Deve&loper Tools", 41530    // Shift+F12, F12, Ctrl+Shift+F12
+        MENUITEM SEPARATOR
+        MENUITEM SEPARATOR
+        MENUITEM "Internet &options", 41251
+    }
+}
+
+MENU__338 MENU
+{
+    POPUP "&Help"
+    {
+        MENUITEM "&Internet Explorer Help\tF1", 337
+        MENUITEM SEPARATOR
+        MENUITEM "&What's New in Internet Explorer 11", 41221
+        MENUITEM "Online &support", 344
+        MENUITEM "&Enhanced security configuration", 375
+        MENUITEM SEPARATOR
+        MENUITEM "&Report a webpage problem...", 41222
+        MENUITEM "&About Internet Explorer", 336
+    }
+}
+
+MENU__339 MENU
+{
+    POPUP "&Go to"
+    {
+        MENUITEM "&Back\tAlt+Left Arrow", 41249    // Alt+Left, Alt+Left
+        MENUITEM "&Forward\tAlt+Right Arrow", 41250    // Alt+Right, Alt+Right
+        MENUITEM SEPARATOR
+        MENUITEM "&Home page\tAlt+Home", 41253    // Alt+Home
+    }
+}
+
+MENU__340 MENU
+{
+    POPUP "(untitled)"
+    {
+        MENUITEM SEPARATOR
+        MENUITEM "&Open in tabs", 1542
+    }
+}
+
+MENU__500 MENU
+{
+    POPUP "(untitled)"
+    {
+        POPUP "&View"
+        {
+            MENUITEM "Lar&ge icons", 1    // Ctrl+T, Ctrl+T
+            MENUITEM "S&mall icons", 2
+        }
+        MENUITEM "&Open folder", 6    // F3, F3
+        MENUITEM "Show te&xt", 4
+    }
+}
+
+MENU__501 MENU
+{
+    POPUP "(untitled)"
+    {
+        MENUITEM "Sort &by name", 1    // Ctrl+T, Ctrl+T
+    }
+}
+
+MENU__3400 MENU
+{
+    POPUP "(untitled)"
+    {
+        MENUITEM "Exp&and", 8    // Ctrl+Shift+P, Ctrl+Shift+P
+        MENUITEM "Coll&apse", 9
+        MENUITEM "&Open", 1    // Ctrl+T, Ctrl+T
+        MENUITEM "Create ne&w folder", 5    // Ctrl+J, Ctrl+J
+        MENUITEM "Sort &by name", 10    // Ctrl+L, Ctrl+L
+    }
+}
+
+MENU__3401 MENU
+{
+    POPUP "(untitled)"
+    {
+        MENUITEM "&No style", 45056
+        MENUITEM "&Default style", 45057
+        MENUITEM SEPARATOR
+    }
+}
+
+MENU__3402 MENU
+{
+    POPUP "(untitled)"
+    {
+        MENUITEM "Zoom &in\tCtrl +", 61441
+        MENUITEM "Zoom &out\tCtrl -", 61442
+        MENUITEM SEPARATOR
+        MENUITEM SEPARATOR
+        MENUITEM "&Custom...", 61440
+    }
+}
+
+MENU__4091 MENU
+{
+    POPUP "Default"
+    {
+        MENUITEM "Always &accept cookies from this site.", 4092
+        MENUITEM "Always &reject cookies from this site.", 4093
+        MENUITEM "Use &default behavior for this site.", 4094
+    }
+}
+
+MENU__20680 MENU
+{
+    POPUP "(untitled)"
+    {
+        MENUITEM "&Open", 1    // Ctrl+T, Ctrl+T
+        MENUITEM "Open in &new window", 7    // Shift+F3, Shift+F3
+        MENUITEM "&Add To favorites", 6    // F3, F3
+        MENUITEM SEPARATOR
+        MENUITEM "&Copy", 2
+        MENUITEM SEPARATOR
+        MENUITEM "&Delete", 3    // Ctrl+Shift+T, Ctrl+Shift+T
+        MENUITEM SEPARATOR
+        MENUITEM "P&roperties", 4
+    }
+}
+
+MENU__20681 MENU
+{
+    POPUP "(untitled)"
+    {
+        MENUITEM "&Open", 1    // Ctrl+T, Ctrl+T
+    }
+}
+
+MENU__20682 MENU
+{
+    POPUP "(untitled)"
+    {
+        MENUITEM "&Open", 1    // Ctrl+T, Ctrl+T
+        MENUITEM SEPARATOR
+        MENUITEM "&Delete", 3    // Ctrl+Shift+T, Ctrl+Shift+T
+    }
+}
+
+MENU__20683 MENU
+{
+    POPUP "(untitled)"
+    {
+        MENUITEM "by &title", 10    // Ctrl+L, Ctrl+L
+        MENUITEM "by &Internet address", 11    // Ctrl+Shift+L, Ctrl+Shift+L
+        MENUITEM "by last &visited", 12    // Alt+Q, Alt+Q
+        MENUITEM "by last &updated", 13    // Ctrl+Shift+1
+    }
+}
+
+MENU__20684 MENU
+{
+    POPUP "(untitled)"
+    {
+        MENUITEM "by &name", 20
+        MENUITEM "by &Internet address", 21
+        MENUITEM "by &size", 22
+        MENUITEM "by &expires", 23
+        MENUITEM "by &modified", 24
+        MENUITEM "by last &accessed", 25
+        MENUITEM "by last &checked", 26
+    }
+}
+
+MENU__24640 MENU
+{
+    POPUP "Default"
+    {
+        MENUITEM "&Open", 2136
+        MENUITEM "Open in ne&w tab", 2435
+        MENUITEM "Open in &new window", 2137
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t", 16    // Alt+C, Ctrl+I, Ctrl+B, Ctrl+Shift+B, Ctrl+Shift+I
+        MENUITEM "&Copy", 15    // Ctrl+Shift+R
+        MENUITEM "&Paste", 26
+        MENUITEM SEPARATOR
+        MENUITEM "&Document properties", 2260
+        MENUITEM SEPARATOR
+        MENUITEM "&Browse view", 2126
+        MENUITEM SEPARATOR
+        MENUITEM "&View source", 2139
+        MENUITEM SEPARATOR
+        MENUITEM "Edit &hyperlink...", 2124
+        MENUITEM "Insert &image...", 2168
+        MENUITEM SEPARATOR
+        MENUITEM "P&roperties", 28
+    }
+    POPUP "Image"
+    {
+        MENUITEM "&Open link", 2136
+        MENUITEM "Open link in ne&w tab", 2435
+        MENUITEM "Open link in &new window", 2137
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t", 16    // Alt+C, Ctrl+I, Ctrl+B, Ctrl+Shift+B, Ctrl+Shift+I
+        MENUITEM "&Copy", 15    // Ctrl+Shift+R
+        MENUITEM "&Paste", 26
+        MENUITEM SEPARATOR
+        MENUITEM "&Show image", 2269
+        MENUITEM SEPARATOR
+        MENUITEM "P&roperties", 28
+    }
+    POPUP "Control"
+    {
+        MENUITEM "Cu&t", 16    // Alt+C, Ctrl+I, Ctrl+B, Ctrl+Shift+B, Ctrl+Shift+I
+        MENUITEM "&Copy", 15    // Ctrl+Shift+R
+        MENUITEM "&Paste", 26
+        MENUITEM SEPARATOR
+        MENUITEM "P&roperties", 28
+    }
+    POPUP "Table"
+    {
+        MENUITEM "&Paste insert", 2120
+        MENUITEM SEPARATOR
+        POPUP "&Select"
+        {
+            MENUITEM "&Cell", 2206
+            MENUITEM "&Row", 2207
+            MENUITEM "&Column", 2208
+            MENUITEM "&Table", 2209
+        }
+        MENUITEM SEPARATOR
+        MENUITEM "&Cell properties", 2211
+        MENUITEM "&Table properties", 2210
+    }
+    POPUP "1DSite Select"
+    {
+        MENUITEM "Cu&t", 16    // Alt+C, Ctrl+I, Ctrl+B, Ctrl+Shift+B, Ctrl+Shift+I
+        MENUITEM "&Copy", 15    // Ctrl+Shift+R
+        MENUITEM "Paste", 26
+        MENUITEM "Select &all", 31
+        MENUITEM "Pr&int...", 27
+        MENUITEM "Pri&nt preview...", 2003
+    }
+    POPUP "Dummy"
+    {
+    }
+    POPUP "Dummy"
+    {
+    }
+    POPUP "Dummy"
+    {
+    }
+    POPUP "Debug"
+    {
+        MENUITEM "Trace tags", 6004
+        MENUITEM "Resource failures", 6005
+        MENUITEM "Dump tracking info", 6006
+        MENUITEM "Debug break", 6007
+        MENUITEM "Debug view", 6008
+        MENUITEM "Dump tree", 6009
+        MENUITEM "Dump parser statistics", 7103
+        MENUITEM "Dump splay tree", 7104
+        MENUITEM "Dump lines", 6010
+        MENUITEM "Dump DisplayTree", 6015
+        MENUITEM "Dump FormatCaches", 6016
+        MENUITEM "Dump LayoutRects", 6017
+        MENUITEM "Memory monitor", 6013
+        MENUITEM "Performance meters", 6014
+        MENUITEM "Save HTML", 6012
+        MENUITEM SEPARATOR
+        MENUITEM "&Browse view", 2126
+        MENUITEM "&Edit view", 2127
+    }
+    POPUP "Vertical scrollbar"
+    {
+        MENUITEM "Scroll here", 2380
+        MENUITEM SEPARATOR
+        MENUITEM "Top", 2381
+        MENUITEM "Bottom", 2382
+        MENUITEM SEPARATOR
+        MENUITEM "Page up", 2383
+        MENUITEM "Page down", 2384
+        MENUITEM SEPARATOR
+        MENUITEM "Scroll up", 2385
+        MENUITEM "Scroll down", 2386
+    }
+    POPUP "Horizontal scrollbar"
+    {
+        MENUITEM "Scroll here", 2380
+        MENUITEM SEPARATOR
+        MENUITEM "Left edge", 2387
+        MENUITEM "Right edge", 2388
+        MENUITEM SEPARATOR
+        MENUITEM "Page left", 2389
+        MENUITEM "Page right", 2390
+        MENUITEM SEPARATOR
+        MENUITEM "Scroll left", 2391
+        MENUITEM "Scroll right", 2392
+    }
+    POPUP "Media"
+    {
+        MENUITEM "&Play", 2441
+        MENUITEM "&Mute", 2442
+        MENUITEM SEPARATOR
+        MENUITEM "&Save file...", 2268
+        MENUITEM "Copy shor&tcut", 2262
+        MENUITEM SEPARATOR
+        POPUP "Play spee&d"
+        {
+        }
+    }
+    POPUP "Entity"
+    {
+        MENUITEM "Copy", 15    // Ctrl+Shift+R
+    }
+}
+
+MENU__24641 MENU
+{
+    POPUP "Default"
+    {
+        MENUITEM "&Back", 2282
+        MENUITEM "F&orward", 2283
+        MENUITEM "Go to copie&d address\tCtrl+Shift+L", 2285
+        MENUITEM "Search using copie&d text\tCtrl+Shift+L", 2286
+        MENUITEM SEPARATOR
+        MENUITEM "&Save background as...", 2263
+        MENUITEM "Set as back&ground", 2264
+        MENUITEM "&Copy background", 2265
+        MENUITEM SEPARATOR
+        MENUITEM "Select &all", 31
+        MENUITEM "&Paste", 26
+        MENUITEM SEPARATOR
+        MENUITEM "Create shor&tcut", 2266
+        MENUITEM "Add to &favorites...", 2261
+        MENUITEM "&View source", 2139
+        MENUITEM "Inspect e&lement", 3904
+        MENUITEM SEPARATOR
+        MENUITEM "&Encoding", 2292
+        MENUITEM SEPARATOR
+        MENUITEM "Pr&int...", 27
+        MENUITEM "Pri&nt preview...", 2003
+        MENUITEM "&Refresh", 6042
+        MENUITEM SEPARATOR
+        MENUITEM "&Properties", 28
+    }
+    POPUP "Image"
+    {
+        MENUITEM "&Open link", 2136
+        MENUITEM "Open link in ne&w tab", 2435
+        MENUITEM "Open link in &new window", 2137
+        MENUITEM "Save target &as...", 2268
+        MENUITEM "&Print target", 2273
+        MENUITEM SEPARATOR
+        MENUITEM "S&how picture", 2269
+        MENUITEM "&Save picture as...", 2270
+        MENUITEM "&E-mail picture...", 2288
+        MENUITEM "Pr&int picture...", 2289
+        MENUITEM "&Go to My Pictures", 2287
+        MENUITEM "Set as back&ground", 2264
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t", 16    // Alt+C, Ctrl+I, Ctrl+B, Ctrl+Shift+B, Ctrl+Shift+I
+        MENUITEM "&Copy", 15    // Ctrl+Shift+R
+        MENUITEM "Copy shor&tcut", 2262
+        MENUITEM "&Paste", 26
+        MENUITEM "Select &all", 31
+        MENUITEM SEPARATOR
+        MENUITEM "&View source", 2139
+        MENUITEM "Inspect e&lement", 3904
+        MENUITEM SEPARATOR
+        MENUITEM "Add to &favorites...", 2261
+        MENUITEM SEPARATOR
+        MENUITEM "P&roperties", 28
+    }
+    POPUP "Control"
+    {
+        MENUITEM "&Undo", 43
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t", 16    // Alt+C, Ctrl+I, Ctrl+B, Ctrl+Shift+B, Ctrl+Shift+I
+        MENUITEM "&Copy", 15    // Ctrl+Shift+R
+        MENUITEM "&Paste", 26
+        MENUITEM "&Delete", 17    // Ctrl+D
+        MENUITEM SEPARATOR
+        MENUITEM "Select &all", 31
+        MENUITEM SEPARATOR
+        MENUITEM "Inspect e&lement", 3904
+    }
+    POPUP "Table"
+    {
+        POPUP "&Select"
+        {
+            MENUITEM "&Cell", 2206
+            MENUITEM "&Row", 2207
+            MENUITEM "&Column", 2208
+            MENUITEM "&Table", 2209
+        }
+        MENUITEM SEPARATOR
+        MENUITEM "&Cell properties", 2211
+        MENUITEM "&Table properties", 2210
+    }
+    POPUP "1DSite Select"
+    {
+        MENUITEM "Cu&t", 16    // Alt+C, Ctrl+I, Ctrl+B, Ctrl+Shift+B, Ctrl+Shift+I
+        MENUITEM "&Copy", 15    // Ctrl+Shift+R
+        MENUITEM "Paste", 26
+        MENUITEM "Select &all", 31
+        MENUITEM "Pr&int...", 27
+        MENUITEM "Pri&nt preview...", 2003
+    }
+    POPUP "Anchor"
+    {
+        MENUITEM "&Open", 2136
+        MENUITEM "Open in ne&w tab", 2435
+        MENUITEM "Open in &new window", 2137
+        MENUITEM "Save target &as...", 2268
+        MENUITEM "&Print target", 2273
+        MENUITEM SEPARATOR
+        MENUITEM "Cut", 16    // Alt+C, Ctrl+I, Ctrl+B, Ctrl+Shift+B, Ctrl+Shift+I
+        MENUITEM "&Copy", 15    // Ctrl+Shift+R
+        MENUITEM "Copy shor&tcut", 2262
+        MENUITEM "&Paste", 26
+        MENUITEM SEPARATOR
+        MENUITEM "Inspect e&lement", 3904
+        MENUITEM SEPARATOR
+        MENUITEM "Add to &favorites...", 2261
+        MENUITEM SEPARATOR
+        MENUITEM "P&roperties", 28
+    }
+    POPUP "Context Unknown"
+    {
+    }
+    POPUP "DYNSRC Image"
+    {
+        MENUITEM "&Open link", 2136
+        MENUITEM "Open link in ne&w tab", 2435
+        MENUITEM "Open link in &new window", 2137
+        MENUITEM "Save target &as...", 2268
+        MENUITEM "&Print target", 2273
+        MENUITEM SEPARATOR
+        MENUITEM "S&how picture", 2269
+        MENUITEM "&Save video as...", 2270
+        MENUITEM "Set as back&ground", 2264
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t", 16    // Alt+C, Ctrl+I, Ctrl+B, Ctrl+Shift+B, Ctrl+Shift+I
+        MENUITEM "&Copy", 15    // Ctrl+Shift+R
+        MENUITEM "Copy shor&tcut", 2262
+        MENUITEM "&Paste", 26
+        MENUITEM SEPARATOR
+        MENUITEM "Inspect e&lement", 3904
+        MENUITEM SEPARATOR
+        MENUITEM "Add to &favorites...", 2261
+        MENUITEM SEPARATOR
+        MENUITEM "Play", 2271
+        MENUITEM "Stop", 2272
+        MENUITEM "P&roperties", 28
+    }
+    POPUP "Debug"
+    {
+        MENUITEM "Trace Tags", 6004
+        MENUITEM "Resource failures", 6005
+        MENUITEM "Dump tracking info", 6006
+        MENUITEM "Debug break", 6007
+        MENUITEM "Debug view", 6008
+        MENUITEM "Dump tree", 6009
+        MENUITEM "Dump parser statistics", 7103
+        MENUITEM "Dump splay tree", 7104
+        MENUITEM "Dump lines", 6010
+        MENUITEM "Dump DisplayTree", 6015
+        MENUITEM "Dump FormatCaches", 6016
+        MENUITEM "Dump LayoutRects", 6017
+        MENUITEM "Memory monitor", 6013
+        MENUITEM "Performance meters", 6014
+        MENUITEM "Save HTML", 6012
+        MENUITEM SEPARATOR
+        MENUITEM "&Browse view", 2126
+        MENUITEM "&Edit view", 2127
+    }
+    POPUP "Vertical scrollbar"
+    {
+        MENUITEM "Scroll here", 2380
+        MENUITEM SEPARATOR
+        MENUITEM "Top", 2381
+        MENUITEM "Bottom", 2382
+        MENUITEM SEPARATOR
+        MENUITEM "Page up", 2383
+        MENUITEM "Page down", 2384
+        MENUITEM SEPARATOR
+        MENUITEM "Scroll up", 2385
+        MENUITEM "Scroll down", 2386
+    }
+    POPUP "Horizontal scrollbar"
+    {
+        MENUITEM "Scroll here", 2380
+        MENUITEM SEPARATOR
+        MENUITEM "Left edge", 2387
+        MENUITEM "Right edge", 2388
+        MENUITEM SEPARATOR
+        MENUITEM "Page left", 2389
+        MENUITEM "Page right", 2390
+        MENUITEM SEPARATOR
+        MENUITEM "Scroll left", 2391
+        MENUITEM "Scroll right", 2392
+    }
+    POPUP "Media"
+    {
+        MENUITEM "&Play", 2441
+        MENUITEM "&Mute", 2442
+        MENUITEM SEPARATOR
+        MENUITEM "&Save file...", 2268
+        MENUITEM "Copy shor&tcut", 2262
+        MENUITEM SEPARATOR
+        POPUP "Play spee&d"
+        {
+        }
+        MENUITEM SEPARATOR
+        MENUITEM "Inspect e&lement", 3904
+    }
+    POPUP "Entity"
+    {
+        MENUITEM "Copy", 15    // Ctrl+Shift+R
+    }
+}
+
+MENU__24642 MENU
+{
+    POPUP "Default"
+    {
+    }
+    POPUP "Image"
+    {
+        MENUITEM "Copy", 15    // Ctrl+Shift+R
+        MENUITEM "Copy link", 2262
+        MENUITEM "Open link in new tab", 2435
+        MENUITEM "Open link in new window", 2137
+        MENUITEM "Open link", 2136
+        MENUITEM "Save to pictures folder", 2270
+    }
+    POPUP "Control"
+    {
+        MENUITEM "Search", 15206
+        MENUITEM "Share", 15207
+        MENUITEM "Undo", 43
+        MENUITEM "Cut", 16    // Alt+C, Ctrl+I, Ctrl+B, Ctrl+Shift+B, Ctrl+Shift+I
+        MENUITEM "Copy", 15    // Ctrl+Shift+R
+        MENUITEM "Paste", 26
+        MENUITEM "Select all", 31
+    }
+    POPUP "Table"
+    {
+    }
+    POPUP "1DSite Select"
+    {
+        MENUITEM "Search", 15206
+        MENUITEM "Share", 15207
+        MENUITEM "Copy", 15    // Ctrl+Shift+R
+        MENUITEM "Copy link", 2262
+        MENUITEM "Open link in new tab", 2435
+        MENUITEM "Open link in new window", 2137
+        MENUITEM "Open link", 2136
+    }
+    POPUP "Anchor"
+    {
+        MENUITEM "Copy", 15    // Ctrl+Shift+R
+        MENUITEM "Copy link", 2262
+        MENUITEM "Open link in new tab", 2435
+        MENUITEM "Open link in new window", 2137
+        MENUITEM "Open link", 2136
+    }
+    POPUP "Context Unknown"
+    {
+    }
+    POPUP "DYNSRC Image"
+    {
+        MENUITEM "Copy", 15    // Ctrl+Shift+R
+        MENUITEM "Copy link", 2262
+        MENUITEM "Open link in new tab", 2435
+        MENUITEM "Open link in new window", 2137
+        MENUITEM "Open link", 2136
+    }
+    POPUP "Debug"
+    {
+    }
+    POPUP "Vertical scrollbar"
+    {
+    }
+    POPUP "Horizontal scrollbar"
+    {
+    }
+    POPUP "Media"
+    {
+    }
+    POPUP "Entity"
+    {
+        MENUITEM "Copy", 15    // Ctrl+Shift+R
+    }
+}
+
+MENU__37632 MENU
+{
+    POPUP "(untitled)"
+    {
+        MENUITEM "&Temporarily allow pop-ups", 37713
+        MENUITEM "&Always allow pop-ups from this site...", 37728
+        MENUITEM "B&lock pop-ups from this site...", 37729
+        POPUP "S&ettings"
+        {
+            MENUITEM "Turn off Pop-up &Blocker", 37730
+            MENUITEM "Turn on Pop-up &Blocker", 37731
+            MENUITEM "Show &Notification bar for pop-ups", 37733
+            MENUITEM "&More settings...", 37732
+        }
+        MENUITEM "&Install this add-on...", 37667
+        MENUITEM "Install this add-on for &all users on this computer...", 37665
+        MENUITEM "&What’s the risk?", 37666
+        MENUITEM "&Download file...", 37649
+        MENUITEM "&What’s the risk?", 37650
+        MENUITEM "&Allow blocked content...", 37745
+        MENUITEM "&What’s the risk?", 37746
+        MENUITEM "&Show restricted content", 37777
+        MENUITEM "&What’s the risk?", 37778
+        MENUITEM "&Install This add-on", 37761
+        MENUITEM "&What’s the risk?", 37762
+        MENUITEM "&Run add-on", 37764
+        MENUITEM "&What’s the risk?", 37765
+        MENUITEM "&Run add-on", 37767
+        MENUITEM "Run add-on on &all websites", 37768
+        MENUITEM "&What’s the risk?", 37769
+        MENUITEM "&Manage add-ons", 38046
+        MENUITEM "&About add-ons", 38047
+        MENUITEM "&Allow all protocols", 37889
+        MENUITEM "&Allow all protocols", 37905
+        MENUITEM "&Allow all protocols", 37921
+        MENUITEM "&Allow all protocols", 37937
+        MENUITEM "&Allow all protocols", 37953
+        MENUITEM "&Run add-on", 37985
+        MENUITEM "&What’s the risk?", 37986
+        MENUITEM "&Run add-on", 37988
+        MENUITEM "Run add-on on &all websites", 37989
+        MENUITEM "&What’s the risk?", 37990
+        MENUITEM "&Show all content", 38001
+        MENUITEM "&What’s the risk?", 38002
+        MENUITEM "&About Family Safety", 38008
+        MENUITEM "&View blocked content", 38007
+        MENUITEM "&About Family Safety", 38010
+        MENUITEM "&Fix settings for me...", 38033
+        MENUITEM "&Open security settings", 38034
+        MENUITEM "&Help about security settings", 38035
+        MENUITEM "&Display blocked content", 38004
+        MENUITEM "&What’s the risk?", 38005
+        MENUITEM "&Don’t show this message again", 38017
+        MENUITEM "&Enable intranet settings", 38018
+        MENUITEM "&What are intranet settings?", 38019
+        MENUITEM "&Change language settings", 38417
+        MENUITEM "&Don’t show this message again", 38434
+        MENUITEM "&Why am I seeing this?", 38451
+        MENUITEM "&Install this add-on from website", 38039
+        MENUITEM "&Don’t show this message again", 38041
+        MENUITEM "&Turn on Protected mode", 38042
+        MENUITEM "&Temporarily allow scripted windows", 38044
+        MENUITEM "&What’s the risk?", 38453
+        MENUITEM "&Disable", 38022
+        MENUITEM "&Always ignore", 38023
+        MENUITEM "&Don’t show again for this site", 38112
+        MENUITEM "&Open desktop", 38113
+        MENUITEM SEPARATOR
+        MENUITEM "&Notification bar Help", 37634
+        MENUITEM "&Open desktop", 38114
+    }
+}
+
+MENU__37633 MENU
+{
+    POPUP "(untitled)"
+    {
+        POPUP "&Pop-up blocked"
+        {
+            MENUITEM "&Temporarily allow pop-ups", 37713
+            MENUITEM "&Always allow pop-ups from this site...", 37728
+            MENUITEM "B&lock pop-ups from this site...", 37729
+            POPUP "S&ettings"
+            {
+                MENUITEM "Turn off Pop-up &Blocker", 37730
+                MENUITEM "Turn on Pop-up &Blocker", 37731
+                MENUITEM "Show &Notification bar for pop-ups", 37733
+                MENUITEM "&More settings...", 37732
+            }
+        }
+        POPUP "&File download blocked"
+        {
+            MENUITEM "&Download file...", 37649
+            MENUITEM "&What’s the risk?", 37650
+        }
+        POPUP "&Installation blocked"
+        {
+            MENUITEM "&Install this add-on...", 37667
+            MENUITEM "Install this add-on for &all users on this computer...", 37665
+            MENUITEM "&What’s the risk?", 37666
+        }
+        POPUP "&Add-on blocked"
+        {
+            MENUITEM "&What’s the risk?", 37681
+        }
+        POPUP "&Active content blocked"
+        {
+            MENUITEM "&Allow blocked content...", 37745
+            MENUITEM "&What’s the risk?", 37746
+        }
+        POPUP "&Content restricted"
+        {
+            MENUITEM "&Show restricted content", 37777
+            MENUITEM "&What’s the risk?", 37778
+        }
+        POPUP "&Add-on blocked"
+        {
+            MENUITEM "&Install this add-on", 37761
+            MENUITEM "&What’s the risk?", 37762
+        }
+        POPUP "&Add-on disabled"
+        {
+            MENUITEM "&Run add-on", 37764
+            MENUITEM "&What’s the risk?", 37765
+        }
+        POPUP "&Add-on disabled"
+        {
+            MENUITEM "&Run add-on", 37767
+            MENUITEM "Run add-on on &all websites", 37768
+            MENUITEM "&What’s the risk?", 37769
+        }
+        POPUP "&Add-ons disabled"
+        {
+            MENUITEM "&Manage add-ons", 38046
+            MENUITEM "&About add-ons", 38047
+        }
+        POPUP "&Protocol blocked"
+        {
+            MENUITEM "&Allow all protocols", 37889
+        }
+        POPUP "&Protocol blocked"
+        {
+            MENUITEM "&Allow all protocols", 37905
+        }
+        POPUP "&Protocol blocked"
+        {
+            MENUITEM "&Allow all protocols", 37921
+        }
+        POPUP "&Protocol blocked"
+        {
+            MENUITEM "&Allow all protocols", 37937
+        }
+        POPUP "&Protocol blocked"
+        {
+            MENUITEM "&Allow all protocols", 37953
+        }
+        POPUP "&Protocol blocked"
+        {
+            MENUITEM "&What’s the risk?", 37969
+        }
+        POPUP "&Add-on disabled"
+        {
+            MENUITEM "&Run add-on", 37985
+            MENUITEM "&What’s the risk?", 37986
+        }
+        POPUP "&Add-on disabled"
+        {
+            MENUITEM "&Run add-on", 37988
+            MENUITEM "Run add-on on &all websites", 37989
+            MENUITEM "&What’s the risk?", 37990
+        }
+        POPUP "&Only secure content is displayed"
+        {
+            MENUITEM "&Show all content", 38001
+            MENUITEM "&What’s the risk?", 38002
+        }
+        POPUP "&Content blocked by Family Safety"
+        {
+            MENUITEM "&About Family Safety", 38008
+            MENUITEM "&View blocked content", 38007
+        }
+        POPUP "Add-on bl&ocked by Family Safety"
+        {
+            MENUITEM "&About Family Safety", 38010
+        }
+        POPUP "&Security settings at risk"
+        {
+            MENUITEM "&Fix settings for me...", 38033
+            MENUITEM "&Open security settings", 38034
+            MENUITEM "H&elp on security settings", 38035
+        }
+        POPUP "&Invalid certificate blocked"
+        {
+            MENUITEM "&Display blocked content", 38004
+            MENUITEM "&What’s the risk?", 38005
+        }
+        POPUP "&Intranet settings"
+        {
+            MENUITEM "&Don’t show this message again", 38017
+            MENUITEM "&Enable intranet settings", 38018
+            MENUITEM "&What are intranet settings?", 38019
+        }
+        POPUP "&International website address"
+        {
+            MENUITEM "&Change language settings", 38417
+            MENUITEM "&Don’t show this message again", 38434
+            MENUITEM "&Why am I seeing this?", 38451
+        }
+        POPUP "Add-on requires &upgrade"
+        {
+            MENUITEM "&Install this add-on from website", 38039
+        }
+        POPUP "&Protected mode is currently turned off"
+        {
+            MENUITEM "&Don’t show this message again", 38041
+            MENUITEM "&Click here to turn on Protected mode", 38042
+        }
+        POPUP "&Scripted window blocked"
+        {
+            MENUITEM "&Temporarily allow scripted windows", 38044
+        }
+        POPUP "&XSS Filter sanitation"
+        {
+            MENUITEM "&What’s the risk?", 38453
+        }
+        POPUP "&Add-on blocked by Enhanced Protected Mode"
+        {
+            MENUITEM "&Disable", 38022
+            MENUITEM "&Always ignore", 38023
+        }
+        MENUITEM SEPARATOR
+        MENUITEM "&Notification bar Help", 37634
+    }
+}
+
+MENU__37792 MENU
+{
+    POPUP "(untitled)"
+    {
+        MENUITEM "&Install", 37667
+        MENUITEM "Install for &all users", 37665
+    }
+}
+
+MENU__37793 MENU
+{
+    POPUP "(untitled)"
+    {
+        MENUITEM "A&llow", 37988
+        MENUITEM "Allow for &all websites", 37989
+    }
+}
+
+MENU__37794 MENU
+{
+    POPUP "(untitled)"
+    {
+        MENUITEM "A&llow", 37767
+        MENUITEM "Allow for &all websites", 37768
+    }
+}
+
+MENU__37795 MENU
+{
+    POPUP "(untitled)"
+    {
+        MENUITEM "&Always allow", 37728
+        MENUITEM "&More settings", 37732
+    }
+}
+
+MENU__37796 MENU
+{
+    POPUP "(untitled)"
+    {
+        MENUITEM "Always &allow", 37770
+        MENUITEM "Always &deny and don’t tell me", 37771
+    }
+}
+
+MENU__37797 MENU
+{
+    POPUP "(untitled)"
+    {
+        MENUITEM "Always &allow", 37770
+        MENUITEM "&Deny once", 37773
+    }
+}
+
+MENU__38048 MENU
+{
+    POPUP "(untitled)"
+    {
+        MENUITEM "Match &whole word only", 38049
+        MENUITEM "Match &case", 38050
+        MENUITEM "Match D&iacritic", 38051
+        MENUITEM "Match &Alef Hamza", 38052
+        MENUITEM "Match &Kashida", 38053
+    }
+}
+
+MENU__42101 MENU
+{
+    POPUP "(untitled)"
+    {
+        MENUITEM "&Allow", 42756
+        MENUITEM "&Block", 42760
+        POPUP "&Sort by"
+        {
+        }
+    }
+}
+
+MENU__53392 MENU
+{
+    POPUP "(untitled)"
+    {
+        MENUITEM "&Save", 53408
+        MENUITEM "Save &as", 53409
+        MENUITEM "Save and &run", 53410
+    }
+}
+
+MENU__53394 MENU
+{
+    POPUP "(untitled)"
+    {
+        MENUITEM "&Save", 53408
+        MENUITEM "Save &as", 53409
+        MENUITEM "Save and &open", 53410
+    }
+}
+
+MENU__53396 MENU
+{
+    POPUP "(untitled)"
+    {
+        MENUITEM "&Open", 53411
+        MENUITEM "Open &with", 53412
+    }
+}
+
+MENU__53840 MENU
+{
+    POPUP "(untitled)"
+    {
+        MENUITEM "&No", 53841
+        MENUITEM "&Don’t ask again", 53842
+    }
+}
+
+MENU__54053 MENU
+{
+    POPUP "(untitled)"
+    {
+        MENUITEM "&Ask me later", 54054
+        MENUITEM "&Don’t disable", 54055
+    }
+}
+
+MENU__54108 MENU
+{
+    POPUP "(untitled)"
+    {
+        MENUITEM "Turn off ActiveX Filtering", 54109
+        MENUITEM "Turn off Tracking Protection", 54110
+        MENUITEM "Turn off all filtering", 54111
+    }
+}
+
+MENU__54112 MENU
+{
+    POPUP "(untitled)"
+    {
+        MENUITEM "Turn on all filtering", 54113
+        MENUITEM "Turn on ActiveX Filtering", 54114
+        MENUITEM "Turn on Tracking Protection", 54115
+    }
+}

@@ -1,0 +1,21 @@
+# Transcription of a screenshot. Each line: <where in the window> | <label as shown>.
+# image: https://commons.wikimedia.org/wiki/File:Netscape_Navigator_1.22_Screenshot.png
+# fetched: https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Netscape_Navigator_1.22_Screenshot.png/960px-Netscape_Navigator_1.22_Screenshot.png
+# sha256 of the 960px image read: e7e7da20b3b04d492f9b0ba75345bd9cb7559c7f966ddbb41ecbd173f55af986
+# read on 2026-11-26 by Claude (vision). Shows the window of Netscape Navigator version 1.22 (1995), Windows.
+# Only what is visible: menu titles and directory buttons. The toolbar buttons have icons only, no captions, so they are not transcribed. No menu is open.
+Menu bar | File
+Menu bar | Edit
+Menu bar | View
+Menu bar | Go
+Menu bar | Bookmarks
+Menu bar | Options
+Menu bar | Directory
+Menu bar | Help
+Directory buttons | What's New!
+Directory buttons | What's Cool!
+Directory buttons | Upgrades
+Directory buttons | Net Search
+Directory buttons | Net Directory
+Directory buttons | Newsgroups
+Directory buttons | Handbook

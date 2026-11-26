@@ -87,7 +87,7 @@
 - { source: netscape-0.92-screenshot, key: Directory buttons/What's New, command: legacy.directory-pages }
 - { source: netscape-0.92-screenshot, key: Directory buttons/Questions, command: legacy.directory-pages }
 - { source: netscape-0.92-screenshot, key: Directory buttons/Net Directory, command: legacy.directory-pages }
-- { source: netscape-0.92-screenshot, key: Directory buttons/Newsgroups, command: none, why: "opened the news reader; no news reader command exists yet" }
+- { source: netscape-0.92-screenshot, key: Directory buttons/Newsgroups, command: module.read-news }
 - { source: netscape-4.8-screenshot, key: Toolbar/Search, command: nav.search-page, why: "Netscape's Search button opened its search page, not find-in-page" }
 - { source: netscape-4.8-screenshot, key: Toolbar/Security, command: page.certificate-info, why: "opened the Security Info window for the page" }
 - { source: netscape-4.8-screenshot, key: Toolbar/Netscape, command: none, why: "a link to Netscape's portal" }
@@ -995,3 +995,86 @@
 - { source: vivaldi-6.9-linux, key: COMMAND_APPEND_SELECTION_TO_NOTE, command: module.notes }
 - { source: vivaldi-6.9-linux, key: COMMAND_TRANSLATE_SELECTION, command: page.translate }
 - { source: vivaldi-6.9-linux, key: DOCUMENT_SHOW_FULL_ADDRESS, command: view.show-full-urls }
+
+# ---- screenshots of Netscape 1.0N and 1.22 ----
+- { source: netscape-1.0n-screenshot, key: Toolbar/Open, command: file.open-location, why: "Netscape's Open button asked for a location" }
+- { source: netscape-1.0n-screenshot, key: "Directory buttons/Welcome", command: legacy.directory-pages }
+- { source: netscape-1.0n-screenshot, key: "Directory buttons/What's New!", command: legacy.directory-pages }
+- { source: netscape-1.0n-screenshot, key: "Directory buttons/What's Cool!", command: legacy.directory-pages }
+- { source: netscape-1.0n-screenshot, key: "Directory buttons/Questions", command: legacy.directory-pages }
+- { source: netscape-1.0n-screenshot, key: "Directory buttons/Net Directory", command: legacy.directory-pages }
+- { source: netscape-1.22-screenshot, key: "Directory buttons/What's New!", command: legacy.directory-pages }
+- { source: netscape-1.22-screenshot, key: "Directory buttons/What's Cool!", command: legacy.directory-pages }
+- { source: netscape-1.22-screenshot, key: "Directory buttons/Upgrades", command: legacy.directory-pages }
+- { source: netscape-1.22-screenshot, key: "Directory buttons/Net Directory", command: legacy.directory-pages }
+- { source: netscape-1.22-screenshot, key: "Directory buttons/Newsgroups", command: module.read-news }
+- { source: netscape-1.22-screenshot, key: "Directory buttons/Handbook", command: help.contents }
+- { source: netscape-1.0n-screenshot, key: "Menu bar/File", command: none, why: "a menu title, not a command" }
+- { source: netscape-1.0n-screenshot, key: "Menu bar/Directory", command: none, why: "a menu title, not a command" }
+- { source: netscape-1.22-screenshot, key: "Menu bar/File", command: none, why: "a menu title, not a command" }
+- { source: netscape-1.22-screenshot, key: "Menu bar/Directory", command: none, why: "a menu title, not a command" }
+
+# ---- generated from the rule table for dumped menus (one line per item; each rule was checked against the item's menu and status text) ----
+- { source: ie-11-win32, key: "41511", command: view.menu-bar }
+- { source: ie-11-win32, key: "41478", command: view.toggle-bookmarks-bar }
+- { source: ie-11-win32, key: "41481", command: view.toolbar }
+- { source: ie-11-win32, key: "41484", command: view.lock-toolbars }
+- { source: ie-11-win32, key: "1540", command: tab.open-link }
+- { source: ie-11-win32, key: "1541", command: bookmark.open }
+- { source: ie-11-win32, key: "1543", command: bookmark.toggle }
+- { source: ie-11-win32, key: "42454", command: view.toolbar }
+- { source: ie-11-win32, key: "42442", command: view.customize-toolbar }
+- { source: ie-11-win32, key: "42443", command: view.customize-toolbar }
+- { source: ie-11-win32, key: "42444", command: view.customize-toolbar }
+- { source: ie-11-win32, key: "42437", command: view.customize-toolbar }
+- { source: ie-11-win32, key: "41414", command: tools.manage-extensions }
+- { source: ie-11-win32, key: "256", command: file.open-location }
+- { source: ie-11-win32, key: "282", command: file.send-link }
+- { source: ie-11-win32, key: "283", command: file.send-link }
+- { source: ie-11-win32, key: "284", command: tools.create-shortcut }
+- { source: ie-11-win32, key: "374", command: tools.import-settings }
+- { source: ie-11-win32, key: "262", command: page.info }
+- { source: ie-11-win32, key: "1091", command: edit.find }
+- { source: ie-11-win32, key: "41504", command: nav.reload }
+- { source: ie-11-win32, key: "3460", command: input.caret-mode }
+- { source: ie-11-win32, key: "41509", command: page.certificate-info }
+- { source: ie-11-win32, key: "41500", command: legacy.java-console }
+- { source: ie-11-win32, key: "41331", command: bookmark.toggle }
+- { source: ie-11-win32, key: "41345", command: bookmark.toggle }
+- { source: ie-11-win32, key: "41344", command: bookmark.add-all-tabs }
+- { source: ie-11-win32, key: "41330", command: bookmark.show }
+- { source: ie-11-win32, key: "41342", command: none, why: "a placeholder shown when the list is empty" }
+- { source: ie-11-win32, key: "41267", command: privacy.clear-data }
+- { source: ie-11-win32, key: "41268", command: app.new-private-window }
+- { source: ie-11-win32, key: "41270", command: history.restore-session }
+- { source: ie-11-win32, key: "41296", command: privacy.popups }
+- { source: ie-11-win32, key: "41272", command: tools.user-agent }
+- { source: ie-11-win32, key: "41251", command: tools.preferences }
+- { source: ie-11-win32, key: "337", command: help.contents }
+- { source: ie-11-win32, key: "344", command: help.support }
+- { source: ie-11-win32, key: "375", command: none, why: "a Windows or Microsoft program entry, not a browser command" }
+- { source: ie-11-win32, key: "41222", command: help.report-broken-site }
+- { source: ie-11-win32, key: "336", command: help.about }
+- { source: ie-11-win32, key: "1542", command: bookmark.open }
+- { source: ie-11-win32, key: "61440", command: view.zoom-set }
+- { source: ie-11-win32, key: "4092", command: privacy.site-preferences }
+- { source: ie-11-win32, key: "4093", command: privacy.site-preferences }
+- { source: ie-11-win32, key: "2260", command: page.info }
+- { source: ie-11-win32, key: "2269", command: page.reload-image }
+- { source: ie-11-win32, key: "2380", command: none, why: "moves to the point of the scroll bar that was clicked; a scroll bar gesture, not a command" }
+- { source: ie-11-win32, key: "2387", command: view.scroll-far-left }
+- { source: ie-11-win32, key: "2388", command: view.scroll-far-right }
+- { source: ie-11-win32, key: "2262", command: edit.copy-link }
+- { source: ie-11-win32, key: "2263", command: file.save-background-image }
+- { source: ie-11-win32, key: "2264", command: page.set-desktop-background }
+- { source: ie-11-win32, key: "2265", command: edit.copy-background-image }
+- { source: ie-11-win32, key: "2261", command: bookmark.toggle }
+- { source: ie-11-win32, key: "2273", command: file.print-link }
+- { source: ie-11-win32, key: "2270", command: file.save-image }
+- { source: ie-11-win32, key: "2288", command: file.send-image }
+- { source: ie-11-win32, key: "2289", command: file.print-image }
+- { source: ie-11-win32, key: "2287", command: none, why: "part of the Windows desktop shell that Internet Explorer 4 merged into its window, not a browser command" }
+- { source: ie-11-win32, key: "2271", command: page.media-play-pause }
+- { source: ie-11-win32, key: "37728", command: privacy.site-preferences }
+- { source: ie-11-win32, key: "37729", command: privacy.site-preferences }
+- { source: ie-11-win32, key: "38046", command: tools.manage-extensions }
