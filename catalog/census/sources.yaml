@@ -627,3 +627,15 @@
   files:
     - path: ie-11-win32-menus.txt
       role: primary
+- id: safari-27.2-macos
+  browser: Safari
+  version: "27.2"
+  released: 2026
+  platform: macOS
+  host: machine
+  repo: "Safari 27.2 (21625.2.8.18.4), macOS 26.7.2, GitHub Actions runner macos-26-arm64"
+  ref: "menus read with tools/menu-dump/macos-menus.js, run 45871033002"
+  extractor: transcription
+  files:
+    - path: safari-27.2-macos-menus.txt
+      role: primary

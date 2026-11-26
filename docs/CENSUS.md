@@ -6,9 +6,9 @@ The census records which commands real browsers offered, read from their own sou
 
 ## Summary
 
-- **50 browser versions** from **26 browsers**, **7245 items** read.
-- **3030 items (42%)** are linked to a canonical command; **135** were read and deliberately not linked; **4080** are not yet linked (work queue: [census-unlinked.tsv](census-unlinked.tsv)).
-- **328 canonical commands**: 317 have lineage read from source, 4 have only lineage written from memory (marked *recalled*), 7 have none yet.
+- **51 browser versions** from **27 browsers**, **7447 items** read.
+- **3191 items (43%)** are linked to a canonical command; **140** were read and deliberately not linked; **4116** are not yet linked (work queue: [census-unlinked.tsv](census-unlinked.tsv)).
+- **338 canonical commands**: 327 have lineage read from source, 4 have only lineage written from memory (marked *recalled*), 7 have none yet.
 
 ## What a census entry proves, and what it does not
 
@@ -76,6 +76,7 @@ The census records which commands real browsers offered, read from their own sou
 | `netscape-1.0n-screenshot` | Netscape Navigator | 1.0N | 1994 | screenshot: [Commons Netscape-1.0N.png](https://commons.wikimedia.org/wiki/File:Netscape-1.0N.png) | 22 | 20 (91%) | 2 | 0 |
 | `netscape-1.22-screenshot` | Netscape Navigator | 1.22 | 1995 | screenshot: [Commons Netscape_Navigator_1.22_Screenshot.png](https://commons.wikimedia.org/wiki/File:Netscape_Navigator_1.22_Screenshot.png) | 15 | 13 (87%) | 2 | 0 |
 | `ie-11-win32` | Internet Explorer | 11 | 2013 | program's own menus: [archive.org/internet-explorer-11-setup-for-windows-7](https://archive.org/details/internet-explorer-11-setup-for-windows-7) | 317 | 114 (36%) | 4 | 199 |
+| `safari-27.2-macos` | Safari | 27.2 | 2026 | menus read on a contributor's computer: Safari 27.2 (21625.2.8.18.4), macOS 26.7.2, GitHub Actions runner macos-26-arm64 | 202 | 161 (80%) | 5 | 36 |
 
 ## Not covered
 
@@ -86,7 +87,7 @@ These cannot be read from the build environment, so they have **no census lineag
 | Internet Explorer 1–3, 6, 9–11, Edge Legacy | IE 4, 5, 7 and 8 are covered from menus read out of their own programs (Internet Archive downloads). IE 1–3 at the Archive are 16-bit or AOL builds the reader does not handle; IE 6 there is a web installer with nothing inside; the stand-alone IE collection is password-encrypted and was not opened. IE 9–11 not yet tried. |
 | Netscape 1.x, 4.5, 4.8, 6–9 | Mosaic Netscape 0.91, Navigator 2.02 and 3.0 and Communicator 4.05 and 4.7 are covered from their own programs, plus three manuals and two screenshots. Netscape 6–9 are Mozilla-based (their menus are in Mozilla's code, covered by SeaMonkey). |
 | Opera 2–6, 9–11, 15+ | Opera 8.01 and 12.14 are covered from their menu files. Opera 2–3 at the Archive are 16-bit programs; the 9.x and 10.x installers use an InstallShield format not unpacked here. Opera 15+ is Chromium-based. Otter Browser, an Opera 12 style clone, is also covered. |
-| Safari (menu bar), Camino, OmniWeb, iCab | Closed source. Safari's page context menu is covered from WebKit (2010 and current); its menu bar is not. |
+| Safari before 27, Camino, OmniWeb, iCab | Closed source. Safari 27.2's menu bar was read on a macOS runner, and its page context menu comes from WebKit (2010 and current). Older Safari versions would need an older macOS machine. Safari's Develop menu was not enabled. |
 | Arc, Sidekick, SigmaOS, Zen, Floorp; Vivaldi before 3.4 | Closed source or no menu file in a reachable repository. Vivaldi 3.4 and 6.9 are covered from the menu files inside their official Linux builds (Arch Linux package archive at the Internet Archive). Arc features appear in the roadmap from public descriptions, not from a source. |
 | Firefox 1.0–100 (history) | The gecko-dev mirror has no release tags; only the current tree was read. SeaMonkey 2.0 covers 2009. |
 | Konqueror 3, Galeon, Epiphany, Flock | Konqueror 4.0 and 4.14 are covered from kde-baseapps (menu file and handbook); KDE 3 tags were not found in the mirrors reachable here. |
@@ -232,14 +233,19 @@ These cannot be read from the build environment, so they have **no census lineag
 | `ie-11-win32` | `375` | a Windows or Microsoft program entry, not a browser command |
 | `ie-11-win32` | `2380` | moves to the point of the scroll bar that was clicked; a scroll bar gesture, not a command |
 | `ie-11-win32` | `2287` | part of the Windows desktop shell that Internet Explorer 4 merged into its window, not a browser command |
+| `safari-27.2-macos` | `Safari/Hide Others` | a standard macOS application-menu entry that hides other programs |
+| `safari-27.2-macos` | `Safari/Show All` | a standard macOS application-menu entry that shows hidden programs |
+| `safari-27.2-macos` | `Edit > Substitutions/Smart Copy/Paste` | a macOS text-substitution setting for form fields, not the Paste command |
+| `safari-27.2-macos` | `Edit/Start Dictation…` | a macOS system entry added to every Edit menu |
+| `safari-27.2-macos` | `Edit/Emoji & Symbols` | a macOS system entry added to every Edit menu |
 
 ## Work queue
 
-4080 items are not yet linked. They fall into these groups:
+4116 items are not yet linked. They fall into these groups:
 
 | Group | Items |
 |---|---|
-| Other | 3020 |
+| Other | 3056 |
 | Other Chromium and Brave ids | 569 |
 | Chromium page context menu entries | 212 |
 | qutebrowser caret, readline, config, debug and prompt commands | 69 |

@@ -5,6 +5,7 @@ All notable changes to this project are documented here. Format: [Keep a Changel
 ## [Unreleased]
 
 ### Added
+- 2026-11-26: Safari's menu bar. Safari 27.2 read on GitHub's macOS runners by `tools/menu-dump/macos-menus.js` (workflow `safari-menus.yml`): 202 items, 166 linked. 10 new commands (338 in all), among them Reading List, Share, Export as PDF, Tab Groups, Hide Distracting Items, AutoFill and Privacy Report.
 - 2026-11-26: Census from the browsers' own programs.
   - Installers from the Internet Archive are unpacked and their menus read without running anything: Mosaic Netscape 0.91, Navigator 2.02 and 3.0, Communicator 4.05 and 4.7, Internet Explorer 4, 5, 7, 8 and 11 (Windows menu resources), Opera 8.01 and 12.14 (menu file), Vivaldi 3.4 and 6.9 (menu files, labels from its command table).
   - New readers, all without dependencies: Windows PE resources (menus, MENUEX, accelerators, string tables), PKWARE DCL implode, InstallShield 3 archives.

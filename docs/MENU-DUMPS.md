@@ -2,7 +2,7 @@
 
 Some menus cannot be read from files: Safari's menu bar, and the current Chromium-based Opera and Edge. Two scripts read them from the running program instead. They click nothing and send nothing anywhere; the output goes to the terminal.
 
-Neither script has been run by the project yet: they were written in a Linux container with no macOS or Windows to test on. Report anything that goes wrong.
+The macOS script has been run on GitHub's macOS machines (Safari 27.2; see `.github/workflows/safari-menus.yml`, which anyone with the repository can re-run for free). The Windows script has not been run yet. On a fresh machine the `#? ` lines are all commands; on your own machine they will include your pages.
 
 ## macOS (Safari, Opera, Edge, Chrome, Vivaldi, any app)
 

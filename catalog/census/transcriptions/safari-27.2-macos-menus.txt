@@ -1,0 +1,211 @@
+# Menus read from Safari 27.2 (21625.2.8.18.4) on macOS 26.7.2 (Build 25G332) by tools/menu-dump/macos-menus.js, through System Events.
+# read: 2026-11-26 on a GitHub Actions macOS runner (image macos-26-arm64 20261117.0516.1), a fresh machine with an empty Safari.
+# run: https://github.com/socrtwo/annes-browser/actions/runs/45871033002 (job "dump (macos-latest)"); sha256 of the uploaded artifact zip: 49d1bb592663df940c52c351153830fbef42ff615e76e9511da15c826ea9398c
+# The macos-15 job of the same run (macOS 15.8.2, Safari 27.2 build 20625.2.8.18.4) gave the same menus.
+# Reviewed by hand after the run: lines the script had commented out ("#? ") were all commands and are kept; removed were the
+# default Favorites bookmarks (Apple, iCloud, ...), the system's Services entries, the open window's title and repeated alternates.
+# Three shortcuts the script printed as a bare letter (D, E, F) are written Fn+letter: they use the Fn/Globe key, which the script
+# did not decode. Two tab-group shortcuts whose key did not print are left without one. The Develop menu was not enabled.
+# Each line: menu path | label | shortcut.
+Safari | About Safari
+Safari | Safari Extensions…
+Safari | Settings… | Cmd+,
+Safari | Privacy Report…
+Safari | Settings for This Website…
+Safari | Connection Security Details…
+Safari | Clear History…
+Safari | Clear History and Keep Website Data…
+Safari | Create Profile…
+Safari | Hide Safari | Cmd+H
+Safari | Hide Others | Opt+Cmd+H
+Safari | Show All
+Safari | Quit Safari | Cmd+Q
+Safari | Quit and Keep Windows | Opt+Cmd+Q
+File | New Window | Cmd+N
+File | New Private Window | Shift+Cmd+N
+File | New Tab | Cmd+T
+File | New Tab at End | Opt+Cmd+T
+File | New Empty Tab Group | Ctrl+Cmd+N
+File | Open File… | Cmd+O
+File | Open Location… | Cmd+L
+File | Close Window | Cmd+W
+File | Close All Windows | Opt+Cmd+W
+File | Close Tab
+File | Close Other Tabs
+File | Delete Tab Group | Ctrl+Cmd+W
+File | Save As… | Cmd+S
+File | Share…
+File | Export as PDF…
+File | Add to Dock…
+File | Import Browsing Data from File or Folder…
+File | Export Browsing Data to File…
+File | Print… | Cmd+P
+Edit | Undo | Cmd+Z
+Edit | Redo | Shift+Cmd+Z
+Edit | Cut | Cmd+X
+Edit | Copy | Cmd+C
+Edit | Copy Search Terms | Ctrl+Cmd+C
+Edit | Paste | Cmd+V
+Edit | Paste and Match Style | Opt+Shift+Cmd+V
+Edit | Delete
+Edit | Select All | Cmd+A
+Edit | AutoFill Form | Shift+Cmd+A
+Edit > Distraction Control | Hide Distracting Items...
+Edit > Distraction Control | Show Hidden Items
+Edit > Distraction Control | Report Issues...
+Edit > Find | Google Search… | Opt+Cmd+F
+Edit > Find | Find… | Cmd+F
+Edit > Find | Find Next | Cmd+G
+Edit > Find | Find Previous | Shift+Cmd+G
+Edit > Find | Hide Find Banner | Shift+Cmd+F
+Edit > Find | Use Selection for Find | Cmd+E
+Edit > Find | Jump to Selection | Cmd+J
+Edit > Spelling and Grammar | Show Spelling and Grammar | Cmd+:
+Edit > Spelling and Grammar | Check Document Now | Cmd+;
+Edit > Spelling and Grammar | Check Spelling While Typing
+Edit > Spelling and Grammar | Check Grammar With Spelling
+Edit > Spelling and Grammar | Correct Spelling Automatically
+Edit > Substitutions | Show Substitutions
+Edit > Substitutions | Smart Copy/Paste
+Edit > Substitutions | Smart Quotes
+Edit > Substitutions | Smart Dashes
+Edit > Substitutions | Smart Links
+Edit > Substitutions | Text Replacement
+Edit > Transformations | Make Upper Case
+Edit > Transformations | Make Lower Case
+Edit > Transformations | Capitalize
+Edit > Speech | Start Speaking
+Edit > Speech | Stop Speaking
+Edit > AutoFill | Contact…
+Edit > AutoFill | Passwords…
+Edit > AutoFill | Credit Card…
+Edit | Start Dictation… | Fn+D
+Edit | Emoji & Symbols | Fn+E
+View | Always Show Toolbar in Full Screen
+View | Customize Toolbar…
+View | Always Show Tab Bar
+View | Show Favorites Bar | Shift+Cmd+B
+View | Show Status Bar | Cmd+/
+View | Show Sidebar | Shift+Cmd+L
+View | Show Bookmarks Sidebar | Ctrl+Cmd+1
+View | Show Reading List Sidebar | Ctrl+Cmd+2
+View | Show Shared with You
+View | Show Reader | Shift+Cmd+R
+View | Show Tab Overview | Shift+Cmd+\
+View | Show Downloads | Opt+Cmd+L
+View | Stop | Cmd+.
+View | Reload Page | Cmd+R
+View | Reload Page From Origin | Opt+Cmd+R
+View > Translation | Translate to English
+View > Translation | Preferred Languages…
+View > Translation | View Original
+View > Translation | Report Translation Issue
+View | Actual Size | Cmd+0
+View | Zoom In | Cmd++
+View | Make Text Bigger | Opt+Cmd++
+View | Zoom Out | Cmd+-
+View | Make Text Smaller | Opt+Cmd+-
+View > Text Encoding | Default
+View > Text Encoding | Western (ISO Latin 1)
+View > Text Encoding | Western (Mac OS Roman)
+View > Text Encoding | Unicode (UTF-8)
+View > Text Encoding | Japanese (Shift JIS)
+View > Text Encoding | Japanese (ISO 2022-JP)
+View > Text Encoding | Japanese (EUC)
+View > Text Encoding | Japanese (Shift JIS X0213)
+View > Text Encoding | Traditional Chinese (Big 5)
+View > Text Encoding | Traditional Chinese (Big 5 HKSCS)
+View > Text Encoding | Traditional Chinese (Windows, DOS)
+View > Text Encoding | Korean (ISO 2022-KR)
+View > Text Encoding | Korean (Mac OS)
+View > Text Encoding | Korean (Windows, DOS)
+View > Text Encoding | Arabic (ISO 8859-6)
+View > Text Encoding | Arabic (Windows)
+View > Text Encoding | Hebrew (ISO 8859-8)
+View > Text Encoding | Hebrew (Windows)
+View > Text Encoding | Greek (ISO 8859-7)
+View > Text Encoding | Greek (Windows)
+View > Text Encoding | Cyrillic (ISO 8859-5)
+View > Text Encoding | Cyrillic (Mac OS)
+View > Text Encoding | Cyrillic (KOI8-R)
+View > Text Encoding | Cyrillic (Windows)
+View > Text Encoding | Ukrainian (KOI8-U)
+View > Text Encoding | Thai (Windows, DOS)
+View > Text Encoding | Simplified Chinese (GB 2312)
+View > Text Encoding | Simplified Chinese (HZ GB 2312)
+View > Text Encoding | Chinese (GB 18030)
+View > Text Encoding | Central European (ISO Latin 2)
+View > Text Encoding | Central European (Mac OS)
+View > Text Encoding | Central European (Windows Latin 2)
+View > Text Encoding | Vietnamese (Windows)
+View > Text Encoding | Turkish (ISO Latin 5)
+View > Text Encoding | Turkish (Windows Latin 5)
+View > Text Encoding | Central European (ISO Latin 4)
+View > Text Encoding | Baltic (Windows)
+View | Enter Full Screen | Fn+F
+History | Show All History | Cmd+Y
+History | Back | Cmd+[
+History | Forward | Cmd+]
+History | Home | Shift+Cmd+H
+History | Return to Search Results | Opt+Cmd+S
+History | Reopen Last Closed Window or Tab | Shift+Cmd+T
+History | Reopen All Windows from Last Session
+History | Clear History…
+History | Clear History and Keep Website Data…
+Bookmarks | Show Start Page
+Bookmarks | Show Bookmarks
+Bookmarks | Edit Bookmarks | Opt+Cmd+B
+Bookmarks | Add Bookmark… | Cmd+D
+Bookmarks | Add Bookmarks for Open Tabs…
+Bookmarks | Add Bookmark Folder
+Bookmarks | Add to Reading List | Shift+Cmd+D
+Bookmarks | Add Open Tabs to Reading List
+Bookmarks | Select Previous Item in Reading List
+Bookmarks | Select Next Item in Reading List
+Bookmarks > Favorites | Open in New Tabs
+Bookmarks > Favorites | Replace Tabs
+Window | Minimize | Cmd+M
+Window | Minimize All | Opt+Cmd+M
+Window | Zoom
+Window | Zoom All
+Window | Fill | Ctrl+F
+Window | Center | Ctrl+C
+Window > Move & Resize | Halves
+Window > Move & Resize | Left
+Window > Move & Resize | Right
+Window > Move & Resize | Top
+Window > Move & Resize | Bottom
+Window > Move & Resize | Quarters
+Window > Move & Resize | Top Left
+Window > Move & Resize | Top Right
+Window > Move & Resize | Bottom Left
+Window > Move & Resize | Bottom Right
+Window > Move & Resize | Arrange
+Window > Move & Resize | Left & Right
+Window > Move & Resize | Left & Quarters
+Window > Move & Resize | Right & Left
+Window > Move & Resize | Right & Quarters
+Window > Move & Resize | Top & Bottom
+Window > Move & Resize | Top & Quarters
+Window > Move & Resize | Bottom & Top
+Window > Move & Resize | Bottom & Quarters
+Window > Move & Resize | Return to Previous Size | Ctrl+R
+Window > Full Screen Tile | Left of Screen
+Window > Full Screen Tile | Right of Screen
+Window | Remove Window from Set
+Window > Arrange Tabs By | Title
+Window > Arrange Tabs By | Website
+Window | Show Previous Tab | Ctrl+Shift+Tab
+Window | Show Next Tab | Ctrl+Tab
+Window | Go To Previous Tab Group
+Window | Go To Next Tab Group
+Window | Pin Tab
+Window | Duplicate Tab
+Window | Move Tab to New Window
+Window | Merge All Windows
+Window | Mute This Tab
+Window | Mute Other Tabs
+Window | Bring All to Front
+Window | Arrange in Front
+Help | Safari Help | Cmd+?
+Help | Acknowledgments

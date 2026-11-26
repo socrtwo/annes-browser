@@ -364,3 +364,15 @@
 - { id: tools.user-agent, label: Compatibility Mode, aliases: [Compatibility View, Identify As], category: tools, description: "Change how the browser identifies itself to a site, for pages that refuse unfamiliar browsers.", status: implement, phase: 5, platforms: [desktop, android] }
 - { id: tab.close-all, label: Close All Tabs, aliases: [Close All], category: tab, description: "Close every tab in the window.", status: implement, phase: 3, platforms: [desktop, android] }
 - { id: bookmark.export, label: Export Bookmarks, aliases: [Export Bookmarks to HTML], category: bookmark, description: "Save all bookmarks to an HTML file other browsers can import.", status: implement, phase: 3, platforms: [desktop], requires: [filesystem] }
+
+# ======== eighth batch: Safari 27.2's menu bar ========
+- { id: bookmark.add-to-reading-list, label: Add to Reading List, category: bookmark, description: "Keep this page in a list of pages to read later.", status: implement, phase: 5, platforms: [desktop, android] }
+- { id: view.reading-list, label: Reading List, aliases: [Show Reading List Sidebar], category: view, description: "Show the list of pages kept to read later.", status: implement, phase: 5, platforms: [desktop, android] }
+- { id: file.share, label: Share, category: file, description: "Send this page's address through the system's sharing options.", status: implement, phase: 5, platforms: [desktop, android], requires: [external-app] }
+- { id: file.export-pdf, label: Export as PDF, category: file, description: "Save the page as a PDF file.", status: implement, phase: 5, platforms: [desktop], requires: [filesystem] }
+- { id: tab.new-group, label: New Tab Group, aliases: [New Empty Tab Group], category: tab, description: "Start a named group of tabs that can be switched to as a set.", status: implement, phase: 5, platforms: [desktop] }
+- { id: page.hide-distracting-items, label: Hide Distracting Items, aliases: [Distraction Control], category: page, description: "Pick parts of a page to hide, and show them again later.", status: implement, phase: 7, platforms: [desktop] }
+- { id: edit.autofill, label: AutoFill Form, aliases: [AutoFill], category: edit, description: "Fill the form with saved contact details.", status: implement, phase: 3, platforms: [desktop, android], requires: [credentials] }
+- { id: edit.transform-case, label: Change Case, aliases: [Make Upper Case, Make Lower Case, Capitalize], category: edit, description: "Change the selected text in a form field to upper case, lower case or capitalized.", status: implement, phase: 7, platforms: [desktop] }
+- { id: privacy.report, label: Privacy Report, category: privacy, description: "Show which trackers were blocked and on which sites.", status: implement, phase: 7, platforms: [desktop, android] }
+- { id: app.new-profile, label: Create Profile, aliases: [New Profile], category: app, description: "Create a separate set of history, cookies and bookmarks.", status: implement, phase: 5, platforms: [desktop] }

@@ -1078,3 +1078,129 @@
 - { source: ie-11-win32, key: "37728", command: privacy.site-preferences }
 - { source: ie-11-win32, key: "37729", command: privacy.site-preferences }
 - { source: ie-11-win32, key: "38046", command: tools.manage-extensions }
+
+# ---- Safari 27.2's menu bar, read on a macOS runner ----
+- { source: safari-27.2-macos, key: "Safari/About Safari", command: help.about }
+- { source: safari-27.2-macos, key: "Safari/Safari Extensions…", command: tools.manage-extensions }
+- { source: safari-27.2-macos, key: "Safari/Settings…", command: tools.preferences }
+- { source: safari-27.2-macos, key: "Safari/Privacy Report…", command: privacy.report }
+- { source: safari-27.2-macos, key: "Safari/Settings for This Website…", command: privacy.site-preferences }
+- { source: safari-27.2-macos, key: "Safari/Connection Security Details…", command: page.certificate-info }
+- { source: safari-27.2-macos, key: "Safari/Clear History and Keep Website Data…", command: history.clear }
+- { source: safari-27.2-macos, key: "History/Clear History and Keep Website Data…", command: history.clear }
+- { source: safari-27.2-macos, key: "Safari/Create Profile…", command: app.new-profile }
+- { source: safari-27.2-macos, key: "Safari/Hide Safari", command: app.hide }
+- { source: safari-27.2-macos, key: "Safari/Quit Safari", command: app.quit }
+- { source: safari-27.2-macos, key: "Safari/Quit and Keep Windows", command: app.quit }
+- { source: safari-27.2-macos, key: "File/New Tab at End", command: tab.new }
+- { source: safari-27.2-macos, key: "File/New Empty Tab Group", command: tab.new-group }
+- { source: safari-27.2-macos, key: "File/Share…", command: file.share }
+- { source: safari-27.2-macos, key: "File/Export as PDF…", command: file.export-pdf }
+- { source: safari-27.2-macos, key: "File/Add to Dock…", command: tools.create-shortcut }
+- { source: safari-27.2-macos, key: "File/Import Browsing Data from File or Folder…", command: tools.import-settings }
+- { source: safari-27.2-macos, key: "Edit/AutoFill Form", command: edit.autofill }
+- { source: safari-27.2-macos, key: "Edit > AutoFill/Contact…", command: edit.autofill }
+- { source: safari-27.2-macos, key: "Edit > AutoFill/Credit Card…", command: edit.autofill }
+- { source: safari-27.2-macos, key: "Edit > Distraction Control/Hide Distracting Items...", command: page.hide-distracting-items }
+- { source: safari-27.2-macos, key: "Edit > Distraction Control/Show Hidden Items", command: page.hide-distracting-items }
+- { source: safari-27.2-macos, key: "Edit > Find/Google Search…", command: input.focus-search }
+- { source: safari-27.2-macos, key: "Edit > Find/Hide Find Banner", command: edit.find-close }
+- { source: safari-27.2-macos, key: "Edit > Find/Use Selection for Find", command: edit.find-selection }
+- { source: safari-27.2-macos, key: "Edit > Spelling and Grammar/Show Spelling and Grammar", command: edit.spell-check }
+- { source: safari-27.2-macos, key: "Edit > Spelling and Grammar/Check Document Now", command: edit.check-spelling-now }
+- { source: safari-27.2-macos, key: "Edit > Transformations/Make Upper Case", command: edit.transform-case }
+- { source: safari-27.2-macos, key: "Edit > Transformations/Make Lower Case", command: edit.transform-case }
+- { source: safari-27.2-macos, key: "Edit > Transformations/Capitalize", command: edit.transform-case }
+- { source: safari-27.2-macos, key: "View/Always Show Tab Bar", command: view.tab-bar }
+- { source: safari-27.2-macos, key: "View/Show Favorites Bar", command: view.toggle-bookmarks-bar }
+- { source: safari-27.2-macos, key: "View/Show Status Bar", command: view.status-bar }
+- { source: safari-27.2-macos, key: "View/Show Bookmarks Sidebar", command: bookmark.show }
+- { source: safari-27.2-macos, key: "Bookmarks/Show Bookmarks", command: bookmark.show }
+- { source: safari-27.2-macos, key: "Bookmarks/Edit Bookmarks", command: bookmark.show }
+- { source: safari-27.2-macos, key: "View/Show Reading List Sidebar", command: view.reading-list }
+- { source: safari-27.2-macos, key: "View/Show Reader", command: view.reader-mode }
+- { source: safari-27.2-macos, key: "View/Show Tab Overview", command: tab.show-all }
+- { source: safari-27.2-macos, key: "View/Reload Page", command: nav.reload }
+- { source: safari-27.2-macos, key: "View/Reload Page From Origin", command: nav.reload-hard }
+- { source: safari-27.2-macos, key: "View > Translation/Translate to English", command: page.translate }
+- { source: safari-27.2-macos, key: "View > Translation/Preferred Languages…", command: page.translate }
+- { source: safari-27.2-macos, key: "View > Translation/View Original", command: page.translate }
+- { source: safari-27.2-macos, key: "View/Make Text Bigger", command: view.zoom-text-only }
+- { source: safari-27.2-macos, key: "View/Make Text Smaller", command: view.zoom-text-only }
+- { source: safari-27.2-macos, key: "History/Reopen Last Closed Window or Tab", command: tab.reopen-closed }
+- { source: safari-27.2-macos, key: "History/Reopen All Windows from Last Session", command: history.restore-session }
+- { source: safari-27.2-macos, key: "Bookmarks/Add Bookmarks for Open Tabs…", command: bookmark.add-all-tabs }
+- { source: safari-27.2-macos, key: "Bookmarks/Add to Reading List", command: bookmark.add-to-reading-list }
+- { source: safari-27.2-macos, key: "Bookmarks/Add Open Tabs to Reading List", command: bookmark.add-to-reading-list }
+- { source: safari-27.2-macos, key: "Bookmarks > Favorites/Open in New Tabs", command: bookmark.open }
+- { source: safari-27.2-macos, key: "Window/Minimize", command: app.minimize-window }
+- { source: safari-27.2-macos, key: "Window/Zoom", command: app.maximize-window }
+- { source: safari-27.2-macos, key: "Window > Full Screen Tile/Left of Screen", command: app.tile-windows }
+- { source: safari-27.2-macos, key: "Window > Full Screen Tile/Right of Screen", command: app.tile-windows }
+- { source: safari-27.2-macos, key: "Window/Show Previous Tab", command: tab.previous }
+- { source: safari-27.2-macos, key: "Window/Show Next Tab", command: tab.next }
+- { source: safari-27.2-macos, key: "Window/Pin Tab", command: tab.pin }
+- { source: safari-27.2-macos, key: "Window/Mute This Tab", command: tab.mute }
+- { source: safari-27.2-macos, key: "Help/Safari Help", command: help.contents }
+- { source: safari-27.2-macos, key: "Edit > Substitutions/Smart Copy/Paste", command: none, why: "a macOS text-substitution setting for form fields, not the Paste command" }
+- { source: safari-27.2-macos, key: "Safari/Hide Others", command: none, why: "a standard macOS application-menu entry that hides other programs" }
+- { source: safari-27.2-macos, key: "Safari/Show All", command: none, why: "a standard macOS application-menu entry that shows hidden programs" }
+- { source: safari-27.2-macos, key: "Edit/Start Dictation…", command: none, why: "a macOS system entry added to every Edit menu" }
+- { source: safari-27.2-macos, key: "Edit/Emoji & Symbols", command: none, why: "a macOS system entry added to every Edit menu" }
+- { source: safari-27.2-macos, key: "View > Text Encoding/Default", command: view.repair-text-encoding }
+- { source: safari-27.2-macos, key: "View > Text Encoding/Western (ISO Latin 1)", command: view.repair-text-encoding }
+- { source: safari-27.2-macos, key: "View > Text Encoding/Western (Mac OS Roman)", command: view.repair-text-encoding }
+- { source: safari-27.2-macos, key: "View > Text Encoding/Unicode (UTF-8)", command: view.repair-text-encoding }
+- { source: safari-27.2-macos, key: "View > Text Encoding/Japanese (Shift JIS)", command: view.repair-text-encoding }
+- { source: safari-27.2-macos, key: "View > Text Encoding/Japanese (ISO 2022-JP)", command: view.repair-text-encoding }
+- { source: safari-27.2-macos, key: "View > Text Encoding/Japanese (EUC)", command: view.repair-text-encoding }
+- { source: safari-27.2-macos, key: "View > Text Encoding/Japanese (Shift JIS X0213)", command: view.repair-text-encoding }
+- { source: safari-27.2-macos, key: "View > Text Encoding/Traditional Chinese (Big 5)", command: view.repair-text-encoding }
+- { source: safari-27.2-macos, key: "View > Text Encoding/Traditional Chinese (Big 5 HKSCS)", command: view.repair-text-encoding }
+- { source: safari-27.2-macos, key: "View > Text Encoding/Traditional Chinese (Windows, DOS)", command: view.repair-text-encoding }
+- { source: safari-27.2-macos, key: "View > Text Encoding/Korean (ISO 2022-KR)", command: view.repair-text-encoding }
+- { source: safari-27.2-macos, key: "View > Text Encoding/Korean (Mac OS)", command: view.repair-text-encoding }
+- { source: safari-27.2-macos, key: "View > Text Encoding/Korean (Windows, DOS)", command: view.repair-text-encoding }
+- { source: safari-27.2-macos, key: "View > Text Encoding/Arabic (ISO 8859-6)", command: view.repair-text-encoding }
+- { source: safari-27.2-macos, key: "View > Text Encoding/Arabic (Windows)", command: view.repair-text-encoding }
+- { source: safari-27.2-macos, key: "View > Text Encoding/Hebrew (ISO 8859-8)", command: view.repair-text-encoding }
+- { source: safari-27.2-macos, key: "View > Text Encoding/Hebrew (Windows)", command: view.repair-text-encoding }
+- { source: safari-27.2-macos, key: "View > Text Encoding/Greek (ISO 8859-7)", command: view.repair-text-encoding }
+- { source: safari-27.2-macos, key: "View > Text Encoding/Greek (Windows)", command: view.repair-text-encoding }
+- { source: safari-27.2-macos, key: "View > Text Encoding/Cyrillic (ISO 8859-5)", command: view.repair-text-encoding }
+- { source: safari-27.2-macos, key: "View > Text Encoding/Cyrillic (Mac OS)", command: view.repair-text-encoding }
+- { source: safari-27.2-macos, key: "View > Text Encoding/Cyrillic (KOI8-R)", command: view.repair-text-encoding }
+- { source: safari-27.2-macos, key: "View > Text Encoding/Cyrillic (Windows)", command: view.repair-text-encoding }
+- { source: safari-27.2-macos, key: "View > Text Encoding/Ukrainian (KOI8-U)", command: view.repair-text-encoding }
+- { source: safari-27.2-macos, key: "View > Text Encoding/Thai (Windows, DOS)", command: view.repair-text-encoding }
+- { source: safari-27.2-macos, key: "View > Text Encoding/Simplified Chinese (GB 2312)", command: view.repair-text-encoding }
+- { source: safari-27.2-macos, key: "View > Text Encoding/Simplified Chinese (HZ GB 2312)", command: view.repair-text-encoding }
+- { source: safari-27.2-macos, key: "View > Text Encoding/Chinese (GB 18030)", command: view.repair-text-encoding }
+- { source: safari-27.2-macos, key: "View > Text Encoding/Central European (ISO Latin 2)", command: view.repair-text-encoding }
+- { source: safari-27.2-macos, key: "View > Text Encoding/Central European (Mac OS)", command: view.repair-text-encoding }
+- { source: safari-27.2-macos, key: "View > Text Encoding/Central European (Windows Latin 2)", command: view.repair-text-encoding }
+- { source: safari-27.2-macos, key: "View > Text Encoding/Vietnamese (Windows)", command: view.repair-text-encoding }
+- { source: safari-27.2-macos, key: "View > Text Encoding/Turkish (ISO Latin 5)", command: view.repair-text-encoding }
+- { source: safari-27.2-macos, key: "View > Text Encoding/Turkish (Windows Latin 5)", command: view.repair-text-encoding }
+- { source: safari-27.2-macos, key: "View > Text Encoding/Central European (ISO Latin 4)", command: view.repair-text-encoding }
+- { source: safari-27.2-macos, key: "View > Text Encoding/Baltic (Windows)", command: view.repair-text-encoding }
+- { source: safari-27.2-macos, key: "Window > Move & Resize/Halves", command: app.tile-windows }
+- { source: safari-27.2-macos, key: "Window > Move & Resize/Left", command: app.tile-windows }
+- { source: safari-27.2-macos, key: "Window > Move & Resize/Right", command: app.tile-windows }
+- { source: safari-27.2-macos, key: "Window > Move & Resize/Top", command: app.tile-windows }
+- { source: safari-27.2-macos, key: "Window > Move & Resize/Bottom", command: app.tile-windows }
+- { source: safari-27.2-macos, key: "Window > Move & Resize/Quarters", command: app.tile-windows }
+- { source: safari-27.2-macos, key: "Window > Move & Resize/Top Left", command: app.tile-windows }
+- { source: safari-27.2-macos, key: "Window > Move & Resize/Top Right", command: app.tile-windows }
+- { source: safari-27.2-macos, key: "Window > Move & Resize/Bottom Left", command: app.tile-windows }
+- { source: safari-27.2-macos, key: "Window > Move & Resize/Bottom Right", command: app.tile-windows }
+- { source: safari-27.2-macos, key: "Window > Move & Resize/Arrange", command: app.tile-windows }
+- { source: safari-27.2-macos, key: "Window > Move & Resize/Left & Right", command: app.tile-windows }
+- { source: safari-27.2-macos, key: "Window > Move & Resize/Left & Quarters", command: app.tile-windows }
+- { source: safari-27.2-macos, key: "Window > Move & Resize/Right & Left", command: app.tile-windows }
+- { source: safari-27.2-macos, key: "Window > Move & Resize/Right & Quarters", command: app.tile-windows }
+- { source: safari-27.2-macos, key: "Window > Move & Resize/Top & Bottom", command: app.tile-windows }
+- { source: safari-27.2-macos, key: "Window > Move & Resize/Top & Quarters", command: app.tile-windows }
+- { source: safari-27.2-macos, key: "Window > Move & Resize/Bottom & Top", command: app.tile-windows }
+- { source: safari-27.2-macos, key: "Window > Move & Resize/Bottom & Quarters", command: app.tile-windows }
+- { source: safari-27.2-macos, key: "Window > Move & Resize/Return to Previous Size", command: app.tile-windows }
