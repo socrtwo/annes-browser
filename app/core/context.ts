@@ -15,6 +15,12 @@ export const CONTEXT_KEYS = {
   'ui.paletteOpen': 'boolean',
   'ui.layout': 'string',
   'ui.keymap': 'string',
+  /** Which overlay covers the window: '', 'palette', 'bookmarks', 'history' or 'downloads'. */
+  'ui.overlay': 'string',
+  'ui.findOpen': 'boolean',
+  'page.isBookmarked': 'boolean',
+  'window.isPrivate': 'boolean',
+  'downloads.count': 'number',
 } as const;
 
 export type ContextKey = keyof typeof CONTEXT_KEYS;

@@ -1,6 +1,6 @@
 # Security Model
 
-Status: implemented for the Phase 2 shell and verified by `npm test` (66 unit tests) and `npm run smoke` (46 end-to-end checks in a real Electron process). Where a control is designed but not built, this document says so.
+Status: implemented for the Phase 2 shell and the first Phase 3 features, and verified by `npm test` (91 unit tests) and `npm run smoke` (105 end-to-end checks in a real Electron process). Where a control is designed but not built, this document says so.
 
 ## What is being protected
 
@@ -85,22 +85,38 @@ FTP, NNTP and Finger clients must reuse `app/core/security/net-policy.ts` and me
 
 ### The UI renderer is compromised anyway
 
-It has four functions: run a command, search the palette, close the palette, receive state. The main process:
+It has five functions: run a command, search the palette, read the open list panel, close the overlay, receive state. The main process:
 
 - accepts messages only from the top frame of that window's own UI view at the UI origin;
 - validates the shape of every message (`app/core/ipc.ts`), rejecting unknown fields and inherited properties;
 - lets the UI claim only the sources `toolbar` or `palette`, never `internal`;
+- answers a list request only for the panel that is open in that window (bookmarks, history or downloads);
 - then runs the request through the registry like any other invocation.
 
-So the worst a compromised UI can do is what the user could do from the palette. *(smoke: "IPC rejects forged source, extra fields, unknown commands, bad argument types")*
+So the worst a compromised UI can do is what the user could do from the palette and panels. That includes reading bookmarks and history, which the user can also do; it still has no network access to send them anywhere. *(smoke: "a panel cannot be read while it is closed", "another panel cannot be read while this one is open")* *(smoke: "IPC rejects forged source, extra fields, unknown commands, bad argument types")*
 
 ### A page asks for device or data permissions
 
-`app/core/security/permissions.ts` is default-deny. Fullscreen and sanitized clipboard writes are allowed. Camera, microphone, location, notifications and similar are `ask`, only for HTTPS origins (or HTTP on this machine), only for the top-level page. USB, serial, HID and MIDI system-exclusive are always denied. **No prompt UI exists yet, so every `ask` currently resolves to deny.** Building the prompt is Phase 3 work; the policy does not change.
+`app/core/security/permissions.ts` is default-deny. Fullscreen and sanitized clipboard writes are allowed. Camera, microphone, location, notifications and similar are `ask`, only for HTTPS origins (or HTTP on this machine), only for the top-level page. USB, serial, HID and MIDI system-exclusive are always denied.
+
+The prompt is a native dialog owned by the main process:
+
+- It names the origin the main process computed from the requesting page, never text the page supplied: "`<origin>` wants to show notifications."
+- Default and Escape both mean **Block**.
+- Prompts in a window queue, so a page cannot stack dialogs; two requests for the same thing while a prompt is open share one answer.
+- Camera and microphone are separate decisions (`media:audio`, `media:video`), so allowing one does not allow the other.
+- Embedded frames from other sites are refused without a prompt.
+- Answers last until the browser quits; private windows have their own policy, erased when they close; Clear Browsing Data forgets them. Page Info lists what a site was allowed.
+
+*(smoke: six checks, including "an embedded frame from another site cannot ask" and "choosing Block refuses the permission")*
 
 ### Downloads
 
-Every download shows a save dialog starting from a sanitized name (no path components, control characters, bidirectional overrides, reserved Windows names or leading dots). Nothing is saved or opened silently. `isDangerousFile` identifies executable types for the Phase 3 downloads UI to warn on; that warning is not built yet.
+Every download shows a save dialog starting from a sanitized name (no path components, control characters, bidirectional overrides, reserved Windows names or leading dots). Nothing is saved or opened silently.
+
+Files that can run code (`isDangerousFile`: executables, scripts, installers, disk images, macro-enabled Office files and similar) get a warning **before anything is written**. It names the file and the site, says when the connection is unencrypted, and defaults to Cancel. Opening such a file later from the downloads panel asks again. The panel marks these entries. *(smoke: "a program file triggers a warning naming it", "declining the warning saves nothing")*
+
+Save Link As and Save Image As accept only `http` and `https` addresses, so a page cannot use them to copy local files.
 
 ### Flash emulation (Ruffle)
 
@@ -114,6 +130,24 @@ Ruffle must run inside the page, because it replaces the page's `<embed>` and `<
 
 Residual risk: a bug in Ruffle is exposed to pages in tabs where the user enabled it. Keep the pinned version current.
 
+### Private windows
+
+Each private window has its own in-memory session: no cookies, storage or cache are shared with normal windows or with other private windows, and nothing is written to the profile. History is not recorded and settings cannot be changed from a private window. On close, the session's storage, cache and authentication cache are cleared, its permission answers forgotten and its downloads cancelled and removed from the list. Downloaded files themselves are kept. *(smoke: seven checks)*
+
+Not covered: a private window does not hide traffic from the network, and the operating system may still page memory to disk.
+
+### Context menus
+
+Link, image and selection data in a right-click come from the page, so they are only ever passed as command arguments. The registry checks their type and length, and the handlers apply the navigation policy: **Open Link in New Tab** opens with the page's authority (`web-content`), so a link to `file:` or an internal page is refused, and no empty tab is left behind. `javascript:` and `data:` links get no link commands. *(smoke: "Open Link cannot be used to reach local files", "a refused link leaves no empty tab behind")*
+
+### Certificates
+
+Page Info shows certificate details recorded by a hook on Chromium's certificate check. The hook only observes: it always returns Chromium's own verdict and can never accept a certificate Chromium rejected. *(smoke: "a self-signed certificate is still rejected")*
+
+### Clearing data
+
+**Clear Browsing Data** offers History Only or Everything. Everything also clears cookies, cache, site storage, the HTTP-auth and host-resolver caches, permission answers and the download list. Bookmarks, settings and downloaded files are kept, and the dialog says so.
+
 ### Imported macros and keymaps (Phase 7)
 
 The registry already treats `macro` as a restricted source: no `credentials`, no `external-app`. Keymaps cannot bind plain typing keys outside modal mode. When import is built, imported files must be parsed as data only and re-validated with the build-time validator.
@@ -126,10 +160,8 @@ A packaged build refuses to start with switches that open a debugging port, disa
 
 | Item | Phase | Requirement |
 |---|---|---|
-| Permission prompt UI | 3 | Prompt must name the origin from the main process, not from page-supplied text |
-| HTTP authentication and client-certificate dialogs | 3 | Same origin-display rule |
+| HTTP authentication and client-certificate dialogs | 3 | Prompt must name the origin from the main process, as the permission prompt does |
 | Password storage | 3 | Encrypt with the OS keystore through Electron `safeStorage`; never fall back to plain text; registry capability `credentials` already reserved. **Review by a senior model or a person before merge** |
-| Download warnings for executable types | 3 | Use `isDangerousFile` |
 | HTTPS-first for typed addresses with HTTP fallback warning | 3 | Typed names already default to `https://` |
 | Packaging hardening | 10 | Electron fuses: disable `runAsNode`, `nodeOptions`, CLI inspect; enable ASAR integrity and `onlyLoadAppFromAsar`. Code signing on Windows and macOS |
 | Auto-update | 10 | Signed updates verified against a pinned key; no update over plain HTTP |
@@ -138,7 +170,7 @@ A packaged build refuses to start with switches that open a debugging port, disa
 
 ## Known limitations
 
-- On the development machine the end-to-end test runs with Chromium's sandbox disabled, because that machine runs as root. The CI workflow runs the same test as an ordinary user with the sandbox on, and its first run (2026-11-25, Ubuntu 24.04) passed all 46 checks.
+- On the development machine the end-to-end test runs with Chromium's sandbox disabled, because that machine runs as root. The CI workflow runs the same test as an ordinary user with the sandbox on, and its first run (2026-11-25, Ubuntu 24.04) passed all 46 checks of that version. The Phase 3 additions have not yet run in CI.
 - Not tested on Windows or macOS.
 - `decideNavigation` cannot see navigations Chromium performs entirely inside a renderer without consulting the browser process. None are known for the cases tested.
 - No certificate-error override: a bad certificate simply fails to load. That is the safe default, and a Phase 3 design decision whether to ever allow an override.

@@ -9,6 +9,8 @@ export type MenuNode =
   | {
       type: 'command';
       id: string;
+      /** Arguments for generated items (layout choices, bookmark entries). Layout files never set them. */
+      args?: Record<string, string | number | boolean>;
       label: string;
       enabled: boolean;
       /** Present only for toggle commands. */

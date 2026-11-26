@@ -1,13 +1,13 @@
 # Anne's Browser: Roadmap
 
-Last updated: 2026-11-25. Status: Phase 2 foundation built; Phases 1 and 3 next.
+Last updated: 2026-11-26. Status: Phase 2 built; Phase 3 largely built; Phase 1 next.
 
 | Phase | State |
 |---|---|
 | 0 Decisions | D1, D2, D4 adopted; D5, D6 wait on the owner. See [docs/DECISIONS.md](docs/DECISIONS.md) |
 | 1 Census | Not started. 45 seed commands with provisional lineage |
-| 2 Skeleton | **Built**, except the settings store and import pipeline |
-| 3 Baseline | Not started |
+| 2 Skeleton | **Built**, except the import pipeline |
+| 3 Baseline | **Largely built**: settings, find, bookmarks, history, downloads, private windows, permission prompts, Page Info, clear data, context menus, save page. Remaining items in [docs/HANDOFF.md](docs/HANDOFF.md) |
 | 6 Legacy | Gopher and Flash (Ruffle) built early; the rest not started |
 | others | Not started |
 

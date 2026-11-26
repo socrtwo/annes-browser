@@ -1,0 +1,299 @@
+# Phase 3: modern baseline commands.
+# Lineage is provisional until the Phase 1 census.
+
+# ---- app ----
+- id: app.new-private-window
+  label: New Private Window
+  aliases: [Incognito Window, InPrivate Window, Private Browsing]
+  category: app
+  description: Open a window that keeps no history, cookies or site data after it closes.
+  status: implement
+  phase: 3
+  platforms: [desktop]
+  lineage:
+    - { browser: Safari, versions: "2.0", menu: "Safari > Private Browsing", year: 2005 }
+    - { browser: Google Chrome, versions: "1.0", menu: "New Incognito Window", year: 2008 }
+    - { browser: Internet Explorer, versions: "8", menu: "Safety > InPrivate Browsing", year: 2009 }
+
+# ---- edit: find ----
+- id: edit.find-next
+  label: Find Next
+  aliases: [Find Again]
+  category: edit
+  description: Go to the next match of the text being searched for.
+  status: implement
+  phase: 3
+  platforms: [desktop, android]
+  args: [{ name: text, type: string, optional: true, description: Text to find; defaults to the last search }]
+  lineage:
+    - { browser: Netscape Navigator, versions: "1.0", menu: "Edit > Find Again", year: 1994 }
+- id: edit.find-previous
+  label: Find Previous
+  category: edit
+  description: Go to the previous match of the text being searched for.
+  status: implement
+  phase: 3
+  platforms: [desktop, android]
+  args: [{ name: text, type: string, optional: true, description: Text to find; defaults to the last search }]
+- id: edit.find-close
+  label: Close Find Bar
+  category: edit
+  description: Stop searching the page and hide the find bar.
+  status: implement
+  phase: 3
+  platforms: [desktop, android]
+  when: ui.findOpen
+
+# ---- edit: context-menu actions ----
+- id: edit.copy-link
+  label: Copy Link Address
+  aliases: [Copy Shortcut, Copy Link Location]
+  category: edit
+  description: Copy the address of a link.
+  status: implement
+  phase: 3
+  platforms: [desktop, android]
+  requires: [clipboard]
+  args: [{ name: url, type: url }]
+- id: edit.copy-image
+  label: Copy Image
+  category: edit
+  description: Copy the image at a point on the page.
+  status: implement
+  phase: 3
+  platforms: [desktop]
+  requires: [clipboard]
+  args: [{ name: x, type: number }, { name: y, type: number }]
+- id: edit.replace-misspelling
+  label: Replace Misspelled Word
+  category: edit
+  description: Replace the misspelled word under the cursor with a suggestion.
+  status: implement
+  phase: 3
+  platforms: [desktop]
+  args: [{ name: text, type: string }]
+
+# ---- file ----
+- id: file.save-link
+  label: Save Link As
+  aliases: [Save Target As]
+  category: file
+  description: Download the page or file a link points to.
+  status: implement
+  phase: 3
+  platforms: [desktop]
+  requires: [network, filesystem]
+  args: [{ name: url, type: url }]
+  lineage:
+    - { browser: Internet Explorer, versions: "3.0", menu: "Save Target As", year: 1996 }
+- id: file.save-image
+  label: Save Image As
+  aliases: [Save Picture As]
+  category: file
+  description: Download an image from the page.
+  status: implement
+  phase: 3
+  platforms: [desktop]
+  requires: [network, filesystem]
+  args: [{ name: url, type: url }]
+
+# ---- nav ----
+- id: nav.set-home-page
+  label: Use Current Page as Home Page
+  aliases: [Set Home Page, Use Current]
+  category: nav
+  description: Make the current page the home page and the page new tabs open with.
+  status: implement
+  phase: 3
+  platforms: [desktop, android]
+  when: "page.scheme == 'http' || page.scheme == 'https' || page.scheme == 'gopher' || page.scheme == 'file'"
+  lineage:
+    - { browser: Internet Explorer, versions: "3.0", menu: "Internet Options > Use Current", year: 1996 }
+
+# ---- tab ----
+- id: tab.open-link
+  label: Open Link in New Tab
+  category: tab
+  description: Open a link in a new tab.
+  status: implement
+  phase: 3
+  platforms: [desktop, android]
+  requires: [network]
+  args: [{ name: url, type: url }]
+- id: tab.open-image
+  label: Open Image in New Tab
+  aliases: [View Image]
+  category: tab
+  description: Open an image by itself in a new tab.
+  status: implement
+  phase: 3
+  platforms: [desktop, android]
+  requires: [network]
+  args: [{ name: url, type: url }]
+
+# ---- bookmark ----
+- id: bookmark.toggle
+  label: Bookmark This Page
+  aliases: [Add Bookmark, Add to Favorites, Bookmark Page]
+  category: bookmark
+  description: Bookmark the current page, or remove its bookmark.
+  status: implement
+  phase: 3
+  platforms: [desktop, android]
+  checked: page.isBookmarked
+  when: "page.scheme == 'http' || page.scheme == 'https' || page.scheme == 'gopher' || page.scheme == 'file'"
+  lineage:
+    - { browser: Netscape Navigator, versions: "1.0", menu: "Bookmarks > Add Bookmark", year: 1994 }
+    - { browser: Internet Explorer, versions: "2.0", menu: "Favorites > Add to Favorites", year: 1995 }
+- id: bookmark.show
+  label: Show All Bookmarks
+  aliases: [Bookmark Manager, Organize Favorites, Library]
+  category: bookmark
+  description: List, search and open bookmarks.
+  status: implement
+  phase: 3
+  platforms: [desktop, android]
+  checked: "ui.overlay == 'bookmarks'"
+- id: bookmark.open
+  label: Open Bookmark
+  category: bookmark
+  description: Open a bookmark in the current tab.
+  status: implement
+  phase: 3
+  platforms: [desktop, android]
+  args: [{ name: id, type: number }]
+- id: bookmark.remove
+  label: Delete Bookmark
+  category: bookmark
+  description: Delete a bookmark.
+  status: implement
+  phase: 3
+  platforms: [desktop, android]
+  args: [{ name: id, type: number }]
+
+# ---- history ----
+- id: history.show
+  label: Show History
+  aliases: [History, History Sidebar, Library]
+  category: history
+  description: List, search and reopen pages visited before.
+  status: implement
+  phase: 3
+  platforms: [desktop, android]
+  checked: "ui.overlay == 'history'"
+  lineage:
+    - { browser: NCSA Mosaic, versions: "1.0", menu: "Navigate > Window History", year: 1993 }
+- id: history.open
+  label: Open History Entry
+  category: history
+  description: Open a page from history in the current tab.
+  status: implement
+  phase: 3
+  platforms: [desktop, android]
+  args: [{ name: id, type: number }]
+- id: history.remove
+  label: Delete History Entry
+  category: history
+  description: Remove one page from history.
+  status: implement
+  phase: 3
+  platforms: [desktop, android]
+  requires: [history]
+  args: [{ name: id, type: number }]
+
+# ---- page ----
+- id: page.info
+  label: Page Info
+  aliases: [Properties, Site Information, Document Info]
+  category: page
+  description: Show the page address, connection security, certificate and site permissions.
+  status: implement
+  phase: 3
+  platforms: [desktop, android]
+  when: "tab.count > 0"
+  lineage:
+    - { browser: Netscape Navigator, versions: "2.0", menu: "View > Document Info", year: 1995 }
+    - { browser: Internet Explorer, versions: "3.0", menu: "File > Properties", year: 1996 }
+- id: page.search-selection
+  label: Search for Selection
+  category: page
+  description: Search the web for the selected text in a new tab.
+  status: implement
+  phase: 3
+  platforms: [desktop, android]
+  requires: [network]
+  args: [{ name: text, type: string }]
+
+# ---- tools ----
+- id: tools.downloads
+  label: Downloads
+  aliases: [Download Manager, Show Downloads]
+  category: tools
+  description: List downloads in this session, open them or show them in their folder.
+  status: implement
+  phase: 3
+  platforms: [desktop, android]
+  checked: "ui.overlay == 'downloads'"
+- id: tools.download-open
+  label: Open Downloaded File
+  category: tools
+  description: Open a finished download with its default application.
+  status: implement
+  phase: 3
+  platforms: [desktop]
+  requires: [external-app]
+  args: [{ name: id, type: number }]
+- id: tools.download-show
+  label: Show Download in Folder
+  category: tools
+  description: Show a downloaded file in the system file manager.
+  status: implement
+  phase: 3
+  platforms: [desktop]
+  requires: [external-app]
+  args: [{ name: id, type: number }]
+- id: tools.download-dismiss
+  label: Cancel or Remove Download
+  category: tools
+  description: Cancel a download in progress, or remove a finished one from the list. The file is kept.
+  status: implement
+  phase: 3
+  platforms: [desktop]
+  args: [{ name: id, type: number }]
+- id: tools.downloads-clear
+  label: Clear Download List
+  category: tools
+  description: Remove finished downloads from the list. Files are kept.
+  status: implement
+  phase: 3
+  platforms: [desktop]
+  when: "downloads.count > 0"
+- id: tools.inspect-element
+  label: Inspect Element
+  category: tools
+  description: Open developer tools at the element under the pointer.
+  status: implement
+  phase: 3
+  platforms: [desktop]
+  args: [{ name: x, type: number }, { name: y, type: number }]
+- id: tools.search-engine
+  label: Search Engine
+  category: tools
+  description: Choose the search engine used by the address bar.
+  status: implement
+  phase: 3
+  platforms: [desktop, android]
+  args: [{ name: engine, type: string, description: "Engine id, e.g. duckduckgo" }]
+
+# ---- privacy ----
+- id: privacy.clear-data
+  label: Clear Browsing Data
+  aliases: [Clear Recent History, Delete Browsing History, Clear Private Data]
+  category: privacy
+  description: Delete history, cookies, cached files and site data.
+  status: implement
+  phase: 3
+  platforms: [desktop, android]
+  lineage:
+    - { browser: Firefox, versions: "1.5", menu: "Tools > Clear Private Data", year: 2005 }
+    - { browser: Internet Explorer, versions: "7", menu: "Tools > Delete Browsing History", year: 2006 }

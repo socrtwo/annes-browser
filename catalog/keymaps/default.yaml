@@ -42,3 +42,15 @@ bindings:
   - { keys: Mod+Shift+I, command: tools.dev-tools }
   - { keys: Mod+Shift+P, command: app.command-palette }
   - { keys: F2, command: app.command-palette }
+  - { keys: Mod+Shift+N, command: app.new-private-window }
+  - { keys: Mod+G, command: edit.find-next }
+  - { keys: F3, command: edit.find-next }
+  - { keys: Mod+Shift+G, command: edit.find-previous }
+  - { keys: Shift+F3, command: edit.find-previous }
+  - { keys: Mod+D, command: bookmark.toggle }
+  - { keys: Mod+Shift+O, command: bookmark.show }
+  - { keys: Ctrl+H, command: history.show }
+  - { keys: Mod+Shift+H, command: history.show }
+  - { keys: Mod+J, command: tools.downloads }
+  - { keys: Mod+I, command: page.info }
+  - { keys: Mod+Shift+Delete, command: privacy.clear-data }

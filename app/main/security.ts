@@ -1,6 +1,5 @@
-import { app, type Session, session, type WebContents } from 'electron';
-import { sanitizeFilename } from '../core/security/downloads.ts';
-import { PermissionPolicy } from '../core/security/permissions.ts';
+import { app, type Session, type WebContents } from 'electron';
+import { mediaPermission, type PermissionPolicy } from '../core/security/permissions.ts';
 import { CHROME_ORIGIN, INTERNAL_SCHEME, RUFFLE_SCHEME } from '../core/security/url-policy.ts';
 
 /**
@@ -12,9 +11,18 @@ import { CHROME_ORIGIN, INTERNAL_SCHEME, RUFFLE_SCHEME } from '../core/security/
 export const UI_PARTITION = 'anne-ui';
 export const WEB_PARTITION = 'persist:web';
 
+let privateCount = 0;
+/** A fresh in-memory partition for one private window. Nothing in it is written to disk. */
+export function newPrivatePartition(): string {
+  return `anne-private-${++privateCount}`;
+}
+
 /** Renderer settings for web content. Nothing here may be loosened per tab. */
-export const WEB_PREFERENCES = {
-  partition: WEB_PARTITION,
+export function webPreferences(partition: string) {
+  return { ...WEB_PREFERENCES_BASE, partition };
+}
+
+const WEB_PREFERENCES_BASE = {
   sandbox: true,
   contextIsolation: true,
   nodeIntegration: false,
@@ -45,8 +53,6 @@ export function uiPreferences(preload: string) {
   } as const;
 }
 
-export const permissions = new PermissionPolicy();
-
 /**
  * Tabs (by WebContents id) where the user has turned Flash emulation on.
  * Only these may load the emulator's files, so other pages cannot probe for
@@ -58,22 +64,52 @@ function originOf(url: string | undefined): string | undefined {
   try { return url ? new URL(url).origin : undefined; } catch { return undefined; }
 }
 
-export function hardenWebSession(ses: Session): void {
+/** What the certificate of a site looked like when Chromium last verified it. */
+export interface CertificateSummary {
+  subject: string;
+  issuer: string;
+  validFrom: number;
+  validTo: number;
+  fingerprint: string;
+  /** Chromium's own verdict, e.g. `net::OK`. */
+  verification: string;
+}
+
+const certificates = new Map<string, CertificateSummary>();
+const MAX_CERTIFICATES = 500;
+
+export function certificateFor(hostname: string): CertificateSummary | undefined {
+  return certificates.get(hostname.toLowerCase());
+}
+
+export function hardenWebSession(ses: Session, policy: PermissionPolicy<WebContents>): void {
   // Present as the underlying engine. Naming the app adds a fingerprint and breaks user-agent checks.
   ses.setUserAgent(ses.getUserAgent().replace(/\s(Electron|annes-browser)\/\S+/gi, ''));
 
   ses.setPermissionRequestHandler((wc, permission, callback, details) => {
     // Only the top-level page's own origin may ask; embedded third-party frames may not.
     const origin = details.isMainFrame === false ? undefined : originOf(details.requestingUrl ?? wc?.getURL());
-    if (!origin) return callback(false);
-    permissions.request(origin, permission).then(callback, () => callback(false));
+    if (!origin || !wc) return callback(false);
+    const name = permission === 'media' ? mediaPermission((details as { mediaTypes?: string[] }).mediaTypes) : permission;
+    policy.request(origin, name, wc).then(callback, () => callback(false));
   });
-  ses.setPermissionCheckHandler((_wc, permission, requestingOrigin) => permissions.check(requestingOrigin, permission));
+  ses.setPermissionCheckHandler((_wc, permission, requestingOrigin, details) => {
+    const name = permission === 'media' ? mediaPermission([(details as { mediaType?: string }).mediaType ?? '']) : permission;
+    return policy.check(requestingOrigin, name);
+  });
   ses.setDevicePermissionHandler(() => false);
 
-  // Every download asks where to save, starting from a safe name. Nothing is saved or opened silently.
-  ses.on('will-download', (_event, item) => {
-    item.setSaveDialogOptions({ defaultPath: sanitizeFilename(item.getFilename()) });
+  // Record certificates for Page Info. The callback value -3 means "use Chromium's own
+  // verification result": this hook only observes, and must never accept a certificate
+  // Chromium rejected.
+  ses.setCertificateVerifyProc((request, callback) => {
+    const c = request.certificate;
+    if (certificates.size >= MAX_CERTIFICATES) certificates.delete(certificates.keys().next().value!);
+    certificates.set(request.hostname.toLowerCase(), {
+      subject: c.subjectName, issuer: c.issuerName, validFrom: c.validStart * 1000, validTo: c.validExpiry * 1000,
+      fingerprint: c.fingerprint, verification: request.verificationResult,
+    });
+    callback(-3);
   });
 
   // Requests the navigation policy cannot see (subresources) get a second check here.
@@ -125,8 +161,4 @@ export function installGlobalGuards(): void {
       wc.on('will-navigate', (event) => event.preventDefault());
     });
   });
-}
-
-export function sessions(): { ui: Session; web: Session } {
-  return { ui: session.fromPartition(UI_PARTITION), web: session.fromPartition(WEB_PARTITION) };
 }

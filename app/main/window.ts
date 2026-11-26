@@ -1,21 +1,27 @@
 import { BaseWindow, dialog, type Input, shell, type WebContents, WebContentsView } from 'electron';
 import type { Catalog } from '../core/catalog/types.ts';
-import { IPC, type WindowState } from '../core/ipc.ts';
+import type { SettingsStore } from '../core/data/settings.ts';
+import type { UrlStore } from '../core/data/url-store.ts';
+import { IPC, type FindState, type Overlay, type WindowState } from '../core/ipc.ts';
 import { chordFromInput, isTypingChord, type OS } from '../core/keys/chord.ts';
 import { displayBinding, KeyDispatcher, type KeyResult, resolveKeymap, type ResolvedBinding } from '../core/keys/resolver.ts';
+import type { ContextTarget } from '../core/menu/context.ts';
+import { permissionLabel } from '../core/security/permissions.ts';
 import {
   CHROME_ORIGIN, decideFrameNavigation, decideNavigation, displayUrl, type Initiator, interpretAddressInput,
-  PAGES_ORIGIN, RUFFLE_BASE, searchUrl,
+  type NavigationDecision, PAGES_ORIGIN, RUFFLE_BASE, searchUrl,
 } from '../core/security/url-policy.ts';
 import type { Context } from '../core/when/when.ts';
-import { adopt, flashTabs, uiPreferences, WEB_PREFERENCES } from './security.ts';
+import { adopt, flashTabs, uiPreferences, webPreferences } from './security.ts';
 
+/** Heights in the UI view; they must match app/ui/chrome.css. */
 const TOOLBAR_HEIGHT = 76;
+const FIND_HEIGHT = 36;
 const NOTICE_HEIGHT = 28;
 const SEQUENCE_TIMEOUT_MS = 1000;
 const MAX_CLOSED = 25;
+const MAX_FIND_TEXT = 1000;
 export const HOME_URL = `${PAGES_ORIGIN}/home`;
-const SEARCH_TEMPLATE = 'https://duckduckgo.com/?q=%s';
 
 interface Tab {
   id: number;
@@ -26,11 +32,24 @@ export interface WindowHost {
   catalog: Catalog;
   os: OS;
   preload: string;
+  settings: SettingsStore;
+  bookmarks: UrlStore;
+  history: UrlStore;
+  /** Counter that changes whenever bookmarks, history or downloads change. */
+  listVersion(): number;
+  downloadCount(): number;
   /** Run a catalog command for this window. */
   execute(win: BrowserWindow, id: string, source: 'key' | 'internal', args?: Record<string, unknown>): void;
+  /** Show the context menu for a click in this window. */
+  contextMenu(win: BrowserWindow, target: ContextTarget): void;
   /** The window's context changed: menus and UI state need refreshing. */
   changed(win: BrowserWindow): void;
   closed(win: BrowserWindow): void;
+}
+
+export interface WindowOptions {
+  partition: string;
+  isPrivate: boolean;
 }
 
 let nextTabId = 1;
@@ -39,6 +58,8 @@ let nextTabId = 1;
 export class BrowserWindow {
   readonly win: BaseWindow;
   readonly ui: WebContentsView;
+  readonly partition: string;
+  readonly isPrivate: boolean;
   private readonly tabs: Tab[] = [];
   private active: Tab | undefined;
   private readonly closed: string[] = [];
@@ -48,17 +69,33 @@ export class BrowserWindow {
   private noticeTimer: NodeJS.Timeout | undefined;
   private notice: string | undefined;
   private focusAddress = 0;
+  private focusFind = 0;
   private externalPromptOpen = false;
-  paletteOpen = false;
+  /** Permission prompts are shown one at a time. */
+  private promptQueue: Promise<unknown> = Promise.resolve();
+  private findOpen = false;
+  private findText = '';
+  private findResult: FindState = {};
+  /** The tab the current find session belongs to. */
+  private findTab: Tab | undefined;
+  overlay: Overlay | undefined;
   modal = false;
-  layout = 'modern';
-  keymap = 'default';
+  layout: string;
+  keymap: string;
 
   private readonly host: WindowHost;
 
-  constructor(host: WindowHost) {
+  constructor(host: WindowHost, options: WindowOptions) {
     this.host = host;
-    this.win = new BaseWindow({ width: 1200, height: 800, minWidth: 480, minHeight: 320, title: "Anne's Browser", show: false });
+    this.partition = options.partition;
+    this.isPrivate = options.isPrivate;
+    const settings = host.settings.get();
+    this.layout = settings.layout;
+    this.keymap = settings.keymap;
+    this.win = new BaseWindow({
+      width: 1200, height: 800, minWidth: 480, minHeight: 320, show: false,
+      title: this.isPrivate ? "Anne's Browser (Private)" : "Anne's Browser",
+    });
     this.ui = new WebContentsView({ webPreferences: uiPreferences(host.preload) });
     this.ui.setBackgroundColor('#00000000');
     adopt(this.ui.webContents);
@@ -71,6 +108,7 @@ export class BrowserWindow {
     this.ui.webContents.on('will-navigate', (e) => e.preventDefault());
     this.ui.webContents.setWindowOpenHandler(() => ({ action: 'deny' }));
     this.ui.webContents.on('before-input-event', (event, input) => this.onKey(event, input, false));
+    this.ui.webContents.on('context-menu', (_e, params) => host.contextMenu(this, toTarget(params, true)));
     void this.ui.webContents.loadURL(`${CHROME_ORIGIN}/index.html`);
 
     this.win.on('resize', () => this.relayout());
@@ -93,9 +131,22 @@ export class BrowserWindow {
     return this.active?.view.webContents;
   }
 
+  get paletteOpen(): boolean {
+    return this.overlay === 'palette';
+  }
+
+  /** True if `wc` is one of this window's tabs or its UI. */
+  owns(wc: WebContents): boolean {
+    return wc === this.ui.webContents || this.tabs.some((t) => t.view.webContents === wc);
+  }
+
   /** True if `wc` is this window's UI and the sender is its top frame at the UI origin. */
   isUiSender(wc: WebContents, frameUrl: string | undefined, isMainFrame: boolean): boolean {
     return wc === this.ui.webContents && isMainFrame && frameUrl !== undefined && frameUrl.startsWith(`${CHROME_ORIGIN}/`);
+  }
+
+  private pageUrl(): string {
+    return this.activeContents?.getURL() ?? '';
   }
 
   context(): Context {
@@ -110,16 +161,22 @@ export class BrowserWindow {
       'tab.hasClosed': this.closed.length > 0,
       'page.scheme': scheme,
       'page.zoom': wc?.getZoomFactor() ?? 1,
+      'page.isBookmarked': wc ? this.host.bookmarks.has(wc.getURL()) : false,
       'window.isFullScreen': this.win.isFullScreen(),
+      'window.isPrivate': this.isPrivate,
       'input.modal': this.modal,
       'ui.paletteOpen': this.paletteOpen,
+      'ui.overlay': this.overlay ?? '',
+      'ui.findOpen': this.findOpen,
       'ui.layout': this.layout,
       'ui.keymap': this.keymap,
+      'downloads.count': this.host.downloadCount(),
     };
   }
 
   state(): WindowState {
     const wc = this.activeContents;
+    const url = wc?.getURL() ?? '';
     return {
       tabs: this.tabs.map((t) => ({
         id: t.id,
@@ -127,11 +184,16 @@ export class BrowserWindow {
         active: t === this.active,
         loading: t.view.webContents.isLoadingMainFrame(),
       })),
-      address: wc && wc.getURL() !== HOME_URL ? displayUrl(wc.getURL()) : '',
+      address: wc && url !== HOME_URL ? displayUrl(url) : '',
       canGoBack: wc?.navigationHistory.canGoBack() ?? false,
       canGoForward: wc?.navigationHistory.canGoForward() ?? false,
       loading: wc?.isLoadingMainFrame() ?? false,
-      paletteOpen: this.paletteOpen,
+      ...(this.overlay !== undefined && { overlay: this.overlay }),
+      ...(this.findOpen && { find: { ...this.findResult } }),
+      focusFind: this.focusFind,
+      listVersion: this.host.listVersion(),
+      isPrivate: this.isPrivate,
+      isBookmarked: wc ? this.host.bookmarks.has(url) : false,
       modal: this.modal,
       focusAddress: this.focusAddress,
       ...(this.notice !== undefined && { notice: this.notice }),
@@ -178,21 +240,27 @@ export class BrowserWindow {
     this.sendState();
   }
 
+  clearClosedTabs(): void {
+    this.closed.length = 0;
+    this.changed();
+  }
+
   // ---- layout ----
 
   private relayout(): void {
     if (this.win.isDestroyed()) return;
     const { width, height } = this.win.getContentBounds();
-    const top = TOOLBAR_HEIGHT + (this.notice ? NOTICE_HEIGHT : 0);
-    // While the palette is open the UI covers the page; otherwise it is only the toolbar strip.
-    this.ui.setBounds({ x: 0, y: 0, width, height: this.paletteOpen ? height : top });
+    const top = TOOLBAR_HEIGHT + (this.findOpen ? FIND_HEIGHT : 0) + (this.notice ? NOTICE_HEIGHT : 0);
+    // While an overlay is open the UI covers the page; otherwise it is only the toolbar strip.
+    this.ui.setBounds({ x: 0, y: 0, width, height: this.overlay ? height : top });
     this.active?.view.setBounds({ x: 0, y: top, width, height: Math.max(0, height - top) });
   }
 
-  setPalette(open: boolean): void {
-    if (this.paletteOpen === open) return;
-    this.paletteOpen = open;
-    if (open) {
+  /** Open an overlay (palette or a list panel), or close it with `undefined`. */
+  setOverlay(overlay: Overlay | undefined): void {
+    if (this.overlay === overlay) return;
+    this.overlay = overlay;
+    if (overlay) {
       this.win.contentView.addChildView(this.ui); // re-adding raises it above the tab
       this.ui.webContents.focus();
     } else {
@@ -202,31 +270,94 @@ export class BrowserWindow {
     this.changed();
   }
 
+  /** Open the overlay, or close it if it is already the one showing. */
+  toggleOverlay(overlay: Overlay): void {
+    this.setOverlay(this.overlay === overlay ? undefined : overlay);
+  }
+
   focusAddressBar(): void {
     this.focusAddress++;
     this.ui.webContents.focus();
     this.sendState();
   }
 
+  // ---- find in page ----
+
+  openFind(): void {
+    this.findOpen = true;
+    this.focusFind++;
+    this.ui.webContents.focus();
+    this.relayout();
+    this.changed();
+  }
+
+  /** Search the active tab. With no text, repeat the last search, or open the find bar if there is none. */
+  find(text: string | undefined, forward: boolean): void {
+    const wc = this.activeContents;
+    if (!wc) return;
+    const query = (text ?? this.findText).slice(0, MAX_FIND_TEXT);
+    if (text === undefined && query === '') return this.openFind();
+    if (!this.findOpen) { this.findOpen = true; this.relayout(); }
+    if (query === '') {
+      wc.stopFindInPage('clearSelection');
+      this.findText = '';
+      this.findResult = {};
+      this.changed();
+      return;
+    }
+    // Electron's `findNext: true` starts a new search session; follow-up requests step through matches.
+    const newSession = query !== this.findText || this.findTab !== this.active;
+    this.findText = query;
+    this.findTab = this.active;
+    wc.findInPage(query, { forward, findNext: newSession, matchCase: false });
+    this.changed();
+  }
+
+  closeFind(): void {
+    if (!this.findOpen) return;
+    this.findTab?.view.webContents.stopFindInPage('keepSelection');
+    this.findOpen = false;
+    this.findResult = {};
+    this.findTab = undefined;
+    this.activeContents?.focus();
+    this.relayout();
+    this.changed();
+  }
+
   // ---- tabs ----
 
-  newTab(url: string = HOME_URL, initiator: Initiator = 'internal', from?: string): void {
-    const view = new WebContentsView({ webPreferences: WEB_PREFERENCES });
+  newTab(url: string = this.host.settings.get().homePage, initiator: Initiator = 'internal', from?: string): void {
+    // A tab requested by page content is created only if its address is allowed; otherwise the
+    // refusal (notice, external-app prompt or command) happens without leaving an empty tab behind.
+    if (initiator === 'web-content') {
+      const decision = decideNavigation({ url, initiator, ...(from !== undefined && { from }) });
+      if (decision.action !== 'allow') return this.handleRefused(decision, url, initiator);
+    }
+    const view = new WebContentsView({ webPreferences: webPreferences(this.partition) });
     const tab: Tab = { id: nextTabId++, view };
     const wc = view.webContents;
     adopt(wc);
-    this.guard(wc);
+    this.guard(wc, tab);
     this.tabs.push(tab);
     this.select(tab);
     this.navigate(url, initiator, from, wc);
   }
 
   private select(tab: Tab): void {
-    if (this.active && this.active !== tab) this.win.contentView.removeChildView(this.active.view);
+    const previous = this.active;
+    if (previous && previous !== tab) {
+      this.win.contentView.removeChildView(previous.view);
+      if (this.findTab === previous) previous.view.webContents.stopFindInPage('keepSelection');
+    }
     this.active = tab;
     this.win.contentView.addChildView(tab.view, 0);
     this.relayout();
-    if (!this.paletteOpen) tab.view.webContents.focus();
+    if (!this.overlay) tab.view.webContents.focus();
+    // An open find bar follows the user to the new tab.
+    if (this.findOpen && this.findText && previous !== tab) {
+      this.findResult = {};
+      this.find(this.findText, true);
+    }
     this.changed();
   }
 
@@ -249,6 +380,7 @@ export class BrowserWindow {
       this.closed.push(url);
       if (this.closed.length > MAX_CLOSED) this.closed.shift();
     }
+    if (this.findTab === tab) this.findTab = undefined;
     this.tabs.splice(index, 1);
     this.win.contentView.removeChildView(tab.view);
     tab.view.webContents.close();
@@ -261,6 +393,92 @@ export class BrowserWindow {
     const url = this.closed.pop();
     // The address was reached by the user earlier; it still passes through the policy.
     if (url) this.newTab(url, 'user-command');
+  }
+
+  // ---- navigation ----
+
+  /** Interpret address-bar or command text and load it in the active tab. */
+  go(text: string): void {
+    const input = interpretAddressInput(text);
+    if (input.kind === 'empty') return;
+    const url = input.kind === 'url' ? input.url : searchUrl(this.host.settings.get().searchTemplate, input.query);
+    this.navigate(url, 'user-typed');
+    this.activeContents?.focus();
+  }
+
+  /** The only way a URL chosen by this process gets loaded. Applies the navigation policy. */
+  navigate(url: string, initiator: Initiator, from?: string, target: WebContents | undefined = this.activeContents): void {
+    if (!target) return this.newTab(url, initiator, from);
+    const decision = decideNavigation({ url, initiator, ...(from !== undefined && { from }) });
+    if (decision.action === 'allow') {
+      target.loadURL(decision.url).catch(() => { /* failures are reported by did-fail-load */ });
+      return;
+    }
+    this.handleRefused(decision, url, initiator, target);
+  }
+
+  /** What happens to a navigation the policy did not simply allow. */
+  private handleRefused(decision: NavigationDecision, url: string, initiator: Initiator, target?: WebContents): void {
+    switch (decision.action) {
+      case 'allow':
+        return;
+      case 'command':
+        this.host.execute(this, decision.command, 'internal', { url: decision.url });
+        break;
+      case 'external':
+        void this.openExternal(decision.url, decision.scheme);
+        break;
+      case 'deny':
+        if (initiator === 'web-content' || !target) this.showNotice(`Blocked: ${decision.reason}`);
+        else void target.loadURL(`${PAGES_ORIGIN}/blocked?${new URLSearchParams({ url: url.slice(0, 500), reason: decision.reason })}`);
+    }
+  }
+
+  private async openExternal(url: string, scheme: string): Promise<void> {
+    // One prompt at a time, so a page cannot bury the user in dialogs.
+    if (this.externalPromptOpen) return;
+    this.externalPromptOpen = true;
+    try {
+      const { response } = await dialog.showMessageBox(this.win, {
+        type: 'question',
+        buttons: ['Cancel', 'Open'],
+        defaultId: 0,
+        cancelId: 0,
+        message: `Open this ${scheme} link in another application?`,
+        detail: url.slice(0, 300),
+      });
+      if (response === 1) await shell.openExternal(url);
+    } finally {
+      this.externalPromptOpen = false;
+    }
+  }
+
+  // ---- permissions ----
+
+  /**
+   * Ask the user about a site permission. The origin shown is the one the
+   * main process computed, never text supplied by the page. Prompts queue,
+   * so a page cannot stack dialogs.
+   */
+  askPermission(origin: string, permission: string): Promise<boolean> {
+    const ask = this.promptQueue.then(async () => {
+      if (this.win.isDestroyed()) return false;
+      const { response } = await dialog.showMessageBox(this.win, {
+        type: 'question',
+        buttons: ['Block', 'Allow'],
+        defaultId: 0,
+        cancelId: 0,
+        noLink: true,
+        title: 'Permission request',
+        message: `${origin} wants to ${permissionLabel(permission)}.`,
+        detail: this.isPrivate
+          ? 'Your answer applies until this private window closes.'
+          : 'Your answer applies to this site until you quit the browser or clear browsing data.',
+      });
+      return response === 1;
+    });
+    this.promptQueue = ask.catch(() => false);
+    return ask;
   }
 
   // ---- Flash emulation ----
@@ -300,57 +518,10 @@ export class BrowserWindow {
     wc.executeJavaScript(script).catch(() => this.showNotice('This page does not allow the Flash emulator to load.'));
   }
 
-  // ---- navigation ----
+  // ---- page events ----
 
-  /** Interpret address-bar or command text and load it in the active tab. */
-  go(text: string): void {
-    const input = interpretAddressInput(text);
-    if (input.kind === 'empty') return;
-    this.navigate(input.kind === 'url' ? input.url : searchUrl(SEARCH_TEMPLATE, input.query), 'user-typed');
-    this.activeContents?.focus();
-  }
-
-  /** The only way a URL chosen by this process gets loaded. Applies the navigation policy. */
-  navigate(url: string, initiator: Initiator, from?: string, target: WebContents | undefined = this.activeContents): void {
-    if (!target) return this.newTab(url, initiator, from);
-    const decision = decideNavigation({ url, initiator, ...(from !== undefined && { from }) });
-    switch (decision.action) {
-      case 'allow':
-        target.loadURL(decision.url).catch(() => { /* failures are reported by did-fail-load */ });
-        break;
-      case 'command':
-        this.host.execute(this, decision.command, 'internal', { url: decision.url });
-        break;
-      case 'external':
-        void this.openExternal(decision.url, decision.scheme);
-        break;
-      case 'deny':
-        if (initiator === 'web-content') this.showNotice(`Blocked: ${decision.reason}`);
-        else void target.loadURL(`${PAGES_ORIGIN}/blocked?${new URLSearchParams({ url: url.slice(0, 500), reason: decision.reason })}`);
-    }
-  }
-
-  private async openExternal(url: string, scheme: string): Promise<void> {
-    // One prompt at a time, so a page cannot bury the user in dialogs.
-    if (this.externalPromptOpen) return;
-    this.externalPromptOpen = true;
-    try {
-      const { response } = await dialog.showMessageBox(this.win, {
-        type: 'question',
-        buttons: ['Cancel', 'Open'],
-        defaultId: 0,
-        cancelId: 0,
-        message: `Open this ${scheme} link in another application?`,
-        detail: url.slice(0, 300),
-      });
-      if (response === 1) await shell.openExternal(url);
-    } finally {
-      this.externalPromptOpen = false;
-    }
-  }
-
-  /** Attach the navigation, window-open and key rules to a tab. */
-  private guard(wc: WebContents): void {
+  /** Attach the navigation, window-open, history and key rules to a tab. */
+  private guard(wc: WebContents, tab: Tab): void {
     const check = (event: { preventDefault(): void }, url: string, isMainFrame: boolean) => {
       if (!isMainFrame) {
         if (decideFrameNavigation(url, wc.getURL()).action !== 'allow') event.preventDefault();
@@ -373,6 +544,23 @@ export class BrowserWindow {
       return { action: 'deny' };
     });
     wc.on('before-input-event', (event, input) => this.onKey(event, input, true));
+    wc.on('context-menu', (_e, params) => {
+      if (tab === this.active) this.host.contextMenu(this, toTarget(params, false));
+    });
+
+    // History: main-frame loads only, never in private windows.
+    wc.on('did-navigate', (_e, url, httpResponseCode) => {
+      if (!this.isPrivate && httpResponseCode < 400) this.host.history.visit(url, wc.getTitle(), Date.now());
+    });
+    wc.on('page-title-updated', (_e, title) => {
+      if (!this.isPrivate) this.host.history.setTitle(wc.getURL(), title);
+    });
+
+    wc.on('found-in-page', (_e, result) => {
+      if (tab !== this.findTab) return;
+      this.findResult = { matches: result.matches, active: result.activeMatchOrdinal };
+      this.changed();
+    });
     for (const ev of ['did-start-loading', 'did-stop-loading', 'did-navigate', 'did-navigate-in-page', 'page-title-updated'] as const) {
       wc.on(ev as 'did-stop-loading', () => this.changed());
     }
@@ -407,4 +595,17 @@ export class BrowserWindow {
   private run(result: KeyResult): void {
     if (result.kind === 'execute') this.host.execute(this, result.command, 'key', result.args);
   }
+}
+
+/** Copy the fields the context menu needs out of Electron's event parameters. */
+function toTarget(p: Electron.ContextMenuParams, inBrowserUi: boolean): ContextTarget {
+  return {
+    x: p.x, y: p.y, linkURL: p.linkURL, srcURL: p.srcURL, mediaType: p.mediaType, hasImageContents: p.hasImageContents,
+    selectionText: p.selectionText, isEditable: p.isEditable, misspelledWord: p.misspelledWord,
+    dictionarySuggestions: p.dictionarySuggestions, inBrowserUi,
+    editFlags: {
+      canUndo: p.editFlags.canUndo, canRedo: p.editFlags.canRedo, canCut: p.editFlags.canCut,
+      canCopy: p.editFlags.canCopy, canPaste: p.editFlags.canPaste, canSelectAll: p.editFlags.canSelectAll,
+    },
+  };
 }

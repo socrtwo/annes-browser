@@ -3,18 +3,22 @@ label: Modern
 description: Menu bar as arranged by current desktop browsers.
 menus:
   - label: File
-    items: [tab.new, app.new-window, file.open-location, file.open-file, { separator: true }, tab.close, { separator: true }, file.save-page-as, file.print, { separator: true }, app.quit]
+    items: [tab.new, app.new-window, app.new-private-window, file.open-location, file.open-file, { separator: true }, tab.close, { separator: true }, file.save-page-as, file.print, { separator: true }, app.quit]
   - label: Edit
-    items: [edit.undo, edit.redo, { separator: true }, edit.cut, edit.copy, edit.paste, edit.select-all, { separator: true }, edit.find]
+    items: [edit.undo, edit.redo, { separator: true }, edit.cut, edit.copy, edit.paste, edit.select-all, { separator: true }, edit.find, edit.find-next, edit.find-previous]
   - label: View
-    items: [nav.reload, nav.reload-hard, nav.stop, { separator: true }, view.zoom-in, view.zoom-out, view.zoom-reset, { separator: true }, view.full-screen, view.page-source]
+    items: [nav.reload, nav.reload-hard, nav.stop, { separator: true }, view.zoom-in, view.zoom-out, view.zoom-reset, { separator: true }, view.full-screen, view.page-source, page.info]
   - label: History
-    items: [nav.back, nav.forward, nav.home, { separator: true }, tab.reopen-closed]
+    items: [nav.back, nav.forward, nav.home, { separator: true }, tab.reopen-closed, history.show, { separator: true }, privacy.clear-data]
+  - label: Bookmarks
+    items: [bookmark.toggle, bookmark.show]
   - label: Tools
     items:
+      - tools.downloads
       - app.command-palette
       - tools.dev-tools
       - { separator: true }
+      - nav.set-home-page
       - input.modal-mode
       - label: Legacy
         items: [legacy.gopher-open, legacy.ftp-open, legacy.flash, page.edit-in-composer, { separator: true }, legacy.java-applets, legacy.activex]

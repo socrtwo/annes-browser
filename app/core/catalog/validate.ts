@@ -61,6 +61,7 @@ export function validateCatalog(catalog: Catalog): Problem[] {
       const c = commands.get(id);
       if (!c) error(where, `unknown command "${id}"`);
       else if (c.status === 'omit') error(where, `command "${id}" has status "omit" and cannot be in a menu`);
+      else if ((c.args ?? []).some((x) => !x.optional)) error(where, `command "${id}" needs arguments and cannot be a menu item`);
     }
   }
 

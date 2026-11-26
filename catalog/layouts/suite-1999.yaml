@@ -5,7 +5,7 @@ menus:
   - label: File
     items:
       - label: New
-        items: [app.new-window, tab.new]
+        items: [app.new-window, app.new-private-window, tab.new]
       - file.open-location
       - file.open-file
       - file.save-page-as
@@ -17,11 +17,15 @@ menus:
       - tab.close
       - app.quit
   - label: Edit
-    items: [edit.undo, edit.redo, { separator: true }, edit.cut, edit.copy, edit.paste, edit.select-all, { separator: true }, edit.find]
+    items: [edit.undo, edit.redo, { separator: true }, edit.cut, edit.copy, edit.paste, edit.select-all, { separator: true }, edit.find, edit.find-next, edit.find-previous, { separator: true }, nav.set-home-page]
   - label: View
-    items: [view.zoom-in, view.zoom-out, { separator: true }, nav.reload, nav.stop, { separator: true }, view.page-source, view.full-screen]
+    items: [view.zoom-in, view.zoom-out, { separator: true }, nav.reload, nav.stop, { separator: true }, view.page-source, page.info, view.full-screen]
   - label: Go
-    items: [nav.back, nav.forward, nav.home]
+    items: [nav.back, nav.forward, nav.home, { separator: true }, history.show]
+  - label: Bookmarks
+    items: [bookmark.toggle, bookmark.show]
+  - label: Tasks
+    items: [tools.downloads, privacy.clear-data, { separator: true }, tools.dev-tools]
   - label: Communicator
     items: [legacy.gopher-open, legacy.ftp-open, { separator: true }, legacy.java-applets, legacy.flash]
   - label: Help

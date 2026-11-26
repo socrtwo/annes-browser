@@ -13,8 +13,10 @@ export const IPC = {
   paletteSearch: 'anne:palette-search',
   /** UI -> main: the UI has loaded and wants the current state. */
   ready: 'anne:ready',
-  /** UI -> main: the palette was dismissed. */
-  paletteClose: 'anne:palette-close',
+  /** UI -> main, request/response: items for a list panel (bookmarks, history, downloads). */
+  list: 'anne:list',
+  /** UI -> main: the palette or panel was dismissed. */
+  closeOverlay: 'anne:close-overlay',
   /** main -> UI: the current window state. */
   state: 'anne:state',
 } as const;
@@ -26,6 +28,34 @@ export interface ExecuteRequest {
   id: string;
   source: UiSource;
   args?: Record<string, string | number | boolean>;
+}
+
+/** Full-window overlays drawn by the UI. */
+export type Overlay = 'palette' | 'bookmarks' | 'history' | 'downloads';
+export const LIST_KINDS = ['bookmarks', 'history', 'downloads'] as const;
+export type ListKind = (typeof LIST_KINDS)[number];
+
+/** One row in a list panel. Every string is display text; the UI never parses it. */
+export interface ListItem {
+  id: number;
+  title: string;
+  /** Address shown under the title. */
+  url: string;
+  /** Extra text: visit date, download progress. */
+  detail: string;
+  /** Command run when the row is chosen, with `{ id }` as its argument. */
+  open?: string;
+  /** Command run by the row's remove button, with `{ id }`. */
+  remove?: string;
+  /** Command run by the row's secondary button, with `{ id }`, and its label. */
+  secondary?: { command: string; label: string };
+}
+
+export interface FindState {
+  /** Matches on the page; undefined until the first result arrives. */
+  matches?: number;
+  /** 1-based index of the highlighted match. */
+  active?: number;
 }
 
 export interface TabState {
@@ -42,7 +72,15 @@ export interface WindowState {
   canGoBack: boolean;
   canGoForward: boolean;
   loading: boolean;
-  paletteOpen: boolean;
+  overlay?: Overlay;
+  /** Present while the find bar is open. */
+  find?: FindState;
+  /** Incremented each time the find field should take focus. */
+  focusFind: number;
+  /** Incremented whenever list data (bookmarks, history, downloads) changes. */
+  listVersion: number;
+  isPrivate: boolean;
+  isBookmarked: boolean;
   modal: boolean;
   /** Incremented each time the address bar should take focus. */
   focusAddress: number;
@@ -71,6 +109,15 @@ export function parseExecuteRequest(raw: unknown): ExecuteRequest | undefined {
     clean[k] = v as string | number | boolean;
   }
   return { id, source, args: clean };
+}
+
+export function parseListRequest(raw: unknown): { kind: ListKind; query: string } | undefined {
+  if (!isRecord(raw)) return undefined;
+  const { kind, query, ...rest } = raw;
+  if (Object.keys(rest).length > 0) return undefined;
+  if (typeof kind !== 'string' || !(LIST_KINDS as readonly string[]).includes(kind)) return undefined;
+  if (typeof query !== 'string' || query.length > 200) return undefined;
+  return { kind: kind as ListKind, query };
 }
 
 export function parsePaletteQuery(raw: unknown): string | undefined {

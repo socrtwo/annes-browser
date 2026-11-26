@@ -20,3 +20,8 @@ bindings:
   - { keys: Z I, command: view.zoom-in, when: input.modal }
   - { keys: Z O, command: view.zoom-out, when: input.modal }
   - { keys: Z Z, command: view.zoom-reset, when: input.modal }
+  - { keys: /, command: edit.find, when: input.modal }
+  - { keys: N, command: edit.find-next, when: input.modal }
+  - { keys: Shift+N, command: edit.find-previous, when: input.modal }
+  - { keys: B, command: bookmark.show, when: input.modal }
+  - { keys: Shift+B, command: bookmark.toggle, when: input.modal }

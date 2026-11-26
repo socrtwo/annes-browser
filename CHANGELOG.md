@@ -5,6 +5,19 @@ All notable changes to this project are documented here. Format: [Keep a Changel
 ## [Unreleased]
 
 ### Added
+- 2026-11-26: Phase 3, first set.
+  - Settings store (layout, keymap, home page, search engine), saved atomically; invalid or corrupt files never break startup.
+  - Find in page with match count, next and previous.
+  - Bookmarks: star button, Bookmark This Page, searchable panel, entries listed in the Bookmarks menu.
+  - History: recorded per visit, searchable panel, delete entries.
+  - Downloads panel: progress, open, show in folder, cancel, clear; warning before saving files that can run programs.
+  - Private windows with their own in-memory session each.
+  - Permission prompts naming the requesting site; camera and microphone decided separately.
+  - Page Info with connection, certificate, permissions and cookie count.
+  - Clear Browsing Data (history only, or everything).
+  - Context menus for pages, links, images, selections and text fields, including spelling suggestions.
+  - Save Page As (complete HTML or single-file MHTML), Save Link As, Save Image As, Use Current Page as Home Page.
+  - 29 new commands; 25 new unit tests; 59 new end-to-end checks.
 - 2026-11-25: Phase 2 foundation.
   - Command catalog compiled from YAML, with schema and cross-reference validation.
   - Command registry: one execution path with platform, capability, argument and enablement checks.

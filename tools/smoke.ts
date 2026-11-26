@@ -10,6 +10,10 @@
 import { createServer as createHttp } from 'node:http';
 import { createRequire } from 'node:module';
 import { createServer as createTcp } from 'node:net';
+import { execFileSync } from 'node:child_process';
+import { existsSync, mkdtempSync, readFileSync } from 'node:fs';
+import { createServer as createHttps } from 'node:https';
+import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -50,6 +54,12 @@ const http = createHttp((req, res) => {
   res.setHeader('Content-Type', 'text/html');
   if (req.url === '/redirect-file') { res.statusCode = 302; res.setHeader('Location', 'file:///etc/passwd'); return res.end(); }
   if (req.url === '/redirect-internal') { res.statusCode = 302; res.setHeader('Location', 'anne://pages/about'); return res.end(); }
+  if (req.url === '/find') return res.end('<title>find page</title><p>apple banana apple cherry apple</p>');
+  if (req.url === '/file.txt') { res.setHeader('Content-Type', 'text/plain'); res.setHeader('Content-Disposition', 'attachment; filename="notes.txt"'); return res.end('plain text'); }
+  if (req.url === '/tool.exe') { res.setHeader('Content-Type', 'application/octet-stream'); res.setHeader('Content-Disposition', 'attachment; filename="tool.exe"'); return res.end('MZ fake'); }
+  if (req.url === '/perm') return res.end(`<title>perm</title><iframe src="http://localhost:${httpPort}/inner"></iframe>`);
+  if (req.url === '/inner') return res.end('<title>inner</title><p>inner frame</p>');
+  if (req.url === '/links') return res.end('<title>links</title><a id="good" href="/linked" style="display:block;padding:20px">good link</a><a id="bad" href="javascript:alert(1)" style="display:block;padding:20px">bad link</a>');
   if (req.url === '/test.swf') { res.setHeader('Content-Type', 'application/x-shockwave-flash'); return res.end(minimalSwf()); }
   if (req.url === '/flash') return res.end('<title>flash page</title><embed id="movie" src="/test.swf" type="application/x-shockwave-flash" width="100" height="100">');
   res.end(`<title>page ${req.url}</title><body>hello <a id="l" href="/b">b</a></body>`);
@@ -73,18 +83,37 @@ const gopher = createTcp((socket) => {
 await new Promise<void>((r) => gopher.listen(0, '127.0.0.1', r));
 const gopherPort = (gopher.address() as { port: number }).port;
 
+// ---- a self-signed HTTPS server, to prove certificate checks were not weakened ----
+let https: import('node:https').Server | undefined;
+let httpsPort = 0;
+try {
+  const certDir = mkdtempSync(join(tmpdir(), 'anne-smoke-cert-'));
+  execFileSync('openssl', ['req', '-x509', '-newkey', 'rsa:2048', '-nodes', '-days', '1', '-subj', '/CN=127.0.0.1',
+    '-keyout', join(certDir, 'key.pem'), '-out', join(certDir, 'cert.pem')], { stdio: 'ignore' });
+  https = createHttps({ key: readFileSync(join(certDir, 'key.pem')), cert: readFileSync(join(certDir, 'cert.pem')) },
+    (_req, res) => { res.setHeader('Content-Type', 'text/html'); res.end('<title>secret</title>self-signed'); });
+  await new Promise<void>((r) => https!.listen(0, '127.0.0.1', r));
+  httpsPort = (https.address() as { port: number }).port;
+} catch {
+  console.log('note: openssl unavailable; skipping the certificate check');
+}
+
 // ---- launch ----
+// A throwaway profile and download folder: the test never touches a real profile.
+const userData = mkdtempSync(join(tmpdir(), 'anne-smoke-profile-'));
+const downloadDir = mkdtempSync(join(tmpdir(), 'anne-smoke-downloads-'));
 const launch = (env: Record<string, string>) => _electron.launch({
   executablePath: require('electron') as unknown as string,
   // --no-sandbox only because CI containers run as root; the app itself enables the sandbox.
   args: [...(process.getuid?.() === 0 ? ['--no-sandbox'] : []), root],
-  env: { ...process.env, ...env } as Record<string, string>,
+  env: { ...process.env, ANNE_DEV_USER_DATA: userData, ANNE_DEV_DOWNLOAD_DIR: downloadDir, ...env } as Record<string, string>,
 });
 const app = await launch({ ANNE_DEV_GOPHER_PRIVATE: '1' });
 const pages = () => app.windows();
-const ui = await until(() => pages().find((p) => p.url().startsWith('anne://chrome/')));
-check('UI loads from anne://chrome', !!ui);
-if (!ui) { await app.close(); process.exit(1); }
+const maybeUi = await until(() => pages().find((p) => p.url().startsWith('anne://chrome/')));
+check('UI loads from anne://chrome', !!maybeUi);
+if (!maybeUi) { await app.close(); process.exit(1); }
+const ui = maybeUi;
 const tabs = () => pages().filter((p) => p !== ui && !p.url().startsWith('devtools:'));
 const tabWith = (part: string) => until(() => tabs().find((p) => p.url().includes(part)));
 const windowCount = () => app.evaluate(({ BaseWindow }) => BaseWindow.getAllWindows().length);
@@ -115,7 +144,7 @@ const uiProbe = await ui.evaluate(async () => {
   return { node: typeof w['require'] + typeof w['process'] + typeof w['Buffer'], api: Object.keys(w['anne'] as object).sort().join(), html, net, evalResult };
 });
 check('UI has no Node access', uiProbe.node === 'undefinedundefinedundefined', uiProbe.node);
-check('UI bridge exposes exactly four functions', uiProbe.api === 'execute,onState,paletteClose,paletteSearch', uiProbe.api);
+check('UI bridge exposes exactly five functions', uiProbe.api === 'closeOverlay,execute,list,onState,paletteSearch', uiProbe.api);
 check('UI cannot assign HTML strings (Trusted Types)', uiProbe.html === 'blocked');
 check('UI cannot reach the network', uiProbe.net === 'blocked');
 check('UI cannot eval', uiProbe.evalResult === 'blocked');
@@ -299,8 +328,34 @@ check('Page Source opens a view-source tab', !!(await until(async () => (await s
 
 check('address bar follows the page after focus returns to it', !!(await until(async () => (await uiState()).address.startsWith('view-source:'))), (await uiState()).address);
 check('notices clear by themselves', !!(await until(async () => (await uiState()).notice === '', 9000)), (await uiState()).notice ?? '');
+await phase3Checks();
 await ui.screenshot({ path: join(root, 'dist/smoke-ui.png') }).catch(() => {});
 await app.close();
+
+// ---- profile data survives a restart ----
+{
+  const app3 = await launch({});
+  const ui3 = await until(() => app3.windows().find((p) => p.url().startsWith('anne://chrome/')));
+  // The home page chosen in the first run is used again.
+  const home3 = await until(() => app3.windows().find((p) => p.url() === `${base}/links`));
+  check('the saved home page opens at startup', !!home3);
+  await ui3!.evaluate(() => window.anne.execute({ id: 'bookmark.show', source: 'toolbar' }));
+  const kept = await until(async () => {
+    const items = (await ui3!.evaluate(() => window.anne.list({ kind: 'bookmarks', query: '' }))) as { url: string }[];
+    return items.length > 0 && items;
+  });
+  check('bookmarks are still there after a restart', !!kept && kept.some((b) => b.url === `${base}/find`), JSON.stringify(kept));
+  await ui3!.evaluate(() => window.anne.closeOverlay());
+  const started = app3.evaluate(({ webContents }, home) => new Promise<string>((resolve) => {
+    const wc = webContents.getAllWebContents().find((w) => w.getURL() === home)!;
+    wc.once('did-start-navigation', (d) => resolve(d.url));
+    setTimeout(() => resolve('none'), 3000);
+  }), `${base}/links`);
+  await ui3!.evaluate(() => window.anne.execute({ id: 'nav.go', source: 'toolbar', args: { text: 'old browsers' } }));
+  const searchedAt = await started;
+  check('the chosen search engine is still used after a restart', searchedAt.startsWith('https://en.wikipedia.org/w/index.php?search=old%20browsers'), searchedAt);
+  await app3.close();
+}
 
 // ---- without the development switch, loopback gopher is refused ----
 const app2 = await launch({ ANNE_DEV_GOPHER_PRIVATE: '' });
@@ -315,5 +370,266 @@ await app2.close();
 
 http.close();
 gopher.close();
+https?.close();
 console.log(failures === 0 ? '\nsmoke: all checks passed' : `\nsmoke: ${failures} check(s) FAILED`);
 process.exit(failures === 0 ? 0 : 1);
+
+// ======================================================================
+// Phase 3: settings, find, bookmarks, history, private windows, downloads,
+// permission prompts, page info, certificates, clearing data, context menus.
+// ======================================================================
+async function phase3Checks(): Promise<void> {
+  const profile = join(userData, 'profile');
+  const readProfile = (name: string) => { try { return JSON.parse(readFileSync(join(profile, name), 'utf8')); } catch { return undefined; } };
+  const run = (id: string, args?: Record<string, string | number | boolean>) =>
+    ui.evaluate((a) => window.anne.execute({ id: a.id, source: 'toolbar', ...(a.args && { args: a.args }) }), { id, args }) as Promise<{ ok: boolean; reason?: string }>;
+  const list = (kind: string, query = '') =>
+    ui.evaluate((a) => window.anne.list({ kind: a.kind as never, query: a.query }), { kind, query }) as Promise<{ id: number; title: string; url: string; detail: string }[]>;
+  const findState = () => ui.evaluate(() => ({
+    open: !document.getElementById('find')!.hidden,
+    count: document.getElementById('find-count')!.textContent,
+  }));
+
+  // Native dialogs are replaced for the test: each records what it was asked and gives a scripted answer.
+  await app.evaluate(({ dialog }) => {
+    const g = globalThis as unknown as Record<string, unknown>;
+    g['__dialogs'] = [];
+    g['__answers'] = {} as Record<string, number>;
+    const answer = (message: string) => {
+      (g['__dialogs'] as string[]).push(message);
+      const rules = g['__answers'] as Record<string, number>;
+      const key = Object.keys(rules).find((k) => message.includes(k));
+      return key === undefined ? 0 : rules[key]!;
+    };
+    const asText = (o: Electron.MessageBoxOptions) => `${o.message}\n${o.detail ?? ''}`;
+    dialog.showMessageBox = (async (a: unknown, b?: unknown) => ({ response: answer(asText((b ?? a) as Electron.MessageBoxOptions)), checkboxChecked: false })) as never;
+    dialog.showMessageBoxSync = ((a: unknown, b?: unknown) => answer(asText((b ?? a) as Electron.MessageBoxOptions))) as never;
+  });
+  const setAnswer = (key: string, response: number) => app.evaluate((_e, a) => {
+    ((globalThis as unknown as Record<string, Record<string, number>>)['__answers']!)[a.key] = a.response;
+  }, { key, response });
+  const dialogs = () => app.evaluate(() => (globalThis as unknown as Record<string, string[]>)['__dialogs']!.slice());
+  const clearDialogs = () => app.evaluate(() => { (globalThis as unknown as Record<string, string[]>)['__dialogs']!.length = 0; });
+
+  // ---- settings ----
+  await run('view.menu-layout', { layout: 'suite-1999' });
+  check('choosing a layout saves it to the profile', !!(await until(() => readProfile('settings.json')?.layout === 'suite-1999')), JSON.stringify(readProfile('settings.json')));
+  await run('tools.search-engine', { engine: 'wikipedia' });
+  check('choosing a search engine saves it', readProfile('settings.json')?.searchTemplate === 'https://en.wikipedia.org/w/index.php?search=%s');
+  const bad = await run('tools.search-engine', { engine: 'evil' });
+  check('an unknown search engine is refused and nothing is saved', !bad.ok && readProfile('settings.json')?.searchTemplate.startsWith('https://en.wikipedia.org/'));
+  await run('view.menu-layout', { layout: 'modern' });
+
+  // ---- find in page ----
+  await go(`${base}/find`);
+  const findTab = await tabWith('/find');
+  await until(async () => (await findTab?.title()) === 'find page');
+  await run('edit.find');
+  check('Find opens the find bar', !!(await until(async () => (await findState()).open)));
+  await ui.locator('#find-input').fill('apple');
+  check('typing in the find bar searches the page', !!(await until(async () => (await findState()).count === '1 of 3')), (await findState()).count ?? '');
+  await run('edit.find-next');
+  check('Find Next moves to the next match', !!(await until(async () => (await findState()).count === '2 of 3')), (await findState()).count ?? '');
+  await run('edit.find-previous');
+  check('Find Previous moves back', !!(await until(async () => (await findState()).count === '1 of 3')), (await findState()).count ?? '');
+  await ui.locator('#find-input').fill('zebra');
+  check('a missing word reports no matches', !!(await until(async () => (await findState()).count === 'No matches')));
+  await run('edit.find-close');
+  check('Close Find Bar hides it', !!(await until(async () => !(await findState()).open)));
+
+  // ---- bookmarks ----
+  await run('bookmark.toggle');
+  const starred = () => ui.evaluate(() => document.getElementById('star')!.getAttribute('aria-pressed'));
+  check('Bookmark This Page marks the page', !!(await until(async () => (await starred()) === 'true')));
+  check('a panel cannot be read while it is closed', (await list('bookmarks')).length === 0);
+  await run('bookmark.show');
+  const marks = await until(async () => { const l = await list('bookmarks'); return l.length > 0 && l; });
+  check('the bookmarks panel lists the page', !!marks && marks[0]!.url === `${base}/find` && marks[0]!.title === 'find page', JSON.stringify(marks));
+  check('another panel cannot be read while this one is open', (await list('history')).length === 0);
+  check('bookmarks are written to the profile', !!(await until(() => readProfile('bookmarks.json')?.entries?.[0]?.url === `${base}/find`)));
+  await run('bookmark.show');
+
+  // ---- history ----
+  await run('history.show');
+  const hist = await until(async () => { const l = await list('history'); return l.length > 0 && l; });
+  check('history lists visited pages', !!hist && hist.some((h) => h.url === `${base}/a`) && hist.some((h) => h.url === `${base}/find`), JSON.stringify(hist?.map((h) => h.url)));
+  check('history never lists internal pages', !!hist && !hist.some((h) => h.url.startsWith('anne:')));
+  const filtered = await list('history', 'find page');
+  check('history search filters by title', filtered.length === 1 && filtered[0]!.url === `${base}/find`, JSON.stringify(filtered.map((h) => h.url)));
+  await run('history.remove', { id: filtered[0]!.id });
+  check('a history entry can be deleted', !!(await until(async () => (await list('history', 'find page')).length === 0)));
+  const typingEntry = (await list('history', 'typing'))[0];
+  await run('history.open', { id: typingEntry!.id });
+  check('opening a history entry closes the panel and loads the page', !!(await until(async () => (await uiState()).address === `${base}/typing` && !(await ui.evaluate(() => !document.getElementById('panel')!.hidden)))));
+
+  // ---- private window ----
+  await go(`${base}/a`);
+  const normalTab = await tabWith(`${base}/a`);
+  await normalTab!.evaluate(() => { document.cookie = 'who=normal; path=/'; });
+  await run('app.new-private-window');
+  check('New Private Window opens a second window', !!(await until(async () => (await windowCount()) === 2)));
+  const pui = await until(() => app.windows().find((p) => p !== ui && p.url().startsWith('anne://chrome/')));
+  check('the private window looks different', !!pui && !!(await until(() => pui.evaluate(() => document.body.classList.contains('private') && !document.getElementById('private-badge')!.hidden))));
+  await pui!.evaluate((u) => window.anne.execute({ id: 'nav.go', source: 'toolbar', args: { text: u } }), `${base}/private-visit`);
+  const ptab = await tabWith('/private-visit');
+  check('private window shares no cookies with normal windows', !!ptab && (await ptab.evaluate(() => document.cookie)) === '');
+  await ptab!.evaluate(() => { document.cookie = 'who=private; path=/'; });
+  check('normal windows cannot see private cookies', (await normalTab!.evaluate(() => document.cookie)) === 'who=normal');
+  await sleep(500);
+  await run('history.show');
+  check('private browsing is not added to history', (await list('history', 'private-visit')).length === 0);
+  await run('history.show');
+  const settingsBefore = JSON.stringify(readProfile('settings.json'));
+  await pui!.evaluate(() => window.anne.execute({ id: 'view.menu-layout', source: 'toolbar', args: { layout: 'minimal-1994' } }));
+  await sleep(300);
+  check('a private window does not change saved settings', JSON.stringify(readProfile('settings.json')) === settingsBefore);
+  await app.evaluate(({ BaseWindow }) => BaseWindow.getAllWindows().find((w) => w.title.includes('Private'))?.close());
+  check('the private window closes', !!(await until(async () => (await windowCount()) === 1)));
+  await run('app.new-private-window');
+  const pui2 = await until(() => app.windows().find((p) => p !== ui && p.url().startsWith('anne://chrome/')));
+  await pui2!.evaluate((u) => window.anne.execute({ id: 'nav.go', source: 'toolbar', args: { text: u } }), `${base}/private-again`);
+  const ptab2 = await tabWith('/private-again');
+  check('a new private window starts with no cookies', !!ptab2 && (await ptab2.evaluate(() => document.cookie)) === '');
+  await app.evaluate(({ BaseWindow }) => BaseWindow.getAllWindows().find((w) => w.title.includes('Private'))?.close());
+  await until(async () => (await windowCount()) === 1);
+
+  // ---- downloads ----
+  await clearDialogs();
+  await go(`${base}/file.txt`);
+  check('a download is saved', !!(await until(() => existsSync(join(downloadDir, 'notes.txt')))));
+  await run('tools.downloads');
+  const dl = await until(async () => { const l = await list('downloads'); return l.some((d) => d.detail.startsWith('Completed')) && l; });
+  check('the downloads panel lists it as completed', !!dl && dl[0]!.title === 'notes.txt', JSON.stringify(dl));
+  check('an ordinary download shows no warning', (await dialogs()).length === 0, (await dialogs()).join('|'));
+  await go(`${base}/tool.exe`);
+  await sleep(1500);
+  check('a program file triggers a warning naming it', (await dialogs()).some((d) => d.includes('"tool.exe" can run programs')), (await dialogs()).join('|'));
+  check('declining the warning saves nothing', !existsSync(join(downloadDir, 'tool.exe')) && !(await list('downloads')).some((d) => d.title === 'tool.exe'));
+  await setAnswer('can run programs', 1);
+  await go(`${base}/tool.exe`);
+  check('accepting the warning saves the file', !!(await until(() => existsSync(join(downloadDir, 'tool.exe')))));
+  const flagged = await until(async () => (await list('downloads')).find((d) => d.title === 'tool.exe' && d.detail.startsWith('Completed')));
+  check('the panel marks it as able to run programs', !!flagged && flagged.detail.includes('can run programs'), flagged?.detail ?? '');
+  await setAnswer('can run programs', 0);
+  await run('tools.download-dismiss', { id: flagged!.id });
+  check('a finished download can be removed from the list (file kept)', !!(await until(async () => !(await list('downloads')).some((d) => d.title === 'tool.exe'))) && existsSync(join(downloadDir, 'tool.exe')));
+  await run('tools.downloads');
+
+  // ---- permission prompts ----
+  await clearDialogs();
+  await setAnswer('wants to show notifications', 1);
+  await go(`${base}/perm`);
+  const perm = await tabWith('/perm');
+  await until(async () => !!perm && perm.frames().some((f) => f.url().includes('/inner')));
+  const first = await perm!.evaluate(() => Notification.requestPermission());
+  const asked = await dialogs();
+  check('a permission request shows a prompt naming the site', first === 'granted' && asked.some((d) => d.startsWith(`${base} wants to show notifications.`)), `${first} ${asked.join('|')}`);
+  await clearDialogs();
+  const second = await perm!.evaluate(() => Notification.requestPermission());
+  check('the answer is remembered for the site', second === 'granted' && (await dialogs()).length === 0);
+  const inner = perm!.frames().find((f) => f.url().includes('/inner'));
+  const framed = await inner!.evaluate(() => Notification.requestPermission());
+  check('an embedded frame from another site cannot ask', framed !== 'granted' && (await dialogs()).length === 0, `${framed} ${(await dialogs()).join('|')}`);
+  await setAnswer('wants to show notifications', 0);
+  await go(`http://localhost:${httpPort}/a`);
+  const other = await tabWith(`http://localhost:${httpPort}/a`);
+  const blocked = await other!.evaluate(() => Notification.requestPermission());
+  check('choosing Block refuses the permission', blocked === 'denied', blocked);
+
+  // ---- page info ----
+  await go(`${base}/perm`);
+  await until(async () => (await uiState()).address === `${base}/perm`);
+  await clearDialogs();
+  await run('page.info');
+  const info = (await until(async () => (await dialogs()).find((d) => d.includes('Address:')))) ?? '';
+  check('Page Info shows the address and an unencrypted warning', info.includes(`Address: ${base}/perm`) && info.includes('NOT encrypted'), info);
+  check('Page Info lists permissions granted this session', info.includes('Permissions allowed this session: show notifications'), info);
+  check('Page Info counts the cookies the page can read', info.includes('Cookies this page can read: 1'), info);
+
+  // ---- certificates ----
+  if (httpsPort) {
+    await go(`https://127.0.0.1:${httpsPort}/`);
+    await sleep(1500);
+    const secret = tabs().find((p) => p.url().startsWith(`https://127.0.0.1:${httpsPort}`));
+    const shown = secret ? await secret.title().catch(() => '') : '';
+    check('a self-signed certificate is still rejected', shown !== 'secret' && !!(await until(async () => (await uiState()).notice?.includes('CERT'))), `${shown} ${(await uiState()).notice}`);
+  }
+
+  // ---- clear browsing data ----
+  await setAnswer('Clear browsing data?', 2);
+  await run('privacy.clear-data');
+  await sleep(800);
+  await run('history.show');
+  check('Clear Browsing Data empties history', (await list('history')).length === 0);
+  await run('history.show');
+  await go(`${base}/a`);
+  const after = await tabWith(`${base}/a`);
+  await until(async () => (await uiState()).address === `${base}/a`);
+  check('Clear Browsing Data removes cookies', (await after!.evaluate(() => document.cookie)) === '');
+  await clearDialogs();
+  await go(`${base}/perm`);
+  await until(async () => (await uiState()).address === `${base}/perm`);
+  await run('page.info');
+  const info2 = (await until(async () => (await dialogs()).find((d) => d.includes('Address:')))) ?? '';
+  check('Clear Browsing Data forgets permission answers', info2.includes('Permissions allowed this session: none'), info2);
+  await run('bookmark.show');
+  check('Clear Browsing Data keeps bookmarks', (await list('bookmarks')).length === 1);
+  await run('bookmark.show');
+
+  // ---- context menus ----
+  await app.evaluate(({ Menu }) => {
+    (Menu.prototype as unknown as { popup: () => void }).popup = function (this: Electron.Menu) {
+      (globalThis as unknown as Record<string, Electron.Menu>)['__ctxMenu'] = this;
+    };
+  });
+  const lastMenu = () => app.evaluate(() => (globalThis as unknown as Record<string, Electron.Menu | undefined>)['__ctxMenu']?.items.map((i) => i.label) ?? []);
+  const rightClick = async (selector: string) => {
+    await app.evaluate(() => { delete (globalThis as unknown as Record<string, unknown>)['__ctxMenu']; });
+    const box = await (await tabWith('/links'))!.evaluate((sel) => {
+      const r = document.querySelector(sel)!.getBoundingClientRect();
+      return { x: Math.round(r.left + 10), y: Math.round(r.top + r.height / 2) };
+    }, selector);
+    await app.evaluate(({ webContents }, b) => {
+      const wc = webContents.getAllWebContents().find((w) => w.getURL().endsWith('/links'))!;
+      wc.sendInputEvent({ type: 'mouseDown', x: b.x, y: b.y, button: 'right', clickCount: 1 });
+      wc.sendInputEvent({ type: 'mouseUp', x: b.x, y: b.y, button: 'right', clickCount: 1 });
+    }, box);
+    return until(async () => { const l = await lastMenu(); return l.length > 0 && l; });
+  };
+  await go(`${base}/links`);
+  await tabWith('/links');
+  await until(async () => (await uiState()).address === `${base}/links`);
+  const linkMenu = await rightClick('#good');
+  check('right-clicking a link offers link commands', !!linkMenu && linkMenu.includes('Open Link in New Tab') && linkMenu.includes('Copy Link Address'), JSON.stringify(linkMenu));
+  const before = tabs().length;
+  await app.evaluate(() => {
+    const menu = (globalThis as unknown as Record<string, Electron.Menu>)['__ctxMenu']!;
+    const item = menu.items.find((i) => i.label === 'Open Link in New Tab')!;
+    (item.click as unknown as () => void)();
+  });
+  check('Open Link in New Tab opens it', !!(await until(() => tabs().length === before + 1 && tabs().some((p) => p.url() === `${base}/linked`))));
+  await ui.evaluate(() => window.anne.execute({ id: 'tab.previous', source: 'toolbar' }));
+  await until(async () => (await uiState()).address === `${base}/links`);
+  const badMenu = await rightClick('#bad');
+  check('a javascript: link gets no link commands', !!badMenu && !badMenu.includes('Open Link in New Tab'), JSON.stringify(badMenu));
+  const tabsBeforeForgery = (await uiState()).tabs;
+  await run('tab.open-link', { url: 'file:///etc/passwd' });
+  await sleep(500);
+  check('Open Link cannot be used to reach local files', !tabs().some((p) => p.url().startsWith('file:')), tabs().map((p) => p.url()).join());
+  check('a refused link leaves no empty tab behind', (await uiState()).tabs === tabsBeforeForgery, `${(await uiState()).tabs} vs ${tabsBeforeForgery}`);
+  check('the refusal is explained', !!(await until(async () => (await uiState()).notice?.startsWith('Blocked'))), (await uiState()).notice ?? '');
+
+  // ---- save page ----
+  await app.evaluate(({ dialog }, dir) => {
+    dialog.showSaveDialog = (async () => ({ canceled: false, filePath: `${dir}/saved-page.html` })) as never;
+  }, downloadDir);
+  await run('file.save-page-as');
+  check('Save Page As writes the page', !!(await until(() => existsSync(join(downloadDir, 'saved-page.html')) && readFileSync(join(downloadDir, 'saved-page.html'), 'utf8').includes('good link'))));
+
+  // ---- home page ----
+  await run('nav.set-home-page');
+  check('Use Current Page as Home Page saves it', !!(await until(() => readProfile('settings.json')?.homePage === `${base}/links`)));
+  const homeBefore = tabs().length;
+  await run('tab.new');
+  check('new tabs open the home page', !!(await until(() => tabs().length === homeBefore + 1 && tabs().filter((p) => p.url() === `${base}/links`).length >= 2)));
+}

@@ -38,6 +38,21 @@ D2 and D4 were adopted by building on them, following the roadmap's recommendati
 | A13 | Context keys are a closed list | A typo in a `when` expression is a build error, not a silently dead command | Low |
 | A14 | Code uses only erasable TypeScript syntax | Tools and tests run on Node directly with no compile step | Low |
 
+## Decisions made in Phase 3 (first session)
+
+| # | Decision | Why | Cost to reverse |
+|---|---|---|---|
+| B1 | Settings, bookmarks and history are JSON files with atomic writes, not a database | Small data; easy to inspect and back up; no native module to package | Low: the stores hide the format |
+| B2 | Bookmarks and history share one model (`UrlStore`) | Same shape and operations; one set of tests | Low |
+| B3 | List panels (bookmarks, history, downloads) are overlays in the UI view | They need interaction; internal pages stay script-free (A8) | Medium |
+| B4 | The UI may read only the list panel that is open | Limits what a compromised UI can read in one step | Low |
+| B5 | Permission prompts, Page Info, Clear Browsing Data and download warnings use native dialogs | Drawn by the main process, so page content cannot imitate or overlay them | Low: a styled prompt in the UI view is possible later, under the same origin rule |
+| B6 | Permission answers are kept for the session only | No settings UI to review or revoke saved answers yet | Low |
+| B7 | Each private window gets its own in-memory partition | Private windows do not share state with each other either | Low |
+| B8 | The download list is in memory only | Simpler; Chrome-style persistence can come later | Low |
+| B9 | Menu items that need arguments are generated in code, never placed in layout files (build-time rule) | A layout cannot supply arguments; the palette also hides such commands | Low |
+| B10 | Tabs that pages ask for (pop-ups, Open Link) are created only if the address is allowed | No empty tabs from refused requests; also prevented a Save Page hang | Low |
+
 ## Deviations from the Phase 0 documents
 
 - `docs/COMMAND-CATALOG.md` originally put `shortcuts`, `layouts` and `menu_path` on each command record. They moved to keymap and layout files (A2). The document has been updated.

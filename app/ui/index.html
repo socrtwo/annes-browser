@@ -11,15 +11,37 @@
   <button id="back" title="Back" aria-label="Back">&#8592;</button>
   <button id="forward" title="Forward" aria-label="Forward">&#8594;</button>
   <button id="reload" title="Reload" aria-label="Reload">&#8635;</button>
+  <span id="private-badge" hidden>Private</span>
   <input id="address" type="text" spellcheck="false" autocomplete="off" aria-label="Address or search" placeholder="Type an address or search">
+  <button id="star" title="Bookmark this page" aria-label="Bookmark this page" aria-pressed="false">&#9734;</button>
   <span id="mode" hidden>MODAL</span>
+  <button id="downloads" title="Downloads" aria-label="Downloads">&#8615;</button>
   <button id="commands" title="Command palette (F2)" aria-label="Command palette">&#8984;</button>
 </div>
+<div id="find" role="search" hidden>
+  <input id="find-input" type="text" spellcheck="false" autocomplete="off" aria-label="Find in page" placeholder="Find in page">
+  <span id="find-count" aria-live="polite"></span>
+  <button id="find-prev" title="Previous match (Shift+Enter)" aria-label="Previous match">&#8593;</button>
+  <button id="find-next" title="Next match (Enter)" aria-label="Next match">&#8595;</button>
+  <button id="find-close" title="Close (Escape)" aria-label="Close find bar">&#215;</button>
+</div>
 <div id="notice" role="status" hidden></div>
-<div id="palette" hidden>
-  <div id="palette-box" role="dialog" aria-label="Command palette">
+<div id="palette" class="overlay" hidden>
+  <div id="palette-box" class="box" role="dialog" aria-label="Command palette">
     <input id="palette-input" type="text" spellcheck="false" autocomplete="off" aria-label="Search commands" placeholder="Search commands, e.g. &quot;reopen&quot; or &quot;netscape edit&quot;">
     <ul id="palette-list" role="listbox"></ul>
+  </div>
+</div>
+<div id="panel" class="overlay" hidden>
+  <div id="panel-box" class="box" role="dialog" aria-labelledby="panel-title">
+    <div id="panel-head">
+      <h1 id="panel-title"></h1>
+      <button id="panel-clear" hidden>Clear list</button>
+      <button id="panel-close" aria-label="Close">&#215;</button>
+    </div>
+    <input id="panel-input" type="text" spellcheck="false" autocomplete="off" aria-label="Search">
+    <ul id="panel-list"></ul>
+    <p id="panel-empty" hidden>Nothing here.</p>
   </div>
 </div>
 <script src="chrome.js"></script>

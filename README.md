@@ -2,7 +2,7 @@
 
 **Every menu command from 35 years of web browsers, plus new ones, in one searchable, customizable browser.**
 
-> Status: **Phase 2 foundation.** A working, hardened browser shell exists: tabs, generated menus in four layouts, command palette, remappable keys with a modal profile, a built-in Gopher client and Flash emulation. 45 of an expected 700–1,000 commands are catalogued. Linux-tested only; not ready for daily use.
+> Status: **Phase 3 in progress.** A working, hardened browser: tabs, generated menus in four layouts, command palette, remappable keys with a modal profile, find in page, bookmarks, history, downloads with warnings, private windows, permission prompts, Page Info, context menus, saved settings, a built-in Gopher client and Flash emulation. 74 of an expected 700–1,000 commands are catalogued. Linux-tested only; not ready for daily use.
 
 ## Run it
 

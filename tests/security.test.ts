@@ -1,7 +1,7 @@
 import { describe, expect, it, vi } from 'vitest';
 import { isDangerousFile, sanitizeFilename } from '../app/core/security/downloads.ts';
 import { isPublicAddress, isRestrictedPort } from '../app/core/security/net-policy.ts';
-import { PermissionPolicy, permissionRule } from '../app/core/security/permissions.ts';
+import { mediaPermission, PermissionPolicy, permissionLabel, permissionRule } from '../app/core/security/permissions.ts';
 import { hasUnsafeSwitches } from '../app/core/security/startup.ts';
 import {
   decideFrameNavigation, decideNavigation, displayUrl, interpretAddressInput, searchUrl,
@@ -159,24 +159,25 @@ describe('permission policy', () => {
 
   it('denies "ask" permissions when no prompt is connected', async () => {
     const policy = new PermissionPolicy();
-    expect(await policy.request('https://example.com', 'geolocation')).toBe(false);
+    expect(await policy.request('https://example.com', 'geolocation', undefined)).toBe(false);
     expect(policy.check('https://example.com', 'geolocation')).toBe(false);
-    expect(await policy.request('https://example.com', 'fullscreen')).toBe(true);
+    expect(await policy.request('https://example.com', 'fullscreen', undefined)).toBe(true);
   });
 
   it('asks once per origin and only for secure origins', async () => {
     const prompt = vi.fn(async (origin: string) => origin === 'https://good.example');
     const policy = new PermissionPolicy(prompt);
-    expect(await policy.request('https://good.example/page', 'media')).toBe(true);
-    expect(await policy.request('https://good.example/other', 'media')).toBe(true);
+    expect(await policy.request('https://good.example/page', 'media', undefined)).toBe(true);
+    expect(await policy.request('https://good.example/other', 'media', undefined)).toBe(true);
     expect(policy.check('https://good.example', 'media')).toBe(true);
-    expect(await policy.request('https://bad.example', 'media')).toBe(false);
+    expect(await policy.request('https://bad.example', 'media', undefined)).toBe(false);
     expect(prompt).toHaveBeenCalledTimes(2);
     for (const origin of ['http://example.com', 'gopher://example.com', 'file:///x', 'anne://pages', 'not a url']) {
-      expect(await policy.request(origin, 'media'), origin).toBe(false);
+      expect(await policy.request(origin, 'media', undefined), origin).toBe(false);
     }
-    expect(await policy.request('https://good.example', 'usb')).toBe(false);
+    expect(await policy.request('https://good.example', 'usb', undefined)).toBe(false);
     expect(prompt).toHaveBeenCalledTimes(2);
+    expect(policy.granted('https://good.example/x')).toEqual(['media']);
     policy.forget('https://good.example');
     expect(policy.check('https://good.example', 'media')).toBe(false);
   });
@@ -188,5 +189,41 @@ describe('startup switches', () => {
       expect(hasUnsafeSwitches(['app', flag]), flag).toBe(flag);
     }
     expect(hasUnsafeSwitches(['app', 'https://example.com/?--no-sandbox', '--lang=en', '--inspector-thing'])).toBeUndefined();
+  });
+});
+
+describe('permission details', () => {
+  it('keeps camera and microphone decisions apart', async () => {
+    expect(mediaPermission(['video', 'audio', 'audio'])).toBe('media:audio,video');
+    expect(mediaPermission(['audio'])).toBe('media:audio');
+    expect(mediaPermission(undefined)).toBe('media');
+    expect(permissionRule('media:audio')).toBe('ask');
+    expect(permissionRule('usb:anything')).toBe('deny');
+    const policy = new PermissionPolicy<string>(async (_o, p) => p === 'media:audio');
+    expect(await policy.request('https://a.example', 'media:audio', 'tab1')).toBe(true);
+    expect(await policy.request('https://a.example', 'media:video', 'tab1')).toBe(false);
+  });
+
+  it('asks once when a page requests twice before answering', async () => {
+    let calls = 0;
+    let release!: (v: boolean) => void;
+    const policy = new PermissionPolicy<number>((_o, _p, ctx) => { calls++; expect(ctx).toBe(7); return new Promise((r) => { release = r; }); });
+    const a = policy.request('https://a.example', 'geolocation', 7);
+    const b = policy.request('https://a.example', 'geolocation', 7);
+    await Promise.resolve();
+    release(true);
+    expect(await Promise.all([a, b])).toEqual([true, true]);
+    expect(calls).toBe(1);
+  });
+
+  it('treats a failing prompt as a refusal', async () => {
+    const policy = new PermissionPolicy(async () => { throw new Error('window gone'); });
+    expect(await policy.request('https://a.example', 'geolocation', undefined)).toBe(false);
+  });
+
+  it('describes permissions in plain words', () => {
+    expect(permissionLabel('media:audio,video')).toBe('use your camera and microphone');
+    expect(permissionLabel('geolocation')).toBe('know your location');
+    expect(permissionLabel('somethingNew')).toBe('use "somethingNew"');
   });
 });
