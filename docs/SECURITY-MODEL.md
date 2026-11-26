@@ -174,7 +174,7 @@ A packaged build refuses to start with switches that open a debugging port, disa
 
 ## Known limitations
 
-- On the development machine the end-to-end test runs with Chromium's sandbox disabled, because that machine runs as root. The CI workflow runs the same test as an ordinary user with the sandbox on, and its first run (2026-11-25, Ubuntu 24.04) passed all 46 checks of that version; the run with the Phase 3 additions (2026-11-26) passed all 105. The census additions have not yet run in CI.
+- On the development machine the end-to-end test runs with Chromium's sandbox disabled, because that machine runs as root. The CI workflow runs the same test as an ordinary user with the sandbox on, and its first run (2026-11-25, Ubuntu 24.04) passed all 46 checks of that version; the run with the Phase 3 additions (2026-11-26) passed all 105. The census additions (2026-11-26) passed all 113 checks there as well, and the census verifier job re-fetched all 23 sources from GitHub and confirmed every citation.
 - Not tested on Windows or macOS.
 - `decideNavigation` cannot see navigations Chromium performs entirely inside a renderer without consulting the browser process. None are known for the cases tested.
 - No certificate-error override: a bad certificate simply fails to load. That is the safe default, and a Phase 3 design decision whether to ever allow an override.

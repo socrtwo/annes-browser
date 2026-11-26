@@ -13,7 +13,7 @@ All notable changes to this project are documented here. Format: [Keep a Changel
   - Menu Archaeology shows per-browser histories; each command has its own page with source links.
   - The command palette ranks built commands first and marks unbuilt ones "planned".
   - Reports: `docs/CENSUS.md` and the work queue `docs/census-unlinked.tsv`.
-  - 36 new unit tests and 7 new end-to-end checks.
+  - 36 new unit tests and 8 new end-to-end checks.
 - 2026-11-26: Phase 3, first set.
   - Settings store (layout, keymap, home page, search engine), saved atomically; invalid or corrupt files never break startup.
   - Find in page with match count, next and previous.
