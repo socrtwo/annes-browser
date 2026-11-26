@@ -16,9 +16,9 @@ const NOT_COVERED: [string, string][] = [
   ['Netscape 1.x, 4.5, 4.8, 6–9', 'Mosaic Netscape 0.91, Navigator 2.02 and 3.0 and Communicator 4.05 and 4.7 are covered from their own programs, plus three manuals and two screenshots. Netscape 6–9 are Mozilla-based (their menus are in Mozilla\'s code, covered by SeaMonkey).'],
   ['Opera 2–6, 9–11, 15+', 'Opera 8.01 and 12.14 are covered from their menu files. Opera 2–3 at the Archive are 16-bit programs; the 9.x and 10.x installers use an InstallShield format not unpacked here. Opera 15+ is Chromium-based. Otter Browser, an Opera 12 style clone, is also covered.'],
   ['Safari (menu bar), Camino, OmniWeb, iCab', 'Closed source. Safari\'s page context menu is covered from WebKit (2010 and current); its menu bar is not.'],
-  ['Vivaldi, Arc, Sidekick, SigmaOS, Zen, Floorp', 'Closed source or no menu file in a reachable repository. Vivaldi and Arc features appear in the roadmap from memory and are not in the lineage.'],
+  ['Arc, Sidekick, SigmaOS, Zen, Floorp; Vivaldi before 3.4', 'Closed source or no menu file in a reachable repository. Vivaldi 3.4 and 6.9 are covered from the menu files inside their official Linux builds (Arch Linux package archive at the Internet Archive). Arc features appear in the roadmap from public descriptions, not from a source.'],
   ['Firefox 1.0–100 (history)', 'The gecko-dev mirror has no release tags; only the current tree was read. SeaMonkey 2.0 covers 2009.'],
-  ['Konqueror 3 and 4, Galeon, Epiphany, Flock', 'Tags with the menu files were not found in the mirrors reachable here.'],
+  ['Konqueror 3, Galeon, Epiphany, Flock', 'Konqueror 4.0 and 4.14 are covered from kde-baseapps (menu file and handbook); KDE 3 tags were not found in the mirrors reachable here.'],
   ['K-Meleon, Pale Moon, Basilisk, Waterfox', 'Hosted outside GitHub.'],
   ['Mobile browsers (Opera Mini, Samsung Internet, UC, Dolphin, Kiwi)', 'Closed source.'],
 ];

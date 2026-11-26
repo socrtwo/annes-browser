@@ -10,7 +10,7 @@
 export type ExtractorId =
   | 'mosaic-menu' | 'lynx-keymap' | 'w3m-func' | 'elinks-actions' | 'chromium-ids' | 'dillo-menu' | 'xul-menu'
   | 'firefox-menu' | 'falkon-actions' | 'qt-actions' | 'otter-enum' | 'vimium-commands' | 'qutebrowser-commands'
-  | 'konqueror-rc' | 'brave-ids' | 'qt-ui' | 'manual-phrases' | 'transcription' | 'rc-menu' | 'webkit-strings';
+  | 'konqueror-rc' | 'brave-ids' | 'qt-ui' | 'manual-phrases' | 'transcription' | 'rc-menu' | 'webkit-strings' | 'docbook-menus';
 
 export interface SourceFileSpec {
   path: string;

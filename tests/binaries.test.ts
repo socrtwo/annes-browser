@@ -138,3 +138,23 @@ describe('dumped menus as census sources', () => {
     for (const bad of ['dump/../x/a.txt#L1', 'dump/cp32e47/../../a.txt#L1', 'dump/cp32e47/A.TXT#L1', 'dump/cp32e47/a.txt']) expect(refUrl(bad), bad).toBeUndefined();
   });
 });
+
+describe('Vivaldi menu files', () => {
+  it('labels actions from the command table, in both minified forms', async () => {
+    const { vivaldiLabels, vivaldiMenusToRc } = await import('../tools/census/vivaldi.ts');
+    const bundle = '{name:"COMMAND_NEW_TAB",action:x,...(0,ab.Z)("command","New Tab")},{name:"COMMAND_X",action:y,...Object(Le.a)("Other")},'
+      + 'switch(t.action){case"DOCUMENT_SAVE_LINK":return{...o,...(0,Xi.Z)("Save Link As")};case"DOCUMENT_NONE":return{}};'
+      + 'Ce={MENU_FILE:{...(0,N.Z)("win_linux","File")}}';
+    const labels = vivaldiLabels(bundle);
+    expect([...labels]).toEqual([['COMMAND_NEW_TAB', 'New Tab'], ['COMMAND_X', 'Other'], ['DOCUMENT_SAVE_LINK', 'Save Link As'], ['MENU_FILE', 'File']]);
+    const main = [{ type: 'control' }, { action: 'menubar', type: 'menu', children: [{ action: 'MENU_FILE', type: 'folder', children: [
+      { action: 'COMMAND_NEW_TAB', type: 'command' }, { action: '', type: 'separator' }, { action: 'COMMAND_UNKNOWN_THING', type: 'command' }] }] }];
+    const context = [{ action: 'link', type: 'menu', children: [{ action: 'DOCUMENT_SAVE_LINK', type: 'command' }, { action: 'DOCUMENT_CONTAINER_AV', type: 'container' }] }];
+    const { text, items } = vivaldiMenusToRc(main, context, labels, ['h']);
+    expect(items).toBe(3);
+    const got = EXTRACTORS['rc-menu']({ 'v.txt': text }, { files: [{ path: 'v.txt', role: 'primary' }] } as never);
+    expect(got.map((i) => [i.key, i.label, i.menu])).toEqual([
+      ['COMMAND_NEW_TAB', 'New Tab', 'File'], ['COMMAND_UNKNOWN_THING', 'Unknown thing', 'File'], ['DOCUMENT_SAVE_LINK', 'Save Link As', 'Context menu: link'],
+    ]);
+  });
+});

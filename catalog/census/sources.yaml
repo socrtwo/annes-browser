@@ -531,3 +531,63 @@
   files:
     - path: opera-12.14-win32-menus.txt
       role: primary
+- id: konqueror-4.0
+  browser: Konqueror
+  version: "4.0"
+  released: 2008
+  platform: desktop
+  repo: KDE/kde-baseapps
+  ref: v4.0.0
+  extractor: konqueror-rc
+  files:
+    - path: konqueror/src/konqueror.rc
+      role: primary
+  commit: cd04c56ffd6ec7eec6d51e5051276507952d8c23
+- id: konqueror-4.14
+  browser: Konqueror
+  version: "4.14"
+  released: 2014
+  platform: desktop
+  repo: KDE/kde-baseapps
+  ref: v4.14.3
+  extractor: konqueror-rc
+  files:
+    - path: konqueror/src/konqueror.rc
+      role: primary
+  commit: dcc45ea70b0b408c8017c6f423b978fe6ca6163a
+- id: konqueror-4.14-handbook
+  browser: Konqueror (handbook)
+  version: "4.14"
+  released: 2014
+  platform: desktop
+  repo: KDE/kde-baseapps
+  ref: v4.14.3
+  extractor: docbook-menus
+  files:
+    - path: doc/konqueror/index.docbook
+      role: primary
+  commit: dcc45ea70b0b408c8017c6f423b978fe6ca6163a
+- id: vivaldi-3.4-linux
+  browser: Vivaldi
+  version: "3.4"
+  released: 2020
+  platform: Linux
+  host: dump
+  repo: archlinux_pkg_vivaldi
+  ref: "menu files: vivaldi-3.4.2066.106"
+  extractor: rc-menu
+  files:
+    - path: vivaldi-3.4-linux-menus.txt
+      role: primary
+- id: vivaldi-6.9-linux
+  browser: Vivaldi
+  version: "6.9"
+  released: 2024
+  platform: Linux
+  host: dump
+  repo: archlinux_pkg_vivaldi
+  ref: "menu files: vivaldi-6.9.3447.54"
+  extractor: rc-menu
+  files:
+    - path: vivaldi-6.9-linux-menus.txt
+      role: primary

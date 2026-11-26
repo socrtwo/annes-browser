@@ -474,10 +474,38 @@ const webkitStrings: Extractor = (files, spec) => {
   return out;
 };
 
+// ---------------------------------------------------------------- DocBook handbooks (KDE)
+
+/**
+ * `<menuchoice><guimenu>View</guimenu><guisubmenu>…</guisubmenu><guimenuitem>Reload</guimenuitem></menuchoice>`,
+ * possibly over several lines; cited at the line where it starts. Only entries naming a menu and an
+ * item count (a bare `<guimenu>` is a reference to a whole menu). Entities become words (`&konqueror;`).
+ */
+const docbookMenus: Extractor = (files, spec) => {
+  const out: CensusItem[] = [];
+  const src = lines(primary(files, spec));
+  const text = (s: string) => s.replace(/<[^>]+>/g, '').replace(/&([a-z]+);/gi, (_, e: string) => (e.toLowerCase() === 'amp' ? '&' : e)).replace(/\s+/g, ' ').trim();
+  src.forEach((l, i) => {
+    for (const start of l.matchAll(/<menuchoice>/g)) {
+      let block = l.slice(start.index);
+      for (let j = i + 1; !block.includes('</menuchoice>') && j < Math.min(i + 8, src.length); j++) block += ` ${src[j]}`;
+      const body = block.slice(0, block.indexOf('</menuchoice>'));
+      const parts = [...body.matchAll(/<(guimenu|guisubmenu|guimenuitem)>([\s\S]*?)<\/\1>/g)].map((m) => ({ kind: m[1]!, label: text(m[2]!) }));
+      const items = parts.filter((p) => p.kind === 'guimenuitem');
+      if (!parts.some((p) => p.kind === 'guimenu') || items.length === 0) continue;
+      const label = cleanLabel(items.at(-1)!.label);
+      const where = path(...parts.filter((p) => p !== items.at(-1)).map((p) => p.label));
+      out.push(item({ key: `${where} > ${label}`, label, menu: where, line: i + 1, text: l }));
+    }
+  });
+  return out;
+};
+
 export const EXTRACTORS: Record<ExtractorId, Extractor> = {
   transcription,
   'rc-menu': rcMenu,
   'webkit-strings': webkitStrings,
+  'docbook-menus': docbookMenus,
   'manual-phrases': manualPhrases,
   'mosaic-menu': mosaicMenu,
   'lynx-keymap': lynxKeymap,

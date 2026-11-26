@@ -3579,3 +3579,304 @@ opera-12.14-win32	M_COLLECTION_ITEM_OPEN	Open item	Viewpane Bookmark Item Option
 opera-12.14-win32	M_COLLECTION_ITEM_RELOAD_THUMBNAIL	Reload thumbnail	Viewpane Bookmark Item Options	1928
 opera-12.14-win32	M_COLLECTION_ITEM_EDIT	Edit properties	Viewpane Bookmark Item Options	1929
 opera-12.14-win32	M_COLLECTION_ITEM_DELETE	Delete Item	Viewpane Bookmark Item Options	1930
+konqueror-4.0	new_menu		Edit	29
+konqueror-4.0	usehtml		View	35
+konqueror-4.0	lock		View	36
+konqueror-4.0	link		View	37
+konqueror-4.0	closedtabs		Go	51
+konqueror-4.0	open_terminal		Tools	55
+konqueror-4.0	findfile		Tools	56
+konqueror-4.0	loadviewprofile		Settings	66
+konqueror-4.0	saveviewprofile		Settings	67
+konqueror-4.0	saveremoveviewprofile		Settings	68
+konqueror-4.0	options_configure_extensions		Settings	70
+konqueror-4.0	configurespellcheck		Settings	71
+konqueror-4.0	options_configure_keybinding		Settings	72
+konqueror-4.0	options_configure_toolbars		Settings	73
+konqueror-4.0	konqintro		Help	95
+konqueror-4.14	usehtml		View	35
+konqueror-4.14	lock		View	36
+konqueror-4.14	link		View	37
+konqueror-4.14	loadviewprofile		Settings	62
+konqueror-4.14	saveviewprofile		Settings	63
+konqueror-4.14	saveremoveviewprofile		Settings	64
+konqueror-4.14	options_configure_extensions		Settings	66
+konqueror-4.14	configurespellcheck		Settings	67
+konqueror-4.14	options_configure_keybinding		Settings	68
+konqueror-4.14	options_configure_toolbars		Settings	69
+konqueror-4.14	konqintro		Help	89
+konqueror-4.14-handbook	Help > What's This?	What's This?	Help	282
+konqueror-4.14-handbook	Settings > Configure Konqueror	Configure Konqueror	Settings	333
+konqueror-4.14-handbook	File Management > General	General	File Management	591
+konqueror-4.14-handbook	Tools > Find File	Find File	Tools	802
+konqueror-4.14-handbook	View > Show Hidden Files	Show Hidden Files	View	810
+konqueror-4.14-handbook	Tools > Execute Shell Command	Execute Shell Command	Tools	868
+konqueror-4.14-handbook	File Management > Services	Services	File Management	967
+konqueror-4.14-handbook	Window > Split View Left/Right	Split View Left/Right	Window	1002
+konqueror-4.14-handbook	Window > Close Active View	Close Active View	Window	1020
+konqueror-4.14-handbook	Edit > Selection > Select Matching Items	Select Matching Items	Edit > Selection	1160
+konqueror-4.14-handbook	Edit > Selection > Unselect Matching Items	Unselect Matching Items	Edit > Selection	1180
+konqueror-4.14-handbook	Edit > Selection > Unselect All	Unselect All	Edit > Selection	1184
+konqueror-4.14-handbook	Edit > Selection > Invert Selection	Invert Selection	Edit > Selection	1191
+konqueror-4.14-handbook	Go > Applications	Applications	Go	1275
+konqueror-4.14-handbook	Edit > Properties	Properties	Edit	1311
+konqueror-4.14-handbook	Tools > Open Terminal	Open Terminal	Tools	1366
+konqueror-4.14-handbook	Settings > Show Terminal Emulator	Show Terminal Emulator	Settings	1384
+konqueror-4.14-handbook	Window > Split View Top/Bottom	Split View Top/Bottom	Window	1491
+konqueror-4.14-handbook	Web Browsing > Browser Identification	Browser Identification	Web Browsing	1735
+konqueror-4.14-handbook	Settings > Configure Extensions	Configure Extensions	Settings	1742
+konqueror-4.14-handbook	File > Save Frame As	Save Frame As	File	1758
+konqueror-4.14-handbook	File > Save Background Image As	Save Background Image As	File	1763
+konqueror-4.14-handbook	Bookmarks > New Bookmark Folder	New Bookmark Folder	Bookmarks	2012
+konqueror-4.14-handbook	Bookmarks > Edit Bookmarks	Edit Bookmarks	Bookmarks	2027
+konqueror-4.14-handbook	Folder > Insert Separator	Insert Separator	Folder	2048
+konqueror-4.14-handbook	Settings > Save View Profile As	Save View Profile As	Settings	2318
+konqueror-4.14-handbook	View > Adjust View Properties	Adjust View Properties	View	2324
+konqueror-4.14-handbook	Settings > Load View Profile > Web Browsing	Web Browsing	Settings > Load View Profile	2350
+konqueror-4.14-handbook	View > Stop at Area	Stop at Area	View	3032
+konqueror-4.14-handbook	Settings > Configure Toolbars	Configure Toolbars	Settings	3116
+konqueror-4.14-handbook	Settings > Configure Shortcuts	Configure Shortcuts	Settings	3128
+konqueror-4.14-handbook	File > Send Link Address	Send Link Address	File	3363
+konqueror-4.14-handbook	File > Send File	Send File	File	3372
+konqueror-4.14-handbook	File > Print Frame	Print Frame	File	3421
+konqueror-4.14-handbook	File > Open With	Open With	File	3429
+konqueror-4.14-handbook	Edit > Undo: Action	Undo: Action	Edit	3472
+konqueror-4.14-handbook	Edit > Paste Clipboard Contents	Paste Clipboard Contents	Edit	3519
+konqueror-4.14-handbook	Edit > Rename	Rename	Edit	3551
+konqueror-4.14-handbook	Edit > Move to Trash	Move to Trash	Edit	3561
+konqueror-4.14-handbook	Edit > Copy Files	Copy Files	Edit	3581
+konqueror-4.14-handbook	Edit > Move Files	Move Files	Edit	3591
+konqueror-4.14-handbook	Edit > Edit File Type	Edit File Type	Edit	3600
+konqueror-4.14-handbook	Edit > Selection > Select Items Matching	Select Items Matching	Edit > Selection	3618
+konqueror-4.14-handbook	Edit > Selection > Unselect Items Matching	Unselect Items Matching	Edit > Selection	3638
+konqueror-4.14-handbook	Edit > Find Text as You Type	Find Text as You Type	Edit	3713
+konqueror-4.14-handbook	Edit > Find Links as You Type	Find Links as You Type	Edit	3724
+konqueror-4.14-handbook	Edit > Go to Line	Go to Line	Edit	3747
+konqueror-4.14-handbook	View > Use index.html	Use index.html	View	3778
+konqueror-4.14-handbook	View > Lock to Current Location	Lock to Current Location	View	3789
+konqueror-4.14-handbook	View > Unlock all views	Unlock all views	View	3800
+konqueror-4.14-handbook	View > Link View	Link View	View	3809
+konqueror-4.14-handbook	View > Enlarge Font	Enlarge Font	View	3840
+konqueror-4.14-handbook	View > Shrink Font	Shrink Font	View	3844
+konqueror-4.14-handbook	View > Icon Size	Icon Size	View	3855
+konqueror-4.14-handbook	View > Case Insensitive Sort	Case Insensitive Sort	View	3873
+konqueror-4.14-handbook	View > View Document Source	View Document Source	View	3882
+konqueror-4.14-handbook	View > View Document Information	View Document Information	View	3905
+konqueror-4.14-handbook	View > Security	Security	View	3919
+konqueror-4.14-handbook	View > Set Encoding	Set Encoding	View	3930
+konqueror-4.14-handbook	View > Use Stylesheet	Use Stylesheet	View	3939
+konqueror-4.14-handbook	View > Preview	Preview	View	3968
+konqueror-4.14-handbook	View > Show in Groups	Show in Groups	View	3976
+konqueror-4.14-handbook	Go > Home Page	Home Page	Go	4045
+konqueror-4.14-handbook	Go > Home Folder	Home Folder	Go	4055
+konqueror-4.14-handbook	Go > Network Folder	Network Folder	Go	4073
+konqueror-4.14-handbook	Go > Settings	Settings	Go	4082
+konqueror-4.14-handbook	Go > Trash	Trash	Go	4092
+konqueror-4.14-handbook	Go > Autostart	Autostart	Go	4100
+konqueror-4.14-handbook	Bookmarks > Bookmark Tabs as Folder	Bookmark Tabs as Folder	Bookmarks	4177
+konqueror-4.14-handbook	Settings > Full Screen Mode	Full Screen Mode	Settings	4295
+konqueror-4.14-handbook	Settings > View Properties Saved in Folder	View Properties Saved in Folder	Settings	4313
+konqueror-4.14-handbook	Settings > Remove Folder Properties	Remove Folder Properties	Settings	4324
+konqueror-4.14-handbook	Settings > Configure View Profiles	Configure View Profiles	Settings	4349
+konqueror-4.14-handbook	Settings > Configure Spell Checking	Configure Spell Checking	Settings	4368
+konqueror-4.14-handbook	Settings > Configure konqueror	Configure konqueror	Settings	4396
+konqueror-4.14-handbook	Window > Detach Current Tab	Detach Current Tab	Window	4486
+konqueror-4.14-handbook	Web Browsing > Cache	Cache	Web Browsing	4643
+konqueror-4.14-handbook	Network Settings > Connection Preferences	Connection Preferences	Network Settings	4656
+vivaldi-3.4-linux	COMMAND_IMPORT_CALENDAR	Import calendar	File	24
+vivaldi-3.4-linux	COMMAND_SHOW_WINDOW_PANEL	Window Panel	View	55
+vivaldi-3.4-linux	COMMAND_SET_ANIMATIONS_LOOP	Loop Animations	View > Images and Animations	62
+vivaldi-3.4-linux	COMMAND_SET_ANIMATIONS_NEVER	No Animations	View > Images and Animations	63
+vivaldi-3.4-linux	COMMAND_SET_ANIMATIONS_ONCE	Play Animations Once	View > Images and Animations	64
+vivaldi-3.4-linux	COMMAND_SHOW_CALENDAR	Show calendar	Tools	82
+vivaldi-3.4-linux	COMMAND_MAIN_TOGGLE_UI	Toggle UI	Window	98
+vivaldi-3.4-linux	COMMAND_SHOW_HELP	Vivaldi Help	Help	104
+vivaldi-3.4-linux	COMMAND_SHOW_WELCOME	Vivaldi Welcome Tour	Help	106
+vivaldi-3.4-linux	COMMAND_HIDE_OTHERS	Hide Others	Apple app	220
+vivaldi-3.4-linux	COMMAND_SHOW_ALL	Show all	Apple app	221
+vivaldi-3.4-linux	COMMAND_QUIT_MAC_MAYBE_WARN	Quit mac maybe warn	Apple app	222
+vivaldi-3.4-linux	CONTEXT_MUTE_OTHER	Mute other	Context menu: tab	337
+vivaldi-3.4-linux	CONTEXT_OPTIMIZE_FS_VIDEOS	Optimize fs videos	Context menu: tab	338
+vivaldi-3.4-linux	CONTEXT_BOOKMARK_STACK	Bookmark stack	Context menu: tab	340
+vivaldi-3.4-linux	CONTEXT_TABSTACK_BY_SELECTION	Tabstack by selection	Context menu: tab	343
+vivaldi-3.4-linux	CONTEXT_TABSTACK_BY_HOST	Tabstack by host	Context menu: tab	344
+vivaldi-3.4-linux	CONTEXT_TABSTACK_RENAME	Tabstack rename	Context menu: tab	345
+vivaldi-3.4-linux	CONTEXT_TABSTACK_REMOVE_FROM	Tabstack remove from	Context menu: tab	352
+vivaldi-3.4-linux	CONTEXT_TABSTACK_UNGROUP	Tabstack ungroup	Context menu: tab	353
+vivaldi-3.4-linux	CONTEXT_TILE_TABSTACK	Tile tabstack	Context menu: tab	354
+vivaldi-3.4-linux	CONTEXT_UNTILE_TABSTACK	Untile tabstack	Context menu: tab	355
+vivaldi-3.4-linux	CONTEXT_UNTILE_SELECTION	Untile selection	Context menu: tab	357
+vivaldi-3.4-linux	CONTEXT_HIBERNATE_SELECTED_BACKGROUND_TABS	Hibernate selected background tabs	Context menu: tab	359
+vivaldi-3.4-linux	CONTEXT_HIBERNATE_TABSTACK	Hibernate tabstack	Context menu: tab	360
+vivaldi-3.4-linux	CONTEXT_HIBERNATE_BACKGROUND	Hibernate background	Context menu: tab	361
+vivaldi-3.4-linux	CONTEXT_CLOSE_TABSTACK	Close tabstack	Context menu: tab	363
+vivaldi-3.4-linux	CONTEXT_CUSTOMIZE	Customize	Context menu: tab	369
+vivaldi-3.4-linux	CONTEXT_NEW_BOOKMARK	New bookmark	Context menu: bookmarkbar	386
+vivaldi-3.4-linux	CONTEXT_NEW_FOLDER	New folder	Context menu: bookmarkbar	387
+vivaldi-3.4-linux	CONTEXT_NEW_SEPARATOR	New separator	Context menu: bookmarkbar	388
+vivaldi-3.4-linux	CONTEXT_RENAME	Rename	Context menu: bookmarkbaritem	404
+vivaldi-3.4-linux	CONTEXT_SEPARATE_WIDTH	Separate width	Context menu: panelbarregitem	422
+vivaldi-3.4-linux	CONTEXT_DESKTOP_VERSION	Desktop version	Context menu: panelbaritem	441
+vivaldi-3.4-linux	CONTEXT_MOBILE_VERSION	Mobile version	Context menu: panelbaritem	442
+vivaldi-3.4-linux	CONTEXT_REMOVE_WEB_PANEL	Remove web panel	Context menu: panelbaritem	445
+vivaldi-6.9-linux	COMMAND_EXPORT_READINGLIST	Export Reading List	File > Export	27
+vivaldi-6.9-linux	COMMAND_EXPORT_PASSWORDS	Export Passwords	File > Export	28
+vivaldi-6.9-linux	COMMAND_EXPORT_NOTES	Export Notes	File > Export	29
+vivaldi-6.9-linux	COMMAND_EXPORT_FEEDS	Export Feeds	File > Export	30
+vivaldi-6.9-linux	COMMAND_SHOW_READING_LIST_PANEL	Reading List Panel	View > Panels	59
+vivaldi-6.9-linux	COMMAND_SHOW_DOWNLOADS_POPOUT	Open Downloads Popup	View > Panels	61
+vivaldi-6.9-linux	COMMAND_SHOW_WINDOW_PANEL	Windows Panel	View > Panels	64
+vivaldi-6.9-linux	COMMAND_SHOW_CALENDAR_PANEL	Calendar Panel	View > Panels	68
+vivaldi-6.9-linux	COMMAND_SHOW_TASKS_PANEL	Tasks Panel	View > Panels	69
+vivaldi-6.9-linux	COMMAND_SET_ANIMATIONS_LOOP	Loop Animations	View > Images and Animations	79
+vivaldi-6.9-linux	COMMAND_SET_ANIMATIONS_NEVER	No Animations	View > Images and Animations	80
+vivaldi-6.9-linux	COMMAND_SET_ANIMATIONS_ONCE	Play Animations Once	View > Images and Animations	81
+vivaldi-6.9-linux	COMMAND_MAIL_REPLY	Reply to Message	Mail	96
+vivaldi-6.9-linux	COMMAND_MAIL_REPLY_ALL	Reply All	Mail	97
+vivaldi-6.9-linux	COMMAND_MAIL_REPLY_LIST	Reply List	Mail	98
+vivaldi-6.9-linux	COMMAND_MAIL_FORWARD	Forward Message	Mail	99
+vivaldi-6.9-linux	COMMAND_MAIL_SHOW_SETTINGS	Mail Settings	Mail	100
+vivaldi-6.9-linux	COMMAND_SHOW_CALENDAR	Calendar	Tools	110
+vivaldi-6.9-linux	COMMAND_MAIN_TOGGLE_UI	Toggle UI	Window	126
+vivaldi-6.9-linux	COMMAND_SHOW_HELP	Vivaldi Help	Help	134
+vivaldi-6.9-linux	COMMAND_SHOW_WELCOME	Vivaldi Welcome Tour	Help	139
+vivaldi-6.9-linux	COMMAND_HIDE_OTHERS	Hide Others	Apple app	284
+vivaldi-6.9-linux	COMMAND_SHOW_ALL	Show All	Apple app	285
+vivaldi-6.9-linux	COMMAND_TOGGLE_WARN_ON_QUIT	Show Exit Confirmation Dialog	Apple app	286
+vivaldi-6.9-linux	COMMAND_QUIT_MAC_MAYBE_WARN	Quit mac maybe warn	Apple app	287
+vivaldi-6.9-linux	CONTEXT_PIN_STACK	Pin Tab Stack	Context menu: tab	428
+vivaldi-6.9-linux	CONTEXT_UNPIN_STACK	Unpin Tab Stack	Context menu: tab	430
+vivaldi-6.9-linux	CONTEXT_TABSTACK_RENAME	Tabstack rename	Context menu: tab	431
+vivaldi-6.9-linux	CONTEXT_MUTE_OTHER	Mute Other Tabs	Context menu: tab	441
+vivaldi-6.9-linux	CONTEXT_OPTIMIZE_FS_VIDEOS	Optimize fullscreen videos	Context menu: tab	442
+vivaldi-6.9-linux	CONTEXT_BOOKMARK	Add Active Tab	Context menu: tab	443
+vivaldi-6.9-linux	CONTEXT_BOOKMARK_STACK	Bookmark Tab Stack	Context menu: tab	444
+vivaldi-6.9-linux	CONTEXT_COPY_LINKS	Copy Links	Context menu: tab	447
+vivaldi-6.9-linux	CONTEXT_TABSTACK_BY_SELECTION	Tabstack by selection	Context menu: tab	449
+vivaldi-6.9-linux	CONTEXT_TABSTACK_BY_HOST	Tabstack by host	Context menu: tab	450
+vivaldi-6.9-linux	CONTEXT_TABSTACK_BY_HOSTS	Stack Tabs by Hosts	Context menu: tab	451
+vivaldi-6.9-linux	CONTEXT_TABSTACK_RELOAD	Reload Tab Stack	Context menu: tab	452
+vivaldi-6.9-linux	CONTEXT_MOVE_STACK_LEFT	Move stack left	Context menu: tab > Tabstack move	455
+vivaldi-6.9-linux	CONTEXT_MOVE_STACK_RIGHT	Move stack right	Context menu: tab > Tabstack move	456
+vivaldi-6.9-linux	CONTEXT_TABSTACK_REMOVE_FROM	Remove from Tab Stack	Context menu: tab	460
+vivaldi-6.9-linux	CONTEXT_TABSTACK_UNGROUP	Unstack Tabs	Context menu: tab	461
+vivaldi-6.9-linux	CONTEXT_TILE_TABSTACK	Tile Tab Stack	Context menu: tab	462
+vivaldi-6.9-linux	CONTEXT_UNTILE_TABSTACK	Untile Tab Stack	Context menu: tab	463
+vivaldi-6.9-linux	CONTEXT_UNTILE_TAB	Untile Tab	Context menu: tab	465
+vivaldi-6.9-linux	CONTEXT_UNTILE_TILE_GROUP	Untile All Tabs in Set	Context menu: tab	466
+vivaldi-6.9-linux	CONTEXT_UNTILE_SELECTION	Untile Selection	Context menu: tab	467
+vivaldi-6.9-linux	CONTEXT_HIBERNATE_SELECTED_BACKGROUND_TABS	Hibernate selected background tabs	Context menu: tab	469
+vivaldi-6.9-linux	CONTEXT_HIBERNATE_TABSTACK	Hibernate Tab Stack	Context menu: tab	470
+vivaldi-6.9-linux	CONTEXT_HIBERNATE_BACKGROUND	Hibernate Background Tabs	Context menu: tab	471
+vivaldi-6.9-linux	CONTEXT_CLOSE_TABSTACK	Close Tab Stack	Context menu: tab	473
+vivaldi-6.9-linux	CONTEXT_CUSTOMIZE	Customize	Context menu: tab	479
+vivaldi-6.9-linux	CONTEXT_TOGGLE_SUBSTRIP_LOCK	Lock Second Tab Row	Context menu: tabbar	492
+vivaldi-6.9-linux	CONTEXT_NEW_BOOKMARK	New Bookmark	Context menu: bookmarkbar	497
+vivaldi-6.9-linux	CONTEXT_NEW_FOLDER	New Folder	Context menu: bookmarkbar	498
+vivaldi-6.9-linux	CONTEXT_NEW_SEPARATOR	New Separator	Context menu: bookmarkbar	499
+vivaldi-6.9-linux	CONTEXT_RENAME	Rename	Context menu: bookmarkbaritem	515
+vivaldi-6.9-linux	CONTEXT_SEPARATE_WIDTH	Separate width	Context menu: panelbarregitem	531
+vivaldi-6.9-linux	CONTEXT_COPY_ADDRESS	Copy Panel Address	Context menu: panelbaritem	549
+vivaldi-6.9-linux	CONTEXT_DESKTOP_VERSION	Show Desktop Version	Context menu: panelbaritem	551
+vivaldi-6.9-linux	CONTEXT_MOBILE_VERSION	Show Mobile Version	Context menu: panelbaritem	552
+vivaldi-6.9-linux	CONTEXT_MUTE_PANEL	Mute Panel	Context menu: panelbaritem	553
+vivaldi-6.9-linux	CONTEXT_OPEN_ALL	Open All Bookmarks	Context menu: speeddialitem	593
+vivaldi-6.9-linux	CONTEXT_SET_THUMBNAIL	Set thumbnail	Context menu: speeddialitem	594
+vivaldi-6.9-linux	CONTEXT_CLEAR_THUMBNAIL	Clear Custom Thumbnail	Context menu: speeddialitem	595
+vivaldi-6.9-linux	COMMAND_TOGGLE_STARTPAGE_NAVIGATION	Start Page Navigation	Context menu: speeddialitem	603
+vivaldi-6.9-linux	CONTEXT_ADD_BOOKMARK_TO_SPEEDDIAL	Add Bookmark to Speed Dial	Context menu: startpage	607
+vivaldi-6.9-linux	CONTEXT_ADD_FOLDER_TO_SPEEDDIAL	Add Speed Dial Folder	Context menu: startpage	608
+vivaldi-6.9-linux	COMMAND_TOGGLE_PRIVACY_STATS	Show Privacy Statistics	Context menu: startpage	615
+vivaldi-6.9-linux	CONTEXT_REMOVE	Remove	Context menu: startpagebar	620
+vivaldi-6.9-linux	COMMAND_TAB_VIEW_PAGE_SOURCE	View Page Source	Context menu: mailcontent	630
+vivaldi-6.9-linux	COMMAND_MAIL_SHOW_PLAINTEXT	Show Message as Text	Context menu: mailcontent	631
+vivaldi-6.9-linux	COMMAND_MAIL_SHOW_HTML	Show Message as HTML	Context menu: mailcontent	632
+vivaldi-6.9-linux	COMMAND_MAIL_SHOW_QUICK_REPLY	Quick Reply On/Off	Context menu: mailcontent	633
+vivaldi-6.9-linux	COMMAND_MAIL_ENABLE_SENDER_VIEW	Show Messages for Sender	Context menu: mailheader	642
+vivaldi-6.9-linux	CONTEXT_SENDER_IS_MAILING_LIST	Sender is mailing list	Context menu: mailheader	643
+vivaldi-6.9-linux	COMMAND_MAIL_ENABLE_THREADED_VIEW	Show Message Thread	Context menu: mailheader	644
+vivaldi-6.9-linux	CONTEXT_SEND	Send	Context menu: mailsearchlist	652
+vivaldi-6.9-linux	COMMAND_MAIL_MARK_READ	Mark Message as Read	Context menu: mailsearchlist	657
+vivaldi-6.9-linux	COMMAND_MAIL_MARK_UNREAD	Mark Message as Unread	Context menu: mailsearchlist	658
+vivaldi-6.9-linux	COMMAND_MAIL_GOTO_NEXT_UNREAD	Next Unread	Context menu: mailsearchlist > Goto	661
+vivaldi-6.9-linux	COMMAND_MAIL_GOTO_PREVIOUS_UNREAD	Previous Unread	Context menu: mailsearchlist > Goto	662
+vivaldi-6.9-linux	COMMAND_MAIL_MARK_READ_AND_GOTO_NEXT_UNREAD	Mark Message as Read and Go to Next Unread	Context menu: mailsearchlist > Goto	663
+vivaldi-6.9-linux	CONTEXT_ADD_FLAG	Add Flag	Context menu: mailsearchlist	666
+vivaldi-6.9-linux	CONTEXT_REMOVE_FLAG	Remove Flag	Context menu: mailsearchlist	667
+vivaldi-6.9-linux	COMMAND_MAIL_MARK_JUNK	Mark Message as Spam	Context menu: mailsearchlist	670
+vivaldi-6.9-linux	COMMAND_MAIL_MARK_NOT_JUNK	Not Spam	Context menu: mailsearchlist	671
+vivaldi-6.9-linux	COMMAND_MAIL_MOVE_TO_ARCHIVE	Move Message to Archive	Context menu: mailsearchlist	672
+vivaldi-6.9-linux	COMMAND_MAIL_RESTORE_FROM_ARCHIVE	Restore Message from Archive	Context menu: mailsearchlist	673
+vivaldi-6.9-linux	CONTEXT_RECEIVER	Show Messages for Receiver	Context menu: mailsearchlist	680
+vivaldi-6.9-linux	COMMAND_MAIL_MARK_THREAD_READ	Mark Message Thread as Read	Context menu: mailsearchlist > Thread	684
+vivaldi-6.9-linux	COMMAND_MAIL_MARK_THREAD_UNREAD	Mark Message Thread as Unread	Context menu: mailsearchlist > Thread	685
+vivaldi-6.9-linux	CONTEXT_EXPAND_ALL	Expand All Folders	Context menu: mailsearchlist	687
+vivaldi-6.9-linux	CONTEXT_COLLAPSE_ALL	Collapse All Folders	Context menu: mailsearchlist	688
+vivaldi-6.9-linux	CONTEXT_VIEW_ALL_MESSAGES	View All Messages	Context menu: mailpanellist	692
+vivaldi-6.9-linux	CONTEXT_CHECK_FOR_MAIL	Check for Mail	Context menu: mailpanellist	693
+vivaldi-6.9-linux	CONTEXT_MARK_ALL_AS_READ	Mark All as Read	Context menu: mailpanellist	694
+vivaldi-6.9-linux	CONTEXT_MOVE_INTO_IMPORTANT	Move into Important	Context menu: mailpanellist	700
+vivaldi-6.9-linux	CONTEXT_MOVE_INTO_OTHER	Move into Other	Context menu: mailpanellist	701
+vivaldi-6.9-linux	CONTEXT_MOVE_ALL_TO_TRASH	Move All to Trash	Context menu: mailpanellist	702
+vivaldi-6.9-linux	CONTEXT_FILTER_EDIT	Filter edit	Context menu: mailpanellist	704
+vivaldi-6.9-linux	CONTEXT_EMPTY_TRASH	Empty Trash	Context menu: mailpanellist	705
+vivaldi-6.9-linux	CONTEXT_CREATE_LABEL	Create Label	Context menu: mailpanellist	706
+vivaldi-6.9-linux	CONTEXT_ADD_NEW_ACCOUNT	Add Account	Context menu: mailpanellist	707
+vivaldi-6.9-linux	CONTEXT_DELETE_ALL	Delete all	Context menu: mailpanellist	709
+vivaldi-6.9-linux	CONTEXT_IMPORT_MAIL_FILES	Import Mail Files	Context menu: mailpanellist	710
+vivaldi-6.9-linux	CONTEXT_SUBSCRIBE	Subscribe	Context menu: mailpanellist	711
+vivaldi-6.9-linux	CONTEXT_UNSUBSCRIBE	Unsubscribe	Context menu: mailpanellist	712
+vivaldi-6.9-linux	CONTEXT_CREATE_FOLDER	Create Folder	Context menu: mailpanellist	713
+vivaldi-6.9-linux	CONTEXT_DELETE_FOLDER	Delete Folder	Context menu: mailpanellist	714
+vivaldi-6.9-linux	CONTEXT_RERUN_FILTER	Rerun Filter for Folder	Context menu: mailpanellist > Advanced	717
+vivaldi-6.9-linux	CONTEXT_RERUN_THREADING	Rerun Threading	Context menu: mailpanellist > Advanced	718
+vivaldi-6.9-linux	CONTEXT_RESCAN_UNREAD	Rescan Unread Flags	Context menu: mailpanellist > Advanced	719
+vivaldi-6.9-linux	CONTEXT_REGENERATE	Regenerate	Context menu: mailpanellist > Advanced	720
+vivaldi-6.9-linux	CONTEXT_RESYNC_FOLDER	Re-sync folder with server	Context menu: mailpanellist > Advanced	721
+vivaldi-6.9-linux	CONTEXT_RESYNC_ACCOUNT	Re-sync account with server	Context menu: mailpanellist > Advanced	722
+vivaldi-6.9-linux	CONTEXT_SET_SPEEDDIAL	Use as Speed Dial	Context menu: bookmarklist	732
+vivaldi-6.9-linux	CONTEXT_UNSET_SPEEDDIAL	Remove from Speed Dial	Context menu: bookmarklist	733
+vivaldi-6.9-linux	CONTEXT_SET_BOOKMARK_BAR	Set as Bookmark Bar Folder	Context menu: bookmarklist	734
+vivaldi-6.9-linux	CONTEXT_UNSET_BOOKMARK_BAR	Remove as Bookmark Bar Folder	Context menu: bookmarklist	735
+vivaldi-6.9-linux	CONTEXT_MOVE_TO_BOOKMARK_BAR	Move to Bookmark Bar Folder	Context menu: bookmarklist	736
+vivaldi-6.9-linux	CONTEXT_NEW_ITEM	New Bookmark	Context menu: bookmarklist	739
+vivaldi-6.9-linux	CONTEXT_IMPORT	Import	Context menu: bookmarklist > Settings	752
+vivaldi-6.9-linux	CONTEXT_OPEN_ADDRESS	Open Note Address	Context menu: noteslist	759
+vivaldi-6.9-linux	CONTEXT_FILTER_BY	Filter by	Context menu: historylist	786
+vivaldi-6.9-linux	CONTEXT_SAVE	Save as Bookmarks	Context menu: historylist	788
+vivaldi-6.9-linux	CONTEXT_COPY_PATH	Copy path	Context menu: downloadlist	806
+vivaldi-6.9-linux	CONTEXT_NEW_STACK	Stack Tabs	Context menu: windowlist	816
+vivaldi-6.9-linux	CONTEXT_NEW_STACK_FOR_HOST	New stack for host	Context menu: windowlist	817
+vivaldi-6.9-linux	CONTEXT_OPEN_SYNC_ITEMS	Open	Context menu: windowlist	822
+vivaldi-6.9-linux	COMMAND_PAGE_COPY_ALL_URLS	Copy All Links	Context menu: windowlist	837
+vivaldi-6.9-linux	CONTEXT_REGISTER_SYNC	Create Account	Context menu: windowlist	845
+vivaldi-6.9-linux	CONTEXT_SIGNIN_SYNC	Log In	Context menu: windowlist	846
+vivaldi-6.9-linux	CONTEXT_COPY_ALL	Copy Both	Context menu: translatehistory	862
+vivaldi-6.9-linux	CONTEXT_OPEN	Open	Context menu: readinglist	867
+vivaldi-6.9-linux	CONTEXT_MARK_READ	Mark as Read	Context menu: readinglist	869
+vivaldi-6.9-linux	CONTEXT_MARK_UNREAD	Mark as Unread	Context menu: readinglist	870
+vivaldi-6.9-linux	CONTEXT_UPDATE	Update	Context menu: sessionlist	877
+vivaldi-6.9-linux	CONTEXT_DUPLICATE	Duplicate as New Session	Context menu: sessionlist	880
+vivaldi-6.9-linux	CONTEXT_MOVE_TO_TOP	Move to Top	Context menu: sessionlist	881
+vivaldi-6.9-linux	CONTEXT_RESTORE	Restore	Context menu: sessionlist	882
+vivaldi-6.9-linux	CONTEXT_AUTOMATIC_BACKUP	Automatic backup	Context menu: sessionlist	885
+vivaldi-6.9-linux	CONTEXT_OPEN_SESSION_IN_NEW_WINDOW	Open	Context menu: sessioncontentlist	890
+vivaldi-6.9-linux	CONTEXT_REMOVE_STACK	Unstack Tabs	Context menu: sessioncontentlist	903
+vivaldi-6.9-linux	CONTEXT_NEW_WORKSPACE	New Workspace	Context menu: sessioncontentlist	905
+vivaldi-6.9-linux	CONTEXT_QUARANTINE	Quarantine	Context menu: sessioncontentlist	907
+vivaldi-6.9-linux	DOCUMENT_CONTAINER_OPEN_IN_WORKSPACE	Open in workspace	Context menu: link	921
+vivaldi-6.9-linux	DOCUMENT_ADD_LINK_TO_WEBPANEL	Add Link to Web Panel	Context menu: link	924
+vivaldi-6.9-linux	DOCUMENT_ADD_LINK_TO_READING_LIST	Add Link to Reading List	Context menu: link	925
+vivaldi-6.9-linux	DOCUMENT_COPY_LINK_TEXT	Copy Link Text	Context menu: link	929
+vivaldi-6.9-linux	DOCUMENT_ADD_TO_WEBPANEL	Add Page to Web Panel	Context menu: page	943
+vivaldi-6.9-linux	DOCUMENT_USE_IMAGE_AS_STARTPAGE_BACKGROUND	Use Image as Window Background	Context menu: image	969
+vivaldi-6.9-linux	DOCUMENT_SUGGEST_PASSWORD	Suggest password	Context menu: docedit	979
+vivaldi-6.9-linux	DOCUMENT_EMOJI	Emoji & Symbols	Context menu: docedit	983
+vivaldi-6.9-linux	DOCUMENT_GOTO_URL	Goto url	Context menu: docedit	991
+vivaldi-6.9-linux	CONTEXT_COPY_FILTERED	Copy filtered	Context menu: urledit	1033
+vivaldi-6.9-linux	DOCUMENT_CUSTOMIZE	Customize	Context menu: urledit	1036
+vivaldi-6.9-linux	DOCUMENT_ADD_TO_CALENDAR	Add to calendar	Context menu: selection	1061
+vivaldi-6.9-linux	CONTEXT_WORKSPACE_OPEN_IN_NEW_WINDOW	Open in a New Window	Context menu: workspacelist	1072
+vivaldi-6.9-linux	CONTEXT_WORKSPACE_RENAME	Rename Workspace	Context menu: workspacelist	1073
+vivaldi-6.9-linux	CONTEXT_WORKSPACE_DELETE	Delete Workspace	Context menu: workspacelist	1074
+vivaldi-6.9-linux	CONTEXT_WORKSPACE_HIBERNATE	Workspace hibernate	Context menu: workspacelist	1076

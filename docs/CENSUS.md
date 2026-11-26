@@ -6,9 +6,9 @@ The census records which commands real browsers offered, read from their own sou
 
 ## Summary
 
-- **42 browser versions** from **24 browsers**, **6239 items** read.
-- **2531 items (41%)** are linked to a canonical command; **128** were read and deliberately not linked; **3580** are not yet linked (work queue: [census-unlinked.tsv](census-unlinked.tsv)).
-- **328 canonical commands**: 315 have lineage read from source, 4 have only lineage written from memory (marked *recalled*), 9 have none yet.
+- **47 browser versions** from **26 browsers**, **6891 items** read.
+- **2882 items (42%)** are linked to a canonical command; **128** were read and deliberately not linked; **3881** are not yet linked (work queue: [census-unlinked.tsv](census-unlinked.tsv)).
+- **328 canonical commands**: 317 have lineage read from source, 4 have only lineage written from memory (marked *recalled*), 7 have none yet.
 
 ## What a census entry proves, and what it does not
 
@@ -68,6 +68,11 @@ The census records which commands real browsers offered, read from their own sou
 | `ie-8-win32` | Internet Explorer | 8 | 2009 | program's own menus: [archive.org/ie-8-windows-xp-x-86-enu_202407](https://archive.org/details/ie-8-windows-xp-x-86-enu_202407) | 335 | 140 (42%) | 5 | 190 |
 | `opera-8.01-win32` | Opera | 8.01 | 2005 | program's own menus: [archive.org/ow32enen801](https://archive.org/details/ow32enen801) | 539 | 119 (22%) | 0 | 420 |
 | `opera-12.14-win32` | Opera | 12.14 | 2013 | program's own menus: [archive.org/opera-12.14-windows-32-bit](https://archive.org/details/opera-12.14-windows-32-bit) | 586 | 128 (22%) | 0 | 458 |
+| `konqueror-4.0` | Konqueror | 4.0 | 2008 | [KDE/kde-baseapps@cd04c56ffd](https://github.com/KDE/kde-baseapps/tree/cd04c56ffd6ec7eec6d51e5051276507952d8c23) | 45 | 30 (67%) | 0 | 15 |
+| `konqueror-4.14` | Konqueror | 4.14 | 2014 | [KDE/kde-baseapps@dcc45ea70b](https://github.com/KDE/kde-baseapps/tree/dcc45ea70b0b408c8017c6f423b978fe6ca6163a) | 44 | 33 (75%) | 0 | 11 |
+| `konqueror-4.14-handbook` | Konqueror (handbook) | 4.14 | 2014 | [KDE/kde-baseapps@dcc45ea70b](https://github.com/KDE/kde-baseapps/tree/dcc45ea70b0b408c8017c6f423b978fe6ca6163a) | 113 | 35 (31%) | 0 | 78 |
+| `vivaldi-3.4-linux` | Vivaldi | 3.4 | 2020 | program's own menus: [archive.org/archlinux_pkg_vivaldi](https://archive.org/details/archlinux_pkg_vivaldi) | 126 | 90 (71%) | 0 | 36 |
+| `vivaldi-6.9-linux` | Vivaldi | 6.9 | 2024 | program's own menus: [archive.org/archlinux_pkg_vivaldi](https://archive.org/details/archlinux_pkg_vivaldi) | 324 | 163 (50%) | 0 | 161 |
 
 ## Not covered
 
@@ -79,9 +84,9 @@ These cannot be read from the build environment, so they have **no census lineag
 | Netscape 1.x, 4.5, 4.8, 6–9 | Mosaic Netscape 0.91, Navigator 2.02 and 3.0 and Communicator 4.05 and 4.7 are covered from their own programs, plus three manuals and two screenshots. Netscape 6–9 are Mozilla-based (their menus are in Mozilla's code, covered by SeaMonkey). |
 | Opera 2–6, 9–11, 15+ | Opera 8.01 and 12.14 are covered from their menu files. Opera 2–3 at the Archive are 16-bit programs; the 9.x and 10.x installers use an InstallShield format not unpacked here. Opera 15+ is Chromium-based. Otter Browser, an Opera 12 style clone, is also covered. |
 | Safari (menu bar), Camino, OmniWeb, iCab | Closed source. Safari's page context menu is covered from WebKit (2010 and current); its menu bar is not. |
-| Vivaldi, Arc, Sidekick, SigmaOS, Zen, Floorp | Closed source or no menu file in a reachable repository. Vivaldi and Arc features appear in the roadmap from memory and are not in the lineage. |
+| Arc, Sidekick, SigmaOS, Zen, Floorp; Vivaldi before 3.4 | Closed source or no menu file in a reachable repository. Vivaldi 3.4 and 6.9 are covered from the menu files inside their official Linux builds (Arch Linux package archive at the Internet Archive). Arc features appear in the roadmap from public descriptions, not from a source. |
 | Firefox 1.0–100 (history) | The gecko-dev mirror has no release tags; only the current tree was read. SeaMonkey 2.0 covers 2009. |
-| Konqueror 3 and 4, Galeon, Epiphany, Flock | Tags with the menu files were not found in the mirrors reachable here. |
+| Konqueror 3, Galeon, Epiphany, Flock | Konqueror 4.0 and 4.14 are covered from kde-baseapps (menu file and handbook); KDE 3 tags were not found in the mirrors reachable here. |
 | K-Meleon, Pale Moon, Basilisk, Waterfox | Hosted outside GitHub. |
 | Mobile browsers (Opera Mini, Samsung Internet, UC, Dolphin, Kiwi) | Closed source. |
 
@@ -220,11 +225,11 @@ These cannot be read from the build environment, so they have **no census lineag
 
 ## Work queue
 
-3580 items are not yet linked. They fall into these groups:
+3881 items are not yet linked. They fall into these groups:
 
 | Group | Items |
 |---|---|
-| Other | 2520 |
+| Other | 2821 |
 | Other Chromium and Brave ids | 569 |
 | Chromium page context menu entries | 212 |
 | qutebrowser caret, readline, config, debug and prompt commands | 69 |
@@ -238,4 +243,4 @@ To work through it: read an item in [census-unlinked.tsv](census-unlinked.tsv), 
 
 ## Commands without census lineage
 
-`view.menu-layout`, `view.keymap`, `help.menu-archaeology`, `legacy.flash`, `edit.replace-misspelling`, `history.open`, `history.remove`, `tools.download-show`, `tools.search-engine`
+`view.keymap`, `help.menu-archaeology`, `legacy.flash`, `edit.replace-misspelling`, `history.open`, `history.remove`, `tools.search-engine`

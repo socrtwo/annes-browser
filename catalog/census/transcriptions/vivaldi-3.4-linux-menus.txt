@@ -1,0 +1,453 @@
+# Menus read from Vivaldi's own menu files by tools/vivaldi-dump.ts; labels from its command table in bundle.js.
+# download: https://archive.org/download/archlinux_pkg_vivaldi/vivaldi-3.4.2066.106-1-x86_64.pkg.tar.zst
+# unpacked: Arch Linux package (official build): opt/vivaldi/resources/vivaldi
+# file: menus/mainmenu.json, sha256 decfe5fbf373dfd0243ec1cf113ace5425590edad26f12ef39b2131f7a8820c0
+# file: menus/contextmenu.json, sha256 77c25632a43a734da42bd2eef1f177b4b4c700874c20681f90e89b16b8bd1c1a
+# file: bundle.js, sha256 0d1514835ff71261906e6b4018793dd59c0b85fb16f590af826ab2cd6993a568
+# Each MENUITEM: label, Vivaldi action id.
+
+VIVALDI_MAIN MENU
+{
+    POPUP "File"
+    {
+        MENUITEM "New Tab", COMMAND_NEW_TAB
+        MENUITEM "New Window", COMMAND_NEW_WINDOW
+        MENUITEM "New Private Window", COMMAND_NEW_PRIVATE_WINDOW
+        MENUITEM "Open page", COMMAND_OPEN_PAGE
+        MENUITEM "Focus Address Field", COMMAND_FOCUS_ADDRESSFIELD
+        MENUITEM "Close Tab", COMMAND_CLOSE_TAB
+        MENUITEM "Close Window", COMMAND_CLOSE_WINDOW
+        MENUITEM "Save Page As", COMMAND_SAVE_PAGE
+        MENUITEM "Print", COMMAND_PRINT_PAGE
+        MENUITEM "Cast", COMMAND_START_CHROMECAST
+        MENUITEM "Import Bookmarks and Settings", COMMAND_IMPORT_DATA
+        MENUITEM "Import calendar", COMMAND_IMPORT_CALENDAR
+        MENUITEM "Export Bookmarks", COMMAND_EXPORT_DATA
+        MENUITEM "Open Saved Session", COMMAND_OPEN_SESSION
+        MENUITEM "Save Open Tabs as Session", COMMAND_SAVE_SESSION
+        MENUITEM "Exit", COMMAND_EXIT
+    }
+    POPUP "Edit"
+    {
+        MENUITEM "Undo", COMMAND_CLIPBOARD_UNDO
+        MENUITEM "Redo", COMMAND_CLIPBOARD_REDO
+        MENUITEM "Cut", COMMAND_CLIPBOARD_CUT
+        MENUITEM "Copy", COMMAND_CLIPBOARD_COPY
+        MENUITEM "Paste", COMMAND_CLIPBOARD_PASTE
+        MENUITEM "Paste and Go", COMMAND_CLIPBOARD_PASTE_AS_PLAIN_TEXT_OR_PASTE_AND_GO
+        MENUITEM "Paste as Plain Text", COMMAND_CLIPBOARD_PASTE_AS_PLAIN_TEXT
+        MENUITEM "Select All", COMMAND_CLIPBOARD_SELECT_ALL
+        MENUITEM "Find in Page", COMMAND_FIND_IN_PAGE
+    }
+    POPUP "View"
+    {
+        MENUITEM "Menu Position", COMMAND_TOGGLE_MENU_POSITION
+        MENUITEM "Tab Bar", COMMAND_MAIN_TOGGLE_TAB_BAR
+        MENUITEM "Bookmarks Bar", COMMAND_SHOW_BOOKMARK_BAR
+        MENUITEM "Status Bar", COMMAND_TOGGLE_FOOTER
+        MENUITEM "Panel", COMMAND_TOGGLE_PANEL
+        MENUITEM "Bookmarks Panel", COMMAND_SHOW_BOOKMARK_PANEL
+        MENUITEM "Mail Panel", COMMAND_SHOW_MAIL_PANEL
+        MENUITEM "Contacts Panel", COMMAND_SHOW_CONTACTS_PANEL
+        MENUITEM "Downloads Panel", COMMAND_SHOW_DOWNLOADS_PANEL
+        MENUITEM "Notes Panel", COMMAND_SHOW_NOTES_PANEL
+        MENUITEM "History Panel", COMMAND_SHOW_HISTORY_PANEL
+        MENUITEM "Window Panel", COMMAND_SHOW_WINDOW_PANEL
+        // dynamic list: CONTAINER_WEBPANEL
+        POPUP "Images and Animations"
+        {
+            MENUITEM "Images On", COMMAND_SET_LOAD_IMAGES_ALWAYS
+            MENUITEM "Images Off", COMMAND_SET_LOAD_IMAGES_NEVER
+            MENUITEM "Load Images From Cache", COMMAND_SET_LOAD_IMAGES_CACHE
+            MENUITEM "Loop Animations", COMMAND_SET_ANIMATIONS_LOOP
+            MENUITEM "No Animations", COMMAND_SET_ANIMATIONS_NEVER
+            MENUITEM "Play Animations Once", COMMAND_SET_ANIMATIONS_ONCE
+        }
+        MENUITEM "Page Zoom In", COMMAND_MAIN_ZOOM_IN
+        MENUITEM "Page Zoom Out", COMMAND_MAIN_ZOOM_OUT
+        MENUITEM "Page Zoom Reset", COMMAND_MAIN_ZOOM_RESET
+    }
+    POPUP "Bookmarks"
+    {
+        MENUITEM "Bookmarks", COMMAND_SHOW_BOOKMARKS
+        // dynamic list: CONTAINER_BOOKMARK
+    }
+    POPUP "Tools"
+    {
+        MENUITEM "Settings", COMMAND_SHOW_SETTINGS
+        MENUITEM "Quick Commands", COMMAND_SHOW_QUICK_COMMANDS
+        MENUITEM "Bookmarks", COMMAND_SHOW_BOOKMARKS
+        MENUITEM "History", COMMAND_SHOW_HISTORY
+        MENUITEM "Notes", COMMAND_SHOW_NOTES
+        MENUITEM "Show calendar", COMMAND_SHOW_CALENDAR
+        MENUITEM "Extensions", COMMAND_SHOW_EXTENSIONS
+        POPUP "Capture"
+        {
+            MENUITEM "Capture Page to File", COMMAND_CAPTURE_PAGE_TO_DISK
+            MENUITEM "Capture Page to Clipboard", COMMAND_CAPTURE_PAGE_TO_CLIPBOARD
+            MENUITEM "Capture Area to File", COMMAND_CAPTURE_AREA_TO_DISK
+            MENUITEM "Capture Area to Clipboard", COMMAND_CAPTURE_AREA_TO_CLIPBOARD
+        }
+        MENUITEM "Delete Browsing Data", COMMAND_SHOW_CLEAR_PRIVATE_DATA
+        MENUITEM "Task Manager", COMMAND_TASK_MANAGER
+        MENUITEM "Developer Tools", COMMAND_DEVELOPER_TOOLS
+    }
+    POPUP "Window"
+    {
+        MENUITEM "Fullscreen Mode", COMMAND_FULLSCREEN
+        MENUITEM "Toggle UI", COMMAND_MAIN_TOGGLE_UI
+        // dynamic list: CONTAINER_PINNED_TAB
+        // dynamic list: CONTAINER_TAB
+    }
+    POPUP "Help"
+    {
+        MENUITEM "Vivaldi Help", COMMAND_SHOW_HELP
+        MENUITEM "Keyboard Cheat Sheet", COMMAND_SHOW_KEYBOARDSHORTCUTS
+        MENUITEM "Vivaldi Welcome Tour", COMMAND_SHOW_WELCOME
+        MENUITEM "Community Blogs", COMMAND_SHOW_COMMUNITY
+        MENUITEM "Report A Bug On The Forum", COMMAND_REPORT_BUG
+        MENUITEM "Check for Updates", COMMAND_CHECK_FOR_UPDATES
+        MENUITEM "About", COMMAND_SHOW_ABOUT
+    }
+    POPUP "File"
+    {
+        MENUITEM "New Tab", COMMAND_NEW_TAB
+        MENUITEM "New Window", COMMAND_NEW_WINDOW
+        MENUITEM "New Private Window", COMMAND_NEW_PRIVATE_WINDOW
+        MENUITEM "Open page", COMMAND_OPEN_PAGE
+        MENUITEM "Focus Address Field", COMMAND_FOCUS_ADDRESSFIELD
+        MENUITEM "Close Tab", COMMAND_CLOSE_TAB
+        MENUITEM "Close Window", COMMAND_CLOSE_WINDOW
+        MENUITEM "Save Page As", COMMAND_SAVE_PAGE
+        MENUITEM "Print", COMMAND_PRINT_PAGE
+        MENUITEM "Cast", COMMAND_START_CHROMECAST
+        MENUITEM "Import Bookmarks and Settings", COMMAND_IMPORT_DATA
+        MENUITEM "Import calendar", COMMAND_IMPORT_CALENDAR
+        MENUITEM "Export Bookmarks", COMMAND_EXPORT_DATA
+        MENUITEM "Open Saved Session", COMMAND_OPEN_SESSION
+        MENUITEM "Save Open Tabs as Session", COMMAND_SAVE_SESSION
+        MENUITEM "Exit", COMMAND_EXIT
+    }
+    POPUP "Edit"
+    {
+        MENUITEM "Undo", COMMAND_CLIPBOARD_UNDO
+        MENUITEM "Redo", COMMAND_CLIPBOARD_REDO
+        MENUITEM "Cut", COMMAND_CLIPBOARD_CUT
+        MENUITEM "Copy", COMMAND_CLIPBOARD_COPY
+        MENUITEM "Paste", COMMAND_CLIPBOARD_PASTE
+        MENUITEM "Paste and Go", COMMAND_CLIPBOARD_PASTE_AS_PLAIN_TEXT_OR_PASTE_AND_GO
+        MENUITEM "Paste as Plain Text", COMMAND_CLIPBOARD_PASTE_AS_PLAIN_TEXT
+        MENUITEM "Select All", COMMAND_CLIPBOARD_SELECT_ALL
+        MENUITEM "Find in Page", COMMAND_FIND_IN_PAGE
+    }
+    POPUP "View"
+    {
+        MENUITEM "Menu Position", COMMAND_TOGGLE_MENU_POSITION
+        MENUITEM "Tab Bar", COMMAND_MAIN_TOGGLE_TAB_BAR
+        MENUITEM "Bookmarks Bar", COMMAND_SHOW_BOOKMARK_BAR
+        MENUITEM "Status Bar", COMMAND_TOGGLE_FOOTER
+        MENUITEM "Panel", COMMAND_TOGGLE_PANEL
+        MENUITEM "Bookmarks Panel", COMMAND_SHOW_BOOKMARK_PANEL
+        MENUITEM "Mail Panel", COMMAND_SHOW_MAIL_PANEL
+        MENUITEM "Contacts Panel", COMMAND_SHOW_CONTACTS_PANEL
+        MENUITEM "Downloads Panel", COMMAND_SHOW_DOWNLOADS_PANEL
+        MENUITEM "Notes Panel", COMMAND_SHOW_NOTES_PANEL
+        MENUITEM "History Panel", COMMAND_SHOW_HISTORY_PANEL
+        MENUITEM "Window Panel", COMMAND_SHOW_WINDOW_PANEL
+        // dynamic list: CONTAINER_WEBPANEL
+        POPUP "Images and Animations"
+        {
+            MENUITEM "Images On", COMMAND_SET_LOAD_IMAGES_ALWAYS
+            MENUITEM "Images Off", COMMAND_SET_LOAD_IMAGES_NEVER
+            MENUITEM "Load Images From Cache", COMMAND_SET_LOAD_IMAGES_CACHE
+            MENUITEM "Loop Animations", COMMAND_SET_ANIMATIONS_LOOP
+            MENUITEM "No Animations", COMMAND_SET_ANIMATIONS_NEVER
+            MENUITEM "Play Animations Once", COMMAND_SET_ANIMATIONS_ONCE
+        }
+        MENUITEM "Page Zoom In", COMMAND_MAIN_ZOOM_IN
+        MENUITEM "Page Zoom Out", COMMAND_MAIN_ZOOM_OUT
+        MENUITEM "Page Zoom Reset", COMMAND_MAIN_ZOOM_RESET
+    }
+    POPUP "Bookmarks"
+    {
+        MENUITEM "Bookmarks", COMMAND_SHOW_BOOKMARKS
+        // dynamic list: CONTAINER_BOOKMARK
+    }
+    POPUP "Tools"
+    {
+        MENUITEM "Settings", COMMAND_SHOW_SETTINGS
+        MENUITEM "Quick Commands", COMMAND_SHOW_QUICK_COMMANDS
+        MENUITEM "Bookmarks", COMMAND_SHOW_BOOKMARKS
+        MENUITEM "History", COMMAND_SHOW_HISTORY
+        MENUITEM "Notes", COMMAND_SHOW_NOTES
+        MENUITEM "Show calendar", COMMAND_SHOW_CALENDAR
+        MENUITEM "Extensions", COMMAND_SHOW_EXTENSIONS
+        POPUP "Capture"
+        {
+            MENUITEM "Capture Page to File", COMMAND_CAPTURE_PAGE_TO_DISK
+            MENUITEM "Capture Page to Clipboard", COMMAND_CAPTURE_PAGE_TO_CLIPBOARD
+            MENUITEM "Capture Area to File", COMMAND_CAPTURE_AREA_TO_DISK
+            MENUITEM "Capture Area to Clipboard", COMMAND_CAPTURE_AREA_TO_CLIPBOARD
+        }
+        MENUITEM "Delete Browsing Data", COMMAND_SHOW_CLEAR_PRIVATE_DATA
+        MENUITEM "Task Manager", COMMAND_TASK_MANAGER
+        MENUITEM "Developer Tools", COMMAND_DEVELOPER_TOOLS
+    }
+    POPUP "Window"
+    {
+        MENUITEM "Fullscreen Mode", COMMAND_FULLSCREEN
+        MENUITEM "Toggle UI", COMMAND_MAIN_TOGGLE_UI
+        // dynamic list: CONTAINER_PINNED_TAB
+        // dynamic list: CONTAINER_TAB
+    }
+    POPUP "Help"
+    {
+        MENUITEM "Vivaldi Help", COMMAND_SHOW_HELP
+        MENUITEM "Keyboard Cheat Sheet", COMMAND_SHOW_KEYBOARDSHORTCUTS
+        MENUITEM "Vivaldi Welcome Tour", COMMAND_SHOW_WELCOME
+        MENUITEM "Community Blogs", COMMAND_SHOW_COMMUNITY
+        MENUITEM "Report A Bug On The Forum", COMMAND_REPORT_BUG
+        MENUITEM "Check for Updates", COMMAND_CHECK_FOR_UPDATES
+        MENUITEM "About", COMMAND_SHOW_ABOUT
+    }
+    POPUP "Apple app"
+    {
+        MENUITEM "About", COMMAND_SHOW_ABOUT
+        MENUITEM "Settings", COMMAND_SHOW_SETTINGS
+        MENUITEM "Check for Updates", COMMAND_CHECK_FOR_UPDATES
+        // dynamic list: CONTAINER_MAC_SERVICES
+        MENUITEM "Hide vivaldi", COMMAND_HIDE_VIVALDI
+        MENUITEM "Hide Others", COMMAND_HIDE_OTHERS
+        MENUITEM "Show all", COMMAND_SHOW_ALL
+        MENUITEM "Quit mac maybe warn", COMMAND_QUIT_MAC_MAYBE_WARN
+    }
+    POPUP "File"
+    {
+        MENUITEM "New Tab", COMMAND_NEW_TAB
+        MENUITEM "New Window", COMMAND_NEW_WINDOW
+        MENUITEM "New Private Window", COMMAND_NEW_PRIVATE_WINDOW
+        MENUITEM "Open page", COMMAND_OPEN_PAGE
+        MENUITEM "Focus Address Field", COMMAND_FOCUS_ADDRESSFIELD
+        MENUITEM "Close Tab", COMMAND_CLOSE_TAB
+        MENUITEM "Close Window", COMMAND_CLOSE_WINDOW
+        MENUITEM "Save Page As", COMMAND_SAVE_PAGE
+        MENUITEM "Import Bookmarks and Settings", COMMAND_IMPORT_DATA
+        MENUITEM "Import calendar", COMMAND_IMPORT_CALENDAR
+        MENUITEM "Export Bookmarks", COMMAND_EXPORT_DATA
+        MENUITEM "Open Saved Session", COMMAND_OPEN_SESSION
+        MENUITEM "Save Open Tabs as Session", COMMAND_SAVE_SESSION
+        MENUITEM "Print", COMMAND_PRINT_PAGE
+        MENUITEM "Cast", COMMAND_START_CHROMECAST
+    }
+    POPUP "Edit"
+    {
+        MENUITEM "Undo", COMMAND_CLIPBOARD_UNDO
+        MENUITEM "Redo", COMMAND_CLIPBOARD_REDO
+        MENUITEM "Cut", COMMAND_CLIPBOARD_CUT
+        MENUITEM "Copy", COMMAND_CLIPBOARD_COPY
+        MENUITEM "Paste", COMMAND_CLIPBOARD_PASTE
+        MENUITEM "Paste and Go", COMMAND_CLIPBOARD_PASTE_AS_PLAIN_TEXT_OR_PASTE_AND_GO
+        MENUITEM "Select All", COMMAND_CLIPBOARD_SELECT_ALL
+        MENUITEM "Find in Page", COMMAND_FIND_IN_PAGE
+    }
+    POPUP "View"
+    {
+        MENUITEM "Tab Bar", COMMAND_MAIN_TOGGLE_TAB_BAR
+        MENUITEM "Bookmarks Bar", COMMAND_SHOW_BOOKMARK_BAR
+        MENUITEM "Status Bar", COMMAND_TOGGLE_FOOTER
+        MENUITEM "Panel", COMMAND_TOGGLE_PANEL
+        MENUITEM "Bookmarks Panel", COMMAND_SHOW_BOOKMARK_PANEL
+        MENUITEM "Mail Panel", COMMAND_SHOW_MAIL_PANEL
+        MENUITEM "Contacts Panel", COMMAND_SHOW_CONTACTS_PANEL
+        MENUITEM "Downloads Panel", COMMAND_SHOW_DOWNLOADS_PANEL
+        MENUITEM "Notes Panel", COMMAND_SHOW_NOTES_PANEL
+        MENUITEM "History Panel", COMMAND_SHOW_HISTORY_PANEL
+        MENUITEM "Window Panel", COMMAND_SHOW_WINDOW_PANEL
+        // dynamic list: CONTAINER_WEBPANEL
+        POPUP "Images and Animations"
+        {
+            MENUITEM "Images On", COMMAND_SET_LOAD_IMAGES_ALWAYS
+            MENUITEM "Images Off", COMMAND_SET_LOAD_IMAGES_NEVER
+            MENUITEM "Load Images From Cache", COMMAND_SET_LOAD_IMAGES_CACHE
+            MENUITEM "Loop Animations", COMMAND_SET_ANIMATIONS_LOOP
+            MENUITEM "No Animations", COMMAND_SET_ANIMATIONS_NEVER
+            MENUITEM "Play Animations Once", COMMAND_SET_ANIMATIONS_ONCE
+        }
+        MENUITEM "Page Zoom In", COMMAND_MAIN_ZOOM_IN
+        MENUITEM "Page Zoom Out", COMMAND_MAIN_ZOOM_OUT
+        MENUITEM "Page Zoom Reset", COMMAND_MAIN_ZOOM_RESET
+        MENUITEM "Fullscreen Mode", COMMAND_FULLSCREEN
+    }
+    POPUP "Bookmarks"
+    {
+        MENUITEM "Bookmarks", COMMAND_SHOW_BOOKMARKS
+        // dynamic list: CONTAINER_BOOKMARK
+    }
+    POPUP "Tools"
+    {
+        MENUITEM "Quick Commands", COMMAND_SHOW_QUICK_COMMANDS
+        MENUITEM "Bookmarks", COMMAND_SHOW_BOOKMARKS
+        MENUITEM "History", COMMAND_SHOW_HISTORY
+        MENUITEM "Notes", COMMAND_SHOW_NOTES
+        MENUITEM "Show calendar", COMMAND_SHOW_CALENDAR
+        MENUITEM "Extensions", COMMAND_SHOW_EXTENSIONS
+        POPUP "Capture"
+        {
+            MENUITEM "Capture Page to File", COMMAND_CAPTURE_PAGE_TO_DISK
+            MENUITEM "Capture Page to Clipboard", COMMAND_CAPTURE_PAGE_TO_CLIPBOARD
+            MENUITEM "Capture Area to File", COMMAND_CAPTURE_AREA_TO_DISK
+            MENUITEM "Capture Area to Clipboard", COMMAND_CAPTURE_AREA_TO_CLIPBOARD
+        }
+        MENUITEM "Delete Browsing Data", COMMAND_SHOW_CLEAR_PRIVATE_DATA
+        MENUITEM "Task Manager", COMMAND_TASK_MANAGER
+        MENUITEM "Developer Tools", COMMAND_DEVELOPER_TOOLS
+    }
+    POPUP "Window"
+    {
+        // dynamic list: CONTAINER_PINNED_TAB
+        // dynamic list: CONTAINER_TAB
+    }
+    POPUP "Help"
+    {
+        MENUITEM "Vivaldi Help", COMMAND_SHOW_HELP
+        MENUITEM "Keyboard Cheat Sheet", COMMAND_SHOW_KEYBOARDSHORTCUTS
+        MENUITEM "Vivaldi Welcome Tour", COMMAND_SHOW_WELCOME
+        MENUITEM "Community Blogs", COMMAND_SHOW_COMMUNITY
+        MENUITEM "Report A Bug On The Forum", COMMAND_REPORT_BUG
+    }
+}
+
+VIVALDI_CONTEXT MENU
+{
+    POPUP "Context menu: tab"
+    {
+        MENUITEM "New", CONTEXT_NEW
+        MENUITEM "Reload", CONTEXT_RELOAD
+        MENUITEM "Clone", CONTEXT_CLONE
+        MENUITEM "Pin", CONTEXT_PIN
+        MENUITEM "Unpin", CONTEXT_UNPIN
+        POPUP "Move"
+        {
+            MENUITEM "Move left", CONTEXT_MOVE_LEFT
+            MENUITEM "Move right", CONTEXT_MOVE_RIGHT
+            // dynamic list: CONTEXT_CONTAINER_MOVE_TO_WINDOW
+        }
+        // dynamic list: CONTEXT_CONTAINER_PERIODIC_TIMER
+        MENUITEM "Mute", CONTEXT_MUTE
+        MENUITEM "Mute other", CONTEXT_MUTE_OTHER
+        MENUITEM "Optimize fs videos", CONTEXT_OPTIMIZE_FS_VIDEOS
+        MENUITEM "Bookmark", CONTEXT_BOOKMARK
+        MENUITEM "Bookmark stack", CONTEXT_BOOKMARK_STACK
+        MENUITEM "Bookmark all", CONTEXT_BOOKMARK_ALL
+        MENUITEM "Save session", CONTEXT_SAVE_SESSION
+        MENUITEM "Tabstack by selection", CONTEXT_TABSTACK_BY_SELECTION
+        MENUITEM "Tabstack by host", CONTEXT_TABSTACK_BY_HOST
+        MENUITEM "Tabstack rename", CONTEXT_TABSTACK_RENAME
+        POPUP "Tabstack move"
+        {
+            MENUITEM "Move left", CONTEXT_MOVE_LEFT
+            MENUITEM "Move right", CONTEXT_MOVE_RIGHT
+            // dynamic list: CONTEXT_CONTAINER_MOVE_TO_WINDOW
+        }
+        MENUITEM "Tabstack remove from", CONTEXT_TABSTACK_REMOVE_FROM
+        MENUITEM "Tabstack ungroup", CONTEXT_TABSTACK_UNGROUP
+        MENUITEM "Tile tabstack", CONTEXT_TILE_TABSTACK
+        MENUITEM "Untile tabstack", CONTEXT_UNTILE_TABSTACK
+        MENUITEM "Tile tabs", CONTEXT_TILE_TABS
+        MENUITEM "Untile selection", CONTEXT_UNTILE_SELECTION
+        MENUITEM "Hibernate tab", CONTEXT_HIBERNATE_TAB
+        MENUITEM "Hibernate selected background tabs", CONTEXT_HIBERNATE_SELECTED_BACKGROUND_TABS
+        MENUITEM "Hibernate tabstack", CONTEXT_HIBERNATE_TABSTACK
+        MENUITEM "Hibernate background", CONTEXT_HIBERNATE_BACKGROUND
+        MENUITEM "Close", CONTEXT_CLOSE
+        MENUITEM "Close tabstack", CONTEXT_CLOSE_TABSTACK
+        MENUITEM "Close other", CONTEXT_CLOSE_OTHER
+        MENUITEM "Close left", CONTEXT_CLOSE_LEFT
+        MENUITEM "Close right", CONTEXT_CLOSE_RIGHT
+        MENUITEM "Reopen", CONTEXT_REOPEN
+        // dynamic list: CONTEXT_CONTAINER_PWA
+        MENUITEM "Customize", CONTEXT_CUSTOMIZE
+    }
+    POPUP "Context menu: tabstackthumbnails"
+    {
+        MENUITEM "Close", CONTEXT_CLOSE
+        MENUITEM "Tabstack remove from", CONTEXT_TABSTACK_REMOVE_FROM
+    }
+    POPUP "Context menu: tabbar"
+    {
+        MENUITEM "New", CONTEXT_NEW
+        MENUITEM "Bookmark all", CONTEXT_BOOKMARK_ALL
+        MENUITEM "Save session", CONTEXT_SAVE_SESSION
+        MENUITEM "Reopen", CONTEXT_REOPEN
+    }
+    POPUP "Context menu: bookmarkbar"
+    {
+        MENUITEM "Bookmark", CONTEXT_BOOKMARK
+        MENUITEM "New bookmark", CONTEXT_NEW_BOOKMARK
+        MENUITEM "New folder", CONTEXT_NEW_FOLDER
+        MENUITEM "New separator", CONTEXT_NEW_SEPARATOR
+        // dynamic list: CONTEXT_CONTAINER_SORT
+        MENUITEM "Paste", CONTEXT_PASTE
+    }
+    POPUP "Context menu: bookmarkbaritem"
+    {
+        MENUITEM "Open in new tab", CONTEXT_OPEN_IN_NEW_TAB
+        MENUITEM "Open in new background tab", CONTEXT_OPEN_IN_NEW_BACKGROUND_TAB
+        MENUITEM "Open in tab", CONTEXT_OPEN_IN_TAB
+        MENUITEM "Open in new window", CONTEXT_OPEN_IN_NEW_WINDOW
+        MENUITEM "Open in private window", CONTEXT_OPEN_IN_PRIVATE_WINDOW
+        MENUITEM "Bookmark", CONTEXT_BOOKMARK
+        MENUITEM "New bookmark", CONTEXT_NEW_BOOKMARK
+        MENUITEM "New folder", CONTEXT_NEW_FOLDER
+        MENUITEM "New separator", CONTEXT_NEW_SEPARATOR
+        MENUITEM "Edit", CONTEXT_EDIT
+        MENUITEM "Rename", CONTEXT_RENAME
+        MENUITEM "Cut", CONTEXT_CUT
+        MENUITEM "Copy", CONTEXT_COPY
+        MENUITEM "Paste", CONTEXT_PASTE
+        MENUITEM "Delete", CONTEXT_DELETE
+    }
+    POPUP "Context menu: closedtab"
+    {
+        // dynamic list: CONTEXT_CONTAINER_CLOSED_TAB
+    }
+    POPUP "Context menu: panelbar"
+    {
+        // dynamic list: CONTEXT_CONTAINER_REG_PANELS
+        // dynamic list: CONTEXT_CONTAINER_WEB_PANELS
+        // dynamic list: CONTEXT_CONTAINER_REMOVED_PANELS
+    }
+    POPUP "Context menu: panelbarregitem"
+    {
+        MENUITEM "Separate width", CONTEXT_SEPARATE_WIDTH
+        POPUP "Panel"
+        {
+            // dynamic list: CONTEXT_CONTAINER_REG_PANELS
+            // dynamic list: CONTEXT_CONTAINER_WEB_PANELS
+            // dynamic list: CONTEXT_CONTAINER_REMOVED_PANELS
+        }
+    }
+    POPUP "Context menu: panelbaritem"
+    {
+        POPUP "Menu open"
+        {
+            MENUITEM "Open in new tab", CONTEXT_OPEN_IN_NEW_TAB
+            MENUITEM "Open in new background tab", CONTEXT_OPEN_IN_NEW_BACKGROUND_TAB
+            MENUITEM "Open in tab", CONTEXT_OPEN_IN_TAB
+            MENUITEM "Open in new window", CONTEXT_OPEN_IN_NEW_WINDOW
+            MENUITEM "Open in private window", CONTEXT_OPEN_IN_PRIVATE_WINDOW
+        }
+        MENUITEM "Copy address", CONTEXT_COPY_ADDRESS
+        MENUITEM "Desktop version", CONTEXT_DESKTOP_VERSION
+        MENUITEM "Mobile version", CONTEXT_MOBILE_VERSION
+        MENUITEM "Separate width", CONTEXT_SEPARATE_WIDTH
+        // dynamic list: CONTEXT_CONTAINER_TOOLBAR
+        MENUITEM "Remove web panel", CONTEXT_REMOVE_WEB_PANEL
+        POPUP "Menu panel"
+        {
+            // dynamic list: CONTEXT_CONTAINER_REG_PANELS
+            // dynamic list: CONTEXT_CONTAINER_WEB_PANELS
+            // dynamic list: CONTEXT_CONTAINER_REMOVED_PANELS
+        }
+    }
+}
