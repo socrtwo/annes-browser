@@ -56,8 +56,9 @@ const registry = new CommandRegistry<BrowserWindow>(catalog, {
 });
 
 const layouts = [...catalog.layouts, everythingLayout(registry.visible())];
-// The palette lists only commands that can run without arguments.
-const palette = new PaletteIndex(registry.visible().filter((c) => (c.args ?? []).every((a) => a.optional)));
+// The palette lists only commands that can run without arguments. Built after the handlers are
+// registered, so it can tell which commands exist yet.
+let palette!: PaletteIndex;
 
 // ---- profile data (created once the app is ready and the user-data path is final) ----
 let settings!: SettingsStore;
@@ -402,6 +403,10 @@ if (!app.requestSingleInstanceLock()) {
       clearData,
       pageInfo,
     });
+    palette = new PaletteIndex(
+      registry.visible().filter((c) => (c.args ?? []).every((a) => a.optional)),
+      (id) => !registry.hasHandler(id) && registry.get(id)?.status !== 'stub',
+    );
     installIpc();
     const first = urlsFromArgv(process.argv)[0];
     newWindow(first ? { url: first } : {});

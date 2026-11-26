@@ -38,6 +38,8 @@ input:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
 #palette-list, #panel-list { list-style: none; margin: 0; padding: 4px 0; max-height: 60vh; overflow-y: auto; }
 #palette-list li { padding: 6px 14px; display: flex; justify-content: space-between; gap: 12px; }
 #palette-list li.sel { background: var(--sel); }
+#palette-list .planned { color: var(--muted); font-size: 11px; border: 1px solid var(--line); border-radius: 3px; padding: 0 5px; align-self: center; }
+#palette-list li.sel .planned { border-color: var(--muted); }
 #palette-list .via { color: var(--muted); font-size: 12px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 #panel-head { display: flex; align-items: center; gap: 8px; padding: 10px 10px 8px 14px; border-bottom: 1px solid var(--line); }
 #panel-head h1 { flex: 1; margin: 0; font-size: 15px; }

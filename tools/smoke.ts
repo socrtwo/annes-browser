@@ -11,7 +11,7 @@ import { createServer as createHttp } from 'node:http';
 import { createRequire } from 'node:module';
 import { createServer as createTcp } from 'node:net';
 import { execFileSync } from 'node:child_process';
-import { existsSync, mkdtempSync, readFileSync } from 'node:fs';
+import { existsSync, mkdtempSync, readFileSync, writeFileSync } from 'node:fs';
 import { createServer as createHttps } from 'node:https';
 import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
@@ -334,6 +334,11 @@ await app.close();
 
 // ---- profile data survives a restart ----
 {
+  // Point the saved search engine at the local test server, so the check makes no outside connection.
+  const settingsFile = join(userData, 'profile', 'settings.json');
+  const saved = JSON.parse(readFileSync(settingsFile, 'utf8'));
+  saved.searchTemplate = `https://127.0.0.1:${httpsPort || 9}/search?q=%s`;
+  writeFileSync(settingsFile, JSON.stringify(saved));
   const app3 = await launch({});
   const ui3 = await until(() => app3.windows().find((p) => p.url().startsWith('anne://chrome/')));
   // The home page chosen in the first run is used again.
@@ -353,7 +358,7 @@ await app.close();
   }), `${base}/links`);
   await ui3!.evaluate(() => window.anne.execute({ id: 'nav.go', source: 'toolbar', args: { text: 'old browsers' } }));
   const searchedAt = await started;
-  check('the chosen search engine is still used after a restart', searchedAt.startsWith('https://en.wikipedia.org/w/index.php?search=old%20browsers'), searchedAt);
+  check('the saved search engine is read at startup and used by the address bar', searchedAt === `https://127.0.0.1:${httpsPort || 9}/search?q=old%20browsers`, searchedAt);
   await app3.close();
 }
 
@@ -626,7 +631,38 @@ async function phase3Checks(): Promise<void> {
   await run('file.save-page-as');
   check('Save Page As writes the page', !!(await until(() => existsSync(join(downloadDir, 'saved-page.html')) && readFileSync(join(downloadDir, 'saved-page.html'), 'utf8').includes('good link'))));
 
+  // ---- census: history pages and palette ranking ----
+  await run('help.menu-archaeology');
+  const arch = await tabWith('anne://pages/archaeology');
+  const archText = (await until(async () => { const t = await arch?.textContent('body'); return t?.includes('Menu archaeology') ? t : undefined; })) ?? '';
+  check('Menu Archaeology shows histories read from source code', archText.includes('Google Chrome 3.0.195.25 (2009)') && archText.includes('have a history read from browser source code'), archText.slice(0, 120));
+  check('Menu Archaeology links each command to its page', !!(await arch?.$('a[href="anne://pages/command?id=tab.new"]')));
+  await go('anne://pages/command?id=tab.new');
+  const cmdPage = await until(() => tabs().find((p) => p.url() === 'anne://pages/command?id=tab.new'));
+  const hrefs = cmdPage ? await cmdPage.$$eval('a', (as) => as.map((x) => x.getAttribute('href') ?? '')) : [];
+  check('a command page links to the exact source line', hrefs.some((h) => /^https:\/\/github\.com\/chromium\/chromium\/blob\/[0-9a-f]{12}\/chrome\/app\/chrome_dll_resource\.h#L\d+$/.test(h)), hrefs.slice(0, 3).join(' '));
+  // tab.new also has two entries written from memory in the seed catalog; they must be marked.
+  const unverifiedTags = (page: import('playwright-core').Page) => page.$$eval('.tag', (els) => els.filter((e) => e.textContent === 'unverified').length);
+  check('a command page marks lineage written from memory as unverified', !!cmdPage && (await unverifiedTags(cmdPage)) === 2, String(cmdPage ? await unverifiedTags(cmdPage) : 'no page'));
+  await go('anne://pages/command?id=view.scroll-top');
+  const sourcedOnly = await until(() => tabs().find((p) => p.url() === 'anne://pages/command?id=view.scroll-top'));
+  check('a command whose history is all read from source has nothing marked unverified', !!sourcedOnly && (await unverifiedTags(sourcedOnly)) === 0 && (await sourcedOnly.textContent('body'))!.includes('Lynx'));
+  await go('anne://pages/command?id=%3Cscript%3E');
+  const nf = await until(() => tabs().find((p) => p.url().includes('id=%3Cscript%3E')));
+  check('an unknown command id gives a plain not-found page', !!nf && (await nf.textContent('body'))!.includes('Not found'));
+  await ui.evaluate(() => window.anne.execute({ id: 'app.command-palette', source: 'toolbar' }));
+  await until(() => ui.evaluate(() => !document.getElementById('palette')!.hidden));
+  await ui.locator('#palette-input').fill('scroll to top');
+  const planned = await until(() => ui.evaluate(() => [...document.querySelectorAll('#palette-list li')].some((li) => li.querySelector('.planned') && li.textContent!.includes('Scroll to Top'))));
+  check('the palette finds catalogued commands and marks the unbuilt ones as planned', !!planned);
+  await ui.locator('#palette-input').fill('new tab');
+  const firstHit = await until(() => ui.evaluate(() => { const li = document.querySelector('#palette-list li'); return li ? { text: li.textContent, planned: !!li.querySelector('.planned') } : undefined; }));
+  check('built commands rank first', !!firstHit && !firstHit.planned && firstHit.text!.startsWith('New Tab'), JSON.stringify(firstHit));
+  await ui.evaluate(() => window.anne.closeOverlay());
+
   // ---- home page ----
+  await go(`${base}/links`);
+  await until(async () => (await uiState()).address === `${base}/links`);
   await run('nav.set-home-page');
   check('Use Current Page as Home Page saves it', !!(await until(() => readProfile('settings.json')?.homePage === `${base}/links`)));
   const homeBefore = tabs().length;

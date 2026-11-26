@@ -5,6 +5,15 @@ All notable changes to this project are documented here. Format: [Keep a Changel
 ## [Unreleased]
 
 ### Added
+- 2026-11-26: Command census (Phase 1, first pass).
+  - Menu definitions and command tables read from 23 versions of 16 open-source browsers (Mosaic, Lynx, w3m, ELinks, Dillo, Chrome and Chromium, Brave, SeaMonkey, Firefox, Falkon, Ladybird, Konqueror, Otter, Vimium, qutebrowser), each pinned to a commit with a hash, 2,750 items in all.
+  - `npm run census:verify` re-reads every source and checks every cited line; CI runs it as a non-blocking job.
+  - 220 new canonical commands (294 in all), with a history attached to each from the census: browser, version, menu path, and a link to the exact source line.
+  - Hand-written history kept but marked "unverified".
+  - Menu Archaeology shows per-browser histories; each command has its own page with source links.
+  - The command palette ranks built commands first and marks unbuilt ones "planned".
+  - Reports: `docs/CENSUS.md` and the work queue `docs/census-unlinked.tsv`.
+  - 36 new unit tests and 7 new end-to-end checks.
 - 2026-11-26: Phase 3, first set.
   - Settings store (layout, keymap, home page, search engine), saved atomically; invalid or corrupt files never break startup.
   - Find in page with match count, next and previous.

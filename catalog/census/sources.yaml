@@ -1,0 +1,297 @@
+# Census sources: browser versions whose menus and command tables were read from open source code.
+#
+# `ref` is the branch or tag a commit was resolved from; `commit` is what was actually read.
+# Fill in `commit` with:  npm run census -- pin
+# `released` is the release year of that version. It is NOT derived from the source: it is
+# common knowledge, so check it against the project's release notes before relying on it.
+#
+# Closed-source browsers (Internet Explorer, Opera Presto, Safari, Vivaldi, Netscape 4, Arc) cannot
+# be read this way. They are listed in docs/CENSUS.md as not yet covered.
+
+- id: mosaic-2.7
+  browser: NCSA Mosaic
+  version: 2.7b5
+  released: 1996
+  platform: X11/Motif
+  repo: alandipert/ncsa-mosaic
+  ref: HEAD
+  extractor: mosaic-menu
+  files:
+    - path: src/gui-menubar.c
+      role: primary
+  commit: d786f715f0fb6af6914711841804ff68a2ac78cf
+- id: lynx-2.7.1
+  browser: Lynx
+  version: 2.7.1
+  released: 1996
+  platform: terminal
+  repo: ThomasDickey/lynx-snapshots
+  ref: v2-7-1
+  extractor: lynx-keymap
+  files:
+    - path: src/LYKeymap.c
+      role: primary
+  commit: f5164023758fc99afb2d4a6e03540e946d995c62
+- id: lynx-2.8
+  browser: Lynx
+  version: 2.8.0 (2-8rel_3)
+  released: 1998
+  platform: terminal
+  repo: ThomasDickey/lynx-snapshots
+  ref: 2-8rel_3
+  extractor: lynx-keymap
+  files:
+    - path: src/LYKeymap.c
+      role: primary
+  commit: b9268037e810ae1e75d2d320d146db0efc314524
+- id: lynx-current
+  browser: Lynx
+  version: development snapshot
+  released: 2026
+  platform: terminal
+  repo: ThomasDickey/lynx-snapshots
+  ref: HEAD
+  extractor: lynx-keymap
+  files:
+    - path: src/LYKeymap.c
+      role: primary
+  commit: 7f670781d769903d5a32a4b9eb68175f2e687a26
+- id: w3m-current
+  browser: w3m
+  version: development snapshot
+  released: 2026
+  platform: terminal
+  repo: tats/w3m
+  ref: HEAD
+  extractor: w3m-func
+  files:
+    - path: doc/README.func
+      role: primary
+  commit: ee66aabc3987000c2851bce6ade4dcbb0b037d81
+- id: elinks-current
+  browser: ELinks
+  version: development snapshot
+  released: 2026
+  platform: terminal
+  repo: rkd77/elinks
+  ref: HEAD
+  extractor: elinks-actions
+  files:
+    - path: src/config/actions-main.inc
+      role: primary
+    - path: src/config/actions-menu.inc
+      role: primary
+    - path: src/config/actions-edit.inc
+      role: primary
+  commit: e142a85bf40f4b73084045357a2479dbc27947e6
+- id: dillo-2.0
+  browser: Dillo
+  version: "2.0"
+  released: 2008
+  platform: FLTK
+  repo: dillo-browser/dillo
+  ref: release-2_0
+  extractor: dillo-menu
+  files:
+    - path: src/menu.cc
+      role: primary
+  commit: ce8e972a10c9340312f21511de053242dad3f5db
+- id: dillo-current
+  browser: Dillo
+  version: development snapshot
+  released: 2026
+  platform: FLTK
+  repo: dillo-browser/dillo
+  ref: HEAD
+  extractor: dillo-menu
+  files:
+    - path: src/menu.cc
+      role: primary
+  commit: 6856c5016de8cc15d077ec8d785bac1a38b4a813
+- id: chrome-3
+  browser: Google Chrome
+  version: 3.0.195.25
+  released: 2009
+  platform: desktop
+  repo: chromium/chromium
+  ref: 3.0.195.25
+  extractor: chromium-ids
+  files:
+    - path: chrome/app/chrome_dll_resource.h
+      role: primary
+  commit: 05197078e4761dde56f8dc8884050bf862344425
+- id: chrome-10
+  browser: Google Chrome
+  version: 10.0.648.204
+  released: 2011
+  platform: desktop
+  repo: chromium/chromium
+  ref: 10.0.648.204
+  extractor: chromium-ids
+  files:
+    - path: chrome/app/chrome_command_ids.h
+      role: primary
+  commit: 3dd8afedfe2bce2c470f863243713fcf599c9a0f
+- id: chrome-50
+  browser: Google Chrome
+  version: 50.0.2661.102
+  released: 2016
+  platform: desktop
+  repo: chromium/chromium
+  ref: 50.0.2661.102
+  extractor: chromium-ids
+  files:
+    - path: chrome/app/chrome_command_ids.h
+      role: primary
+  commit: 496034c629901db4564ba5613e2d736635eeb082
+- id: chrome-current
+  browser: Chromium
+  version: development snapshot
+  released: 2026
+  platform: desktop
+  repo: chromium/chromium
+  ref: HEAD
+  extractor: chromium-ids
+  files:
+    - path: chrome/app/chrome_command_ids.h
+      role: primary
+  commit: 0e39800c5bb162ad810ac450980e2689188a8251
+# Brave's own ids are mostly vendor services (rewards, wallet, assistant): few link to canonical commands, by design.
+- id: brave-current
+  browser: Brave
+  version: development snapshot
+  released: 2026
+  platform: desktop
+  repo: brave/brave-core
+  ref: HEAD
+  extractor: brave-ids
+  files:
+    - path: app/brave_command_ids.h
+      role: primary
+  commit: f3f1af0ba31f3a0dc35490cc1eed8c64e5db61f1
+- id: seamonkey-2.0
+  browser: SeaMonkey
+  version: 2.0rc2
+  released: 2009
+  platform: desktop
+  repo: mozilla/releases-comm-central
+  ref: SEAMONKEY_2_0rc2_RELEASE
+  extractor: xul-menu
+  files:
+    - path: suite/browser/navigatorOverlay.xul
+      role: primary
+    - path: suite/locales/en-US/chrome/browser/navigator.dtd
+      role: labels
+  commit: dfb257cf8b7ff3c0cbd00c7b0b9faf79f65381ba
+- id: seamonkey-current
+  browser: SeaMonkey
+  version: development snapshot
+  released: 2026
+  platform: desktop
+  repo: mozilla/releases-comm-central
+  ref: HEAD
+  extractor: xul-menu
+  files:
+    - path: suite/browser/navigatorOverlay.xul
+      role: primary
+    - path: suite/locales/en-US/chrome/browser/navigator.dtd
+      role: labels
+  commit: f1b9c81071c6c47b65a88be42748d291bcb7abaa
+- id: firefox-current
+  browser: Firefox
+  version: development snapshot
+  released: 2026
+  platform: desktop
+  repo: mozilla/gecko-dev
+  ref: HEAD
+  extractor: firefox-menu
+  files:
+    - path: browser/base/content/browser-menubar.inc
+      role: primary
+    - path: browser/locales/en-US/browser/menubar.ftl
+      role: labels
+  commit: 5836a062726f715fda621338a17b51aff30d0a8c
+- id: falkon-current
+  browser: Falkon
+  version: development snapshot
+  released: 2026
+  platform: desktop
+  repo: KDE/falkon
+  ref: HEAD
+  extractor: falkon-actions
+  files:
+    - path: src/lib/app/mainmenu.cpp
+      role: primary
+  commit: 822ede6721b016ae0a799e9f9e4c5e135ae1c222
+- id: ladybird-current
+  browser: Ladybird
+  version: development snapshot
+  released: 2026
+  platform: desktop
+  repo: LadybirdBrowser/ladybird
+  ref: HEAD
+  extractor: qt-actions
+  files:
+    - path: UI/Qt/Application.cpp
+      role: primary
+  commit: 2a8cf49a15247e87b28ca7b1455350513549aad3
+- id: konqueror-current
+  browser: Konqueror
+  version: development snapshot
+  released: 2026
+  platform: desktop
+  repo: KDE/konqueror
+  ref: HEAD
+  extractor: konqueror-rc
+  files:
+    - path: src/konqueror.rc
+      role: primary
+  commit: ad22111de095543d68b14083a99cf60c7d610f4c
+- id: otter-0.0.01
+  browser: Otter Browser
+  version: 0.0.01
+  released: 2013
+  platform: desktop
+  repo: OtterBrowser/otter-browser
+  ref: v0.0.01
+  extractor: qt-ui
+  files:
+    - path: src/ui/MainWindow.ui
+      role: primary
+  commit: dcce6d6fbbf3e47f49b4a44fb4de02e3f25d1290
+- id: otter-current
+  browser: Otter Browser
+  version: development snapshot
+  released: 2026
+  platform: desktop
+  repo: OtterBrowser/otter-browser
+  ref: HEAD
+  extractor: otter-enum
+  files:
+    - path: src/core/ActionsManager.h
+      role: primary
+  commit: 0d71a94773cb071b3c203ff40043e1d93efddc1b
+- id: vimium-current
+  browser: Vimium
+  version: development snapshot
+  released: 2026
+  platform: extension
+  repo: philc/vimium
+  ref: HEAD
+  extractor: vimium-commands
+  files:
+    - path: background_scripts/all_commands.js
+      role: primary
+  commit: 4046615ae4128d485fce3335fc1032e6f87c630a
+- id: qutebrowser-current
+  browser: qutebrowser
+  version: development snapshot
+  released: 2026
+  platform: desktop
+  repo: qutebrowser/qutebrowser
+  ref: HEAD
+  extractor: qutebrowser-commands
+  files:
+    - path: doc/help/commands.asciidoc
+      role: primary
+  commit: a2a9c9dd88e659107c70f2fa9a9968ea4a9e643c

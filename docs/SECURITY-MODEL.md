@@ -1,6 +1,6 @@
 # Security Model
 
-Status: implemented for the Phase 2 shell and the first Phase 3 features, and verified by `npm test` (91 unit tests) and `npm run smoke` (105 end-to-end checks in a real Electron process). Where a control is designed but not built, this document says so.
+Status: implemented for the Phase 2 shell and the first Phase 3 features, and verified by `npm test` (127 unit tests) and `npm run smoke` (113 end-to-end checks in a real Electron process). Where a control is designed but not built, this document says so.
 
 ## What is being protected
 
@@ -130,6 +130,10 @@ Ruffle must run inside the page, because it replaces the page's `<embed>` and `<
 
 Residual risk: a bug in Ruffle is exposed to pages in tabs where the user enabled it. Keep the pinned version current.
 
+### Internal pages that link outward
+
+The Menu Archaeology and command pages (`anne://pages/command`) contain links to `github.com`, built from the `ref` of each census entry. `refUrl` accepts only the exact form `owner/repo@commit:path#Lnn` and can produce nothing but a `github.com/.../blob/...` address; every other string yields no link. Catalog text is escaped like all other generated pages. Following such a link is an ordinary navigation by the user from an internal page. *(unit tests: refUrl rejects `javascript:`, other hosts, path traversal and quotes; smoke: a command page links to the exact source line)*
+
 ### Private windows
 
 Each private window has its own in-memory session: no cookies, storage or cache are shared with normal windows or with other private windows, and nothing is written to the profile. History is not recorded and settings cannot be changed from a private window. On close, the session's storage, cache and authentication cache are cleared, its permission answers forgotten and its downloads cancelled and removed from the list. Downloaded files themselves are kept. *(smoke: seven checks)*
@@ -170,7 +174,7 @@ A packaged build refuses to start with switches that open a debugging port, disa
 
 ## Known limitations
 
-- On the development machine the end-to-end test runs with Chromium's sandbox disabled, because that machine runs as root. The CI workflow runs the same test as an ordinary user with the sandbox on, and its first run (2026-11-25, Ubuntu 24.04) passed all 46 checks of that version; the run with the Phase 3 additions (2026-11-26) passed all 105.
+- On the development machine the end-to-end test runs with Chromium's sandbox disabled, because that machine runs as root. The CI workflow runs the same test as an ordinary user with the sandbox on, and its first run (2026-11-25, Ubuntu 24.04) passed all 46 checks of that version; the run with the Phase 3 additions (2026-11-26) passed all 105. The census additions have not yet run in CI.
 - Not tested on Windows or macOS.
 - `decideNavigation` cannot see navigations Chromium performs entirely inside a renderer without consulting the browser process. None are known for the cases tested.
 - No certificate-error override: a bad certificate simply fails to load. That is the safe default, and a Phase 3 design decision whether to ever allow an override.

@@ -1,4 +1,4 @@
-import type { CommandRecord } from './catalog/types.ts';
+import type { CommandRecord, Lineage } from './catalog/types.ts';
 import { escapeHtml } from './gopher/render.ts';
 
 /**
@@ -22,9 +22,34 @@ function page(title: string, body: string): string {
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeHtml(title)}</title><style>${STYLE}</style></head><body>${body}</body></html>`;
 }
 
+/**
+ * `owner/repo@commit:path#Lnn` as a GitHub address, or undefined if the text is not in that form.
+ * Only github.com addresses are produced, so a malformed or hostile `ref` cannot become another link.
+ */
+export function refUrl(ref: string): string | undefined {
+  const m = /^([\w.-]+\/[\w.-]+)@([0-9a-f]{7,40}):([\w./+~@ -]+)#L(\d+)$/.exec(ref);
+  return m ? `https://github.com/${m[1]}/blob/${m[2]}/${m[3]!.split('/').map(encodeURIComponent).join('/')}#L${m[4]}` : undefined;
+}
+
+/** One line per browser: `Google Chrome 3.0.195.25 (2009), 10.0.648.204 (2011); Lynx 2.7.1 (1996)`. */
+export function lineageSummary(lineage: readonly Lineage[]): string {
+  const byBrowser = new Map<string, string[]>();
+  for (const l of lineage) {
+    const part = `${l.versions && l.versions !== 'development snapshot' ? `${l.versions} ` : 'now '}${l.year ? `(${l.year})` : ''}${l.source === 'recalled' ? ' unverified' : ''}`.trim();
+    const list = byBrowser.get(l.browser) ?? [];
+    if (!list.includes(part)) list.push(part);
+    byBrowser.set(l.browser, list);
+  }
+  return [...byBrowser].map(([b, v]) => `${b} ${v.join(', ')}`).join('; ');
+}
+
 function lineageRows(c: CommandRecord): string {
   return (c.lineage ?? [])
-    .map((l) => `<tr><td>${escapeHtml(l.browser)}${l.versions ? ` ${escapeHtml(l.versions)}` : ''}</td><td>${escapeHtml(l.menu ?? '')}</td><td>${l.year ?? ''}</td></tr>`)
+    .map((l) => {
+      const href = l.ref ? refUrl(l.ref) : undefined;
+      const evidence = href ? `<a href="${escapeHtml(href)}">${escapeHtml(l.key ?? 'source')}</a>` : l.source === 'recalled' ? '<span class="tag">unverified</span>' : '';
+      return `<tr><td>${escapeHtml(l.browser)}${l.versions ? ` ${escapeHtml(l.versions)}` : ''}</td><td>${escapeHtml(l.menu ?? '')}</td><td>${l.year ?? ''}</td><td>${evidence}</td></tr>`;
+    })
     .join('');
 }
 
@@ -47,21 +72,35 @@ export function stubPage(c: CommandRecord | undefined): string {
   const lineage = lineageRows(c);
   return page(c.label, `<h1>${escapeHtml(c.label)}</h1><p class="m">${escapeHtml(c.description)}</p>
 <h2>Why this is not available</h2><p>${escapeHtml(c.status_reason ?? 'This feature has been retired.')}</p>
-${lineage ? `<h2>Where it came from</h2><table><tr><th>Browser</th><th>Menu</th><th>Year</th></tr>${lineage}</table>` : ''}
+${lineage ? `<h2>Where it came from</h2><table><tr><th>Browser</th><th>Menu</th><th>Year</th><th>Source</th></tr>${lineage}</table>` : ''}
+<p><a href="anne://pages/archaeology">All commands</a></p>`);
+}
+
+/** The page for one command: what it does, its status, and every source that offered it. */
+export function commandPage(c: CommandRecord | undefined): string {
+  if (!c) return notFoundPage();
+  const lineage = lineageRows(c);
+  const status = c.status === 'implement' ? '' : ` <span class="tag">${escapeHtml(c.status)}</span>`;
+  return page(c.label, `<h1>${escapeHtml(c.label)}${status}</h1><p class="m"><code>${escapeHtml(c.id)}</code></p>
+<p>${escapeHtml(c.description)}</p>
+${c.status_reason ? `<p><small>${escapeHtml(c.status_reason)}</small></p>` : ''}
+${c.aliases?.length ? `<p><small>Also known as: ${c.aliases.map(escapeHtml).join(', ')}</small></p>` : ''}
+${lineage ? `<h2>Where it came from</h2><table><tr><th>Browser</th><th>Menu</th><th>Year</th><th>Source</th></tr>${lineage}</table>
+<p><small>"Source" links to the line in the browser's own source code. Entries marked unverified were written from memory.</small></p>` : '<p><small>No history recorded yet.</small></p>'}
 <p><a href="anne://pages/archaeology">All commands</a></p>`);
 }
 
 export function archaeologyPage(commands: readonly CommandRecord[]): string {
+  const sourced = commands.filter((c) => (c.lineage ?? []).some((l) => l.source === 'census')).length;
   const rows = [...commands]
     .sort((a, b) => a.category.localeCompare(b.category) || a.label.localeCompare(b.label))
     .map((c) => {
-      const origins = (c.lineage ?? []).map((l) => `${escapeHtml(l.browser)}${l.year ? ` (${l.year})` : ''}`).join('<br>');
+      const origins = escapeHtml(lineageSummary(c.lineage ?? []));
       const tag = c.status === 'implement' ? '' : ` <span class="tag">${c.status}</span>`;
-      const label = c.status === 'stub' ? `<a href="anne://pages/stub?id=${encodeURIComponent(c.id)}">${escapeHtml(c.label)}</a>` : escapeHtml(c.label);
-      return `<tr><td>${label}${tag}<br><small><code>${escapeHtml(c.id)}</code></small></td><td>${escapeHtml(c.description)}</td><td>${origins}</td></tr>`;
+      return `<tr><td><a href="anne://pages/command?id=${encodeURIComponent(c.id)}">${escapeHtml(c.label)}</a>${tag}<br><small><code>${escapeHtml(c.id)}</code></small></td><td>${escapeHtml(c.description)}</td><td><small>${origins}</small></td></tr>`;
     })
     .join('');
-  return page('Menu archaeology', `<h1>Menu archaeology</h1><p class="m">${commands.length} commands. Origins are provisional until the command census is complete.</p>
+  return page('Menu archaeology', `<h1>Menu archaeology</h1><p class="m">${commands.length} commands; ${sourced} have a history read from browser source code. Choose a command to see the exact lines. "Unverified" entries were written from memory.</p>
 <table><tr><th>Command</th><th>What it does</th><th>Seen in</th></tr>${rows}</table>`);
 }
 

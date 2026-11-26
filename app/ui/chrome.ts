@@ -97,6 +97,7 @@ function renderPalette(): void {
     li.setAttribute('role', 'option');
     li.append(el('span', '', hit.label));
     if (hit.via) li.append(el('span', 'via', hit.via));
+    if (hit.planned) li.append(el('span', 'planned', 'planned'));
     li.addEventListener('click', () => run(hit.id, 'palette'));
     return li;
   }));

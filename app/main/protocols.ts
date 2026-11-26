@@ -4,7 +4,7 @@ import { app, protocol, type Session } from 'electron';
 import type { CommandRecord } from '../core/catalog/types.ts';
 import { handleGopherUrl } from '../core/gopher/client.ts';
 import {
-  aboutPage, archaeologyPage, blockedPage, homePage, INTERNAL_PAGE_CSP, notFoundPage, stubPage,
+  aboutPage, archaeologyPage, blockedPage, commandPage, homePage, INTERNAL_PAGE_CSP, notFoundPage, stubPage,
 } from '../core/pages.ts';
 import { INTERNAL_SCHEME, RUFFLE_SCHEME } from '../core/security/url-policy.ts';
 
@@ -102,6 +102,7 @@ export function serveWeb(ses: Session, src: PageSources): void {
       case '/home': return html(homePage());
       case '/about': return html(aboutPage(app.getVersion(), `Chromium ${process.versions.chrome}, Electron ${process.versions.electron}`));
       case '/archaeology': return html(archaeologyPage(src.visibleCommands()));
+      case '/command': return html(commandPage(src.command(url.searchParams.get('id') ?? '')));
       case '/stub': return html(stubPage(src.command(url.searchParams.get('id') ?? '')));
       case '/blocked': return html(blockedPage(url.searchParams.get('url') ?? '', url.searchParams.get('reason') ?? 'This address cannot be opened.'));
       default: return html(notFoundPage(), 404);

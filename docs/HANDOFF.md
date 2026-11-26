@@ -6,7 +6,7 @@ Written at the end of the Phase 2 foundation session (2026-11-25); updated after
 
 Built and tested: the command registry, context expressions, keymaps and key dispatch, menu building, palette search, the navigation / network / permission / download policies, a hardened Electron shell with tabs, a Gopher client, and Flash emulation through Ruffle. 45 seed commands, 3 hand-made layouts plus the generated "Everything" layout, 2 keymaps.
 
-Verification: `npm run check` (typecheck, catalog build, 91 unit tests) and `npm run smoke` (105 end-to-end checks) pass on Linux. Not run on Windows or macOS. See the limitations in `SECURITY-MODEL.md`.
+Verification: `npm run check` (typecheck, catalog build, 127 unit tests) and `npm run smoke` (113 end-to-end checks) pass on Linux. Not run on Windows or macOS. See the limitations in `SECURITY-MODEL.md`.
 
 ## Why the work switches model here
 
@@ -19,7 +19,7 @@ In suggested order. Each item names the pattern to copy.
 1. ~~Settings store~~ **Done** (2026-11-26).
 2. ~~Phase 3 commands: find, save page, bookmarks, history, downloads list, page info, private window, clear data, context menus~~ **Done** (2026-11-26). Remaining Phase 3: HTTP authentication dialog, bookmark folders and import, history grouped by day, per-site zoom memory, print preview, spell-check language choice, "remember" for permission answers across restarts.
 3. ~~Permission prompt UI and download warnings~~ **Done** (2026-11-26).
-4. **Phase 1 census.** Fill `catalog/commands/` from sources, replacing the provisional lineage. Split into one file per category. `npm run catalog` validates everything.
+4. ~~Phase 1 census~~ **First pass done** (2026-11-26): 23 browser versions, 2,750 items, 294 canonical commands, 1,238 items linked. **Remaining:** the work queue in [CENSUS.md](CENSUS.md) (1,505 items in [census-unlinked.tsv](census-unlinked.tsv)), more sources, and release-year checks. See "Continuing the census" below.
 5. **Era layouts** (Phase 4): more files in `catalog/layouts/`. No code needed.
 6. **FTP client.** Fully specified in INTEGRATIONS.md, including the required tests. Copy the Gopher structure.
 7. **Wayback "View as of…"**, **NNTP**, **Finger**: specified in INTEGRATIONS.md.
@@ -57,3 +57,35 @@ Ground rules for that work (also in CONTRIBUTING.md):
 - **The download warning must be answered synchronously** inside `will-download`: Electron shows its save dialog as soon as the handler returns. That is why it uses `showMessageBoxSync`.
 - **A tab that never loaded a page can make `savePage` wait forever.** Save Page As refuses anything that is not an http, https, file or gopher page.
 - The smoke test replaces `dialog.showMessageBox`, `showMessageBoxSync`, `showSaveDialog` and `Menu.prototype.popup` in the main process to script native dialogs and capture context menus.
+
+## Continuing the census
+
+Suitable for Sonnet 5.5: it is bulk, rule-bound data entry, and the build rejects mistakes of structure. It still needs care about meaning; read each item's own description before linking.
+
+Working loop:
+
+1. `npm run census -- docs` prints the current state to `docs/CENSUS.md`; `docs/census-unlinked.tsv` is the queue (`git grep` or open it in a spreadsheet).
+2. For a group of unlinked items, decide the canonical command (find it in `catalog/commands/`, or add a record to `catalog/commands/census.yaml`).
+3. Add the items' normalized names to a file in `catalog/census/names/`. Print what a name looks like with `itemNames` in `tools/census/names.ts`, or just lower-case the key and delete punctuation.
+4. If a word is ambiguous (the same name means different things in two browsers), add an entry to `overrides.yaml` instead, with a `why` for any `command: none`.
+5. `npm run check`. A name used by two commands, an unknown command or a stale override fails the build.
+
+Adding a browser version:
+
+1. Add an entry to `catalog/census/sources.yaml` (repo, ref, extractor, files). If no extractor fits the format, write one in `tools/census/extractors.ts` and test it against a real sample.
+2. `npm run census -- pin`, then `npm run census -- extract <id>`, then `npm run census:verify <id>`.
+3. Link its items as above.
+
+Things that need a decision, not just effort:
+
+- **Closed-source browsers.** Internet Explorer, Opera, Safari, Netscape 4, Vivaldi cannot be read from here. Options: a person supplies menu dumps or screenshots (add a new source kind with a citation to the document), or leave them out. Do not enter them from memory: that is what `recalled` is for, and it is not evidence.
+- **Release years** in `sources.yaml` are from memory. Check them against release notes.
+- **Which unlinked items matter.** About half of Chromium's ids are internal. Decide whether to link the user-facing remainder or leave the tail.
+
+Gotchas:
+
+- GitHub's raw host rate-limits (HTTP 429). The fetcher spaces requests and retries; do not run several extractions in parallel.
+- Only `raw.githubusercontent.com` and `git ls-remote` are reachable in the cloud environment. Documentation sites are blocked.
+- ELinks has several keymaps (`main:`, `menu:`, `edit:`). Only `main:` is stripped to a bare name; `menu:home` and `edit:home` must not match "Home".
+- Vimium's `scrollPageDown` is half a page; Lynx's `HOME` scrolls to the top of the document; w3m's `UNDO` undoes a cursor movement. The overrides file has the rest.
+- A source file's text is decoded as UTF-8, falling back to Latin-1, so line numbers are stable for old files.

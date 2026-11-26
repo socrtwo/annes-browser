@@ -2,20 +2,21 @@
 
 The foundation is built (see `docs/ARCHITECTURE.md`). The most useful contribution right now is **command census data**.
 
-## Submitting a historic or current browser command
+## Adding to the command census
 
-Open an issue with the **Command request** template, or a PR adding a record under `catalog/commands/` (format in `docs/COMMAND-CATALOG.md`). Include:
+A command's history is generated from `catalog/census/`, which is read from open-source browsers' own code (see `docs/CENSUS.md`). To contribute:
 
-- Browser, version and platform
-- Exact menu path or shortcut (for example `File > Edit Page`, `Ctrl+E`)
-- What it did
-- A source: manual page, archived screenshot URL or source-code link
+- **A browser version we can read:** add it to `catalog/census/sources.yaml` and follow "Adding a browser version" in `docs/HANDOFF.md`.
+- **Linking unlinked items:** see "Continuing the census" in `docs/HANDOFF.md`. Read an item's own description before deciding two browsers' commands are the same.
+- **A closed-source browser** (Internet Explorer, Opera, Safari and others): we cannot read these. If you can supply a menu dump or a screenshot, open an issue with the **Command request** template and say where it came from. Memory alone is recorded as "unverified".
+
+Census files store identifiers, labels and short descriptions (100 characters at most), never source code. Do not paste copyrighted manual text.
 
 ## Ground rules
 
 - No vendor logos, icons or artwork in the repository.
-- Do not paste copyrighted manual text. Paraphrase and cite instead.
 - Every new command must have a catalog record before any code is written for it.
+- `npm run check` also validates the census: a name that belongs to two commands, or an override for an item that is not there, fails the build.
 
 ## Code rules
 

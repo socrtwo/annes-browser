@@ -79,6 +79,23 @@ Handlers therefore never validate "may this run?" themselves. They do validate a
 - **A binding that starts with an ordinary typing key must be scoped with `input.modal`.** Typing in a page can never trigger a command unless the user has switched modal mode on.
 - No duplicate bindings inside one keymap.
 
+## The census
+
+The command catalog is not written from memory. `tools/census/` reads menu definitions and command tables from open-source browsers' own code, each at an exact commit, and records what it found:
+
+```
+sources.yaml ──pin──▶ commit SHAs ──fetch (cached, throttled)──▶ extractors ──▶ catalog/census/<id>.yaml
+                                                                                         │
+catalog/census/names/*.yaml + overrides.yaml ──match──▶ items linked to commands ────────┤
+                                                                                         ▼
+                                       npm run catalog: lineage attached to each command in dist/catalog.json
+```
+
+- **Extractors** (`tools/census/extractors.ts`) are small pure functions, one per source format (Motif C macros, XUL, Fluent, Qt, `#define` tables, AsciiDoc and others). Each is tested against a sample of the real format.
+- **Verification** (`npm run census:verify`) re-reads every source at its commit and checks the file hash and that each cited line contains the recorded text. CI runs it as a non-blocking job.
+- **Linking** is curated. Name matching proposes, a human decides, the build enforces that no name has two owners. Sources that describe their own commands (Lynx, w3m, ELinks, Vimium, qutebrowser) are reviewed against those descriptions; that review caught wrong matches before they were attached (see the `why` fields in `overrides.yaml`).
+- Nothing from the census reaches the running app except lineage text and links: the app never reads census files.
+
 ## Process model
 
 ```

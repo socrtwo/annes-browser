@@ -1,11 +1,11 @@
 # Anne's Browser: Roadmap
 
-Last updated: 2026-11-26. Status: Phase 2 built; Phase 3 largely built; Phase 1 next.
+Last updated: 2026-11-26. Status: Phase 2 built; Phase 3 largely built; Phase 1 first pass done.
 
 | Phase | State |
 |---|---|
 | 0 Decisions | D1, D2, D4 adopted; D5, D6 wait on the owner. See [docs/DECISIONS.md](docs/DECISIONS.md) |
-| 1 Census | Not started. 45 seed commands with provisional lineage |
+| 1 Census | **First pass done**: 23 versions of 16 browsers read from source, 2,750 items, 294 commands. 45% of items linked; queue in [docs/CENSUS.md](docs/CENSUS.md). Closed-source browsers not covered |
 | 2 Skeleton | **Built**, except the import pipeline |
 | 3 Baseline | **Largely built**: settings, find, bookmarks, history, downloads, private windows, permission prompts, Page Info, clear data, context menus, save page. Remaining items in [docs/HANDOFF.md](docs/HANDOFF.md) |
 | 6 Legacy | Gopher and Flash (Ruffle) built early; the rest not started |
@@ -47,7 +47,7 @@ Build the master catalog that the whole product is generated from.
 3. De-duplicate into `catalog/commands/<category>.yaml`, one canonical record per behavior, with aliases and lineage (schema in [docs/COMMAND-CATALOG.md](docs/COMMAND-CATALOG.md)).
 4. Classify each one: `implement` / `emulate` / `stub` / `omit`, with a reason for each.
 
-**Expected size:** about 2,000–3,000 raw entries, reducing to about 700–1,000 canonical commands.
+**Expected size:** about 2,000–3,000 raw entries, reducing to about 700–1,000 canonical commands. *Actual so far: 2,750 raw entries (from open-source browsers only), 294 canonical commands. The estimate of 700–1,000 canonical commands now looks high for what open-source sources contain: the unlinked remainder is mostly internal ids, terminal cursor movement and vendor services. Closed-source browsers would add more.*
 
 **Exit criteria:** catalog validates against the schema. Every surveyed browser has a source file, and every canonical command has a classification.
 

@@ -149,6 +149,15 @@ describe('palette search', () => {
     expect(index.search('zzzz')).toEqual([]);
   });
 
+  it('ranks built commands above planned ones and marks the planned', () => {
+    const idx = new PaletteIndex(commands.filter((c) => c.status !== 'omit'), (id) => id === 'nav.back');
+    const hits = idx.search('back');
+    expect(hits[0]).toMatchObject({ id: 'nav.back', planned: true });
+    const both = new PaletteIndex([cmd('nav.back', { label: 'Back' }), cmd('nav.back-page', { label: 'Back Page' })], (id) => id === 'nav.back');
+    expect(both.search('back').map((h) => h.id)).toEqual(['nav.back-page', 'nav.back']);
+    expect(both.search('').map((h) => h.id)).toEqual(['nav.back-page', 'nav.back']);
+  });
+
   it('bounds its work on hostile queries', () => {
     expect(index.search('a '.repeat(5000)).length).toBeLessThanOrEqual(20);
     expect(index.search('', 3)).toHaveLength(3);

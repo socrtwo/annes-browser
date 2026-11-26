@@ -5,6 +5,8 @@ export interface PaletteHit {
   label: string;
   /** What matched when it was not the label, e.g. `Netscape Communicator: File > Edit Page`. */
   via?: string;
+  /** The command is catalogued but not built yet. */
+  planned?: true;
   score: number;
 }
 
@@ -50,8 +52,11 @@ export function fuzzyScore(term: string, lower: string): number {
  */
 export class PaletteIndex {
   private readonly entries: Entry[];
+  private readonly isPlanned: (id: string) => boolean;
 
-  constructor(commands: readonly CommandRecord[]) {
+  /** Commands for which `isPlanned` is true rank below built commands with a similar match. */
+  constructor(commands: readonly CommandRecord[], isPlanned: (id: string) => boolean = () => false) {
+    this.isPlanned = isPlanned;
     const field = (text: string, weight: number, isLabel = false): Field => ({ text, lower: text.toLowerCase(), weight, isLabel });
     this.entries = commands.map((record) => ({
       record,
@@ -67,7 +72,10 @@ export class PaletteIndex {
   search(query: string, limit = 20): PaletteHit[] {
     const terms = query.toLowerCase().slice(0, 100).split(/\s+/).filter(Boolean).slice(0, 6);
     if (terms.length === 0) {
-      return this.entries.slice(0, limit).map((e) => ({ id: e.record.id, label: e.record.label, score: 0 }));
+      return [...this.entries]
+        .sort((a, b) => Number(this.isPlanned(a.record.id)) - Number(this.isPlanned(b.record.id)))
+        .slice(0, limit)
+        .map((e) => ({ id: e.record.id, label: e.record.label, score: 0, ...(this.isPlanned(e.record.id) && { planned: true as const }) }));
     }
     const hits: PaletteHit[] = [];
     for (const { record, fields } of this.entries) {
@@ -87,7 +95,11 @@ export class PaletteIndex {
         if (bestField && !bestField.isLabel && best > viaScore) { via = bestField; viaScore = best; }
       }
       if (!matched) continue;
-      hits.push({ id: record.id, label: record.label, score: total, ...(via && { via: via.text }) });
+      const planned = this.isPlanned(record.id);
+      hits.push({
+        id: record.id, label: record.label, score: planned ? total * 0.6 : total,
+        ...(via && { via: via.text }), ...(planned && { planned: true as const }),
+      });
     }
     return hits.sort((a, b) => b.score - a.score || a.label.localeCompare(b.label)).slice(0, limit);
   }

@@ -1,0 +1,328 @@
+# Commands found by the census (catalog/census/) in several browsers' source code, that the
+# Phase 2 and 3 seed did not have. Lineage is attached by the build from catalog/census/names.yaml;
+# do not write it here.
+#
+# Phase numbers follow ROADMAP.md: 3 = modern baseline, 5 = power features, 6 = legacy.
+
+# ---- app ----
+- { id: app.close-window, label: Close Window, category: app, description: "Close the current window and all its tabs.", status: implement, phase: 3, platforms: [desktop] }
+- { id: app.minimize-window, label: Minimize Window, category: app, description: "Minimize the window to the taskbar or dock.", status: implement, phase: 3, platforms: [desktop] }
+- { id: app.maximize-window, label: Maximize Window, aliases: [Zoom Window], category: app, description: "Make the window fill the screen.", status: implement, phase: 3, platforms: [desktop] }
+- { id: app.hide, label: Hide Application, category: app, description: "Hide all browser windows without closing them.", status: implement, phase: 3, platforms: [desktop] }
+
+# ---- file ----
+- { id: file.send-link, label: Email Link, aliases: [Send Link, Send Page, Mail To], category: file, description: "Start a message in the mail program containing the address of this page.", status: implement, phase: 3, platforms: [desktop], requires: [external-app] }
+- { id: file.page-setup, label: Page Setup, aliases: [Print Setup], category: file, description: "Choose paper size, orientation and margins for printing.", status: implement, phase: 3, platforms: [desktop] }
+- { id: file.print-preview, label: Print Preview, category: file, description: "Show how the page will look when printed.", status: implement, phase: 3, platforms: [desktop] }
+
+# ---- edit ----
+- { id: edit.delete, label: Delete, category: edit, description: "Delete the selection.", status: implement, phase: 3, platforms: [desktop] }
+- { id: edit.paste-and-go, label: Paste and Go, aliases: [Paste and Search], category: edit, description: "Paste the clipboard into the address bar and load it.", status: implement, phase: 3, platforms: [desktop, android], requires: [clipboard, network] }
+- { id: edit.paste-match-style, label: Paste and Match Style, aliases: [Paste as Plain Text], category: edit, description: "Paste the clipboard text without its formatting.", status: implement, phase: 3, platforms: [desktop], requires: [clipboard] }
+- { id: edit.copy-page-url, label: Copy Page Address, aliases: [Copy URL, Copy Location], category: edit, description: "Copy the address of the current page.", status: implement, phase: 3, platforms: [desktop, android], requires: [clipboard] }
+- { id: edit.text-direction, label: Switch Text Direction, aliases: [Writing Direction], category: edit, description: "Switch the text direction of the field being edited between left-to-right and right-to-left.", status: implement, phase: 5, platforms: [desktop] }
+
+# ---- view ----
+- { id: view.page-style-none, label: No Page Style, aliases: [No Style, Disable Page Style], category: view, description: "Show the page without its style sheets.", status: implement, phase: 5, platforms: [desktop] }
+- { id: view.page-style-basic, label: Basic Page Style, aliases: [Persistent Style Only], category: view, description: "Use only the page's default style sheet and ignore alternates.", status: implement, phase: 5, platforms: [desktop] }
+- { id: view.page-direction, label: Switch Page Direction, category: view, description: "Switch the whole page between left-to-right and right-to-left layout.", status: implement, phase: 5, platforms: [desktop] }
+- { id: view.reader-mode, label: Reader View, aliases: [Distill Page, Reader Mode], category: view, description: "Show the main text of the page without navigation and clutter.", status: implement, phase: 3, platforms: [desktop, android] }
+- { id: view.status-bar, label: Status Bar, category: view, description: "Show or hide the status bar at the bottom of the window.", status: implement, phase: 3, platforms: [desktop] }
+- { id: view.toggle-sidebar, label: Sidebar, category: view, description: "Show or hide the sidebar.", status: implement, phase: 5, platforms: [desktop] }
+- { id: view.toggle-bookmarks-bar, label: Bookmarks Bar, aliases: [Personal Toolbar, Show Bookmarks Bar], category: view, description: "Show or hide the row of bookmarks under the address bar.", status: implement, phase: 3, platforms: [desktop] }
+- { id: view.scroll-up, label: Scroll Up, category: view, description: "Scroll the page up by a few lines.", status: implement, phase: 5, platforms: [desktop] }
+- { id: view.scroll-down, label: Scroll Down, category: view, description: "Scroll the page down by a few lines.", status: implement, phase: 5, platforms: [desktop] }
+- { id: view.scroll-left, label: Scroll Left, category: view, description: "Scroll the page left.", status: implement, phase: 5, platforms: [desktop] }
+- { id: view.scroll-right, label: Scroll Right, category: view, description: "Scroll the page right.", status: implement, phase: 5, platforms: [desktop] }
+- { id: view.scroll-page-up, label: Page Up, aliases: [Scroll Page Up], category: view, description: "Scroll the page up by one screen.", status: implement, phase: 5, platforms: [desktop] }
+- { id: view.scroll-page-down, label: Page Down, aliases: [Scroll Page Down], category: view, description: "Scroll the page down by one screen.", status: implement, phase: 5, platforms: [desktop] }
+
+# ---- nav ----
+- { id: nav.up, label: Up One Level, aliases: [Go Up, Parent Directory], category: nav, description: "Go to the parent of the current address.", status: implement, phase: 5, platforms: [desktop] }
+
+# ---- tab ----
+- { id: tab.close-others, label: Close Other Tabs, category: tab, description: "Close every tab except this one.", status: implement, phase: 3, platforms: [desktop, android] }
+- { id: tab.move-left, label: Move Tab Left, aliases: [Move Tab Previous], category: tab, description: "Move this tab one place to the left.", status: implement, phase: 3, platforms: [desktop] }
+- { id: tab.move-right, label: Move Tab Right, aliases: [Move Tab Next], category: tab, description: "Move this tab one place to the right.", status: implement, phase: 3, platforms: [desktop] }
+- { id: tab.move-to-new-window, label: Move Tab to New Window, aliases: [Detach Tab], category: tab, description: "Move this tab into a window of its own.", status: implement, phase: 3, platforms: [desktop] }
+- { id: tab.select-last, label: Last Tab, aliases: [Select Last Tab], category: tab, description: "Switch to the rightmost tab.", status: implement, phase: 3, platforms: [desktop] }
+- { id: tab.open-link-in-window, label: Open Link in New Window, category: tab, description: "Open a link in a new window.", status: implement, phase: 3, platforms: [desktop], requires: [network], args: [{ name: url, type: url }] }
+- { id: tab.toggle-vertical, label: Vertical Tabs, aliases: [Tabs on the Side], category: tab, description: "Show the tab strip down the side of the window.", status: implement, phase: 5, platforms: [desktop] }
+
+# ---- bookmark ----
+- { id: bookmark.add-all-tabs, label: Bookmark All Tabs, aliases: [Bookmark Open Tabs], category: bookmark, description: "Bookmark every open tab in one folder.", status: implement, phase: 3, platforms: [desktop, android] }
+
+# ---- history ----
+- { id: history.restore-session, label: Restore Previous Session, aliases: [Restore Last Session], category: history, description: "Reopen the windows and tabs that were open when the browser last closed.", status: implement, phase: 3, platforms: [desktop, android] }
+
+# ---- page ----
+- { id: page.translate, label: Translate Page, category: page, description: "Translate the page into your language.", status: implement, phase: 5, platforms: [desktop, android], requires: [network] }
+
+# ---- tools ----
+- { id: tools.task-manager, label: Task Manager, aliases: [Process Manager], category: tools, description: "Show the memory and processor use of each tab and extension.", status: implement, phase: 5, platforms: [desktop] }
+- { id: tools.take-screenshot, label: Take Screenshot, aliases: [Capture Page], category: tools, description: "Capture an image of the page or a part of it.", status: implement, phase: 5, platforms: [desktop, android] }
+- { id: tools.manage-extensions, label: Extensions, aliases: [Add-ons, Manage Extensions], category: tools, description: "Show installed extensions and turn them on or off.", status: implement, phase: 5, platforms: [desktop] }
+- { id: tools.preferences, label: Preferences, aliases: [Options, Settings, Internet Options], category: tools, description: "Open the browser settings.", status: implement, phase: 3, platforms: [desktop, android] }
+- { id: tools.search-engines, label: Manage Search Engines, aliases: [Edit Search Engines], category: tools, description: "Add, edit and remove the search engines the address bar can use.", status: implement, phase: 3, platforms: [desktop] }
+- { id: tools.import-settings, label: Import from Another Browser, aliases: [Import Bookmarks and Settings], category: tools, description: "Copy bookmarks, history and passwords from another browser.", status: implement, phase: 3, platforms: [desktop], requires: [filesystem] }
+- { id: tools.view-passwords, label: Saved Passwords, aliases: [Password Manager], category: tools, description: "Show and manage saved passwords.", status: implement, phase: 3, platforms: [desktop, android], requires: [credentials] }
+- { id: tools.work-offline, label: Work Offline, category: tools, description: "Stop using the network and show only pages already saved on this computer.", status: implement, phase: 5, platforms: [desktop] }
+- { id: tools.dev-tools-console, label: JavaScript Console, aliases: [Error Console, Web Console], category: tools, description: "Open the developer tools at the console.", status: implement, phase: 3, platforms: [desktop] }
+
+# ---- input ----
+- { id: input.focus-search, label: Focus Search Box, category: input, description: "Move the cursor to the search box.", status: implement, phase: 3, platforms: [desktop] }
+- { id: input.focus-toolbar, label: Focus Toolbar, category: input, description: "Move keyboard focus to the toolbar.", status: implement, phase: 3, platforms: [desktop] }
+- { id: input.focus-menubar, label: Focus Menu Bar, category: input, description: "Move keyboard focus to the menu bar.", status: implement, phase: 3, platforms: [desktop] }
+- { id: input.focus-bookmarks, label: Focus Bookmarks Bar, category: input, description: "Move keyboard focus to the bookmarks bar.", status: implement, phase: 3, platforms: [desktop] }
+- { id: input.focus-next-pane, label: Focus Next Pane, category: input, description: "Move keyboard focus to the next part of the window.", status: implement, phase: 3, platforms: [desktop] }
+- { id: input.focus-previous-pane, label: Focus Previous Pane, category: input, description: "Move keyboard focus to the previous part of the window.", status: implement, phase: 3, platforms: [desktop] }
+
+# ---- help ----
+- { id: help.feedback, label: Send Feedback, aliases: [Report an Issue], category: help, description: "Report a problem or send a suggestion.", status: implement, phase: 3, platforms: [desktop, android] }
+
+# ======== second batch: found in menu-based sources (Mosaic, Firefox, SeaMonkey, Falkon, Konqueror, Otter, Ladybird, Dillo) ========
+
+# ---- app ----
+- { id: app.duplicate-window, label: Duplicate Window, aliases: [Clone Window, Clone], category: app, description: Open a second window showing the same page., status: implement, phase: 3, platforms: [desktop] }
+- { id: app.close-other-windows, label: Close Other Windows, category: app, description: Close every window except this one., status: implement, phase: 3, platforms: [desktop] }
+
+# ---- view ----
+- { id: view.redraw, label: Redraw Page, aliases: [Refresh Current], category: view, description: "Draw the page again from the copy already loaded, without fetching it.", status: implement, phase: 5, platforms: [desktop] }
+- { id: view.customize-toolbar, label: Customize Toolbar, category: view, description: "Add, remove and rearrange toolbar buttons.", status: implement, phase: 4, platforms: [desktop] }
+- { id: view.zoom-text-only, label: Zoom Text Only, category: view, description: "Make zoom change the size of text but not of images.", status: implement, phase: 5, platforms: [desktop] }
+- { id: view.repair-text-encoding, label: Repair Text Encoding, aliases: [Character Encoding], category: view, description: "Show the page again using a different character encoding when the text looks garbled.", status: implement, phase: 3, platforms: [desktop] }
+- { id: view.menu-bar, label: Menu Bar, aliases: [Show Menubar], category: view, description: "Show or hide the menu bar.", status: implement, phase: 3, platforms: [desktop] }
+- { id: view.tab-bar, label: Tab Bar, aliases: [Show Tab Bar], category: view, description: "Show or hide the tab strip.", status: implement, phase: 3, platforms: [desktop] }
+- { id: view.force-dark, label: Force Dark Mode, category: view, description: "Draw pages with a dark colour scheme even if they do not offer one.", status: implement, phase: 5, platforms: [desktop, android] }
+- { id: view.text-font, label: Text Font and Size, aliases: [Fonts], category: view, description: "Choose the typeface and size used for page text.", status: implement, phase: 5, platforms: [desktop] }
+- { id: view.link-underline, label: Link Underlines, aliases: [Anchor Underlines], category: view, description: "Choose how links are underlined, from none to heavy.", status: implement, phase: 5, platforms: [desktop] }
+- { id: view.page-colors, label: Use Page Colors, aliases: [Body Color], category: view, description: "Use the colours a page asks for, or the browser's own.", status: implement, phase: 5, platforms: [desktop] }
+- { id: view.background-images, label: Background Images, aliases: [Body Images], category: view, description: "Show or hide images drawn behind page text.", status: implement, phase: 5, platforms: [desktop] }
+- { id: view.delay-images, label: Delay Image Loading, category: view, description: "Load pages without images until they are asked for.", status: implement, phase: 5, platforms: [desktop] }
+- { id: view.load-images, label: Load Images, aliases: [Load Images in Current Page], category: view, description: "Fetch the images of the current page that were held back.", status: implement, phase: 5, platforms: [desktop] }
+
+# ---- nav ----
+- { id: nav.rewind, label: Rewind, aliases: [Rewind Back], category: nav, description: "Go back to the first page of this site that you visited in this tab.", status: implement, phase: 5, platforms: [desktop] }
+- { id: nav.fast-forward, label: Fast Forward, aliases: [Rewind Forward], category: nav, description: "Go to the page the site most likely wants you to read next, or to the last page in this tab's history.", status: implement, phase: 5, platforms: [desktop] }
+
+# ---- tab ----
+- { id: tab.new-private, label: New Private Tab, category: tab, description: "Open a tab that keeps no history or cookies.", status: implement, phase: 3, platforms: [desktop] }
+- { id: tab.show-all, label: Show All Tabs, aliases: [Tab Overview], category: tab, description: "Show every open tab at once.", status: implement, phase: 5, platforms: [desktop, android] }
+- { id: tab.search, label: Search Tabs, category: tab, description: "Find an open tab by its title or address.", status: implement, phase: 3, platforms: [desktop] }
+- { id: tab.close-to-end, label: Close Tabs to the Right, aliases: [Close Tabs to the End], category: tab, description: "Close every tab to the right of this one.", status: implement, phase: 3, platforms: [desktop, android] }
+- { id: tab.split-horizontal, label: Split View Left/Right, aliases: [Split View Horizontally], category: tab, description: "Show two pages side by side in one window.", status: implement, phase: 5, platforms: [desktop] }
+- { id: tab.split-vertical, label: Split View Top/Bottom, aliases: [Split View Vertically], category: tab, description: "Show two pages one above the other in one window.", status: implement, phase: 5, platforms: [desktop] }
+- { id: tab.close-split, label: Close Split View, aliases: [Remove Active View], category: tab, description: "Close one half of a split view.", status: implement, phase: 5, platforms: [desktop] }
+- { id: tab.open-image-in-window, label: Open Image in New Window, category: tab, description: "Open an image by itself in a new window.", status: implement, phase: 3, platforms: [desktop], requires: [network], args: [{ name: url, type: url }] }
+
+# ---- bookmark ----
+- { id: bookmark.link, label: Bookmark This Link, category: bookmark, description: "Bookmark the page a link leads to without opening it.", status: implement, phase: 3, platforms: [desktop, android], args: [{ name: url, type: url }] }
+- { id: bookmark.search, label: Search Bookmarks, category: bookmark, description: "Search bookmarks by title or address.", status: implement, phase: 3, platforms: [desktop, android] }
+
+# ---- history ----
+- { id: history.clear, label: Clear History, aliases: [Clear Global History], category: history, description: "Delete the list of pages visited.", status: implement, phase: 3, platforms: [desktop, android], requires: [history] }
+- { id: history.search, label: Search History, category: history, description: "Search the pages visited by title or address.", status: implement, phase: 3, platforms: [desktop, android] }
+- { id: history.most-visited, label: Most Often Visited, aliases: [Top Sites], category: history, description: "Show the pages visited most often.", status: implement, phase: 5, platforms: [desktop, android] }
+- { id: history.save-session, label: Save Session, aliases: [Save Current Session], category: history, description: "Save the open windows and tabs under a name.", status: implement, phase: 5, platforms: [desktop] }
+- { id: history.manage-sessions, label: Manage Sessions, aliases: [Sessions], category: history, description: "Open, rename and delete saved sessions.", status: implement, phase: 5, platforms: [desktop] }
+
+# ---- page ----
+- { id: page.annotate, label: Annotate, aliases: [Add Annotation], category: page, description: "Attach a note to the current page that is shown whenever you return to it.", status: implement, phase: 7, platforms: [desktop] }
+- { id: page.annotation-edit, label: Edit This Annotation, category: page, description: "Change the note attached to this page.", status: implement, phase: 7, platforms: [desktop] }
+- { id: page.annotation-delete, label: Delete This Annotation, category: page, description: "Remove the note attached to this page.", status: implement, phase: 7, platforms: [desktop] }
+- { id: page.links-list, label: List of Links, aliases: [Document Links, List Links], category: page, description: "List every link on the page.", status: implement, phase: 5, platforms: [desktop] }
+- { id: page.edit-source, label: Edit Source, category: page, description: "Edit the HTML source of the page in a text editor.", status: implement, phase: 6, platforms: [desktop], requires: [filesystem] }
+- { id: page.submit-form, label: Submit Form, category: page, description: "Send the form the pointer is over.", status: implement, phase: 5, platforms: [desktop] }
+- { id: page.reset-form, label: Reset Form, category: page, description: "Clear the form the pointer is over to its starting values.", status: implement, phase: 5, platforms: [desktop] }
+
+# ---- edit ----
+- { id: edit.copy-image-location, label: Copy Image Address, aliases: [Copy Image Location], category: edit, description: "Copy the address of an image.", status: implement, phase: 3, platforms: [desktop, android], requires: [clipboard], args: [{ name: url, type: url }] }
+
+# ---- tools ----
+- { id: tools.proxy-settings, label: Proxy Settings, aliases: [Proxy List, No Proxy List], category: tools, description: "Choose which sites are reached through a proxy server and which directly.", status: implement, phase: 3, platforms: [desktop] }
+- { id: tools.safe-mode, label: Troubleshoot Mode, aliases: [Safe Mode], category: tools, description: "Restart the browser with extensions and customizations turned off.", status: implement, phase: 5, platforms: [desktop] }
+
+# ---- privacy ----
+- { id: privacy.clear-cache, label: Clear Cache, aliases: [Flush Image Cache], category: privacy, description: "Delete the saved copies of pages and images.", status: implement, phase: 3, platforms: [desktop, android] }
+- { id: privacy.clear-passwords, label: Clear Saved Logins, aliases: [Flush Password Cache], category: privacy, description: "Forget the user names and passwords given for web sites this session.", status: implement, phase: 3, platforms: [desktop, android] }
+- { id: privacy.cookies, label: Cookies, aliases: [Cookies Manager, Cookie Jar], category: privacy, description: "Show, search and delete cookies.", status: implement, phase: 3, platforms: [desktop, android] }
+- { id: privacy.force-https, label: Force HTTPS, category: privacy, description: "Use encrypted connections for every site that offers them.", status: implement, phase: 3, platforms: [desktop, android] }
+- { id: privacy.report-deceptive-site, label: Report Deceptive Site, aliases: [Report Phishing], category: privacy, description: "Tell the browser maker that this site is trying to trick people.", status: implement, phase: 5, platforms: [desktop] }
+
+# ---- help ----
+- { id: help.contents, label: Help Contents, aliases: [Get Help, Manual], category: help, description: "Open the user manual.", status: implement, phase: 3, platforms: [desktop, android] }
+- { id: help.whats-new, label: What's New, category: help, description: "Show what changed in this version.", status: implement, phase: 3, platforms: [desktop, android] }
+- { id: help.faq, label: Frequently Asked Questions, aliases: [FAQ], category: help, description: "Open the list of common questions and answers.", status: implement, phase: 3, platforms: [desktop, android] }
+- { id: help.report-broken-site, label: Report Broken Site, category: help, description: "Tell the project that a page does not work correctly.", status: implement, phase: 5, platforms: [desktop, android] }
+- { id: help.troubleshooting-info, label: Troubleshooting Information, category: help, description: "Show technical details useful when asking for help.", status: implement, phase: 3, platforms: [desktop] }
+
+# ---- module ----
+- { id: module.read-feeds, label: Read Feeds, aliases: [Subscribe to Feed], category: module, description: "Read the news feeds you have subscribed to.", status: implement, phase: 6, platforms: [desktop] }
+- { id: module.manage-feeds, label: Manage Feeds, category: module, description: "Add, remove and organize news feeds.", status: implement, phase: 6, platforms: [desktop] }
+
+# ======== third batch: keyboard-driven browsers (Vimium, qutebrowser, Lynx, w3m, ELinks) ========
+
+# ---- view: scrolling ----
+- { id: view.scroll-top, label: Scroll to Top, aliases: [Go to Top, Beginning of Document], category: view, description: "Scroll to the top of the page.", status: implement, phase: 5, platforms: [desktop] }
+- { id: view.scroll-bottom, label: Scroll to Bottom, aliases: [Go to Bottom, End of Document], category: view, description: "Scroll to the bottom of the page.", status: implement, phase: 5, platforms: [desktop] }
+- { id: view.scroll-half-page-up, label: Scroll Half Page Up, category: view, description: "Scroll up by half a screen.", status: implement, phase: 5, platforms: [desktop] }
+- { id: view.scroll-half-page-down, label: Scroll Half Page Down, category: view, description: "Scroll down by half a screen.", status: implement, phase: 5, platforms: [desktop] }
+- { id: view.scroll-far-left, label: Scroll to Left Edge, category: view, description: "Scroll all the way to the left.", status: implement, phase: 5, platforms: [desktop] }
+- { id: view.scroll-far-right, label: Scroll to Right Edge, category: view, description: "Scroll all the way to the right.", status: implement, phase: 5, platforms: [desktop] }
+- { id: view.scroll-percent, label: Scroll to Percentage, category: view, description: "Scroll to a given percentage of the page.", status: implement, phase: 5, platforms: [desktop], args: [{ name: percent, type: number }] }
+- { id: view.zoom-set, label: Set Zoom Level, category: view, description: "Set the zoom level to a given percentage.", status: implement, phase: 5, platforms: [desktop, android], args: [{ name: percent, type: number }] }
+
+# ---- nav ----
+- { id: nav.up-to-root, label: Go to Site Root, aliases: [Go to Root of URL Hierarchy], category: nav, description: "Go to the top of the current site, removing the path from the address.", status: implement, phase: 5, platforms: [desktop] }
+- { id: nav.next-page, label: Next Page, aliases: [Follow Next Link], category: nav, description: "Follow the link on the page labelled next or a right arrow.", status: implement, phase: 5, platforms: [desktop] }
+- { id: nav.previous-page, label: Previous Page, aliases: [Follow Previous Link], category: nav, description: "Follow the link on the page labelled previous or a left arrow.", status: implement, phase: 5, platforms: [desktop] }
+
+# ---- file ----
+- { id: file.open-location-new-tab, label: Open Location in New Tab, category: file, description: "Type an address or search and open it in a new tab.", status: implement, phase: 5, platforms: [desktop] }
+- { id: file.edit-url, label: Edit Address, aliases: [Edit Current URL], category: file, description: "Edit the address of the current page and load the result.", status: implement, phase: 5, platforms: [desktop] }
+
+# ---- edit ----
+- { id: edit.find-selection, label: Find Selected Text, category: edit, description: "Search the page for the text that is selected.", status: implement, phase: 5, platforms: [desktop] }
+- { id: edit.find-selection-back, label: Find Selected Text Backwards, category: edit, description: "Search backwards for the text that is selected.", status: implement, phase: 5, platforms: [desktop] }
+
+# ---- tab ----
+- { id: tab.open-copied-url, label: Open Copied Address in New Tab, category: tab, description: "Open the address on the clipboard in a new tab.", status: implement, phase: 5, platforms: [desktop], requires: [clipboard, network] }
+- { id: tab.visit-previous, label: Last Visited Tab, aliases: [Previously Visited Tab], category: tab, description: "Switch to the tab you were last using.", status: implement, phase: 5, platforms: [desktop] }
+- { id: tab.select-first, label: First Tab, aliases: [Select First Tab], category: tab, description: "Switch to the leftmost tab.", status: implement, phase: 5, platforms: [desktop] }
+- { id: tab.pin, label: Pin Tab, aliases: [Unpin Tab], category: tab, description: "Pin or unpin this tab. Pinned tabs are small and stay at the left.", status: implement, phase: 5, platforms: [desktop, android] }
+- { id: tab.mute, label: Mute Tab, aliases: [Unmute Tab], category: tab, description: "Mute or unmute the sound of this tab.", status: implement, phase: 5, platforms: [desktop, android] }
+- { id: tab.close-left, label: Close Tabs to the Left, category: tab, description: "Close every tab to the left of this one.", status: implement, phase: 5, platforms: [desktop] }
+
+# ---- bookmark ----
+- { id: bookmark.quick-add, label: Add Quickmark, aliases: [Save Quickmark], category: bookmark, description: "Give this page a short name you can type to return to it.", status: implement, phase: 5, platforms: [desktop], args: [{ name: name, type: string, optional: true }] }
+- { id: bookmark.quick-open, label: Open Quickmark, category: bookmark, description: "Open a page by its short name.", status: implement, phase: 5, platforms: [desktop], args: [{ name: name, type: string }] }
+- { id: bookmark.quick-delete, label: Delete Quickmark, category: bookmark, description: "Remove a quickmark.", status: implement, phase: 5, platforms: [desktop], args: [{ name: name, type: string }] }
+
+# ---- history ----
+- { id: history.load-session, label: Load Session, aliases: [Open Session], category: history, description: "Open a saved session.", status: implement, phase: 5, platforms: [desktop], args: [{ name: name, type: string, optional: true }] }
+- { id: history.delete-session, label: Delete Session, category: history, description: "Delete a saved session.", status: implement, phase: 5, platforms: [desktop], args: [{ name: name, type: string, optional: true }] }
+
+# ---- tools ----
+- { id: tools.download-retry, label: Retry Download, category: tools, description: "Try a failed download again.", status: implement, phase: 3, platforms: [desktop], args: [{ name: id, type: number }] }
+- { id: tools.download-delete, label: Delete Downloaded File, category: tools, description: "Delete a downloaded file from disk.", status: implement, phase: 3, platforms: [desktop], requires: [filesystem], args: [{ name: id, type: number }] }
+- { id: tools.run-external, label: Run External Command, aliases: [Spawn, Shell], category: tools, description: "Run a program on this computer, optionally with the page address as an argument.", status: implement, phase: 7, platforms: [desktop], requires: [external-app], args: [{ name: command, type: string }] }
+- { id: tools.run-javascript, label: Run JavaScript, aliases: [Evaluate JavaScript], category: tools, description: "Run a line of JavaScript in the current page.", status: implement, phase: 7, platforms: [desktop], requires: [page-script], args: [{ name: code, type: string }] }
+- { id: tools.macro-record, label: Record Macro, aliases: [Start Macro Recording], category: tools, description: "Start or stop recording the commands you run so they can be replayed.", status: implement, phase: 7, platforms: [desktop] }
+- { id: tools.macro-run, label: Run Macro, aliases: [Play Macro], category: tools, description: "Replay a recorded macro.", status: implement, phase: 7, platforms: [desktop], args: [{ name: name, type: string, optional: true }] }
+
+# ---- app ----
+- { id: app.restart, label: Restart Browser, category: app, description: "Restart the browser and reopen the tabs that were open.", status: implement, phase: 3, platforms: [desktop] }
+
+# ---- input: keyboard modes, hints, marks ----
+- { id: input.insert-mode, label: Insert Mode, aliases: [Enter Insert Mode], category: input, description: "Type into page fields without triggering browser commands.", status: implement, phase: 5, platforms: [desktop] }
+- { id: input.caret-mode, label: Caret Browsing, aliases: [Visual Mode, Selection Mode], category: input, description: "Move a text cursor through the page and select text with the keyboard.", status: implement, phase: 5, platforms: [desktop] }
+- { id: input.pass-next-key, label: Pass Next Key to Page, category: input, description: "Send the next key press to the page instead of treating it as a browser command.", status: implement, phase: 5, platforms: [desktop] }
+- { id: input.focus-input, label: Focus First Text Field, category: input, description: "Move the cursor into the first text field on the page.", status: implement, phase: 5, platforms: [desktop] }
+- { id: input.hints-open, label: Follow Link by Hint, aliases: [Link Hints, Hint Mode], category: input, description: "Label every link on the page with letters; typing a label follows that link.", status: implement, phase: 5, platforms: [desktop] }
+- { id: input.hints-new-tab, label: Follow Link by Hint in New Tab, category: input, description: "Follow a labelled link in a new background tab.", status: implement, phase: 5, platforms: [desktop] }
+- { id: input.hints-new-tab-foreground, label: Follow Link by Hint in New Tab and Switch, category: input, description: "Follow a labelled link in a new tab and switch to it.", status: implement, phase: 5, platforms: [desktop] }
+- { id: input.hints-multiple, label: Follow Several Links by Hint, category: input, description: "Open several labelled links in new tabs before returning to the page.", status: implement, phase: 5, platforms: [desktop] }
+- { id: input.hints-download, label: Download Link by Hint, category: input, description: "Download the file a labelled link points to.", status: implement, phase: 5, platforms: [desktop], requires: [network, filesystem] }
+- { id: input.hints-private, label: Follow Link by Hint in Private Window, category: input, description: "Open a labelled link in a private window.", status: implement, phase: 5, platforms: [desktop] }
+- { id: input.hints-copy-link, label: Copy Link by Hint, category: input, description: "Copy the address of a labelled link.", status: implement, phase: 5, platforms: [desktop], requires: [clipboard] }
+- { id: input.set-mark, label: Set Mark, aliases: [Create Mark], category: input, description: "Remember the current scroll position under a letter.", status: implement, phase: 5, platforms: [desktop] }
+- { id: input.jump-mark, label: Jump to Mark, aliases: [Go to Mark], category: input, description: "Return to a position remembered under a letter.", status: implement, phase: 5, platforms: [desktop] }
+
+# ======== fourth batch: terminal browsers (Lynx, w3m) ========
+
+- { id: input.next-link, label: Next Link, aliases: [Move to Next Hyperlink], category: input, description: "Move the highlight to the next link on the page.", status: implement, phase: 5, platforms: [desktop] }
+- { id: input.previous-link, label: Previous Link, aliases: [Move to Previous Hyperlink], category: input, description: "Move the highlight to the previous link on the page.", status: implement, phase: 5, platforms: [desktop] }
+- { id: input.first-link, label: First Link, aliases: [Move to First Hyperlink], category: input, description: "Move the highlight to the first link on the page.", status: implement, phase: 5, platforms: [desktop] }
+- { id: input.last-link, label: Last Link, aliases: [Move to Last Hyperlink], category: input, description: "Move the highlight to the last link on the page.", status: implement, phase: 5, platforms: [desktop] }
+- { id: input.follow-link, label: Follow Link, aliases: [Activate Link], category: input, description: "Open the page the highlighted link points to.", status: implement, phase: 5, platforms: [desktop] }
+- { id: view.toggle-source, label: Toggle Source View, aliases: [Show HTML Source], category: view, description: "Switch this tab between the rendered page and its HTML source.", status: implement, phase: 5, platforms: [desktop] }
+- { id: view.line-wrap, label: Wrap Long Lines, aliases: [Line Wrap], category: view, description: "Wrap long lines of text to the width of the window.", status: implement, phase: 5, platforms: [desktop] }
+- { id: edit.find-incremental, label: Incremental Find, aliases: [Find as You Type], category: edit, description: "Search the page while the search text is being typed.", status: implement, phase: 5, platforms: [desktop] }
+- { id: edit.external-editor, label: Edit Field in External Editor, aliases: [Edit Text Area], category: edit, description: "Edit the text of a form field in a text editor of your choice.", status: implement, phase: 7, platforms: [desktop], requires: [external-app] }
+- { id: file.open-external, label: Open in Another Program, aliases: [View in External Browser], category: file, description: "Open this page or link with another program or browser.", status: implement, phase: 5, platforms: [desktop], requires: [external-app] }
+- { id: app.suspend, label: Suspend Browser, aliases: [Send to Background], category: app, description: "Pause the browser and return to the shell it was started from.", status: omit, status_reason: "A terminal feature (the shell's job control); a graphical window is minimized instead.", phase: 6, platforms: [desktop] }
+
+# ======== fifth batch: Otter (Opera-style actions), ELinks managers, Chromium extras ========
+
+# ---- app ----
+- { id: app.tile-windows, label: Tile Windows, category: app, description: "Arrange all windows side by side so none overlaps another.", status: implement, phase: 5, platforms: [desktop] }
+- { id: app.cascade-windows, label: Cascade Windows, category: app, description: "Arrange all windows in an overlapping stack.", status: implement, phase: 5, platforms: [desktop] }
+- { id: app.reopen-window, label: Reopen Closed Window, category: app, description: "Bring back the window closed most recently.", status: implement, phase: 3, platforms: [desktop] }
+- { id: app.always-on-top, label: Always on Top, category: app, description: "Keep this window above all others.", status: implement, phase: 5, platforms: [desktop] }
+- { id: app.switch-language, label: Switch Language, aliases: [Application Language], category: app, description: "Choose the language of menus and dialogs.", status: implement, phase: 3, platforms: [desktop, android] }
+
+# ---- tab ----
+- { id: tab.peek, label: Peek at Tab, category: tab, description: "Show a tab in a small window without switching to it.", status: implement, phase: 5, platforms: [desktop] }
+- { id: tab.suspend, label: Suspend Tab, aliases: [Hibernate Tab], category: tab, description: "Free the memory a tab uses; it reloads when you return to it.", status: implement, phase: 5, platforms: [desktop] }
+- { id: tab.clear-history, label: Clear Tab History, category: tab, description: "Forget the back and forward history of this tab only.", status: implement, phase: 5, platforms: [desktop] }
+- { id: tab.close-private, label: Close Private Tabs, category: tab, description: "Close every private tab.", status: implement, phase: 5, platforms: [desktop] }
+- { id: tab.close-private-now, label: Close Private Tabs Now, aliases: [Panic Button], category: tab, description: "Close every private tab and window at once, without asking.", status: implement, phase: 5, platforms: [desktop] }
+- { id: tab.reload-all, label: Reload All Tabs, category: tab, description: "Reload every open tab.", status: implement, phase: 5, platforms: [desktop] }
+- { id: tab.new-right, label: New Tab to the Right, category: tab, description: "Open a new tab next to this one instead of at the end.", status: implement, phase: 3, platforms: [desktop] }
+- { id: tab.send-to-device, label: Send Tab to Your Devices, aliases: [Send Tab to Self], category: tab, description: "Send this page to another device where you are signed in.", status: implement, phase: 7, platforms: [desktop, android], requires: [network] }
+- { id: tab.open-link-background, label: Open Link in Background Tab, category: tab, description: "Open a link in a new tab without switching to it.", status: implement, phase: 3, platforms: [desktop, android], requires: [network], args: [{ name: url, type: url }] }
+- { id: tab.open-link-private-tab, label: Open Link in Private Tab, category: tab, description: "Open a link in a new private tab.", status: implement, phase: 3, platforms: [desktop], requires: [network], args: [{ name: url, type: url }] }
+- { id: tab.open-link-private-window, label: Open Link in Private Window, category: tab, description: "Open a link in a new private window.", status: implement, phase: 3, platforms: [desktop], requires: [network], args: [{ name: url, type: url }] }
+- { id: tab.open-selection, label: Open Selection as Link, category: tab, description: "Open the selected text as an address in a new tab.", status: implement, phase: 5, platforms: [desktop], requires: [network] }
+
+# ---- nav ----
+- { id: nav.scheduled-reload, label: Reload Every, aliases: [Schedule Reload, Auto Refresh], category: nav, description: "Reload this page automatically at an interval you choose.", status: implement, phase: 5, platforms: [desktop], args: [{ name: seconds, type: number }] }
+- { id: nav.stop-scheduled-reload, label: Stop Scheduled Reload, category: nav, description: "Stop reloading this page automatically.", status: implement, phase: 5, platforms: [desktop] }
+
+# ---- edit ----
+- { id: edit.copy-plain-text, label: Copy as Plain Text, category: edit, description: "Copy the selection without its formatting.", status: implement, phase: 3, platforms: [desktop], requires: [clipboard] }
+- { id: edit.copy-media-url, label: Copy Media Address, aliases: [Copy Video URL, Copy Audio URL], category: edit, description: "Copy the address of a video or sound.", status: implement, phase: 3, platforms: [desktop], requires: [clipboard], args: [{ name: url, type: url }] }
+- { id: edit.unselect, label: Deselect, category: edit, description: "Clear the current selection.", status: implement, phase: 3, platforms: [desktop] }
+- { id: edit.spell-check, label: Check Spelling, aliases: [Check Spelling While Typing], category: edit, description: "Turn spell checking in text fields on or off.", status: implement, phase: 3, platforms: [desktop] }
+
+# ---- file ----
+- { id: file.save-media, label: Save Video As, aliases: [Save Audio As, Save Media As], category: file, description: "Download a video or sound from the page.", status: implement, phase: 3, platforms: [desktop], requires: [network, filesystem], args: [{ name: url, type: url }] }
+- { id: file.print-system, label: Print Using System Dialog, aliases: [Basic Print], category: file, description: "Print with the operating system's own print dialog.", status: implement, phase: 3, platforms: [desktop] }
+
+# ---- view ----
+- { id: view.toolbar, label: Toolbar, aliases: [Show Toolbar], category: view, description: "Show or hide the toolbar.", status: implement, phase: 3, platforms: [desktop] }
+- { id: view.lock-toolbars, label: Lock Toolbars, category: view, description: "Prevent toolbar buttons from being moved by accident.", status: implement, phase: 4, platforms: [desktop] }
+- { id: view.reset-toolbars, label: Reset Toolbars, category: view, description: "Put the toolbars back as they were when the browser was installed.", status: implement, phase: 4, platforms: [desktop] }
+- { id: view.show-full-urls, label: Always Show Full Addresses, category: view, description: "Show the whole address in the address bar instead of only the site name.", status: implement, phase: 3, platforms: [desktop] }
+- { id: view.live-captions, label: Live Captions, category: view, description: "Show captions for speech in audio and video.", status: implement, phase: 7, platforms: [desktop, android] }
+
+# ---- page ----
+- { id: page.link-qr-code, label: Show Link as QR Code, category: page, description: "Show a link as a QR code that a phone can scan.", status: implement, phase: 7, platforms: [desktop], args: [{ name: url, type: url }] }
+- { id: page.view-frame-source, label: View Frame Source, category: page, description: "Show the HTML source of the frame the pointer is over.", status: implement, phase: 5, platforms: [desktop] }
+- { id: page.reload-frame, label: Reload Frame, category: page, description: "Reload only the frame the pointer is over.", status: implement, phase: 5, platforms: [desktop] }
+- { id: page.reload-image, label: Reload Image, category: page, description: "Fetch an image again.", status: implement, phase: 5, platforms: [desktop], requires: [network] }
+- { id: page.image-properties, label: Image Properties, category: page, description: "Show the size, type and address of an image.", status: implement, phase: 5, platforms: [desktop] }
+- { id: page.media-play-pause, label: Play or Pause, category: page, description: "Play or pause the video or sound under the pointer.", status: implement, phase: 5, platforms: [desktop] }
+- { id: page.media-mute, label: Mute Media, category: page, description: "Mute or unmute the video or sound under the pointer.", status: implement, phase: 5, platforms: [desktop] }
+- { id: page.media-loop, label: Loop Media, category: page, description: "Repeat the video or sound under the pointer.", status: implement, phase: 5, platforms: [desktop] }
+- { id: page.media-speed, label: Playback Speed, category: page, description: "Change how fast the video or sound plays.", status: implement, phase: 5, platforms: [desktop] }
+- { id: page.media-controls, label: Show Media Controls, category: page, description: "Show or hide the play controls of a video or sound.", status: implement, phase: 5, platforms: [desktop] }
+- { id: page.certificate-info, label: Certificate Information, category: page, description: "Show who issued the site's security certificate and when it expires.", status: implement, phase: 3, platforms: [desktop] }
+
+# ---- bookmark ----
+- { id: bookmark.properties, label: Bookmark Properties, aliases: [Edit Bookmark], category: bookmark, description: "Change the name, address and folder of a bookmark.", status: implement, phase: 3, platforms: [desktop, android] }
+
+# ---- tools ----
+- { id: tools.set-default-browser, label: Make Default Browser, aliases: [Set as Default Browser], category: tools, description: "Make this browser open web links from other programs.", status: implement, phase: 3, platforms: [desktop], requires: [external-app] }
+- { id: tools.create-shortcut, label: Create Shortcut, aliases: [Add to Desktop], category: tools, description: "Put a shortcut to this page on the desktop or home screen.", status: implement, phase: 5, platforms: [desktop, android], requires: [filesystem] }
+- { id: tools.quick-preferences, label: Quick Preferences, category: tools, description: "Change the settings that affect the current site, such as images, scripts and pop-ups.", status: implement, phase: 5, platforms: [desktop] }
+- { id: tools.keyboard-shortcuts, label: Keyboard Shortcuts, aliases: [Key Bindings, Keybinding Manager], category: tools, description: "View and change keyboard shortcuts.", status: implement, phase: 3, platforms: [desktop] }
+
+# ---- privacy ----
+- { id: privacy.javascript, label: JavaScript, aliases: [Enable JavaScript], category: privacy, description: "Allow or block scripts on pages.", status: implement, phase: 3, platforms: [desktop, android] }
+- { id: privacy.referrer, label: Send Referrer, aliases: [Enable Referrer], category: privacy, description: "Allow or block telling a site which page you came from.", status: implement, phase: 3, platforms: [desktop, android] }
+- { id: privacy.content-blocking, label: Content Blocking, aliases: [Ad Blocker], category: privacy, description: "Block advertisements and trackers.", status: implement, phase: 5, platforms: [desktop, android] }
+- { id: privacy.site-preferences, label: Site Preferences, aliases: [Website Preferences], category: privacy, description: "Choose settings that apply only to the current site.", status: implement, phase: 5, platforms: [desktop] }
+
+# ---- input ----
+- { id: input.focus-content, label: Focus Page, aliases: [Focus Web Contents], category: input, description: "Move keyboard focus into the page.", status: implement, phase: 3, platforms: [desktop] }
+- { id: input.follow-link-number, label: Follow Link by Number, aliases: [Jump to Link], category: input, description: "Type the number shown beside a link to follow it.", status: implement, phase: 5, platforms: [desktop] }
+- { id: input.view-numbered-links, label: Number the Links, aliases: [Numbered Links], category: input, description: "Show a number beside every link so it can be chosen by typing.", status: implement, phase: 5, platforms: [desktop] }
+
+# ---- module ----
+- { id: module.notes, label: Notes, category: module, description: "Keep short notes, with the page they came from, in a panel beside the page.", status: implement, phase: 5, platforms: [desktop, android] }
+
+# ---- help ----
+- { id: help.check-for-updates, label: Check for Updates, category: help, description: "Find out whether a newer version is available.", status: implement, phase: 3, platforms: [desktop] }
+- { id: help.diagnostic-report, label: Diagnostic Report, aliases: [Troubleshooting Report], category: help, description: "Collect technical details to attach to a bug report.", status: implement, phase: 3, platforms: [desktop] }
+- { id: page.show-http-headers, label: Show HTTP Headers, aliases: [Header Info], category: page, description: "Show the protocol headers the server sent with this page.", status: implement, phase: 5, platforms: [desktop] }

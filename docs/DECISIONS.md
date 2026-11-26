@@ -53,6 +53,22 @@ D2 and D4 were adopted by building on them, following the roadmap's recommendati
 | B9 | Menu items that need arguments are generated in code, never placed in layout files (build-time rule) | A layout cannot supply arguments; the palette also hides such commands | Low |
 | B10 | Tabs that pages ask for (pop-ups, Open Link) are created only if the address is allowed | No empty tabs from refused requests; also prevented a Save Page hang | Low |
 
+## Decisions made in Phase 1 (command census)
+
+| # | Decision | Why | Cost to reverse |
+|---|---|---|---|
+| C1 | The census is read from browsers' own source code, never from memory or third-party summaries | Only GitHub's raw file host and `git ls-remote` are reachable from the build environment; and a citation anyone can re-check is worth more than a recollection | Low |
+| C2 | Every source is pinned to a full commit SHA, and the census file records each file's SHA-256 | Branches move; a citation must stay checkable | Low |
+| C3 | Census files are generated and never edited by hand; curation lives in `names/` and `overrides.yaml` | Re-extraction (new extractor, new source) cannot destroy judgement | Low |
+| C4 | Items are linked to commands by normalized name, with unique ownership enforced at build time, plus explicit per-item overrides | Name matching proposes cheaply; a human decides; two commands can never silently share a history | Medium: the name lists are the main curated asset |
+| C5 | An item can be reviewed and deliberately not linked (`command: none`, with a reason) | Records that a look-alike was examined and rejected (w3m `UNDO`, qutebrowser `save`), so it is not re-proposed | Low |
+| C6 | Hand-written lineage is kept but marked `recalled` and shown as "unverified" | Discarding true history would lose information; leaving it unmarked would present memory as evidence | Low |
+| C7 | Release years are entered by hand and documented as not derived from the source | The source cannot say when a version shipped; pretending it can would be false precision | Low |
+| C8 | Census files keep identifiers, labels and descriptions of at most 100 characters, never code | Facts for citation; no source code is copied into the repository | Low |
+| C9 | Closed-source browsers get no census lineage; they are listed in CENSUS.md as not covered | They cannot be read here, and Otter Browser (an Opera 12 style clone) is not Opera | n/a |
+| C10 | Menu items in compile-time conditions (`#ifdef VMS`) are included; rows under `#ifdef NOT_USED` are not | The first were commands on some builds; the second were never compiled | Low |
+| C11 | Unbuilt commands are marked "planned" in the palette and rank below built ones | 294 commands exist and 70 have handlers; hiding the rest would hide the project's purpose, ranking them equally would bury working commands | Low |
+
 ## Deviations from the Phase 0 documents
 
 - `docs/COMMAND-CATALOG.md` originally put `shortcuts`, `layouts` and `menu_path` on each command record. They moved to keymap and layout files (A2). The document has been updated.

@@ -38,6 +38,15 @@ export interface Lineage {
   versions?: string;
   menu?: string;
   year?: number;
+  /**
+   * `census`: read from the browser's source code; `ref` names the file and line.
+   * `recalled`: written from memory and not yet checked. Treat as a lead, not a fact.
+   */
+  source?: 'census' | 'recalled';
+  /** Source-native identifier, for census entries. */
+  key?: string;
+  /** `owner/repo@commit:path#Lline` for census entries. */
+  ref?: string;
 }
 
 export interface CommandRecord {

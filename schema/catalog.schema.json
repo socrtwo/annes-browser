@@ -38,7 +38,10 @@
               "browser": { "$ref": "#/definitions/text" },
               "versions": { "type": "string", "maxLength": 40 },
               "menu": { "type": "string", "maxLength": 200 },
-              "year": { "type": "integer", "minimum": 1990, "maximum": 2100 }
+              "year": { "type": "integer", "minimum": 1990, "maximum": 2100 },
+              "source": { "enum": ["census", "recalled"] },
+              "key": { "type": "string", "maxLength": 200 },
+              "ref": { "type": "string", "maxLength": 300 }
             }
           }
         },

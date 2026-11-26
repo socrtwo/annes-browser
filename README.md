@@ -2,7 +2,7 @@
 
 **Every menu command from 35 years of web browsers, plus new ones, in one searchable, customizable browser.**
 
-> Status: **Phase 3 in progress.** A working, hardened browser: tabs, generated menus in four layouts, command palette, remappable keys with a modal profile, find in page, bookmarks, history, downloads with warnings, private windows, permission prompts, Page Info, context menus, saved settings, a built-in Gopher client and Flash emulation. 74 of an expected 700–1,000 commands are catalogued. Linux-tested only; not ready for daily use.
+> Status: **Phase 3 in progress.** A working, hardened browser: tabs, generated menus in four layouts, command palette, remappable keys with a modal profile, find in page, bookmarks, history, downloads with warnings, private windows, permission prompts, Page Info, context menus, saved settings, a built-in Gopher client and Flash emulation. 294 commands are catalogued, with a history read from the source code of 23 browser versions (see [docs/CENSUS.md](docs/CENSUS.md)). Linux-tested only; not ready for daily use.
 
 ## Run it
 
@@ -13,6 +13,7 @@ npm install
 npm start            # build and launch
 npm run check        # typecheck, catalog validation, unit tests
 npm run smoke        # end-to-end security checks in a real window (Linux headless: xvfb-run -a npm run smoke)
+npm run census:verify  # re-check every census citation against browsers' source code (needs the network)
 ```
 
 Press `F2` for the command palette. The **Layout** menu switches era layouts and keyboard profiles.
@@ -58,6 +59,7 @@ Desktop (Windows, macOS, Linux) on Electron first, then Android on GeckoView. Se
 ```
 annes-browser/
 ├── catalog/            Command records, menu layouts, keymaps (YAML): the source of truth
+│   └── census/         What real browsers offered, read from their source code, and how it links to commands
 ├── schema/             JSON Schema for the compiled catalog
 ├── app/core/           All logic, no Electron: registry, keys, menus, policies, Gopher
 ├── app/main/           Electron main process: windows, sessions, protocol handlers
@@ -70,6 +72,7 @@ annes-browser/
     ├── SECURITY-MODEL.md   Threats, controls, and what is not built yet
     ├── DECISIONS.md        Decisions made, proposed, and waiting on the owner
     ├── INTEGRATIONS.md     Gopher, Ruffle; specifications for FTP and others
+    ├── CENSUS.md           What the census read, what is linked, the work queue (generated)
     ├── COMMAND-CATALOG.md  Catalog file formats
     └── HANDOFF.md          What to do next, and with which model
 ```

@@ -1,0 +1,135 @@
+# For each command: the normalized names (lower-case letters and digits only) under which browsers
+# in catalog/census/ offered it. Derived from item keys and labels by tools/census/names.ts:
+#   IDC_NEW_TAB -> newtab, "Open Link in New Tab" -> openlinkinnewtab, File/NewTab -> newtab.
+# A name may belong to only one command; settle single ambiguous items in overrides.yaml.
+# Names are added after reading the item's key and the source's own description. Nothing is guessed:
+# when a name is unclear it stays unmatched and appears in docs/CENSUS.md.
+
+# ---- app ----
+app.new-window: [newwindow, newnavigator, newwindowaction]
+app.new-private-window: [newprivatewindow, newincognitowindow, newwindowprivate]
+app.quit: [quit, exit, exitprogram, filequit]
+app.close-window: [closewindow]
+app.minimize-window: [minimizewindow]
+app.maximize-window: [maximizewindow]
+app.hide: [hideapp]
+
+# ---- file ----
+file.open-location: [openlocation, openurl, openweblocation, focuslocation, goto, opencurrenturl]
+file.open-file: [openfile, openlocaldocument, openlocal]
+file.save-page-as: [savepageas, savepage, savedocument, save]
+file.save-link: [savelinkas, contextcontextsavelinkas]
+file.save-image: [saveimageas, contextcontextsaveimageas]
+file.print: [print, printdocument]
+file.send-link: [sendlink, emailpagelocation, maildocument]
+file.page-setup: [pagesetup, printsetup]
+file.print-preview: [printpreview]
+
+# ---- edit ----
+edit.undo: [undo, contextcontextundo]
+edit.redo: [redo, contextcontextredo]
+edit.cut: [cut, contextcontextcut]
+edit.copy: [copy, contextcontextcopy]
+edit.paste: [paste, contextcontextpaste]
+edit.select-all: [selectall, contextcontextselectall]
+edit.delete: [delete, contextcontextdelete]
+edit.find: [find, findinpage, search, findincurrent]
+edit.find-next: [findnext, findagain, searchnext]
+edit.find-previous: [findprevious, findprev, searchprev, searchback]
+edit.copy-link: [copylinklocation, contextcontextcopylinklocation, copylinkaddress]
+edit.copy-image: [copyimage, contextcontextcopyimage]
+edit.paste-and-go: [pasteandgo]
+edit.paste-match-style: [pasteandmatchstyle, contextcontextpasteandmatchstyle]
+edit.copy-page-url: [copyurl]
+edit.text-direction: [textfielddirectionswap]
+
+# ---- view ----
+view.zoom-in: [zoomin, zoomenlarge, zoomplus]
+view.zoom-out: [zoomout, zoomreduce, zoomminus]
+view.zoom-reset: [zoomreset, actualsize, zoomnormal]
+view.full-screen: [fullscreen, itemfullscreen, fullscreenitem]
+view.page-source: [pagesource, viewsource, documentsource]
+view.page-style-none: [pagestylenostyle]
+view.page-style-basic: [pagestylepersistentonly]
+view.page-direction: [switchpagedirection, documentdirectionswap]
+view.reader-mode: [distillpage]
+view.status-bar: [statusbar]
+view.toggle-sidebar: [togglesidebar]
+view.toggle-bookmarks-bar: [showbookmarkbar, bookmarkbaralwaysshow]
+view.scroll-up: [scrollup]
+view.scroll-down: [scrolldown]
+view.scroll-left: [scrollleft]
+view.scroll-right: [scrollright]
+view.scroll-page-up: [scrollpageup]
+view.scroll-page-down: [scrollpagedown]
+
+# ---- nav ----
+nav.back: [back, goback]
+nav.forward: [forward, goforward]
+nav.reload: [reload, reloaddocument]
+nav.reload-hard: [reloadbypassingcache, reloadclearingcache, reloaddocumentandimages]
+nav.stop: [stop]
+nav.home: [home, homedocument]
+nav.go: [go]
+nav.up: [goup]
+
+# ---- tab ----
+tab.new: [newtab, newnavigatortab]
+tab.close: [closetab, tabclose]
+tab.next: [selectnexttab, nexttab, tabnext]
+tab.previous: [selectprevioustab, prevtab, tabprev]
+tab.duplicate: [duplicatetab, clonetab]
+tab.reopen-closed: [restoretab, reopenclosedtab, undoclosetab]
+tab.select: [selecttab0, selecttab1, selecttab2, selecttab3, selecttab4, selecttab5, selecttab6, selecttab7]
+tab.close-others: [closeothertabs]
+tab.move-left: [movetabprevious, tabmoveleft]
+tab.move-right: [movetabnext, tabmoveright]
+tab.move-to-new-window: [movetabtonewwindow]
+tab.select-last: [selectlasttab]
+tab.open-link: [openlinkinnewtab, contextcontextopenlinknewtab]
+tab.open-image: [openimageinnewtab, contextcontextopenimagenewtab, viewimage]
+tab.open-link-in-window: [openlinkinnewwindow, contextcontextopenlinknewwindow]
+tab.toggle-vertical: [toggleverticaltabs]
+
+# ---- bookmark ----
+bookmark.toggle: [addbookmark, bookmarkthispage, bookmarkpage, addcurrenttohotlist]
+bookmark.show: [bookmarkmanager, managebookmarks, bookmarks, showbookmarkmanager, hotlist]
+bookmark.add-all-tabs: [bookmarkalltabs, addbookmarktabs]
+
+# ---- history ----
+history.show: [history, showhistory, showallhistory, windowhistory, historylist]
+history.restore-session: [historyrestorelastsession]
+
+# ---- page ----
+page.info: [pageinfo, documentinfo, info]
+page.search-selection: [contextcontextsearchwebfor]
+page.translate: [translatepage, contextcontexttranslate]
+
+# ---- tools ----
+tools.dev-tools: [devtools, inspectpage, devtoolstoggle]
+tools.dev-tools-console: [devtoolsconsole]
+tools.inspect-element: [inspectelement, contextcontextinspectelement, devtoolsinspect]
+tools.downloads: [downloadmanager, opendownloads, showdownloads]
+tools.task-manager: [taskmanager]
+tools.take-screenshot: [takescreenshot]
+tools.manage-extensions: [manageextensions]
+tools.preferences: [preferences, options]
+tools.search-engines: [editsearchengines]
+tools.import-settings: [importsettings, importfromanotherbrowser]
+tools.view-passwords: [viewpasswords]
+tools.work-offline: [workoffline]
+
+# ---- privacy ----
+privacy.clear-data: [clearbrowsingdata, clearrecenthistory, sanitize]
+
+# ---- input ----
+input.focus-search: [focussearch]
+input.focus-toolbar: [focustoolbar]
+input.focus-menubar: [focusmenubar]
+input.focus-bookmarks: [focusbookmarks]
+input.focus-next-pane: [focusnextpane]
+input.focus-previous-pane: [focuspreviouspane]
+
+# ---- help ----
+help.about: [about, helpabout]
+help.feedback: [feedback]

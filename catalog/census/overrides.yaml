@@ -1,0 +1,47 @@
+# Single items whose name is ambiguous across browsers, settled by reading the item in its source.
+# Each entry names a census source id, the item's key, and the command it is an instance of.
+- { source: mosaic-2.7, key: mo_close_window, command: app.close-window }
+# The menu item "Close" in Firefox and SeaMonkey closes the current tab; in Mosaic it closed the window (above).
+- { source: firefox-current, key: menu_close, command: tab.close }
+- { source: seamonkey-2.0, key: menu_close, command: tab.close }
+- { source: seamonkey-current, key: menu_close, command: tab.close }
+
+# ---- reviewed against each source's own description of the item ----
+- { source: w3m-current, key: UNDO, command: none, why: "w3m's UNDO cancels the last cursor movement; it is not text-editing undo" }
+- { source: w3m-current, key: REDO, command: none, why: "w3m's REDO cancels the last UNDO of a cursor movement" }
+- { source: qutebrowser-current, key: undo, command: tab.reopen-closed }
+- { source: qutebrowser-current, key: save, command: none, why: "saves qutebrowser's configuration and state, not the page" }
+- { source: qutebrowser-current, key: open, command: nav.go }
+- { source: w3m-current, key: PRINT, command: file.save-page-as }
+- { source: lynx-2.7.1, key: HOME, command: view.scroll-top }
+- { source: lynx-2.8, key: HOME, command: view.scroll-top }
+- { source: lynx-current, key: HOME, command: view.scroll-top }
+- { source: vimium-current, key: scrollPageDown, command: view.scroll-half-page-down }
+- { source: vimium-current, key: scrollPageUp, command: view.scroll-half-page-up }
+
+# ---- Lynx and w3m: the same word means different things in the two ----
+- { source: lynx-2.7.1, key: NEXT, command: edit.find-next }
+- { source: lynx-2.8, key: NEXT, command: edit.find-next }
+- { source: lynx-current, key: NEXT, command: edit.find-next }
+- { source: lynx-current, key: PREV, command: edit.find-previous }
+- { source: w3m-current, key: NEXT, command: tab.next, why: "w3m NEXT switches to the next buffer (page), which the tab commands cover" }
+- { source: w3m-current, key: PREV, command: tab.previous }
+- { source: w3m-current, key: UP, command: view.scroll-up }
+- { source: w3m-current, key: DOWN, command: view.scroll-down }
+- { source: w3m-current, key: LEFT, command: view.scroll-left }
+- { source: w3m-current, key: RIGHT, command: view.scroll-right }
+- { source: w3m-current, key: INTERRUPT, command: none, why: "w3m INTERRUPT suspends w3m to the background (see SUSPEND)" }
+- { source: w3m-current, key: WRAP_TOGGLE, command: none, why: "wraps searches around the document; not line wrapping" }
+- { source: lynx-2.7.1, key: REFRESH, command: view.redraw }
+- { source: lynx-2.8, key: REFRESH, command: view.redraw }
+- { source: lynx-current, key: REFRESH, command: view.redraw }
+- { source: lynx-2.7.1, key: INTERRUPT, command: nav.stop }
+- { source: lynx-2.8, key: INTERRUPT, command: nav.stop }
+- { source: lynx-current, key: INTERRUPT, command: nav.stop }
+- { source: lynx-2.7.1, key: EDIT, command: page.edit-source }
+- { source: lynx-2.8, key: EDIT, command: page.edit-source }
+- { source: lynx-current, key: EDIT, command: page.edit-source }
+- { source: lynx-current, key: FIRST_LINK, command: none, why: "makes the first link on the current line current, not the first link on the page" }
+- { source: lynx-current, key: LAST_LINK, command: none, why: "makes the last link on the current line current, not the last link on the page" }
+- { source: w3m-current, key: MAIN_MENU, command: input.focus-menubar, why: "w3m MAIN_MENU pops up the menu; Lynx's MAIN_MENU returns to the home screen" }
+- { source: w3m-current, key: MENU, command: input.focus-menubar }

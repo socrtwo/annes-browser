@@ -1,0 +1,1506 @@
+source	key	label_or_note	menu_or_group	line
+mosaic-2.7	mo_cci	CCI	File	1516
+mosaic-2.7	mo_dtm_open_outport	Open DTM Outport	File	1519
+mosaic-2.7	mo_dtm_send_document	Broadcast Over DTM	File	1520
+mosaic-2.7	mo_kerberosv4_login	Kerberos v4 Login	File	1526
+mosaic-2.7	mo_kerberosv5_login	Kerberos v5 Login	File	1529
+mosaic-2.7	mo_binary_transfer	#Load to Local Disk	Options	1587
+mosaic-2.7	mo_table_support	#Table Support	Options	1589
+mosaic-2.7	mo_image_view_internal	#View Images Internally	Options	1594
+mosaic-2.7	mo_re_init	Reload Config Files	Options	1598
+mosaic-2.7	mo_all_hotlist_to_rbm	Add All Hotlist Entries to RBM	Navigate	1620
+mosaic-2.7	mo_all_hotlist_from_rbm	Remove All Hotlist Entries from RBM	Navigate	1621
+mosaic-2.7	mo_network_starting_points	Internet Starting Points	Navigate	1623
+mosaic-2.7	mo_internet_metaindex	Internet Resource Meta-Index	Navigate	1624
+mosaic-2.7	mo_mosaic_demopage	Demo	Help	1633
+mosaic-2.7	mo_help_onversion	Help on Version 2.7b5	Help	1635
+mosaic-2.7	mo_help_onwindow	On Window	Help	1636
+mosaic-2.7	mo_help_html	On HTML	Help	1639
+mosaic-2.7	mo_help_url	On URLS	Help	1640
+mosaic-2.7	mo_techsupport	Mail Tech Support	Help	1642
+mosaic-2.7	mo_cc	Comment Card	Help	1645
+mosaic-2.7	mo_audio_annotate	Audio Annotate	Annotate	1653
+mosaic-2.7	mo_news_fmt0	<Thread View	Thread Style	1662
+mosaic-2.7	mo_news_fmt1	<Article View	Thread Style	1663
+mosaic-2.7	mo_news_next	Next	News	1668
+mosaic-2.7	mo_news_prev	Prev	News	1669
+mosaic-2.7	mo_news_nextt	Next Thread	News	1670
+mosaic-2.7	mo_news_prevt	Prev Thread	News	1671
+mosaic-2.7	mo_news_index	Article Index	News	1672
+mosaic-2.7	mo_news_groups	Group Index	News	1673
+mosaic-2.7	mo_news_post	Post	News	1675
+mosaic-2.7	mo_news_follow	Followup	News	1676
+mosaic-2.7	mo_news_sub	Subscribe to Group	News	1678
+mosaic-2.7	mo_news_unsub	Unsubscribe Group	News	1679
+mosaic-2.7	mo_news_grp0	<Show All Groups	News	1681
+mosaic-2.7	mo_news_grp1	<Show Unread Subscribed Groups	News	1682
+mosaic-2.7	mo_news_grp2	<Show All Subscribed Groups	News	1683
+mosaic-2.7	mo_news_art0	<Show All Articles	News	1685
+mosaic-2.7	mo_news_art1	<Show Only Unread Articles	News	1686
+mosaic-2.7	mo_news_mread	Mark Group Read	News	1688
+mosaic-2.7	mo_news_munread	Mark Group Unread	News	1689
+mosaic-2.7	mo_news_maunread	Mark Article Unread	News	1690
+mosaic-2.7	mo_news_flush	Flush News Data	News	1692
+lynx-2.7.1	PIPE	pipe the current document to an external command		401
+lynx-2.7.1	ABORT	quit the browser unconditionally		403
+lynx-2.7.1	UP_TWO	go back two lines in the document		406
+lynx-2.7.1	DOWN_TWO	go forward two lines in the document		407
+lynx-2.7.1	UP_LINK	move up the page to a previous link		415
+lynx-2.7.1	DOWN_LINK	move down the page to another link		416
+lynx-2.7.1	RIGHT_LINK	move right to another link		417
+lynx-2.7.1	LEFT_LINK	move left to a previous link		418
+lynx-2.7.1	INDEX	display an index of potentially useful documents		425
+lynx-2.7.1	NOCACHE	force submission of form or link with no-cache		426
+lynx-2.7.1	INDEX_SEARCH	allow searching of an index		430
+lynx-2.7.1	COMMENT	send a comment to the author of the current document		433
+lynx-2.7.1	VLINKS	list links visited during the current Lynx session		440
+lynx-2.7.1	TRACE_TOGGLE	toggle tracing of browser operations		443
+lynx-2.7.1	IMAGE_TOGGLE	toggle handling of all images as links		444
+lynx-2.7.1	INLINE_TOGGLE	toggle pseudo-ALTs for inlines with no ALT string		445
+lynx-2.7.1	HEAD	send a HEAD request for the current document or link		446
+lynx-2.7.1	TOGGLE_HELP	show other commands in the novice help menu		448
+lynx-2.7.1	JUMP	go directly to a target document or action		449
+lynx-2.7.1	KEYMAP	display the current key map		450
+lynx-2.7.1	TOOLBAR	go to Toolbar or Banner in the current document		452
+lynx-2.7.1	HISTORICAL	toggle historical vs. valid/minimal comment parsing		453
+lynx-2.7.1	MINIMAL	toggle minimal vs. valid comment parsing		454
+lynx-2.7.1	SOFT_DQUOTES	toggle valid vs. soft double-quote parsing		455
+lynx-2.7.1	RAW_TOGGLE	toggle raw 8-bit translations or CJK mode ON or OFF		456
+lynx-2.7.1	DIRED_MENU	invoke File/Directory Manager, if available		459
+lynx-2.7.1	CREATE	create a new file or directory		463
+lynx-2.7.1	REMOVE	remove a file or directory		464
+lynx-2.7.1	MODIFY	modify the name or location of a file or directory		465
+lynx-2.7.1	TAG_LINK	tag a file or directory for later action		466
+lynx-2.7.1	UPLOAD	upload from your computer to the current directory		467
+lynx-2.7.1	INSTALL	install file or tagged files into a system area		468
+lynx-2.8	PIPE	pipe the current document to an external command		406
+lynx-2.8	ABORT	quit the browser unconditionally		408
+lynx-2.8	UP_TWO	go back two lines in the document		411
+lynx-2.8	DOWN_TWO	go forward two lines in the document		412
+lynx-2.8	UP_LINK	move up the page to a previous link		420
+lynx-2.8	DOWN_LINK	move down the page to another link		421
+lynx-2.8	RIGHT_LINK	move right to another link		422
+lynx-2.8	LEFT_LINK	move left to a previous link		423
+lynx-2.8	INDEX	display an index of potentially useful documents		430
+lynx-2.8	NOCACHE	force submission of form or link with no-cache		431
+lynx-2.8	INDEX_SEARCH	allow searching of an index		435
+lynx-2.8	COMMENT	send a comment to the author of the current document		438
+lynx-2.8	VLINKS	list links visited during the current Lynx session		445
+lynx-2.8	TRACE_TOGGLE	toggle tracing of browser operations		448
+lynx-2.8	TRACE_LOG	view trace log if started in the current session		449
+lynx-2.8	IMAGE_TOGGLE	toggle handling of all images as links		450
+lynx-2.8	INLINE_TOGGLE	toggle pseudo-ALTs for inlines with no ALT string		451
+lynx-2.8	HEAD	send a HEAD request for the current document or link		452
+lynx-2.8	TOGGLE_HELP	show other commands in the novice help menu		454
+lynx-2.8	JUMP	go directly to a target document or action		455
+lynx-2.8	KEYMAP	display the current key map		456
+lynx-2.8	TOOLBAR	go to Toolbar or Banner in the current document		458
+lynx-2.8	HISTORICAL	toggle historical vs. valid/minimal comment parsing		459
+lynx-2.8	MINIMAL	toggle minimal vs. valid comment parsing		460
+lynx-2.8	SOFT_DQUOTES	toggle valid vs. soft double-quote parsing		461
+lynx-2.8	RAW_TOGGLE	toggle raw 8-bit translations or CJK mode ON or OFF		462
+lynx-2.8	SWITCH_DTD	switch between two ways of parsing HTML		466
+lynx-2.8	ELGOTO	edit the current link's URL or ACTION and go to it		467
+lynx-2.8	DIRED_MENU	invoke File/Directory Manager, if available		472
+lynx-2.8	CREATE	create a new file or directory		476
+lynx-2.8	REMOVE	remove a file or directory		477
+lynx-2.8	MODIFY	modify the name or location of a file or directory		478
+lynx-2.8	TAG_LINK	tag a file or directory for later action		479
+lynx-2.8	UPLOAD	upload from your computer to the current directory		480
+lynx-2.8	INSTALL	install file or tagged files into a system area		481
+lynx-current	COMMAND	prompt for, execute a command		270
+lynx-current	ABORT	quit the browser unconditionally		309
+lynx-current	UP_TWO	go back two lines in the document		318
+lynx-current	DOWN_TWO	go forward two lines in the document		321
+lynx-current	LPOS_PREV_LINK	make previous link current, same column for input		351
+lynx-current	LPOS_NEXT_LINK	make next link current, same column for input		354
+lynx-current	FASTBACKW_LINK	previous link or text area, only stops on links		357
+lynx-current	FASTFORW_LINK	next link or text area, only stops on links		360
+lynx-current	UP_LINK	move up the page to a previous link		363
+lynx-current	DOWN_LINK	move down the page to another link		366
+lynx-current	RIGHT_LINK	move right to another link		369
+lynx-current	LEFT_LINK	move left to a previous link		372
+lynx-current	MOUSE_SUBMIT	DO NOT MAP: follow current link, submit		387
+lynx-current	SUBMIT	prompt and submit form		390
+lynx-current	RESET	reset fields on current form		393
+lynx-current	INDEX	display an index of potentially useful documents		408
+lynx-current	NOCACHE	force submission of form or link with no-cache		411
+lynx-current	INDEX_SEARCH	allow searching of an index		423
+lynx-current	COMMENT	send a comment to the author of the current document		435
+lynx-current	VLINKS	list links visited during the current Lynx session		456
+lynx-current	TRACE_TOGGLE	toggle tracing of browser operations		465
+lynx-current	TRACE_LOG	view trace log if started in the current session		468
+lynx-current	IMAGE_TOGGLE	toggle handling of all images as links		471
+lynx-current	INLINE_TOGGLE	toggle pseudo-ALTs for inlines with no ALT string		474
+lynx-current	HEAD	send a HEAD request for the current document or link		477
+lynx-current	TOGGLE_HELP	show other commands in the novice help menu		483
+lynx-current	JUMP	go directly to a target document or action		486
+lynx-current	EDITMAP	display the current edit-key map		489
+lynx-current	KEYMAP	display the current key map		492
+lynx-current	TOOLBAR	go to Toolbar or Banner in the current document		498
+lynx-current	HISTORICAL	toggle historical vs. valid/minimal comment parsing		501
+lynx-current	MINIMAL	toggle minimal vs. valid comment parsing		504
+lynx-current	SOFT_DQUOTES	toggle valid vs. soft double-quote parsing		507
+lynx-current	RAW_TOGGLE	toggle raw 8-bit translations or CJK mode ON or OFF		510
+lynx-current	SWITCH_DTD	switch between two ways of parsing HTML		522
+lynx-current	ELGOTO	edit the current link's URL or ACTION and go to it		525
+lynx-current	CHANGE_LINK	force reset of the current link on the page		528
+lynx-current	GROWTEXTAREA	add 5 new blank lines to the bottom of a textarea		537
+lynx-current	INSERTFILE	insert file into a textarea (just above cursorline)		540
+lynx-current	DIRED_MENU	invoke File/Directory Manager, if available		557
+lynx-current	CREATE	create a new file or directory		565
+lynx-current	REMOVE	remove a file or directory		568
+lynx-current	MODIFY	modify the name or location of a file or directory		571
+lynx-current	TAG_LINK	tag a file or directory for later action		574
+lynx-current	UPLOAD	upload from your computer to the current directory		577
+lynx-current	INSTALL	install file or tagged files into a system area		580
+lynx-current	CHANGE_CENTER	toggle center alignment in HTML TABLE		584
+lynx-current	CHDIR	change current directory		594
+lynx-current	PWD	print current directory		597
+lynx-current	NESTED_TABLES	toggle nested-table parsing on/off		621
+lynx-current	CACHE_JAR	examine list of cached documents		626
+lynx-current	MAXSCREEN_TOGGLE	toggle max screen and normal		631
+w3m-current	ABORT	Quit without confirmation		1
+w3m-current	ACCESSKEY	Pop up accesskey menu		2
+w3m-current	ALARM	Set alarm		4
+w3m-current	CENTER_H	Center on cursor column		8
+w3m-current	CENTER_V	Center on cursor line		9
+w3m-current	CLOSE_TAB_MOUSE	Close tab at mouse pointer		12
+w3m-current	COMMAND	Invoke w3m function(s)		13
+w3m-current	CURSOR_TOP	Move cursor to the top line on the screen		15
+w3m-current	CURSOR_MIDDLE	Move cursor to the middle line on the screen		16
+w3m-current	CURSOR_BOTTOM	Move cursor to the bottom line on the screen		17
+w3m-current	DEFAULT_CHARSET	Change the default character encoding		18
+w3m-current	DEFINE_KEY	Define a binding between a key stroke combination and a command		19
+w3m-current	DELETE_PREVBUF	Delete previous buffer (mainly for local CGI-scripts)		20
+w3m-current	DICT_WORD	Execute dictionary command (see README.dict)		21
+w3m-current	DICT_WORD_AT	Execute dictionary command for word at cursor		22
+w3m-current	EDIT_SCREEN	Edit rendered copy of document		28
+w3m-current	FRAME	Toggle rendering HTML frames		34
+w3m-current	GOTO_LINE	Go to the specified line		37
+w3m-current	GOTO_RELATIVE	Go to relative address		39
+w3m-current	LINE_BEGIN	Go to the beginning of the line		47
+w3m-current	LINE_END	Go to the end of the line		48
+w3m-current	LINE_INFO	Display current position in document		49
+w3m-current	LINK_MENU	Pop up link element menu		52
+w3m-current	LIST_MENU	Pop up menu for hyperlinks to browse to		54
+w3m-current	LOAD	Open local file in a new buffer		55
+w3m-current	MARK	Set/unset mark		57
+w3m-current	MARK_MID	Turn Message-ID-like strings into hyperlinks		58
+w3m-current	MARK_URL	Turn URL-like strings into hyperlinks		59
+w3m-current	MARK_WORD	Turn current word into hyperlink		60
+w3m-current	MENU_MOUSE	Pop up menu at mouse pointer		62
+w3m-current	MOUSE_TOGGLE	Toggle mouse support		63
+w3m-current	MOVE_DOWN	Cursor down		64
+w3m-current	MOVE_DOWN1	Cursor down. With edge touched, slide		65
+w3m-current	MOVE_LEFT	Cursor left		66
+w3m-current	MOVE_LEFT1	Cursor left. With edge touched, slide		67
+w3m-current	MOVE_LIST_MENU	Pop up menu to navigate between hyperlinks		68
+w3m-current	MOVE_MOUSE	Move cursor to mouse pointer		69
+w3m-current	MOVE_RIGHT	Cursor right		70
+w3m-current	MOVE_RIGHT1	Cursor right. With edge touched, slide		71
+w3m-current	MOVE_UP	Cursor up		72
+w3m-current	MOVE_UP1	Cursor up. With edge touched, slide		73
+w3m-current	MSGS	Display error messages		74
+w3m-current	NEXT_DOWN	Move downward to the next hyperlink		77
+w3m-current	NEXT_LEFT	Move left to the next hyperlink		79
+w3m-current	NEXT_LEFT_UP	Move left or upward to the next hyperlink		80
+w3m-current	NEXT_MARK	Go to the next mark		82
+w3m-current	NEXT_RIGHT	Move right to the next hyperlink		84
+w3m-current	NEXT_RIGHT_DOWN	Move right or downward to the next hyperlink		85
+w3m-current	NEXT_UP	Move upward to the next hyperlink		87
+w3m-current	NEXT_VISITED	Move to the next visited hyperlink		88
+w3m-current	NEXT_WORD	Move to the next word		89
+w3m-current	NOTHING	Do nothing		90
+w3m-current	NULL	Do nothing		91
+w3m-current	PEEK	Show current address		93
+w3m-current	PEEK_IMG	Show image address		94
+w3m-current	PEEK_LINK	Show target address		95
+w3m-current	PIPE_BUF	Pipe current buffer through a shell command and display output		96
+w3m-current	PREV_MARK	Go to the previous mark		101
+w3m-current	PREV_VISITED	Move to the previous visited hyperlink		104
+w3m-current	PREV_WORD	Move to the previous word		105
+w3m-current	REG_MARK	Mark all occurences of a pattern		111
+w3m-current	REINIT	Reload configuration file		112
+w3m-current	RESHAPE	Re-render document		114
+w3m-current	SELECT	Display buffer-stack panel		125
+w3m-current	SELECT_MENU	Pop up buffer-stack menu		126
+w3m-current	SETENV	Set environment variable		127
+w3m-current	SET_OPTION	Set option		128
+w3m-current	STOP_IMAGE	Stop loading and drawing of images		133
+w3m-current	SUBMIT	Submit form		134
+w3m-current	TAB_GOTO_RELATIVE	Open relative address in a new tab		137
+w3m-current	TAB_MENU	Pop up tab selection menu		140
+w3m-current	TAB_MOUSE	Select tab by mouse action		141
+elinks-current	main:auth-manager	Open authentication manager	main	12
+elinks-current	main:backspace-prefix	Backspace the last entered digit of the current prefix	main	13
+elinks-current	main:cache-manager	Open cache manager	main	15
+elinks-current	main:cache-minimize	Free unused cache entries	main	16
+elinks-current	main:clean-temporary-files	Remove temporary files	main	17
+elinks-current	main:cookies-load	Reload cookies file	main	19
+elinks-current	main:file-menu	Open the File menu	main	24
+elinks-current	main:formhist-manager	Open form history manager	main	28
+elinks-current	main:frame-external-command	Pass URI of current frame to external command	main	29
+elinks-current	main:frame-maximize	Maximize the current frame	main	30
+elinks-current	main:frame-next	Move to the next frame	main	31
+elinks-current	main:frame-prev	Move to the previous frame	main	32
+elinks-current	main:kill-backgrounded-connections	Kill all backgrounded connections	main	44
+elinks-current	main:link-dialog	Open link selection dialog	main	45
+elinks-current	main:link-download-resume	Attempt to resume download of the current link	main	48
+elinks-current	main:link-external-command	Pass URI of current link to external command	main	49
+elinks-current	main:link-follow-reload	Follow the current link, forcing reload of the target	main	51
+elinks-current	main:link-info	Show information about current link	main	52
+elinks-current	main:link-menu	Open the link context menu	main	53
+elinks-current	main:link-form-menu	Open the form fields menu	main	54
+elinks-current	main:lua-console	Open a Lua console	main	55
+elinks-current	main:macro-0	Macro 0	main	56
+elinks-current	main:macro-1	Macro 1	main	57
+elinks-current	main:macro-2	Macro 2	main	58
+elinks-current	main:macro-3	Macro 3	main	59
+elinks-current	main:macro-4	Macro 4	main	60
+elinks-current	main:macro-5	Macro 5	main	61
+elinks-current	main:macro-6	Macro 6	main	62
+elinks-current	main:macro-7	Macro 7	main	63
+elinks-current	main:macro-8	Macro 8	main	64
+elinks-current	main:macro-9	Macro 9	main	65
+elinks-current	main:mark-clipboard	Mark a corner of the clipboard rectangle	main	66
+elinks-current	main:move-current-top	Move downwards to put the current line at the top	main	70
+elinks-current	main:move-cursor-down	Move cursor down	main	71
+elinks-current	main:move-cursor-left	Move cursor left	main	72
+elinks-current	main:move-cursor-line-end	Move cursor to the end of the line	main	73
+elinks-current	main:move-cursor-line-start	Move cursor to the start of the line	main	74
+elinks-current	main:move-cursor-right	Move cursor right	main	75
+elinks-current	main:move-cursor-up	Move cursor up	main	76
+elinks-current	main:move-link-down	Move one link down	main	81
+elinks-current	main:move-link-down-line	Move to the next line with a link	main	82
+elinks-current	main:move-link-left	Move one link left	main	83
+elinks-current	main:move-link-left-line	Move one link left or to the previous link	main	84
+elinks-current	main:move-link-right	Move one link right	main	87
+elinks-current	main:move-link-right-line	Move one link right or to the next link	main	88
+elinks-current	main:move-link-up	Move one link up	main	89
+elinks-current	main:move-link-up-line	Move to the previous line with a link	main	90
+elinks-current	main:onload-oneshot	Text for exmode to execute once when document loading finished	main	93
+elinks-current	main:open-onion-location	Open the onion location link	main	100
+elinks-current	main:refresh-view	Refresh view for exmode	main	106
+elinks-current	main:resource-info	Show information about the currently used resources	main	111
+elinks-current	main:save-options	Save options	main	114
+elinks-current	main:show-term-options	Show terminal options dialog	main	127
+elinks-current	main:submit-form-reload	Submit form and reload	main	129
+elinks-current	main:tab-external-command	Pass URI of current tab to external command	main	132
+elinks-current	main:tab-menu	Open the tab menu	main	134
+elinks-current	main:terminal-resize	Open the terminal resize dialog	main	139
+elinks-current	main:toggle-display-images	Toggle displaying of links to images	main	141
+elinks-current	main:toggle-display-kitty	Toggle displaying of kitty images	main	142
+elinks-current	main:toggle-display-sixel	Toggle displaying of sixel images	main	143
+elinks-current	main:toggle-display-tables	Toggle rendering of tables	main	144
+elinks-current	main:toggle-document-width	Toggle use of document width	main	146
+elinks-current	main:toggle-ecmascript-keys	Toggle Ecmascript keyboard handling	main	148
+elinks-current	main:toggle-mouse	Toggle mouse handling	main	150
+elinks-current	main:toggle-plain-compress-empty-lines	Toggle plain renderer compression of empty lines	main	152
+elinks-current	main:view-image-in-document	View the current image in document	main	155
+elinks-current	menu:cancel	Cancel current state	menu	8
+elinks-current	menu:delete	Delete character under cursor	menu	9
+elinks-current	menu:down	Move cursor downwards	menu	10
+elinks-current	menu:end	Go to the end of the page/line	menu	11
+elinks-current	menu:enter	Follow the current link	menu	12
+elinks-current	menu:expand	Expand item	menu	13
+elinks-current	menu:home	Go to the start of the page/line	menu	14
+elinks-current	menu:left	Move the cursor left	menu	15
+elinks-current	menu:mark-item	Mark item	menu	16
+elinks-current	menu:next-item	Move to the next item	menu	17
+elinks-current	menu:page-down	Move downwards by a page	menu	18
+elinks-current	menu:page-up	Move upwards by a page	menu	19
+elinks-current	menu:previous-item	Move to the previous item	menu	20
+elinks-current	menu:redraw	Redraw the terminal	menu	21
+elinks-current	menu:right	Move the cursor right	menu	22
+elinks-current	menu:search	Search for a text pattern	menu	23
+elinks-current	menu:select	Select current highlighted item	menu	24
+elinks-current	menu:unexpand	Collapse item	menu	25
+elinks-current	menu:up	Move cursor upwards	menu	26
+elinks-current	edit:auto-complete	Attempt to auto-complete the input	edit	7
+elinks-current	edit:auto-complete-file	Attempt to auto-complete a local file	edit	8
+elinks-current	edit:auto-complete-unambiguous	Attempt to unambiguously auto-complete the input	edit	9
+elinks-current	edit:backspace	Delete character in front of the cursor	edit	10
+elinks-current	edit:beginning-of-buffer	Go to the first line of the buffer	edit	11
+elinks-current	edit:cancel	Cancel current state	edit	12
+elinks-current	edit:copy-clipboard	Copy text to clipboard	edit	13
+elinks-current	edit:cut-clipboard	Cut text to clipboard	edit	14
+elinks-current	edit:delete	Delete character under cursor	edit	15
+elinks-current	edit:down	Move cursor downwards	edit	16
+elinks-current	edit:end	Go to the end of the page/line	edit	17
+elinks-current	edit:end-of-buffer	Go to the last line of the buffer	edit	18
+elinks-current	edit:enter	Follow the current link	edit	19
+elinks-current	edit:home	Go to the start of the page/line	edit	20
+elinks-current	edit:kill-to-bol	Delete to beginning of line	edit	21
+elinks-current	edit:kill-to-eol	Delete to end of line	edit	22
+elinks-current	edit:kill-word-back	Delete backwards to start of word	edit	23
+elinks-current	edit:left	Move the cursor left	edit	24
+elinks-current	edit:move-backward-word	Move cursor before current word	edit	25
+elinks-current	edit:move-forward-word	Move cursor after current word	edit	26
+elinks-current	edit:next-item	Move to the next item	edit	27
+elinks-current	edit:open-external	Open in external editor	edit	28
+elinks-current	edit:paste-clipboard	Paste text from the clipboard	edit	29
+elinks-current	edit:previous-item	Move to the previous item	edit	30
+elinks-current	edit:redraw	Redraw the terminal	edit	31
+elinks-current	edit:right	Move the cursor right	edit	32
+elinks-current	edit:search-toggle-regex	Toggle regex matching (type-ahead searching)	edit	33
+elinks-current	edit:up	Move cursor upwards	edit	34
+dillo-2.0	view-page-source	View page Source	Context menu	313
+dillo-2.0	view-page-bugs	View page Bugs	Context menu	315
+dillo-2.0	find-text	Find Text	Context menu	322
+dillo-2.0	jump-to	Jump to	Context menu	325
+dillo-2.0	isolate-image	Isolate Image	Context menu	409
+dillo-2.0	load-image	Load image	Context menu	416
+dillo-2.0	bookmark-this-image	Bookmark this Image	Context menu	418
+dillo-2.0	link-menu	Link menu	Context menu	426
+dillo-2.0	validate-url-with-w3c	Validate URL with W3C	Context menu	502
+dillo-2.0	validate-url-with-wdg	Validate URL with WDG	Context menu	504
+dillo-2.0	about-bug-meter	About Bug Meter	Context menu	507
+dillo-current	view-page-source	View page source	Context menu	353
+dillo-current	view-page-bugs	View page bugs	Context menu	354
+dillo-current	view-stylesheets	View stylesheets	Context menu	355
+dillo-current	find-text	Find text	Context menu	358
+dillo-current	isolate-image	Isolate image	Context menu	624
+dillo-current	load-image	Load image	Context menu	628
+dillo-current	bookmark-this-image	Bookmark this image	Context menu	629
+dillo-current	link-menu	Link menu	Context menu	632
+dillo-current	close	Close	Context menu	717
+dillo-current	exit-dillo	Exit Dillo	Context menu	719
+dillo-current	validate-url-with-w3c-nu-validator-html5-only-	Validate URL with W3C Nu validator (HTML5 only)	Context menu	740
+dillo-current	validate-url-with-w3c-validator-html-4-01-and-older-	Validate URL with W3C validator (HTML 4.01 and older)	Context menu	742
+dillo-current	about-bug-meter	About bug meter	Context menu	744
+dillo-current	use-remote-css	Use remote CSS	Context menu	882
+dillo-current	use-embedded-css	Use embedded CSS	Context menu	883
+dillo-current	panel-size	Panel size	Context menu	891
+dillo-current	tiny	tiny	Context menu	892
+dillo-current	small	small	Context menu	893
+dillo-current	medium	medium	Context menu	894
+dillo-current	small-icons	small icons	Context menu	896
+chrome-3	IDC_ViewHost			16
+chrome-3	IDC_Plugin			17
+chrome-3	IDC_PluginHost			18
+chrome-3	IDC_NPObject			19
+chrome-3	IDC_PluginProcess			20
+chrome-3	IDC_PluginProcessHost			21
+chrome-3	IDC_ViewAll			22
+chrome-3	IDC_ViewNone			23
+chrome-3	IDC_ViewHostAll			24
+chrome-3	IDC_ViewHostNone			25
+chrome-3	IDC_PluginAll			26
+chrome-3	IDC_PluginNone			27
+chrome-3	IDC_NPObjectAll			28
+chrome-3	IDC_NPObjectNone			29
+chrome-3	IDC_PluginHostAll			30
+chrome-3	IDC_PluginHostNone			31
+chrome-3	IDC_DevToolsAgent			32
+chrome-3	IDC_DevToolsClient			33
+chrome-3	IDC_PROFILE_MENU		Window management commands	50
+chrome-3	IDC_NEW_WINDOW_PROFILE_0		Window management commands	53
+chrome-3	IDC_NEW_WINDOW_PROFILE_1		Window management commands	54
+chrome-3	IDC_NEW_WINDOW_PROFILE_2		Window management commands	55
+chrome-3	IDC_NEW_WINDOW_PROFILE_3		Window management commands	56
+chrome-3	IDC_NEW_WINDOW_PROFILE_4		Window management commands	57
+chrome-3	IDC_NEW_WINDOW_PROFILE_5		Window management commands	58
+chrome-3	IDC_NEW_WINDOW_PROFILE_6		Window management commands	59
+chrome-3	IDC_NEW_WINDOW_PROFILE_7		Window management commands	60
+chrome-3	IDC_NEW_WINDOW_PROFILE_8		Window management commands	61
+chrome-3	IDC_ALWAYS_ON_TOP		Window management commands	64
+chrome-3	IDC_SHOW_AS_TAB		Window management commands	80
+chrome-3	IDC_STAR		Page-related commands	85
+chrome-3	IDC_CLOSE_POPUPS		Page-related commands	87
+chrome-3	IDC_ENCODING_MENU		Page-related commands	90
+chrome-3	IDC_ENCODING_AUTO_DETECT		Page-related commands	95
+chrome-3	IDC_ENCODING_UTF8		Page-related commands	96
+chrome-3	IDC_ENCODING_UTF16LE		Page-related commands	97
+chrome-3	IDC_ENCODING_ISO88591		Page-related commands	98
+chrome-3	IDC_ENCODING_WINDOWS1252		Page-related commands	99
+chrome-3	IDC_ENCODING_GBK		Page-related commands	100
+chrome-3	IDC_ENCODING_GB18030		Page-related commands	101
+chrome-3	IDC_ENCODING_BIG5		Page-related commands	102
+chrome-3	IDC_ENCODING_BIG5HKSCS		Page-related commands	103
+chrome-3	IDC_ENCODING_KOREAN		Page-related commands	104
+chrome-3	IDC_ENCODING_SHIFTJIS		Page-related commands	105
+chrome-3	IDC_ENCODING_ISO2022JP		Page-related commands	106
+chrome-3	IDC_ENCODING_EUCJP		Page-related commands	107
+chrome-3	IDC_ENCODING_THAI		Page-related commands	108
+chrome-3	IDC_ENCODING_ISO885915		Page-related commands	109
+chrome-3	IDC_ENCODING_MACINTOSH		Page-related commands	110
+chrome-3	IDC_ENCODING_ISO88592		Page-related commands	111
+chrome-3	IDC_ENCODING_WINDOWS1250		Page-related commands	112
+chrome-3	IDC_ENCODING_ISO88595		Page-related commands	113
+chrome-3	IDC_ENCODING_WINDOWS1251		Page-related commands	114
+chrome-3	IDC_ENCODING_KOI8R		Page-related commands	115
+chrome-3	IDC_ENCODING_KOI8U		Page-related commands	116
+chrome-3	IDC_ENCODING_ISO88597		Page-related commands	117
+chrome-3	IDC_ENCODING_WINDOWS1253		Page-related commands	118
+chrome-3	IDC_ENCODING_ISO88594		Page-related commands	119
+chrome-3	IDC_ENCODING_ISO885913		Page-related commands	120
+chrome-3	IDC_ENCODING_WINDOWS1257		Page-related commands	121
+chrome-3	IDC_ENCODING_ISO88593		Page-related commands	122
+chrome-3	IDC_ENCODING_ISO885910		Page-related commands	123
+chrome-3	IDC_ENCODING_ISO885914		Page-related commands	124
+chrome-3	IDC_ENCODING_ISO885916		Page-related commands	125
+chrome-3	IDC_ENCODING_WINDOWS1254		Page-related commands	126
+chrome-3	IDC_ENCODING_ISO88596		Page-related commands	127
+chrome-3	IDC_ENCODING_WINDOWS1256		Page-related commands	128
+chrome-3	IDC_ENCODING_ISO88598		Page-related commands	129
+chrome-3	IDC_ENCODING_WINDOWS1255		Page-related commands	130
+chrome-3	IDC_ENCODING_WINDOWS1258		Page-related commands	131
+chrome-3	IDC_ENCODING_ISO88598I		Page-related commands	132
+chrome-3	IDC_ZOOM_MENU		Clipboard commands	146
+chrome-3	IDC_CREATE_SHORTCUTS		Clipboard commands	158
+chrome-3	IDC_DEVELOPER_MENU		Clipboard commands	159
+chrome-3	IDC_JS_CONSOLE		Clipboard commands	160
+chrome-3	IDC_SELECT_PROFILE		Clipboard commands	162
+chrome-3	IDC_NEW_PROFILE		Clipboard commands	163
+chrome-3	IDC_REPORT_BUG		Clipboard commands	164
+chrome-3	IDC_HELP_PAGE		Clipboard commands	175
+chrome-3	IDC_SPELLCHECK_SUGGESTION_0		Clipboard commands	179
+chrome-3	IDC_SPELLCHECK_SUGGESTION_1		Clipboard commands	180
+chrome-3	IDC_SPELLCHECK_SUGGESTION_2		Clipboard commands	181
+chrome-3	IDC_SPELLCHECK_SUGGESTION_3		Clipboard commands	182
+chrome-3	IDC_SPELLCHECK_SUGGESTION_4		Clipboard commands	183
+chrome-3	IDC_SPELLCHECK_MENU		Clipboard commands	185
+chrome-3	IDC_SPELLCHECK_LANGUAGES_FIRST		Clipboard commands	188
+chrome-3	IDC_SPELLCHECK_LANGUAGES_LAST		Clipboard commands	189
+chrome-3	IDC_CHECK_SPELLING_OF_THIS_FIELD		Clipboard commands	190
+chrome-3	IDC_P13N_INFO		Clipboard commands	191
+chrome-3	IDC_BOOKMARK_MENU		Identifiers for platform-specific items	206
+chrome-3	IDC_VIEW_MENU		Identifiers for platform-specific items	207
+chrome-3	IDC_CONTROL_PANEL		Identifiers for platform-specific items	208
+chrome-10	IDC_MinimumLabelValue		Values below IDC_MinimumLabelValue are reserved for dynamic menu items	9
+chrome-10	IDC_Messages		Values below IDC_MinimumLabelValue are reserved for dynamic menu items	11
+chrome-10	IDC_MessagesAll		Values below IDC_MinimumLabelValue are reserved for dynamic menu items	12
+chrome-10	IDC_MessagesNone		Values below IDC_MinimumLabelValue are reserved for dynamic menu items	13
+chrome-10	IDC_RELOAD_IGNORING_CACHE		Navigation commands	26
+chrome-10	IDC_ALWAYS_ON_TOP		Window management commands	32
+chrome-10	IDC_SHOW_AS_TAB		Window management commands	48
+chrome-10	IDC_TABPOSE		Window management commands	55
+chrome-10	IDC_ENCODING_MENU		Page-related commands	63
+chrome-10	IDC_ENCODING_AUTO_DETECT		Page-related commands	69
+chrome-10	IDC_ENCODING_UTF8		Page-related commands	70
+chrome-10	IDC_ENCODING_UTF16LE		Page-related commands	71
+chrome-10	IDC_ENCODING_ISO88591		Page-related commands	72
+chrome-10	IDC_ENCODING_WINDOWS1252		Page-related commands	73
+chrome-10	IDC_ENCODING_GBK		Page-related commands	74
+chrome-10	IDC_ENCODING_GB18030		Page-related commands	75
+chrome-10	IDC_ENCODING_BIG5		Page-related commands	76
+chrome-10	IDC_ENCODING_BIG5HKSCS		Page-related commands	77
+chrome-10	IDC_ENCODING_KOREAN		Page-related commands	78
+chrome-10	IDC_ENCODING_SHIFTJIS		Page-related commands	79
+chrome-10	IDC_ENCODING_ISO2022JP		Page-related commands	80
+chrome-10	IDC_ENCODING_EUCJP		Page-related commands	81
+chrome-10	IDC_ENCODING_THAI		Page-related commands	82
+chrome-10	IDC_ENCODING_ISO885915		Page-related commands	83
+chrome-10	IDC_ENCODING_MACINTOSH		Page-related commands	84
+chrome-10	IDC_ENCODING_ISO88592		Page-related commands	85
+chrome-10	IDC_ENCODING_WINDOWS1250		Page-related commands	86
+chrome-10	IDC_ENCODING_ISO88595		Page-related commands	87
+chrome-10	IDC_ENCODING_WINDOWS1251		Page-related commands	88
+chrome-10	IDC_ENCODING_KOI8R		Page-related commands	89
+chrome-10	IDC_ENCODING_KOI8U		Page-related commands	90
+chrome-10	IDC_ENCODING_ISO88597		Page-related commands	91
+chrome-10	IDC_ENCODING_WINDOWS1253		Page-related commands	92
+chrome-10	IDC_ENCODING_ISO88594		Page-related commands	93
+chrome-10	IDC_ENCODING_ISO885913		Page-related commands	94
+chrome-10	IDC_ENCODING_WINDOWS1257		Page-related commands	95
+chrome-10	IDC_ENCODING_ISO88593		Page-related commands	96
+chrome-10	IDC_ENCODING_ISO885910		Page-related commands	97
+chrome-10	IDC_ENCODING_ISO885914		Page-related commands	98
+chrome-10	IDC_ENCODING_ISO885916		Page-related commands	99
+chrome-10	IDC_ENCODING_WINDOWS1254		Page-related commands	100
+chrome-10	IDC_ENCODING_ISO88596		Page-related commands	101
+chrome-10	IDC_ENCODING_WINDOWS1256		Page-related commands	102
+chrome-10	IDC_ENCODING_ISO88598		Page-related commands	103
+chrome-10	IDC_ENCODING_WINDOWS1255		Page-related commands	104
+chrome-10	IDC_ENCODING_WINDOWS1258		Page-related commands	105
+chrome-10	IDC_ENCODING_ISO88598I		Page-related commands	106
+chrome-10	IDC_EDIT_MENU		Clipboard commands	113
+chrome-10	IDC_ZOOM_MENU		Clipboard commands	121
+chrome-10	IDC_ZOOM_PERCENT_DISPLAY		Clipboard commands	125
+chrome-10	IDC_FOCUS_CHROMEOS_STATUS		Clipboard commands	135
+chrome-10	IDC_CREATE_SHORTCUTS		Clipboard commands	139
+chrome-10	IDC_DEVELOPER_MENU		Clipboard commands	140
+chrome-10	IDC_HELP_PAGE		Clipboard commands	155
+chrome-10	IDC_SHOW_APP_MENU		Clipboard commands	156
+chrome-10	IDC_AUTOFILL_DEFAULT		Clipboard commands	158
+chrome-10	IDC_UPGRADE_DIALOG		Clipboard commands	160
+chrome-10	IDC_VIEW_INCOMPATIBILITIES		Clipboard commands	161
+chrome-10	IDC_VIEW_BACKGROUND_PAGES		Clipboard commands	162
+chrome-10	IDC_SHOW_KEYBOARD_OVERLAY		Clipboard commands	163
+chrome-10	IDC_SPELLCHECK_SUGGESTION_0		Clipboard commands	167
+chrome-10	IDC_SPELLCHECK_SUGGESTION_1		Clipboard commands	168
+chrome-10	IDC_SPELLCHECK_SUGGESTION_2		Clipboard commands	169
+chrome-10	IDC_SPELLCHECK_SUGGESTION_3		Clipboard commands	170
+chrome-10	IDC_SPELLCHECK_SUGGESTION_4		Clipboard commands	171
+chrome-10	IDC_SPELLCHECK_MENU		Clipboard commands	173
+chrome-10	IDC_SPELLCHECK_LANGUAGES_FIRST		Clipboard commands	176
+chrome-10	IDC_SPELLCHECK_LANGUAGES_LAST		Clipboard commands	177
+chrome-10	IDC_CHECK_SPELLING_OF_THIS_FIELD		Clipboard commands	178
+chrome-10	IDC_SYNC_BOOKMARKS		Clipboard commands	179
+chrome-10	IDC_SPELLPANEL_TOGGLE		Clipboard commands	180
+chrome-10	IDC_SPELLCHECK_ADD_TO_DICTIONARY		Clipboard commands	181
+chrome-10	IDC_WRITING_DIRECTION_MENU		Clipboard commands	184
+chrome-10	IDC_WRITING_DIRECTION_DEFAULT		Clipboard commands	185
+chrome-10	IDC_WRITING_DIRECTION_LTR		Clipboard commands	186
+chrome-10	IDC_WRITING_DIRECTION_RTL		Clipboard commands	187
+chrome-10	IDC_REMOTING_SETUP		Clipboard commands	190
+chrome-10	IDC_TRANSLATE_OPTIONS_ALWAYS		Clipboard commands	193
+chrome-10	IDC_TRANSLATE_OPTIONS_NEVER_TRANSLATE_LANG		Clipboard commands	194
+chrome-10	IDC_TRANSLATE_OPTIONS_NEVER_TRANSLATE_SITE		Clipboard commands	195
+chrome-10	IDC_TRANSLATE_REPORT_BAD_LANGUAGE_DETECTION		Clipboard commands	196
+chrome-10	IDC_TRANSLATE_OPTIONS_ABOUT		Clipboard commands	197
+chrome-10	IDC_TRANSLATE_ORIGINAL_LANGUAGE_BASE		Clipboard commands	198
+chrome-10	IDC_TRANSLATE_TARGET_LANGUAGE_BASE		Clipboard commands	199
+chrome-10	IDC_BOOKMARK_MENU		Identifiers for platform-specific items	203
+chrome-10	IDC_VIEW_MENU		Identifiers for platform-specific items	204
+chrome-10	IDC_SYSTEM_OPTIONS		Identifiers for platform-specific items	205
+chrome-10	IDC_INTERNET_OPTIONS		Identifiers for platform-specific items	206
+chrome-10	IDC_LANGUAGE_OPTIONS		Identifiers for platform-specific items	207
+chrome-10	IDC_HISTORY_MENU		Identifiers for platform-specific items	208
+chrome-10	IDC_INPUT_METHODS_MENU		Identifiers for platform-specific items	209
+chrome-10	IDC_CONTENT_CONTEXT_CUSTOM_FIRST		Custom context menu entries	212
+chrome-10	IDC_CONTENT_CONTEXT_CUSTOM_LAST		Custom context menu entries	213
+chrome-10	IDC_EXTENSIONS_CONTEXT_CUSTOM_FIRST		Context menu items added by extensions	216
+chrome-10	IDC_EXTENSIONS_CONTEXT_CUSTOM_LAST		Context menu items added by extensions	217
+chrome-10	IDC_CONTENT_CONTEXT_OPENLINKNEWTAB		Link items	221
+chrome-10	IDC_CONTENT_CONTEXT_OPENLINKNEWWINDOW		Link items	222
+chrome-10	IDC_CONTENT_CONTEXT_OPENLINKOFFTHERECORD		Link items	223
+chrome-10	IDC_CONTENT_CONTEXT_SAVELINKAS		Link items	224
+chrome-10	IDC_CONTENT_CONTEXT_COPYLINKLOCATION		Link items	225
+chrome-10	IDC_CONTENT_CONTEXT_COPYEMAILADDRESS		Link items	226
+chrome-10	IDC_CONTENT_CONTEXT_SAVEIMAGEAS		Image items	228
+chrome-10	IDC_CONTENT_CONTEXT_COPYIMAGELOCATION		Image items	229
+chrome-10	IDC_CONTENT_CONTEXT_COPYIMAGE		Image items	230
+chrome-10	IDC_CONTENT_CONTEXT_OPENIMAGENEWTAB		Image items	231
+chrome-10	IDC_CONTENT_CONTEXT_SAVEAVAS		Audio/video items	233
+chrome-10	IDC_CONTENT_CONTEXT_COPYAVLOCATION		Audio/video items	234
+chrome-10	IDC_CONTENT_CONTEXT_OPENAVNEWTAB		Audio/video items	235
+chrome-10	IDC_CONTENT_CONTEXT_PLAYPAUSE		Media items	237
+chrome-10	IDC_CONTENT_CONTEXT_MUTE		Media items	238
+chrome-10	IDC_CONTENT_CONTEXT_LOOP		Media items	239
+chrome-10	IDC_CONTENT_CONTEXT_CONTROLS		Media items	240
+chrome-10	IDC_CONTENT_CONTEXT_COPY		Edit items	242
+chrome-10	IDC_CONTENT_CONTEXT_CUT		Edit items	243
+chrome-10	IDC_CONTENT_CONTEXT_PASTE		Edit items	244
+chrome-10	IDC_CONTENT_CONTEXT_DELETE		Edit items	245
+chrome-10	IDC_CONTENT_CONTEXT_UNDO		Edit items	246
+chrome-10	IDC_CONTENT_CONTEXT_REDO		Edit items	247
+chrome-10	IDC_CONTENT_CONTEXT_SELECTALL		Edit items	248
+chrome-10	IDC_CONTENT_CONTEXT_TRANSLATE		Other items	250
+chrome-10	IDC_CONTENT_CONTEXT_INSPECTELEMENT		Other items	251
+chrome-10	IDC_CONTENT_CONTEXT_VIEWPAGEINFO		Other items	252
+chrome-10	IDC_CONTENT_CONTEXT_LANGUAGE_SETTINGS		Other items	253
+chrome-10	IDC_CONTENT_CONTEXT_LOOK_UP_IN_DICTIONARY		Other items	254
+chrome-10	IDC_CONTENT_CONTEXT_RELOADFRAME		Frame items	256
+chrome-10	IDC_CONTENT_CONTEXT_VIEWFRAMESOURCE		Frame items	257
+chrome-10	IDC_CONTENT_CONTEXT_VIEWFRAMEINFO		Frame items	258
+chrome-10	IDC_CONTENT_CONTEXT_GOTOURL		Search items	260
+chrome-10	IDC_CONTENT_CONTEXT_SEARCHWEBFOR		Search items	261
+chrome-10	IDC_BOOKMARK_BAR_OPEN_ALL		Context menu items in the bookmark bar	264
+chrome-10	IDC_BOOKMARK_BAR_OPEN_ALL_NEW_WINDOW		Context menu items in the bookmark bar	265
+chrome-10	IDC_BOOKMARK_BAR_OPEN_ALL_INCOGNITO		Context menu items in the bookmark bar	266
+chrome-10	IDC_BOOKMARK_BAR_OPEN_INCOGNITO		Context menu items in the bookmark bar	267
+chrome-10	IDC_BOOKMARK_BAR_RENAME_FOLDER		Context menu items in the bookmark bar	268
+chrome-10	IDC_BOOKMARK_BAR_EDIT		Context menu items in the bookmark bar	269
+chrome-10	IDC_BOOKMARK_BAR_REMOVE		Context menu items in the bookmark bar	270
+chrome-10	IDC_BOOKMARK_BAR_ADD_NEW_BOOKMARK		Context menu items in the bookmark bar	271
+chrome-10	IDC_BOOKMARK_BAR_NEW_FOLDER		Context menu items in the bookmark bar	272
+chrome-50	IDC_MinimumLabelValue		Values below IDC_MinimumLabelValue are reserved for dynamic menu items	16
+chrome-50	IDC_Messages		Values below IDC_MinimumLabelValue are reserved for dynamic menu items	18
+chrome-50	IDC_MessagesAll		Values below IDC_MinimumLabelValue are reserved for dynamic menu items	19
+chrome-50	IDC_MessagesNone		Values below IDC_MinimumLabelValue are reserved for dynamic menu items	20
+chrome-50	IDC_RELOAD_IGNORING_CACHE		Navigation commands	33
+chrome-50	IDC_LOAD_NEW_TAB_PAGE		Navigation commands	34
+chrome-50	IDC_PIN_TO_START_SCREEN		Window management commands	40
+chrome-50	IDC_ALWAYS_ON_TOP		Window management commands	42
+chrome-50	IDC_SHOW_AS_TAB		Window management commands	58
+chrome-50	IDC_DEBUG_FRAME_TOGGLE		Window management commands	64
+chrome-50	IDC_PRESENTATION_MODE		Window management commands	65
+chrome-50	IDC_WINDOW_MENU		Window management commands	66
+chrome-50	IDC_ALL_WINDOWS_FRONT		Window management commands	69
+chrome-50	IDC_VISIT_DESKTOP_OF_LRU_USER_2		Window management commands	70
+chrome-50	IDC_VISIT_DESKTOP_OF_LRU_USER_3		Window management commands	71
+chrome-50	IDC_USE_SYSTEM_TITLE_BAR		Window management commands	72
+chrome-50	IDC_ENCODING_MENU		Page-related commands	80
+chrome-50	IDC_SAVE_CREDIT_CARD_FOR_PAGE		Page-related commands	83
+chrome-50	IDC_MANAGE_PASSWORDS_FOR_PAGE		Page-related commands	85
+chrome-50	IDC_ROUTE_MEDIA		Page-related commands	86
+chrome-50	IDC_ENCODING_AUTO_DETECT		Page-related commands	91
+chrome-50	IDC_ENCODING_UTF8		Page-related commands	92
+chrome-50	IDC_ENCODING_UTF16LE		Page-related commands	93
+chrome-50	IDC_ENCODING_WINDOWS1252		Page-related commands	94
+chrome-50	IDC_ENCODING_GBK		Page-related commands	95
+chrome-50	IDC_ENCODING_GB18030		Page-related commands	96
+chrome-50	IDC_ENCODING_BIG5		Page-related commands	97
+chrome-50	IDC_ENCODING_KOREAN		Page-related commands	98
+chrome-50	IDC_ENCODING_SHIFTJIS		Page-related commands	99
+chrome-50	IDC_ENCODING_ISO2022JP		Page-related commands	100
+chrome-50	IDC_ENCODING_EUCJP		Page-related commands	101
+chrome-50	IDC_ENCODING_THAI		Page-related commands	102
+chrome-50	IDC_ENCODING_ISO885915		Page-related commands	103
+chrome-50	IDC_ENCODING_MACINTOSH		Page-related commands	104
+chrome-50	IDC_ENCODING_ISO88592		Page-related commands	105
+chrome-50	IDC_ENCODING_WINDOWS1250		Page-related commands	106
+chrome-50	IDC_ENCODING_ISO88595		Page-related commands	107
+chrome-50	IDC_ENCODING_WINDOWS1251		Page-related commands	108
+chrome-50	IDC_ENCODING_KOI8R		Page-related commands	109
+chrome-50	IDC_ENCODING_KOI8U		Page-related commands	110
+chrome-50	IDC_ENCODING_ISO88597		Page-related commands	111
+chrome-50	IDC_ENCODING_WINDOWS1253		Page-related commands	112
+chrome-50	IDC_ENCODING_ISO88594		Page-related commands	113
+chrome-50	IDC_ENCODING_ISO885913		Page-related commands	114
+chrome-50	IDC_ENCODING_WINDOWS1257		Page-related commands	115
+chrome-50	IDC_ENCODING_ISO88593		Page-related commands	116
+chrome-50	IDC_ENCODING_ISO885910		Page-related commands	117
+chrome-50	IDC_ENCODING_ISO885914		Page-related commands	118
+chrome-50	IDC_ENCODING_ISO885916		Page-related commands	119
+chrome-50	IDC_ENCODING_WINDOWS1254		Page-related commands	120
+chrome-50	IDC_ENCODING_ISO88596		Page-related commands	121
+chrome-50	IDC_ENCODING_WINDOWS1256		Page-related commands	122
+chrome-50	IDC_ENCODING_ISO88598		Page-related commands	123
+chrome-50	IDC_ENCODING_WINDOWS1255		Page-related commands	124
+chrome-50	IDC_ENCODING_WINDOWS1258		Page-related commands	125
+chrome-50	IDC_ENCODING_ISO88598I		Page-related commands	126
+chrome-50	IDC_ENCODING_IBM866		Page-related commands	127
+chrome-50	IDC_EDIT_MENU		Clipboard commands	133
+chrome-50	IDC_FIND_MENU		Clipboard commands	139
+chrome-50	IDC_ZOOM_MENU		Clipboard commands	142
+chrome-50	IDC_ZOOM_PERCENT_DISPLAY		Clipboard commands	146
+chrome-50	IDC_FOCUS_INFOBARS		Clipboard commands	156
+chrome-50	IDC_CREATE_SHORTCUTS		Clipboard commands	160
+chrome-50	IDC_CREATE_HOSTED_APP		Clipboard commands	161
+chrome-50	IDC_DEVELOPER_MENU		Clipboard commands	162
+chrome-50	IDC_DEV_TOOLS_DEVICES		Clipboard commands	166
+chrome-50	IDC_HELP_PAGE_VIA_KEYBOARD		Clipboard commands	180
+chrome-50	IDC_HELP_PAGE_VIA_MENU		Clipboard commands	181
+chrome-50	IDC_SHOW_APP_MENU		Clipboard commands	182
+chrome-50	IDC_UPGRADE_DIALOG		Clipboard commands	185
+chrome-50	IDC_VIEW_INCOMPATIBILITIES		Clipboard commands	186
+chrome-50	IDC_SHOW_KEYBOARD_OVERLAY		Clipboard commands	187
+chrome-50	IDC_PROFILING_ENABLED		Clipboard commands	188
+chrome-50	IDC_BOOKMARKS_MENU		Clipboard commands	189
+chrome-50	IDC_SHOW_SYNC_SETUP		Clipboard commands	192
+chrome-50	IDC_SHOW_SIGNIN		Clipboard commands	193
+chrome-50	IDC_EXTENSION_ERRORS		Clipboard commands	194
+chrome-50	IDC_SHOW_SIGNIN_ERROR		Clipboard commands	195
+chrome-50	IDC_SHOW_SETTINGS_CHANGE_FIRST		Clipboard commands	196
+chrome-50	IDC_SHOW_SETTINGS_CHANGE_LAST		Clipboard commands	197
+chrome-50	IDC_SHOW_AVATAR_MENU		Clipboard commands	198
+chrome-50	IDC_EXTENSION_INSTALL_ERROR_FIRST		Clipboard commands	199
+chrome-50	IDC_EXTENSION_INSTALL_ERROR_LAST		Clipboard commands	200
+chrome-50	IDC_TOGGLE_REQUEST_TABLET_SITE		Clipboard commands	201
+chrome-50	IDC_RECENT_TABS_MENU		Clipboard commands	203
+chrome-50	IDC_RECENT_TABS_NO_DEVICE_TABS		Clipboard commands	204
+chrome-50	IDC_SHOW_SETTINGS_RESET_BUBBLE		Clipboard commands	205
+chrome-50	IDC_SHOW_SYNC_ERROR		Clipboard commands	206
+chrome-50	IDC_HELP_MENU		Clipboard commands	208
+chrome-50	IDC_EXTENSIONS_OVERFLOW_MENU		Clipboard commands	209
+chrome-50	IDC_SHOW_SRT_BUBBLE		Clipboard commands	210
+chrome-50	IDC_ELEVATED_RECOVERY_DIALOG		Clipboard commands	211
+chrome-50	IDC_MORE_TOOLS_MENU		Clipboard commands	213
+chrome-50	IDC_SHOW_FAST_USER_SWITCHER		Clipboard commands	214
+chrome-50	IDC_TOGGLE_FULLSCREEN_TOOLBAR		Clipboard commands	215
+chrome-50	IDC_SPELLCHECK_SUGGESTION_0		Clipboard commands	219
+chrome-50	IDC_SPELLCHECK_SUGGESTION_1		Clipboard commands	220
+chrome-50	IDC_SPELLCHECK_SUGGESTION_2		Clipboard commands	221
+chrome-50	IDC_SPELLCHECK_SUGGESTION_3		Clipboard commands	222
+chrome-50	IDC_SPELLCHECK_SUGGESTION_4		Clipboard commands	223
+chrome-50	IDC_SPELLCHECK_MENU		Clipboard commands	225
+chrome-50	IDC_SPELLCHECK_LANGUAGES_FIRST		Clipboard commands	228
+chrome-50	IDC_SPELLCHECK_LANGUAGES_LAST		Clipboard commands	229
+chrome-50	IDC_SPELLPANEL_TOGGLE		Clipboard commands	231
+chrome-50	IDC_SPELLCHECK_ADD_TO_DICTIONARY		Clipboard commands	232
+chrome-50	IDC_SPELLCHECK_MULTI_LINGUAL		Clipboard commands	233
+chrome-50	IDC_WRITING_DIRECTION_MENU		Clipboard commands	236
+chrome-50	IDC_WRITING_DIRECTION_DEFAULT		Clipboard commands	237
+chrome-50	IDC_WRITING_DIRECTION_LTR		Clipboard commands	238
+chrome-50	IDC_WRITING_DIRECTION_RTL		Clipboard commands	239
+chrome-50	IDC_TRANSLATE_ORIGINAL_LANGUAGE_BASE		Clipboard commands	242
+chrome-50	IDC_TRANSLATE_TARGET_LANGUAGE_BASE		Clipboard commands	243
+chrome-50	IDC_VIEW_MENU		Identifiers for platform-specific items	247
+chrome-50	IDC_FILE_MENU		Identifiers for platform-specific items	248
+chrome-50	IDC_CHROME_MENU		Identifiers for platform-specific items	249
+chrome-50	IDC_HISTORY_MENU		Identifiers for platform-specific items	251
+chrome-50	IDC_PROFILE_MAIN_MENU		Identifiers for platform-specific items	252
+chrome-50	IDC_INPUT_METHODS_MENU		Identifiers for platform-specific items	253
+chrome-50	IDC_TOUCH_HUD_PROJECTION_TOGGLE		Identifiers for platform-specific items	254
+chrome-50	IDC_CONTENT_CONTEXT_CUSTOM_FIRST		The range of command ids reserved for context menus added by web content	257
+chrome-50	IDC_CONTENT_CONTEXT_CUSTOM_LAST		The range of command ids reserved for context menus added by web content	258
+chrome-50	IDC_EXTENSIONS_CONTEXT_CUSTOM_FIRST		The range of command ids reserved for context menus added by extensions	261
+chrome-50	IDC_EXTENSIONS_CONTEXT_CUSTOM_LAST		The range of command ids reserved for context menus added by extensions	262
+chrome-50	IDC_CONTENT_CONTEXT_OPENLINKNEWTAB		Link items	266
+chrome-50	IDC_CONTENT_CONTEXT_OPENLINKNEWWINDOW		Link items	267
+chrome-50	IDC_CONTENT_CONTEXT_OPENLINKOFFTHERECORD		Link items	268
+chrome-50	IDC_CONTENT_CONTEXT_SAVELINKAS		Link items	269
+chrome-50	IDC_CONTENT_CONTEXT_COPYLINKLOCATION		Link items	270
+chrome-50	IDC_CONTENT_CONTEXT_COPYEMAILADDRESS		Link items	271
+chrome-50	IDC_CONTENT_CONTEXT_OPENLINKWITH		Link items	272
+chrome-50	IDC_CONTENT_CONTEXT_COPYLINKTEXT		Link items	273
+chrome-50	IDC_CONTENT_CONTEXT_OPENLINKINPROFILE		Link items	274
+chrome-50	IDC_CONTENT_CONTEXT_SAVEIMAGEAS		Image items	276
+chrome-50	IDC_CONTENT_CONTEXT_COPYIMAGELOCATION		Image items	277
+chrome-50	IDC_CONTENT_CONTEXT_COPYIMAGE		Image items	278
+chrome-50	IDC_CONTENT_CONTEXT_OPENIMAGENEWTAB		Image items	279
+chrome-50	IDC_CONTENT_CONTEXT_SEARCHWEBFORIMAGE		Image items	280
+chrome-50	IDC_CONTENT_CONTEXT_OPEN_ORIGINAL_IMAGE_NEW_TAB		Image items	281
+chrome-50	IDC_CONTENT_CONTEXT_LOAD_ORIGINAL_IMAGE		Image items	282
+chrome-50	IDC_CONTENT_CONTEXT_SAVEAVAS		Audio/video items	284
+chrome-50	IDC_CONTENT_CONTEXT_COPYAVLOCATION		Audio/video items	285
+chrome-50	IDC_CONTENT_CONTEXT_OPENAVNEWTAB		Audio/video items	286
+chrome-50	IDC_CONTENT_CONTEXT_PLAYPAUSE		Media items	288
+chrome-50	IDC_CONTENT_CONTEXT_MUTE		Media items	289
+chrome-50	IDC_CONTENT_CONTEXT_LOOP		Media items	290
+chrome-50	IDC_CONTENT_CONTEXT_CONTROLS		Media items	291
+chrome-50	IDC_CONTENT_CONTEXT_ROTATECW		Media items	292
+chrome-50	IDC_CONTENT_CONTEXT_ROTATECCW		Media items	293
+chrome-50	IDC_CONTENT_CONTEXT_COPY		Edit items	295
+chrome-50	IDC_CONTENT_CONTEXT_CUT		Edit items	296
+chrome-50	IDC_CONTENT_CONTEXT_PASTE		Edit items	297
+chrome-50	IDC_CONTENT_CONTEXT_DELETE		Edit items	298
+chrome-50	IDC_CONTENT_CONTEXT_UNDO		Edit items	299
+chrome-50	IDC_CONTENT_CONTEXT_REDO		Edit items	300
+chrome-50	IDC_CONTENT_CONTEXT_SELECTALL		Edit items	301
+chrome-50	IDC_CONTENT_CONTEXT_PASTE_AND_MATCH_STYLE		Edit items	302
+chrome-50	IDC_CONTENT_CONTEXT_TRANSLATE		Other items	304
+chrome-50	IDC_CONTENT_CONTEXT_INSPECTELEMENT		Other items	305
+chrome-50	IDC_CONTENT_CONTEXT_VIEWPAGEINFO		Other items	306
+chrome-50	IDC_CONTENT_CONTEXT_LANGUAGE_SETTINGS		Other items	307
+chrome-50	IDC_CONTENT_CONTEXT_LOOK_UP		Other items	308
+chrome-50	IDC_CONTENT_CONTEXT_NO_SPELLING_SUGGESTIONS		Other items	309
+chrome-50	IDC_CONTENT_CONTEXT_SPELLING_SUGGESTION		Other items	310
+chrome-50	IDC_CONTENT_CONTEXT_SPELLING_TOGGLE		Other items	311
+chrome-50	IDC_CONTENT_CONTEXT_SPEECH_MENU		Other items	312
+chrome-50	IDC_CONTENT_CONTEXT_SPEECH_START_SPEAKING		Other items	313
+chrome-50	IDC_CONTENT_CONTEXT_SPEECH_STOP_SPEAKING		Other items	314
+chrome-50	IDC_CONTENT_CONTEXT_INSPECTBACKGROUNDPAGE		Other items	315
+chrome-50	IDC_CONTENT_CONTEXT_RELOAD_PACKAGED_APP		Other items	316
+chrome-50	IDC_CONTENT_CONTEXT_RESTART_PACKAGED_APP		Other items	317
+chrome-50	IDC_CONTENT_CONTEXT_FORCESAVEPASSWORD		Other items	318
+chrome-50	IDC_CONTENT_CONTEXT_GENERATEPASSWORD		Other items	319
+chrome-50	IDC_CONTENT_CONTEXT_RELOADFRAME		Frame items	321
+chrome-50	IDC_CONTENT_CONTEXT_VIEWFRAMESOURCE		Frame items	322
+chrome-50	IDC_CONTENT_CONTEXT_VIEWFRAMEINFO		Frame items	323
+chrome-50	IDC_CONTENT_CONTEXT_GOTOURL		Search items	325
+chrome-50	IDC_CONTENT_CONTEXT_SEARCHWEBFOR		Search items	326
+chrome-50	IDC_BOOKMARK_BAR_OPEN_ALL		Context menu items in the bookmark bar	329
+chrome-50	IDC_BOOKMARK_BAR_OPEN_ALL_NEW_WINDOW		Context menu items in the bookmark bar	330
+chrome-50	IDC_BOOKMARK_BAR_OPEN_ALL_INCOGNITO		Context menu items in the bookmark bar	331
+chrome-50	IDC_BOOKMARK_BAR_OPEN_INCOGNITO		Context menu items in the bookmark bar	332
+chrome-50	IDC_BOOKMARK_BAR_RENAME_FOLDER		Context menu items in the bookmark bar	333
+chrome-50	IDC_BOOKMARK_BAR_EDIT		Context menu items in the bookmark bar	334
+chrome-50	IDC_BOOKMARK_BAR_REMOVE		Context menu items in the bookmark bar	335
+chrome-50	IDC_BOOKMARK_BAR_ADD_NEW_BOOKMARK		Context menu items in the bookmark bar	336
+chrome-50	IDC_BOOKMARK_BAR_NEW_FOLDER		Context menu items in the bookmark bar	337
+chrome-50	IDC_BOOKMARK_BAR_SHOW_APPS_SHORTCUT		Context menu items in the bookmark bar	340
+chrome-50	IDC_BOOKMARK_BAR_UNDO		Context menu items in the bookmark bar	341
+chrome-50	IDC_BOOKMARK_BAR_REDO		Context menu items in the bookmark bar	342
+chrome-50	IDC_BOOKMARK_BAR_SHOW_MANAGED_BOOKMARKS		Context menu items in the bookmark bar	343
+chrome-50	IDC_STATUS_TRAY_KEEP_CHROME_RUNNING_IN_BACKGROUND		Context menu items in the status tray	346
+chrome-50	IDC_MEDIA_ROUTER_ABOUT		Context menu items for media router	349
+chrome-50	IDC_MEDIA_ROUTER_HELP		Context menu items for media router	350
+chrome-50	IDC_MEDIA_ROUTER_LEARN_MORE		Context menu items for media router	351
+chrome-50	IDC_MEDIA_ROUTER_REPORT_ISSUE		Context menu items for media router	352
+chrome-50	IDC_MEDIA_ROUTER_REMOVE_TOOLBAR_ACTION		Context menu items for media router	353
+chrome-50	IDC_MEDIA_ROUTER_CLOUD_SERVICES_TOGGLE		Context menu items for media router	355
+chrome-50	IDC_MEDIA_STREAM_DEVICE_STATUS_TRAY		Context menu items for media stream status tray	359
+chrome-50	IDC_MEDIA_CONTEXT_MEDIA_STREAM_CAPTURE_LIST_FIRST		Context menu items for media stream status tray	360
+chrome-50	IDC_MEDIA_CONTEXT_MEDIA_STREAM_CAPTURE_LIST_LAST		Context menu items for media stream status tray	361
+chrome-50	IDC_MEDIA_STREAM_DEVICE_ALWAYS_ALLOW		Context menu items for media stream status tray	362
+chrome-50	IDC_CONTENT_CONTEXT_PROTOCOL_HANDLER_FIRST		Protocol handler menu entries	365
+chrome-50	IDC_CONTENT_CONTEXT_PROTOCOL_HANDLER_LAST		Protocol handler menu entries	366
+chrome-50	IDC_CONTENT_CONTEXT_PROTOCOL_HANDLER_SETTINGS		Protocol handler menu entries	367
+chrome-50	IDC_OPEN_LINK_IN_PROFILE_FIRST		Protocol handler menu entries	370
+chrome-50	IDC_OPEN_LINK_IN_PROFILE_LAST		Protocol handler menu entries	371
+chrome-50	IDC_FIRST_BOOKMARK_MENU		otherwise-reserved range. No command used in a menu (such as the wrench menu)	381
+chrome-current	IDC_MinimumLabelValue		Values below IDC_MinimumLabelValue are reserved for dynamic menu items	19
+chrome-current	IDC_NEW_ISOLATED_WINDOW		Window management commands	38
+chrome-current	IDC_CYCLE_TO_NEXT_TAB		Window management commands	44
+chrome-current	IDC_CYCLE_TO_PREV_TAB		Window management commands	45
+chrome-current	IDC_SHOW_AS_TAB		Window management commands	57
+chrome-current	IDC_NAME_WINDOW		Window management commands	65
+chrome-current	IDC_TOGGLE_MULTITASK_MENU		Window management commands	67
+chrome-current	IDC_USE_SYSTEM_TITLE_BAR		Window management commands	71
+chrome-current	IDC_RESTORE_WINDOW		Window management commands	75
+chrome-current	IDC_MOVE_WINDOW		Window management commands	79
+chrome-current	IDC_SIZE_WINDOW		Window management commands	80
+chrome-current	IDC_OPEN_IN_PWA_WINDOW		Window management commands	83
+chrome-current	IDC_VERTICAL_TABS_SEND_FEEDBACK		Window management commands	87
+chrome-current	IDC_TOGGLE_VERTICAL_TABS_EXPAND_ON_HOVER		Window management commands	88
+chrome-current	IDC_TOGGLE_VERTICAL_TABS_COLLAPSE		Window management commands	89
+chrome-current	IDC_TOGGLE_MULTISELECT		Window management commands	91
+chrome-current	IDC_OPEN_TAB_STRIP_CONTEXT_MENU		Window management commands	92
+chrome-current	IDC_REORDER_TAB_STRIP_ITEM_LEFT		Window management commands	93
+chrome-current	IDC_REORDER_TAB_STRIP_ITEM_RIGHT		Window management commands	94
+chrome-current	IDC_OPEN_IN_CHROME		Web app window commands	99
+chrome-current	IDC_WEB_APP_SETTINGS		Web app window commands	100
+chrome-current	IDC_WEB_APP_MENU_APP_INFO		Web app window commands	101
+chrome-current	IDC_WEB_APP_UPGRADE_DIALOG		Web app window commands	102
+chrome-current	IDC_UNINSTALL_WEB_APP		Web app window commands	103
+chrome-current	IDC_VISIT_DESKTOP_OF_LRU_USER_2		Move window to other user commands	107
+chrome-current	IDC_VISIT_DESKTOP_OF_LRU_USER_3		Move window to other user commands	108
+chrome-current	IDC_VISIT_DESKTOP_OF_LRU_USER_4		Move window to other user commands	109
+chrome-current	IDC_VISIT_DESKTOP_OF_LRU_USER_5		Move window to other user commands	110
+chrome-current	IDC_ADD_NEW_TAB_TO_GROUP		Tab group Commands	116
+chrome-current	IDC_CREATE_NEW_TAB_GROUP		Tab group Commands	117
+chrome-current	IDC_FOCUS_NEXT_TAB_GROUP		Tab group Commands	118
+chrome-current	IDC_FOCUS_PREV_TAB_GROUP		Tab group Commands	119
+chrome-current	IDC_CLOSE_TAB_GROUP		Tab group Commands	120
+chrome-current	IDC_GROUP_UNGROUPED_TABS		Tab group Commands	121
+chrome-current	IDC_ADD_NEW_TAB_RECENT_GROUP		Tab group Commands	122
+chrome-current	IDC_SAVE_CREDIT_CARD_FOR_PAGE		Page-related commands	132
+chrome-current	IDC_SHOW_TRANSLATE		Page-related commands	133
+chrome-current	IDC_MANAGE_PASSWORDS_FOR_PAGE		Page-related commands	134
+chrome-current	IDC_ROUTE_MEDIA		Page-related commands	135
+chrome-current	IDC_WINDOW_GROUP_TAB		Page-related commands	138
+chrome-current	IDC_FOCUS_THIS_TAB		Page-related commands	140
+chrome-current	IDC_FAKE_PAGE_ACTION_FOR_DEBUG		Page-related commands	141
+chrome-current	IDC_QRCODE_GENERATOR		Page-related commands	142
+chrome-current	IDC_SAVE_AUTOFILL_ADDRESS		Page-related commands	146
+chrome-current	IDC_OFFERS_AND_REWARDS_FOR_PAGE		Page-related commands	147
+chrome-current	IDC_SHARING_HUB		Page-related commands	148
+chrome-current	IDC_FILLED_CARD_INFORMATION		Page-related commands	149
+chrome-current	IDC_SHARING_HUB_SCREENSHOT		Page-related commands	150
+chrome-current	IDC_VIRTUAL_CARD_ENROLL		Page-related commands	151
+chrome-current	IDC_SAVE_IBAN_FOR_PAGE		Page-related commands	152
+chrome-current	IDC_AUTOFILL_MANDATORY_REAUTH		Page-related commands	153
+chrome-current	IDC_SHOW_PASSWORD_MANAGER		Page-related commands	154
+chrome-current	IDC_SHOW_PAYMENT_METHODS		Page-related commands	155
+chrome-current	IDC_SHOW_OFFERS_AND_LOYALTY_CARDS		Page-related commands	156
+chrome-current	IDC_ORGANIZE_TABS		Page-related commands	157
+chrome-current	IDC_SEND_SHARED_TAB_GROUP_FEEDBACK		Page-related commands	158
+chrome-current	IDC_SHOW_IDENTITY_DOCS		Page-related commands	159
+chrome-current	IDC_SHOW_TRAVEL		Page-related commands	160
+chrome-current	IDC_SHOW_CONTACT_INFO		Page-related commands	161
+chrome-current	IDC_GROUP_TARGET_TAB		Page-manipulation commands that target a specified tab, which may not be the	167
+chrome-current	IDC_CUSTOMIZE_CHROME		Profile sub menu	182
+chrome-current	IDC_CLOSE_PROFILE		Profile sub menu	183
+chrome-current	IDC_MANAGE_GOOGLE_ACCOUNT		Profile sub menu	184
+chrome-current	IDC_SHOW_SYNC_SETTINGS		Profile sub menu	185
+chrome-current	IDC_TURN_ON_SYNC		Profile sub menu	186
+chrome-current	IDC_SHOW_SIGNIN_WHEN_PAUSED		Profile sub menu	187
+chrome-current	IDC_OPEN_GUEST_PROFILE		Profile sub menu	188
+chrome-current	IDC_ADD_NEW_PROFILE		Profile sub menu	189
+chrome-current	IDC_MANAGE_CHROME_PROFILES		Profile sub menu	190
+chrome-current	IDC_SHOW_SIGNIN		Profile sub menu	191
+chrome-current	IDC_SHOW_SYNC_PASSPHRASE_DIALOG		Profile sub menu	192
+chrome-current	IDC_FOCUS_INACTIVE_POPUP_FOR_ACCESSIBILITY		Profile sub menu	207
+chrome-current	IDC_DEV_TOOLS_DEVICES		Profile sub menu	216
+chrome-current	IDC_HELP_PAGE_VIA_KEYBOARD		Profile sub menu	228
+chrome-current	IDC_HELP_PAGE_VIA_MENU		Profile sub menu	229
+chrome-current	IDC_SHOW_APP_MENU		Profile sub menu	230
+chrome-current	IDC_UPGRADE_DIALOG		Profile sub menu	233
+chrome-current	IDC_SHOW_HISTORY_CLUSTERS_SIDE_PANEL		Profile sub menu	234
+chrome-current	IDC_SCHEDULED_RESTART_DIALOG		Profile sub menu	235
+chrome-current	IDC_PROFILING_ENABLED		Profile sub menu	236
+chrome-current	IDC_EXTENSION_ERRORS		Profile sub menu	237
+chrome-current	IDC_SHOW_AVATAR_MENU		Profile sub menu	238
+chrome-current	IDC_EXTENSION_INSTALL_ERROR_FIRST		Profile sub menu	239
+chrome-current	IDC_TOGGLE_REQUEST_TABLET_SITE		Profile sub menu	240
+chrome-current	IDC_TOGGLE_FULLSCREEN_TOOLBAR		Profile sub menu	244
+chrome-current	IDC_CUSTOMIZE_TOUCH_BAR		Profile sub menu	245
+chrome-current	IDC_SHOW_BETA_FORUM		Profile sub menu	246
+chrome-current	IDC_TOGGLE_JAVASCRIPT_APPLE_EVENTS		Profile sub menu	247
+chrome-current	IDC_INSTALL_PWA		Profile sub menu	248
+chrome-current	IDC_SHOW_MANAGEMENT_PAGE		Profile sub menu	249
+chrome-current	IDC_CHROME_TIPS		Profile sub menu	253
+chrome-current	IDC_CHROME_WHATS_NEW		Profile sub menu	254
+chrome-current	IDC_PERFORMANCE		Profile sub menu	255
+chrome-current	IDC_EXTENSIONS_SUBMENU_MANAGE_EXTENSIONS		Profile sub menu	256
+chrome-current	IDC_EXTENSIONS_SUBMENU_VISIT_CHROME_WEB_STORE		Profile sub menu	257
+chrome-current	IDC_READING_LIST_MENU_ADD_TAB		Profile sub menu	258
+chrome-current	IDC_READING_LIST_MENU_SHOW_UI		Profile sub menu	259
+chrome-current	IDC_SHOW_READING_MODE		Profile sub menu	260
+chrome-current	IDC_SHOW_BOOKMARK_SIDE_PANEL		Profile sub menu	261
+chrome-current	IDC_SHOW_CHROME_LABS		Profile sub menu	262
+chrome-current	IDC_OPEN_RECENT_TAB		Profile sub menu	263
+chrome-current	IDC_OPEN_SAFETY_HUB		Profile sub menu	264
+chrome-current	IDC_SAFETY_HUB_SHOW_PASSWORD_CHECKUP		Profile sub menu	265
+chrome-current	IDC_SAFETY_HUB_MANAGE_EXTENSIONS		Profile sub menu	266
+chrome-current	IDC_SHOW_GOOGLE_LENS_SHORTCUT		Profile sub menu	267
+chrome-current	IDC_SHOW_CUSTOMIZE_CHROME_SIDE_PANEL		Profile sub menu	268
+chrome-current	IDC_SHOW_CUSTOMIZE_CHROME_TOOLBAR		Profile sub menu	269
+chrome-current	IDC_TASK_MANAGER_APP_MENU		Profile sub menu	270
+chrome-current	IDC_TASK_MANAGER_CONTEXT_MENU		Profile sub menu	272
+chrome-current	IDC_SHOW_HISTORY_SIDE_PANEL		Profile sub menu	274
+chrome-current	IDC_OPEN_GLIC		Profile sub menu	275
+chrome-current	IDC_FIND_EXTENSIONS		Profile sub menu	276
+chrome-current	IDC_SHOW_SEARCH_TOOLS		Profile sub menu	277
+chrome-current	IDC_SHOW_COMMENTS_SIDE_PANEL		Profile sub menu	278
+chrome-current	IDC_RECENT_TABS_SEE_DEVICE_TABS		Profile sub menu	279
+chrome-current	IDC_SHOW_AI_MODE_OMNIBOX_BUTTON		Profile sub menu	280
+chrome-current	IDC_CONTENT_CONTEXT_INSPECTELEMENT_WITH_DEVTOOLS		Profile sub menu	281
+chrome-current	IDC_SHOW_READING_MODE_KEYBOARD		Profile sub menu	283
+chrome-current	IDC_SHOW_TABS_FROM_OTHER_DEVICES_SIDE_PANEL		Profile sub menu	284
+chrome-current	IDC_CHROME_ENTERPRISE_RELEASE_NOTES		Profile sub menu	285
+chrome-current	IDC_SHOW_TTC_MENU		Profile sub menu	286
+chrome-current	IDC_OPEN_OTHER_DEVICE_TAB		Profile sub menu	287
+chrome-current	IDC_SPELLCHECK_SUGGESTION_0		Profile sub menu	290
+chrome-current	IDC_SPELLCHECK_LANGUAGES_FIRST		Profile sub menu	292
+chrome-current	IDC_SPELLCHECK_ADD_TO_DICTIONARY		Profile sub menu	294
+chrome-current	IDC_SPELLCHECK_MULTI_LINGUAL		Profile sub menu	295
+chrome-current	IDC_SPELLCHECK_REMOVE_FROM_DICTIONARY		Profile sub menu	296
+chrome-current	IDC_WRITING_DIRECTION_LTR		Profile sub menu	299
+chrome-current	IDC_WRITING_DIRECTION_RTL		Profile sub menu	300
+chrome-current	IDC_CONTENT_CONTEXT_CUSTOM_FIRST		The range of command ids reserved for context menus added by web content	307
+chrome-current	IDC_EXTENSIONS_CONTEXT_CUSTOM_FIRST		The range of command ids reserved for context menus added by extensions	310
+chrome-current	IDC_CONTENT_CONTEXT_OPENLINKNEWTAB		Link items	314
+chrome-current	IDC_CONTENT_CONTEXT_OPENLINKNEWWINDOW		Link items	315
+chrome-current	IDC_CONTENT_CONTEXT_OPENLINKOFFTHERECORD		Link items	316
+chrome-current	IDC_CONTENT_CONTEXT_SAVELINKAS		Link items	317
+chrome-current	IDC_CONTENT_CONTEXT_COPYLINKLOCATION		Link items	318
+chrome-current	IDC_CONTENT_CONTEXT_COPYLINKTEXT		Link items	319
+chrome-current	IDC_CONTENT_CONTEXT_OPENLINKINPROFILE		Link items	320
+chrome-current	IDC_CONTENT_CONTEXT_OPENLINKBOOKMARKAPP		Link items	321
+chrome-current	IDC_CONTENT_CONTEXT_OPENLINKSPLITVIEW		Link items	322
+chrome-current	IDC_CONTENT_CONTEXT_ADD_LINK_TO_READING_LIST		Link items	323
+chrome-current	IDC_CONTENT_CONTEXT_OPENLINK_ISOLATED		Link items	324
+chrome-current	IDC_CONTENT_CONTEXT_SAVEIMAGEAS		Image items	326
+chrome-current	IDC_CONTENT_CONTEXT_COPYIMAGELOCATION		Image items	327
+chrome-current	IDC_CONTENT_CONTEXT_COPYIMAGE		Image items	328
+chrome-current	IDC_CONTENT_CONTEXT_OPENIMAGENEWTAB		Image items	329
+chrome-current	IDC_CONTENT_CONTEXT_SEARCHWEBFORIMAGE		Image items	330
+chrome-current	IDC_CONTENT_CONTEXT_OPEN_ORIGINAL_IMAGE_NEW_TAB		Image items	331
+chrome-current	IDC_CONTENT_CONTEXT_LOAD_IMAGE		Image items	332
+chrome-current	IDC_CONTENT_CONTEXT_SEARCHLENSFORIMAGE		Image items	333
+chrome-current	IDC_CONTENT_CONTEXT_GLICSHAREIMAGE		Image items	334
+chrome-current	IDC_CONTENT_CONTEXT_VIDEO_FRAME		Image items	335
+chrome-current	IDC_CONTENT_CONTEXT_SAVEVIDEOFRAMEAS		Audio/video items	337
+chrome-current	IDC_CONTENT_CONTEXT_SAVEAVAS		Audio/video items	338
+chrome-current	IDC_CONTENT_CONTEXT_COPYAVLOCATION		Audio/video items	339
+chrome-current	IDC_CONTENT_CONTEXT_COPYVIDEOFRAME		Audio/video items	340
+chrome-current	IDC_CONTENT_CONTEXT_SEARCHLENSFORVIDEOFRAME		Audio/video items	341
+chrome-current	IDC_CONTENT_CONTEXT_SEARCHWEBFORVIDEOFRAME		Audio/video items	342
+chrome-current	IDC_CONTENT_CONTEXT_OPENAVNEWTAB		Audio/video items	343
+chrome-current	IDC_CONTENT_CONTEXT_PICTUREINPICTURE		Audio/video items	344
+chrome-current	IDC_CONTENT_CONTEXT_LOOP		Media items	346
+chrome-current	IDC_CONTENT_CONTEXT_CONTROLS		Media items	347
+chrome-current	IDC_CONTENT_CONTEXT_ROTATECW		Media items	348
+chrome-current	IDC_CONTENT_CONTEXT_ROTATECCW		Media items	349
+chrome-current	IDC_CONTENT_CONTEXT_COPY		Edit items	351
+chrome-current	IDC_CONTENT_CONTEXT_CUT		Edit items	352
+chrome-current	IDC_CONTENT_CONTEXT_PASTE		Edit items	353
+chrome-current	IDC_CONTENT_CONTEXT_DELETE		Edit items	354
+chrome-current	IDC_CONTENT_CONTEXT_UNDO		Edit items	355
+chrome-current	IDC_CONTENT_CONTEXT_REDO		Edit items	356
+chrome-current	IDC_CONTENT_CONTEXT_SELECTALL		Edit items	357
+chrome-current	IDC_CONTENT_CONTEXT_PASTE_AND_MATCH_STYLE		Edit items	358
+chrome-current	IDC_CONTENT_CONTEXT_COPYLINKTOTEXT		Edit items	359
+chrome-current	IDC_CONTENT_CONTEXT_RESHARELINKTOTEXT		Edit items	360
+chrome-current	IDC_CONTENT_CONTEXT_REMOVELINKTOTEXT		Edit items	361
+chrome-current	IDC_CONTENT_CONTEXT_TRANSLATE		Other items	363
+chrome-current	IDC_CONTENT_CONTEXT_INSPECTELEMENT		Other items	364
+chrome-current	IDC_CONTENT_CONTEXT_LANGUAGE_SETTINGS		Other items	365
+chrome-current	IDC_CONTENT_CONTEXT_LOOK_UP		Other items	366
+chrome-current	IDC_CONTENT_CONTEXT_SPELLING_SUGGESTION		Other items	367
+chrome-current	IDC_CONTENT_CONTEXT_SPELLING_TOGGLE		Other items	368
+chrome-current	IDC_CONTENT_CONTEXT_OPEN_IN_READING_MODE		Other items	369
+chrome-current	IDC_CONTENT_CONTEXT_SAVEPLUGINAS		Other items	370
+chrome-current	IDC_CONTENT_CONTEXT_INSPECTBACKGROUNDPAGE		Other items	371
+chrome-current	IDC_CONTENT_CONTEXT_RELOAD_PACKAGED_APP		Other items	372
+chrome-current	IDC_CONTENT_CONTEXT_RESTART_PACKAGED_APP		Other items	373
+chrome-current	IDC_CONTENT_CONTEXT_LENS_REGION_SEARCH		Other items	374
+chrome-current	IDC_CONTENT_CONTEXT_WEB_REGION_SEARCH		Other items	375
+chrome-current	IDC_CONTENT_CONTEXT_GENERATEPASSWORD		Other items	378
+chrome-current	IDC_CONTENT_CONTEXT_EXIT_FULLSCREEN		Other items	379
+chrome-current	IDC_CONTENT_CONTEXT_SAVE_TO_MEMORY_BANKS		Other items	380
+chrome-current	IDC_CONTENT_CONTEXT_BROWSE_MEMORY_BANKS		Other items	381
+chrome-current	IDC_CONTENT_CONTEXT_SHOWALLSAVEDPASSWORDS		Other items	384
+chrome-current	IDC_CONTENT_CONTEXT_PARTIAL_TRANSLATE		Other items	385
+chrome-current	IDC_CONTENT_CONTEXT_RELOADFRAME		Frame items	387
+chrome-current	IDC_CONTENT_CONTEXT_VIEWFRAMESOURCE		Frame items	388
+chrome-current	IDC_CONTENT_CONTEXT_GOTOURL		Search items	390
+chrome-current	IDC_CONTENT_CONTEXT_SEARCHWEBFOR		Search items	391
+chrome-current	IDC_CONTENT_CONTEXT_SEARCHWEBFORNEWTAB		Search items	392
+chrome-current	IDC_CONTENT_CONTEXT_LENS_OVERLAY		Search items	393
+chrome-current	IDC_CONTENT_CONTEXT_USE_PASSKEY_FROM_ANOTHER_DEVICE		Use passkey from another device from the top level of context menu	395
+chrome-current	IDC_CONTENT_CONTEXT_LISTEN_TO_THIS_PAGE		Listen to this page context menu	397
+chrome-current	IDC_CONTENT_CONTEXT_OPEN_WITH1		Open with items	399
+chrome-current	IDC_CONTENT_CONTEXT_EMOJI		Context menu items that provide fast access to input methods	401
+chrome-current	IDC_CONTENT_CONTEXT_DICTATION		Context menu items that provide fast access to input methods	402
+chrome-current	IDC_CONTEXT_COMPOSE		Context menu items that provide fast access to input methods	403
+chrome-current	IDC_CONTENT_CONTEXT_RELOAD_GLIC		Context menu items to control glic	405
+chrome-current	IDC_CONTENT_CONTEXT_ARCHIVE_GLIC		Context menu items to control glic	406
+chrome-current	IDC_CONTENT_CONTEXT_GLIC		Context menu items to control glic	407
+chrome-current	IDC_CONTENT_CONTEXT_GLIC_SMART_SUGGESTION		Context menu items to control glic	408
+chrome-current	IDC_CONTENT_CONTEXT_INDIGO		Context menu item for Indigo (Try it on)	410
+chrome-current	IDC_BOOKMARK_BAR_OPEN_ALL		Context menu items in the bookmark bar	412
+chrome-current	IDC_BOOKMARK_BAR_OPEN_ALL_NEW_WINDOW		Context menu items in the bookmark bar	413
+chrome-current	IDC_BOOKMARK_BAR_OPEN_ALL_INCOGNITO		Context menu items in the bookmark bar	414
+chrome-current	IDC_BOOKMARK_BAR_OPEN_INCOGNITO		Context menu items in the bookmark bar	415
+chrome-current	IDC_BOOKMARK_BAR_OPEN_ALL_NEW_TAB_GROUP		Context menu items in the bookmark bar	416
+chrome-current	IDC_BOOKMARK_BAR_RENAME_FOLDER		Context menu items in the bookmark bar	417
+chrome-current	IDC_BOOKMARK_BAR_EDIT		Context menu items in the bookmark bar	418
+chrome-current	IDC_BOOKMARK_BAR_REMOVE		Context menu items in the bookmark bar	419
+chrome-current	IDC_BOOKMARK_BAR_UNDO		Context menu items in the bookmark bar	420
+chrome-current	IDC_BOOKMARK_BAR_REDO		Context menu items in the bookmark bar	421
+chrome-current	IDC_BOOKMARK_BAR_ADD_NEW_BOOKMARK		Context menu items in the bookmark bar	422
+chrome-current	IDC_BOOKMARK_BAR_NEW_FOLDER		Context menu items in the bookmark bar	423
+chrome-current	IDC_BOOKMARK_BAR_SHOW_APPS_SHORTCUT		Context menu items in the bookmark bar	426
+chrome-current	IDC_BOOKMARK_BAR_SHOW_MANAGED_BOOKMARKS		Context menu items in the bookmark bar	427
+chrome-current	IDC_BOOKMARK_BAR_TRACK_PRICE_FOR_SHOPPING_BOOKMARK		Context menu items in the bookmark bar	428
+chrome-current	IDC_BOOKMARK_BAR_UNTRACK_PRICE_FOR_SHOPPING_BOOKMARK		Context menu items in the bookmark bar	429
+chrome-current	IDC_BOOKMARK_BAR_ADD_TO_BOOKMARKS_BAR		Context menu items in the bookmark bar	430
+chrome-current	IDC_BOOKMARK_BAR_REMOVE_FROM_BOOKMARKS_BAR		Context menu items in the bookmark bar	431
+chrome-current	IDC_BOOKMARK_BAR_TOGGLE_SHOW_TAB_GROUPS		Context menu items in the bookmark bar	432
+chrome-current	IDC_BOOKMARK_BAR_MOVE		Context menu items in the bookmark bar	433
+chrome-current	IDC_BOOKMARK_BAR_OPEN_SPLIT_VIEW		Context menu items in the bookmark bar	434
+chrome-current	IDC_BOOKMARK_BAR_SUBMENU		Context menu items in the bookmark bar	435
+chrome-current	IDC_BOOKMARK_BAR_SUBMENU_ALWAYS_HIDE		Context menu items in the bookmark bar	436
+chrome-current	IDC_BOOKMARK_BAR_SUBMENU_ALWAYS_SHOW		Context menu items in the bookmark bar	437
+chrome-current	IDC_BOOKMARK_BAR_SUBMENU_ONLY_ON_NTP		Context menu items in the bookmark bar	438
+chrome-current	IDC_BOOKMARK_BAR_OPEN_ALL_ISOLATED		Context menu items in the bookmark bar	439
+chrome-current	IDC_CONTENT_CONTEXT_GENERATE_QR_CODE		Context menu items for Sharing	442
+chrome-current	IDC_CONTENT_CONTEXT_SHARING_SUBMENU		Context menu items for Sharing	443
+chrome-current	IDC_CONTENT_CONTEXT_SEND_TAB_TO_SELF_DEVICE1		Context menu items for Sharing	444
+chrome-current	IDC_CONTENT_CONTEXT_SEND_TAB_TO_SELF_MANAGE_DEVICES		Context menu items for Sharing	445
+chrome-current	IDC_CONTENT_CONTEXT_SEND_TAB_TO_SELF_SIGN_IN		Context menu items for Sharing	446
+chrome-current	IDC_CONTENT_PASTE_FROM_CLIPBOARD		Context menu items for Sharing	449
+chrome-current	IDC_STATUS_TRAY_KEEP_CHROME_RUNNING_IN_BACKGROUND		Context menu items in the status tray	452
+chrome-current	IDC_STATUS_TRAY_KEEP_CHROME_RUNNING_IN_BACKGROUND_SETTING		Context menu items in the status tray	453
+chrome-current	IDC_MEDIA_ROUTER_ABOUT		Context menu items for media router	456
+chrome-current	IDC_MEDIA_ROUTER_HELP		Context menu items for media router	457
+chrome-current	IDC_MEDIA_ROUTER_LEARN_MORE		Context menu items for media router	458
+chrome-current	IDC_MEDIA_ROUTER_TOGGLE_MEDIA_REMOTING		Context menu items for media router	459
+chrome-current	IDC_MEDIA_TOOLBAR_CONTEXT_REPORT_CAST_ISSUE		Context menu items for media toolbar button	463
+chrome-current	IDC_MEDIA_TOOLBAR_CONTEXT_SHOW_OTHER_SESSIONS		Context menu items for media toolbar button	465
+chrome-current	IDC_UPDATE_SIDE_PANEL_PIN_STATE		Context menu items for pinned sidepanel toolbar button	468
+chrome-current	IDC_MEDIA_CONTEXT_MEDIA_STREAM_CAPTURE_LIST_FIRST		Context menu items for media stream status tray	471
+chrome-current	IDC_CONTENT_CONTEXT_PROTOCOL_HANDLER_FIRST		Protocol handler menu entries	474
+chrome-current	IDC_CONTENT_CONTEXT_PROTOCOL_HANDLER_SETTINGS		Protocol handler menu entries	475
+chrome-current	IDC_OPEN_LINK_IN_PROFILE_FIRST		Protocol handler menu entries	478
+chrome-current	IDC_CONTENT_CONTEXT_START_SMART_SELECTION_ACTION1		Protocol handler menu entries	481
+chrome-current	IDC_CONTENT_CONTEXT_ACCESSIBILITY_LABELS_TOGGLE		Protocol handler menu entries	485
+chrome-current	IDC_CONTENT_CONTEXT_ACCESSIBILITY_LABELS_TOGGLE_ONCE		Protocol handler menu entries	486
+chrome-current	IDC_CONTENT_CONTEXT_QUICK_ANSWERS_INLINE_ANSWER		Quick Answers context menu items	490
+chrome-current	IDC_CONTENT_CONTEXT_QUICK_ANSWERS_INLINE_QUERY		Quick Answers context menu items	491
+chrome-current	IDC_TAB_SEARCH		Quick Answers context menu items	495
+chrome-current	IDC_TAB_SEARCH_CLOSE		Quick Answers context menu items	496
+chrome-current	IDC_DEBUG_TOGGLE_TABLET_MODE		Views debug commands	499
+chrome-current	IDC_DEBUG_PRINT_VIEW_TREE		Views debug commands	500
+chrome-current	IDC_DEBUG_PRINT_VIEW_TREE_DETAILS		Views debug commands	501
+chrome-current	IDC_DEBUG_PRINT_WINDOW_HIERARCHY		Views debug commands	502
+chrome-current	IDC_DEBUG_PRINT_LAYER_HIERARCHY		Views debug commands	503
+chrome-current	IDC_CONTENT_CONTEXT_AUTOFILL_FEEDBACK		Please leave a gap here for new debug commands	507
+chrome-current	IDC_CONTENT_CONTEXT_AUTOFILL_FALLBACK_PASSWORDS_SELECT_PASSWORD		Autofill context menu commands	509
+chrome-current	IDC_CONTENT_CONTEXT_AUTOFILL_FALLBACK_PASSWORDS_IMPORT_PASSWORDS		Autofill context menu commands	510
+chrome-current	IDC_CONTENT_CONTEXT_AUTOFILL_FALLBACK_PASSWORDS_SUGGEST_PASSWORD		Autofill context menu commands	511
+chrome-current	IDC_CONTENT_CONTEXT_AUTOFILL_FALLBACK_PASSWORDS_USE_PASSKEY_FROM_ANOTHER_DEVICE		Autofill context menu commands	512
+chrome-current	IDC_DEVICE_SYSTEM_TRAY_ICON_FIRST		Autofill context menu commands	518
+chrome-current	IDC_GLIC_STATUS_ICON_MENU_CUSTOMIZE_KEYBOARD_SHORTCUT		Glic status tray icon menu	524
+chrome-current	IDC_GLIC_STATUS_ICON_MENU_REMOVE_ICON		Glic status tray icon menu	525
+chrome-current	IDC_GLIC_STATUS_ICON_MENU_SETTINGS		Glic status tray icon menu	526
+chrome-current	IDC_GLIC_STATUS_ICON_MENU_EXIT		Glic status tray icon menu	527
+chrome-current	IDC_GLIC_STATUS_ICON_MENU_TOGGLE		Glic status tray icon menu	528
+chrome-current	IDC_GLIC_TOGGLE_PIN		Glic button context menu and tabstrip context menu	531
+chrome-current	IDC_TAB_SEARCH_TOGGLE_PIN		Glic button context menu and tabstrip context menu	532
+chrome-current	IDC_EVERYTHING_MENU_TOGGLE_PIN		Glic button context menu and tabstrip context menu	533
+chrome-current	IDC_TAB_SCROLL_BUTTONS_TOGGLE_PIN		Glic button context menu and tabstrip context menu	534
+chrome-current	IDC_OMNIBOX_CONTEXT_ADD_IMAGE		Omnibox context menu	537
+chrome-current	IDC_OMNIBOX_CONTEXT_ADD_FILE		Omnibox context menu	538
+chrome-current	IDC_OMNIBOX_CONTEXT_CREATE_IMAGES		Omnibox context menu	539
+chrome-current	IDC_OMNIBOX_CONTEXT_DEEP_RESEARCH		Omnibox context menu	540
+chrome-current	IDC_OMNIBOX_CONTEXT_CANVAS		Omnibox context menu	541
+chrome-current	IDC_OMNIBOX_CONTEXT_SET_MODEL_AUTO		Omnibox context menu	542
+chrome-current	IDC_OMNIBOX_CONTEXT_SET_MODEL_THINKING		Omnibox context menu	543
+chrome-current	IDC_OMNIBOX_CONTEXT_SET_MODEL_REGULAR		Omnibox context menu	544
+chrome-current	IDC_OMNIBOX_CONTEXT_SET_MODEL_PRO_NO_GEN_UI		Omnibox context menu	545
+chrome-current	IDC_OMNIBOX_CONTEXT_SHARED_TABS_SUBMENU		Omnibox context menu	546
+chrome-current	IDC_OMNIBOX_CONTEXT_SMART_TAB_SHARING		Omnibox context menu	547
+chrome-current	IDC_OMNIBOX_CONTEXT_SINGLE_TAB		Omnibox context menu	548
+chrome-current	IDC_MANAGE_SKILLS		Skills commands	551
+chrome-current	IDC_BROWSE_SKILLS		Skills commands	552
+chrome-current	IDC_OMNIBOX_EVERYWHERE_STATUS_ICON_MENU_TOGGLE		Omnibox Everywhere status tray icon menu	555
+chrome-current	IDC_OMNIBOX_EVERYWHERE_STATUS_ICON_MENU_CUSTOMIZE_KEYBOARD_SHORTCUT		Omnibox Everywhere status tray icon menu	556
+chrome-current	IDC_OMNIBOX_EVERYWHERE_STATUS_ICON_MENU_SETTINGS		Omnibox Everywhere status tray icon menu	557
+chrome-current	IDC_OMNIBOX_EVERYWHERE_STATUS_ICON_MENU_EXIT		Omnibox Everywhere status tray icon menu	558
+chrome-current	IDC_CONTENT_CONTEXT_ASK_GOOGLE_ABOUT_THIS_PAGE		"Ask Google about this page" menu items	561
+chrome-current	IDC_ASK_GOOGLE_ABOUT_THIS_PAGE		"Ask Google about this page" menu items	562
+chrome-current	IDC_EDIT_MENU		App Menu submenus and containers	587
+chrome-current	IDC_ZOOM_MENU		App Menu submenus and containers	588
+chrome-current	IDC_PASSWORDS_AND_AUTOFILL_MENU		App Menu submenus and containers	589
+chrome-current	IDC_FIND_AND_EDIT_MENU		App Menu submenus and containers	590
+chrome-current	IDC_SAVE_AND_SHARE_MENU		App Menu submenus and containers	591
+chrome-current	IDC_RECENT_TABS_MENU		App Menu submenus and containers	592
+chrome-current	IDC_SHARING_HUB_MENU		App Menu submenus and containers	593
+chrome-current	IDC_PROFILE_MENU_IN_APP_MENU		App Menu submenus and containers	594
+chrome-current	IDC_READING_LIST_MENU		App Menu submenus and containers	595
+chrome-current	IDC_EXTENSIONS_SUBMENU		App Menu submenus and containers	596
+chrome-current	IDC_BOOKMARKS_MENU		App Menu submenus and containers	597
+chrome-current	IDC_SAVED_TAB_GROUPS_MENU		App Menu submenus and containers	598
+chrome-current	IDC_MORE_TOOLS_MENU		App Menu submenus and containers	599
+chrome-current	IDC_HELP_MENU		App Menu submenus and containers	600
+chrome-current	IDC_SKILLS_AND_EXTENSIONS_MENU		App Menu submenus and containers	601
+chrome-current	IDC_CONTEXTUAL_TASKS_MENU		App Menu submenus and containers	602
+chrome-current	IDC_OTHER_DEVICE_TABS_MENU		App Menu submenus and containers	603
+chrome-current	IDC_SPELLCHECK_MENU		Context Menu submenus	606
+chrome-current	IDC_WRITING_DIRECTION_MENU		Context Menu submenus	607
+chrome-current	IDC_VIEW_MENU		macOS Top-Level Menu Bar containers	610
+chrome-current	IDC_FILE_MENU		macOS Top-Level Menu Bar containers	611
+chrome-current	IDC_CHROME_MENU		macOS Top-Level Menu Bar containers	612
+chrome-current	IDC_HISTORY_MENU		macOS Top-Level Menu Bar containers	613
+chrome-current	IDC_TAB_MENU		macOS Top-Level Menu Bar containers	614
+chrome-current	IDC_PROFILE_MAIN_MENU		macOS Top-Level Menu Bar containers	615
+chrome-current	IDC_WINDOW_MENU		macOS Top-Level Menu Bar containers	616
+chrome-current	IDC_ALL_WINDOWS_FRONT		macOS Top-Level Menu Bar containers	617
+chrome-current	IDC_INPUT_METHODS_MENU		Linux System menu containers	620
+chrome-current	IDC_DEVELOPER_MENU		Linux System menu containers	623
+chrome-current	IDC_FIND_MENU		Linux System menu containers	624
+chrome-current	IDC_CONTENT_CONTEXT_OPENLINKWITH		Context Menu submenus	627
+chrome-current	IDC_CONTENT_CONTEXT_SHARING_CLICK_TO_CALL_MULTIPLE_DEVICES		Context Menu submenus	628
+chrome-current	IDC_CONTENT_CONTEXT_ACCESSIBILITY_LABELS		Context Menu submenus	629
+chrome-current	IDC_CONTENT_CONTEXT_NO_SPELLING_SUGGESTIONS		Context Menu submenus	630
+chrome-current	IDC_RECENT_TABS_NO_DEVICE_TABS		Context Menu submenus	631
+chrome-current	IDC_WRITING_DIRECTION_DEFAULT		Context Menu submenus	632
+chrome-current	IDC_CONTENT_CONTEXT_CONTEXTUAL_TASKS_SUBMENU		Context Menu submenus	633
+brave-current	IDC_BRAVE_COMMANDS_START		If new main menu items are added, please consider adding a case for it	18
+brave-current	IDC_SHOW_BRAVE_REWARDS		If new main menu items are added, please consider adding a case for it	19
+brave-current	IDC_NEW_TOR_CONNECTION_FOR_SITE		If new main menu items are added, please consider adding a case for it	20
+brave-current	IDC_NEW_OFFTHERECORD_WINDOW_TOR		If new main menu items are added, please consider adding a case for it	21
+brave-current	IDC_CONTENT_CONTEXT_OPENLINKTOR		If new main menu items are added, please consider adding a case for it	22
+brave-current	IDC_SHOW_BRAVE_SYNC		If new main menu items are added, please consider adding a case for it	23
+brave-current	IDC_SHOW_BRAVE_WALLET		If new main menu items are added, please consider adding a case for it	24
+brave-current	IDC_TOGGLE_AI_CHAT		If new main menu items are added, please consider adding a case for it	25
+brave-current	IDC_SHOW_BRAVE_WEBCOMPAT_REPORTER		If new main menu items are added, please consider adding a case for it	26
+brave-current	IDC_SPEEDREADER_ICON_ONCLICK		If new main menu items are added, please consider adding a case for it	27
+brave-current	IDC_SIDEBAR_SHOW_OPTION_MENU		If new main menu items are added, please consider adding a case for it	28
+brave-current	IDC_SIDEBAR_SHOW_OPTION_ALWAYS		If new main menu items are added, please consider adding a case for it	29
+brave-current	IDC_SIDEBAR_SHOW_OPTION_MOUSEOVER		If new main menu items are added, please consider adding a case for it	30
+brave-current	IDC_SIDEBAR_SHOW_OPTION_NEVER		If new main menu items are added, please consider adding a case for it	31
+brave-current	IDC_SHOW_BRAVE_WALLET_PANEL		If new main menu items are added, please consider adding a case for it	32
+brave-current	IDC_CLOSE_BRAVE_WALLET_PANEL		If new main menu items are added, please consider adding a case for it	33
+brave-current	IDC_SHOW_BRAVE_VPN_PANEL		If new main menu items are added, please consider adding a case for it	34
+brave-current	IDC_BRAVE_VPN_MENU		If new main menu items are added, please consider adding a case for it	35
+brave-current	IDC_TOGGLE_BRAVE_VPN_TOOLBAR_BUTTON		If new main menu items are added, please consider adding a case for it	36
+brave-current	IDC_SEND_BRAVE_VPN_FEEDBACK		If new main menu items are added, please consider adding a case for it	37
+brave-current	IDC_ABOUT_BRAVE_VPN		If new main menu items are added, please consider adding a case for it	38
+brave-current	IDC_MANAGE_BRAVE_VPN_PLAN		If new main menu items are added, please consider adding a case for it	39
+brave-current	IDC_TOGGLE_BRAVE_VPN		If new main menu items are added, please consider adding a case for it	40
+brave-current	IDC_CONTENT_CONTEXT_FORCE_PASTE		If new main menu items are added, please consider adding a case for it	41
+brave-current	IDC_COPY_CLEAN_LINK		If new main menu items are added, please consider adding a case for it	42
+brave-current	IDC_TOGGLE_TAB_MUTE		If new main menu items are added, please consider adding a case for it	43
+brave-current	IDC_SIDEBAR_TOGGLE_POSITION		If new main menu items are added, please consider adding a case for it	44
+brave-current	IDC_CONTENT_CONTEXT_COPY_TEXT_FROM_IMAGE		If new main menu items are added, please consider adding a case for it	45
+brave-current	IDC_FORCE_PASTE		If new main menu items are added, please consider adding a case for it	47
+brave-current	IDC_TOGGLE_VERTICAL_TABS_WINDOW_TITLE		If new main menu items are added, please consider adding a case for it	49
+brave-current	IDC_CONFIGURE_BRAVE_NEWS		If new main menu items are added, please consider adding a case for it	51
+brave-current	IDC_CONFIGURE_SHORTCUTS		If new main menu items are added, please consider adding a case for it	53
+brave-current	IDC_SHOW_BRAVE_TALK		If new main menu items are added, please consider adding a case for it	55
+brave-current	IDC_TOGGLE_BRAVE_VPN_TRAY_ICON		If new main menu items are added, please consider adding a case for it	56
+brave-current	IDC_CONTENT_CONTEXT_IMPORT_IPNS_KEYS_START		If new main menu items are added, please consider adding a case for it	57
+brave-current	IDC_CONTENT_CONTEXT_IMPORT_IPNS_KEYS_END		If new main menu items are added, please consider adding a case for it	58
+brave-current	IDC_TOGGLE_SHIELDS		If new main menu items are added, please consider adding a case for it	60
+brave-current	IDC_TOGGLE_JAVASCRIPT		If new main menu items are added, please consider adding a case for it	61
+brave-current	IDC_SHOW_PLAYLIST_BUBBLE		If new main menu items are added, please consider adding a case for it	63
+brave-current	IDC_GROUP_TABS_ON_CURRENT_ORIGIN		If new main menu items are added, please consider adding a case for it	65
+brave-current	IDC_MOVE_GROUP_TO_NEW_WINDOW		If new main menu items are added, please consider adding a case for it	66
+brave-current	IDC_CLOSE_DUPLICATE_TABS		If new main menu items are added, please consider adding a case for it	67
+brave-current	IDC_WINDOW_CLOSE_TABS_TO_LEFT		If new main menu items are added, please consider adding a case for it	68
+brave-current	IDC_WINDOW_CLOSE_UNPINNED_TABS		If new main menu items are added, please consider adding a case for it	69
+brave-current	IDC_WINDOW_ADD_ALL_TABS_TO_NEW_GROUP		If new main menu items are added, please consider adding a case for it	70
+brave-current	IDC_CLOSE_ALL_DUPLICATE_TABS		If new main menu items are added, please consider adding a case for it	71
+brave-current	IDC_TOGGLE_VERTICAL_TABS_EXPANDED		If new main menu items are added, please consider adding a case for it	73
+brave-current	IDC_WINDOW_MUTE_ALL_TABS		If new main menu items are added, please consider adding a case for it	75
+brave-current	IDC_WINDOW_MUTE_OTHER_TABS		If new main menu items are added, please consider adding a case for it	76
+brave-current	IDC_WINDOW_UNMUTE_ALL_TABS		If new main menu items are added, please consider adding a case for it	77
+brave-current	IDC_SCROLL_TAB_TO_TOP		If new main menu items are added, please consider adding a case for it	79
+brave-current	IDC_SCROLL_TAB_TO_BOTTOM		If new main menu items are added, please consider adding a case for it	80
+brave-current	IDC_BRAVE_SEND_TAB_TO_SELF		If new main menu items are added, please consider adding a case for it	82
+brave-current	IDC_AI_CHAT_CONTEXT_SUMMARIZE_TEXT		AI chat commands	85
+brave-current	IDC_AI_CHAT_CONTEXT_LEO_TOOLS		AI chat commands	86
+brave-current	IDC_AI_CHAT_CONTEXT_EXPLAIN		AI chat commands	87
+brave-current	IDC_AI_CHAT_CONTEXT_PARAPHRASE		AI chat commands	88
+brave-current	IDC_AI_CHAT_CONTEXT_CREATE_TAGLINE		AI chat commands	89
+brave-current	IDC_AI_CHAT_CONTEXT_CREATE_SOCIAL_MEDIA_POST		AI chat commands	90
+brave-current	IDC_AI_CHAT_CONTEXT_CREATE_SOCIAL_MEDIA_COMMENT_SHORT		AI chat commands	91
+brave-current	IDC_AI_CHAT_CONTEXT_CREATE_SOCIAL_MEDIA_COMMENT_LONG		AI chat commands	92
+brave-current	IDC_AI_CHAT_CONTEXT_CHANGE_LENGTH		AI chat commands	93
+brave-current	IDC_AI_CHAT_CONTEXT_IMPROVE		AI chat commands	94
+brave-current	IDC_AI_CHAT_CONTEXT_PERSUASIVE_TONE		AI chat commands	95
+brave-current	IDC_AI_CHAT_CONTEXT_CHANGE_TONE		AI chat commands	96
+brave-current	IDC_AI_CHAT_CONTEXT_ACADEMICIZE		AI chat commands	97
+brave-current	IDC_AI_CHAT_CONTEXT_PROFESSIONALIZE		AI chat commands	98
+brave-current	IDC_AI_CHAT_CONTEXT_CASUALIZE		AI chat commands	99
+brave-current	IDC_AI_CHAT_CONTEXT_FUNNY_TONE		AI chat commands	100
+brave-current	IDC_AI_CHAT_CONTEXT_SHORTEN		AI chat commands	101
+brave-current	IDC_AI_CHAT_CONTEXT_EXPAND		AI chat commands	102
+brave-current	IDC_AI_CHAT_CONTEXT_REWRITE		AI chat commands	103
+brave-current	IDC_OPEN_FULL_PAGE_CHAT		AI chat commands	104
+brave-current	IDC_TOGGLE_ALL_BOOKMARKS_BUTTON_VISIBILITY		Bookmark commands	107
+brave-current	IDC_EXPORT_ALL_BOOKMARKS		Bookmark commands	108
+brave-current	IDC_COMMANDER		Bookmark commands	110
+brave-current	IDC_WINDOW_GROUP_UNGROUPED_TABS		Bookmark commands	112
+brave-current	IDC_WINDOW_UNGROUP_GROUP		Bookmark commands	113
+brave-current	IDC_WINDOW_REMOVE_TAB_FROM_GROUP		Bookmark commands	114
+brave-current	IDC_WINDOW_UNGROUP_ALL_TABS		Bookmark commands	115
+brave-current	IDC_WINDOW_NAME_GROUP		Bookmark commands	116
+brave-current	IDC_WINDOW_NEW_TAB_IN_GROUP		Bookmark commands	117
+brave-current	IDC_WINDOW_TOGGLE_GROUP_EXPANDED		Bookmark commands	118
+brave-current	IDC_WINDOW_CLOSE_UNGROUPED_TABS		Bookmark commands	119
+brave-current	IDC_WINDOW_CLOSE_TABS_NOT_IN_CURRENT_GROUP		Bookmark commands	120
+brave-current	IDC_WINDOW_CLOSE_GROUP		Bookmark commands	121
+brave-current	IDC_WINDOW_BRING_ALL_TABS		Bookmark commands	123
+brave-current	IDC_NEW_SPLIT_VIEW		Commands related to split view	126
+brave-current	IDC_TILE_TABS		Commands related to split view	127
+brave-current	IDC_BREAK_TILE		Commands related to split view	128
+brave-current	IDC_SWAP_SPLIT_VIEW		Commands related to split view	129
+brave-current	IDC_SHOW_WAYBACK_MACHINE_BUBBLE		Commands related to split view	132
+brave-current	IDC_ADBLOCK_CONTEXT_BLOCK_ELEMENTS		Commands related to split view	135
+brave-current	IDC_SHOW_APPS_PAGE		Commands related to split view	137
+brave-current	IDC_OPEN_IN_CONTAINER		Commands related to split view	140
+brave-current	IDC_OPEN_IN_CONTAINER_START		Commands related to split view	141
+brave-current	IDC_OPEN_IN_CONTAINER_END		Commands related to split view	143
+brave-current	IDC_OPEN_CONTAINERS_SETTING		Commands related to split view	144
+brave-current	IDC_NEW_EMAIL_ALIAS		Commands related to split view	147
+brave-current	IDC_SHOW_EMAIL_ALIASES		Commands related to split view	148
+brave-current	IDC_TOGGLE_FOCUS_MODE		Commands related to split view	150
+brave-current	IDC_NEW_TEMPORARY_CONTAINER		Commands related to split view	151
+brave-current	IDC_PSST_DONT_SHOW_FOR_THIS_SITE		Commands related to split view	154
+brave-current	IDC_PSST_DISABLE_PRIVACY_SETTINGS_TUNING		Commands related to split view	155
+brave-current	IDC_TOGGLE_BOOKMARKS_SIDE_PANEL		Side panel toggle commands. These ship with no default accelerators and let	159
+brave-current	IDC_TOGGLE_READING_LIST_SIDE_PANEL		Side panel toggle commands. These ship with no default accelerators and let	160
+brave-current	IDC_TOGGLE_PLAYLIST_SIDE_PANEL		Side panel toggle commands. These ship with no default accelerators and let	161
+brave-current	IDC_TOGGLE_BRAVE_NEWS_SIDE_PANEL		Side panel toggle commands. These ship with no default accelerators and let	162
+brave-current	IDC_BLOCK_ELEMENTS		IDC_ADBLOCK_CONTEXT_BLOCK_ELEMENTS (a context-menu-only command), this is	167
+brave-current	IDC_NEW_TAB_IN_CONTAINER_1		IDC_ADBLOCK_CONTEXT_BLOCK_ELEMENTS (a context-menu-only command), this is	170
+brave-current	IDC_NEW_TAB_IN_CONTAINER_2		IDC_ADBLOCK_CONTEXT_BLOCK_ELEMENTS (a context-menu-only command), this is	171
+brave-current	IDC_NEW_TAB_IN_CONTAINER_3		IDC_ADBLOCK_CONTEXT_BLOCK_ELEMENTS (a context-menu-only command), this is	172
+brave-current	IDC_NEW_TAB_IN_CONTAINER_4		IDC_ADBLOCK_CONTEXT_BLOCK_ELEMENTS (a context-menu-only command), this is	173
+brave-current	IDC_NEW_TAB_IN_CONTAINER_5		IDC_ADBLOCK_CONTEXT_BLOCK_ELEMENTS (a context-menu-only command), this is	174
+brave-current	IDC_NEW_TAB_IN_CONTAINER_6		IDC_ADBLOCK_CONTEXT_BLOCK_ELEMENTS (a context-menu-only command), this is	175
+brave-current	IDC_NEW_TAB_IN_CONTAINER_7		IDC_ADBLOCK_CONTEXT_BLOCK_ELEMENTS (a context-menu-only command), this is	176
+brave-current	IDC_NEW_TAB_IN_CONTAINER_8		IDC_ADBLOCK_CONTEXT_BLOCK_ELEMENTS (a context-menu-only command), this is	177
+brave-current	IDC_NEW_TAB_IN_CONTAINER_9		IDC_ADBLOCK_CONTEXT_BLOCK_ELEMENTS (a context-menu-only command), this is	178
+brave-current	IDC_BRAVE_COMMANDS_LAST		IDC_ADBLOCK_CONTEXT_BLOCK_ELEMENTS (a context-menu-only command), this is	180
+seamonkey-2.0	menu_newEditor			320
+seamonkey-2.0	saveframe			337
+seamonkey-2.0	Browser:UploadFile	Upload File		342
+seamonkey-2.0	menu_findTypeLinks			368
+seamonkey-2.0	menu_findTypeText			369
+seamonkey-2.0	navbarCmd.label	Navigation Toolbar	View > Show/Hide	383
+seamonkey-2.0	personalbarCmd.label	Personal Toolbar	View > Show/Hide	384
+seamonkey-2.0	componentbarCmd.label	Component Bar	View > Show/Hide	387
+seamonkey-2.0	useStyleSheetNone.label	None	View > Use Style	404
+seamonkey-2.0	useStyleSheetPersistentOnly.label	Default Style	View > Use Style	405
+seamonkey-2.0	getNewThemesCmd.label	Get New Themes	View > Apply Theme	423
+seamonkey-2.0	rdf:http://www.mozilla.org/2004/em-rdf#name	rdf:http://www.mozilla.org/2004/em-rdf#name	View > Apply Theme	427
+seamonkey-2.0	Browser:Up		Go	445
+seamonkey-2.0	Browser:AddBookmarkAs	File Bookmark	Bookmarks	468
+seamonkey-2.0	Browser:AddGroupmarkAs	Bookmark This Group of Tabs	Bookmarks	469
+seamonkey-2.0	menu_searchWeb	Search the Web		484
+seamonkey-current	menu_newEditor			292
+seamonkey-current	saveframe			315
+seamonkey-current	Browser:UploadFile			320
+seamonkey-current	menu_findTypeLinks			346
+seamonkey-current	menu_findTypeText			347
+seamonkey-current	menuitem_componentbarCmd			376
+seamonkey-current	sync-tabs-menuitem			510
+seamonkey-current	menu_searchWeb			579
+seamonkey-current	cookie_deny			595
+seamonkey-current	cookie_default			602
+seamonkey-current	cookie_session			609
+seamonkey-current	cookie_allow			616
+seamonkey-current	image_deny			638
+seamonkey-current	image_default			645
+seamonkey-current	image_allow			652
+seamonkey-current	menuitem_imageDisplay			660
+seamonkey-current	popup_deny			675
+seamonkey-current	popup_default			682
+seamonkey-current	popup_allow			689
+seamonkey-current	menuitem_PopupsManage			697
+firefox-current	sync-tabs-menuitem	Synced Tabs	History	215
+firefox-current	hiddenTabsMenu	Hidden Tabs	History	219
+firefox-current	hiddenUndoCloseWindow		History > Recently Closed Windows	247
+firefox-current	sync-setup	Sign In	Tools	340
+firefox-current	sync-enable	Turn on Sync	Tools	344
+firefox-current	sync-unverifieditem	Sign In	Tools	348
+firefox-current	sync-syncnowitem	Sync Now	Tools	352
+firefox-current	sync-reauthitem	Reconnect to { -brand-product-name }	Tools	356
+firefox-current	menu_openFirefoxView		Tools	361
+firefox-current	menu_layout_debugger	Layout Debugger	Tools	384
+firefox-current	menu_mac_services	Services	Tools	392
+firefox-current	menu_mac_hide_others	Hide Others	Tools	394
+firefox-current	menu_mac_show_all	Show All	Tools	395
+firefox-current	menu_mac_touch_bar	Customize Touch Bar	Tools	396
+firefox-current	menu-window-bring-all-to-front	Bring All to Front	Window	412
+firefox-current	menu_HelpPopup_reportPhishingErrortoolmenu	This Isn’t a Deceptive Site	Help	444
+firefox-current	helpSwitchDevice	Switching to a New Device	Help	449
+firefox-current	helpPolicySupport		Help	458
+falkon-current	Help/AboutQt	About Qt	Help	597
+falkon-current	Help/ConfigInfo	Configuration Information	Help	603
+ladybird-current	View:move_focus		View	3185
+konqueror-current	usehtml		View	38
+konqueror-current	lock		View	39
+konqueror-current	link		View	40
+konqueror-current	loadviewprofile		Settings	70
+konqueror-current	saveviewprofile		Settings	71
+konqueror-current	saveremoveviewprofile		Settings	72
+konqueror-current	options_configure_extensions		Settings	75
+konqueror-current	configurespellcheck		Settings	76
+konqueror-current	options_configure_keybinding		Settings	77
+konqueror-current	options_configure_toolbars		Settings	78
+konqueror-current	protect_window		Window	97
+konqueror-current	konqintro		Help	100
+otter-0.0.01	actionOpen	Open		238
+otter-0.0.01	actionAboutQt	About Qt		376
+otter-0.0.01	actionClearClosedWindows	Clear		456
+otter-current	SetOptionAction			99
+otter-current	OpenAction			104
+otter-current	PinTabAction			108
+otter-current	DetachTabAction			109
+otter-current	MaximizeTabAction			110
+otter-current	MinimizeTabAction			111
+otter-current	PurgeTabHistoryAction			115
+otter-current	MaximizeAllAction			123
+otter-current	MinimizeAllAction			124
+otter-current	RestoreAllAction			125
+otter-current	OpenLinkAction			133
+otter-current	OpenLinkInCurrentTabAction			134
+otter-current	OpenLinkInNewWindowBackgroundAction			138
+otter-current	OpenLinkInNewPrivateTabBackgroundAction			140
+otter-current	OpenLinkInNewPrivateWindowBackgroundAction			142
+otter-current	SaveLinkToDownloadsAction			147
+otter-current	OpenFrameAction			149
+otter-current	OpenFrameInCurrentTabAction			150
+otter-current	OpenFrameInNewTabAction			151
+otter-current	OpenFrameInNewTabBackgroundAction			152
+otter-current	CopyFrameLinkToClipboardAction			153
+otter-current	OpenImageInNewTabBackgroundAction			158
+otter-current	FillPasswordAction			171
+otter-current	GoToHistoryIndexAction			175
+otter-current	GoToPageAction			176
+otter-current	RemoveHistoryIndexAction			181
+otter-current	StopAllAction			184
+otter-current	ReloadOrStopAction			186
+otter-current	ContextMenuAction			190
+otter-current	CopyToNoteAction			197
+otter-current	ClearAllAction			203
+otter-current	ScrollPageLeftAction			219
+otter-current	ScrollPageRightAction			220
+otter-current	StartDragScrollAction			221
+otter-current	StartMoveScrollAction			222
+otter-current	EndScrollAction			223
+otter-current	ActivateLeastRecentlyUsedTabAction			231
+otter-current	ActivateWindowAction			235
+otter-current	OpenBookmarkAction			239
+otter-current	QuickBookmarkAccessAction			240
+otter-current	OpenFeedAction			242
+otter-current	LoadPluginsAction			244
+otter-current	ShowTabSwitcherAction			252
+otter-current	ShowPanelAction			260
+otter-current	OpenPanelAction			261
+otter-current	ResetQuickPreferencesAction			272
+otter-current	AboutQtAction			280
+otter-current	OtherAction			282
+vimium-current	enterVisualLineMode	Enter visual line mode	navigation	164
+vimium-current	nextFrame	Select the next frame on the page	navigation	257
+vimium-current	mainFrame	Select the page's main/top frame	navigation	264
+vimium-current	Vomnibar.activateBookmarks	Open a bookmark	vomnibar	331
+vimium-current	Vomnibar.activateBookmarksInNewTab	Open a bookmark in a new tab	vomnibar	342
+qutebrowser-current	adblock-update	Update block lists for both the host- and the Brave ad blocker.		147
+qutebrowser-current	bind	Bind a key to a command.		169
+qutebrowser-current	bookmark-load	Load a bookmark.		237
+qutebrowser-current	bookmarks-reload	Reload bookmarks from disk.		255
+qutebrowser-current	clear-keychain	Clear the currently entered key chain.		259
+qutebrowser-current	clear-messages	Clear all message notifications.		263
+qutebrowser-current	click-element	Click the element matching the given filter.		267
+qutebrowser-current	close	Close the current window.		291
+qutebrowser-current	cmd-edit	Open an editor to modify the current command.		295
+qutebrowser-current	cmd-later	Execute a command after some time.		304
+qutebrowser-current	cmd-repeat	Repeat a given command.		319
+qutebrowser-current	cmd-repeat-last	Repeat the last executed command.		337
+qutebrowser-current	cmd-run-with-count	Run a command with the given count.		344
+qutebrowser-current	cmd-set-text	Preset the statusbar to some text.		364
+qutebrowser-current	config-clear	Set all settings back to their default.		385
+qutebrowser-current	config-cycle	Cycle an option between multiple values.		395
+qutebrowser-current	config-dict-add	Add a key/value pair to a dictionary option.		410
+qutebrowser-current	config-dict-remove	Remove a key from a dict.		426
+qutebrowser-current	config-diff	Show all customized options.		439
+qutebrowser-current	config-edit	Open the config.py file in the editor.		448
+qutebrowser-current	config-list-add	Append a value to a config option that is a list.		457
+qutebrowser-current	config-list-remove	Remove a value from a list.		470
+qutebrowser-current	config-source	Read a config.py file.		483
+qutebrowser-current	config-unset	Unset an option.		496
+qutebrowser-current	config-write-py	Write the current configuration to a config.py file.		511
+qutebrowser-current	devtools-focus	Toggle focus between the devtools/tab.		534
+qutebrowser-current	fake-key	Send a fake keypress or key string to the website or qutebrowser.		641
+qutebrowser-current	greasemonkey-reload	Re-read Greasemonkey scripts from disk.		684
+qutebrowser-current	insert-text	Insert text at cursor position.		822
+qutebrowser-current	message-error	Show an error message in the statusbar.		896
+qutebrowser-current	message-info	Show an info message in the statusbar.		909
+qutebrowser-current	message-warning	Show a warning message in the statusbar.		925
+qutebrowser-current	messages	Show a log of past messages.		938
+qutebrowser-current	mode-enter	Enter a key mode.		957
+qutebrowser-current	navigate	Open typical prev/next links or navigate using the URL path.		968
+qutebrowser-current	nop	Do nothing.		1004
+qutebrowser-current	process	Manage processes spawned by qutebrowser.		1047
+qutebrowser-current	quickmarks-reload	Reload quickmarks from disk.		1114
+qutebrowser-current	scroll	Scroll the current tab in the given direction.		1183
+qutebrowser-current	scroll-page	Scroll the frame page-wise.		1198
+qutebrowser-current	scroll-px	Scroll the current tab by 'count  dx/dy' pixels.		1217
+qutebrowser-current	scroll-to-anchor	Scroll to the given anchor in the document.		1230
+qutebrowser-current	selection-follow	Follow the selected text.		1285
+qutebrowser-current	set	Set an option.		1339
+qutebrowser-current	tab-move	Move the current tab according to the argument and [count].		1468
+qutebrowser-current	tab-take	Take a tab from another window.		1548
+qutebrowser-current	unbind	Unbind a keychain.		1564
+qutebrowser-current	yank	Yank (copy) something to the clipboard or primary selection.		1622
+qutebrowser-current	command-accept	Execute the command currently in the commandline.		1742
+qutebrowser-current	command-history-next	Go forward in the commandline history.		1751
+qutebrowser-current	command-history-prev	Go back in the commandline history.		1755
+qutebrowser-current	completion-item-del	Delete the current completion item.		1759
+qutebrowser-current	completion-item-focus	Shift the focus of the completion menu to another item.		1763
+qutebrowser-current	completion-item-yank	Yank the current completion item into the clipboard.		1777
+qutebrowser-current	hint-follow	Follow a hint.		1786
+qutebrowser-current	mode-leave	Leave the mode we're currently in.		1798
+qutebrowser-current	move-to-end-of-document	Move the cursor or selection to the end of the document.		1802
+qutebrowser-current	move-to-end-of-line	Move the cursor or selection to the end of line.		1806
+qutebrowser-current	move-to-end-of-next-block	Move the cursor or selection to the end of next block.		1810
+qutebrowser-current	move-to-end-of-prev-block	Move the cursor or selection to the end of previous block.		1817
+qutebrowser-current	move-to-end-of-word	Move the cursor or selection to the end of the word.		1824
+qutebrowser-current	move-to-next-char	Move the cursor or selection to the next char.		1831
+qutebrowser-current	move-to-next-line	Move the cursor or selection to the next line.		1838
+qutebrowser-current	move-to-next-word	Move the cursor or selection to the next word.		1845
+qutebrowser-current	move-to-prev-char	Move the cursor or selection to the previous char.		1852
+qutebrowser-current	move-to-prev-line	Move the cursor or selection to the prev line.		1859
+qutebrowser-current	move-to-prev-word	Move the cursor or selection to the previous word.		1866
+qutebrowser-current	move-to-start-of-document	Move the cursor or selection to the start of the document.		1873
+qutebrowser-current	move-to-start-of-line	Move the cursor or selection to the start of the line.		1877
+qutebrowser-current	move-to-start-of-next-block	Move the cursor or selection to the start of next block.		1881
+qutebrowser-current	move-to-start-of-prev-block	Move the cursor or selection to the start of previous block.		1888
+qutebrowser-current	prompt-accept	Accept the current prompt.		1895
+qutebrowser-current	prompt-fileselect-external	Choose a location using a configured external picker.		1908
+qutebrowser-current	prompt-item-focus	Shift the focus of the prompt file completion menu to another item.		1914
+qutebrowser-current	prompt-open-download	Immediately open a download.		1923
+qutebrowser-current	prompt-yank	Yank URL to clipboard or primary selection.		1943
+qutebrowser-current	rl-backward-char	Move back a character.		1952
+qutebrowser-current	rl-backward-delete-char	Delete the character before the cursor.		1958
+qutebrowser-current	rl-backward-kill-word	Remove chars from the cursor to the beginning of the word.		1964
+qutebrowser-current	rl-backward-word	Move back to the start of the current or previous word.		1970
+qutebrowser-current	rl-beginning-of-line	Move to the start of the line.		1976
+qutebrowser-current	rl-delete-char	Delete the character after the cursor.		1982
+qutebrowser-current	rl-end-of-line	Move to the end of the line.		1988
+qutebrowser-current	rl-filename-rubout	Delete backwards using the OS path separator as boundary.		1994
+qutebrowser-current	rl-forward-char	Move forward a character.		2000
+qutebrowser-current	rl-forward-word	Move forward to the end of the next word.		2006
+qutebrowser-current	rl-kill-line	Remove chars from the cursor to the end of the line.		2012
+qutebrowser-current	rl-kill-word	Remove chars from the cursor to the end of the current word.		2018
+qutebrowser-current	rl-rubout	Delete backwards using the given characters as boundaries.		2024
+qutebrowser-current	rl-unix-line-discard	Remove chars backward from the cursor to the beginning of the line.		2036
+qutebrowser-current	rl-yank	Paste the most recently deleted text.		2042
+qutebrowser-current	selection-drop	Drop selection and keep selection mode enabled.		2048
+qutebrowser-current	selection-reverse	Swap the stationary and moving end of the current selection.		2052
+qutebrowser-current	debug-all-objects	Print a list of  all objects to the debug log.		2088
+qutebrowser-current	debug-cache-stats	Print LRU cache stats.		2092
+qutebrowser-current	debug-clear-ssl-errors	Clear remembered SSL error answers.		2096
+qutebrowser-current	debug-console	Show the debugging console.		2100
+qutebrowser-current	debug-crash	Crash for debugging purposes.		2104
+qutebrowser-current	debug-dump-history	Dump the history to a file in the old pre-SQL format.		2113
+qutebrowser-current	debug-dump-page	Dump the current page's content to a file.		2122
+qutebrowser-current	debug-keytester	Show a keytester widget.		2134
+qutebrowser-current	debug-log-capacity	Change the number of log lines to be stored in RAM.		2138
+qutebrowser-current	debug-log-filter	Change the log filter for console logging.		2147
+qutebrowser-current	debug-pyeval	Evaluate a python string and display the results as a web page.		2157
+qutebrowser-current	debug-set-fake-clipboard	Put data into the fake clipboard and enable logging, used for tests.		2174
+qutebrowser-current	debug-trace	Trace executed code via hunter.		2183
+qutebrowser-current	debug-webaction	Execute a webaction.		2196

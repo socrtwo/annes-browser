@@ -16,7 +16,9 @@
     "build": "npm run catalog && node tools/build.ts",
     "start": "npm run build && electron .",
     "smoke": "npm run build && node tools/smoke.ts",
-    "check": "npm run typecheck && npm run catalog && npm test"
+    "check": "npm run typecheck && npm run catalog && npm test",
+    "census": "node tools/census.ts",
+    "census:verify": "node tools/census.ts verify"
   },
   "devDependencies": {
     "@ruffle-rs/ruffle": "0.8.0",

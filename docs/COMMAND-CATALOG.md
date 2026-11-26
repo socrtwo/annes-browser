@@ -33,6 +33,18 @@ The compiled form is described by `schema/catalog.schema.json`. Rules the schema
 
 `status_reason` is required unless the status is `implement`. For a `stub` it is the text shown to the user.
 
+### Lineage
+
+Each command's history (`lineage`) is **generated**, not written in the command file. The build attaches entries from the census (see below); each has `source: census`, the source's own identifier (`key`), and a `ref` such as `chromium/chromium@05197078e476:chrome/app/chrome_dll_resource.h#L65` that names the file and line it was read from.
+
+A `lineage:` block written by hand in a command file is kept but marked `source: recalled`: it is a lead from memory, not a fact. The Menu Archaeology pages show recalled entries tagged "unverified".
+
+```yaml
+lineage:
+  - { browser: Google Chrome, versions: "3.0.195.25", year: 2009, menu: ..., source: census, key: IDC_NEW_TAB, ref: "chromium/chromium@05197078e476:chrome/app/chrome_dll_resource.h#L65" }
+  - { browser: Firefox, versions: "2.0", year: 2006, menu: "History > Recently Closed Tabs", source: recalled }
+```
+
 ### Context expressions (`when`, `checked`)
 
 Operators: `!`, `&&`, `||`, `==`, `!=`, `<`, `<=`, `>`, `>=`, parentheses. Operands: context keys, numbers, quoted strings, `true`, `false`. The allowed keys are listed in `app/core/context.ts`; using any other key is a build error.
@@ -44,6 +56,19 @@ Operators: `!`, `&&`, `||`, `==`, `!=`, `<`, `<=`, `>`, `>=`, parentheses. Opera
 ### Argument types
 
 `string`, `number`, `boolean`, `url`. A `url` argument is a string that the handler must pass through the navigation policy.
+
+## Census files (`catalog/census/`)
+
+| File | Contents | Written by |
+|---|---|---|
+| `sources.yaml` | The browser versions read: repository, ref, **commit SHA**, extractor, files | hand, then `npm run census -- pin` |
+| `<source-id>.yaml` | Every command found in that source, with the line and text it came from | `npm run census -- extract` (do not edit) |
+| `names/*.yaml` | For each command id, the normalized names under which browsers offered it | hand |
+| `overrides.yaml` | Single items whose name is ambiguous, linked or deliberately not linked (`command: none`, with a reason) | hand |
+
+A **normalized name** is lower-case letters and digits only, made from an item's identifier or label after stripping prefixes such as `IDC_`, `menu_`, `cmd_`, `main:` and suffixes such as `Action`: `IDC_NEW_TAB`, `NewTabAction`, `File/NewTab` and the label "New Tab" all become `newtab`. A name can belong to only one command, and an item whose names point at two commands must be settled in `overrides.yaml`: the build fails otherwise.
+
+See [CENSUS.md](CENSUS.md) for what has been read, what is linked, and the work queue.
 
 ## Layout file
 

@@ -22,3 +22,17 @@ jobs:
       # Lifting the restriction lets the smoke test run with the sandbox ON, as users will run it.
       - run: sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
       - run: xvfb-run -a npm run smoke
+  # Re-reads every census source at its pinned commit and checks each cited line. It needs the network
+  # and GitHub's raw file host rate-limits, so a failure here is reported but does not block merging.
+  census:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run census:verify
