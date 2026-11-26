@@ -1,0 +1,33 @@
+# Transcription of a screenshot. Each line: <where in the window> | <label as shown>.
+# image: https://commons.wikimedia.org/wiki/File:Netscape_Communicator_4.8_Screenshot.png
+# fetched: https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Netscape_Communicator_4.8_Screenshot.png/960px-Netscape_Communicator_4.8_Screenshot.png
+# sha256 of the 960px image read: 389ab792e804cd5e2d610aaf42d3a00b574911b25c447b5c489cffd676cf91c9
+# read on 2026-11-26 by Claude (vision). Shows Netscape Communicator 4.8 (2002), Windows. No menu is open.
+# The personal toolbar row (Instant Message, WebMail, Calendar, Radio, People, Yellow Pages, Download,
+# Customize) holds bookmarks to Netscape web services; it is recorded for completeness.
+Menu bar | File
+Menu bar | Edit
+Menu bar | View
+Menu bar | Go
+Menu bar | Communicator
+Menu bar | Help
+Toolbar | Back
+Toolbar | Forward
+Toolbar | Reload
+Toolbar | Home
+Toolbar | Search
+Toolbar | Netscape
+Toolbar | Print
+Toolbar | Security
+Toolbar | Shop
+Toolbar | Stop
+Location bar | Bookmarks
+Location bar | What's Related
+Personal toolbar | Instant Message
+Personal toolbar | WebMail
+Personal toolbar | Calendar
+Personal toolbar | Radio
+Personal toolbar | People
+Personal toolbar | Yellow Pages
+Personal toolbar | Download
+Personal toolbar | Customize

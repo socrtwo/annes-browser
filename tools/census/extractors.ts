@@ -418,7 +418,63 @@ const manualPhrases: Extractor = (files, spec) => {
   return out;
 };
 
+// ---------------------------------------------------------------- Screenshot transcriptions
+
+/** Lines `<where> | <label>`; `#` lines are the header (image address, hash, who read it). */
+const transcription: Extractor = (files, spec) => {
+  const out: CensusItem[] = [];
+  lines(primary(files, spec)).forEach((l, i) => {
+    if (l.startsWith('#') || !l.trim()) return;
+    const m = /^([^|]+?)\s*\|\s*(.+?)\s*$/.exec(l);
+    if (!m) return;
+    out.push(item({ key: `${m[1]}/${m[2]}`, label: m[2]!, menu: m[1]!, line: i + 1, text: l }));
+  });
+  return out;
+};
+
+// ---------------------------------------------------------------- Windows resource scripts (.rc MENU)
+
+/** `POPUP "&File" { MENUITEM "&Open...", ID_OPEN ... }`, with BEGIN/END or braces. */
+const rcMenu: Extractor = (files, spec) => {
+  const out: CensusItem[] = [];
+  const stack: string[] = [];
+  let pending: string | undefined;
+  let inMenu = false;
+  lines(primary(files, spec)).forEach((l, i) => {
+    if (/^\s*\w+\s+MENU(EX)?\b/.test(l)) { inMenu = true; stack.length = 0; return; }
+    if (!inMenu) return;
+    const popup = /^\s*POPUP\s+"([^"]+)"/.exec(l);
+    if (popup) { pending = cleanLabel(popup[1]!); return; }
+    if (/^\s*(\{|BEGIN)\s*$/.test(l)) { if (pending !== undefined) { stack.push(pending); pending = undefined; } else if (stack.length === 0) stack.push(''); return; }
+    if (/^\s*(\}|END)\s*$/.test(l)) { stack.pop(); if (stack.length === 0) inMenu = false; return; }
+    const mi = /^\s*MENUITEM\s+"([^"]+)"\s*,\s*(\w+)/.exec(l);
+    if (mi) out.push(item({ key: mi[2]!, label: cleanLabel(mi[1]!.replace(/(?:\\t|\t).*$/, '')), menu: path(...stack.filter(Boolean)), line: i + 1, text: l }));
+  });
+  return out;
+};
+
+// ---------------------------------------------------------------- WebKit localized context-menu strings
+
+/** `- (NSString *)contextMenuItemTagX` (2010, Objective-C) or `String contextMenuItemTagX()` (C++), then the first string. */
+const webkitStrings: Extractor = (files, spec) => {
+  const out: CensusItem[] = [];
+  const src = lines(primary(files, spec));
+  src.forEach((l, i) => {
+    const m = /(?:NSString \*\)|^String )(contextMenuItemTag\w+)\s*(?:\(|$)/.exec(l);
+    if (!m) return;
+    for (let j = i + 1; j < Math.min(i + 6, src.length); j++) {
+      const s = /UI_STRING\w*\(\s*"([^"]+)"/.exec(src[j]!);
+      if (s) { out.push(item({ key: m[1]!, label: cleanLabel(s[1]!), menu: 'Page context menu', line: i + 1, text: l })); break; }
+      if (/^\}/.test(src[j]!)) break;
+    }
+  });
+  return out;
+};
+
 export const EXTRACTORS: Record<ExtractorId, Extractor> = {
+  transcription,
+  'rc-menu': rcMenu,
+  'webkit-strings': webkitStrings,
   'manual-phrases': manualPhrases,
   'mosaic-menu': mosaicMenu,
   'lynx-keymap': lynxKeymap,

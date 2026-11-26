@@ -65,3 +65,52 @@
 - { source: netscape-4.5-manual, key: File/New Creates, command: none, why: "OCR merged two table columns; not a command name" }
 - { source: netscape-4.5-manual, key: File/Save As, command: none, why: "context is the Bookmarks window, saving the bookmark file" }
 - { source: netscape-4.5-manual, key: File/Import, command: none, why: "context is the Bookmarks window, importing a bookmark file" }
+
+# ---- sixth batch, each item read in its source or image ----
+- { source: mosaic-2.7, key: mo_whats_new, command: legacy.directory-pages, why: "NCSA's What's New page listed new web sites; it is not release notes" }
+- { source: mosaic-2.7, key: mo_network_starting_points, command: legacy.directory-pages }
+- { source: mosaic-2.7, key: mo_internet_metaindex, command: legacy.directory-pages }
+- { source: netscape-1.1-manual, key: Directory/Netscape Galleria, command: legacy.directory-pages }
+- { source: safari-5-webkit, key: contextMenuItemTagCheckSpelling, command: edit.check-spelling-now, why: "labelled Check Document Now: a one-off check, not the spell-checking switch" }
+- { source: safari-current-webkit, key: contextMenuItemTagCheckSpelling, command: edit.check-spelling-now }
+- { source: wine-ie-recreation, key: ID_BROWSE_NEW_WINDOW, command: app.new-window }
+- { source: wine-ie-recreation, key: ID_BROWSE_OPEN, command: file.open-location, why: "Internet Explorer's File > Open asks for an address" }
+- { source: wine-ie-recreation, key: ID_BROWSE_PRINT_FORMAT, command: file.page-setup }
+- { source: wine-ie-recreation, key: ID_BROWSE_PROPERTIES, command: page.info }
+- { source: wine-ie-recreation, key: ID_BROWSE_QUIT, command: app.close-window }
+- { source: wine-ie-recreation, key: ID_BROWSE_BAR_STD, command: view.toolbar }
+- { source: wine-ie-recreation, key: ID_BROWSE_BAR_ADDR, command: view.address-bar }
+- { source: wine-ie-recreation, key: ID_BROWSE_ADDFAV, command: bookmark.toggle }
+- { source: wine-ie-recreation, key: ID_BROWSE_ABOUT, command: help.about }
+- { source: netscape-0.92-screenshot, key: Toolbar/Open, command: file.open-location, why: "Netscape's Open button asked for a location" }
+- { source: netscape-0.92-screenshot, key: Directory buttons/Guided Tour, command: legacy.directory-pages }
+- { source: netscape-0.92-screenshot, key: Directory buttons/What's New, command: legacy.directory-pages }
+- { source: netscape-0.92-screenshot, key: Directory buttons/Questions, command: legacy.directory-pages }
+- { source: netscape-0.92-screenshot, key: Directory buttons/Net Directory, command: legacy.directory-pages }
+- { source: netscape-0.92-screenshot, key: Directory buttons/Newsgroups, command: none, why: "opened the news reader; no news reader command exists yet" }
+- { source: netscape-4.8-screenshot, key: Toolbar/Search, command: nav.search-page, why: "Netscape's Search button opened its search page, not find-in-page" }
+- { source: netscape-4.8-screenshot, key: Toolbar/Security, command: page.certificate-info, why: "opened the Security Info window for the page" }
+- { source: netscape-4.8-screenshot, key: Toolbar/Netscape, command: none, why: "a link to Netscape's portal" }
+- { source: netscape-4.8-screenshot, key: Toolbar/Shop, command: none, why: "a link to Netscape's shopping portal" }
+- { source: netscape-4.8-screenshot, key: "Personal toolbar/Instant Message", command: none, why: "a bookmark to a Netscape web service, not a browser command" }
+- { source: netscape-4.8-screenshot, key: "Personal toolbar/WebMail", command: none, why: "a bookmark to a Netscape web service, not a browser command" }
+- { source: netscape-4.8-screenshot, key: "Personal toolbar/Calendar", command: none, why: "a bookmark to a Netscape web service, not a browser command" }
+- { source: netscape-4.8-screenshot, key: "Personal toolbar/Radio", command: none, why: "a bookmark to a Netscape web service, not a browser command" }
+- { source: netscape-4.8-screenshot, key: "Personal toolbar/People", command: none, why: "a bookmark to a Netscape web service, not a browser command" }
+- { source: netscape-4.8-screenshot, key: "Personal toolbar/Yellow Pages", command: none, why: "a bookmark to a Netscape web service, not a browser command" }
+- { source: netscape-4.8-screenshot, key: "Personal toolbar/Download", command: none, why: "a bookmark to a Netscape web service, not a browser command" }
+- { source: netscape-4.8-screenshot, key: "Personal toolbar/Customize", command: none, why: "a bookmark to a Netscape web service, not a browser command" }
+- { source: netscape-0.92-screenshot, key: "Menu bar/File", command: none, why: "a menu title, not a command" }
+- { source: netscape-0.92-screenshot, key: "Menu bar/Edit", command: none, why: "a menu title, not a command" }
+- { source: netscape-0.92-screenshot, key: "Menu bar/View", command: none, why: "a menu title, not a command" }
+- { source: netscape-0.92-screenshot, key: "Menu bar/Go", command: none, why: "a menu title, not a command" }
+- { source: netscape-0.92-screenshot, key: "Menu bar/Bookmarks", command: none, why: "a menu title, not a command" }
+- { source: netscape-0.92-screenshot, key: "Menu bar/Options", command: none, why: "a menu title, not a command" }
+- { source: netscape-0.92-screenshot, key: "Menu bar/Directory", command: none, why: "a menu title, not a command" }
+- { source: netscape-0.92-screenshot, key: "Menu bar/Help", command: none, why: "a menu title, not a command" }
+- { source: netscape-4.8-screenshot, key: "Menu bar/File", command: none, why: "a menu title, not a command" }
+- { source: netscape-4.8-screenshot, key: "Menu bar/Edit", command: none, why: "a menu title, not a command" }
+- { source: netscape-4.8-screenshot, key: "Menu bar/View", command: none, why: "a menu title, not a command" }
+- { source: netscape-4.8-screenshot, key: "Menu bar/Go", command: none, why: "a menu title, not a command" }
+- { source: netscape-4.8-screenshot, key: "Menu bar/Communicator", command: none, why: "a menu title, not a command" }
+- { source: netscape-4.8-screenshot, key: "Menu bar/Help", command: none, why: "a menu title, not a command" }

@@ -10,8 +10,6 @@ mosaic-2.7	mo_image_view_internal	#View Images Internally	Options	1594
 mosaic-2.7	mo_re_init	Reload Config Files	Options	1598
 mosaic-2.7	mo_all_hotlist_to_rbm	Add All Hotlist Entries to RBM	Navigate	1620
 mosaic-2.7	mo_all_hotlist_from_rbm	Remove All Hotlist Entries from RBM	Navigate	1621
-mosaic-2.7	mo_network_starting_points	Internet Starting Points	Navigate	1623
-mosaic-2.7	mo_internet_metaindex	Internet Resource Meta-Index	Navigate	1624
 mosaic-2.7	mo_mosaic_demopage	Demo	Help	1633
 mosaic-2.7	mo_help_onversion	Help on Version 2.7b5	Help	1635
 mosaic-2.7	mo_help_onwindow	On Window	Help	1636
@@ -539,7 +537,6 @@ chrome-10	IDC_SPELLCHECK_LANGUAGES_LAST		Clipboard commands	177
 chrome-10	IDC_CHECK_SPELLING_OF_THIS_FIELD		Clipboard commands	178
 chrome-10	IDC_SYNC_BOOKMARKS		Clipboard commands	179
 chrome-10	IDC_SPELLPANEL_TOGGLE		Clipboard commands	180
-chrome-10	IDC_SPELLCHECK_ADD_TO_DICTIONARY		Clipboard commands	181
 chrome-10	IDC_WRITING_DIRECTION_MENU		Clipboard commands	184
 chrome-10	IDC_WRITING_DIRECTION_DEFAULT		Clipboard commands	185
 chrome-10	IDC_WRITING_DIRECTION_LTR		Clipboard commands	186
@@ -710,7 +707,6 @@ chrome-50	IDC_SPELLCHECK_MENU		Clipboard commands	225
 chrome-50	IDC_SPELLCHECK_LANGUAGES_FIRST		Clipboard commands	228
 chrome-50	IDC_SPELLCHECK_LANGUAGES_LAST		Clipboard commands	229
 chrome-50	IDC_SPELLPANEL_TOGGLE		Clipboard commands	231
-chrome-50	IDC_SPELLCHECK_ADD_TO_DICTIONARY		Clipboard commands	232
 chrome-50	IDC_SPELLCHECK_MULTI_LINGUAL		Clipboard commands	233
 chrome-50	IDC_WRITING_DIRECTION_MENU		Clipboard commands	236
 chrome-50	IDC_WRITING_DIRECTION_DEFAULT		Clipboard commands	237
@@ -937,7 +933,6 @@ chrome-current	IDC_SHOW_TTC_MENU		Profile sub menu	286
 chrome-current	IDC_OPEN_OTHER_DEVICE_TAB		Profile sub menu	287
 chrome-current	IDC_SPELLCHECK_SUGGESTION_0		Profile sub menu	290
 chrome-current	IDC_SPELLCHECK_LANGUAGES_FIRST		Profile sub menu	292
-chrome-current	IDC_SPELLCHECK_ADD_TO_DICTIONARY		Profile sub menu	294
 chrome-current	IDC_SPELLCHECK_MULTI_LINGUAL		Profile sub menu	295
 chrome-current	IDC_SPELLCHECK_REMOVE_FROM_DICTIONARY		Profile sub menu	296
 chrome-current	IDC_WRITING_DIRECTION_LTR		Profile sub menu	299
@@ -1287,7 +1282,6 @@ seamonkey-2.0	rdf:http://www.mozilla.org/2004/em-rdf#name	rdf:http://www.mozilla
 seamonkey-2.0	Browser:Up		Go	445
 seamonkey-2.0	Browser:AddBookmarkAs	File Bookmark	Bookmarks	468
 seamonkey-2.0	Browser:AddGroupmarkAs	Bookmark This Group of Tabs	Bookmarks	469
-seamonkey-2.0	menu_searchWeb	Search the Web		484
 seamonkey-current	menu_newEditor			292
 seamonkey-current	saveframe			315
 seamonkey-current	Browser:UploadFile			320
@@ -1295,7 +1289,6 @@ seamonkey-current	menu_findTypeLinks			346
 seamonkey-current	menu_findTypeText			347
 seamonkey-current	menuitem_componentbarCmd			376
 seamonkey-current	sync-tabs-menuitem			510
-seamonkey-current	menu_searchWeb			579
 seamonkey-current	cookie_deny			595
 seamonkey-current	cookie_default			602
 seamonkey-current	cookie_session			609
@@ -1354,7 +1347,6 @@ otter-current	PurgeTabHistoryAction			115
 otter-current	MaximizeAllAction			123
 otter-current	MinimizeAllAction			124
 otter-current	RestoreAllAction			125
-otter-current	OpenLinkAction			133
 otter-current	OpenLinkInCurrentTabAction			134
 otter-current	OpenLinkInNewWindowBackgroundAction			138
 otter-current	OpenLinkInNewPrivateTabBackgroundAction			140
@@ -1506,7 +1498,6 @@ qutebrowser-current	debug-trace	Trace executed code via hunter.		2183
 qutebrowser-current	debug-webaction	Execute a webaction.		2196
 netscape-1.1-manual	Options/Save Options	Save Options	Options	1223
 netscape-1.1-manual	Directory/Go to Newsgroups	Go to Newsgroups	Directory	16311
-netscape-1.1-manual	Directory/Netscape Galleria	Netscape Galleria	Directory	18148
 netscape-3.0-manual	Options/Save Options	Save Options	Options	7440
 netscape-3.0-manual	Options/Mail and News Preferences	Mail and News Preferences	Options	10704
 netscape-3.0-manual	File/New Mail Message	New Mail Message	File	11680
@@ -1519,3 +1510,55 @@ netscape-3.0-manual	File/Send Now	Send Now	File	16989
 netscape-3.0-manual	File/New News Message	New News Message	File	17139
 netscape-3.0-manual	Options/Network Preferences	Network Preferences	Options	26669
 netscape-3.0-manual	Options/Security Preferences	Security Preferences	Options	28049
+safari-5-webkit	contextMenuItemTagOpenFrameInNewWindow	Open Frame in New Window	Page context menu	164
+safari-5-webkit	contextMenuItemTagNoGuessesFound	No Guesses Found	Page context menu	204
+safari-5-webkit	contextMenuItemTagSearchInSpotlight	Search in Spotlight	Page context menu	219
+safari-5-webkit	contextMenuItemTagIgnoreGrammar	Ignore Grammar	Page context menu	239
+safari-5-webkit	contextMenuItemTagSpellingMenu	Spelling and Grammar	Page context menu	244
+safari-5-webkit	contextMenuItemTagCheckGrammarWithSpelling	Check Grammar With Spelling	Page context menu	282
+safari-5-webkit	contextMenuItemTagFontMenu	Font	Page context menu	287
+safari-5-webkit	contextMenuItemTagShowFonts	Show Fonts	Page context menu	292
+safari-5-webkit	contextMenuItemTagBold	Bold	Page context menu	297
+safari-5-webkit	contextMenuItemTagItalic	Italic	Page context menu	302
+safari-5-webkit	contextMenuItemTagUnderline	Underline	Page context menu	307
+safari-5-webkit	contextMenuItemTagOutline	Outline	Page context menu	312
+safari-5-webkit	contextMenuItemTagStyles	Styles	Page context menu	317
+safari-5-webkit	contextMenuItemTagShowColors	Show Colors	Page context menu	322
+safari-5-webkit	contextMenuItemTagSpeechMenu	Speech	Page context menu	327
+safari-5-webkit	contextMenuItemTagWritingDirectionMenu	Paragraph Direction	Page context menu	342
+safari-5-webkit	contextMenuItemTagTextDirectionMenu	Selection Direction	Page context menu	351
+safari-5-webkit	contextMenuItemTagCorrectSpellingAutomatically	Correct Spelling Automatically	Page context menu	371
+safari-5-webkit	contextMenuItemTagSubstitutionsMenu	Substitutions	Page context menu	376
+safari-5-webkit	contextMenuItemTagSmartCopyPaste	Smart Copy/Paste	Page context menu	388
+safari-5-webkit	contextMenuItemTagSmartQuotes	Smart Quotes	Page context menu	393
+safari-5-webkit	contextMenuItemTagSmartDashes	Smart Dashes	Page context menu	398
+safari-5-webkit	contextMenuItemTagSmartLinks	Smart Links	Page context menu	403
+safari-5-webkit	contextMenuItemTagTextReplacement	Text Replacement	Page context menu	408
+safari-5-webkit	contextMenuItemTagTransformationsMenu	Transformations	Page context menu	413
+safari-5-webkit	contextMenuItemTagMakeUpperCase	Make Upper Case	Page context menu	418
+safari-5-webkit	contextMenuItemTagMakeLowerCase	Make Lower Case	Page context menu	423
+safari-5-webkit	contextMenuItemTagCapitalize	Capitalize	Page context menu	428
+safari-current-webkit	contextMenuItemTagOpenFrameInNewWindow	Open Frame in New Window	Page context menu	231
+safari-current-webkit	contextMenuItemTagNoGuessesFound	No Guesses Found	Page context menu	271
+safari-current-webkit	contextMenuItemTagIgnoreGrammar	Ignore Grammar	Page context menu	306
+safari-current-webkit	contextMenuItemTagSpellingMenu	Spelling and Grammar	Page context menu	311
+safari-current-webkit	contextMenuItemTagShowSpellingPanel	Show Spelling and Grammar	Page context menu	316
+safari-current-webkit	contextMenuItemTagCheckGrammarWithSpelling	Check Grammar With Spelling	Page context menu	333
+safari-current-webkit	contextMenuItemTagFontMenu	Font	Page context menu	338
+safari-current-webkit	contextMenuItemTagBold	Bold	Page context menu	343
+safari-current-webkit	contextMenuItemTagItalic	Italic	Page context menu	348
+safari-current-webkit	contextMenuItemTagUnderline	Underline	Page context menu	353
+safari-current-webkit	contextMenuItemTagOutline	Outline	Page context menu	358
+safari-current-webkit	contextMenuItemTagWritingDirectionMenu	Paragraph Direction	Page context menu	364
+safari-current-webkit	contextMenuItemTagTextDirectionMenu	Selection Direction	Page context menu	369
+safari-current-webkit	contextMenuItemTagOpenVideoInNewWindow	Open Video in New Window	Page context menu	390
+safari-current-webkit	contextMenuItemTagOpenAudioInNewWindow	Open Audio in New Window	Page context menu	395
+safari-current-webkit	contextMenuItemTagPlayAllAnimations	Play All Animations	Page context menu	468
+safari-current-webkit	contextMenuItemTagPauseAllAnimations	Pause All Animations	Page context menu	473
+safari-current-webkit	contextMenuItemTagPlayAnimation	Play Animation	Page context menu	478
+safari-current-webkit	contextMenuItemTagPauseAnimation	Pause Animation	Page context menu	483
+safari-current-webkit	contextMenuItemTagWritingTools	Show Writing Tools	Page context menu	503
+safari-current-webkit	contextMenuItemTagProofread	Proofread	Page context menu	512
+safari-current-webkit	contextMenuItemTagRewrite	Rewrite	Page context menu	517
+safari-current-webkit	contextMenuItemTagSummarize	Summarize	Page context menu	522
+safari-current-webkit	contextMenuItemTagShowMediaStats	Show Media Statistics	Page context menu	1497

@@ -5,6 +5,12 @@ All notable changes to this project are documented here. Format: [Keep a Changel
 ## [Unreleased]
 
 ### Added
+- 2026-11-26: Census sources for closed-source browsers, indirectly.
+  - Wine's re-creation of Internet Explorer's main menu (`ieframe.rc`, 13 items), read by a new Windows resource-script extractor.
+  - Safari's page context menu from WebKit, Apple's open engine: the 2010 tag (Safari 5, 54 items) and current (61 items), read by a new extractor for WebKit's localized strings.
+  - Two Wikimedia Commons screenshots (Netscape 0.92 and Communicator 4.8) transcribed by hand from the image into `catalog/census/transcriptions/`, each with the image address and hash, as a new lineage kind, "screenshot".
+  - 11 new canonical commands (305 in all), e.g. What's Related, Look Up, Speak, Search the page, Copy link to highlight.
+  - 5 new unit tests.
 - 2026-11-26: Census from scanned manuals. Three Netscape manuals at the Internet Archive (Navigator 1.1, 3.0; Communicator 4.5) read by fixed phrasings, 58 items, each reviewed in context: 28 linked as "manual" history, 16 rejected with reasons (other programs' menus, OCR errors).
 - 2026-11-26: Command census (Phase 1, first pass).
   - Menu definitions and command tables read from 23 versions of 16 open-source browsers (Mosaic, Lynx, w3m, ELinks, Dillo, Chrome and Chromium, Brave, SeaMonkey, Firefox, Falkon, Ladybird, Konqueror, Otter, Vimium, qutebrowser), each pinned to a commit with a hash, 2,750 items in all.

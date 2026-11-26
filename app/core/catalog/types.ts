@@ -42,9 +42,10 @@ export interface Lineage {
    * `census`: read from the browser's source code; `ref` names the file and line.
    * `manual`: read from the OCR text of a published manual; `ref` names the scan and line. A
    *   third party's description, so weaker than `census`.
+   * `screenshot`: transcribed from a screenshot; `ref` names the image. Shows only what was visible.
    * `recalled`: written from memory and not yet checked. Treat as a lead, not a fact.
    */
-  source?: 'census' | 'manual' | 'recalled';
+  source?: 'census' | 'manual' | 'screenshot' | 'recalled';
   /** Source-native identifier, for census entries. */
   key?: string;
   /** `owner/repo@commit:path#Lline` for census entries; `archive.org/item/file#Lline` for manuals. */

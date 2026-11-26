@@ -21,6 +21,11 @@ describe('census references', () => {
     }
   });
 
+  it('links a screenshot reference to its Wikimedia Commons page, and nowhere else', () => {
+    expect(refUrl('commons/Netscape_0.92_Screenshot.png#L9')).toBe('https://commons.wikimedia.org/wiki/File:Netscape_0.92_Screenshot.png');
+    for (const bad of ['commons/../x.png#L1', 'commons/x.exe#L1', 'commons/a"b.png#L1', 'commons/x.png']) expect(refUrl(bad), bad).toBeUndefined();
+  });
+
   it('refuses anything that is not in that form, so a ref cannot become another kind of link', () => {
     for (const bad of ['javascript:alert(1)', 'https://evil.example/', 'o/r@abc:x#L1', 'o/r@abcdef1:../../x#L1x', 'o/r@abcdef1:x', '', 'o/r@abcdef1:a"b#L1']) {
       expect(refUrl(bad), bad).toBeUndefined();

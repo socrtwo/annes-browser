@@ -1,0 +1,28 @@
+# Transcription of a screenshot. Each line: <where in the window> | <label as shown>.
+# image: https://commons.wikimedia.org/wiki/File:Netscape_0.92_Screenshot.png
+# fetched: https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Netscape_0.92_Screenshot.png/960px-Netscape_0.92_Screenshot.png
+# sha256 of the 960px image read: d1aff4b128e721e295a370ab4b95f2d44c5d37c366b15ca8a54e0d3be4c6a3a7
+# read on 2026-11-26 by Claude (vision). Shows the window of Netscape version 0.92 Beta (1994), Windows.
+# Only what is visible: menu titles, toolbar buttons and directory buttons. No menu is open.
+Menu bar | File
+Menu bar | Edit
+Menu bar | View
+Menu bar | Go
+Menu bar | Bookmarks
+Menu bar | Options
+Menu bar | Directory
+Menu bar | Help
+Toolbar | Back
+Toolbar | Forward
+Toolbar | Home
+Toolbar | Reload
+Toolbar | Images
+Toolbar | Open
+Toolbar | Find
+Toolbar | Stop
+Directory buttons | Guided Tour
+Directory buttons | What's New
+Directory buttons | Questions
+Directory buttons | Net Search
+Directory buttons | Net Directory
+Directory buttons | Newsgroups

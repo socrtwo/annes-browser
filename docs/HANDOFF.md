@@ -78,12 +78,14 @@ Adding a browser version:
 
 Things that need a decision, not just effort:
 
-- **Closed-source browsers.** Internet Explorer, Opera, Safari, Netscape 4, Vivaldi cannot be read from here. Options: a person supplies menu dumps or screenshots (add a new source kind with a citation to the document), or leave them out. Do not enter them from memory: that is what `recalled` is for, and it is not evidence.
+- **Closed-source browsers.** Internet Explorer, Opera, Safari, Netscape 4, Vivaldi cannot be read directly. Partly covered now: scanned Netscape manuals (archive.org), Wine's IE menu re-creation, WebKit's context-menu strings for Safari, and screenshot transcriptions (`host: local`, files in `catalog/census/transcriptions/`, one `<where> | <label>` per line, header with the Commons address and image sha256). Transcribe only what is legible; menu titles and toolbar captions go to overrides as `none`. Do not enter them from memory: that is what `recalled` is for, and it is not evidence.
 - **Release years** in `sources.yaml` are from memory. Check them against release notes.
 - **Which unlinked items matter.** About half of Chromium's ids are internal. Decide whether to link the user-facing remainder or leave the tail.
 
 Gotchas:
 
+- Wikimedia Commons: category pages load; full-size images and the API return 429. Standard thumbnails (`upload.wikimedia.org/.../thumb/<a>/<ab>/<File>/960px-<File>`, `<a><ab>` from the MD5 of the file name) work, slowly. GUIdebook returns 429 for nearly everything. Toastytech is plain HTTP and cannot pass the proxy. The Wayback Machine resets connections.
+- WebKit tags are annotated: `git ls-remote` gives the tag object, not the commit. Use the peeled `^{}` line.
 - GitHub's raw host rate-limits (HTTP 429). The fetcher spaces requests and retries; do not run several extractions in parallel.
 - Only `raw.githubusercontent.com` and `git ls-remote` are reachable in the cloud environment. Documentation sites are blocked.
 - ELinks has several keymaps (`main:`, `menu:`, `edit:`). Only `main:` is stripped to a bare name; `menu:home` and `edit:home` must not match "Home".

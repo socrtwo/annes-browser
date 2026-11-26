@@ -28,6 +28,9 @@ function page(title: string, body: string): string {
  */
 export function refUrl(ref: string): string | undefined {
   // A scanned manual at the Internet Archive. Its text page has no line anchors, so the link opens the text.
+  // A screenshot transcribed from Wikimedia Commons: link to the file's description page.
+  const shot = /^commons\/([A-Za-z0-9][\w.(),-]*\.(?:png|jpe?g|gif|webp))#L\d+$/.exec(ref);
+  if (shot) return `https://commons.wikimedia.org/wiki/File:${encodeURIComponent(shot[1]!)}`;
   const scan = /^archive\.org\/([A-Za-z0-9][\w-]*(?:\.[\w-]+)*)\/([A-Za-z0-9][\w%-]*(?:\.[\w%-]+)*_djvu\.txt)#L\d+$/.exec(ref);
   if (scan) return `https://archive.org/stream/${scan[1]}/${scan[2]}`;
   const m = /^([\w.-]+\/[\w.-]+)@([0-9a-f]{7,40}):([\w./+~@ -]+)#L(\d+)$/.exec(ref);
@@ -50,7 +53,8 @@ function lineageRows(c: CommandRecord): string {
   return (c.lineage ?? [])
     .map((l) => {
       const href = l.ref ? refUrl(l.ref) : undefined;
-      const line = l.source === 'manual' ? ` <small>manual, line ${escapeHtml(/#L(\d+)$/.exec(l.ref ?? '')?.[1] ?? '?')}</small>` : '';
+      const line = l.source === 'manual' ? ` <small>manual, line ${escapeHtml(/#L(\d+)$/.exec(l.ref ?? '')?.[1] ?? '?')}</small>`
+        : l.source === 'screenshot' ? ' <small>screenshot</small>' : '';
       const evidence = href ? `<a href="${escapeHtml(href)}">${escapeHtml(l.key ?? 'source')}</a>${line}` : l.source === 'recalled' ? '<span class="tag">unverified</span>' : '';
       return `<tr><td>${escapeHtml(l.browser)}${l.versions ? ` ${escapeHtml(l.versions)}` : ''}</td><td>${escapeHtml(l.menu ?? '')}</td><td>${l.year ?? ''}</td><td>${evidence}</td></tr>`;
     })
@@ -90,12 +94,12 @@ export function commandPage(c: CommandRecord | undefined): string {
 ${c.status_reason ? `<p><small>${escapeHtml(c.status_reason)}</small></p>` : ''}
 ${c.aliases?.length ? `<p><small>Also known as: ${c.aliases.map(escapeHtml).join(', ')}</small></p>` : ''}
 ${lineage ? `<h2>Where it came from</h2><table><tr><th>Browser</th><th>Menu</th><th>Year</th><th>Source</th></tr>${lineage}</table>
-<p><small>"Source" links to the line in the browser's own source code, or to the scanned text of a manual (read by OCR, so spelling may be imperfect). Entries marked unverified were written from memory.</small></p>` : '<p><small>No history recorded yet.</small></p>'}
+<p><small>"Source" links to the line in the browser's own source code, to the scanned text of a manual (read by OCR, so spelling may be imperfect), or to a screenshot the entry was transcribed from. Entries marked unverified were written from memory.</small></p>` : '<p><small>No history recorded yet.</small></p>'}
 <p><a href="anne://pages/archaeology">All commands</a></p>`);
 }
 
 export function archaeologyPage(commands: readonly CommandRecord[]): string {
-  const sourced = commands.filter((c) => (c.lineage ?? []).some((l) => l.source === 'census' || l.source === 'manual')).length;
+  const sourced = commands.filter((c) => (c.lineage ?? []).some((l) => l.source === 'census' || l.source === 'manual' || l.source === 'screenshot')).length;
   const rows = [...commands]
     .sort((a, b) => a.category.localeCompare(b.category) || a.label.localeCompare(b.label))
     .map((c) => {

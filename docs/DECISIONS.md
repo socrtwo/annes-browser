@@ -68,6 +68,8 @@ D2 and D4 were adopted by building on them, following the roadmap's recommendati
 | C9 | Closed-source browsers get no census lineage; they are listed in CENSUS.md as not covered | They cannot be read here, and Otter Browser (an Opera 12 style clone) is not Opera | n/a |
 | C10 | Menu items in compile-time conditions (`#ifdef VMS`) are included; rows under `#ifdef NOT_USED` are not | The first were commands on some builds; the second were never compiled | Low |
 | C12 | Scanned manuals are a second, weaker source kind (`manual`), read only through fixed phrasings and reviewed line by line | Closed-source browsers have no code to read; a manual's "From the File menu, choose X" is a checkable citation, but it is a third party's words, OCR'd, and may describe other programs | Low |
+| C13 | Screenshots are a third source kind (`screenshot`): a hand transcription kept in the repository with the image's address and hash, verified like any other source | The image is the evidence; the transcription is what the build can check line by line. Only visible text is recorded, so closed menus are not guessed | Low |
+| C14 | Re-implementations and engines count only as what they are: Wine's IE menu is lineage for "Wine (IE re-creation)", WebKit strings for Safari's context menu only | Wine copied IE's menu but is not IE; WebKit is Apple's code but not Safari's menu bar | Low |
 | C11 | Unbuilt commands are marked "planned" in the palette and rank below built ones | 294 commands exist and 70 have handlers; hiding the rest would hide the project's purpose, ranking them equally would bury working commands | Low |
 
 ## Deviations from the Phase 0 documents

@@ -3,7 +3,7 @@ import type { CensusFile, CensusItem } from './types.ts';
 /** Lower-case letters and digits only. */
 export const squash = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '');
 
-const PREFIXES = [/^menuitem_?/i, /^mo_/i, /^idc_/i, /^menu_/i, /^cmd_/i, /^action(?=[A-Z])/, /^browser:/i, /^main:/i];
+const PREFIXES = [/^menuitem_?/i, /^mo_/i, /^idc_/i, /^menu_/i, /^cmd_/i, /^action(?=[A-Z])/, /^browser:/i, /^main:/i, /^contextMenuItemTag/];
 const SUFFIXES = [/action$/i, /_?menuitem$/i, /_?item$/i];
 
 /**

@@ -10,7 +10,7 @@
 export type ExtractorId =
   | 'mosaic-menu' | 'lynx-keymap' | 'w3m-func' | 'elinks-actions' | 'chromium-ids' | 'dillo-menu' | 'xul-menu'
   | 'firefox-menu' | 'falkon-actions' | 'qt-actions' | 'otter-enum' | 'vimium-commands' | 'qutebrowser-commands'
-  | 'konqueror-rc' | 'brave-ids' | 'qt-ui' | 'manual-phrases';
+  | 'konqueror-rc' | 'brave-ids' | 'qt-ui' | 'manual-phrases' | 'transcription' | 'rc-menu' | 'webkit-strings';
 
 export interface SourceFileSpec {
   path: string;
@@ -33,7 +33,12 @@ export interface SourceSpec {
    * item identifier. A manual is a third party's description of a browser, read by OCR: weaker
    * evidence than the browser's own code, and labelled as such wherever it is shown.
    */
-  host?: 'github' | 'archive.org';
+  host?: 'github' | 'archive.org' | 'local';
+  /**
+   * `local`: a transcription of a screenshot, written by hand (or by a model reading the image) and
+   * kept in catalog/census/transcriptions/. The weakest kind: the image is cited in the file's
+   * header, and the transcription can only be checked by looking at the image again.
+   */
   repo: string;
   /** Branch or tag the commit was resolved from, for humans. For a manual: its title and edition. */
   ref: string;
@@ -71,7 +76,7 @@ export interface CensusFile {
   released: number;
   platform: string;
   source: {
-    host?: 'github' | 'archive.org';
+    host?: 'github' | 'archive.org' | 'local';
     repo: string;
     ref: string;
     commit: string;

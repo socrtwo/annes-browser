@@ -4,7 +4,7 @@ import { getArchiveText, getSource, rawUrl, sha256 } from '../tools/census/fetch
 import { lineageFor, matchCensus } from '../tools/census/merge.ts';
 import { itemNames, squash } from '../tools/census/names.ts';
 import { loadNames, loadOverrides } from '../tools/census/merge.ts';
-import { loadCensus, loadSources, verifyCensus } from '../tools/census/run.ts';
+import { loadCensus, loadSources, readLocal, verifyCensus } from '../tools/census/run.ts';
 import type { CensusFile, CensusItem, SourceSpec } from '../tools/census/types.ts';
 import { loadAllCensus } from '../tools/census-load.ts';
 import { loadCatalog } from '../tools/build-catalog.ts';
@@ -136,6 +136,31 @@ describe('extractors read the formats they were written for', () => {
     expect(items[0]).toMatchObject({ label: 'Open Location', menu: 'File' });
   });
 
+  it('screenshot transcriptions: where and label, header skipped', () => {
+    const items = run('transcription', '# image: x\n# sha256: y\nMenu bar | File\nToolbar | Back\n\nnot a row');
+    expect(items.map((i) => [i.key, i.menu, i.label, i.line])).toEqual([['Menu bar/File', 'Menu bar', 'File', 3], ['Toolbar/Back', 'Toolbar', 'Back', 4]]);
+  });
+
+  it('Windows resource scripts: nested POPUPs with braces or BEGIN/END', () => {
+    const rc = [
+      'IDR_MAIN MENU', '{', '    POPUP "&File"', '    {', '        POPUP "&New"', '        {', '            MENUITEM "&Window",   ID_NEW_WINDOW', '        }',
+      '        MENUITEM "Save &as...\tCtrl+S",  ID_SAVE_AS', '        MENUITEM SEPARATOR', '    }', '}',
+      'OTHER MENU', 'BEGIN', '    POPUP "&Help"', '    BEGIN', '        MENUITEM "&About", ID_ABOUT', '    END', 'END',
+      'STRINGTABLE', '{', '    MENUITEM "not a menu", ID_NO', '}',
+    ].join('\n');
+    expect(run('rc-menu', rc).map((i) => [i.key, i.label, i.menu])).toEqual([
+      ['ID_NEW_WINDOW', 'Window', 'File > New'], ['ID_SAVE_AS', 'Save as', 'File'], ['ID_ABOUT', 'About', 'Help'],
+    ]);
+  });
+
+  it('WebKit strings in both the 2010 Objective-C and the current C++ form', () => {
+    const objc = '- (NSString *)contextMenuItemTagOpenLinkInNewWindow\n{\n    return UI_STRING("Open Link in New Window", "comment");\n}';
+    const cpp = 'String contextMenuItemTagCopyImageToClipboard()\n{\n    return WEB_UI_STRING_WITH_MNEMONIC("Copy Image", "C_opy Image", "comment");\n}';
+    expect(run('webkit-strings', `${objc}\n${cpp}`).map((i) => [i.key, i.label])).toEqual([
+      ['contextMenuItemTagOpenLinkInNewWindow', 'Open Link in New Window'], ['contextMenuItemTagCopyImageToClipboard', 'Copy Image'],
+    ]);
+  });
+
   it('every extractor id is implemented', () => {
     for (const s of loadSources()) expect(EXTRACTORS[s.extractor], s.id).toBeTypeOf('function');
   });
@@ -250,6 +275,21 @@ describe('fetching and verifying', () => {
   });
 });
 
+describe('screenshot transcriptions', () => {
+  it('are read only from the transcriptions folder, by plain file name', () => {
+    expect(readLocal('netscape-0.92-screenshot.txt')).toMatch(/^# Transcription of a screenshot/);
+    for (const bad of ['../sources.yaml', '/etc/passwd', 'x/y.txt', 'NAME.txt', 'a.yaml']) expect(() => readLocal(bad), bad).toThrow(/not a transcription file name/);
+  });
+
+  it('record the image they were read from and its hash', () => {
+    for (const s of loadSources().filter((x) => x.host === 'local')) {
+      const text = readLocal(s.files[0]!.path);
+      expect(text, s.id).toMatch(new RegExp(`# image: https://commons\\.wikimedia\\.org/wiki/File:${s.repo.replace(/[.()]/g, '\\$&')}`));
+      expect(text, s.id).toMatch(/# sha256 of the \d+px image read: [0-9a-f]{64}/);
+    }
+  });
+});
+
 describe('scanned manual text', () => {
   it('takes the text block out of the archive page and decodes entities', async () => {
     const page = '<html><body><pre>From the File menu, choose Save As &amp; go.\nIt&#8217;s &lt;here&gt;</pre></body></html>';
@@ -282,7 +322,7 @@ describe('the committed census data', () => {
     expect(files.map((f) => f.id)).toEqual(sources.map((s) => s.id));
     for (const s of sources) {
       // A scanned manual has no commit; its pin is the text hash recorded in its census file.
-      if (s.host === 'archive.org') expect(s.commit, s.id).toBeUndefined();
+      if (s.host === 'archive.org' || s.host === 'local') expect(s.commit, s.id).toBeUndefined();
       else expect(s.commit, s.id).toMatch(/^[0-9a-f]{40}$/);
     }
     for (const f of files) {
@@ -313,7 +353,11 @@ describe('the committed census data', () => {
 
   it('gives every census-linked command lineage whose ref points at a real census item', () => {
     const lines = new Map<string, Set<number>>();
-    for (const f of files) lines.set(f.source.host === 'archive.org' ? `archive.org/${f.source.repo}/${f.source.files[0]!.path}` : `${f.source.repo}@${f.source.commit.slice(0, 12)}`, new Set(f.items.map((i) => i.line)));
+    for (const f of files) {
+      const key = f.source.host === 'archive.org' ? `archive.org/${f.source.repo}/${f.source.files[0]!.path}`
+        : f.source.host === 'local' ? `commons/${f.source.repo}` : `${f.source.repo}@${f.source.commit.slice(0, 12)}`;
+      lines.set(key, new Set(f.items.map((i) => i.line)));
+    }
     let checked = 0;
     for (const c of catalog.commands) {
       const names = loadNames()[c.id];
@@ -323,7 +367,7 @@ describe('the committed census data', () => {
     const r = matchCensus(files, loadNames(), loadOverrides(), ids);
     for (const m of r.matches.slice(0, 400)) {
       const [lin] = lineageFor(m.command, [m]);
-      const [, repo, line] = (/^(archive\.org\/.+)#L(\d+)$/.exec(lin!.ref!) ?? /^(.+?):.*#L(\d+)$/.exec(lin!.ref!))!;
+      const [, repo, line] = (/^((?:archive\.org|commons)\/.+)#L(\d+)$/.exec(lin!.ref!) ?? /^(.+?):.*#L(\d+)$/.exec(lin!.ref!))!;
       expect(lines.get(repo!)?.has(Number(line)), lin!.ref).toBe(true);
       checked++;
     }

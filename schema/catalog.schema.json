@@ -39,7 +39,7 @@
               "versions": { "type": "string", "maxLength": 40 },
               "menu": { "type": "string", "maxLength": 200 },
               "year": { "type": "integer", "minimum": 1990, "maximum": 2100 },
-              "source": { "enum": ["census", "manual", "recalled"] },
+              "source": { "enum": ["census", "manual", "screenshot", "recalled"] },
               "key": { "type": "string", "maxLength": 200 },
               "ref": { "type": "string", "maxLength": 300 }
             }

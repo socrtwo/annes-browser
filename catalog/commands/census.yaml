@@ -326,3 +326,16 @@
 - { id: help.check-for-updates, label: Check for Updates, category: help, description: "Find out whether a newer version is available.", status: implement, phase: 3, platforms: [desktop] }
 - { id: help.diagnostic-report, label: Diagnostic Report, aliases: [Troubleshooting Report], category: help, description: "Collect technical details to attach to a bug report.", status: implement, phase: 3, platforms: [desktop] }
 - { id: page.show-http-headers, label: Show HTTP Headers, aliases: [Header Info], category: page, description: "Show the protocol headers the server sent with this page.", status: implement, phase: 5, platforms: [desktop] }
+
+# ======== sixth batch: Safari (WebKit), Wine's Internet Explorer, Netscape screenshots ========
+- { id: view.address-bar, label: Address Bar, aliases: [Location Toolbar], category: view, description: "Show or hide the address bar.", status: implement, phase: 3, platforms: [desktop] }
+- { id: nav.search-page, label: Search Page, aliases: [Net Search], category: nav, description: "Open the search engine's own page.", status: implement, phase: 3, platforms: [desktop, android] }
+- { id: page.whats-related, label: What's Related, category: page, description: "Show sites related to the current page, from a service you choose.", status: implement, phase: 6, platforms: [desktop], requires: [network] }
+- { id: page.look-up, label: Look Up, aliases: [Look Up in Dictionary, Define], category: page, description: "Show the dictionary definition of the selected word.", status: implement, phase: 7, platforms: [desktop, android] }
+- { id: page.speak, label: Start Speaking, aliases: [Read Aloud], category: page, description: "Read the selected text, or the page, aloud.", status: implement, phase: 7, platforms: [desktop, android] }
+- { id: page.stop-speaking, label: Stop Speaking, category: page, description: "Stop reading aloud.", status: implement, phase: 7, platforms: [desktop, android] }
+- { id: edit.spelling-learn, label: Learn Spelling, aliases: [Add to Dictionary], category: edit, description: "Add the word under the cursor to the spelling dictionary.", status: implement, phase: 3, platforms: [desktop] }
+- { id: edit.spelling-ignore, label: Ignore Spelling, category: edit, description: "Stop marking this word as misspelled in this document.", status: implement, phase: 3, platforms: [desktop] }
+- { id: edit.check-spelling-now, label: Check Document Now, category: edit, description: "Check the spelling of the text field being edited.", status: implement, phase: 5, platforms: [desktop] }
+- { id: edit.copy-link-to-highlight, label: Copy Link to Highlight, aliases: [Copy Link with Highlight], category: edit, description: "Copy a link that opens this page scrolled to the selected text.", status: implement, phase: 5, platforms: [desktop, android], requires: [clipboard] }
+- { id: legacy.directory-pages, label: Directory Pages, aliases: [What's New, What's Cool, Net Directory, Guided Tour, Internet Starting Points], category: legacy, description: "Buttons and menu entries that opened the browser maker's guide pages to the young web.", status: omit, status_reason: "The pages they opened no longer exist; recorded for history only.", phase: 6, platforms: [desktop] }

@@ -7,6 +7,14 @@
 #
 # Closed-source browsers (Internet Explorer, Opera Presto, Safari, Vivaldi, Netscape 4, Arc) cannot
 # be read this way. They are listed in docs/CENSUS.md as not yet covered.
+# Brave's own ids are mostly vendor services (rewards, wallet, assistant): few link to canonical commands, by design.
+# ---- Scanned manuals at the Internet Archive (host: archive.org; `repo` is the item identifier) ----
+# These are books ABOUT a browser, read by OCR: weaker evidence than source code, and shown as "manual".
+# Only freely readable items are used (not the lending library). There is no commit; the text hash is the pin.
+# ---- Re-creations and engines of closed-source browsers (their own code is not available) ----
+# Wine's ieframe.dll is a re-implementation of Internet Explorer: evidence of the menu Wine copied, not of IE itself.
+# Safari's page context menu items are defined in WebKit, which Apple publishes. WebKit 533.16 shipped in Safari 5.0.
+# ---- Screenshot transcriptions (host: local; repo: the Wikimedia Commons file name) ----
 
 - id: mosaic-2.7
   browser: NCSA Mosaic
@@ -156,7 +164,6 @@
     - path: chrome/app/chrome_command_ids.h
       role: primary
   commit: 0e39800c5bb162ad810ac450980e2689188a8251
-# Brave's own ids are mostly vendor services (rewards, wallet, assistant): few link to canonical commands, by design.
 - id: brave-current
   browser: Brave
   version: development snapshot
@@ -295,10 +302,6 @@
     - path: doc/help/commands.asciidoc
       role: primary
   commit: a2a9c9dd88e659107c70f2fa9a9968ea4a9e643c
-
-# ---- Scanned manuals at the Internet Archive (host: archive.org; `repo` is the item identifier) ----
-# These are books ABOUT a browser, read by OCR: weaker evidence than source code, and shown as "manual".
-# Only freely readable items are used (not the lending library). There is no commit; the text hash is the pin.
 - id: netscape-1.1-manual
   browser: Netscape Navigator
   version: "1.1"
@@ -309,7 +312,8 @@
   ref: "book: Netscape Navigator (v 1.1), 1995"
   extractor: manual-phrases
   files:
-    - { path: Netscape_gator_v_1.1_1995_djvu.txt, role: primary }
+    - path: Netscape_gator_v_1.1_1995_djvu.txt
+      role: primary
 - id: netscape-3.0-manual
   browser: Netscape Navigator
   version: "3.0"
@@ -320,7 +324,8 @@
   ref: "book: Official Netscape Navigator 3.0 Book, Macintosh Edition, Netscape Press 1996"
   extractor: manual-phrases
   files:
-    - { path: Netscape_gator_3.0_Book_Macintosh_Edition_1996_djvu.txt, role: primary }
+    - path: Netscape_gator_3.0_Book_Macintosh_Edition_1996_djvu.txt
+      role: primary
 - id: netscape-4.5-manual
   browser: Netscape Communicator
   version: "4.5"
@@ -331,4 +336,65 @@
   ref: "ERIC ED433433: Netscape Communicator 4.5, Volume I: The Basic Functions of the Navigator Component, 1999"
   extractor: manual-phrases
   files:
-    - { path: micro_IA41153318_0020_djvu.txt, role: primary }
+    - path: micro_IA41153318_0020_djvu.txt
+      role: primary
+- id: wine-ie-recreation
+  browser: Wine re-creation of Internet Explorer
+  version: development snapshot
+  released: 2026
+  platform: Wine (Linux, macOS)
+  repo: wine-mirror/wine
+  ref: HEAD
+  extractor: rc-menu
+  files:
+    - path: dlls/ieframe/ieframe.rc
+      role: primary
+  commit: 274fcfa9691bf3b7f24c0833ad33e9d57c3df65f
+- id: safari-5-webkit
+  browser: Safari (WebKit context menu)
+  version: 5.0 (WebKit 533.16)
+  released: 2010
+  platform: macOS
+  repo: apple-oss-distributions/WebKit
+  ref: WebKit-7533.16
+  extractor: webkit-strings
+  files:
+    - path: mac/WebCoreSupport/WebViewFactory.mm
+      role: primary
+  commit: 0c0e67aa1536fa31e575605d4da1309f50d765ad
+- id: safari-current-webkit
+  browser: Safari (WebKit context menu)
+  version: development snapshot
+  released: 2026
+  platform: macOS
+  repo: apple-oss-distributions/WebKit
+  ref: HEAD
+  extractor: webkit-strings
+  files:
+    - path: Source/WebCore/platform/LocalizedStrings.cpp
+      role: primary
+  commit: 2331c43da3e7123e51ba8682d7ec023b8591460e
+- id: netscape-0.92-screenshot
+  browser: Netscape
+  version: 0.92 Beta
+  released: 1994
+  platform: Windows
+  host: local
+  repo: Netscape_0.92_Screenshot.png
+  ref: "screenshot: Wikimedia Commons, read 2026-11-26"
+  extractor: transcription
+  files:
+    - path: netscape-0.92-screenshot.txt
+      role: primary
+- id: netscape-4.8-screenshot
+  browser: Netscape Communicator
+  version: "4.8"
+  released: 2002
+  platform: Windows
+  host: local
+  repo: Netscape_Communicator_4.8_Screenshot.png
+  ref: "screenshot: Wikimedia Commons, read 2026-11-26"
+  extractor: transcription
+  files:
+    - path: netscape-4.8-screenshot.txt
+      role: primary

@@ -6,15 +6,17 @@ The census records which commands real browsers offered, read from their own sou
 
 ## Summary
 
-- **26 browser versions** from **18 browsers**, **2808 items** read.
-- **1266 items (45%)** are linked to a canonical command; **22** were read and deliberately not linked; **1520** are not yet linked (work queue: [census-unlinked.tsv](census-unlinked.tsv)).
-- **294 canonical commands**: 277 have lineage read from source, 5 have only lineage written from memory (marked *recalled*), 12 have none yet.
+- **31 browser versions** from **21 browsers**, **2984 items** read.
+- **1374 items (46%)** are linked to a canonical command; **47** were read and deliberately not linked; **1563** are not yet linked (work queue: [census-unlinked.tsv](census-unlinked.tsv)).
+- **305 canonical commands**: 288 have lineage read from source, 5 have only lineage written from memory (marked *recalled*), 12 have none yet.
 
 ## What a census entry proves, and what it does not
 
 - **Proves:** a command with that identifier (and, where the source has one, that label or description) existed in that file at that commit. `npm run census:verify` re-fetches every file and checks its hash and that each cited line still contains the recorded text.
 - **Does not prove:** that two items in different browsers behave the same. That is a judgement made when linking, recorded in `catalog/census/names/` and `catalog/census/overrides.yaml`, and checked against each source's own description where it has one (Lynx, w3m, ELinks, Vimium, qutebrowser). Wrong links were caught that way (for example the w3m command `UNDO`, which undoes a cursor movement); see the `why` fields in the overrides file.
 - **Manuals** (sources marked "manual (OCR)") are scanned books about a browser, held by the Internet Archive. Only fixed phrasings such as "From the File menu, choose Open Location" are read, so they give a sample of the menus, not a full listing; OCR can misspell; and a book may describe other programs too. Every manual item was read in context before linking, and look-alikes are listed below with the reason. They are shown in the app as "manual", distinct from source code.
+- **Screenshots** (sources marked "screenshot") are transcriptions of images on Wikimedia Commons, read by a model and kept in `catalog/census/transcriptions/` with the image address and hash. They show only what was visible: menu titles and toolbar buttons, not the contents of closed menus. Menu titles are recorded but never linked as commands.
+- **Re-creations and engines.** Wine's `ieframe.dll` is a re-implementation of Internet Explorer: it shows the menu Wine copied, not Internet Explorer itself. Safari's page context menu is defined in WebKit, which Apple publishes, so that part of Safari is read from Apple's own code; Safari's menu bar is not.
 - **Release years** are not read from the source. They are common knowledge, entered by hand in `catalog/census/sources.yaml`. Check before citing.
 - Menu items inside compile-time conditions (`#ifdef VMS`, `HAVE_DTM`) are included: they were commands on some builds. Rows compiled out by `#ifdef NOT_USED` are excluded.
 - Items such as Chromium's internal `IDC_*` ids are real command ids but not all are user-facing; the unlinked queue contains many of these.
@@ -23,7 +25,7 @@ The census records which commands real browsers offered, read from their own sou
 
 | Source | Browser | Version | Year | Commit | Items | Linked | Reviewed, not linked | Not yet linked |
 |---|---|---|---|---|---|---|---|---|
-| `mosaic-2.7` | NCSA Mosaic | 2.7b5 | 1996 | [alandipert/ncsa-mosaic@d786f715f0](https://github.com/alandipert/ncsa-mosaic/tree/d786f715f0fb6af6914711841804ff68a2ac78cf) | 97 | 55 (57%) | 0 | 42 |
+| `mosaic-2.7` | NCSA Mosaic | 2.7b5 | 1996 | [alandipert/ncsa-mosaic@d786f715f0](https://github.com/alandipert/ncsa-mosaic/tree/d786f715f0fb6af6914711841804ff68a2ac78cf) | 97 | 57 (59%) | 0 | 40 |
 | `lynx-2.7.1` | Lynx | 2.7.1 | 1996 | [ThomasDickey/lynx-snapshots@f516402375](https://github.com/ThomasDickey/lynx-snapshots/tree/f5164023758fc99afb2d4a6e03540e946d995c62) | 65 | 33 (51%) | 0 | 32 |
 | `lynx-2.8` | Lynx | 2.8.0 (2-8rel_3) | 1998 | [ThomasDickey/lynx-snapshots@b9268037e8](https://github.com/ThomasDickey/lynx-snapshots/tree/b9268037e810ae1e75d2d320d146db0efc314524) | 71 | 36 (51%) | 0 | 35 |
 | `lynx-current` | Lynx | development snapshot | 2026 | [ThomasDickey/lynx-snapshots@7f670781d7](https://github.com/ThomasDickey/lynx-snapshots/tree/7f670781d769903d5a32a4b9eb68175f2e687a26) | 103 | 49 (48%) | 2 | 52 |
@@ -32,23 +34,28 @@ The census records which commands real browsers offered, read from their own sou
 | `dillo-2.0` | Dillo | 2.0 | 2008 | [dillo-browser/dillo@ce8e972a10](https://github.com/dillo-browser/dillo/tree/ce8e972a10c9340312f21511de053242dad3f5db) | 23 | 12 (52%) | 0 | 11 |
 | `dillo-current` | Dillo | development snapshot | 2026 | [dillo-browser/dillo@6856c5016d](https://github.com/dillo-browser/dillo/tree/6856c5016de8cc15d077ec8d785bac1a38b4a813) | 40 | 20 (50%) | 0 | 20 |
 | `chrome-3` | Google Chrome | 3.0.195.25 | 2009 | [chromium/chromium@05197078e4](https://github.com/chromium/chromium/tree/05197078e4761dde56f8dc8884050bf862344425) | 148 | 56 (38%) | 0 | 92 |
-| `chrome-10` | Google Chrome | 10.0.648.204 | 2011 | [chromium/chromium@3dd8afedfe](https://github.com/chromium/chromium/tree/3dd8afedfe2bce2c470f863243713fcf599c9a0f) | 210 | 72 (34%) | 0 | 138 |
-| `chrome-50` | Google Chrome | 50.0.2661.102 | 2016 | [chromium/chromium@496034c629](https://github.com/chromium/chromium/tree/496034c629901db4564ba5613e2d736635eeb082) | 287 | 80 (28%) | 0 | 207 |
-| `chrome-current` | Chromium | development snapshot | 2026 | [chromium/chromium@0e39800c5b](https://github.com/chromium/chromium/tree/0e39800c5bb162ad810ac450980e2689188a8251) | 444 | 104 (23%) | 0 | 340 |
+| `chrome-10` | Google Chrome | 10.0.648.204 | 2011 | [chromium/chromium@3dd8afedfe](https://github.com/chromium/chromium/tree/3dd8afedfe2bce2c470f863243713fcf599c9a0f) | 210 | 73 (35%) | 0 | 137 |
+| `chrome-50` | Google Chrome | 50.0.2661.102 | 2016 | [chromium/chromium@496034c629](https://github.com/chromium/chromium/tree/496034c629901db4564ba5613e2d736635eeb082) | 287 | 81 (28%) | 0 | 206 |
+| `chrome-current` | Chromium | development snapshot | 2026 | [chromium/chromium@0e39800c5b](https://github.com/chromium/chromium/tree/0e39800c5bb162ad810ac450980e2689188a8251) | 444 | 105 (24%) | 0 | 339 |
 | `brave-current` | Brave | development snapshot | 2026 | [brave/brave-core@f3f1af0ba3](https://github.com/brave/brave-core/tree/f3f1af0ba31f3a0dc35490cc1eed8c64e5db61f1) | 120 | 1 (1%) | 0 | 119 |
-| `seamonkey-2.0` | SeaMonkey | 2.0rc2 | 2009 | [mozilla/releases-comm-central@dfb257cf8b](https://github.com/mozilla/releases-comm-central/tree/dfb257cf8b7ff3c0cbd00c7b0b9faf79f65381ba) | 57 | 41 (72%) | 0 | 16 |
-| `seamonkey-current` | SeaMonkey | development snapshot | 2026 | [mozilla/releases-comm-central@f1b9c81071](https://github.com/mozilla/releases-comm-central/tree/f1b9c81071c6c47b65a88be42748d291bcb7abaa) | 70 | 50 (71%) | 0 | 20 |
+| `seamonkey-2.0` | SeaMonkey | 2.0rc2 | 2009 | [mozilla/releases-comm-central@dfb257cf8b](https://github.com/mozilla/releases-comm-central/tree/dfb257cf8b7ff3c0cbd00c7b0b9faf79f65381ba) | 57 | 42 (74%) | 0 | 15 |
+| `seamonkey-current` | SeaMonkey | development snapshot | 2026 | [mozilla/releases-comm-central@f1b9c81071](https://github.com/mozilla/releases-comm-central/tree/f1b9c81071c6c47b65a88be42748d291bcb7abaa) | 70 | 51 (73%) | 0 | 19 |
 | `firefox-current` | Firefox | development snapshot | 2026 | [mozilla/gecko-dev@5836a06272](https://github.com/mozilla/gecko-dev/tree/5836a062726f715fda621338a17b51aff30d0a8c) | 79 | 61 (77%) | 0 | 18 |
 | `falkon-current` | Falkon | development snapshot | 2026 | [KDE/falkon@822ede6721](https://github.com/KDE/falkon/tree/822ede6721b016ae0a799e9f9e4c5e135ae1c222) | 34 | 32 (94%) | 0 | 2 |
 | `ladybird-current` | Ladybird | development snapshot | 2026 | [LadybirdBrowser/ladybird@2a8cf49a15](https://github.com/LadybirdBrowser/ladybird/tree/2a8cf49a15247e87b28ca7b1455350513549aad3) | 33 | 32 (97%) | 0 | 1 |
 | `konqueror-current` | Konqueror | development snapshot | 2026 | [KDE/konqueror@ad22111de0](https://github.com/KDE/konqueror/tree/ad22111de095543d68b14083a99cf60c7d610f4c) | 49 | 37 (76%) | 0 | 12 |
 | `otter-0.0.01` | Otter Browser | 0.0.01 | 2013 | [OtterBrowser/otter-browser@dcce6d6fbb](https://github.com/OtterBrowser/otter-browser/tree/dcce6d6fbbf3e47f49b4a44fb4de02e3f25d1290) | 47 | 44 (94%) | 0 | 3 |
-| `otter-current` | Otter Browser | development snapshot | 2026 | [OtterBrowser/otter-browser@0d71a94773](https://github.com/OtterBrowser/otter-browser/tree/0d71a94773cb071b3c203ff40043e1d93efddc1b) | 185 | 137 (74%) | 0 | 48 |
+| `otter-current` | Otter Browser | development snapshot | 2026 | [OtterBrowser/otter-browser@0d71a94773](https://github.com/OtterBrowser/otter-browser/tree/0d71a94773cb071b3c203ff40043e1d93efddc1b) | 185 | 138 (75%) | 0 | 47 |
 | `vimium-current` | Vimium | development snapshot | 2026 | [philc/vimium@4046615ae4](https://github.com/philc/vimium/tree/4046615ae4128d485fce3335fc1032e6f87c630a) | 74 | 69 (93%) | 0 | 5 |
 | `qutebrowser-current` | qutebrowser | development snapshot | 2026 | [qutebrowser/qutebrowser@a2a9c9dd88](https://github.com/qutebrowser/qutebrowser/tree/a2a9c9dd88e659107c70f2fa9a9968ea4a9e643c) | 172 | 64 (37%) | 1 | 107 |
-| `netscape-1.1-manual` | Netscape Navigator | 1.1 | 1995 | manual (OCR): [archive.org/mac_Netscape_gator_v_1.1_1995](https://archive.org/details/mac_Netscape_gator_v_1.1_1995) | 30 | 19 (63%) | 8 | 3 |
+| `netscape-1.1-manual` | Netscape Navigator | 1.1 | 1995 | manual (OCR): [archive.org/mac_Netscape_gator_v_1.1_1995](https://archive.org/details/mac_Netscape_gator_v_1.1_1995) | 30 | 20 (67%) | 8 | 2 |
 | `netscape-3.0-manual` | Netscape Navigator | 3.0 | 1996 | manual (OCR): [archive.org/mac_Netscape_gator_3.0_Book_Macintosh_Edition_1996](https://archive.org/details/mac_Netscape_gator_3.0_Book_Macintosh_Edition_1996) | 21 | 7 (33%) | 2 | 12 |
 | `netscape-4.5-manual` | Netscape Communicator | 4.5 | 1998 | manual (OCR): [archive.org/micro_IA41153318_0020](https://archive.org/details/micro_IA41153318_0020) | 7 | 2 (29%) | 5 | 0 |
+| `wine-ie-recreation` | Wine re-creation of Internet Explorer | development snapshot | 2026 | [wine-mirror/wine@274fcfa969](https://github.com/wine-mirror/wine/tree/274fcfa9691bf3b7f24c0833ad33e9d57c3df65f) | 13 | 13 (100%) | 0 | 0 |
+| `safari-5-webkit` | Safari (WebKit context menu) | 5.0 (WebKit 533.16) | 2010 | [apple-oss-distributions/WebKit@0c0e67aa15](https://github.com/apple-oss-distributions/WebKit/tree/0c0e67aa1536fa31e575605d4da1309f50d765ad) | 54 | 26 (48%) | 0 | 28 |
+| `safari-current-webkit` | Safari (WebKit context menu) | development snapshot | 2026 | [apple-oss-distributions/WebKit@2331c43da3](https://github.com/apple-oss-distributions/WebKit/tree/2331c43da3e7123e51ba8682d7ec023b8591460e) | 61 | 37 (61%) | 0 | 24 |
+| `netscape-0.92-screenshot` | Netscape | 0.92 Beta | 1994 | screenshot: [Commons Netscape_0.92_Screenshot.png](https://commons.wikimedia.org/wiki/File:Netscape_0.92_Screenshot.png) | 22 | 13 (59%) | 9 | 0 |
+| `netscape-4.8-screenshot` | Netscape Communicator | 4.8 | 2002 | screenshot: [Commons Netscape_Communicator_4.8_Screenshot.png](https://commons.wikimedia.org/wiki/File:Netscape_Communicator_4.8_Screenshot.png) | 26 | 10 (38%) | 16 | 0 |
 
 ## Not covered
 
@@ -56,10 +63,10 @@ These cannot be read from the build environment, so they have **no census lineag
 
 | Browsers | Why |
 |---|---|
-| Internet Explorer 1–11, Edge Legacy | Closed source. A first title search of the Internet Archive found no freely readable manual with menu walkthroughs (most are in its lending library, which cannot be read this way). The Wayback Machine and Toastytech were not reachable. |
-| Netscape Navigator and Communicator 1–4 | Partly covered from three scanned manuals (1.1, 3.0, 4.5): about 30 commands, not full menus. Installers exist at the Internet Archive but its download servers are not reachable from here. |
+| Internet Explorer 1–11, Edge Legacy | Closed source. Only indirectly covered, through Wine's re-creation of its main menu (13 items). No freely readable manual was found; the Wayback Machine and Toastytech were not reachable. |
+| Netscape Navigator and Communicator 1–4 | Partly covered from three scanned manuals (1.1, 3.0, 4.5) and two screenshots (0.92, 4.8): toolbars, menu titles and about 30 menu commands, not full menus. Installers exist at the Internet Archive but its download servers are not reachable from here. |
 | Opera 3–12 (Presto), Opera 15+ | Closed source. Otter Browser, an Opera 12 style clone, is covered instead; it shows what that lineage offered, not what Opera shipped. |
-| Safari, Camino, OmniWeb, iCab | Closed source (WebKit is open, Safari's menus are not). |
+| Safari (menu bar), Camino, OmniWeb, iCab | Closed source. Safari's page context menu is covered from WebKit (2010 and current); its menu bar is not. |
 | Vivaldi, Arc, Sidekick, SigmaOS, Zen, Floorp | Closed source or no menu file in a reachable repository. Vivaldi and Arc features appear in the roadmap from memory and are not in the lineage. |
 | Firefox 1.0–100 (history) | The gecko-dev mirror has no release tags; only the current tree was read. SeaMonkey 2.0 covers 2009. |
 | Konqueror 3 and 4, Galeon, Epiphany, Flock | Tags with the menu files were not found in the mirrors reachable here. |
@@ -92,18 +99,43 @@ These cannot be read from the build environment, so they have **no census lineag
 | `netscape-4.5-manual` | `File/New Creates` | OCR merged two table columns; not a command name |
 | `netscape-4.5-manual` | `File/Save As` | context is the Bookmarks window, saving the bookmark file |
 | `netscape-4.5-manual` | `File/Import` | context is the Bookmarks window, importing a bookmark file |
+| `netscape-0.92-screenshot` | `Menu bar/File` | a menu title, not a command |
+| `netscape-0.92-screenshot` | `Menu bar/Edit` | a menu title, not a command |
+| `netscape-0.92-screenshot` | `Menu bar/View` | a menu title, not a command |
+| `netscape-0.92-screenshot` | `Menu bar/Go` | a menu title, not a command |
+| `netscape-0.92-screenshot` | `Menu bar/Bookmarks` | a menu title, not a command |
+| `netscape-0.92-screenshot` | `Menu bar/Options` | a menu title, not a command |
+| `netscape-0.92-screenshot` | `Menu bar/Directory` | a menu title, not a command |
+| `netscape-0.92-screenshot` | `Menu bar/Help` | a menu title, not a command |
+| `netscape-0.92-screenshot` | `Directory buttons/Newsgroups` | opened the news reader; no news reader command exists yet |
+| `netscape-4.8-screenshot` | `Menu bar/File` | a menu title, not a command |
+| `netscape-4.8-screenshot` | `Menu bar/Edit` | a menu title, not a command |
+| `netscape-4.8-screenshot` | `Menu bar/View` | a menu title, not a command |
+| `netscape-4.8-screenshot` | `Menu bar/Go` | a menu title, not a command |
+| `netscape-4.8-screenshot` | `Menu bar/Communicator` | a menu title, not a command |
+| `netscape-4.8-screenshot` | `Menu bar/Help` | a menu title, not a command |
+| `netscape-4.8-screenshot` | `Toolbar/Netscape` | a link to Netscape's portal |
+| `netscape-4.8-screenshot` | `Toolbar/Shop` | a link to Netscape's shopping portal |
+| `netscape-4.8-screenshot` | `Personal toolbar/Instant Message` | a bookmark to a Netscape web service, not a browser command |
+| `netscape-4.8-screenshot` | `Personal toolbar/WebMail` | a bookmark to a Netscape web service, not a browser command |
+| `netscape-4.8-screenshot` | `Personal toolbar/Calendar` | a bookmark to a Netscape web service, not a browser command |
+| `netscape-4.8-screenshot` | `Personal toolbar/Radio` | a bookmark to a Netscape web service, not a browser command |
+| `netscape-4.8-screenshot` | `Personal toolbar/People` | a bookmark to a Netscape web service, not a browser command |
+| `netscape-4.8-screenshot` | `Personal toolbar/Yellow Pages` | a bookmark to a Netscape web service, not a browser command |
+| `netscape-4.8-screenshot` | `Personal toolbar/Download` | a bookmark to a Netscape web service, not a browser command |
+| `netscape-4.8-screenshot` | `Personal toolbar/Customize` | a bookmark to a Netscape web service, not a browser command |
 
 ## Work queue
 
-1520 items are not yet linked. They fall into these groups:
+1563 items are not yet linked. They fall into these groups:
 
 | Group | Items |
 |---|---|
 | Other Chromium and Brave ids | 569 |
-| Other | 457 |
+| Other | 503 |
 | Chromium page context menu entries | 212 |
 | qutebrowser caret, readline, config, debug and prompt commands | 69 |
-| Chromium developer, cast, spelling and assistant entries | 67 |
+| Chromium developer, cast, spelling and assistant entries | 64 |
 | Chromium bookmark bar menu entries | 48 |
 | w3m cursor, link, mark and buffer navigation | 40 |
 | ELinks cursor movement, macros, frames and toggles | 37 |
@@ -113,4 +145,4 @@ To work through it: read an item in [census-unlinked.tsv](census-unlinked.tsv), 
 
 ## Commands without census lineage
 
-`view.menu-layout`, `view.keymap`, `help.menu-archaeology`, `legacy.ftp-open`, `legacy.flash`, `edit.replace-misspelling`, `bookmark.open`, `history.open`, `history.remove`, `page.search-selection`, `tools.download-show`, `tools.search-engine`
+`help.whats-new`, `view.menu-layout`, `view.keymap`, `help.menu-archaeology`, `legacy.ftp-open`, `legacy.flash`, `edit.replace-misspelling`, `bookmark.open`, `history.open`, `history.remove`, `tools.download-show`, `tools.search-engine`

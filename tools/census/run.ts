@@ -13,6 +13,12 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 export const CENSUS_DIR = join(root, 'catalog', 'census');
 export const SOURCES_PATH = join(CENSUS_DIR, 'sources.yaml');
 
+/** A transcription kept in the repository, by name only: no paths outside catalog/census/transcriptions/. */
+export function readLocal(name: string): string {
+  if (!/^[a-z0-9][a-z0-9.-]*\.txt$/.test(name)) throw new Error(`not a transcription file name: ${name}`);
+  return readFileSync(join(CENSUS_DIR, 'transcriptions', name), 'utf8');
+}
+
 export const loadSources = (): SourceSpec[] => parse(readFileSync(SOURCES_PATH, 'utf8')) as SourceSpec[];
 
 export function loadCensus(id: string): CensusFile {
@@ -26,7 +32,7 @@ export function pinSources(resolve: (repo: string, ref: string) => string = reso
   // Same repo and ref resolve once.
   const memo = new Map<string, string>();
   for (const s of specs) {
-    if (s.commit || s.host === 'archive.org') continue;
+    if (s.commit || s.host === 'archive.org' || s.host === 'local') continue;
     const k = `${s.repo}@${s.ref}`;
     if (!memo.has(k)) memo.set(k, resolve(s.repo, s.ref));
     s.commit = memo.get(k)!;
@@ -46,6 +52,10 @@ export async function readFiles(spec: SourceSpec, fetcher?: Fetcher): Promise<Re
     for (const f of spec.files) out[f.path] = await getArchiveText(spec.repo, f.path, fetcher);
     return out;
   }
+  if (spec.host === 'local') {
+    for (const f of spec.files) out[f.path] = readLocal(f.path);
+    return out;
+  }
   if (!spec.commit) throw new Error(`${spec.id}: not pinned; run "census pin"`);
   for (const f of spec.files) out[f.path] = await getSource({ repo: spec.repo, commit: spec.commit, path: f.path }, fetcher);
   return out;
@@ -61,7 +71,7 @@ export async function buildCensus(spec: SourceSpec, today: string, fetcher?: Fet
     released: spec.released,
     platform: spec.platform,
     source: {
-      ...(spec.host === 'archive.org' && { host: 'archive.org' as const }),
+      ...((spec.host === 'archive.org' || spec.host === 'local') && { host: spec.host }),
       repo: spec.repo,
       ref: spec.ref,
       commit: spec.commit ?? '',
@@ -90,7 +100,8 @@ export async function verifyCensus(c: CensusFile, fetcher?: Fetcher): Promise<Ve
   const fail = (message: string) => problems.push({ id: c.id, message });
   const texts: Record<string, string[]> = {};
   for (const f of c.source.files) {
-    const text = c.source.host === 'archive.org'
+    const text = c.source.host === 'local' ? readLocal(f.path)
+      : c.source.host === 'archive.org'
       ? await getArchiveText(c.source.repo, f.path, fetcher)
       : await getSource({ repo: c.source.repo, commit: c.source.commit, path: f.path }, fetcher);
     if (sha256(text) !== f.sha256) fail(`${f.path}: content hash differs from the one recorded`);
