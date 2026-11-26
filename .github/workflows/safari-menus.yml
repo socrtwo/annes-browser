@@ -1,0 +1,45 @@
+# Reads Safari's menu bar on GitHub's macOS machines (a fresh machine: no history or bookmarks)
+# and prints it as a census transcription. See docs/MENU-DUMPS.md.
+name: Safari menus
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [claude/annes-browser-repo-setup-orq4f7]
+    paths: ['.github/workflows/safari-menus.yml', 'tools/menu-dump/macos-menus.js']
+
+permissions:
+  contents: read
+
+jobs:
+  dump:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-14, macos-15, macos-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Versions
+        run: |
+          sw_vers
+          defaults read /Applications/Safari.app/Contents/Info CFBundleShortVersionString
+          defaults read /Applications/Safari.app/Contents/Info CFBundleVersion
+      - name: Start Safari
+        run: |
+          open -a Safari
+          sleep 20
+          pgrep -x Safari
+      - name: Read menus
+        run: |
+          osascript -l JavaScript tools/menu-dump/macos-menus.js Safari > safari-menus.txt
+          wc -l safari-menus.txt
+          echo "=====BEGIN DUMP====="
+          cat safari-menus.txt
+          echo "=====END DUMP====="
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: safari-menus-${{ matrix.os }}
+          path: safari-menus.txt
