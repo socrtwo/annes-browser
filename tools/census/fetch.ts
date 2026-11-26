@@ -61,6 +61,41 @@ export async function getSource(s: SourceFile, fetcher: Fetcher = httpFetch): Pr
   throw new Error(`${url}: still rate limited after retries`);
 }
 
+const ENTITIES: Record<string, string> = { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ' };
+const unescapeHtml = (s: string) =>
+  s.replace(/&(#x?[0-9a-f]+|\w+);/gi, (m, e: string) => {
+    if (e[0] === '#') return String.fromCodePoint(e[1] === 'x' || e[1] === 'X' ? parseInt(e.slice(2), 16) : Number(e.slice(1)));
+    return ENTITIES[e.toLowerCase()] ?? m;
+  });
+
+export const archiveUrl = (item: string, file: string) => `https://archive.org/stream/${item}/${file}`;
+
+/**
+ * Read the OCR text of an Internet Archive item. The archive serves it inside a web page; the text
+ * is the page's single <pre> block. There is no commit to pin to, so the census file records the
+ * text's hash and `census verify` reports if the archive ever re-derives it.
+ */
+export async function getArchiveText(item: string, file: string, fetcher: Fetcher = httpFetch): Promise<string> {
+  if (!/^[A-Za-z0-9][\w-]*(?:\.[\w-]+)*$/.test(item) || !/^[A-Za-z0-9][\w%-]*(?:\.[\w%-]+)*_djvu\.txt$/.test(file)) throw new Error(`not an archive text file: ${item}/${file}`);
+  const cachePath = join(CACHE_DIR, 'archive.org', item, file);
+  if (existsSync(cachePath)) return readFileSync(cachePath, 'utf8');
+  let delay = 5000;
+  for (let attempt = 0; attempt < 5; attempt++) {
+    const { status, text } = await fetcher(archiveUrl(item, file));
+    if (status === 200) {
+      const pre = /<pre>([\s\S]*?)<\/pre>/.exec(text);
+      if (!pre) throw new Error(`${item}/${file}: no text block in the page (the item may be restricted)`);
+      const out = unescapeHtml(pre[1]!);
+      mkdirSync(dirname(cachePath), { recursive: true });
+      writeFileSync(cachePath, out);
+      return out;
+    }
+    if (status === 429 || status >= 500) { await sleep(delay); delay *= 2; continue; }
+    throw new Error(`${archiveUrl(item, file)}: HTTP ${status}`);
+  }
+  throw new Error(`${archiveUrl(item, file)}: still rate limited after retries`);
+}
+
 /** Resolve a branch or tag to the commit it points at (annotated tags are peeled). */
 export function resolveRef(repo: string, ref: string): string {
   const out = execFileSync('git', ['ls-remote', `https://github.com/${repo}`, ref, `${ref}^{}`], { encoding: 'utf8', timeout: 120_000 });

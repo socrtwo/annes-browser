@@ -13,6 +13,14 @@ describe('census references', () => {
     expect(refUrl('o/r@abcdef1:a b/c.xul#L3')).toBe('https://github.com/o/r/blob/abcdef1/a%20b/c.xul#L3');
   });
 
+  it('links a manual reference to the scanned text at the Internet Archive, and nowhere else', () => {
+    expect(refUrl('archive.org/mac_Netscape_gator_v_1.1_1995/Netscape_gator_v_1.1_1995_djvu.txt#L2078')).toBe(
+      'https://archive.org/stream/mac_Netscape_gator_v_1.1_1995/Netscape_gator_v_1.1_1995_djvu.txt');
+    for (const bad of ['archive.org/item/evil.exe#L1', 'archive.org/../x_djvu.txt#L1', 'archive.org.evil.example/item/x_djvu.txt#L1', 'archive.org/item/x_djvu.txt']) {
+      expect(refUrl(bad), bad).toBeUndefined();
+    }
+  });
+
   it('refuses anything that is not in that form, so a ref cannot become another kind of link', () => {
     for (const bad of ['javascript:alert(1)', 'https://evil.example/', 'o/r@abc:x#L1', 'o/r@abcdef1:../../x#L1x', 'o/r@abcdef1:x', '', 'o/r@abcdef1:a"b#L1']) {
       expect(refUrl(bad), bad).toBeUndefined();

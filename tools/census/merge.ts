@@ -92,9 +92,12 @@ export function lineageFor(command: string, matches: readonly Match[]): Lineage[
       versions: source.browser_version,
       year: source.released,
       ...(where ? { menu: where } : {}),
-      source: 'census',
+      // A manual is someone's description of the browser, read by OCR; the browser's own code is `census`.
+      source: source.source.host === 'archive.org' ? 'manual' : 'census',
       key: item.key,
-      ref: `${source.source.repo}@${source.source.commit.slice(0, 12)}:${item.file ?? source.source.files[0]!.path}#L${item.line}`,
+      ref: source.source.host === 'archive.org'
+        ? `archive.org/${source.source.repo}/${item.file ?? source.source.files[0]!.path}#L${item.line}`
+        : `${source.source.repo}@${source.source.commit.slice(0, 12)}:${item.file ?? source.source.files[0]!.path}#L${item.line}`,
     });
   }
   return out.sort((a, b) => (a.year ?? 0) - (b.year ?? 0) || a.browser.localeCompare(b.browser));

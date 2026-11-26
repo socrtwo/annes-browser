@@ -5,12 +5,20 @@
  *   npm run census -- report     print counts per source
  *   npm run census -- docs       write docs/CENSUS.md and docs/census-unlinked.tsv
  */
+import { spawnSync } from 'node:child_process';
 import { existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { loadCatalog, applyCensus } from './build-catalog.ts';
 import { loadAllCensus } from './census-load.ts';
 import { writeCensusReports } from './census/report.ts';
 import { buildCensus, CENSUS_DIR, loadCensus, loadSources, pinSources, verifyCensus, writeCensus } from './census/run.ts';
+
+// Node's built-in fetch ignores HTTPS_PROXY unless NODE_USE_ENV_PROXY is set before start-up.
+// Behind a proxy, run this script again with it set, so hosts that only resolve through the proxy work.
+if ((process.env['HTTPS_PROXY'] || process.env['https_proxy']) && !process.env['NODE_USE_ENV_PROXY']) {
+  const r = spawnSync(process.execPath, process.argv.slice(1), { stdio: 'inherit', env: { ...process.env, NODE_USE_ENV_PROXY: '1' } });
+  process.exit(r.status ?? 1);
+}
 
 const [cmd, ...rest] = process.argv.slice(2);
 const only = rest.filter((a) => !a.startsWith('-'));

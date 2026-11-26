@@ -374,7 +374,52 @@ const konquerorRc: Extractor = (files, spec) => {
   return out;
 };
 
+// ---------------------------------------------------------------- Scanned manuals (OCR prose)
+
+/** Menus a browser manual of the 1990s may name. Anything else after "the ... menu" is ignored. */
+const MANUAL_MENUS = new Set(['File', 'Edit', 'View', 'Go', 'Bookmarks', 'Options', 'Directory', 'Window', 'Help', 'Communicator', 'Favorites', 'Tools']);
+// A command name: capitalized words, allowing small joining words inside ("Add to Bookmarks", "Save As").
+const NAME = "[A-Z][A-Za-z']*(?: (?:[A-Z][A-Za-z']*|as|to|in|of|and|the|a|on|by))*";
+const PHRASES = [
+  new RegExp(`\\b[Ff]rom the (\\w+) menu,? (?:choose|select|pick|click(?: on)?) (${NAME})`, 'g'),
+  new RegExp(`\\b(?:[Cc]hoose|[Ss]elect|[Pp]ick|[Uu]se) (${NAME}) (?:from|on|in|under) the (\\w+) menu`, 'g'),
+  new RegExp(`\\b[Oo]pen the (\\w+) menu and (?:choose|select) (${NAME})`, 'g'),
+];
+// Words a sentence may continue with after the command name; a trailing one is not part of the name.
+const TRAILING = /(?: (?:as|to|in|of|and|the|a|on|by))+$/;
+
+/**
+ * Menu commands named in a manual's prose: "From the File menu, choose Open Location". Only these
+ * fixed phrasings are read, so the result is what the manual states outright, not an inference.
+ * It is a sample of the menus, not a full listing: a command the author never walks through is absent.
+ */
+const manualPhrases: Extractor = (files, spec) => {
+  const src = lines(primary(files, spec));
+  const out: CensusItem[] = [];
+  const seen = new Set<string>();
+  for (let i = 0; i < src.length; i++) {
+    // Sentences wrap: read each line together with the start of the next, but cite the line the phrase starts on.
+    const here = src[i]!;
+    const joined = `${here.trimEnd()} ${(src[i + 1] ?? '').trim()}`;
+    for (const [n, re] of PHRASES.entries()) {
+      re.lastIndex = 0;
+      for (let m = re.exec(joined); m; m = re.exec(joined)) {
+        if (m.index >= here.trimEnd().length) continue; // starts on the next line; it will be read there
+        const menu = n === 1 ? m[2]! : m[1]!;
+        const label = (n === 1 ? m[1]! : m[2]!).replace(TRAILING, '');
+        if (!MANUAL_MENUS.has(menu) || label.length < 2 || label.length > 40) continue;
+        const key = `${menu}/${label}`;
+        if (seen.has(key)) continue;
+        seen.add(key);
+        out.push(item({ key, label, menu, line: i + 1, text: here }));
+      }
+    }
+  }
+  return out;
+};
+
 export const EXTRACTORS: Record<ExtractorId, Extractor> = {
+  'manual-phrases': manualPhrases,
   'mosaic-menu': mosaicMenu,
   'lynx-keymap': lynxKeymap,
   'w3m-func': w3mFunc,

@@ -67,6 +67,7 @@ D2 and D4 were adopted by building on them, following the roadmap's recommendati
 | C8 | Census files keep identifiers, labels and descriptions of at most 100 characters, never code | Facts for citation; no source code is copied into the repository | Low |
 | C9 | Closed-source browsers get no census lineage; they are listed in CENSUS.md as not covered | They cannot be read here, and Otter Browser (an Opera 12 style clone) is not Opera | n/a |
 | C10 | Menu items in compile-time conditions (`#ifdef VMS`) are included; rows under `#ifdef NOT_USED` are not | The first were commands on some builds; the second were never compiled | Low |
+| C12 | Scanned manuals are a second, weaker source kind (`manual`), read only through fixed phrasings and reviewed line by line | Closed-source browsers have no code to read; a manual's "From the File menu, choose X" is a checkable citation, but it is a third party's words, OCR'd, and may describe other programs | Low |
 | C11 | Unbuilt commands are marked "planned" in the palette and rank below built ones | 294 commands exist and 70 have handlers; hiding the rest would hide the project's purpose, ranking them equally would bury working commands | Low |
 
 ## Deviations from the Phase 0 documents

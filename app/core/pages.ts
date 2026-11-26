@@ -27,6 +27,9 @@ function page(title: string, body: string): string {
  * Only github.com addresses are produced, so a malformed or hostile `ref` cannot become another link.
  */
 export function refUrl(ref: string): string | undefined {
+  // A scanned manual at the Internet Archive. Its text page has no line anchors, so the link opens the text.
+  const scan = /^archive\.org\/([A-Za-z0-9][\w-]*(?:\.[\w-]+)*)\/([A-Za-z0-9][\w%-]*(?:\.[\w%-]+)*_djvu\.txt)#L\d+$/.exec(ref);
+  if (scan) return `https://archive.org/stream/${scan[1]}/${scan[2]}`;
   const m = /^([\w.-]+\/[\w.-]+)@([0-9a-f]{7,40}):([\w./+~@ -]+)#L(\d+)$/.exec(ref);
   return m ? `https://github.com/${m[1]}/blob/${m[2]}/${m[3]!.split('/').map(encodeURIComponent).join('/')}#L${m[4]}` : undefined;
 }
@@ -47,7 +50,8 @@ function lineageRows(c: CommandRecord): string {
   return (c.lineage ?? [])
     .map((l) => {
       const href = l.ref ? refUrl(l.ref) : undefined;
-      const evidence = href ? `<a href="${escapeHtml(href)}">${escapeHtml(l.key ?? 'source')}</a>` : l.source === 'recalled' ? '<span class="tag">unverified</span>' : '';
+      const line = l.source === 'manual' ? ` <small>manual, line ${escapeHtml(/#L(\d+)$/.exec(l.ref ?? '')?.[1] ?? '?')}</small>` : '';
+      const evidence = href ? `<a href="${escapeHtml(href)}">${escapeHtml(l.key ?? 'source')}</a>${line}` : l.source === 'recalled' ? '<span class="tag">unverified</span>' : '';
       return `<tr><td>${escapeHtml(l.browser)}${l.versions ? ` ${escapeHtml(l.versions)}` : ''}</td><td>${escapeHtml(l.menu ?? '')}</td><td>${l.year ?? ''}</td><td>${evidence}</td></tr>`;
     })
     .join('');
@@ -86,12 +90,12 @@ export function commandPage(c: CommandRecord | undefined): string {
 ${c.status_reason ? `<p><small>${escapeHtml(c.status_reason)}</small></p>` : ''}
 ${c.aliases?.length ? `<p><small>Also known as: ${c.aliases.map(escapeHtml).join(', ')}</small></p>` : ''}
 ${lineage ? `<h2>Where it came from</h2><table><tr><th>Browser</th><th>Menu</th><th>Year</th><th>Source</th></tr>${lineage}</table>
-<p><small>"Source" links to the line in the browser's own source code. Entries marked unverified were written from memory.</small></p>` : '<p><small>No history recorded yet.</small></p>'}
+<p><small>"Source" links to the line in the browser's own source code, or to the scanned text of a manual (read by OCR, so spelling may be imperfect). Entries marked unverified were written from memory.</small></p>` : '<p><small>No history recorded yet.</small></p>'}
 <p><a href="anne://pages/archaeology">All commands</a></p>`);
 }
 
 export function archaeologyPage(commands: readonly CommandRecord[]): string {
-  const sourced = commands.filter((c) => (c.lineage ?? []).some((l) => l.source === 'census')).length;
+  const sourced = commands.filter((c) => (c.lineage ?? []).some((l) => l.source === 'census' || l.source === 'manual')).length;
   const rows = [...commands]
     .sort((a, b) => a.category.localeCompare(b.category) || a.label.localeCompare(b.label))
     .map((c) => {
@@ -100,7 +104,7 @@ export function archaeologyPage(commands: readonly CommandRecord[]): string {
       return `<tr><td><a href="anne://pages/command?id=${encodeURIComponent(c.id)}">${escapeHtml(c.label)}</a>${tag}<br><small><code>${escapeHtml(c.id)}</code></small></td><td>${escapeHtml(c.description)}</td><td><small>${origins}</small></td></tr>`;
     })
     .join('');
-  return page('Menu archaeology', `<h1>Menu archaeology</h1><p class="m">${commands.length} commands; ${sourced} have a history read from browser source code. Choose a command to see the exact lines. "Unverified" entries were written from memory.</p>
+  return page('Menu archaeology', `<h1>Menu archaeology</h1><p class="m">${commands.length} commands; ${sourced} have a history read from browser source code or manuals. Choose a command to see the exact lines. "Unverified" entries were written from memory.</p>
 <table><tr><th>Command</th><th>What it does</th><th>Seen in</th></tr>${rows}</table>`);
 }
 

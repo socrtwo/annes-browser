@@ -45,3 +45,23 @@
 - { source: lynx-current, key: LAST_LINK, command: none, why: "makes the last link on the current line current, not the last link on the page" }
 - { source: w3m-current, key: MAIN_MENU, command: input.focus-menubar, why: "w3m MAIN_MENU pops up the menu; Lynx's MAIN_MENU returns to the home screen" }
 - { source: w3m-current, key: MENU, command: input.focus-menubar }
+
+# ---- scanned manuals: each line was read in context ----
+- { source: netscape-1.1-manual, key: File/Close, command: app.close-window }
+- { source: netscape-1.1-manual, key: View/Source, command: view.page-source }
+- { source: netscape-4.5-manual, key: File/Open, command: file.open-location, why: "the manual says it opens the Open Page dialog" }
+- { source: netscape-1.1-manual, key: File/Open, command: none, why: "the sentence is about SoundApp, a helper program, not Netscape" }
+- { source: netscape-1.1-manual, key: File/Print, command: none, why: "appears in the chapter on helper programs; not certain it is Netscape's own menu" }
+- { source: netscape-1.1-manual, key: View/Articles, command: none, why: "Adobe Acrobat Reader's menu, not Netscape's" }
+- { source: netscape-1.1-manual, key: View/Zoom To, command: none, why: "Adobe Acrobat Reader's menu, not Netscape's" }
+- { source: netscape-1.1-manual, key: View/Full Screen, command: none, why: "Adobe Acrobat Reader's menu, not Netscape's" }
+- { source: netscape-1.1-manual, key: Edit/Copy, command: none, why: "Adobe Acrobat Reader's menu, not Netscape's" }
+- { source: netscape-1.1-manual, key: Tools/Select Graphics, command: none, why: "Adobe Acrobat Reader's menu, not Netscape's" }
+- { source: netscape-1.1-manual, key: Options/Prefer, command: none, why: "the word Preferences broken across two lines; Options/Preferences is recorded separately" }
+- { source: netscape-3.0-manual, key: File/Get Info, command: none, why: "the Macintosh Finder's menu, not Netscape's" }
+- { source: netscape-3.0-manual, key: File/Save As, command: none, why: "saves a newsgroup article from the Netscape News window, not a web page" }
+- { source: netscape-4.5-manual, key: Edit/Displays the Find on Page, command: none, why: "OCR merged two table columns; not a command name" }
+- { source: netscape-4.5-manual, key: Bookmarks/Selects the URL, command: none, why: "OCR merged two table columns; not a command name" }
+- { source: netscape-4.5-manual, key: File/New Creates, command: none, why: "OCR merged two table columns; not a command name" }
+- { source: netscape-4.5-manual, key: File/Save As, command: none, why: "context is the Bookmarks window, saving the bookmark file" }
+- { source: netscape-4.5-manual, key: File/Import, command: none, why: "context is the Bookmarks window, importing a bookmark file" }

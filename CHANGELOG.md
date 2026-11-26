@@ -5,6 +5,7 @@ All notable changes to this project are documented here. Format: [Keep a Changel
 ## [Unreleased]
 
 ### Added
+- 2026-11-26: Census from scanned manuals. Three Netscape manuals at the Internet Archive (Navigator 1.1, 3.0; Communicator 4.5) read by fixed phrasings, 58 items, each reviewed in context: 28 linked as "manual" history, 16 rejected with reasons (other programs' menus, OCR errors).
 - 2026-11-26: Command census (Phase 1, first pass).
   - Menu definitions and command tables read from 23 versions of 16 open-source browsers (Mosaic, Lynx, w3m, ELinks, Dillo, Chrome and Chromium, Brave, SeaMonkey, Firefox, Falkon, Ladybird, Konqueror, Otter, Vimium, qutebrowser), each pinned to a commit with a hash, 2,750 items in all.
   - `npm run census:verify` re-reads every source and checks every cited line; CI runs it as a non-blocking job.

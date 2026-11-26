@@ -295,3 +295,40 @@
     - path: doc/help/commands.asciidoc
       role: primary
   commit: a2a9c9dd88e659107c70f2fa9a9968ea4a9e643c
+
+# ---- Scanned manuals at the Internet Archive (host: archive.org; `repo` is the item identifier) ----
+# These are books ABOUT a browser, read by OCR: weaker evidence than source code, and shown as "manual".
+# Only freely readable items are used (not the lending library). There is no commit; the text hash is the pin.
+- id: netscape-1.1-manual
+  browser: Netscape Navigator
+  version: "1.1"
+  released: 1995
+  platform: Macintosh
+  host: archive.org
+  repo: mac_Netscape_gator_v_1.1_1995
+  ref: "book: Netscape Navigator (v 1.1), 1995"
+  extractor: manual-phrases
+  files:
+    - { path: Netscape_gator_v_1.1_1995_djvu.txt, role: primary }
+- id: netscape-3.0-manual
+  browser: Netscape Navigator
+  version: "3.0"
+  released: 1996
+  platform: Macintosh
+  host: archive.org
+  repo: mac_Netscape_gator_3.0_Book_Macintosh_Edition_1996
+  ref: "book: Official Netscape Navigator 3.0 Book, Macintosh Edition, Netscape Press 1996"
+  extractor: manual-phrases
+  files:
+    - { path: Netscape_gator_3.0_Book_Macintosh_Edition_1996_djvu.txt, role: primary }
+- id: netscape-4.5-manual
+  browser: Netscape Communicator
+  version: "4.5"
+  released: 1998
+  platform: Windows
+  host: archive.org
+  repo: micro_IA41153318_0020
+  ref: "ERIC ED433433: Netscape Communicator 4.5, Volume I: The Basic Functions of the Navigator Component, 1999"
+  extractor: manual-phrases
+  files:
+    - { path: micro_IA41153318_0020_djvu.txt, role: primary }

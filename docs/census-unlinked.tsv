@@ -1504,3 +1504,18 @@ qutebrowser-current	debug-pyeval	Evaluate a python string and display the result
 qutebrowser-current	debug-set-fake-clipboard	Put data into the fake clipboard and enable logging, used for tests.		2174
 qutebrowser-current	debug-trace	Trace executed code via hunter.		2183
 qutebrowser-current	debug-webaction	Execute a webaction.		2196
+netscape-1.1-manual	Options/Save Options	Save Options	Options	1223
+netscape-1.1-manual	Directory/Go to Newsgroups	Go to Newsgroups	Directory	16311
+netscape-1.1-manual	Directory/Netscape Galleria	Netscape Galleria	Directory	18148
+netscape-3.0-manual	Options/Save Options	Save Options	Options	7440
+netscape-3.0-manual	Options/Mail and News Preferences	Mail and News Preferences	Options	10704
+netscape-3.0-manual	File/New Mail Message	New Mail Message	File	11680
+netscape-3.0-manual	View/Newsgroups	Newsgroups	View	11770
+netscape-3.0-manual	View/Sort	Sort	View	15180
+netscape-3.0-manual	Options/Show All Newsgroups	Show All Newsgroups	Options	15463
+netscape-3.0-manual	Window/Netscape News	Netscape News	Window	15547
+netscape-3.0-manual	Options/Show New Newsgroups	Show New Newsgroups	Options	15550
+netscape-3.0-manual	File/Send Now	Send Now	File	16989
+netscape-3.0-manual	File/New News Message	New News Message	File	17139
+netscape-3.0-manual	Options/Network Preferences	Network Preferences	Options	26669
+netscape-3.0-manual	Options/Security Preferences	Security Preferences	Options	28049

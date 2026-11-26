@@ -89,3 +89,7 @@ Gotchas:
 - ELinks has several keymaps (`main:`, `menu:`, `edit:`). Only `main:` is stripped to a bare name; `menu:home` and `edit:home` must not match "Home".
 - Vimium's `scrollPageDown` is half a page; Lynx's `HOME` scrolls to the top of the document; w3m's `UNDO` undoes a cursor movement. The overrides file has the rest.
 - A source file's text is decoded as UTF-8, falling back to Latin-1, so line numbers are stable for old files.
+- **Scanned manuals** (`host: archive.org` in `sources.yaml`) are read from `https://archive.org/stream/<item>/<file>_djvu.txt`. Only that page is reachable; the archive's download servers (`ia*.us.archive.org`, `dn*.ca.archive.org`) and the Wayback Machine are not, so installers and page images cannot be fetched. Lending-library books return a page with no text block and are rejected.
+- **Review every manual item in context.** Books describe helper programs too (Acrobat Reader's View > Full Screen appeared in a Netscape book), and OCR merges table columns into fake command names. Reject those in `overrides.yaml` with `command: none` and a reason.
+- Other sites tried on 2026-11-26: Toastytech serves plain HTTP only, which the proxy does not carry; GUIdebook Gallery and the Wikimedia Commons API answered "too many requests" from this shared address even at one request every 12 seconds.
+- `tools/census.ts` restarts itself with `NODE_USE_ENV_PROXY=1` when a proxy is configured, because Node's built-in fetch otherwise ignores it.

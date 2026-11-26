@@ -12,8 +12,8 @@ const cell = (s: string) => s.replace(/\|/g, '\\|').replace(/\s+/g, ' ');
 
 /** Browsers that cannot be read from open source, and why. */
 const NOT_COVERED: [string, string][] = [
-  ['Internet Explorer 1–11, Edge Legacy', 'Closed source. Documentation hosts (Microsoft Learn, Wayback Machine) are not reachable from the build environment.'],
-  ['Netscape Navigator and Communicator 1–4', 'Source released in 1998 but not in a mirror reachable here; Mozilla suite ancestry is covered through SeaMonkey 2.0.'],
+  ['Internet Explorer 1–11, Edge Legacy', 'Closed source. A first title search of the Internet Archive found no freely readable manual with menu walkthroughs (most are in its lending library, which cannot be read this way). The Wayback Machine and Toastytech were not reachable.'],
+  ['Netscape Navigator and Communicator 1–4', 'Partly covered from three scanned manuals (1.1, 3.0, 4.5): about 30 commands, not full menus. Installers exist at the Internet Archive but its download servers are not reachable from here.'],
   ['Opera 3–12 (Presto), Opera 15+', 'Closed source. Otter Browser, an Opera 12 style clone, is covered instead; it shows what that lineage offered, not what Opera shipped.'],
   ['Safari, Camino, OmniWeb, iCab', 'Closed source (WebKit is open, Safari\'s menus are not).'],
   ['Vivaldi, Arc, Sidekick, SigmaOS, Zen, Floorp', 'Closed source or no menu file in a reachable repository. Vivaldi and Arc features appear in the roadmap from memory and are not in the lineage.'],
@@ -56,6 +56,7 @@ export function writeCensusReports(files: readonly CensusFile[], catalog: Catalo
     '',
     '- **Proves:** a command with that identifier (and, where the source has one, that label or description) existed in that file at that commit. `npm run census:verify` re-fetches every file and checks its hash and that each cited line still contains the recorded text.',
     '- **Does not prove:** that two items in different browsers behave the same. That is a judgement made when linking, recorded in `catalog/census/names/` and `catalog/census/overrides.yaml`, and checked against each source\'s own description where it has one (Lynx, w3m, ELinks, Vimium, qutebrowser). Wrong links were caught that way (for example the w3m command `UNDO`, which undoes a cursor movement); see the `why` fields in the overrides file.',
+    '- **Manuals** (sources marked "manual (OCR)") are scanned books about a browser, held by the Internet Archive. Only fixed phrasings such as "From the File menu, choose Open Location" are read, so they give a sample of the menus, not a full listing; OCR can misspell; and a book may describe other programs too. Every manual item was read in context before linking, and look-alikes are listed below with the reason. They are shown in the app as "manual", distinct from source code.',
     '- **Release years** are not read from the source. They are common knowledge, entered by hand in `catalog/census/sources.yaml`. Check before citing.',
     '- Menu items inside compile-time conditions (`#ifdef VMS`, `HAVE_DTM`) are included: they were commands on some builds. Rows compiled out by `#ifdef NOT_USED` are excluded.',
     '- Items such as Chromium\'s internal `IDC_*` ids are real command ids but not all are user-facing; the unlinked queue contains many of these.',
@@ -68,7 +69,10 @@ export function writeCensusReports(files: readonly CensusFile[], catalog: Catalo
   for (const f of files) {
     const p = perSource(f);
     const sha = f.source.commit.slice(0, 10);
-    out.push(`| \`${f.id}\` | ${cell(f.browser)} | ${cell(f.browser_version)} | ${f.released} | [${f.source.repo}@${sha}](https://github.com/${f.source.repo}/tree/${f.source.commit}) | ${f.items.length} | ${p.linked} (${pct(p.linked, f.items.length)}) | ${p.reviewed} | ${p.open} |`);
+    const where = f.source.host === 'archive.org'
+      ? `manual (OCR): [archive.org/${f.source.repo}](https://archive.org/details/${f.source.repo})`
+      : `[${f.source.repo}@${sha}](https://github.com/${f.source.repo}/tree/${f.source.commit})`;
+    out.push(`| \`${f.id}\` | ${cell(f.browser)} | ${cell(f.browser_version)} | ${f.released} | ${where} | ${f.items.length} | ${p.linked} (${pct(p.linked, f.items.length)}) | ${p.reviewed} | ${p.open} |`);
   }
   out.push('', '## Not covered', '', 'These cannot be read from the build environment, so they have **no census lineage**. Anything the catalog says about them is from memory and marked *recalled*.', '', '| Browsers | Why |', '|---|---|');
   for (const [b, why] of NOT_COVERED) out.push(`| ${b} | ${why} |`);

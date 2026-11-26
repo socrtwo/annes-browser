@@ -6,14 +6,15 @@ The census records which commands real browsers offered, read from their own sou
 
 ## Summary
 
-- **23 browser versions** from **16 browsers**, **2750 items** read.
-- **1238 items (45%)** are linked to a canonical command; **7** were read and deliberately not linked; **1505** are not yet linked (work queue: [census-unlinked.tsv](census-unlinked.tsv)).
+- **26 browser versions** from **18 browsers**, **2808 items** read.
+- **1266 items (45%)** are linked to a canonical command; **22** were read and deliberately not linked; **1520** are not yet linked (work queue: [census-unlinked.tsv](census-unlinked.tsv)).
 - **294 canonical commands**: 277 have lineage read from source, 5 have only lineage written from memory (marked *recalled*), 12 have none yet.
 
 ## What a census entry proves, and what it does not
 
 - **Proves:** a command with that identifier (and, where the source has one, that label or description) existed in that file at that commit. `npm run census:verify` re-fetches every file and checks its hash and that each cited line still contains the recorded text.
 - **Does not prove:** that two items in different browsers behave the same. That is a judgement made when linking, recorded in `catalog/census/names/` and `catalog/census/overrides.yaml`, and checked against each source's own description where it has one (Lynx, w3m, ELinks, Vimium, qutebrowser). Wrong links were caught that way (for example the w3m command `UNDO`, which undoes a cursor movement); see the `why` fields in the overrides file.
+- **Manuals** (sources marked "manual (OCR)") are scanned books about a browser, held by the Internet Archive. Only fixed phrasings such as "From the File menu, choose Open Location" are read, so they give a sample of the menus, not a full listing; OCR can misspell; and a book may describe other programs too. Every manual item was read in context before linking, and look-alikes are listed below with the reason. They are shown in the app as "manual", distinct from source code.
 - **Release years** are not read from the source. They are common knowledge, entered by hand in `catalog/census/sources.yaml`. Check before citing.
 - Menu items inside compile-time conditions (`#ifdef VMS`, `HAVE_DTM`) are included: they were commands on some builds. Rows compiled out by `#ifdef NOT_USED` are excluded.
 - Items such as Chromium's internal `IDC_*` ids are real command ids but not all are user-facing; the unlinked queue contains many of these.
@@ -45,6 +46,9 @@ The census records which commands real browsers offered, read from their own sou
 | `otter-current` | Otter Browser | development snapshot | 2026 | [OtterBrowser/otter-browser@0d71a94773](https://github.com/OtterBrowser/otter-browser/tree/0d71a94773cb071b3c203ff40043e1d93efddc1b) | 185 | 137 (74%) | 0 | 48 |
 | `vimium-current` | Vimium | development snapshot | 2026 | [philc/vimium@4046615ae4](https://github.com/philc/vimium/tree/4046615ae4128d485fce3335fc1032e6f87c630a) | 74 | 69 (93%) | 0 | 5 |
 | `qutebrowser-current` | qutebrowser | development snapshot | 2026 | [qutebrowser/qutebrowser@a2a9c9dd88](https://github.com/qutebrowser/qutebrowser/tree/a2a9c9dd88e659107c70f2fa9a9968ea4a9e643c) | 172 | 64 (37%) | 1 | 107 |
+| `netscape-1.1-manual` | Netscape Navigator | 1.1 | 1995 | manual (OCR): [archive.org/mac_Netscape_gator_v_1.1_1995](https://archive.org/details/mac_Netscape_gator_v_1.1_1995) | 30 | 19 (63%) | 8 | 3 |
+| `netscape-3.0-manual` | Netscape Navigator | 3.0 | 1996 | manual (OCR): [archive.org/mac_Netscape_gator_3.0_Book_Macintosh_Edition_1996](https://archive.org/details/mac_Netscape_gator_3.0_Book_Macintosh_Edition_1996) | 21 | 7 (33%) | 2 | 12 |
+| `netscape-4.5-manual` | Netscape Communicator | 4.5 | 1998 | manual (OCR): [archive.org/micro_IA41153318_0020](https://archive.org/details/micro_IA41153318_0020) | 7 | 2 (29%) | 5 | 0 |
 
 ## Not covered
 
@@ -52,8 +56,8 @@ These cannot be read from the build environment, so they have **no census lineag
 
 | Browsers | Why |
 |---|---|
-| Internet Explorer 1–11, Edge Legacy | Closed source. Documentation hosts (Microsoft Learn, Wayback Machine) are not reachable from the build environment. |
-| Netscape Navigator and Communicator 1–4 | Source released in 1998 but not in a mirror reachable here; Mozilla suite ancestry is covered through SeaMonkey 2.0. |
+| Internet Explorer 1–11, Edge Legacy | Closed source. A first title search of the Internet Archive found no freely readable manual with menu walkthroughs (most are in its lending library, which cannot be read this way). The Wayback Machine and Toastytech were not reachable. |
+| Netscape Navigator and Communicator 1–4 | Partly covered from three scanned manuals (1.1, 3.0, 4.5): about 30 commands, not full menus. Installers exist at the Internet Archive but its download servers are not reachable from here. |
 | Opera 3–12 (Presto), Opera 15+ | Closed source. Otter Browser, an Opera 12 style clone, is covered instead; it shows what that lineage offered, not what Opera shipped. |
 | Safari, Camino, OmniWeb, iCab | Closed source (WebKit is open, Safari's menus are not). |
 | Vivaldi, Arc, Sidekick, SigmaOS, Zen, Floorp | Closed source or no menu file in a reachable repository. Vivaldi and Arc features appear in the roadmap from memory and are not in the lineage. |
@@ -73,15 +77,30 @@ These cannot be read from the build environment, so they have **no census lineag
 | `w3m-current` | `UNDO` | w3m's UNDO cancels the last cursor movement; it is not text-editing undo |
 | `w3m-current` | `WRAP_TOGGLE` | wraps searches around the document; not line wrapping |
 | `qutebrowser-current` | `save` | saves qutebrowser's configuration and state, not the page |
+| `netscape-1.1-manual` | `File/Print` | appears in the chapter on helper programs; not certain it is Netscape's own menu |
+| `netscape-1.1-manual` | `File/Open` | the sentence is about SoundApp, a helper program, not Netscape |
+| `netscape-1.1-manual` | `View/Articles` | Adobe Acrobat Reader's menu, not Netscape's |
+| `netscape-1.1-manual` | `View/Zoom To` | Adobe Acrobat Reader's menu, not Netscape's |
+| `netscape-1.1-manual` | `View/Full Screen` | Adobe Acrobat Reader's menu, not Netscape's |
+| `netscape-1.1-manual` | `Edit/Copy` | Adobe Acrobat Reader's menu, not Netscape's |
+| `netscape-1.1-manual` | `Tools/Select Graphics` | Adobe Acrobat Reader's menu, not Netscape's |
+| `netscape-1.1-manual` | `Options/Prefer` | the word Preferences broken across two lines; Options/Preferences is recorded separately |
+| `netscape-3.0-manual` | `File/Save As` | saves a newsgroup article from the Netscape News window, not a web page |
+| `netscape-3.0-manual` | `File/Get Info` | the Macintosh Finder's menu, not Netscape's |
+| `netscape-4.5-manual` | `Edit/Displays the Find on Page` | OCR merged two table columns; not a command name |
+| `netscape-4.5-manual` | `Bookmarks/Selects the URL` | OCR merged two table columns; not a command name |
+| `netscape-4.5-manual` | `File/New Creates` | OCR merged two table columns; not a command name |
+| `netscape-4.5-manual` | `File/Save As` | context is the Bookmarks window, saving the bookmark file |
+| `netscape-4.5-manual` | `File/Import` | context is the Bookmarks window, importing a bookmark file |
 
 ## Work queue
 
-1505 items are not yet linked. They fall into these groups:
+1520 items are not yet linked. They fall into these groups:
 
 | Group | Items |
 |---|---|
 | Other Chromium and Brave ids | 569 |
-| Other | 442 |
+| Other | 457 |
 | Chromium page context menu entries | 212 |
 | qutebrowser caret, readline, config, debug and prompt commands | 69 |
 | Chromium developer, cast, spelling and assistant entries | 67 |

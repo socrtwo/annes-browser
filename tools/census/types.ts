@@ -10,7 +10,7 @@
 export type ExtractorId =
   | 'mosaic-menu' | 'lynx-keymap' | 'w3m-func' | 'elinks-actions' | 'chromium-ids' | 'dillo-menu' | 'xul-menu'
   | 'firefox-menu' | 'falkon-actions' | 'qt-actions' | 'otter-enum' | 'vimium-commands' | 'qutebrowser-commands'
-  | 'konqueror-rc' | 'brave-ids' | 'qt-ui';
+  | 'konqueror-rc' | 'brave-ids' | 'qt-ui' | 'manual-phrases';
 
 export interface SourceFileSpec {
   path: string;
@@ -27,8 +27,15 @@ export interface SourceSpec {
   /** Year this version was released. Not derived from the source: common knowledge, checked against release notes. */
   released: number;
   platform: string;
+  /**
+   * Where the source lives. `github` (default): a file in a repository at a commit.
+   * `archive.org`: the OCR text of a scanned manual held by the Internet Archive; `repo` is the
+   * item identifier. A manual is a third party's description of a browser, read by OCR: weaker
+   * evidence than the browser's own code, and labelled as such wherever it is shown.
+   */
+  host?: 'github' | 'archive.org';
   repo: string;
-  /** Branch or tag the commit was resolved from, for humans. */
+  /** Branch or tag the commit was resolved from, for humans. For a manual: its title and edition. */
   ref: string;
   /** Full commit SHA. Filled in by `census pin`. */
   commit?: string;
@@ -64,6 +71,7 @@ export interface CensusFile {
   released: number;
   platform: string;
   source: {
+    host?: 'github' | 'archive.org';
     repo: string;
     ref: string;
     commit: string;

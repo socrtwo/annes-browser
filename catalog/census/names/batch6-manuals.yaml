@@ -1,0 +1,9 @@
+# Names from scanned Netscape manuals (catalog/census/netscape-*-manual.yaml). Each item's source
+# line was read before linking; look-alikes from other programs the books describe are in overrides.yaml.
+nav.stop: [stoploading]
+view.delay-images: [autoloadimages]
+bookmark.show: [viewbookmarks]
+bookmark.toggle: [addtobookmarks]
+page.info: [documentinformation]
+tools.preferences: [generalpreferences]
+app.new-window: [newwebbrowser]

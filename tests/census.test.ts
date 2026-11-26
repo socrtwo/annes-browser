@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { cleanLabel, EXTRACTORS, extract } from '../tools/census/extractors.ts';
-import { getSource, rawUrl, sha256 } from '../tools/census/fetch.ts';
+import { getArchiveText, getSource, rawUrl, sha256 } from '../tools/census/fetch.ts';
 import { lineageFor, matchCensus } from '../tools/census/merge.ts';
 import { itemNames, squash } from '../tools/census/names.ts';
 import { loadNames, loadOverrides } from '../tools/census/merge.ts';
@@ -121,6 +121,21 @@ describe('extractors read the formats they were written for', () => {
     expect(run('konqueror-rc', '<MenuBar>\n <Menu name="file"><text>&amp;File</text>\n  <Action name="newtab"/>\n </Menu>\n</MenuBar>\n<ToolBar>\n <Action name="go_back"/>\n</ToolBar>')).toMatchObject([{ key: 'newtab', menu: 'File' }]);
   });
 
+  it('manuals: reads only fixed phrasings, across a line break, and ignores other menus', () => {
+    const text = [
+      'To go somewhere new: From the File menu, choose Open',
+      'Location, type the URL, and press Return.',
+      'You can also select Add Bookmark from the Bookmarks menu, or choose Reload from the View menu to',
+      'refresh. Open the Go menu and choose View History. From the Apple menu, choose Chooser.',
+      'The File menu is useful. Choose wisely from the many options. From the Options menu, choose Prefer-',
+    ].join('\n');
+    const items = run('manual-phrases', text);
+    expect(items.map((i) => [i.key, i.line])).toEqual([
+      ['File/Open Location', 1], ['Bookmarks/Add Bookmark', 3], ['View/Reload', 3], ['Go/View History', 4], ['Options/Prefer', 5],
+    ]);
+    expect(items[0]).toMatchObject({ label: 'Open Location', menu: 'File' });
+  });
+
   it('every extractor id is implemented', () => {
     for (const s of loadSources()) expect(EXTRACTORS[s.extractor], s.id).toBeTypeOf('function');
   });
@@ -235,6 +250,28 @@ describe('fetching and verifying', () => {
   });
 });
 
+describe('scanned manual text', () => {
+  it('takes the text block out of the archive page and decodes entities', async () => {
+    const page = '<html><body><pre>From the File menu, choose Save As &amp; go.\nIt&#8217;s &lt;here&gt;</pre></body></html>';
+    const text = await getArchiveText('test_item_one', 'x_djvu.txt', async () => ({ status: 200, text: page }));
+    expect(text).toBe('From the File menu, choose Save As & go.\nIt\u2019s <here>');
+  });
+
+  it('refuses odd names, restricted items and errors', async () => {
+    await expect(getArchiveText('../etc', 'x_djvu.txt', async () => ({ status: 200, text: '' }))).rejects.toThrow(/not an archive text file/);
+    await expect(getArchiveText('item', 'x.exe', async () => ({ status: 200, text: '' }))).rejects.toThrow(/not an archive text file/);
+    await expect(getArchiveText('test_item_two', 'x_djvu.txt', async () => ({ status: 200, text: '<html>borrow this book</html>' }))).rejects.toThrow(/no text block/);
+    await expect(getArchiveText('test_item_three', 'x_djvu.txt', async () => ({ status: 404, text: '' }))).rejects.toThrow(/HTTP 404/);
+  });
+
+  it('marks lineage from a manual as such, with an archive reference', () => {
+    const file = fake([{ key: 'File/Open Location', label: 'Open Location', menu: 'File', line: 2078 }]);
+    file.source = { ...file.source, host: 'archive.org', repo: 'some_item', commit: '', files: [{ path: 'book_djvu.txt', sha256: 'x', lines: 1, role: 'primary' }] };
+    const r = matchCensus([file], { 'tab.new': ['openlocation'] }, [], new Set(['tab.new']));
+    expect(lineageFor('tab.new', r.matches)[0]).toMatchObject({ source: 'manual', menu: 'File > Open Location', ref: 'archive.org/some_item/book_djvu.txt#L2078' });
+  });
+});
+
 describe('the committed census data', () => {
   const catalog = loadCatalog();
   const ids = new Set(catalog.commands.map((c) => c.id));
@@ -243,9 +280,13 @@ describe('the committed census data', () => {
   it('has a census file for every source, pinned to a full commit', () => {
     const sources = loadSources();
     expect(files.map((f) => f.id)).toEqual(sources.map((s) => s.id));
-    for (const s of sources) expect(s.commit, s.id).toMatch(/^[0-9a-f]{40}$/);
+    for (const s of sources) {
+      // A scanned manual has no commit; its pin is the text hash recorded in its census file.
+      if (s.host === 'archive.org') expect(s.commit, s.id).toBeUndefined();
+      else expect(s.commit, s.id).toMatch(/^[0-9a-f]{40}$/);
+    }
     for (const f of files) {
-      expect(f.source.commit, f.id).toBe(sources.find((s) => s.id === f.id)!.commit);
+      expect(f.source.commit, f.id).toBe(sources.find((s) => s.id === f.id)!.commit ?? '');
       expect(f.items.length, f.id).toBeGreaterThan(5);
       for (const file of f.source.files) expect(file.sha256, `${f.id} ${file.path}`).toMatch(/^[0-9a-f]{64}$/);
     }
@@ -272,7 +313,7 @@ describe('the committed census data', () => {
 
   it('gives every census-linked command lineage whose ref points at a real census item', () => {
     const lines = new Map<string, Set<number>>();
-    for (const f of files) lines.set(`${f.source.repo}@${f.source.commit.slice(0, 12)}`, new Set(f.items.map((i) => i.line)));
+    for (const f of files) lines.set(f.source.host === 'archive.org' ? `archive.org/${f.source.repo}/${f.source.files[0]!.path}` : `${f.source.repo}@${f.source.commit.slice(0, 12)}`, new Set(f.items.map((i) => i.line)));
     let checked = 0;
     for (const c of catalog.commands) {
       const names = loadNames()[c.id];
@@ -282,7 +323,7 @@ describe('the committed census data', () => {
     const r = matchCensus(files, loadNames(), loadOverrides(), ids);
     for (const m of r.matches.slice(0, 400)) {
       const [lin] = lineageFor(m.command, [m]);
-      const [, repo, line] = /^(.+?):.*#L(\d+)$/.exec(lin!.ref!)!;
+      const [, repo, line] = (/^(archive\.org\/.+)#L(\d+)$/.exec(lin!.ref!) ?? /^(.+?):.*#L(\d+)$/.exec(lin!.ref!))!;
       expect(lines.get(repo!)?.has(Number(line)), lin!.ref).toBe(true);
       checked++;
     }
