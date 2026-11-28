@@ -4084,15 +4084,12 @@ safari-27.2-macos	File/Delete Tab Group	Delete Tab Group	File	35
 safari-27.2-macos	File/Export Browsing Data to File…	Export Browsing Data to File…	File	41
 safari-27.2-macos	Edit/Copy Search Terms	Copy Search Terms	Edit	47
 safari-27.2-macos	Edit > Distraction Control/Report Issues...	Report Issues...	Edit > Distraction Control	55
-safari-27.2-macos	Edit > Find/Jump to Selection	Jump to Selection	Edit > Find	62
-safari-27.2-macos	Edit > Spelling and Grammar/Check Grammar With Spelling	Check Grammar With Spelling	Edit > Spelling and Grammar	66
 safari-27.2-macos	Edit > Spelling and Grammar/Correct Spelling Automatically	Correct Spelling Automatically	Edit > Spelling and Grammar	67
 safari-27.2-macos	Edit > Substitutions/Show Substitutions	Show Substitutions	Edit > Substitutions	68
 safari-27.2-macos	Edit > Substitutions/Smart Quotes	Smart Quotes	Edit > Substitutions	70
 safari-27.2-macos	Edit > Substitutions/Smart Dashes	Smart Dashes	Edit > Substitutions	71
 safari-27.2-macos	Edit > Substitutions/Smart Links	Smart Links	Edit > Substitutions	72
 safari-27.2-macos	Edit > Substitutions/Text Replacement	Text Replacement	Edit > Substitutions	73
-safari-27.2-macos	View/Always Show Toolbar in Full Screen	Always Show Toolbar in Full Screen	View	84
 safari-27.2-macos	View/Show Shared with You	Show Shared with You	View	92
 safari-27.2-macos	View > Translation/Report Translation Issue	Report Translation Issue	View > Translation	102
 safari-27.2-macos	History/Return to Search Results	Return to Search Results	History	150
@@ -4115,3 +4112,5 @@ safari-27.2-macos	Window/Mute Other Tabs	Mute Other Tabs	Window	207
 safari-27.2-macos	Window/Bring All to Front	Bring All to Front	Window	208
 safari-27.2-macos	Window/Arrange in Front	Arrange in Front	Window	209
 safari-27.2-macos	Help/Acknowledgments	Acknowledgments	Help	211
+edge-158-macos	View/Show Search Shortcuts	Show Search Shortcuts	View	62
+edge-158-macos	View > Developer/Open Inspect Page	Open Inspect Page	View > Developer	76

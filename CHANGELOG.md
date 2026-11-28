@@ -5,6 +5,8 @@ All notable changes to this project are documented here. Format: [Keep a Changel
 ## [Unreleased]
 
 ### Added
+- 2026-11-28: Era layouts generated from real menus (Phase 4). `tools/era-layout.ts` turns a dumped or transcribed menu bar into a layout, keeping the browser's order, submenus, separators and wording, and leaving out entries with no command. Nine layouts: Mosaic Netscape 0.91 (1994), Navigator 3 (1996), Communicator 4.7 (1999), Internet Explorer 5 (1999), 8 (2009) and 11 (2013), Vivaldi 6.9 (2024), Safari 27 and Edge (2026). Layout items can now carry a historic label (`{ command, label }`).
+- 2026-11-28: Microsoft Edge 158's macOS menu bar read on a GitHub macOS runner (99 items, 97 linked); macOS rule table in `tools/census/macos-rules.py`.
 - 2026-11-26: Safari's menu bar. Safari 27.2 read on GitHub's macOS runners by `tools/menu-dump/macos-menus.js` (workflow `safari-menus.yml`): 202 items, 166 linked. 10 new commands (338 in all), among them Reading List, Share, Export as PDF, Tab Groups, Hide Distracting Items, AutoFill and Privacy Report.
 - 2026-11-26: Census from the browsers' own programs.
   - Installers from the Internet Archive are unpacked and their menus read without running anything: Mosaic Netscape 0.91, Navigator 2.02 and 3.0, Communicator 4.05 and 4.7, Internet Explorer 4, 5, 7, 8 and 11 (Windows menu resources), Opera 8.01 and 12.14 (menu file), Vivaldi 3.4 and 6.9 (menu files, labels from its command table).

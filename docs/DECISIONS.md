@@ -75,6 +75,8 @@ D2 and D4 were adopted by building on them, following the roadmap's recommendati
 | C17 | Encrypted or access-controlled material is not opened (the password-protected IE collection), and uploads presented as cracks are not used | The project cites only what it may read | n/a |
 | C18 | Dumps from a contributor's machine (`host: machine`) write items from history, bookmark and window menus commented out for review | Those menus list the contributor's own pages; nothing personal should reach the repository by default | Low |
 | C19 | Generic labels (Close, Open, Refresh, Properties) in dumped menus are linked per item by a rule that names the source and menu, never by a global name | The same word is a different command in different windows (IE's Refresh reloads; Netscape 0.91's redraws) | Low |
+| C20 | Era layouts are generated from census sources, never written from memory; entries without a command are dropped rather than invented | A layout claims to be how a browser looked; that claim needs the same evidence as lineage | Low |
+| C21 | Internet Explorer 7+ menu bars are assembled from the per-menu resources (#333–#338) in the order of the skeleton resource #267 | IE fills its menu bar at run time; the skeleton gives the order, the resources the contents. An inference from the program's structure, stated in each layout's description | Low |
 | C11 | Unbuilt commands are marked "planned" in the palette and rank below built ones | 294 commands exist and 70 have handlers; hiding the rest would hide the project's purpose, ranking them equally would bury working commands | Low |
 
 ## Deviations from the Phase 0 documents

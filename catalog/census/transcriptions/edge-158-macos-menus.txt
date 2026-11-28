@@ -1,0 +1,107 @@
+# Menus read from Microsoft Edge 158.0.4370.33 on macOS 26.7.2 (Build 25G332) by tools/menu-dump/macos-menus.js, through System Events.
+# read: 2026-11-28 on a GitHub Actions macOS runner (macos-latest), Edge installed with Homebrew (cask microsoft-edge), first start, empty profile.
+# run: https://github.com/socrtwo/annes-browser/actions/runs/46093590376 (job "dump (Microsoft Edge ...)"); sha256 of the uploaded artifact zip: a3abc1f36495344fbbf1dc55096b12b97c510631843da2999c099a3e1135594a
+# Reviewed by hand: lines the script had commented out ("#? ") were all commands and are kept; removed were the system's Services and Share
+# entries (AirDrop, Messages and the like come from macOS), the profile name, the welcome tab's title, the empty Recently Closed/Visited
+# submenus and repeated alternates. "Warn Before Quitting ($1)" is written without Edge's placeholder; the raw Backspace character in one
+# shortcut is written "Backspace". Shortcuts printed with Fn on the Window menu are macOS's own.
+# Each line: menu path | label | shortcut.
+Edge | About Microsoft Edge
+Edge | Microsoft Edge Extensions
+Edge | Settings… | Cmd+,
+Edge | Set Edge As Your Default Browser
+Edge | Delete Browsing Data… | Shift+Cmd+Backspace
+Edge | Import Browser Data…
+Edge | Hide Microsoft Edge | Cmd+H
+Edge | Warn Before Quitting
+Edge | Quit Microsoft Edge | Cmd+Q
+File | New Window | Cmd+N
+File | New InPrivate Window | Shift+Cmd+N
+File | New Tab | Cmd+T
+File | New Isolated Window
+File | Reopen Closed Tab | Shift+Cmd+T
+File | Open File… | Cmd+O
+File | Open Location… | Cmd+L
+File | Close All | Opt+Shift+Cmd+W
+File | Close Window | Cmd+W
+File | Save Page As… | Cmd+S
+File > Share | Email Link | Shift+Cmd+I
+File | Print… | Cmd+P
+File | Print Using System Dialog… | Opt+Cmd+P
+Edit | Undo | Cmd+Z
+Edit | Redo | Shift+Cmd+Z
+Edit | Cut | Cmd+X
+Edit | Copy | Cmd+C
+Edit | Paste | Cmd+V
+Edit | Paste and Match Style | Shift+Cmd+V
+Edit | Delete
+Edit | Select All | Cmd+A
+Edit > Find on Page | Search the Web | Opt+Cmd+F
+Edit > Find on Page | Find… | Cmd+F
+Edit > Find on Page | Find Next | Cmd+G
+Edit > Find on Page | Find Previous | Shift+Cmd+G
+Edit > Find on Page | Use Selection to Find | Cmd+E
+Edit > Find on Page | Jump to Selection | Cmd+J
+Edit > Spelling and Grammar | Show Spelling and Grammar | Cmd+:
+Edit > Spelling and Grammar | Check Document Now | Cmd+;
+Edit > Spelling and Grammar | Check Spelling While Typing
+Edit > Spelling and Grammar | Check Grammar and Spelling
+Edit > Transformations | Make Uppercase
+Edit > Transformations | Make Lowercase
+Edit > Transformations | Capitalize
+Edit > Speech | Start Speaking
+Edit > Speech | Stop Speaking
+Edit > AutoFill | Contact…
+Edit > AutoFill | Passwords…
+Edit > AutoFill | Credit Card…
+View > Show Favorites Bar | Always
+View > Show Favorites Bar | Never
+View > Show Favorites Bar | Only on New Tabs
+View | Always Show Toolbar in Full Screen | Shift+Cmd+F
+View | Always Show Full URLs
+View | Show Search Shortcuts
+View | Stop | Cmd+.
+View | Refresh This Page | Cmd+R
+View | Enter Full Screen | Ctrl+Cmd+F
+View | Fit to Page
+View | Actual Size | Cmd+0
+View | Zoom In | Cmd++
+View | Zoom Out | Cmd+-
+View | Rotate
+View | Cast Media to Device…
+View > Developer | View Source | Opt+Cmd+U
+View > Developer | Developer Tools… | Opt+Cmd+I
+View > Developer | Inspect Elements | Opt+Cmd+C
+View > Developer | JavaScript Console | Opt+Cmd+J
+View > Developer | Open Inspect Page
+View > Developer | Allow JavaScript from Apple Events
+History | Home | Shift+Cmd+H
+History | Back | Cmd+[
+History | Forward | Cmd+]
+History | Show Full History | Cmd+Y
+Favorites | Manage Favorites | Opt+Cmd+B
+Favorites | Add This Page to Favorites… | Cmd+D
+Favorites | Add Open Pages to Favorites… | Shift+Cmd+D
+Profiles | Manage Profile Settings
+Tab | New Tab to the Right
+Tab | Select Next Tab | Ctrl+Tab
+Tab | Select Previous Tab | Ctrl+Shift+Tab
+Tab | Duplicate
+Tab | Switch to Last Active Tab | Ctrl+`
+Tab | Mute Tab | Ctrl+M
+Tab | Mute Selected Site
+Tab | Pin Tab
+Tab | Group Tab
+Tab | Close Other Tabs
+Tab | Close Tabs to the Right
+Tab | Move Tab to New Window
+Tab | Add Tab to New Split View | Opt+Cmd+N
+Tab | Search Tabs… | Shift+Cmd+A
+Window | Minimize | Cmd+M
+Window | Zoom
+Window | Name Window…
+Window | Downloads | Shift+Cmd+J
+Window | Task Manager
+Help | Microsoft Edge Help | Cmd+?
+Help | Update Microsoft Edge
+Help | Send Feedback…

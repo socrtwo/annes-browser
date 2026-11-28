@@ -1204,3 +1204,67 @@
 - { source: safari-27.2-macos, key: "Window > Move & Resize/Bottom & Top", command: app.tile-windows }
 - { source: safari-27.2-macos, key: "Window > Move & Resize/Bottom & Quarters", command: app.tile-windows }
 - { source: safari-27.2-macos, key: "Window > Move & Resize/Return to Previous Size", command: app.tile-windows }
+
+# ---- Edge 158's menu bar, read on a macOS runner (tools/census/macos-rules.py) ----
+- { source: safari-27.2-macos, key: "Edit > Find/Jump to Selection", command: none, why: "scrolls the selected text into view; a macOS text-system command" }
+- { source: safari-27.2-macos, key: "Edit > Spelling and Grammar/Check Grammar With Spelling", command: edit.spell-check }
+- { source: safari-27.2-macos, key: "View/Always Show Toolbar in Full Screen", command: none, why: "a full-screen display setting" }
+- { source: edge-158-macos, key: "Edge/About Microsoft Edge", command: help.about }
+- { source: edge-158-macos, key: "Edge/Microsoft Edge Extensions", command: tools.manage-extensions }
+- { source: edge-158-macos, key: "Edge/Settings…", command: tools.preferences }
+- { source: edge-158-macos, key: "Edge/Set Edge As Your Default Browser", command: tools.set-default-browser }
+- { source: edge-158-macos, key: "Edge/Delete Browsing Data…", command: privacy.clear-data }
+- { source: edge-158-macos, key: "Edge/Import Browser Data…", command: tools.import-settings }
+- { source: edge-158-macos, key: "Edge/Hide Microsoft Edge", command: app.hide }
+- { source: edge-158-macos, key: "Edge/Warn Before Quitting", command: none, why: "a setting for the quit confirmation, not a command" }
+- { source: edge-158-macos, key: "Edge/Quit Microsoft Edge", command: app.quit }
+- { source: edge-158-macos, key: "File/New InPrivate Window", command: app.new-private-window }
+- { source: edge-158-macos, key: "File/New Isolated Window", command: none, why: "opens a window kept apart from Edge's other windows; no matching command yet" }
+- { source: edge-158-macos, key: "File/Close All", command: app.close-window }
+- { source: edge-158-macos, key: "File > Share/Email Link", command: file.send-link }
+- { source: edge-158-macos, key: "File/Print Using System Dialog…", command: file.print-system }
+- { source: edge-158-macos, key: "Edit > Find on Page/Search the Web", command: input.focus-search }
+- { source: edge-158-macos, key: "Edit > Find on Page/Use Selection to Find", command: edit.find-selection }
+- { source: edge-158-macos, key: "Edit > Find on Page/Jump to Selection", command: none, why: "scrolls the selected text into view; a macOS text-system command" }
+- { source: edge-158-macos, key: "Edit > Spelling and Grammar/Show Spelling and Grammar", command: edit.spell-check }
+- { source: edge-158-macos, key: "Edit > Spelling and Grammar/Check Document Now", command: edit.check-spelling-now }
+- { source: edge-158-macos, key: "Edit > Spelling and Grammar/Check Grammar and Spelling", command: edit.spell-check }
+- { source: edge-158-macos, key: "Edit > Transformations/Make Uppercase", command: edit.transform-case }
+- { source: edge-158-macos, key: "Edit > Transformations/Make Lowercase", command: edit.transform-case }
+- { source: edge-158-macos, key: "Edit > Transformations/Capitalize", command: edit.transform-case }
+- { source: edge-158-macos, key: "Edit > AutoFill/Contact…", command: edit.autofill }
+- { source: edge-158-macos, key: "Edit > AutoFill/Credit Card…", command: edit.autofill }
+- { source: edge-158-macos, key: "View > Show Favorites Bar/Always", command: view.toggle-bookmarks-bar }
+- { source: edge-158-macos, key: "View > Show Favorites Bar/Never", command: view.toggle-bookmarks-bar }
+- { source: edge-158-macos, key: "View > Show Favorites Bar/Only on New Tabs", command: view.toggle-bookmarks-bar }
+- { source: edge-158-macos, key: "View/Always Show Toolbar in Full Screen", command: none, why: "a full-screen display setting" }
+- { source: edge-158-macos, key: "View/Always Show Full URLs", command: view.show-full-urls }
+- { source: edge-158-macos, key: "View/Refresh This Page", command: nav.reload }
+- { source: edge-158-macos, key: "View/Fit to Page", command: none, why: "Edge's PDF viewer: fits the document to the window" }
+- { source: edge-158-macos, key: "View/Rotate", command: none, why: "Edge's PDF viewer: rotates the document" }
+- { source: edge-158-macos, key: "View/Cast Media to Device…", command: tab.send-to-device }
+- { source: edge-158-macos, key: "View > Developer/Developer Tools…", command: tools.dev-tools }
+- { source: edge-158-macos, key: "View > Developer/Inspect Elements", command: tools.inspect-element }
+- { source: edge-158-macos, key: "View > Developer/JavaScript Console", command: tools.dev-tools-console }
+- { source: edge-158-macos, key: "View > Developer/Allow JavaScript from Apple Events", command: none, why: "a macOS automation permission for scripts, not a page command" }
+- { source: edge-158-macos, key: "History/Show Full History", command: history.show }
+- { source: edge-158-macos, key: "Favorites/Manage Favorites", command: bookmark.show }
+- { source: edge-158-macos, key: "Favorites/Add This Page to Favorites…", command: bookmark.toggle }
+- { source: edge-158-macos, key: "Favorites/Add Open Pages to Favorites…", command: bookmark.add-all-tabs }
+- { source: edge-158-macos, key: "Profiles/Manage Profile Settings", command: app.new-profile }
+- { source: edge-158-macos, key: "Tab/New Tab to the Right", command: tab.new-right }
+- { source: edge-158-macos, key: "Tab/Duplicate", command: tab.duplicate }
+- { source: edge-158-macos, key: "Tab/Switch to Last Active Tab", command: tab.visit-previous }
+- { source: edge-158-macos, key: "Tab/Mute Tab", command: tab.mute }
+- { source: edge-158-macos, key: "Tab/Mute Selected Site", command: tab.mute }
+- { source: edge-158-macos, key: "Tab/Pin Tab", command: tab.pin }
+- { source: edge-158-macos, key: "Tab/Group Tab", command: tab.new-group }
+- { source: edge-158-macos, key: "Tab/Close Tabs to the Right", command: tab.close-to-end }
+- { source: edge-158-macos, key: "Tab/Add Tab to New Split View", command: tab.split-vertical }
+- { source: edge-158-macos, key: "Window/Minimize", command: app.minimize-window }
+- { source: edge-158-macos, key: "Window/Name Window…", command: none, why: "gives the window a title of its own; no matching command yet" }
+- { source: edge-158-macos, key: "Window/Downloads", command: tools.downloads }
+- { source: edge-158-macos, key: "Help/Microsoft Edge Help", command: help.contents }
+- { source: edge-158-macos, key: "Help/Update Microsoft Edge", command: help.check-for-updates }
+- { source: edge-158-macos, key: "Help/Send Feedback…", command: help.feedback }
+- { source: edge-158-macos, key: "Window/Zoom", command: app.maximize-window }

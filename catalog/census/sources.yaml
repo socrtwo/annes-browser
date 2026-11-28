@@ -639,3 +639,15 @@
   files:
     - path: safari-27.2-macos-menus.txt
       role: primary
+- id: edge-158-macos
+  browser: Microsoft Edge
+  version: "158"
+  released: 2026
+  platform: macOS
+  host: machine
+  repo: "Microsoft Edge 158.0.4370.33, macOS 26.7.2, GitHub Actions runner macos-latest"
+  ref: "menus read with tools/menu-dump/macos-menus.js, run 46093590376"
+  extractor: transcription
+  files:
+    - path: edge-158-macos-menus.txt
+      role: primary
