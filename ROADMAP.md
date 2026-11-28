@@ -77,6 +77,8 @@ The commands every current browser has: navigation, tabs and windows, reopen clo
 
 ## Phase 4: Era layouts and personalities *(~0.4M)*
 
+> Status (2026-11-28): started. Layouts are generated from the census (`tools/era-layout.ts`): Mosaic Netscape 0.91, Navigator 3, Communicator 4.7, Internet Explorer 5, 8 and 11, Vivaldi 6.9, Safari, Edge and Opera, each in the browser's own order and wording. Toolbars and throbbers not started.
+
 - Menu layouts as data: *1994 Minimal* (File/Edit/View/Go/Bookmarks/Options/Directory/Help), *1999 Suite* (Communicator-style with Tasks and Window menus), *2001 Classic* (IE6-style Favorites/Tools), *2005 Power* (Opera-style Tools/Widgets/Panels), *2008 Tabbed*, *2012 Hamburger*, and *Everything* (all commands, grouped).
 - Toolbar presets with generic, original icons. No logos or trade dress.
 - Optional status-bar and throbber behaviors (progress text, security indicator).

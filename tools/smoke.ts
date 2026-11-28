@@ -423,6 +423,28 @@ async function phase3Checks(): Promise<void> {
   check('choosing a search engine saves it', readProfile('settings.json')?.searchTemplate === 'https://en.wikipedia.org/w/index.php?search=%s');
   const bad = await run('tools.search-engine', { engine: 'evil' });
   check('an unknown search engine is refused and nothing is saved', !bad.ok && readProfile('settings.json')?.searchTemplate.startsWith('https://en.wikipedia.org/'));
+  // An era layout generated from a real browser's menus: its own wording and order, built into the native menu.
+  // Electron cannot read a window's menu back, so record the last one set.
+  await app.evaluate(({ BaseWindow, Menu }) => {
+    const g = globalThis as unknown as Record<string, Electron.Menu | null>;
+    const proto = BaseWindow.prototype as unknown as { setMenu: (m: Electron.Menu | null) => void };
+    const set = proto.setMenu;
+    proto.setMenu = function (this: Electron.BaseWindow, m: Electron.Menu | null) { g['__lastMenu'] = m; set.call(this, m); };
+    const setApp = Menu.setApplicationMenu;
+    Menu.setApplicationMenu = (m: Electron.Menu | null) => { g['__lastMenu'] = m; setApp(m); };
+  });
+  const menuBar = async () => app.evaluate(() => {
+    const menu = (globalThis as unknown as Record<string, Electron.Menu | null>)['__lastMenu'];
+    return (menu?.items ?? []).map((i: Electron.MenuItem) => ({ label: i.label, items: (i.submenu?.items ?? []).filter((x: Electron.MenuItem) => x.type !== 'separator').map((x: Electron.MenuItem) => x.label) }));
+  });
+  await run('view.menu-layout', { layout: 'modern' });
+  await run('view.menu-layout', { layout: 'netscape-1994' });
+  const nsBar = await until(async () => { const m = await menuBar(); return m.some((x) => x.label === 'Directory') ? m : undefined; });
+  check('the Mosaic Netscape 0.91 layout shows that browser\'s menus in its order',
+    // Anne's Browser adds its own Layout menu last, so any layout can be left.
+    JSON.stringify(nsBar?.map((m) => m.label)) === JSON.stringify(['File', 'Edit', 'View', 'Go', 'Bookmarks', 'Options', 'Directory', 'Help', 'Layout']), JSON.stringify(nsBar?.map((m) => m.label)));
+  const nsFile = nsBar?.find((m) => m.label === 'File')?.items ?? [];
+  check('and in its own wording', nsFile.includes('Open Location...') && nsFile.includes('Mail Document...') && nsFile.includes('Exit'), JSON.stringify(nsFile));
   await run('view.menu-layout', { layout: 'modern' });
 
   // ---- find in page ----

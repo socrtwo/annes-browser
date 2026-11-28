@@ -85,6 +85,15 @@ Menus from programs (`host: dump`):
 
 Not possible here: 16-bit programs (Netscape 1.x, Opera 2–3, IE 1–3 builds at the Archive), InstallShield 5+ "stream" installers (Opera 9–10), and the password-encrypted IE collection (deliberately not opened).
 
+Era layouts (Phase 4):
+
+- `node tools/era-layout.ts <source-id> <layout-id> "<label>" "<description>" [<menu resource>[,<menu resource>...]]` writes `catalog/layouts/<layout-id>.yaml` from a dumped or transcribed source. Regenerate after linking more items: a newly linked item appears in the layout in its original place.
+- Menu resources: Netscape `menu #2`; IE 5 `browselc menu #267`; IE 7+ `menu #333,menu #334,menu #335,menu #336,menu #337,menu #338`; Vivaldi `VIVALDI_MAIN`. Transcriptions need none.
+- Communicator 4.x and Opera 8/12 make poor layouts: Communicator filled its Navigator menus at run time, and the Opera dumps do not follow `Submenu`/`Include` lines. `minimal-1994`, `suite-1999` and `modern` are hand-made composites, not any one browser.
+- Menu items in a layout may carry the historic label: `{ command: file.open-location, label: "Open Location..." }`.
+
+Menus on macOS: `.github/workflows/safari-menus.yml` installs a browser with Homebrew on a GitHub macOS runner and prints its menu bar (add a matrix line: app name, cask, bundle name). Review the dump as described in docs/MENU-DUMPS.md, then `python3 tools/census/macos-rules.py` proposes overrides.
+
 Things that need a decision, not just effort:
 
 - **Closed-source browsers.** Netscape 0.91–4.7, IE 4–11 (not 6, 9, 10), Opera 8 and 12 and Vivaldi 3.4 and 6.9 are now read from their programs. Safari's menu bar and current Opera and Edge need a machine (docs/MENU-DUMPS.md). Partly covered now: scanned Netscape manuals (archive.org), Wine's IE menu re-creation, WebKit's context-menu strings for Safari, and screenshot transcriptions (`host: local`, files in `catalog/census/transcriptions/`, one `<where> | <label>` per line, header with the Commons address and image sha256). Transcribe only what is legible; menu titles and toolbar captions go to overrides as `none`. Do not enter them from memory: that is what `recalled` is for, and it is not evidence.
