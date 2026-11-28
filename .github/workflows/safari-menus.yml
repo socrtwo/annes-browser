@@ -1,6 +1,6 @@
-# Reads Safari's menu bar on GitHub's macOS machines (a fresh machine: no history or bookmarks)
-# and prints it as a census transcription. See docs/MENU-DUMPS.md.
-name: Safari menus
+# Reads browsers' menu bars on GitHub's macOS machines (fresh machines: no history or bookmarks)
+# and prints each as a census transcription. See docs/MENU-DUMPS.md.
+name: macOS browser menus
 
 on:
   workflow_dispatch:
@@ -16,30 +16,39 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [macos-15, macos-latest]
-    runs-on: ${{ matrix.os }}
-    timeout-minutes: 15
+        include:
+          - { app: Safari, cask: '', bundle: Safari }
+          - { app: Opera, cask: opera, bundle: Opera }
+          - { app: Microsoft Edge, cask: microsoft-edge, bundle: Microsoft Edge }
+    runs-on: macos-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
+      - name: Install
+        if: matrix.cask != ''
+        run: |
+          brew install --cask ${{ matrix.cask }}
+          xattr -dr com.apple.quarantine "/Applications/${{ matrix.bundle }}.app" || true
       - name: Versions
         run: |
           sw_vers
-          defaults read /Applications/Safari.app/Contents/Info CFBundleShortVersionString
-          defaults read /Applications/Safari.app/Contents/Info CFBundleVersion
-      - name: Start Safari
+          defaults read "/Applications/${{ matrix.bundle }}.app/Contents/Info" CFBundleShortVersionString
+          defaults read "/Applications/${{ matrix.bundle }}.app/Contents/Info" CFBundleVersion || true
+          shasum -a 256 "/Applications/${{ matrix.bundle }}.app/Contents/Info.plist"
+      - name: Start
         run: |
-          open -a Safari
-          sleep 20
-          pgrep -x Safari
+          open -a "${{ matrix.bundle }}"
+          sleep 40
+          pgrep -fl "${{ matrix.bundle }}" | head -3
       - name: Read menus
         run: |
-          osascript -l JavaScript tools/menu-dump/macos-menus.js Safari > safari-menus.txt
-          wc -l safari-menus.txt
+          osascript -l JavaScript tools/menu-dump/macos-menus.js "${{ matrix.app }}" > menus.txt
+          wc -l menus.txt
           echo "=====BEGIN DUMP====="
-          cat safari-menus.txt
+          cat menus.txt
           echo "=====END DUMP====="
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: safari-menus-${{ matrix.os }}
-          path: safari-menus.txt
+          name: menus-${{ matrix.cask || 'safari' }}
+          path: menus.txt
