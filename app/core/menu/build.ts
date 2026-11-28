@@ -45,18 +45,19 @@ function buildItems(items: readonly LayoutItem[], src: MenuSources, ctx: Context
     items.flatMap((item): MenuNode[] => {
       if (typeof item !== 'string') {
         if ('separator' in item) return [{ type: 'separator' }];
-        return [{ type: 'submenu', label: item.label, items: buildItems(item.items, src, ctx) }];
+        if ('items' in item) return [{ type: 'submenu', label: item.label, items: buildItems(item.items, src, ctx) }];
       }
-      const record = src.command(item);
+      const id = typeof item === 'string' ? item : item.command;
+      const record = src.command(id);
       if (!record) return [];
-      const checked = src.isChecked(item, ctx);
-      const keys = src.keysFor(item);
+      const checked = src.isChecked(id, ctx);
+      const keys = src.keysFor(id);
       return [{
         type: 'command',
         id: record.id,
-        label: record.label,
+        label: typeof item === 'string' ? record.label : item.label,
         // Stubs stay clickable so the user can read why the feature is unavailable.
-        enabled: record.status === 'stub' || src.isEnabled(item, ctx),
+        enabled: record.status === 'stub' || src.isEnabled(id, ctx),
         stub: record.status === 'stub',
         ...(checked !== undefined && { checked }),
         ...(keys !== undefined && { keys }),
@@ -98,6 +99,6 @@ export function everythingLayout(commands: readonly CommandRecord[]): MenuLayout
 /** Every command id a layout mentions, for build-time validation. */
 export function layoutCommandIds(layout: MenuLayout): string[] {
   const walk = (items: readonly LayoutItem[]): string[] =>
-    items.flatMap((i) => (typeof i === 'string' ? [i] : 'items' in i ? walk(i.items) : []));
+    items.flatMap((i) => (typeof i === 'string' ? [i] : 'command' in i ? [i.command] : 'items' in i ? walk(i.items) : []));
   return layout.menus.flatMap((m) => walk(m.items));
 }

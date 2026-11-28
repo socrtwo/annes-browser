@@ -30,7 +30,7 @@ function shortcut(mi) {
   if (mods & 1) keys.push('Shift');
   if (mods & 16) keys.push('Fn');
   if (!(mods & 8)) keys.push('Cmd');
-  const named = { '\u001b': 'Esc', '\r': 'Return', '\t': 'Tab', ' ': 'Space', '\u007f': 'Delete' };
+  const named = { '\u001b': 'Esc', '\r': 'Return', '\t': 'Tab', ' ': 'Space', '\u007f': 'Delete', '\b': 'Backspace' };
   keys.push(named[ch] || ch.toUpperCase());
   return keys.join('+');
 }

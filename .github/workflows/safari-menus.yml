@@ -17,9 +17,7 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - { app: Safari, cask: '', bundle: Safari }
           - { app: Opera, cask: opera, bundle: Opera }
-          - { app: Microsoft Edge, cask: microsoft-edge, bundle: Microsoft Edge }
     runs-on: macos-latest
     timeout-minutes: 20
     steps:
@@ -37,7 +35,7 @@ jobs:
           shasum -a 256 "/Applications/${{ matrix.bundle }}.app/Contents/Info.plist"
       - name: Start
         run: |
-          open -a "${{ matrix.bundle }}"
+          open "/Applications/${{ matrix.bundle }}.app"
           sleep 40
           pgrep -fl "${{ matrix.bundle }}" | head -3
       - name: Read menus

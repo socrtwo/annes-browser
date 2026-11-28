@@ -76,6 +76,8 @@ export interface CommandRecord {
 /** A menu layout: an era-specific arrangement of commands. */
 export type LayoutItem =
   | string /* command id */
+  /** A command shown under another label: the wording a historic browser used for it. */
+  | { command: string; label: string }
   | { separator: true }
   | { label: string; items: LayoutItem[] };
 
