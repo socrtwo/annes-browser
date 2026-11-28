@@ -6,8 +6,8 @@ The census records which commands real browsers offered, read from their own sou
 
 ## Summary
 
-- **52 browser versions** from **28 browsers**, **7546 items** read.
-- **3281 items (43%)** are linked to a canonical command; **150** were read and deliberately not linked; **4115** are not yet linked (work queue: [census-unlinked.tsv](census-unlinked.tsv)).
+- **53 browser versions** from **28 browsers**, **7623 items** read.
+- **3353 items (44%)** are linked to a canonical command; **155** were read and deliberately not linked; **4115** are not yet linked (work queue: [census-unlinked.tsv](census-unlinked.tsv)).
 - **338 canonical commands**: 327 have lineage read from source, 4 have only lineage written from memory (marked *recalled*), 7 have none yet.
 
 ## What a census entry proves, and what it does not
@@ -78,6 +78,7 @@ The census records which commands real browsers offered, read from their own sou
 | `ie-11-win32` | Internet Explorer | 11 | 2013 | program's own menus: [archive.org/internet-explorer-11-setup-for-windows-7](https://archive.org/details/internet-explorer-11-setup-for-windows-7) | 317 | 114 (36%) | 4 | 199 |
 | `safari-27.2-macos` | Safari | 27.2 | 2026 | menus read on a contributor's computer: Safari 27.2 (21625.2.8.18.4), macOS 26.7.2, GitHub Actions runner macos-26-arm64 | 202 | 162 (80%) | 7 | 33 |
 | `edge-158-macos` | Microsoft Edge | 158 | 2026 | menus read on a contributor's computer: Microsoft Edge 158.0.4370.33, macOS 26.7.2, GitHub Actions runner macos-latest | 99 | 89 (90%) | 8 | 2 |
+| `opera-140-macos` | Opera | 140 | 2026 | menus read on a contributor's computer: Opera 140.0.6074.18, macOS 26.7.2, GitHub Actions runner macos-latest | 77 | 72 (94%) | 5 | 0 |
 
 ## Not covered
 
@@ -85,9 +86,9 @@ These cannot be read from the build environment, so they have **no census lineag
 
 | Browsers | Why |
 |---|---|
-| Internet Explorer 1–3, 6, 9–11, Edge Legacy | IE 4, 5, 7 and 8 are covered from menus read out of their own programs (Internet Archive downloads). IE 1–3 at the Archive are 16-bit or AOL builds the reader does not handle; IE 6 there is a web installer with nothing inside; the stand-alone IE collection is password-encrypted and was not opened. IE 9–11 not yet tried. |
+| Internet Explorer 1–3, 6, 9, 10; Edge Legacy | IE 4, 5, 7, 8 and 11 are covered from menus read out of their own programs, and current Edge from its macOS menu bar. IE 1–3 at the Archive are 16-bit or AOL builds the reader does not handle; IE 6 there is a web installer with nothing inside; the stand-alone IE collection is password-encrypted and was not opened. |
 | Netscape 1.x, 4.5, 4.8, 6–9 | Mosaic Netscape 0.91, Navigator 2.02 and 3.0 and Communicator 4.05 and 4.7 are covered from their own programs, plus three manuals and two screenshots. Netscape 6–9 are Mozilla-based (their menus are in Mozilla's code, covered by SeaMonkey). |
-| Opera 2–6, 9–11, 15+ | Opera 8.01 and 12.14 are covered from their menu files. Opera 2–3 at the Archive are 16-bit programs; the 9.x and 10.x installers use an InstallShield format not unpacked here. Opera 15+ is Chromium-based. Otter Browser, an Opera 12 style clone, is also covered. |
+| Opera 2–7, 9–11, and 15–139 | Opera 8.01 and 12.14 are covered from their menu files, and Opera 140 from its macOS menu bar (read on a GitHub macOS runner). Opera 2–3 at the Archive are 16-bit programs; the 9.x and 10.x installers use an InstallShield format not unpacked here. |
 | Safari before 27, Camino, OmniWeb, iCab | Closed source. Safari 27.2's menu bar was read on a macOS runner, and its page context menu comes from WebKit (2010 and current). Older Safari versions would need an older macOS machine. Safari's Develop menu was not enabled. |
 | Arc, Sidekick, SigmaOS, Zen, Floorp; Vivaldi before 3.4 | Closed source or no menu file in a reachable repository. Vivaldi 3.4 and 6.9 are covered from the menu files inside their official Linux builds (Arch Linux package archive at the Internet Archive). Arc features appear in the roadmap from public descriptions, not from a source. |
 | Firefox 1.0–100 (history) | The gecko-dev mirror has no release tags; only the current tree was read. SeaMonkey 2.0 covers 2009. |
@@ -249,6 +250,11 @@ These cannot be read from the build environment, so they have **no census lineag
 | `edge-158-macos` | `View/Rotate` | Edge's PDF viewer: rotates the document |
 | `edge-158-macos` | `View > Developer/Allow JavaScript from Apple Events` | a macOS automation permission for scripts, not a page command |
 | `edge-158-macos` | `Window/Name Window…` | gives the window a title of its own; no matching command yet |
+| `opera-140-macos` | `Opera/Log In to Opera Account…` | signs in to an Opera web account for sync; no account service exists here |
+| `opera-140-macos` | `Opera/Warn Before Quitting (Cmd+Q)` | a setting for the quit confirmation, not a command |
+| `opera-140-macos` | `View/Hide Toolbar in Full Screen Mode` | a full-screen display setting |
+| `opera-140-macos` | `View/Show Pinboards` | opens one of Opera's own web services |
+| `opera-140-macos` | `View/Show News` | opens one of Opera's own web services |
 
 ## Work queue
 

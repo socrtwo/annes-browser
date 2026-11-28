@@ -1268,3 +1268,44 @@
 - { source: edge-158-macos, key: "Help/Update Microsoft Edge", command: help.check-for-updates }
 - { source: edge-158-macos, key: "Help/Send Feedback…", command: help.feedback }
 - { source: edge-158-macos, key: "Window/Zoom", command: app.maximize-window }
+
+# ---- Opera 140's menu bar, read on a macOS runner (tools/census/macos-rules.py) ----
+- { source: opera-140-macos, key: "Opera/About Opera", command: help.about }
+- { source: opera-140-macos, key: "Opera/Settings…", command: tools.preferences }
+- { source: opera-140-macos, key: "Opera/Set Opera as Default Browser", command: tools.set-default-browser }
+- { source: opera-140-macos, key: "Opera/Update & Recovery…", command: help.check-for-updates }
+- { source: opera-140-macos, key: "Opera/Log In to Opera Account…", command: none, why: "signs in to an Opera web account for sync; no account service exists here" }
+- { source: opera-140-macos, key: "Opera/Get Wallpapers", command: legacy.directory-pages }
+- { source: opera-140-macos, key: "Opera/Get Extensions", command: tools.manage-extensions }
+- { source: opera-140-macos, key: "Opera/Hide Opera", command: app.hide }
+- { source: opera-140-macos, key: "Opera/Warn Before Quitting (Cmd+Q)", command: none, why: "a setting for the quit confirmation, not a command" }
+- { source: opera-140-macos, key: "Opera/Quit Opera", command: app.quit }
+- { source: opera-140-macos, key: "Opera/Quit and Keep Windows", command: app.quit }
+- { source: opera-140-macos, key: "File/New Tab In Tab Island", command: tab.new-right }
+- { source: opera-140-macos, key: "File/Close All", command: app.close-window }
+- { source: opera-140-macos, key: "File/Save Page As PDF…", command: file.export-pdf }
+- { source: opera-140-macos, key: "Edit/Snapshot", command: tools.take-screenshot }
+- { source: opera-140-macos, key: "Edit > Spelling and Grammar/Show Spelling and Grammar", command: edit.spell-check }
+- { source: opera-140-macos, key: "Edit > Spelling and Grammar/Check Document Now", command: edit.check-spelling-now }
+- { source: opera-140-macos, key: "Edit > Spelling and Grammar/Check Grammar With Spelling", command: edit.spell-check }
+- { source: opera-140-macos, key: "Edit > AutoFill/Contact…", command: edit.autofill }
+- { source: opera-140-macos, key: "Edit > AutoFill/Credit Card…", command: edit.autofill }
+- { source: opera-140-macos, key: "View/Show Bookmarks Bar", command: view.toggle-bookmarks-bar }
+- { source: opera-140-macos, key: "View/Hide Sidebar", command: view.toggle-sidebar }
+- { source: opera-140-macos, key: "View/Show Search Tabs", command: tab.search }
+- { source: opera-140-macos, key: "View/Hide Toolbar in Full Screen Mode", command: none, why: "a full-screen display setting" }
+- { source: opera-140-macos, key: "View/Show Speed Dial", command: nav.home }
+- { source: opera-140-macos, key: "View/Show Pinboards", command: none, why: "opens one of Opera's own web services" }
+- { source: opera-140-macos, key: "View/Show News", command: none, why: "opens one of Opera's own web services" }
+- { source: opera-140-macos, key: "View/Show Extensions", command: tools.manage-extensions }
+- { source: opera-140-macos, key: "View/Show Password Manager", command: tools.view-passwords }
+- { source: opera-140-macos, key: "History/Reopen Last Closed Window", command: app.reopen-window }
+- { source: opera-140-macos, key: "Developer/Developer Tools", command: tools.dev-tools }
+- { source: opera-140-macos, key: "Window/Minimize", command: app.minimize-window }
+- { source: opera-140-macos, key: "Window/Show Previous Tab", command: tab.previous }
+- { source: opera-140-macos, key: "Window/Show Next Tab", command: tab.next }
+- { source: opera-140-macos, key: "Help/Opera Help", command: help.contents }
+- { source: opera-140-macos, key: "Help/Keyboard Shortcuts", command: tools.keyboard-shortcuts }
+- { source: opera-140-macos, key: "Help/Report an Issue…", command: help.report-broken-site }
+- { source: opera-140-macos, key: "Window/Zoom", command: app.maximize-window }
+- { source: opera-140-macos, key: "Opera/Import Bookmarks and Settings…", command: tools.import-settings }

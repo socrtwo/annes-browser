@@ -1,0 +1,84 @@
+# Menus read from Opera 140.0.6074.18 on macOS 26.7.2 (Build 25G332) by tools/menu-dump/macos-menus.js, through System Events.
+# read: 2026-11-28 on a GitHub Actions macOS runner (macos-latest), Opera installed with Homebrew (cask opera), first start, empty profile.
+# run: https://github.com/socrtwo/annes-browser/actions/runs/46093829668 (job "dump (Opera ...)"); sha256 of the uploaded artifact zip: c038bad92db7011eb4831d4e737ebb478cf15bf20752cbefb51887e8dd76b0a9
+# Reviewed by hand: removed the system's Services and Move & Resize entries, the titles of pages Opera opened on first start
+# (listed in History and Window), the default workspace names and the empty Recently Closed/Visited submenus.
+# "#? " lines that were commands are kept. Two tab shortcuts whose key did not print are left without one.
+# Each line: menu path | label | shortcut.
+Opera | About Opera
+Opera | Settings… | Cmd+,
+Opera | Set Opera as Default Browser
+Opera | Update & Recovery…
+Opera | Log In to Opera Account…
+Opera | Clear Browsing Data… | Shift+Cmd+Backspace
+Opera | Import Bookmarks and Settings…
+Opera | Get Wallpapers
+Opera | Get Extensions
+Opera | Hide Opera | Cmd+H
+Opera | Warn Before Quitting (Cmd+Q)
+Opera | Quit Opera | Cmd+Q
+Opera | Quit and Keep Windows | Opt+Cmd+Q
+File | New Tab | Cmd+T
+File | New Tab In Tab Island | Opt+T
+File | New Window | Cmd+N
+File | New Private Window | Shift+Cmd+N
+File | Open File…
+File | Open Location… | Cmd+L
+File | Close Tab
+File | Close Other Tabs
+File | Close Window
+File | Close All | Opt+Shift+Cmd+W
+File | Save Page As… | Shift+Cmd+S
+File | Save Page As PDF…
+File | Print… | Cmd+P
+Edit | Undo | Cmd+Z
+Edit | Redo | Shift+Cmd+Z
+Edit | Cut | Cmd+X
+Edit | Copy | Cmd+C
+Edit | Paste | Cmd+V
+Edit | Paste and Match Style | Opt+Shift+Cmd+V
+Edit | Select All | Cmd+A
+Edit | Snapshot | Cmd+@
+Edit | Find… | Cmd+F
+Edit | Find Next | Cmd+G
+Edit | Find Previous | Shift+Cmd+G
+Edit > Spelling and Grammar | Show Spelling and Grammar | Cmd+:
+Edit > Spelling and Grammar | Check Document Now | Cmd+;
+Edit > Spelling and Grammar | Check Spelling While Typing
+Edit > Spelling and Grammar | Check Grammar With Spelling
+Edit > Speech | Start Speaking
+Edit > Speech | Stop Speaking
+Edit > AutoFill | Contact…
+Edit > AutoFill | Passwords…
+Edit > AutoFill | Credit Card…
+View | Actual Size | Cmd+0
+View | Zoom In | Cmd++
+View | Zoom Out | Cmd+-
+View | Show Bookmarks Bar | Shift+Cmd+B
+View | Hide Sidebar | Ctrl+Cmd+S
+View | Show Search Tabs | Opt+Space
+View | Hide Toolbar in Full Screen Mode | Shift+Cmd+F
+View | Enter Full Screen | Fn+F
+View | Show Speed Dial | Ctrl+Cmd+H
+View | Show Pinboards
+View | Show News
+View | Show Downloads | Cmd+J
+View | Show Extensions | Shift+Cmd+E
+View | Show Password Manager
+History | Back | Cmd+[
+History | Forward | Cmd+]
+History | Reopen Last Closed Tab | Shift+Cmd+T
+History | Reopen Last Closed Window
+History | Show All History | Shift+Cmd+H
+Bookmarks | Bookmarks | Opt+Cmd+B
+Bookmarks | Add to Bookmarks… | Cmd+D
+Developer | Developer Tools | Opt+Cmd+I
+Developer | View Source | Cmd+U
+Developer | Task Manager
+Window | Minimize | Cmd+M
+Window | Zoom
+Window | Show Previous Tab
+Window | Show Next Tab
+Help | Opera Help | Cmd+?
+Help | Keyboard Shortcuts
+Help | Report an Issue…
